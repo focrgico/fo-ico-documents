@@ -1,0 +1,16 @@
+# Fichiers temporaires
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# Dossiers système / environnements
+.vscode/
+.idea/
+__pycache__/
+venv/
+.venv/
+
+# Build MkDocs
+site/

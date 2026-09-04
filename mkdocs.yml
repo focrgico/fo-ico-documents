@@ -1,0 +1,26 @@
+site_name: FO ICO — Documents
+site_description: Base de données centralisée FO ICO (CCN, accords locaux, accords UNICANCER)
+theme:
+  name: material
+  language: fr
+  palette:
+    primary: indigo
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - toc.integrate
+
+nav:
+  - Accueil: index.md
+  - CCN CLCC:
+      - Présentation: ccn/index.md
+      - Grilles de rémunération: ccn/grilles-remuneration.md
+      - Texte intégral: ccn/ccn-clcc.md
+  - Accords locaux: accords-locaux/index.md
+  - Accords UNICANCER: accords-unicancer/index.md
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true

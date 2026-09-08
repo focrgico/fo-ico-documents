@@ -4,7 +4,10 @@ Chaque accord existe en deux formats dans ce dossier :
 - **`.md`** — texte lisible et cherchable (converti depuis la version Word de travail définitive avant signature)
 - **`.pdf`** — version scannée signée, preuve juridique de référence
 
-## Accords disponibles (41, par ordre chronologique)
+## Accords disponibles (37, par ordre chronologique)
+
+*Les accords de méthode NAO ont été déplacés vers une section dédiée : voir [`../nao/index.md`](../nao/index.md).*
+*Les documents liés aux élections professionnelles ont été déplacés vers une section dédiée : voir [`../elections/index.md`](../elections/index.md).*
 
 | Accord | Signature | Fichier |
 |---|---|---|
@@ -22,13 +25,11 @@ Chaque accord existe en deux formats dans ce dossier :
 | PVA (Part Variable Additionnelle — praticiens) | 19/05/2022 | `accord-pva-2022.md` |
 | Reprise d'ancienneté MER/IDE/AS | 19/05/2022 | `accord-reprise-anciennete-mer-ide-as-2022.md` |
 | Chèques syndicaux | 03/10/2022 | `accord-cheques-syndicaux-2022.md` |
-| Vote électronique (cycle 2022) | 12/10/2022 | `accord-vote-electronique-2022.md` |
 | Prime chaussures | 21/06/2023 | `accord-prime-chaussures-2023.md` |
 | Égalité F/H (2023) | 26/05/2023 | `accord-egalite-fh-2023.md` |
 | Dialogue social (2023) | 26/05/2023 | `accord-dialogue-social-2023.md` |
 | Intergénérationnel — Avenant (fin de carrière) | 15/09/2023 | `accord-intergenerationnel-avenant-2023.md` |
 | Égalité F/H — Avenant | 15/12/2023 | `accord-egalite-fh-avenant-2023.md` |
-| Accord de méthode NAO 2024 | 10/11/2023 | `accord-methode-nao-2024.md` |
 | Prime USC | 01/12/2023 | `accord-prime-usc-2023.md` |
 | Compteur intermédiaire — personnel non posté | 23/03/2024 | `accord-compteur-intermediaire-non-postes-2024.md` |
 | Intéressement 2024 | 26/04/2024 | `accord-interessement-2024.md` |
@@ -39,11 +40,9 @@ Chaque accord existe en deux formats dans ce dossier :
 | Parcours professionnel Assistant Médical | 11/03/2025 | `accord-parcours-am-2025.md` |
 | Parcours professionnel IDE et MER | 28/03/2025 | `accord-parcours-ide-mer-2025.md` |
 | Intéressement 2025 | 17/04/2025 | `accord-interessement-2025.md` |
-| Accord de méthode NAO 2025 | 28/05/2025 | `accord-methode-nao-2025.md` |
 | Acquisition CP sur maladie — Non Cadres | 31/12/2025 | `accord-acquisition-cp-maladie-non-cadres-2025.md` |
 | Acquisition CP sur maladie — Cadres | 31/12/2025 | `accord-acquisition-cp-maladie-cadres-2025.md` |
 | Forfait Mobilité Durable — version en vigueur | 24/10/2025 | `accord-forfait-mobilite-durable-2025.md` |
-| Accord de méthode NAO 2026 | 22/01/2026 | `accord-methode-nao-2026.md` |
 | Dialogue social 2026 | 13/03/2026 | `accord-dialogue-social-2026.md` |
 | Congé humanitaire | 31/03/2026 | `accord-conge-humanitaire-2026.md` |
 | Personnel de nuit (maintien compétences) | 19/05/2026 | `accord-nuit-2026.md` |
@@ -55,7 +54,6 @@ Chaque accord existe en deux formats dans ce dossier :
 
 - **Forfait Mobilité Durable** : le PDF signé sur GitHub correspond en réalité à la version 2024 (remplacée), pas à la version 2025 conservée ici — il manque le PDF signé de la version en vigueur.
 - **VAP** : le PDF "Version signée" sur GitHub est une version antérieure (V2, 22/03/2024), différente de la V2025-2 conservée ici. L'avenant du 04/02/2025 porte bien la mention "V2025-2" mais avec 3 semaines d'écart avec la date extraite du Word — lien non résolu avec certitude.
-- **Vote électronique 2026** : ⚠️ le PDF signé trouvé sur GitHub (09/09/2026) montre que cet accord **a bien été signé le 29 mai 2026** (CGT-FO et CFE-CGC ; Sud Santé-Sociaux n'a pas signé) — alors que David avait indiqué que la signature interviendrait après le PAPE, en octobre. Le fichier Word correspondant avait été retiré du dépôt sur cette base ; à revoir si besoin puisque l'accord est en réalité déjà signé.
 
 ## Vérification des signatures (08/09/2026)
 

@@ -50,7 +50,6 @@ Chaque accord existe en deux formats dans ce dossier :
 | Égalité Femmes-Hommes (2026) | 29/05/2026 | `accord-egalite-fh-2026.md` |
 | Intéressement 2026 | 29/05/2026 | `accord-interessement-2026.md` |
 
-*21ᵉ accord du tout premier lot (thème encore inconnu) toujours en attente.*
 
 ## Points en attente de clarification avec David
 

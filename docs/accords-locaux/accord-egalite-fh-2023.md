@@ -3,7 +3,7 @@
 - **Date de signature :** 26 mai 2023
 - **Source :** converti depuis `Accord_Egalité_F_H_V_finale_2023-05-12.md` (Word), version de travail définitive avant signature
 - **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
-- **Note :** Version de base 2023 — voir aussi accords-locaux/accord-egalite-fh-avenant-2023.md (avenant) et accord-egalite-fh-2026.md (version 2026).
+- **Note :** Version de base 2023 — voir aussi accords-locaux/accord-egalite-fh-avenant-2023.md (avenant) et accord-egalite-fh-2026.md (version 2026).- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CFE-CGC (M. BREMAUD), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN, nom barré sur le document mais signature présente) — les 3 organisations ont signé.
 
 ---
 

@@ -2,7 +2,7 @@
 
 - **Date de signature :** 17 avril 2025
 - **Source :** converti depuis `Accord__interessement-Version_finale.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO (D. DI PERI), CFE-CGC (M. BREMAUD). Sud Santé-Sociaux (J. ROSAN) n'a pas signé.
 
 ---
 

@@ -2,7 +2,7 @@
 
 - **Date de signature :** 22 janvier 2026
 - **Source :** converti depuis `Accord_de_méthode_NAO_2026.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN), CFE-CGC (M. BREMAUD) — les 3 organisations ont signé. Date confirmée : 22 janvier 2026.
 
 ---
 

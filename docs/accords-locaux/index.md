@@ -52,15 +52,27 @@ Chaque accord existe en deux formats dans ce dossier :
 
 *21ᵉ accord du tout premier lot (thème encore inconnu) toujours en attente.*
 
-## Encore manquants
+## Points en attente de clarification avec David
 
-| Accord | Statut |
-|---|---|
-| Avenant accord d'intéressement 2025 | David va vérifier — rappel demandé |
-| Avenant accord prime USC | David va vérifier — rappel demandé |
-| Supplément d'intéressement — exercice 2025 | David va vérifier — rappel demandé |
-| DUE Parcours techs de laboratoire-macroscopie | À demander séparément, fourniture ultérieure |
-| DUE Prime de retour inopiné | À demander séparément, fourniture ultérieure |
+- **Forfait Mobilité Durable** : le PDF signé sur GitHub correspond en réalité à la version 2024 (remplacée), pas à la version 2025 conservée ici — il manque le PDF signé de la version en vigueur.
+- **VAP** : le PDF "Version signée" sur GitHub est une version antérieure (V2, 22/03/2024), différente de la V2025-2 conservée ici. L'avenant du 04/02/2025 porte bien la mention "V2025-2" mais avec 3 semaines d'écart avec la date extraite du Word — lien non résolu avec certitude.
+- **Vote électronique 2026** : ⚠️ le PDF signé trouvé sur GitHub (09/09/2026) montre que cet accord **a bien été signé le 29 mai 2026** (CGT-FO et CFE-CGC ; Sud Santé-Sociaux n'a pas signé) — alors que David avait indiqué que la signature interviendrait après le PAPE, en octobre. Le fichier Word correspondant avait été retiré du dépôt sur cette base ; à revoir si besoin puisque l'accord est en réalité déjà signé.
+
+## Vérification des signatures (08/09/2026)
+
+Pour les 18 accords dont le PDF signé est actuellement sur GitHub, les signataires et dates ont été vérifiés directement sur la dernière page du PDF (voir note "Signataires vérifiés" dans chaque fichier concerné). Points notables :
+- Plusieurs accords ont été signés **par délégation de pouvoir par M. Miguel BOISSEAU** au nom de M. David DI PERI pour la CGT-FO (Parcours AM, Prime USC, Avenant Égalité F/H 2023) ou par Mme LE GUILLOU (Avenant VAP 04/02/2025).
+- Sud Santé-Sociaux n'a pas signé plusieurs accords où son nom apparaît pourtant (avenants ATT NC et CET 2022, Prime USC, Avenant Égalité F/H, Intéressement 2025/2026).
+- La CFDT n'apparaît plus comme partie signataire sur les accords les plus récents (2025-2026).
+- **Seuls 26 PDF signés sont actuellement présents sur GitHub** — plusieurs accords déjà convertis en Markdown n'ont pas encore leur PDF poussé (compteur intermédiaire, congé humanitaire, méthode NAO 2026, dialogue social 2026, égalité F/H 2026, nuit 2026, vote électronique 2022, CDD, CET base, PERCOL, financement syndical, télétravail, suppléments d'intéressement).
+
+## Encore manquants (Word non reçu — PDF signé disponible et vérifié)
+
+| Accord | Date de signature (vérifiée sur PDF) | Signataires |
+|---|---|---|
+| Avenant accord prime USC | 26 avril 2024 | CGT-FO (par délégation Miguel BOISSEAU), CFE-CGC (Sud Santé-Sociaux non signataire) |
+
+*Ces dates/signataires sont prêts à intégrer dès réception du fichier Word correspondant.*
 
 ## Nommage des fichiers
 

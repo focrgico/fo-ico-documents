@@ -2,7 +2,7 @@
 
 - **Date de signature :** 29 mai 2026
 - **Source :** converti depuis `Accord__intéressement_2026___Version_4__22_05_2026_.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO (D. DI PERI), CFE-CGC (M. BREMAUD). Sud Santé-Sociaux (J. ROSAN) n'a pas signé ; la CFDT n'apparaît plus comme partie sur ce document.
 
 ---
 

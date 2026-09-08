@@ -3,7 +3,7 @@
 - **Date de signature :** 26 mai 2023
 - **Source :** converti depuis `Accord_sur_le_dialogue_social_2023__Version_finale.md` (Word), version de travail définitive avant signature
 - **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
-- **Note :** Version 2023 — voir aussi accord-dialogue-social-2026.md (version 2026).
+- **Note :** Version 2023 — voir aussi accord-dialogue-social-2026.md (version 2026).- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CFE-CGC (M. BREMAUD), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN) — les 3 organisations ont signé.
 
 ---
 

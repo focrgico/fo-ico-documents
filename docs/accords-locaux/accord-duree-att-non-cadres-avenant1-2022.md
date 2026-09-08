@@ -2,7 +2,7 @@
 
 - **Date de signature :** 31 janvier 2022
 - **Source :** converti depuis `Accord_ATT_NC_Avenant_n_1_vDéfinitive.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CGT-FO (D. DI PERI), CFDT (C. LANIO), CFE-CGC (G. PERROCHEAU). Sud Santé-Sociaux (J. ROSAN) n'a pas signé.
 
 ---
 

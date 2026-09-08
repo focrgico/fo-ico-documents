@@ -3,7 +3,7 @@
 - **Date de signature :** 15 septembre 2023
 - **Source :** converti depuis `Avenant_Accord_Intergénérationnel_2023.md` (Word), version de travail définitive avant signature
 - **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
-- **Note :** Complète l'article 3.4.2 de l'accord d'entreprise intergénérationnel du 30 janvier 2020. Distinct de l'avenant de 2021 (accord-intergenerationnel-avenant1-2021.md), qui porte sur un autre article — les deux amendent le même accord de base de 2020, non détenu en Word.
+- **Note :** Complète l'article 3.4.2 de l'accord d'entreprise intergénérationnel du 30 janvier 2020. Distinct de l'avenant de 2021 (accord-intergenerationnel-avenant1-2021.md), qui porte sur un autre article — les deux amendent le même accord de base de 2020, non détenu en Word.- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN), CFE-CGC (M. BREMAUD) — les 3 organisations présentes ont signé.
 
 ---
 

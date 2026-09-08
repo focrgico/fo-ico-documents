@@ -2,7 +2,7 @@
 
 - **Date de signature :** 11 mars 2025
 - **Source :** converti depuis `Accord_sur_la_répartition_de_la_BIC_V2025-2.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CFE-CGC (M. BREMAUD), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN) — les 3 organisations ont signé. Date confirmée : 11 mars 2025. Le PDF signé est intitulé en pied de page "Avenant accord répartition BIC".
 
 ---
 

@@ -4,6 +4,7 @@
 - **Source :** converti depuis `Accord_sur_la_validation_des_acquis_professionnels_V2025-2.md` (Word), version de travail définitive avant signature
 - **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
 - **Note :** David confirme que ce fichier (nommé "V2025-2" à l'origine) couvre aussi l'avenant du 04/02/2025 signalé comme manquant — pas de document séparé à récupérer pour cet avenant.
+- **⚠️ Vérification PDF (08/09/2026) :** le PDF "validation des acquis professionnels_Version signée.pdf" sur GitHub est en réalité une version antérieure ("VAP V2", signée le 22/03/2024) — pas la V2025-2. En revanche, le PDF "Avenant...04.02.2025" porte bien la mention "V2025-2" comme ce Word, et montre une signature CGT-FO par délégation (Mme LE GUILLOU pour D. DI PERI), CFE-CGC (M. BREMAUD) et Sud Santé-Sociaux (J. ROSAN) signés, daté du 4 février 2025 — soit 3 semaines avant la date extraite de ce Word (25/02/2025). Lien exact entre les deux dates non résolu.
 
 ---
 

@@ -2,7 +2,7 @@
 
 - **Date de signature :** 3 octobre 2022
 - **Source :** converti depuis `Accord_chèques_syndicaux_v2022-09-22.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN), CFDT (C. LANIO), CFE-CGC (G. PERROCHEAU) — les 4 organisations ont signé.
 
 ---
 

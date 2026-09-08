@@ -2,7 +2,7 @@
 
 - **Date de signature :** 19 mai 2026
 - **Source :** converti depuis `Accord__nuit_V_2026_05_04.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN), CFE-CGC (M. BREMAUD) — les 3 organisations ont signé. Date confirmée : 19 mai 2026.
 
 ---
 

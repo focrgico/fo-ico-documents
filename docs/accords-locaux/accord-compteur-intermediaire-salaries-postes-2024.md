@@ -3,7 +3,7 @@
 - **Date de signature :** 21 juin 2024
 - **Source :** converti depuis `Accord_compteur_intermédiaire_salarié_posté_versiondéfinitive.md` (Word), version de travail définitive avant signature
 - **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
-- **Note :** Accord distinct du précédent : régles différentes (tolérance 5 min vs 30 min, pas de plages fixes/variables).
+- **Note :** Accord distinct du précédent : régles différentes (tolérance 5 min vs 30 min, pas de plages fixes/variables).- **Signataires (vérifiés sur PDF) :** CGT-FO (D. DI PERI, signé), CFE-CGC (M. BREMAUD, signé). Signature Sud Santé-Sociaux non clairement visible sur la capture. Date confirmée : 21 juin 2024. Curiosité sans conséquence : le pied de page du PDF (pages 5-6) mentionne par erreur "salariés non postés", mais la page de garde et le corps du texte confirment sans ambiguïté qu'il s'agit bien de l'accord pour les salariés **postés**.
 
 ---
 

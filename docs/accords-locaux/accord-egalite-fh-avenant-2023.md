@@ -2,7 +2,7 @@
 
 - **Date de signature :** 15 décembre 2023
 - **Source :** converti depuis `Avenant_accord_égalité_HF_V_finale.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO — signé **par délégation de pouvoir par M. Miguel BOISSEAU**, CFE-CGC (M. BREMAUD). Sud Santé-Sociaux (J. ROSAN) n'a pas signé.
 
 ---
 

@@ -2,7 +2,7 @@
 
 - **Date de signature :** 31 mars 2026
 - **Source :** converti depuis `Accord_sur_le_congé_humanitaire_V2.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CFE-CGC (M. BREMAUD), CGT-FO (D. DI PERI), Sud Santé-Sociaux (J. ROSAN) — les 3 organisations ont signé. Date confirmée : 31 mars 2026.
 
 ---
 

@@ -2,7 +2,7 @@
 
 - **Date de signature :** 1er décembre 2023
 - **Source :** converti depuis `Accord_prime_USC_V_finale.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier- **Signataires (vérifiés sur PDF) :** CAMPONE (DG), CGT-FO — signé **par délégation de pouvoir par M. Miguel BOISSEAU** (mention explicite manuscrite, pas David DI PERI), CFE-CGC (M. BREMAUD). Sud Santé-Sociaux (J. ROSAN) n'a pas signé.
 
 ---
 

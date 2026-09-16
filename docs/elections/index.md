@@ -8,7 +8,7 @@ Cette section regroupe les documents liés aux élections professionnelles à l'
 |---|---|---|
 | Vote électronique — cycle 2022 | 12/10/2022 | `accord-vote-electronique-2022.md` |
 | Vote électronique — cycle 2026 | 29/05/2026 | `ACCORD VOTE ELECTRONIQUE _ Elections professionnelles 2026.md` |
-| Dialogue social 2023 | 26/05/2023 | `ACCORDS_Dialogue social_2023_Version signée.md` |
+| Dialogue social 2023 | 26/05/2023 | `ACCORDS_Dialogue social_2023_Version signee.md` |
 | Dialogue social 2026 | 13/03/2026 | `Accord dialogue social 2026.md` |
 
 ## En attente
@@ -17,4 +17,4 @@ Cette section regroupe les documents liés aux élections professionnelles à l'
 
 ## Nommage des fichiers
 
-Le nom du fichier `.md` reprend exactement le nom du PDF signé correspondant (mêmes espaces, majuscules, accents). Pour un document sans PDF, garder un nom clair de type `accord-[theme]-[annee].md`.
+Le nom du fichier `.md` reprend exactement le nom du PDF signé correspondant (mêmes espaces, majuscules — mais accents retirés, pour éviter un problème d'encodage constaté sous Windows). Pour un document sans PDF, garder un nom clair de type `accord-[theme]-[annee].md`.

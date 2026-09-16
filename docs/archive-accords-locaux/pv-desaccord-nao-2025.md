@@ -1,0 +1,204 @@
+# Procès-verbal de désaccord — NAO 2025
+
+- **Date de signature :** 13 octobre 2025
+- **Source :** converti depuis `PV_NAO_2025_-_V_2.md` (Word), version de travail définitive avant signature
+- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Note :** Procès-verbal de désaccord (NAO 2025) — classé dans la section NAO, pas dans les accords locaux.
+
+---
+
+**PROCES VERBAL DE DESACCORD**
+
+**Négociations Annuelles Obligatoires au titre de 2025**
+
+Afin de mener les négociations annuelles obligatoires dans un cadre clair et connu de tous, il a été signé un accord de méthode le 28 mai 2025.
+
+Conformément à celui-ci, des réunions se sont tenues dans le cadre des Négociations Annuelles Obligatoires aux dates suivantes :
+
+Réunion 1 : 13 mai 2025
+
+Réunion 2 : 3 juin 2025
+
+Réunion 3 : initialement prévue le 1er juillet 2025, la réunion s'est finalement tenue le 3 juillet 2025.
+
+**[1 -- Les revendications transmises par écrit par les OS :]{.underline}**
+
+Le 2 juin 2025, SUD a transmis ses revendications par mail à la direction :
+
+-   Prime de 13^ème^ mois pour chaque salarié(e) de l'ICO. Répartie en deux versements semestriels.
+
+-   Revalorisation du nombre de MG pour dimanche et jours fériés pour arriver à un montant de 100€ net/jour.
+
+-   Création d'une prime de travail du samedi de 75€ net/jour.
+
+-   Négociation de parcours de carrière dans les catégories suivantes : Préparatrice en pharmacie, secrétaire administratif, techniciens, aide service hospitalier, aide-soignante.
+
+Le 3 juin 2025, la CFE CGC a transmis ses revendications en séance :
+
+-   Avoir un taux de BIC de 1% (entièrement « bacable »)
+
+-   Doubler le forfait mobilité douce
+
+-   Ouvrir une négociation sur la semaine de 4 jours
+
+Le 13 juin, FO a transmis ses revendications par mail :
+
+-   Création d'un congé spécifique en lien avec une action humanitaire
+
+-   Prise en charge des trottinettes dans l'accord mobilité
+
+-   Augmentation de la prime mobilité à 450€
+
+-   Moyenne de Bic à 1% de façon pérenne
+
+-   Création d'un 13eme mois versé en 2 fois
+
+-   Création d'un palier supplémentaire de pep pour les non-cadres
+
+-   Conservation de la PEP lors du passage de non-cadre à cadre
+
+-   Création d'une prime d'ancienneté pour les salariés ayant 20 ans d'ancienneté en jour ou en valeur.
+
+-   Ouverture des négociations sur le parcours pro des secrétaires administratives
+
+**[2 -- Les propositions initiales de la direction :]{.underline}**
+
+La Direction, après avoir rappelé que l'accord d'intéressement 2025-27 emporte une enveloppe potentielle conséquente, précise ne pas faire de proposition spontanée.
+
+**[3 -- Analyse des revendications et positions de la direction :]{.underline}**
+
+1.  [-- Installation d'un 13^ème^ mois :]{.underline}
+
+La masse salariale brute de l'ICO (2024) s'élève à 69 607 203 € bruts (source : bilan social 2024).
+
+La demande d'un 13^ème^ mois pèse un douzième de ce total. Un douzième de cette somme pèse 5,8 M€ brut soit environ 8,9 M€ chargés.
+
+Cette demande n'est pas soutenable : nous ne pouvons pas donner de suite favorable à la revendication.
+
+2.  [-- Revalorisation du nombre de MG pour arriver à 100 € par dimanche et jours fériés :]{.underline}
+
+Actuellement, nous observons qu'en moyenne, les dimanche et fériés sont indemnisés :
+
+-   107 € bruts à Nantes, soit environ 82 € nets avant impôts
+
+-   114 € bruts à Angers, soit environ 87 € nets avant impôts.
+
+Cette moyenne est tirée des paies de mars et avril 2025.
+
+La demande visant à atteindre les 100 € nets revient approximativement à 100 x 1,23= 123 € bruts par journée. Cela revient à une progression de l'enveloppe de près de 15% sur Angers et de près de 8% sur St Herblain.
+
+En rythme annuel, l'évolution de masse salariale est de l'ordre de 34,5 K€ chargés pour Angers et de 47,2 K€ chargés pour SHB, soit 81,8 K€ chargés au bénéfice d'environ 238 personnes chaque mois (135 sur St Herblain et 103 sur Angers).
+
+Nous ne donnons pas suite à cette demande.
+
+[3-3 -- Installation d'une prime de sujétion pour le travail le samedi (75 € nets) :]{.underline}
+
+75 € nets pèsent environ 92 € bruts.
+
+92 € x 238 bénéficiaires par mois x 12 mois = 262 752 € bruts soit 407 K€ chargés.
+
+Nous ne pouvons pas donner de suite favorable à cette demande.
+
+[3-4 -- Négociation de parcours professionnels :]{.underline}
+
+-   Les préparateurs en pharmacie :
+
+Un parcours Unicancer a été signé fin 2024 et doit être déployé à l'ICO. Il pourrait toucher 20 personnes sur les 33 préparateurs que comprend au total la PUI. Nous sommes en cours d'instruction de ce dossier : nous préciserons cette 1^ère^ approche dans quelques semaines.
+
+Nous ne donnons pas suite à cette proposition.
+
+-   Les secrétaires administratives :
+
+La CCN prévoit 3 emplois pour cette filière (technicien administratif C, Secrétaire D, Assistant de Gestion E). L'accès à l'une de ces qualifications dépend de la nature des tâches à effectuer.
+
+Nous n'observons pas de difficultés particulières pour pourvoir ces emplois. Nous ne donnons pas suite à la demande.
+
+-   Les techniciens :
+
+La CCN prévoit 3 emplois pour cette filière (E, F et G). L'accès à l'une de ces qualifications dépend de la nature des tâches à effectuer.
+
+Nous n'observons pas de difficultés particulières pour pourvoir ces emplois. Nous ne donnons pas suite à la demande.
+
+-   Les ASH
+
+Ils sont aujourd'hui classés B. Nous observons qu'à l'ICO, ils bénéficient de la prime Ségur 1 (248.98 € bruts mensuels pour un temps plein), contrairement aux ASH des sous-traitants pouvant intervenir à l'ICO.
+
+Nous ne donnons pas suite à cette revendication.
+
+-   Les AS :
+
+La CCN prévoit la spécialisation pour les AS et permet ainsi le passage de D à E pour les salariés répondant aux conditions de la CCN.
+
+Un parcours impliquerait de prévoir un passage vers F. C'est la classification d'entrée des IDE et des MER. Nous ne donnons pas de suite à cette revendication.
+
+[3-5 -- La mise en place d'une BIC de 1% entièrement « bacable » :]{.underline}
+
+Le 0,4 % a pesé 128 K€ brut en 2025, soit environ 200 K€ chargés.
+
+Si nous partons en mode « bacable », ça pèsera 200 K€ en 2026, 400 K€ l'année suivante (200 de BIC et 200 de BAC), 600 K€ l'année suivante (200 de BIC et 400 de BAC), 800 K€ l'année suivante (200 de BIC et 600 de BAC) \...
+
+Nous ne souhaitons pas nous engager dans cette voie.
+
+[3-6 -- Forfait mobilité douce augmenté et étendue aux trottinettes :]{.underline}
+
+Par voie d'accord séparé des NAO, nous donnons suite à ces revendications :
+
+-   Extension de la prime aux trottinettes électriques
+
+-   Augmentation de la prime de mobilité douce de 150 à 300 € annuels.
+
+Nous proposerons un nouvel accord mobilité douce à la signature d'ici au 31 octobre 2025 pour acter cela. Une limite sera posée en cas de cumul de prime mobilité douce pour rester dans l'enveloppe d'exonération en vigueur.
+
+[3-7 -- Ouvrir une négociation sur la semaine de 4 jours :]{.underline}
+
+A ce jour, et dans le format actuel, le test sur la semaine de 4 jours mis en place n'est pas concluant. Nous poursuivons nos démarches pour identifier un calibrage adapté pour les non-cadres.
+
+Nous n'envisageons pas ce dispositif pour les cadres. Cela impliquerait en effet de réviser la durée du forfait jours. Nous n'irons pas vers cela pour les raisons suivantes :
+
+\- Quand l'approche est testée avec les non-cadres, le quota total de travail est maintenu (1582 heures pour un temps plein). Or la semaine de 4 jours chez les cadres viendrait de fait, ajouter des jours de repos pour les cadres.
+
+\- L'examen de la réalité montre aujourd'hui un statut convenable avec 6 semaines de CP et près de 4 semaines RTT pour un cadre. Il montre également une prédominance des cadres dans l'alimentation des CET, signe que les congés (CP et RTT) ne sont pas tous consommés.
+
+[3-8 -- Création d'un congé spécifique en lien avec action humanitaire :]{.underline}
+
+Lors des échanges en réunion, la demande est précisée. Il s'agit de trouver un dispositif plus souple que celui du congé sabbatique pour permettre à des salariés de prendre un congé « humanitaire » non rémunéré à intervalle plus régulier que ce que permet le congé sabbatique.
+
+La demande est entendue : nous nous engageons à ouvrir une négociation sur ce dossier d'ici la fin de l'année 2025.
+
+[3-9 -- Création d'un palier de PEP supplémentaire pour les non-cadres :]{.underline}
+
+Nous ne donnons pas suite à cette revendication. Cette revendication est à traitée au niveau d'Unicancer.
+
+[3-10 -- Conservation de la PEP lors du passage du statut non-cadre au statut cadre]{.underline}
+
+La conservation intégrale ne semble pas adaptée : l'écart de grille est déjà bien copieux. Nous nous arrêtons à 50% de reprise, posant ainsi une égalité de traitement avec un recrutement externe.
+
+Nous mettons cette mesure en place à effet du 1^er^ janvier 2025.
+
+[3-11 -- création d'une prime d'ancienneté pour les salariés ayant 20 ans (en jours ou en valeurs) :]{.underline}
+
+Nous restons dans le cadre conventionnel sur ce point (avec les mécanismes VAP et PEP qui répondent à cela).
+
+**4 -- Formalité de dépôt et de publicité**
+
+Un exemplaire original est remis à chaque délégué syndical de l'ensemble des organisations syndicales représentatives de l'ICO.
+
+Le présent procès-verbal sera porté à la connaissance du personnel par sa mise en ligne sur l'intranet de l'entreprise.
+
+Le présent accord donnera lieu à dépôt dans les conditions prévues aux articles L. 2231-6 et D. 2231- 2 et suivants du code du travail. Il sera déposé :
+
+-   Sur la plateforme de téléprocédure dénommée « TéléAccords » accompagné des pièces prévues aux articles D. 2231-6 et D. 2231-7 du code du travail ([www.teleaccords.travail-emploi.gouv.fr/PortailTeleprocedures/](http://www.teleaccords.travail-emploi.gouv.fr/PortailTeleprocedures/)).;
+
+-   Et en un exemplaire auprès du secrétariat greffe du conseil de prud\'hommes du lieu de sa conclusion.
+
+Les Parties rappellent que, dans un acte distinct du présent accord, elles pourront convenir qu'une partie du présent accord ne fera pas l'objet de la publication prévue à l'article L 2231-5-1 du Code du travail. En outre, l\'employeur peut occulter les éléments portant atteinte aux intérêts stratégiques de l\'entreprise.
+
+Fait à Angers,
+
+Le 13 octobre 2025
+
+En 5 exemplaires originaux
+
+Pr Mario CAMPONE
+
+Directeur Général

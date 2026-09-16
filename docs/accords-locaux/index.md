@@ -4,20 +4,19 @@ Chaque accord existe en deux formats dans ce dossier :
 - **`.md`** — texte lisible et cherchable (converti depuis la version Word de travail définitive avant signature)
 - **`.pdf`** — version scannée signée, preuve juridique de référence
 
-## Accords disponibles (38, par ordre chronologique)
+## Accords disponibles (27, par ordre chronologique)
 
 *Les accords de méthode NAO ont été déplacés vers une section dédiée : voir [`../nao/index.md`](../nao/index.md).*
 *Les documents liés aux élections professionnelles ont été déplacés vers une section dédiée : voir [`../elections/index.md`](../elections/index.md).*
+*9 accords "plus en vigueur" ont été déplacés vers l'archive : voir [`../archive-accords-locaux/index.md`](../archive-accords-locaux/index.md) — exclus du travail de résumé aux salariés.*
 
 | Accord | Signature | Fichier |
 |---|---|---|
 | Durée et ATT — Non Cadre | 14/09/2020 | `accord-duree-att-non-cadres-2020.md` |
 | CET (Compte Épargne Temps) | 19/03/2021 | `accord-cet-2021.md` |
 | PERCOL (Épargne Retraite Collective) | 19/03/2021 | `accord-percol-2021.md` |
-| Financement syndical | 27/04/2021 | `accord-financement-syndical-2021.md` |
 | Télétravail | 27/04/2021 | `accord-teletravail-2021.md` |
 | Durée et ATT — Cadres | 12/05/2021 | `accord-duree-att-cadres-2021.md` |
-| Intergénérationnel — Avenant (temps partiel senior) | 30/06/2021 | `accord-intergenerationnel-avenant1-2021.md` |
 | CDD à objet défini | 13/08/2021 | `accord-cdd-objet-defini-2021.md` |
 | Avenant n°1 — Durée/ATT Non Cadre (CET heures sup.) | 31/01/2022 | `Accord ATT NC_Avenant n1_Signe.md` |
 | Avenant n°1 — CET | 31/01/2022 | `Accord CET_Avenant n1_signe.md` |
@@ -26,26 +25,19 @@ Chaque accord existe en deux formats dans ce dossier :
 | Reprise d'ancienneté MER/IDE/AS | 19/05/2022 | `Accord Reprise Experience professionnelle MER-AS-IDE_2022_Signe.md` |
 | Chèques syndicaux | 03/10/2022 | `Accord-Cheques syndicaux_v signee.md` |
 | Prime chaussures | 21/06/2023 | `Accord prime chaussure version signee.md` |
-| Égalité F/H (2023) | 26/05/2023 | `ACCORDS_Egalite femmes hommes_2023_Version signee.md` |
 | Dialogue social (2023) | 26/05/2023 | `accord-dialogue-social-2023.md` |
-| Intergénérationnel — Avenant (fin de carrière) | 15/09/2023 | `Avenant accord d'entreprise intergenerationnel_2023_Version signee.md` |
-| Égalité F/H — Avenant | 15/12/2023 | `Accord egalite HF_Avenant signe.md` |
 | Prime USC | 01/12/2023 | `Accord prime USC signe.md` |
 | Compteur intermédiaire — personnel non posté | 23/03/2024 | `accord-compteur-intermediaire-non-postes-2024.md` |
-| Intéressement 2024 | 26/04/2024 | `ACCORD INTERESSEMENT 2024_Version signee.md` |
-| Supplément d'intéressement — exercice 2023 | 26/04/2024 | `accord-supplement-interessement-2023.md` |
 | Compteur intermédiaire — personnel posté | 21/06/2024 | `Accord compteur intermediaire salarie poste_signe.md` |
 | Validation des Acquis Professionnels (VAP) | 25/02/2025 | `Accord sur la validation des acquis professionnels _Version signee.md` |
 | Répartition de la BIC | 11/03/2025 | `Accord relatif a la repartition de la BIC_Version signee.md` |
 | Parcours professionnel Assistant Médical | 11/03/2025 | `Accord relatif au parcours des assistantes medicales_Version signee.md` |
 | Parcours professionnel IDE et MER | 28/03/2025 | `Accord parcours IDE et MER_Version signee.md` |
-| Intéressement 2025 | 17/04/2025 | `Accord interessement 2025 - Version signee.md` |
 | Acquisition CP sur maladie — Non Cadres | 31/12/2025 | `accord-acquisition-cp-maladie-non-cadres-2025.md` |
 | Acquisition CP sur maladie — Cadres | 31/12/2025 | `accord-acquisition-cp-maladie-cadres-2025.md` |
 | Forfait Mobilité Durable — version en vigueur | 24/10/2025 | `ACCORD FORFAIT MOBILITE DURABLE_Version signee.md` |
 | Dialogue social 2026 | 13/03/2026 | `accord-dialogue-social-2026.md` |
 | Congé humanitaire | 31/03/2026 | `Accord Conge Humanitaire (2026).md` |
-| Supplément d'intéressement — exercice 2025 | 17/04/2026 | `Accord sur le supplement d'interessement au tire de l'exercice 2025 - Version signee.md` |
 | Personnel de nuit (maintien compétences) | 19/05/2026 | `Accord travail de nuit - 2026.md` |
 | Égalité Femmes-Hommes (2026) | 29/05/2026 | `Accord egalite FH 2026.md` |
 | Intéressement 2026 | 29/05/2026 | `Accord d'entreprise relatif a l'interessement (2026).md` |
@@ -69,6 +61,9 @@ Pour les 18 accords dont le PDF signé est actuellement sur GitHub, les signatai
 | Accord | Date de signature (vérifiée sur PDF) | Signataires |
 |---|---|---|
 | Avenant accord prime USC | 26 avril 2024 | CGT-FO (par délégation Miguel BOISSEAU), CFE-CGC (Sud Santé-Sociaux non signataire) |
+| Accord intergénérationnel (base) | 30 janvier 2020 | CGT-FO (Didier LANOE), Sud Santé-Sociaux (Isabelle FOUILLET), CFE-CGC (Geneviève PERROCHEAU) — CFDT partie mais non signataire. Base des avenants 2021 et 2023 déjà connus. PDF scanné, pas de texte extractible. |
+| Avenant ATT Non Cadres — Incidences absences sur CP | 31 décembre 2025 | CGT-FO, Sud Santé-Sociaux, CFE-CGC. PDF scanné. |
+| Avenant ATT Cadres — Incidences absences sur CP | 31 décembre 2025 | CFE-CGC seule (CGT-FO et Sud Santé-Sociaux parties mais non signataires). PDF scanné. |
 
 *Ces dates/signataires sont prêts à intégrer dès réception du fichier Word correspondant.*
 

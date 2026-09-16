@@ -20,8 +20,6 @@ nav:
   - Accords locaux:
       - Sommaire: accords-locaux/index.md
       - ACCORD FORFAIT MOBILITE DURABLE_Version signee: accords-locaux/ACCORD FORFAIT MOBILITE DURABLE_Version signee.md
-      - ACCORD INTERESSEMENT 2024_Version signee: accords-locaux/ACCORD INTERESSEMENT 2024_Version signee.md
-      - ACCORDS_Egalite femmes hommes_2023_Version signee: accords-locaux/ACCORDS_Egalite femmes hommes_2023_Version signee.md
       - Accord ATT NC_Avenant n1_Signe: accords-locaux/Accord ATT NC_Avenant n1_Signe.md
       - Accord CET_Avenant n1_signe: accords-locaux/Accord CET_Avenant n1_signe.md
       - Accord Conge Humanitaire (2026): accords-locaux/Accord Conge Humanitaire (2026).md
@@ -31,18 +29,14 @@ nav:
       - Accord compteur intermediaire salarie poste_signe: accords-locaux/Accord compteur intermediaire salarie poste_signe.md
       - Accord d'entreprise relatif a l'interessement (2026): accords-locaux/Accord d'entreprise relatif a l'interessement (2026).md
       - Accord egalite FH 2026: accords-locaux/Accord egalite FH 2026.md
-      - Accord egalite HF_Avenant signe: accords-locaux/Accord egalite HF_Avenant signe.md
-      - Accord interessement 2025 - Version signee: accords-locaux/Accord interessement 2025 - Version signee.md
       - Accord parcours IDE et MER_Version signee: accords-locaux/Accord parcours IDE et MER_Version signee.md
       - Accord prime USC signe: accords-locaux/Accord prime USC signe.md
       - Accord prime chaussure version signee: accords-locaux/Accord prime chaussure version signee.md
       - Accord relatif a la repartition de la BIC_Version signee: accords-locaux/Accord relatif a la repartition de la BIC_Version signee.md
       - Accord relatif au parcours des assistantes medicales_Version signee: accords-locaux/Accord relatif au parcours des assistantes medicales_Version signee.md
       - Accord sur la validation des acquis professionnels _Version signee: accords-locaux/Accord sur la validation des acquis professionnels _Version signee.md
-      - Accord sur le supplement d'interessement au tire de l'exercice 2025 - Version signee: accords-locaux/Accord sur le supplement d'interessement au tire de l'exercice 2025 - Version signee.md
       - Accord travail de nuit - 2026: accords-locaux/Accord travail de nuit - 2026.md
       - Accord-Cheques syndicaux_v signee: accords-locaux/Accord-Cheques syndicaux_v signee.md
-      - Avenant accord d'entreprise intergenerationnel_2023_Version signee: accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md
       - accord-acquisition-cp-maladie-cadres-2025: accords-locaux/accord-acquisition-cp-maladie-cadres-2025.md
       - accord-acquisition-cp-maladie-non-cadres-2025: accords-locaux/accord-acquisition-cp-maladie-non-cadres-2025.md
       - accord-cdd-objet-defini-2021: accords-locaux/accord-cdd-objet-defini-2021.md
@@ -50,25 +44,15 @@ nav:
       - accord-compteur-intermediaire-non-postes-2024: accords-locaux/accord-compteur-intermediaire-non-postes-2024.md
       - accord-duree-att-cadres-2021: accords-locaux/accord-duree-att-cadres-2021.md
       - accord-duree-att-non-cadres-2020: accords-locaux/accord-duree-att-non-cadres-2020.md
-      - accord-financement-syndical-2021: accords-locaux/accord-financement-syndical-2021.md
-      - accord-intergenerationnel-avenant1-2021: accords-locaux/accord-intergenerationnel-avenant1-2021.md
       - accord-percol-2021: accords-locaux/accord-percol-2021.md
-      - accord-supplement-interessement-2023: accords-locaux/accord-supplement-interessement-2023.md
       - accord-teletravail-2021: accords-locaux/accord-teletravail-2021.md
   - NAO:
       - Sommaire: nao/index.md
       - Accord de methode NAO au titre de 2026: nao/Accord de methode NAO au titre de 2026.md
-      - NAO 2024 - PV Desaccord: nao/NAO 2024 - PV Desaccord.md
-      - NAO 2026 _PV de desaccord signe: nao/NAO 2026 _PV de desaccord signe.md
-      - accord-methode-nao-2024: nao/accord-methode-nao-2024.md
-      - accord-methode-nao-2025: nao/accord-methode-nao-2025.md
-      - pv-desaccord-nao-2025: nao/pv-desaccord-nao-2025.md
   - Élections professionnelles:
       - Sommaire: elections/index.md
       - ACCORD VOTE ELECTRONIQUE _ Elections professionnelles 2026: elections/ACCORD VOTE ELECTRONIQUE _ Elections professionnelles 2026.md
-      - ACCORDS_Dialogue social_2023_Version signee: elections/ACCORDS_Dialogue social_2023_Version signee.md
       - Accord dialogue social 2026: elections/Accord dialogue social 2026.md
-      - accord-vote-electronique-2022: elections/accord-vote-electronique-2022.md
   - DUE:
       - Sommaire: DUE/index.md
       - DUE Parcours techs de laboratoire-macroscopie_Version signee: DUE/DUE Parcours techs de laboratoire-macroscopie_Version signee.md
@@ -76,6 +60,24 @@ nav:
       - due-complementaire-frais-sante: DUE/due-complementaire-frais-sante.md
       - due-prime-pool-remplacement-am: DUE/due-prime-pool-remplacement-am.md
       - due-prime-pool-remplacement-soignants: DUE/due-prime-pool-remplacement-soignants.md
+  - Archive (plus en vigueur):
+      - Sommaire: archive-accords-locaux/index.md
+      - ACCORD INTERESSEMENT 2024_Version signee: archive-accords-locaux/ACCORD INTERESSEMENT 2024_Version signee.md
+      - ACCORDS_Dialogue social_2023_Version signee: archive-accords-locaux/ACCORDS_Dialogue social_2023_Version signee.md
+      - ACCORDS_Egalite femmes hommes_2023_Version signee: archive-accords-locaux/ACCORDS_Egalite femmes hommes_2023_Version signee.md
+      - Accord egalite HF_Avenant signe: archive-accords-locaux/Accord egalite HF_Avenant signe.md
+      - Accord interessement 2025 - Version signee: archive-accords-locaux/Accord interessement 2025 - Version signee.md
+      - Accord sur le supplement d'interessement au tire de l'exercice 2025 - Version signee: archive-accords-locaux/Accord sur le supplement d'interessement au tire de l'exercice 2025 - Version signee.md
+      - Avenant accord d'entreprise intergenerationnel_2023_Version signee: archive-accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md
+      - NAO 2024 - PV Desaccord: archive-accords-locaux/NAO 2024 - PV Desaccord.md
+      - NAO 2026 _PV de desaccord signe: archive-accords-locaux/NAO 2026 _PV de desaccord signe.md
+      - accord-financement-syndical-2021: archive-accords-locaux/accord-financement-syndical-2021.md
+      - accord-intergenerationnel-avenant1-2021: archive-accords-locaux/accord-intergenerationnel-avenant1-2021.md
+      - accord-methode-nao-2024: archive-accords-locaux/accord-methode-nao-2024.md
+      - accord-methode-nao-2025: archive-accords-locaux/accord-methode-nao-2025.md
+      - accord-supplement-interessement-2023: archive-accords-locaux/accord-supplement-interessement-2023.md
+      - accord-vote-electronique-2022: archive-accords-locaux/accord-vote-electronique-2022.md
+      - pv-desaccord-nao-2025: archive-accords-locaux/pv-desaccord-nao-2025.md
   - Accords UNICANCER: accords-unicancer/index.md
 
 markdown_extensions:

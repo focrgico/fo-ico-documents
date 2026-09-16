@@ -4,11 +4,11 @@ Cette section regroupe les documents liés aux élections professionnelles à l'
 
 ## Documents disponibles
 
+*2 documents "plus en vigueur" ont été déplacés vers l'archive : voir [`../archive-accords-locaux/index.md`](../archive-accords-locaux/index.md) — exclus du travail de résumé aux salariés.*
+
 | Document | Signature | Fichier |
 |---|---|---|
-| Vote électronique — cycle 2022 | 12/10/2022 | `accord-vote-electronique-2022.md` |
 | Vote électronique — cycle 2026 | 29/05/2026 | `ACCORD VOTE ELECTRONIQUE _ Elections professionnelles 2026.md` |
-| Dialogue social 2023 | 26/05/2023 | `ACCORDS_Dialogue social_2023_Version signee.md` |
 | Dialogue social 2026 | 13/03/2026 | `Accord dialogue social 2026.md` |
 
 ## En attente

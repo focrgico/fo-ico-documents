@@ -1,3 +1,12 @@
+# Procès-verbal de désaccord — NAO 2026
+
+- **Date :** non identifiée — aucun bloc de signature ("Fait à...") trouvé dans le PDF source (6 pages)
+- **Source :** converti par David directement depuis le PDF (OCR), pas depuis un Word
+- **Document de référence :** `NAO 2026 _PV de désaccord signé.pdf`, conservé dans le même dossier
+- **⚠️ Note :** Ce texte provient d'une reconnaissance de caractères (OCR) sur un PDF scanné, pas d'une extraction Word fiable — quelques mots peuvent être mal transcrits. À relire avant usage officiel.
+
+---
+
 ## PROCES VERBAL DE DESACCORD
 
 ## Négociations Annuelles Obligatoires au titre de 2026

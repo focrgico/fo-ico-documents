@@ -4,7 +4,7 @@ Chaque accord existe en deux formats dans ce dossier :
 - **`.md`** — texte lisible et cherchable (converti depuis la version Word de travail définitive avant signature)
 - **`.pdf`** — version scannée signée, preuve juridique de référence
 
-## Accords disponibles (37, par ordre chronologique)
+## Accords disponibles (38, par ordre chronologique)
 
 *Les accords de méthode NAO ont été déplacés vers une section dédiée : voir [`../nao/index.md`](../nao/index.md).*
 *Les documents liés aux élections professionnelles ont été déplacés vers une section dédiée : voir [`../elections/index.md`](../elections/index.md).*
@@ -19,35 +19,36 @@ Chaque accord existe en deux formats dans ce dossier :
 | Durée et ATT — Cadres | 12/05/2021 | `accord-duree-att-cadres-2021.md` |
 | Intergénérationnel — Avenant (temps partiel senior) | 30/06/2021 | `accord-intergenerationnel-avenant1-2021.md` |
 | CDD à objet défini | 13/08/2021 | `accord-cdd-objet-defini-2021.md` |
-| Avenant n°1 — Durée/ATT Non Cadre (CET heures sup.) | 31/01/2022 | `accord-duree-att-non-cadres-avenant1-2022.md` |
-| Avenant n°1 — CET | 31/01/2022 | `accord-cet-avenant1-2022.md` |
-| Parcours Physiciens médicaux | 19/05/2022 | `accord-physiciens-medicaux-2022.md` |
-| PVA (Part Variable Additionnelle — praticiens) | 19/05/2022 | `accord-pva-2022.md` |
-| Reprise d'ancienneté MER/IDE/AS | 19/05/2022 | `accord-reprise-anciennete-mer-ide-as-2022.md` |
-| Chèques syndicaux | 03/10/2022 | `accord-cheques-syndicaux-2022.md` |
-| Prime chaussures | 21/06/2023 | `accord-prime-chaussures-2023.md` |
-| Égalité F/H (2023) | 26/05/2023 | `accord-egalite-fh-2023.md` |
+| Avenant n°1 — Durée/ATT Non Cadre (CET heures sup.) | 31/01/2022 | `Accord ATT NC_Avenant n1_Signé.md` |
+| Avenant n°1 — CET | 31/01/2022 | `Accord CET_Avenant n1_signé.md` |
+| Parcours Physiciens médicaux | 19/05/2022 | `Accord Parcours Phycisiens_2022_Signé.md` |
+| PVA (Part Variable Additionnelle — praticiens) | 19/05/2022 | `Accord PVA_2022_Signé.md` |
+| Reprise d'ancienneté MER/IDE/AS | 19/05/2022 | `Accord Reprise Expérience professionnelle MER-AS-IDE_2022_Signé.md` |
+| Chèques syndicaux | 03/10/2022 | `Accord-Chèques syndicaux_v signée.md` |
+| Prime chaussures | 21/06/2023 | `Accord prime chaussure version signée.md` |
+| Égalité F/H (2023) | 26/05/2023 | `ACCORDS_Egalité femmes hommes_2023_Version signée.md` |
 | Dialogue social (2023) | 26/05/2023 | `accord-dialogue-social-2023.md` |
-| Intergénérationnel — Avenant (fin de carrière) | 15/09/2023 | `accord-intergenerationnel-avenant-2023.md` |
-| Égalité F/H — Avenant | 15/12/2023 | `accord-egalite-fh-avenant-2023.md` |
-| Prime USC | 01/12/2023 | `accord-prime-usc-2023.md` |
+| Intergénérationnel — Avenant (fin de carrière) | 15/09/2023 | `Avenant accord d'entreprise intergénérationnel_2023_Version signée.md` |
+| Égalité F/H — Avenant | 15/12/2023 | `Accord égalité HF_Avenant signé.md` |
+| Prime USC | 01/12/2023 | `Accord prime USC signé.md` |
 | Compteur intermédiaire — personnel non posté | 23/03/2024 | `accord-compteur-intermediaire-non-postes-2024.md` |
-| Intéressement 2024 | 26/04/2024 | `accord-interessement-2024.md` |
+| Intéressement 2024 | 26/04/2024 | `ACCORD INTERESSEMENT 2024_Version signée.md` |
 | Supplément d'intéressement — exercice 2023 | 26/04/2024 | `accord-supplement-interessement-2023.md` |
-| Compteur intermédiaire — personnel posté | 21/06/2024 | `accord-compteur-intermediaire-salaries-postes-2024.md` |
-| Validation des Acquis Professionnels (VAP) | 25/02/2025 | `accord-vap-2025.md` |
-| Répartition de la BIC | 11/03/2025 | `accord-repartition-bic-2025.md` |
-| Parcours professionnel Assistant Médical | 11/03/2025 | `accord-parcours-am-2025.md` |
-| Parcours professionnel IDE et MER | 28/03/2025 | `accord-parcours-ide-mer-2025.md` |
-| Intéressement 2025 | 17/04/2025 | `accord-interessement-2025.md` |
+| Compteur intermédiaire — personnel posté | 21/06/2024 | `Accord compteur intermédiaire salarié posté_signé.md` |
+| Validation des Acquis Professionnels (VAP) | 25/02/2025 | `Accord sur la validation des acquis professionnels _Version signée.md` |
+| Répartition de la BIC | 11/03/2025 | `Accord relatif à la répartition de la BIC_Version signée.md` |
+| Parcours professionnel Assistant Médical | 11/03/2025 | `Accord relatif au parcours des assistantes médicales_Version signée.md` |
+| Parcours professionnel IDE et MER | 28/03/2025 | `Accord parcours IDE et MER_Version signée.md` |
+| Intéressement 2025 | 17/04/2025 | `Accord intéressement 2025 - Version signée.md` |
 | Acquisition CP sur maladie — Non Cadres | 31/12/2025 | `accord-acquisition-cp-maladie-non-cadres-2025.md` |
 | Acquisition CP sur maladie — Cadres | 31/12/2025 | `accord-acquisition-cp-maladie-cadres-2025.md` |
-| Forfait Mobilité Durable — version en vigueur | 24/10/2025 | `accord-forfait-mobilite-durable-2025.md` |
+| Forfait Mobilité Durable — version en vigueur | 24/10/2025 | `ACCORD FORFAIT MOBILITE DURABLE_Version signée.md` |
 | Dialogue social 2026 | 13/03/2026 | `accord-dialogue-social-2026.md` |
-| Congé humanitaire | 31/03/2026 | `accord-conge-humanitaire-2026.md` |
-| Personnel de nuit (maintien compétences) | 19/05/2026 | `accord-nuit-2026.md` |
-| Égalité Femmes-Hommes (2026) | 29/05/2026 | `accord-egalite-fh-2026.md` |
-| Intéressement 2026 | 29/05/2026 | `accord-interessement-2026.md` |
+| Congé humanitaire | 31/03/2026 | `Accord Congé Humanitaire (2026).md` |
+| Supplément d'intéressement — exercice 2025 | 17/04/2026 | `Accord sur le supplément d'intéressement au tire de l'exercice 2025 - Version signée.md` |
+| Personnel de nuit (maintien compétences) | 19/05/2026 | `Accord travail de nuit - 2026.md` |
+| Égalité Femmes-Hommes (2026) | 29/05/2026 | `Accord égalité FH 2026.md` |
+| Intéressement 2026 | 29/05/2026 | `Accord d'entreprise relatif à l'intéressement (2026).md` |
 
 
 ## Points en attente de clarification avec David
@@ -73,7 +74,7 @@ Pour les 18 accords dont le PDF signé est actuellement sur GitHub, les signatai
 
 ## Nommage des fichiers
 
-`accord-[theme]-[annee].md` — un avenant se nomme `accord-[theme]-avenant[n]-[annee].md`.
+Le nom du fichier `.md` reprend exactement le nom du PDF signé correspondant (mêmes espaces, majuscules, accents). Pour un document sans PDF signé disponible, garder un nom clair de type `accord-[theme]-[annee].md`.
 
 ## Ajouter un accord
 

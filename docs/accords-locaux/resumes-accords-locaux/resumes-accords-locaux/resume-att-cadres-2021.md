@@ -1,7 +1,7 @@
 # Durée et aménagement du temps de travail — personnel Cadre
 
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
-**Source : accord du 12 mai 2021 (version en vigueur, aucun avenant à ce jour).**
+**Source : accord du 12 mai 2021, tel que modifié par l'avenant du 31 décembre 2025 (article 3.1.4 sur les congés payés pendant un arrêt maladie, seul point modifié — le reste de l'accord de 2021 est inchangé).**
 
 ## Qui est concerné
 
@@ -39,7 +39,8 @@ Sont exclus de l'accord : contrats de professionnalisation/apprentissage, contra
 
 - **Congés payés** : 30 jours ouvrés/an en forfait jours, 27 jours ouvrés/an en heures (2 jours de fractionnement automatiques inclus dans les deux cas) (Article 3.1.1-3.1.2).
 - **Planification des congés** : validation par la Direction au plus tard le 15 janvier (période mai-octobre) ou le 15 juin (période novembre-avril) ; 3 semaines consécutives minimum l'été, 4 si le service le permet ; pas de modification à moins d'1 mois du départ (Article 3.1.3).
-- **Arrêt de travail avant des congés programmés** : report des congés non pris (Article 3.1.4). Arrêt **pendant** les congés : les congés sont maintenus, non interrompus (Article 3.1.4).
+- **Arrêt de travail avant des congés programmés** : report des congés non pris (Article 3.1.4, tel que modifié par avenant du 31/12/2025).
+- **Arrêt de travail pendant les congés (version en vigueur depuis le 31/12/2025)** : le congé est **reporté à une date ultérieure**, à redéfinir avec le responsable hiérarchique dans un délai de **15 jours**. *(Ceci remplace la règle d'origine de 2021, qui prévoyait un maintien du congé sans interruption — mise à jour pour se conformer au droit applicable.)* À son retour d'arrêt maladie, le salarié est informé du report de ses droits (bulletin de salaire ou mail) et dispose de **15 mois** pour poser ses congés non pris, en lien avec son responsable (Article 3.1.4, avenant du 31/12/2025).
 - **Événements familiaux pendant les congés** : le congé est interrompu en cas de décès d'un membre de la famille — *au sens de l'article 2.4.3.3 de la CCN* (Article 3.1.6).
 - **Congé pour maladie grave d'un proche** : accepté sous réserve d'un délai de 3 jours (Article 3.1.7).
 - **Astreintes** : définition — temps où le cadre doit pouvoir intervenir sur appel, sans être sur site (Article 3.2.1). Catégories concernées : personnel médical (chirurgie, anesthésie, oncologie médicale, radiothérapie, pharmacie), service technique, informatique, cadres administratifs (Article 3.2.2). Programmation communiquée au moins 7 jours à l'avance. Temps d'intervention (trajet inclus) = temps de travail effectif, frais de déplacement remboursés. *Contreparties définies par les accords de branche et la CCN des CLCC* (Article 3.2.4).
@@ -47,4 +48,4 @@ Sont exclus de l'accord : contrats de professionnalisation/apprentissage, contra
 
 ## À retenir
 
-Aucun avenant à ce jour sur cet accord — c'est la seule version applicable. Pour les astreintes et le décès d'un proche pendant les congés, se référer aussi aux articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
+Un avenant du 31/12/2025 a mis à jour la règle sur les congés payés pendant un arrêt maladie (voir ci-dessus) — c'est la seule modification apportée à l'accord de 2021. Pour les astreintes et le décès d'un proche pendant les congés, se référer aussi aux articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).

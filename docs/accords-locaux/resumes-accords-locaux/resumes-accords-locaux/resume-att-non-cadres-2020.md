@@ -1,7 +1,7 @@
 # Durée et aménagement du temps de travail — personnel Non Cadre
 
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
-**Source : accord du 14 septembre 2020, tel que modifié par l'Avenant n°1 du 31 janvier 2022 (dernière version en vigueur). L'avenant remplace uniquement l'article sur la rémunération des heures supplémentaires en fin d'annualisation — le reste de l'accord de 2020 est inchangé.**
+**Source : accord du 14 septembre 2020, tel que modifié par l'Avenant n°1 du 31 janvier 2022 (heures supplémentaires) et par l'avenant du 31 décembre 2025 (congés payés pendant un arrêt maladie). Le reste de l'accord de 2020 est inchangé.**
 
 ## Qui est concerné
 
@@ -39,7 +39,8 @@ Tout le personnel non-cadre, CDI, CDD ou contrats spécifiques/aidés, temps ple
 
 - **Congés payés** : 25 jours ouvrés/an, + 2 jours de fractionnement accordés automatiquement (Article 4.1.1-4.1.2).
 - **Planification** : validation Direction au plus tard le 15 janvier (période mai-octobre) ou 15 juin (novembre-avril) ; 3 semaines consécutives minimum l'été (4 si le service le permet) ; pas de modification à moins d'1 mois du départ pour les congés d'1 semaine ou plus (Article 4.1.3).
-- **Arrêt de travail avant des congés programmés** : report des congés non pris. Arrêt **pendant** les congés : congés maintenus (Article 4.1.4).
+- **Arrêt de travail avant des congés programmés** : report des congés non pris (Article 4.1.4, tel que modifié par avenant du 31/12/2025).
+- **Arrêt de travail pendant les congés (version en vigueur depuis le 31/12/2025)** : le congé est **reporté à une date ultérieure**, à redéfinir avec le responsable hiérarchique dans un délai de **15 jours**. *(Remplace la règle d'origine de 2020, qui prévoyait un maintien du congé sans interruption.)* À son retour, le salarié est informé du report (bulletin de salaire ou mail) et dispose de **15 mois** pour poser ses congés non pris (Article 4.1.4, avenant du 31/12/2025).
 - **Événements familiaux pendant les congés** : interruption du congé en cas de décès d'un membre de la famille — *au sens de l'article 2.4.3.3 de la CCN* (Article 4.1.6).
 - **Congé pour maladie grave d'un proche** : accepté sous réserve d'un délai de 3 jours (Article 4.1.7).
 - **Astreintes** : catégories concernées — IBODE, infirmier(e) anesthésiste D.E., manipulateur ER imagerie, service technique, informatique, masseur-kinésithérapeute (Article 4.2.2). Programmation communiquée au moins 7 jours à l'avance. Intervention (trajet inclus) = temps de travail effectif, frais remboursés. *Contreparties définies par les accords de branche et la CCN des CLCC* (Article 4.2.5).
@@ -65,4 +66,4 @@ Tout le personnel non-cadre, CDI, CDD ou contrats spécifiques/aidés, temps ple
 
 ## À retenir
 
-La version applicable aujourd'hui pour les heures supplémentaires est celle de l'**Avenant n°1 (31 janvier 2022)** — toutes les autres dispositions de l'accord de 2020 restent en vigueur telles quelles. Pour les astreintes et le décès d'un proche pendant les congés, se référer aussi aux articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
+La version applicable aujourd'hui pour les heures supplémentaires est celle de l'**Avenant n°1 (31 janvier 2022)**, et pour les congés payés pendant un arrêt maladie celle de l'**avenant du 31 décembre 2025** — toutes les autres dispositions de l'accord de 2020 restent en vigueur telles quelles. Pour les astreintes et le décès d'un proche pendant les congés, se référer aussi aux articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).

@@ -9,21 +9,21 @@
 
 **Le contexte en bref** *(Préambule)*
 
-Cet accord encadre le télétravail à l'ICO depuis 2021. Il répond à une demande des salariés de mieux concilier vie professionnelle et vie personnelle, tout en réduisant le temps de trajet et les risques d'accident — sans jamais remettre en cause la continuité et la sécurité des soins. Le télétravail reste **volontaire** : ni l'ICO ni le salarié ne peuvent l'imposer à l'autre *(Art. 4.1 — double volontariat)*.
+Depuis 2021, le télétravail a sa place à l'ICO. Cet accord est né d'une demande simple des salariés : mieux équilibrer vie pro et vie perso, gagner du temps de trajet, réduire le risque d'accident sur la route — sans jamais fragiliser la continuité et la sécurité des soins. Un principe protège tout le monde des deux côtés : le télétravail reste **volontaire**, personne ne peut vous l'imposer, et vous ne pouvez pas l'imposer non plus à votre service *(Art. 4.1 — double volontariat)*.
 
-**Qui peut en bénéficier** *(Art. 3 — Critères d'éligibilité)*
+**Qui peut en bénéficier ?** *(Art. 3 — Critères d'éligibilité)*
 
-- Ancienneté minimale de **6 mois** *(Art. 3.3 / Art. 2)*
-- Temps de travail **≥ 50 %** *(Art. 3.3)*
-- Poste compatible avec le travail à distance — les métiers en lien direct avec les patients (accueil, soins) ne sont pas éligibles, pour garantir la continuité des soins *(Art. 3.1)*
-- Non éligibles : apprentis, contrats de professionnalisation, CUI-CEC, stagiaires *(Art. 3.3)*
+- Il faut au moins **6 mois d'ancienneté** *(Art. 3.3 / Art. 2)*
+- Travailler au moins **50 %** d'un temps plein *(Art. 3.3)*
+- Votre poste doit pouvoir se faire à distance — les métiers en contact direct avec les patients (accueil, soins) restent en dehors du dispositif, pour que la prise en charge ne soit jamais interrompue *(Art. 3.1)*
+- Sont exclus : apprentis, contrats de professionnalisation, CUI-CEC, stagiaires *(Art. 3.3)*
 
 **Ce qu'il faut retenir** *(Art. 6 — Fréquence et nombre de jours)*
 
-- Jusqu'à **47 jours de télétravail par an** (temps plein), proratisés pour les temps partiels *(Art. 6, al. 1-3)*
-- **1 jour/semaine en moyenne** pour les non-cadres et cadres en heures (2 j possible selon le service) *(Art. 6)*
-- Jusqu'à **3 jours/semaine** pour les cadres au forfait jour *(Art. 6)*
-- Le télétravail est **réversible à tout moment** à l'initiative du salarié *(Art. 5.1 — Clause de réversibilité)*
+- Jusqu'à **47 jours de télétravail par an** pour un temps plein, proratisés si vous êtes à temps partiel *(Art. 6, al. 1-3)*
+- Concrètement, ça représente **1 jour par semaine en moyenne** pour les non-cadres et cadres en heures (2 jours possibles selon le service) *(Art. 6)*
+- Et jusqu'à **3 jours par semaine** pour les cadres au forfait jour *(Art. 6)*
+- Vous changez d'avis ? Le télétravail est **réversible à tout moment**, à votre seule initiative *(Art. 5.1 — Clause de réversibilité)*
 
 ---
 
@@ -31,35 +31,35 @@ Cet accord encadre le télétravail à l'ICO depuis 2021. Il répond à une dema
 
 **Comment faire la demande** *(Art. 4 — Modalités de demande et d'acceptation)*
 
-1. Demande écrite auprès du/de la responsable hiérarchique *(Art. 4.2)*
-2. Réponse écrite et motivée de la DRH sous **1 mois maximum** *(Art. 4.3)*
-3. Validation des jours via l'outil de gestion des temps (GTA) *(Art. 4.2)*
-4. Un refus n'est jamais un motif de sanction — et doit être justifié par écrit *(Art. 4.4)*
+1. Vous adressez une demande écrite à votre responsable hiérarchique *(Art. 4.2)*
+2. La DRH doit vous répondre par écrit, et de façon motivée, sous **1 mois maximum** *(Art. 4.3)*
+3. Les jours sont ensuite validés via l'outil de gestion des temps (GTA) *(Art. 4.2)*
+4. Si c'est non, ce n'est jamais un motif de sanction — et le refus doit être justifié par écrit, noir sur blanc *(Art. 4.4)*
 
-**Délais à connaître** *(Art. 6)*
+**Les délais à avoir en tête** *(Art. 6)*
 
-- Modification d'un jour de télétravail : **48h de délai de prévenance** (72h pour les cadres au forfait jour)
-- Planification établie par trimestre, au moins 1 mois à l'avance
+- Pour changer un jour de télétravail : **48h de délai de prévenance** (72h si vous êtes cadre au forfait jour)
+- Le planning se construit par trimestre, avec au moins 1 mois d'anticipation
 
-**Ce que l'ICO fournit** *(Art. 8.1 — Équipements et matériels)*
+**Ce que l'ICO met à votre disposition** *(Art. 8.1 — Équipements et matériels)*
 
-PC portable, souris filaire, alimentation, sacoche. *(Le reste — 2ᵉ écran, imprimante, chaise ergonomique — n'est pas fourni.)* Il n'existe pas d'indemnité financière pour les frais liés au télétravail *(Art. 8.3, dernier alinéa)*.
+Un PC portable, une souris filaire, l'alimentation et une sacoche. En revanche, pas de 2ᵉ écran, pas d'imprimante, pas de chaise ergonomique — et aucune indemnité financière n'est prévue pour les frais liés au télétravail (électricité, chauffage...) *(Art. 8.3, dernier alinéa)*.
 
-**Vos obligations** *(Art. 3.4 et Art. 8.3)*
+**Ce qu'on vous demande en retour** *(Art. 3.4 et Art. 8.3)*
 
-- Disposer d'un espace dédié à domicile et d'une connexion internet suffisante *(Art. 3.4)*
+- Disposer chez vous d'un espace dédié et d'une connexion internet suffisante *(Art. 3.4)*
 - Souscrire une assurance habitation multirisques avec responsabilité civile *(Art. 8.3)*
-- Respecter une confidentialité renforcée (données, mots de passe) *(Art. 10.3)*
+- Veiller à une confidentialité renforcée : données, mots de passe, etc. *(Art. 10.3)*
 
-**⚠ Point de vigilance** *(Art. 7.2 et 7.3 — Droit à la déconnexion)*
+**⚠ Un point à ne pas négliger** *(Art. 7.2 et 7.3 — Droit à la déconnexion)*
 
-Droit à la déconnexion garanti : aucune sollicitation professionnelle avant 8h ou après 20h (hors urgence exceptionnelle) *(Art. 7.2)*. Les plages horaires de contact sont fixées avec le manager *(Art. 7.3)*.
+Votre droit à la déconnexion est garanti : personne ne doit vous solliciter professionnellement avant 8h ou après 20h, sauf urgence réelle *(Art. 7.2)*. Les plages où l'on peut vous contacter se fixent avec votre manager, pas l'inverse *(Art. 7.3)*.
 
 **Bon à savoir**
 
-- Un accident survenu à domicile pendant un jour de télétravail bénéficie du **même régime** qu'un accident sur site *(Art. 9.2)*
-- Le télétravailleur conserve **les mêmes droits collectifs et individuels** que sur site : accès aux informations syndicales, élections professionnelles, formation *(Art. 10.1)*
-- Suivi de l'accord une fois par an en CSSCT centrale, clause de revoyure au terme de la première année *(Art. 12.1)*
+- Un accident chez vous pendant un jour de télétravail est traité **exactement comme un accident sur site** *(Art. 9.2)*
+- Vous gardez **tous vos droits**, collectifs comme individuels : informations syndicales, élections professionnelles, accès à la formation — le télétravail ne vous met pas à l'écart *(Art. 10.1)*
+- L'accord est suivi chaque année en CSSCT centrale, avec une clause de revoyure au bout d'un an *(Art. 12.1)*
 
 ---
 
@@ -70,7 +70,6 @@ Droit à la déconnexion garanti : aucune sollicitation professionnelle avant 8h
 - **Chiffre clé (badge) :** 47 j / par an (temps plein) *(Art. 6)*
 - **Tag 1 :** Matériel fourni *(Art. 8.1)*
 - **Tag 2 :** Mêmes droits qu'au bureau *(Art. 10.1)*
-- **Contact FO :** David Di Peri — délégué syndical central FO
 
 ---
 

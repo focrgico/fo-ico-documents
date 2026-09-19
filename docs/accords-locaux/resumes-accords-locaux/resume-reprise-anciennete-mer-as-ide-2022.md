@@ -1,28 +1,33 @@
-# Reprise d'ancienneté — Manipulateurs en électroradiologie (MER), IDE, Aides-Soignants (AS)
+# Reprise d'ancienneté à 100% — MER, IDE, AS
 
-**Le contexte en bref** *(Préambule)*
-
-Face aux difficultés de recrutement et à la concurrence entre établissements de santé, l'ICO et les organisations syndicales conviennent de mesures de fidélisation et d'attractivité pour ces trois métiers.
-
-**Qui est concerné** *(Art. 1)*
-
-Manipulateurs en électroradiologie (imagerie médicale, médecine nucléaire, radiothérapie), IDE et Aides-Soignants sous la direction des soins — nouvellement recrutés ou déjà en poste.
-
-**Ce que change cet accord** *(Art. 2)*
-
-La CCN (art. 2.5.2.4.2) prévoit une reprise d'expérience professionnelle antérieure à hauteur de **50 %** pour un même métier exercé dans un autre établissement. Cet accord porte cette reprise à **100 %**, de façon dérogatoire et plus favorable que la CCN.
-
-**Comment ça s'applique** *(Art. 3-4)*
-
-- Effectif à compter du **1er janvier 2022**, sur présentation de justificatifs (certificat de travail, bulletin de salaire, contrat de travail)
-- **Pas de rétroactivité** sur la rémunération avant l'embauche à l'ICO : le nouveau calcul s'applique à effet du 1er janvier 2022
-- **Salariés déjà en poste** à la signature : 2 mois pour formaliser la demande
-- **Nouveaux embauchés** : reprise automatique si justificatifs fournis dans les **3 mois** suivant l'embauche ; au-delà, la prise en compte n'est effective qu'au 1er jour du mois suivant la production des justificatifs
-
-**Dates et signataires**
-
-- Signé le **19 mai 2022**, effet au **1er janvier 2022**.
-- Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Julien Rosan), **CFDT** (Corinne Lanio), **CFE-CGC** (Geneviève Perrocheau) — les 4 organisations ont signé.
+**Signé le 19 mai 2022 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux, CFDT et CFE-CGC.**
+*En vigueur à compter du 1er janvier 2022, durée indéterminée.*
 
 ---
-*Source : `Accord Reprise Experience professionnelle MER-AS-IDE_2022_Signe.md` (19/05/2022). Référence CCN : art. 2.5.2.4.2 (reprise d'expérience de droit commun, à 50 % — cet accord porte le taux à 100 % pour ces trois métiers).*
+
+## Qui est concerné *(Art. 1)*
+
+- **Manipulateurs en électroradiologie (MER)** affectés en imagerie médicale, médecine nucléaire ou radiothérapie
+- **Infirmiers diplômés d'État (IDE)** affectés sous la direction des soins
+- **Aides-soignant(e)s (AS)** affectés sous la direction des soins
+
+---
+
+## Ce que cet accord change *(Art. 2)*
+
+La CCN des CLCC prévoit une reprise d'expérience professionnelle à **50%** pour les nouveaux embauchés. Cet accord porte cette reprise à **100%** pour les MER, IDE et AS — aussi bien pour les nouveaux arrivants que pour les salariés déjà en poste à la date de signature.
+
+**Concrètement :** si vous avez travaillé 6 ans en tant qu'IDE dans un autre établissement avant de rejoindre l'ICO, les 6 années sont intégralement prises en compte (et non 3 comme dans le cadre de la CCN seule).
+
+---
+
+## Comment en bénéficier *(Art. 3-4)*
+
+**Si vous êtes embauché après la conclusion de l'accord :**
+La reprise à 100% est automatique, sous réserve de fournir vos justificatifs d'emploi (certificats de travail, bulletins de salaire ou contrats) **dans les 3 mois suivant votre embauche**. Au-delà, la prise en compte ne sera effective qu'au 1er jour du mois suivant la production des justificatifs.
+
+**Si vous étiez déjà en poste à la signature (mai 2022) :**
+La demande devait être effectuée avant le **30 juin 2022** via le formulaire en ligne, avec envoi par mail des justificatifs à la DRH. La PEP ainsi recalculée a été mise en place rétroactivement au **1er janvier 2022**, versée avec la paie d'octobre 2022.
+
+---
+*Source : Accord reprise d'ancienneté MER, AS, IDE (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*

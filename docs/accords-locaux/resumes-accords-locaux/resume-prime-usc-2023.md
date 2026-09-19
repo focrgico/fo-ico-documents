@@ -6,18 +6,18 @@ Cette prime existe d'abord dans la fonction publique hospitalière (décret 2022
 
 **Qui est concerné** *(Art. 1)*
 
-IDE et Aides-Soignants (AS) affectés, en tout ou partie de leur temps, à l'Unité de Soins Continus (USC) de leur site. Les autres personnels paramédicaux (psychologues, brancardiers, kinés...) consacrant moins de 50 % de leur temps à l'USC ne sont pas éligibles.
+Vous, si vous êtes IDE ou Aide-Soignant(e) affecté(e), en tout ou partie de votre temps, à l'Unité de Soins Continus (USC) de votre site. Si vous êtes un autre personnel paramédical (psychologue, brancardier, kiné...) consacrant moins de 50 % de votre temps à l'USC, vous n'êtes pas éligible.
 
 **Montant de base** *(Art. 2)*
 
-**130 € bruts/mois** (montant fixé par l'accord de branche Unicancer), proraté selon le temps réellement consacré à l'USC.
+**130 € bruts/mois** (montant fixé par l'accord de branche Unicancer), proraté selon le temps que vous consacrez réellement à l'USC.
 
-**Calcul selon le mode de travail** *(Art. 3)*
+**Comment c'est calculé selon votre mode de travail** *(Art. 3)*
 
-- **Soignant de jour** : (nombre de jours travaillés à l'USC ÷ 20 jours/mois en moyenne) × 130 €, plafonné à 130 €/mois
-- **Soignant de nuit à Angers** : (nombre de nuits à l'USC ÷ 12 nuits/mois en moyenne) × 130 €. *Exemple donné dans l'accord : 5 nuits à l'USC en mai → prime de 54,17 € bruts sur la paie de juin.*
-- **Soignant de nuit à Saint-Herblain** : (nombre de nuits à l'USC ÷ 11 nuits/mois en moyenne) × 130 €. *Exemple : 5 nuits → 59,09 € bruts.*
-- **IDE de nuit à Saint-Herblain (cas particulier)** : éligible dès que 50 % ou plus de ses nuits du mois sont consacrées à l'USC ; montant proraté au temps de travail contractuel. *Exemple : 6 nuits sur 11 planifiées, temps de travail à 80 % → (130 € ÷ 80 %) = 104 € bruts.*
+- **Si vous êtes soignant de jour** : (nombre de jours travaillés à l'USC ÷ 20 jours/mois en moyenne) × 130 €, plafonné à 130 €/mois
+- **Si vous êtes soignant de nuit à Angers** : (nombre de nuits à l'USC ÷ 12 nuits/mois en moyenne) × 130 €. *Exemple donné dans l'accord : 5 nuits à l'USC en mai → prime de 54,17 € bruts sur la paie de juin.*
+- **Si vous êtes soignant de nuit à Saint-Herblain** : (nombre de nuits à l'USC ÷ 11 nuits/mois en moyenne) × 130 €. *Exemple : 5 nuits → 59,09 € bruts.*
+- **Si vous êtes IDE de nuit à Saint-Herblain (cas particulier)** : vous êtes éligible dès que 50 % ou plus de vos nuits du mois sont consacrées à l'USC ; montant proraté à votre temps de travail contractuel. *Exemple : 6 nuits sur 11 planifiées, temps de travail à 80 % → (130 € ÷ 80 %) = 104 € bruts.*
 
 **Dates et signataires**
 

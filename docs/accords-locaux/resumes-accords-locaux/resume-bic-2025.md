@@ -1,18 +1,22 @@
 # Répartition de la BIC (Bonification Individuelle de Carrière)
 
-**Le contexte en bref**
+**Qui est concerné**
 
-La CCN des CLCC prévoit pour les salariés non-praticiens un complément individuel de rémunération annuel, la BIC, qui valorise la maîtrise du poste (via l'entretien annuel d'appréciation) *(CCN des CLCC, articles 2.5.2.2 et 2.5.3.2)*. Un contentieux (« procès BIC ») a bloqué les discussions jusqu'à l'été 2024 ; les jugements rendus ont permis de relancer la négociation.
+Vous, si vous êtes salarié **non-praticien** et éligible — la BIC est un complément individuel de rémunération prévu par la CCN des CLCC.
 
-**Ce que cet accord change** *(Art. 2 — Objet)*
+**Comment l'enveloppe est définie** *(CCN, art. 2.5.2.2.3)*
 
-- La répartition de la BIC devient **égalitaire entre tous les salariés éligibles** présents sur l'exercice : **le même taux est appliqué à chaque salarié**, calculé en pourcentage de la RMAG (rémunération minimale annuelle garantie)
-- Toutes les autres règles de la CCN sur la BIC restent inchangées
+- Chaque année, l'enveloppe totale de BIC ne peut être **inférieure à 0,5 %** de la masse des rémunérations minimales annuelles garanties (RMAG) — ce montant ne peut pas être pris sur les augmentations générales
+- Votre BIC individuelle est plafonnée à **2 % de votre RMAG**
+- Versée en une fois, sur la **paie d'avril**, et apparaît distinctement sur votre bulletin de salaire
+- Condition d'éligibilité : au moins **6 mois d'ancienneté**, avec une évaluation lors de votre entretien annuel d'appréciation *(CCN, art. 2.5.2.2.2)*
 
-**Dates et signataires**
+**Ce que cet accord local change**
 
-- Signé le **11 mars 2025** à Angers, entrée en vigueur le 1er jour du mois suivant le dépôt.
-- Signé par : ICO (Pr Mario Campone, DG), **CFE-CGC** (Maxime Brémaud), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Julien Rosan) — les 3 organisations présentes ont signé. *(La CFDT n'apparaît pas comme partie à cet accord.)*
+- Votre BIC n'est plus modulée selon votre évaluation individuelle : **le même taux est appliqué à tous les salariés éligibles** de l'ICO, calculé en pourcentage de votre RMAG
+- Tout le reste (conditions d'éligibilité, plafond, versement) reste celui fixé par la CCN
+
+**Signataires** : CGT-FO, Sud Santé-Sociaux, CFE-CGC — les 3 organisations ont signé.
 
 ---
-*Source : `Accord relatif à la répartition de la BIC_Version signee.md` (11/03/2025). Référence CCN : art. 2.5.2.2 et 2.5.3.2 (citée explicitement dans le texte de l'accord).*
+*Source : accord du 11 mars 2025. Références CCN : art. 2.5.2.2 et 2.5.2.2.3.*

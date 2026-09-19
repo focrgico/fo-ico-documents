@@ -1,38 +1,61 @@
-# Égalité professionnelle Femmes-Hommes (2026)
+# Égalité professionnelle Femmes-Hommes
 
-*Accord le plus récent sur ce thème — remplace la version 2023. Reprend et confirme notamment le congé de parentalité homoparental introduit par l'avenant du 15/12/2023 (voir Art. 7.4 ci-dessous).*
-
-**Parentalité et retour d'absence** *(Art. 2)*
-
-- **Livret de parentalité** remis à tout salarié déclarant une naissance ou arrivée d'enfant (Art. 2.1)
-- **Entretien de ré-accueil au poste** : sur demande dès 4 mois d'absence consécutifs, systématique et organisé le jour même de la reprise au-delà de 6 mois — avec une **journée de doublure** systématique à partir de 4 mois d'absence (Art. 2.2)
-- **EAA manqué pour cause d'absence** : rattrapé au retour (Art. 2.3)
-- **Jours enfant malade** : en plus des jours prévus par la CCN, des absences sans solde supplémentaires sont possibles selon l'organisation du service (récupérables via ses heures de récup'). Le seuil d'invalidité ouvrant droit aux 4 jours supplémentaires CCN pour enfant handicapé est **abaissé à 50 %** (au lieu de 80 %) (Art. 2.4)
-- **Enfant malade, 2 parents salariés ICO** *(CCN art. 2.4.3.5)* : le droit (6 jours si hospitalisation d'un enfant de moins de 16/20 ans, 4 jours si maladie d'un enfant de moins de 14/20 ans) est ouvert **à chacun des deux parents** séparément (pas simultanément), plafonné à **12 jours par famille et par an** (Art. 2.5)
-
-**Recrutement et égalité salariale** *(Art. 3-4)*
-
-- Recrutement sans distinction de sexe, offres d'emploi neutres (Art. 3)
-- **Congé paternité et maternité maintenus à 100 % du salaire brut** dès **3 mois d'ancienneté** (au lieu de 9 mois prévus par la CCN) (Art. 4)
-- Les salariées en congé maternité se voient attribuer le **montant moyen de la BIC** (Art. 4)
-
-**Conditions de travail** *(Art. 7)*
-
-- **Heures de grossesse** (1h/jour dès le 3ème mois, prévues par la CCN) : 3 modalités de prise possibles selon le service (heure par heure avec report, en journées cumulées, ou par anticipation) — la salariée choisit une modalité définitive, non modifiable en cours de grossesse (Art. 7.1)
-- **Allaitement** : mise à disposition d'un lieu adapté, absence organisée par le service (Art. 7.2)
-- **Égalité d'accès au temps partiel** entre femmes et hommes (Art. 7.3)
-- **Congé de parentalité (couples homoparentaux)** : lorsqu'aucun des deux partenaires ne peut bénéficier d'un congé maternité, **25 jours calendaires** de congé de parentalité accordés au salarié en CDI (un seul des deux si le couple travaille à l'ICO), **salaire maintenu**, à prendre dans les **6 mois** suivant l'arrivée de l'enfant, sans impact sur l'ancienneté ; demande écrite 1 mois avant (Art. 7.4)
-
-**Lutte contre les violences domestiques** *(Art. 8)*
-
-- **6 référents violences domestiques** parmi les élus CSE Central (3 par site), formés (formation renouvelée tous les 3 ans), tenus à une **stricte confidentialité** — nomination prévue avant le 31/07/2026, formation avant le 31/12/2026
-- Sensibilisation de l'ensemble des managers d'ici fin 2028
-- **Réseau de partenaires** (social, logement, juridique) constitué par la DRH d'ici le 31/12/2026
-- **Temps d'audition par les forces de l'ordre pendant le temps de travail = temps de travail rémunéré** (autorisation d'absence payée dans l'outil GTA)
-
-**Dates et signataires**
-
-- Signé le **29 mai 2026**. Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Julien Rosan), **CFE-CGC** (Maxime Brémaud) — les 3 organisations ont signé.
+**Signé le 29 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
+*Accord à durée déterminée de 3 ans à compter de sa notification.*
 
 ---
-*Source : `Accord egalite FH 2026.md`. Référence CCN : art. 2.4.3.5 (enfant malade), heures de grossesse et congé enfant handicapé (article CCN non précisé dans le texte au-delà de la mention générale).*
+
+## Qui est concerné
+
+Tous les salariés de l'ICO.
+
+---
+
+## Sensibilisation et formation *(Art. 1)*
+
+- **Égalité F/H** : formation progressive de l'ensemble des salariés (objectif : 20%/an des salariés en place, 100% des nouveaux arrivants dans les 6 mois)
+- **Violences sexistes et sexuelles (VSS)** : e-learning pour 100% des salariés avant le 31 décembre 2027 ; formation présentielle d'une demi-journée à déployer à partir de janvier 2028 pour 100% des salariés, et dans les 12 mois suivant chaque arrivée
+
+---
+
+## Articulation vie personnelle / vie professionnelle *(Art. 2)*
+
+- **Livret de parentalité** remis à 100% des salariés déclarant une naissance ou une adoption (aussi disponible sur l'intranet)
+- **Entretien de ré-accueil** à la reprise après une absence longue : obligatoire et systématique dès 6 mois d'absence consécutifs (facultatif sur demande entre 4 et 6 mois) ; une **journée de doublure** est organisée le jour de la reprise à partir de 4 mois d'absence
+- **EAA** : tout salarié absent pendant la campagne est reçu à son retour pour un entretien de fixation d'objectifs
+- **Absences enfants malades** : jours supplémentaires non soldés accordés si l'organisation le permet ; seuil d'invalidité pour les enfants handicapés abaissé de 80% à **50%** ; si les 2 parents sont salariés de l'ICO, le droit est ouvert à chacun d'eux, dans la limite de **12 jours par famille et par an**
+- **Congé de parentalité pour couples homoparentaux** : 25 jours calendaires rémunérés accordés au salarié en CDI dont le/la partenaire ne peut bénéficier d'un congé maternité, dans les 6 mois suivant l'arrivée de l'enfant
+
+---
+
+## Recrutement *(Art. 3)*
+
+Toute offre d'emploi rédigée sans stéréotype de genre ; critères de sélection strictement fondés sur les compétences ; mixité visée dans les recrutements externes et la mobilité interne.
+
+---
+
+## Égalité salariale *(Art. 4)*
+
+- Maintien de salaire à **100% pendant le congé maternité et le congé paternité** dès **3 mois d'ancienneté** (au lieu de 9 mois CCN)
+- Les salariées en congé maternité se voient attribuer le **montant moyen de la BIC**
+
+---
+
+## Conditions de travail *(Art. 7)*
+
+- **Heures de grossesse** : 1h de réduction par jour à partir du 3e mois de grossesse, avec 3 modalités possibles selon le service (par heure quotidienne, en journées cumulées, ou en journées anticipées)
+- **Allaitement** : lieu dédié mis à disposition ; absence au poste organisée par le responsable de service
+- **Temps partiel** : égalité d'accès entre femmes et hommes, suivi annuel
+- **Congé de parentalité homoparental** : voir ci-dessus (Art. 2)
+
+---
+
+## Lutte contre les violences domestiques *(Art. 8)*
+
+- **6 référents** désignés parmi les élus CSE Central (3 par site), formés avant fin 2026, astreints à la confidentialité
+- **Réseau partenaires** (assistance sociale, logement, juridique) constitué avant fin 2026
+- **Temps d'audition** convoqué par les forces de l'ordre pendant le temps de travail : compté comme temps de travail effectif
+- Formation de l'ensemble des managers à la détection des violences domestiques d'ici fin 2028
+
+---
+*Source : Accord égalité professionnelle F/H (29/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

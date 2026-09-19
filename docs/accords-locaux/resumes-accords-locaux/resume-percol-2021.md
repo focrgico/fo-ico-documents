@@ -6,25 +6,25 @@ Un plan d'épargne retraite d'entreprise, régi par le Code monétaire et financ
 
 **Qui peut y adhérer** *(Art. 1)*
 
-Tous les salariés, avec **3 mois d'ancienneté** minimum (les stages rémunérés de plus de 2 mois comptent dans ce délai s'ils débouchent sur une embauche). Les anciens salariés peuvent continuer à verser, sans abondement, tant qu'ils n'ont pas accès à un autre PERCOL chez leur nouvel employeur.
+Vous, dès **3 mois d'ancienneté** (les stages rémunérés de plus de 2 mois comptent dans ce délai s'ils débouchent sur une embauche). Si vous quittez l'ICO, vous pouvez continuer à verser, sans abondement, tant que vous n'avez pas accès à un autre PERCOL chez votre nouvel employeur.
 
 **Comment l'alimenter** *(Art. 2)*
 
-- Versements volontaires (déductibles du revenu imposable, sauf renonciation expresse)
-- Sommes issues de l'**intéressement**
-- Droits du **CET, dans la limite de 10 jours/an**
-- **Abondement de l'ICO** : **15 % des montants transférés depuis le CET** — plafonné au triple des versements du salarié et au plafond légal en vigueur (16 % du PASS, soit 6 581,76 € en 2020)
-- Transferts depuis d'autres plans d'épargne retraite
+- Vos versements volontaires (déductibles de votre revenu imposable, sauf si vous y renoncez expressément)
+- Les sommes issues de l'**intéressement**
+- Vos droits du **CET, dans la limite de 10 jours/an**
+- **L'abondement de l'ICO** : **15 % des montants que vous transférez depuis le CET** — plafonné au triple de vos versements et au plafond légal en vigueur (16 % du PASS, soit 6 581,76 € en 2020)
+- Des transferts depuis d'autres plans d'épargne retraite
 
-**Comment l'épargne est gérée** *(Art. 3)*
+**Comment votre épargne est gérée** *(Art. 3)*
 
-Par défaut, **gestion pilotée** (profil "équilibré horizon retraite", réduisant progressivement le risque à l'approche de la retraite) si le salarié ne fait pas de choix explicite. Modification du mode de gestion possible à tout moment.
+Par défaut, vous êtes en **gestion pilotée** (profil "équilibré horizon retraite", qui réduit progressivement le risque à l'approche de votre retraite) si vous ne faites pas de choix explicite. Vous pouvez changer de mode de gestion à tout moment.
 
-**Quand récupérer son épargne** *(Art. 5)*
+**Quand récupérer votre épargne** *(Art. 5)*
 
-- **À l'échéance normale** : au départ à la retraite (liquidation de la pension), possibilité de sortie en rente viagère via un contrat BPCE Vie
-- **Déblocage anticipé possible** (versement unique), pour : décès du conjoint/partenaire de PACS, invalidité (du titulaire, de ses enfants, de son conjoint/partenaire), surendettement, fin de droits au chômage, cessation d'activité non salariée suite à liquidation judiciaire, **achat de la résidence principale** (demande à faire dans les 6 mois suivant l'événement pour ce dernier motif)
-- Le décès du titulaire avant l'échéance entraîne la clôture du Plan
+- **À l'échéance normale** : à votre départ à la retraite (liquidation de la pension), avec une possibilité de sortie en rente viagère via un contrat BPCE Vie
+- **Un déblocage anticipé reste possible** (versement unique), si : décès de votre conjoint/partenaire de PACS, invalidité (la vôtre, celle de vos enfants, de votre conjoint/partenaire), surendettement, fin de droits au chômage, cessation d'activité non salariée suite à liquidation judiciaire, **achat de votre résidence principale** (demande à faire dans les 6 mois suivant l'événement pour ce dernier motif)
+- Votre décès avant l'échéance entraîne la clôture du Plan
 
 **Dates et signataires**
 

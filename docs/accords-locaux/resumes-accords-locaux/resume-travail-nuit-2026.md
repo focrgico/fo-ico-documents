@@ -1,29 +1,39 @@
-# Maintien des compétences du personnel de nuit (stages de jour)
+# Maintien des compétences du personnel de nuit — Stages de jour
 
-**Le contexte en bref** *(Préambule)*
-
-Cet accord sécurise le maintien et le développement des compétences des professionnels paramédicaux de nuit, en organisant des périodes de formation/travail de jour.
-
-**Qui est concerné et durée du stage** *(Art. 1)*
-
-- **Infirmier(e)s** : 2 semaines tous les 3 ans (2×5 jours, 38h15/semaine), fractionnable à la demande du salarié ou de l'encadrement
-- **Aides-soignant(e)s** : 1 semaine tous les 3 ans (5 jours, 38h15)
-- Programmation communiquée au moins **3 mois à l'avance** ; report possible dans l'année qui suit pour raisons familiales ou d'intérêt professionnel, en accord avec l'encadrement
-- Le personnel remplacé sur son poste de nuit est lui-même remplacé — cette période n'est pas utilisée pour suppléer le personnel de jour
-
-**Ce qui est garanti pendant le stage** *(Art. 1)*
-
-- La **prime de nuit est maintenue** pendant toute la période de jour
-- Conversion en nuits pour le décompte : 2 semaines = **8 nuits** pour un(e) IDE, 1 semaine = **4 nuits** pour un(e) AS
-
-**Formation professionnelle** *(Art. 2)*
-
-Accès à la formation dans des conditions identiques au personnel de jour. Le 1er jour de formation est comptabilisé comme une nuit de travail complète (10h10 à Angers, 11h à Saint-Herblain à la signature) ; les jours suivants, 1h de moins que l'horaire de nuit théorique.
-
-**Dates et signataires**
-
-- Signé le **19 mai 2026**, entrée en vigueur le **1er août 2026**, durée indéterminée.
-- Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Julien Rosan), **CFE-CGC** (Maxime Brémaud) — les 3 organisations ont signé.
+**Signé le 19 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
+*Accord à durée indéterminée, en vigueur depuis le 1er août 2026.*
 
 ---
-*Source : `Accord travail de nuit - 2026.md` (19/05/2026).*
+
+## Qui est concerné *(Art. 1)*
+
+Les **infirmières (IDE)** et **aides-soignantes (AS)** travaillant de nuit à l'ICO.
+
+---
+
+## Les stages de jour *(Art. 1)*
+
+Tous les **3 ans**, les IDE et AS de nuit peuvent effectuer une période de travail de jour pour actualiser leurs compétences. Ce temps ne sert pas à remplacer du personnel de jour — le personnel de nuit en stage est remplacé sur son poste de nuit.
+
+**Durée minimale :**
+- **IDE** : 2 semaines (2 × 5 jours, soit 38h15/semaine), fractionnable en journées à la demande du salarié ou de l'encadrement
+- **AS** : 1 semaine (5 jours, 38h15 au total)
+
+**Planification :** les dates sont communiquées au moins **3 mois à l'avance**. Si le salarié ne peut pas respecter la date prévue (raisons familiales ou professionnelles), le stage est reporté d'un commun accord avec l'encadrement dans l'année suivante.
+
+**Pendant le stage de jour : vous conservez votre prime de nuit.**
+
+**Décompte en nuits :** les heures de jour effectuées pendant le stage sont converties en nuits pour le calcul de votre temps de travail :
+- IDE : 2 semaines = **8 nuits**
+- AS : 1 semaine = **4 nuits**
+
+---
+
+## Formation professionnelle *(Art. 2)*
+
+Pour les formations inscrites au plan prévisionnel de développement des compétences :
+- **1er jour de formation** : compté à hauteur de votre horaire de nuit complet (10h10 à Angers, 11h à St Herblain)
+- **Jours suivants** : comptés à **1h de moins** que l'horaire de nuit théorique (9h10 à Angers, 10h à St Herblain)
+
+---
+*Source : Accord maintien des compétences personnel de nuit (19/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

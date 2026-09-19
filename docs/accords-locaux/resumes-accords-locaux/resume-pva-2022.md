@@ -1,33 +1,60 @@
-# Part Variable Additionnelle (PVA) — personnel praticien
+# PVA — Part Variable Additionnelle (personnel praticien)
 
-**Le contexte en bref** *(Art. 1)*
-
-La CCN des CLCC prévoit une part variable additionnelle liée à la performance individuelle *(CCN, titre 2, chapitre 6, art. 2.6.2.3)*. Cet accord local fixe les règles précises d'attribution.
-
-**Qui est concerné** *(Art. 2)*
-
-PU-PH (hors DG), MCU-PH, Chefs de Clinique, Praticiens spécialistes, Praticiens des CLCC, Assistants Spécialistes et Généralistes, en CDD ou CDI. Conditions : taux d'activité ≥ 50 %, au moins 6 mois d'ancienneté continue au 1er janvier de l'année de versement, être toujours inscrit aux effectifs (ou avoir eu un rappel si départ après le 1er janvier), et ne pas avoir refusé son entretien annuel d'appréciation (EAA).
-
-**Comment l'enveloppe globale est calculée** *(Art. 4)*
-
-Le montant total ne peut être **inférieur à 2 % de la masse des rémunérations** des praticiens éligibles (hors indemnités/primes de sujétions et de fonction), calculé sur la rémunération brute moyenne au 31 décembre précédent. Le taux est fixé chaque année par la Direction après approbation de l'EPRD, communiqué à la CME et au CSE Central.
-
-**Répartition entre services puis entre praticiens** *(Art. 5-6)*
-
-- Répartition entre départements/services **au prorata des ETP**
-- Plafond individuel : **8 % du salaire de base annuel moyen**
-- 4 niveaux selon l'EAA : objectifs non atteints → **PVA = 0** ; partiellement atteints → **-25 %** ; atteints (niveau 1) → **PVA normale** (¾ du taux fixé par la Direction) ; dépassés (niveau 2) → **PVA majorée** (+ une part du reliquat d'enveloppe du service)
-- La répartition au sein du service est discutée en réunion, puis **validée par vote des praticiens du service** (bulletin secret possible sur demande) — une répartition égalitaire doit être votée à l'unanimité
-- **Recours possible sous 15 jours** en cas de désaccord sur le taux attribué, devant une commission (DG + chef de service + praticien, accompagné s'il le souhaite)
-
-**Suivi** *(Art. 7-8.1)*
-
-Indicateurs communiqués chaque année au CSE Central (taux moyen, nombre de PVA à 0/minorées/normales/majorées). Clause de revoyure au terme de la première année d'application.
-
-**Dates et signataires**
-
-- Signé le **19 mai 2022**, entrée en vigueur le 1er jour du mois suivant le dépôt, durée indéterminée.
-- Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Julien Rosan), **CFDT** (Corinne Lanio), **CFE-CGC** (Geneviève Perrocheau) — les 4 organisations ont signé.
+**Signé le 19 mai 2022 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux, CFDT et CFE-CGC.**
+*En vigueur depuis le 1er jour du mois suivant le dépôt, durée indéterminée.*
 
 ---
-*Source : `Accord PVA_2022_Signe.md` (19/05/2022). Référence CCN : titre 2, chapitre 6, art. 2.6.2.3.*
+
+## Qui est concerné *(Art. 2)*
+
+Les **praticiens** de l'ICO en CDI ou CDD, réunissant toutes ces conditions :
+- Taux d'activité **≥ 50%**
+- Au moins **6 mois d'ancienneté continue** au 1er janvier de l'année de versement
+- Toujours **inscrit aux effectifs** au moment du versement
+- N'ayant **pas refusé** de passer son entretien annuel d'appréciation (EAA)
+
+**Catégories éligibles :** PU-PH (hors DG), MCU-PH, Chefs de Clinique, Praticiens spécialistes, Praticiens des CLCC, Assistants Spécialistes, Assistants Généralistes.
+
+---
+
+## L'enveloppe globale *(Art. 4)*
+
+Le montant total de la PVA ne peut être **inférieur à 2% des rémunérations** des praticiens éligibles (hors indemnités et primes de sujétions). La valeur de référence est le salaire brut moyen mensuel au 31 décembre de l'année précédant le versement. L'enveloppe précise est fixée annuellement par la Direction Générale après approbation de l'EPRD, et communiquée à la CME et au CSE Central.
+
+---
+
+## La répartition par service *(Art. 5)*
+
+L'enveloppe est d'abord répartie entre les services **au prorata des ETP**. Les chefs de département forment un service à part entière.
+
+---
+
+## Votre PVA individuelle *(Art. 6)*
+
+Le montant individuel ne peut dépasser **8% de votre salaire de base annuel moyen**.
+
+Le niveau de PVA dépend des résultats de votre EAA selon 4 niveaux :
+
+| Résultat EAA | PVA |
+|---|---|
+| Objectifs non atteints (absence d'investissement) | **0** |
+| Objectifs partiellement atteints | **PVA minorée (−25%)** |
+| Objectifs atteints (niveau 1) | **PVA normale** (¾ du taux DG) |
+| Contribution particulière au-delà des objectifs (niveau 2) | **PVA majorée** (+1 part du reliquat) |
+
+La répartition entre praticiens d'un même service est discutée en réunion de service et **validée par un vote** des praticiens concernés (le chef de département n'y participe pas). Une répartition égalitaire doit être votée à l'unanimité ; le vote peut être à bulletin secret sur demande.
+
+---
+
+## Recours *(Art. 6)*
+
+Si vous contestez votre PVA, vous disposez de **15 jours** après notification pour exercer un recours devant une commission composée du DG, du chef de département et de vous-même (accompagné de la personne de votre choix).
+
+---
+
+## Suivi *(Art. 7-8)*
+
+Des indicateurs par service et au total (nombre de PVA à 0, minorées, normales, majorées) sont communiqués chaque année au CSE Central. Un bilan annuel est présenté et une **réunion de revoyure** est prévue au terme de la première année d'application.
+
+---
+*Source : Accord PVA (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*

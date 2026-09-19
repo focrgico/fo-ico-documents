@@ -1,27 +1,41 @@
-# Forfait Mobilité Durable (version 2025, en vigueur)
+# Forfait Mobilité Durable (2025)
 
-**Le contexte en bref**
+**Signé le 24 octobre 2025 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
+*En vigueur rétroactivement depuis le 1er janvier 2025, durée indéterminée. Remplace et annule l'accord 2024.*
 
-Remplace et annule la version 2024. Ajoute une prime trottinette électrique et révise les montants.
-
-**Les 3 primes possibles** *(Art. 1 à 3 — non cumulables entre elles, une seule au choix)*
-
-- **Prime vélo** : 300 €/an, pour un usage quasi exclusif du vélo sur le trajet domicile-travail
-- **Prime covoiturage** : 300 €/an, comme conducteur ou passager
-- **Prime trottinette électrique** : 300 €/an, pour un usage quasi exclusif
-
-Montant réduit au prorata si le taux d'activité est ≤ 50 % d'un temps plein. Versement **en une fois, en décembre** (ou au mois de sortie si départ en cours d'année, au prorata du temps de présence).
-
-**Cumul avec les transports en commun** *(Art. 4-5)*
-
-- L'ICO prend en charge **60 %** de l'abonnement transport en commun (au-delà du minimum légal de 50 %, obtenu en NAO 2022)
-- Une des 3 primes mobilité douce **peut se cumuler** avec le remboursement transport en commun, dans la limite du plafond social et fiscal en vigueur (indicativement **900 €** en 2025) — si le plafond est dépassé, c'est la prime mobilité douce qui est réduite en premier
-
-**Dates et signataires**
-
-- Signé le **24 octobre 2025** à Angers. Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Julien Rosan), **CFE-CGC** (Maxime Brémaud).
-
-**⚠ Point de vigilance** : le PDF signé actuellement dans le dépôt GitHub correspond à la version 2024 (signée le 26/04/2024, CGT-FO et CFE-CGC seulement), pas à cette version 2025 — le PDF signé de la version en vigueur manque encore.
+⚠️ *Le PDF signé disponible sur GitHub correspond à la version 2024 — le PDF de la version 2025 n'a pas encore été déposé dans le dépôt.*
 
 ---
-*Source : `ACCORD FORFAIT MOBILITE DURABLE_Version signee.md` — version retenue : 2025 (la plus récente).*
+
+## Qui est concerné
+
+Tout salarié de l'ICO qui réalise ses trajets domicile-travail en vélo, en covoiturage (conducteur ou passager) ou en trottinette électrique.
+
+---
+
+## Les trois primes *(Art. 1-3)*
+
+| Mode de transport | Montant |
+|---|---|
+| **Vélo** | 300 € bruts/an |
+| **Covoiturage** (conducteur ou passager) | 300 € bruts/an |
+| **Trottinette électrique** (nouveauté 2025) | 300 € bruts/an |
+
+Ces trois primes ne sont **pas cumulables entre elles** — une seule peut être versée.
+
+**Modalités communes :**
+- Versement en une fois en **décembre** de l'année
+- Proraté au temps de présence pour les entrées/sorties en cours d'année
+- Pour les temps partiels : montant plein si taux d'activité > 50% ; proportionnel au-dessous
+- Une attestation sur l'honneur est obligatoire, à transmettre à la DRH dans les délais impartis
+
+---
+
+## Transport en commun *(Art. 4)*
+
+L'ICO prend en charge **60% de votre abonnement** de transport en commun (contre 50% légalement obligatoire, taux amélioré depuis la NAO 2022).
+
+La prime FMD est **cumulable** avec le remboursement de l'abonnement de transport en commun, dans la limite du plafond légal (**900 € en 2025**).
+
+---
+*Source : Accord Forfait Mobilité Durable (24/10/2025), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

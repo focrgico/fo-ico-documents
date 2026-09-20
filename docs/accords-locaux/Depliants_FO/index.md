@@ -35,4 +35,11 @@ recto-verso (retournement sur le bord court) et à plier en trois.
 | Reprise d'ancienneté — MER, IDE, AS | [Depliant_reprise_anciennete_MER_IDE_AS_FO.pdf](Depliant_reprise_anciennete_MER_IDE_AS_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-reprise-anciennete-mer-as-ide-2022.md) |
 | DUE Complémentaire frais de santé | [Depliant_DUE_complementaire_frais_sante_FO.pdf](Depliant_DUE_complementaire_frais_sante_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-due-complementaire-frais-sante.md) |
 
+| DUE Prime de pool de remplacement | [Depliant_DUE_prime_pool_remplacement_FO.pdf](Depliant_DUE_prime_pool_remplacement_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-due-prime-pool-remplacement-am.md) |
+| DUE Prime de pool de remplacement (AS/IDE) | [Depliant_DUE_prime_pool_remplacement_FO.pdf](Depliant_DUE_prime_pool_remplacement_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-due-prime-pool-remplacement-soignants.md) |
+
+
+
 *Trois documents restent sans dépliant, par choix : accord de méthode NAO, vote électronique et dialogue social — seuls leurs résumés sont publiés.*
+*Le dépliant « Prime de pool de remplacement » couvre à la fois la décision unilatérale du 22/04/2024 pour les assistantes médicales et celle du même jour pour les aides-soignants et IDE.*
+

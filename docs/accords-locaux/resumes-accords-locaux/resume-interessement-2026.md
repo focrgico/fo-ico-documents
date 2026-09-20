@@ -1,5 +1,7 @@
 # Intéressement 2026
 
+> **Dépliant à imprimer** — [Intéressement (PDF, 3 volets)](../Depliants_FO/Depliant_interessement_FO.pdf)
+
 **Signé le 29 mai 2026 par l'ICO (Mario CAMPONE) et CGT-FO et CFE-CGC. Sud Santé-Sociaux n'a pas signé.**
 *Accord à durée déterminée couvrant les exercices 2026, 2027 et 2028. Versement au plus tard le 31 mai de l'année suivante.*
 

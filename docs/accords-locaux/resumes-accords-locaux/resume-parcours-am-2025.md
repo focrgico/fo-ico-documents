@@ -1,5 +1,7 @@
 # Parcours professionnel de l'Assistant Médical
 
+> **Dépliant à imprimer** — [Parcours Assistant médical (PDF, 3 volets)](../Depliants_FO/Depliant_parcours_assistant_medical_FO.pdf)
+
 **Qui est concerné** *(Art. 1)*
 
 Vous, si vous êtes assistant médical classé en **Groupe E**, sur l'un des 2 sites de l'ICO.

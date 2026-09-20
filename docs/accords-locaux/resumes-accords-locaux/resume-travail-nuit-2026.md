@@ -1,5 +1,7 @@
 # Maintien des compétences du personnel de nuit — Stages de jour
 
+> **Dépliant à imprimer** — [Stages de jour du personnel de nuit (PDF, 3 volets)](../Depliants_FO/Depliant_stages_de_jour_personnel_nuit_FO.pdf)
+
 **Signé le 19 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
 *Accord à durée indéterminée, en vigueur depuis le 1er août 2026.*
 

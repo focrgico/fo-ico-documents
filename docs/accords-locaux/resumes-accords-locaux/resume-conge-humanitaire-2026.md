@@ -1,5 +1,7 @@
 # Congé humanitaire
 
+> **Dépliant à imprimer** — [Congé humanitaire (PDF, 3 volets)](../Depliants_FO/Depliant_conge_humanitaire_FO.pdf)
+
 **Signé le 31 mars 2026 par l'ICO (Pr Mario CAMPONE), CGT-FO, CFE-CGC et Sud Santé-Sociaux.**
 *Accord à durée indéterminée, en vigueur depuis le 1er mai 2026.*
 

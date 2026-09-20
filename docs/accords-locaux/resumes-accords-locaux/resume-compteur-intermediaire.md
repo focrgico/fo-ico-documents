@@ -1,5 +1,7 @@
 # Compteur intermédiaire — salariés postés et non postés
 
+> **Dépliant à imprimer** — [Compteur intermédiaire (PDF, 3 volets)](../Depliants_FO/Depliant_compteur_intermediaire_FO.pdf)
+
 *Résumé condensé à destination des salariés — droits et obligations uniquement. Deux accords distincts, régissant chacun une catégorie de personnel.*
 
 ## Si vous êtes non posté(e)

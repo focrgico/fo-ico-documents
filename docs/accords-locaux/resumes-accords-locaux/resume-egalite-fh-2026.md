@@ -1,5 +1,7 @@
 # Égalité professionnelle Femmes-Hommes
 
+> **Dépliant à imprimer** — [Égalité femmes-hommes (PDF, 3 volets)](../Depliants_FO/Depliant_egalite_femmes_hommes_FO.pdf)
+
 **Signé le 29 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
 *Accord à durée déterminée de 3 ans à compter de sa notification.*
 

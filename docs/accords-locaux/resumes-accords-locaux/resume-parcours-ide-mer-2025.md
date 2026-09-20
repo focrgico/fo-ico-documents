@@ -1,5 +1,7 @@
 # Parcours professionnel IDE et Manipulateurs en Électroradiologie Médicale (MER)
 
+> **Dépliant à imprimer** — [Parcours IDE et MER (PDF, 3 volets)](../Depliants_FO/Depliant_parcours_IDE_MER_FO.pdf)
+
 **Signé le 28 mars 2025 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
 *En vigueur depuis le 1er mai 2025, durée indéterminée.*
 

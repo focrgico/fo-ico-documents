@@ -1,4 +1,6 @@
 # Accord télétravail — résumé pour tryptique
+
+> **Dépliant à imprimer** — [Accord télétravail (PDF, 3 volets)](../Depliants_FO/Depliant_teletravail_FO.pdf)
 *Contenu prêt à intégrer dans la mise en page.*
 
 **Sur les références :** le dépôt GitHub ne contient, pour cet accord, que la version convertie en Markdown — pas de PDF signé retrouvé à ce jour dans le dossier `accords-locaux`. Les articles/sous-articles cités ci-dessous viennent du texte source (numérotés explicitement) ; pas de numéro de page tant que le PDF signé n'est pas disponible.

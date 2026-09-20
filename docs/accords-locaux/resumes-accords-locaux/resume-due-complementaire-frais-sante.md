@@ -1,5 +1,7 @@
 # DUE : Complémentaire Frais de Santé (mutuelle)
 
+> **Dépliant à imprimer** — [DUE Complémentaire frais de santé (PDF, 3 volets)](../Depliants_FO/Depliant_DUE_complementaire_frais_sante_FO.pdf)
+
 *CFS : Complémentaire Frais de Santé*
 *Décision unilatérale de l'employeur, après consultation du CSE. Signée le 19 juin 2024 par le Pr Mario CAMPONE. En vigueur depuis le 1er juin 2024, durée indéterminée.*
 

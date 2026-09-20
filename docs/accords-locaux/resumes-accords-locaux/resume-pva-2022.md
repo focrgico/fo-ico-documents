@@ -1,5 +1,7 @@
 # PVA — Part Variable Additionnelle (personnel praticien)
 
+> **Dépliant à imprimer** — [PVA (PDF, 3 volets)](../Depliants_FO/Depliant_PVA_FO.pdf)
+
 **Signé le 19 mai 2022 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux, CFDT et CFE-CGC.**
 *En vigueur depuis le 1er jour du mois suivant le dépôt, durée indéterminée.*
 

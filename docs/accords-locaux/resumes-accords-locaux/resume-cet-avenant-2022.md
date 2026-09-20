@@ -1,5 +1,7 @@
 # Compte Épargne Temps (CET)
 
+> **Dépliant à imprimer** — [Compte épargne temps (PDF, 3 volets)](../Depliants_FO/Depliant_CET_FO.pdf)
+
 **Qui est concerné**
 
 Tout salarié, dès **6 mois d'ancienneté**, sur la base du volontariat *(Art. 1-2)*.

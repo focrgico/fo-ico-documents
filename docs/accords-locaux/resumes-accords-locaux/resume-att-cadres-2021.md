@@ -1,5 +1,7 @@
 # Durée et aménagement du temps de travail — personnel Cadre
 
+> **Dépliants à imprimer** (PDF, 3 volets) — [Cadres au forfait jours](../Depliants_FO/Depliant_ATT_cadres_forfait_jours_FO.pdf) · [Cadres en heures](../Depliants_FO/Depliant_ATT_cadres_en_heures_FO.pdf)
+
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
 **Source : accord du 12 mai 2021, tel que modifié par l'avenant du 31 décembre 2025 (article 3.1.4 sur les congés payés pendant un arrêt maladie, seul point modifié — le reste de l'accord de 2021 est inchangé).**
 

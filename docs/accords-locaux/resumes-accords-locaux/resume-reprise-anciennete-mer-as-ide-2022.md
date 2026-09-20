@@ -1,5 +1,7 @@
 # Reprise d'ancienneté à 100% — MER, IDE, AS
 
+> **Dépliant à imprimer** — [Reprise d'ancienneté MER, IDE, AS (PDF, 3 volets)](../Depliants_FO/Depliant_reprise_anciennete_MER_IDE_AS_FO.pdf)
+
 **Signé le 19 mai 2022 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux, CFDT et CFE-CGC.**
 *En vigueur à compter du 1er janvier 2022, durée indéterminée.*
 

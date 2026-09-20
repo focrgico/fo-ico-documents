@@ -1,5 +1,7 @@
 # DUE — Prime de pool de remplacement (Aides-Soignants, IDE)
 
+> **Dépliant à imprimer** — [DUE Prime de pool de remplacement (PDF, 3 volets)](../Depliants_FO/Depliant_DUE_prime_pool_remplacement_FO.pdf)
+
 **⚠ Décision unilatérale de l'employeur, pas un accord négocié.**
 
 **Qui est concerné**

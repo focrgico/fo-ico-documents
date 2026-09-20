@@ -1,5 +1,7 @@
 # Plan d'Épargne Retraite Collectif (PERCOL)
 
+> **Dépliant à imprimer** — [PERCOL (PDF, 3 volets)](../Depliants_FO/Depliant_PERCOL_FO.pdf)
+
 **Le contexte en bref** *(Préambule)*
 
 Un plan d'épargne retraite d'entreprise, régi par le Code monétaire et financier, ouvert à tous les salariés.

@@ -1,5 +1,7 @@
 # Prime USC (exercice en soins critiques)
 
+> **Dépliant à imprimer** — [Prime USC (PDF, 3 volets)](../Depliants_FO/Depliant_prime_USC_FO.pdf)
+
 **Le contexte en bref** *(Préambule)*
 
 Cette prime existe d'abord dans la fonction publique hospitalière (décret 2022-19), puis Unicancer l'a transposée aux CLCC. À l'ICO, elle a d'abord été mise en place par décision unilatérale (DUE) au 1er janvier 2023, avant qu'un accord de branche du 7 mars 2023 (Unicancer) ne rende cette DUE caduque — d'où la négociation de cet accord local.

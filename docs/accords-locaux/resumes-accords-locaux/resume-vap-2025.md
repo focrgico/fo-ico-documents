@@ -1,5 +1,7 @@
 # Validation des Acquis Professionnels (VAP)
 
+> **Dépliant à imprimer** — [VAP (PDF, 3 volets)](../Depliants_FO/Depliant_VAP_FO.pdf)
+
 **Accord de base signé le 22 mars 2024, automatisant les paliers 1 et 2. Avenant du 4 février 2025 (signé CGT-FO par délégation, CFE-CGC, Sud Santé-Sociaux) intégrant le 3e palier créé par l'avenant CCN Unicancer 2024-04 à effet du 1er janvier 2025.**
 *Accord à durée indéterminée.*
 

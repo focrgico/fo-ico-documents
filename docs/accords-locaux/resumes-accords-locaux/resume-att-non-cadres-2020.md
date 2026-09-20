@@ -1,5 +1,7 @@
 # Durée et aménagement du temps de travail — personnel Non Cadre
 
+> **Dépliants à imprimer** (PDF, 3 volets) — [Horaires et repos](../Depliants_FO/Depliant_ATT_non_cadres_1_horaires_FO.pdf) · [Annualisation et heures sup](../Depliants_FO/Depliant_ATT_non_cadres_2_annualisation_FO.pdf) · [Congés et astreintes](../Depliants_FO/Depliant_ATT_non_cadres_3_conges_FO.pdf) · [Travail de nuit](../Depliants_FO/Depliant_ATT_non_cadres_4_travail_de_nuit_FO.pdf)
+
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
 **Source : accord du 14 septembre 2020, tel que modifié par l'Avenant n°1 du 31 janvier 2022 (heures supplémentaires) et par l'avenant du 31 décembre 2025 (congés payés pendant un arrêt maladie). Le reste de l'accord de 2020 est inchangé.**
 

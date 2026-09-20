@@ -1,5 +1,7 @@
 # DUE : Parcours macroscopie (techniciens de laboratoire)
 
+> **Dépliant à imprimer** — [DUE Parcours macroscopie (PDF, 3 volets)](../Depliants_FO/Depliant_DUE_parcours_macroscopie_FO.pdf)
+
 *Décision unilatérale de l'employeur. Signée le 8 décembre 2023 par le Pr Mario CAMPONE. En vigueur depuis décembre 2023, durée indéterminée.*
 
 ---

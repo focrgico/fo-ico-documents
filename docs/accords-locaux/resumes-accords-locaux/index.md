@@ -1,6 +1,6 @@
 # Résumés — Accords locaux ICO
 
-Résumés condensés à destination des salariés (droits et obligations), avec citations d'articles. **Pas de mise en page à ce stade** — contenu prêt à intégrer dans les tryptiques FO. Pas de liens cliquables en dur : ils seront gérés par le futur site.
+Résumés condensés à destination des salariés (droits et obligations), avec citations d'articles. Les résumés déjà mis en page sont signalés en tête de fichier par un lien vers leur dépliant, rassemblés dans [Depliants_FO](../Depliants_FO/index.md). Les autres liens restent à la charge du futur site.
 
 **Règle appliquée** : un avenant n'a jamais de résumé séparé — ses nouveautés sont intégrées dans le résumé de l'accord de base. Si un accord passe "plus en vigueur" et est archivé, son résumé est retiré d'ici (ou remplacé par le résumé de la version en vigueur, le cas échéant).
 

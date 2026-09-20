@@ -1,5 +1,7 @@
 # Forfait Mobilité Durable (2025)
 
+> **Dépliant à imprimer** — [Forfait mobilité durable (PDF, 3 volets)](../Depliants_FO/Depliant_forfait_mobilite_durable_FO.pdf)
+
 **Signé le 24 octobre 2025 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
 *En vigueur rétroactivement depuis le 1er janvier 2025, durée indéterminée. Remplace et annule l'accord 2024.*
 

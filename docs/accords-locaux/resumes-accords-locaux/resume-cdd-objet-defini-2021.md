@@ -1,5 +1,7 @@
 # Contrat à Durée Déterminée à Objet Défini (CDD)
 
+> **Dépliant à imprimer** — [CDD à objet défini (PDF, 3 volets)](../Depliants_FO/Depliant_CDD_objet_defini_FO.pdf)
+
 **Qui est concerné** *(Art. 1)*
 
 Les **ingénieurs ou cadres** (au sens de la CCN des CLCC) recrutés pour un travail de recherche temporaire (étude clinique, projet à financement dédié, PHRC...) ou une mission de conseil/expertise sur un projet non pérenne. Ce contrat ne peut jamais servir à pourvoir un emploi permanent.

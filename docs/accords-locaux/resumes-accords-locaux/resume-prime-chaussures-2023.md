@@ -1,5 +1,7 @@
 # Prime chaussures
 
+> **Dépliant à imprimer** — [Prime chaussures (PDF, 3 volets)](../Depliants_FO/Depliant_prime_chaussures_FO.pdf)
+
 **Signé le 21 juin 2023 par l'ICO (Pr Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
 *En vigueur depuis le 1er juillet 2023, durée indéterminée.*
 

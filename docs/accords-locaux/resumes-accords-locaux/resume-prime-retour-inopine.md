@@ -1,5 +1,7 @@
 # DUE : Prime de retour inopiné
 
+> **Dépliant à imprimer** — [DUE Prime de retour inopiné (PDF, 3 volets)](../Depliants_FO/Depliant_DUE_prime_retour_inopine_FO.pdf)
+
 *MER : Manipulateurs en Électroradiologie Médicale*
 *Décision unilatérale de l'employeur. Signée le 29 avril 2024 par le Pr Mario CAMPONE. En vigueur depuis le 1er mai 2024 pour les MER ; depuis février 2023 pour les IDE et AS. Durée indéterminée.*
 

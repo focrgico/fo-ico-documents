@@ -1,5 +1,7 @@
 # Parcours professionnel des Physiciens médicaux
 
+> **Dépliant à imprimer** — [Parcours Physiciens médicaux (PDF, 3 volets)](../Depliants_FO/Depliant_parcours_physiciens_medicaux_FO.pdf)
+
 **Signé le 19 mai 2022 par l'ICO (Pr Mario CAMPONE), CGT-FO, Sud Santé-Sociaux, CFDT et CFE-CGC.**
 *En vigueur depuis le 1er juillet 2022, durée indéterminée. Remplace la décision unilatérale de l'employeur qui fixait les mêmes règles sans cadre juridique formalisé.*
 

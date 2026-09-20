@@ -1,5 +1,7 @@
 # Répartition de la BIC (Bonification Individuelle de Carrière)
 
+> **Dépliant à imprimer** — [BIC (PDF, 3 volets)](../Depliants_FO/Depliant_BIC_FO.pdf)
+
 **Qui est concerné**
 
 Vous, si vous êtes salarié **non-praticien** et éligible — la BIC est un complément individuel de rémunération prévu par la CCN des CLCC.

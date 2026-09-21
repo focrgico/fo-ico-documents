@@ -39,7 +39,7 @@
       "chemin_source_md": "accords-locaux/accord-teletravail-2021.md"
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-att-cadres-2021.md",
       "chemin_depliant": [
         "accords-locaux/Depliants_FO/Depliant_ATT_cadres_forfait_jours_FO.pdf",
@@ -51,13 +51,13 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Aucun PDF signé trouvé pour l'accord de base à ce nom dans le dépôt — seul l'avenant « Avenant à laccord ATT cadres - Incidences absences sur congés payés.pdf » est présent. À vérifier.",
+      "note": "PDF signé de l'accord de base ajouté le 21/09/2026 (transmis par David). Contenu vérifié cohérent avec le résumé déjà rédigé (206 jours forfait, 1596h/1582h temps en heures, etc.).",
       "id": "att-cadres-2021",
       "titre": "Durée et aménagement du temps de travail — cadres",
       "categorie": "Accord local",
       "theme": "Temps de travail / organisation",
       "annee": "2021",
-      "chemin_pdf": null,
+      "chemin_pdf": "accords-locaux/Accord Durée et ATT Cadres_signé.pdf",
       "chemin_source_md": "accords-locaux/accord-duree-att-cadres-2021.md"
     },
     {
@@ -109,7 +109,7 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Accord de base (2021) sans PDF signé retrouvé à ce nom ; seul l'avenant 2022 a un PDF. Un 3e fichier « Accord CET_vDéfinitive.pdf » existe aussi dans le dépôt, sans .md correspondant — lien exact non résolu, à vérifier.",
+      "note": "Accord de base (2021) sans PDF signé retrouvé à ce nom ; seul l'avenant 2022 a un PDF. Le fichier « Accord CET_vDéfinitive.pdf » (et son Word) ont été supprimés du dépôt le 21/09/2026 sur confirmation de David (non pertinents).",
       "id": "cet-2021",
       "titre": "Compte Épargne Temps (CET)",
       "categorie": "Accord local",
@@ -211,7 +211,7 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Avenant du 04/02/2025 existe en PDF séparé, même étiquette 'V2025-2' que le Word conservé — lien exact entre les deux non résolu avec certitude (point déjà identifié).",
+      "note": "Confirmé le 21/09/2026 (lecture directe du PDF) : l'avenant « Avenant à l'accord d'entreprise relatif à la Validation des Acquis Professionnels _04.02.2025_0.pdf » (signé le 4 février 2025) porte bien l'étiquette « V2025-2 », identique à celle du Word conservé — le lien antérieurement incertain entre les deux est résolu. Cet avenant automatise le 3e palier de VAP (institué par l'avenant CCN Unicancer 2024-04, effet 1er janvier 2025) ; le résumé existant couvre déjà correctement ce point.",
       "id": "vap-2025",
       "titre": "Validation des Acquis Professionnels (VAP)",
       "categorie": "Accord local",
@@ -255,20 +255,20 @@
       "chemin_source_md": "accords-locaux/Accord d'entreprise relatif a l'interessement (2026).md"
     },
     {
-      "pdf_ok": true,
+      "pdf_ok": false,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-forfait-mobilite-durable-2025.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_forfait_mobilite_durable_FO.pdf",
       "statut": [],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "⚠️ Point déjà identifié : le PDF présent correspond à la version 2024 (remplacée), pas à la version 2025 en vigueur. PDF de la version 2025 toujours manquant.",
+      "note": "Le texte de la version 2025 en vigueur (24 octobre 2025) est déjà correctement présent dans chemin_source_md, y compris l'ajout de la prime trottinette électrique absente en 2024. Ce qui manque encore : le PDF signé de cette version 2025 (chemin_pdf laissé vide en attendant). Le PDF et le Word de la version 2024 (obsolète, confirmée par David) ont été archivés le 21/09/2026 — attention, le Word transmis le 21/09/2026 sous le nom 'V_finale' était en réalité la version 2024 (daté du 26/04/2024, exclut les trottinettes), pas la 2025 : vérifié par lecture directe avant archivage, ne pas le réutiliser comme source de la version en vigueur.",
       "id": "forfait-mobilite-durable-2025",
       "titre": "Forfait Mobilité Durable",
       "categorie": "Accord local",
       "theme": "Rémunération / épargne",
-      "annee": "2025",
-      "chemin_pdf": "accords-locaux/ACCORD FORFAIT MOBILITE DURABLE_Version signée.pdf",
+      "annee": "2025-10-24",
+      "chemin_pdf": null,
       "chemin_source_md": "accords-locaux/ACCORD FORFAIT MOBILITE DURABLE_Version signee.md"
     },
     {

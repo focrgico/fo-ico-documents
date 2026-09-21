@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accueil — FO ICO</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="home">
+<header class="nav">
+  <a href="index.html" class="brand">
+    <span class="brand-title">FO ICO</span>
+    <span class="brand-sub">Base documentaire</span>
+  </a>
+  <nav>
+    <a href="index.html" class="active">Accueil</a>
+    <a href="accords.html" class="">Accords</a>
+    <a href="resumes.html" class="">Résumés</a>
+    <a href="depliants.html" class="">Dépliants</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-top">
+    <div class="hero-logo-wrap">
+      <img src="assets/logo.png" alt="Logo FO ICO" class="hero-logo">
+    </div>
+    <div class="hero-text">
+      <div class="eyebrow">Base documentaire FO ICO</div>
+      <h1>Vos droits, à portée de main</h1>
+      <p class="hero-sub">Accords collectifs, résumés en langage clair et dépliants FO.</p>
+      <div class="search-bar">
+        <input type="text" id="site-search" placeholder="Rechercher un accord, un thème..." onkeydown="if(event.key==='Enter'){event.preventDefault();goSearch();}">
+        <button type="button" onclick="goSearch()">Rechercher</button>
+      </div>
+    </div>
+    <script>
+      function goSearch() {
+        const v = document.getElementById('site-search').value.trim();
+        if (!v) return;
+        location.href = 'accords.html?q=' + encodeURIComponent(v);
+      }
+    </script>
+    <div class="hero-spacer" aria-hidden="true"></div>
+  </div>
+  <div class="hero-cards">
+    <a class="card hero-card" href="accords.html">
+      <h3>Accords</h3>
+      <p>Les textes signés : CCN, accords locaux, NAO, élections, DUE — au format PDF.</p>
+      <span class="link">Consulter →</span>
+    </a>
+    <a class="card hero-card" href="resumes.html">
+      <h3>Résumés</h3>
+      <p>L'essentiel de chaque accord, en langage clair, rédigé par vos élus FO.</p>
+      <span class="link">Consulter →</span>
+    </a>
+    <a class="card hero-card" href="depliants.html">
+      <h3>Dépliants</h3>
+      <p>Le format tryptique, prêt à imprimer ou à consulter en ligne.</p>
+      <span class="link">Consulter →</span>
+    </a>
+  </div>
+</section>
+
+<section class="situation" id="situation">
+  <div class="situation-box">
+    <div class="situation-grid">
+      <div class="situation-text">
+        <h2>Décrivez votre situation</h2>
+        <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
+        qui vous concerne.</p>
+        <p class="note">Classement par statut/site/modalité/temps en cours — un critère sans résultat ne
+        veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
+      </div>
+      <form class="situation-form" id="situation-form">
+        <label class="select-field">
+          <span class="select-label">Statut</span>
+          <select name="statut" class="real-select">
+            <option value="">Tous</option>
+            <option value="cadre">Cadre</option>
+            <option value="non-cadre">Non-cadre</option>
+            <option value="praticien">Cadre praticien</option>
+          </select>
+        </label>
+        <label class="select-field" id="field-profession">
+          <span class="select-label">Catégorie professionnelle</span>
+          <select name="profession" class="real-select">
+            <option value="">Tous</option>
+            <option value="ide">IDE (infirmier)</option>
+            <option value="as">Aide-soignant</option>
+            <option value="mer">MER (manipulateur radio)</option>
+            <option value="ash">ASH</option>
+            <option value="brancardier">Brancardier</option>
+            <option value="dieteticien">Diététicien</option>
+            <option value="kine">Kinésithérapeute</option>
+            <option value="enseignant-apa">Enseignant APA</option>
+            <option value="assistant-medical">Assistant médical</option>
+            <option value="technicien-labo">Technicien de laboratoire</option>
+            <option value="physicien-medical">Physicien médical</option>
+            <option value="ingenieur">Ingénieur</option>
+          </select>
+        </label>
+        <label class="select-field" id="field-modalite_horaire">
+          <span class="select-label">Modalité horaire</span>
+          <select name="modalite_horaire" class="real-select">
+            <option value="">Tous</option>
+            <option value="forfait-jours">Forfait jours</option>
+            <option value="forfait-heures">Forfait heures</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span class="select-label">Temps de travail</span>
+          <select name="temps_travail" class="real-select">
+            <option value="">Tous</option>
+            <option value="temps-plein">Temps plein</option>
+            <option value="temps-partiel">Temps partiel</option>
+          </select>
+        </label>
+        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+      </form>
+    </div>
+    <div id="situation-results" class="situation-results"></div>
+  </div>
+</section>
+
+<script id="situation-data" type="application/json">[{"id": "teletravail-2021", "titre": "Télétravail", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/teletravail-2021.html"}, {"id": "att-cadres-2021", "titre": "Durée et aménagement du temps de travail — cadres", "statut": ["cadre"], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/att-cadres-2021.html"}, {"id": "att-non-cadres-2020", "titre": "Durée et aménagement du temps de travail — non-cadres", "statut": ["non-cadre"], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/att-non-cadres-2020.html"}, {"id": "compteur-intermediaire", "titre": "Compteur intermédiaire — salariés postés et non postés", "statut": ["non-cadre"], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/compteur-intermediaire.html"}, {"id": "cet-2021", "titre": "Compte Épargne Temps (CET)", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/cet-2021.html"}, {"id": "cdd-objet-defini-2021", "titre": "CDD à objet défini", "statut": ["cadre"], "profession": ["ingenieur"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/cdd-objet-defini-2021.html"}, {"id": "percol-2021", "titre": "PERCOL (épargne retraite collective)", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/percol-2021.html"}, {"id": "conge-humanitaire-2026", "titre": "Congé humanitaire", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/conge-humanitaire-2026.html"}, {"id": "egalite-fh-2026", "titre": "Égalité femmes-hommes (version en vigueur)", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/egalite-fh-2026.html"}, {"id": "travail-nuit-2026", "titre": "Travail de nuit", "statut": ["non-cadre"], "profession": ["ide", "as"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/travail-nuit-2026.html"}, {"id": "vap-2025", "titre": "Validation des Acquis Professionnels (VAP)", "statut": ["cadre", "non-cadre"], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/vap-2025.html"}, {"id": "bic-2025", "titre": "Répartition de la BIC", "statut": ["cadre", "non-cadre"], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/bic-2025.html"}, {"id": "interessement-2026", "titre": "Intéressement", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/interessement-2026.html"}, {"id": "forfait-mobilite-durable-2025", "titre": "Forfait Mobilité Durable", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/forfait-mobilite-durable-2025.html"}, {"id": "prime-chaussures-2023", "titre": "Prime chaussures", "statut": ["non-cadre"], "profession": ["as", "ash", "brancardier", "dieteticien", "kine", "enseignant-apa"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/prime-chaussures-2023.html"}, {"id": "prime-usc-2023", "titre": "Prime USC", "statut": ["non-cadre"], "profession": ["ide", "as"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/prime-usc-2023.html"}, {"id": "pva-2022", "titre": "PVA", "statut": ["praticien"], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/pva-2022.html"}, {"id": "prime-retour-inopine", "titre": "Prime de retour inopiné (DUE, non négociée)", "statut": ["non-cadre"], "profession": ["as", "ide", "mer"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/prime-retour-inopine.html"}, {"id": "parcours-am-2025", "titre": "Parcours professionnel — Assistants Médicaux", "statut": ["non-cadre"], "profession": ["assistant-medical"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/parcours-am-2025.html"}, {"id": "parcours-ide-mer-2025", "titre": "Parcours professionnel — IDE / MER", "statut": ["non-cadre"], "profession": ["ide", "mer"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/parcours-ide-mer-2025.html"}, {"id": "parcours-physiciens-2022", "titre": "Parcours professionnel — Physiciens médicaux", "statut": ["cadre"], "profession": ["physicien-medical"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/parcours-physiciens-2022.html"}, {"id": "reprise-anciennete-mer-as-ide-2022", "titre": "Reprise d'ancienneté — MER / AS / IDE", "statut": ["non-cadre"], "profession": ["mer", "ide", "as"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/reprise-anciennete-mer-as-ide-2022.html"}, {"id": "dialogue-social-2026", "titre": "Dialogue social", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/dialogue-social-2026.html"}, {"id": "vote-electronique-2026", "titre": "Vote électronique", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/vote-electronique-2026.html"}, {"id": "due-parcours-macroscopie", "titre": "DUE : parcours techniciens de laboratoire / macroscopie", "statut": ["non-cadre"], "profession": ["technicien-labo"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/due-parcours-macroscopie.html"}, {"id": "due-complementaire-frais-sante", "titre": "DUE : complémentaire frais de santé", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/due-complementaire-frais-sante.html"}, {"id": "due-prime-pool-remplacement-am", "titre": "DUE : prime pool remplacement — Assistantes Médicales", "statut": ["non-cadre"], "profession": ["assistant-medical"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/due-prime-pool-remplacement-am.html"}, {"id": "due-prime-pool-remplacement-soignants", "titre": "DUE : prime pool remplacement — AS / IDE", "statut": ["non-cadre"], "profession": ["as", "ide"], "modalite_horaire": [], "temps_travail": [], "href": "resumes/due-prime-pool-remplacement-soignants.html"}, {"id": "cheques-syndicaux", "titre": "Chèques syndicaux", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/cheques-syndicaux.html"}, {"id": "pv-desaccord-nao-2023", "titre": "PV de désaccord NAO 2023", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/pv-desaccord-nao-2023.html"}, {"id": "pv-desaccord-nao-2024", "titre": "PV de désaccord NAO 2024", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/pv-desaccord-nao-2024.html"}, {"id": "pv-desaccord-nao-2025", "titre": "PV de désaccord NAO 2025", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/pv-desaccord-nao-2025.html"}, {"id": "pv-desaccord-nao-2026", "titre": "PV de désaccord NAO 2026", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/pv-desaccord-nao-2026.html"}, {"id": "intergenerationnel", "titre": "Accord intergénérationnel", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "resumes/intergenerationnel.html"}, {"id": "ccn-clcc", "titre": "Convention collective nationale des CLCC (texte intégral)", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "accords.html"}, {"id": "ccn-grille-non-praticiens", "titre": "Grille de rémunération et de classification — personnel non praticien", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "accords.html"}, {"id": "ccn-grille-praticiens", "titre": "Grille de rémunération — praticiens", "statut": [], "profession": [], "modalite_horaire": [], "temps_travail": [], "href": "accords.html"}]</script>
+<script>
+const situationData = JSON.parse(document.getElementById('situation-data').textContent);
+const situationForm = document.getElementById('situation-form');
+const situationResults = document.getElementById('situation-results');
+const statutSelect = situationForm.querySelector('select[name="statut"]');
+const modaliteField = document.getElementById('field-modalite_horaire');
+const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
+const professionField = document.getElementById('field-profession');
+const professionSelect = professionField.querySelector('select[name="profession"]');
+
+function toggleModaliteField() {
+  const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
+  modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
+  if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
+  professionField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { professionSelect.value = ''; }
+}
+statutSelect.addEventListener('change', toggleModaliteField);
+toggleModaliteField();
+
+situationForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const fd = new FormData(situationForm);
+  const filters = {};
+  for (const [k, v] of fd.entries()) { if (v) filters[k] = v; }
+
+  if (Object.keys(filters).length === 0) {
+    situationResults.innerHTML = '<p class="note">Choisissez au moins un critère.</p>';
+    return;
+  }
+  const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
+    '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
+  const matches = situationData.filter(a =>
+    Object.entries(filters).every(([k, v]) => (a[k] || []).includes(v))
+  );
+  if (matches.length === 0) {
+    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
+    return;
+  }
+  situationResults.innerHTML = '<h3>' + matches.length + ' accord(s) trouvé(s)</h3><div class="situation-list">' +
+    matches.map(a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`).join('') +
+    '</div>' + ccnLink;
+});
+</script>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="assets/logo.png" alt="Logo FO ICO" class="footer-logo">
+    <span>FO ICO — Base documentaire</span>
+  </div>
+  <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
+</footer>
+</body>
+</html>

@@ -681,15 +681,15 @@
       "theme": "Carrière",
       "annee": "2020 (avenants 2021, 2023)",
       "pdf_ok": true,
-      "chemin_pdf": "accords-locaux/Accord d'entreprise intergenerationnel_signé.pdf",
-      "chemin_source_md": "accords-locaux/Accord d'entreprise intergenerationnel_signé.md",
+      "chemin_pdf": "accords-locaux/Accord Intergénérationnel du 30 01 2020_signé.pdf",
+      "chemin_source_md": "accords-locaux/Accord Intergenerationnel du 30 01 2020_signe.md",
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-intergenerationnel.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_intergenerationnel_FO.pdf",
       "statut": [],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020, complété par l'avenant n°1 du 30/06/2021 (accords-locaux/accord-intergenerationnel-avenant1-2021.md) et l'avenant du 15/09/2023 (accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md) qui modifient tous deux l'article 3.4.2 (temps partiel fin de carrière). Les 3 fichiers PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent les 3 textes."
+      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020 (PDF : \"Accord Intergénérationnel du 30 01 2020_signé.pdf\"), complété par l'avenant du 15/09/2023 (PDF : \"Avenant accord d'entreprise intergénérationnel_2023_Version signée.pdf\", source : accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md), qui modifie l'article 3.4.2 (temps partiel fin de carrière). L'avenant n°1 du 30/06/2021 n'est plus en vigueur (confirmé par David le 21/09/2026) — archivé dans archive-accords-locaux/ sous \"Accord intergenerationnel_Avenant n1_Signe plus en vigueur\". Les PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent uniquement les textes en vigueur."
     }
   ]
 }

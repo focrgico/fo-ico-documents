@@ -2,7 +2,7 @@ Accord intergénérationnel — résumé pour tryptique
 
 > **Dépliant à imprimer** — [Accord intergénérationnel (PDF, 3 volets)](../Depliants_FO/Depliant_intergenerationnel_FO.pdf)
 
-**Sur les versions et les références :** ce résumé intègre l'accord de base du 30 janvier 2020, l'avenant n°1 du 30 juin 2021 et l'avenant du 15 septembre 2023 — c'est la version en vigueur, résultante des trois textes. Les articles cités entre parenthèses renvoient au texte de l'accord de base sauf mention contraire.
+**Sur les versions et les références :** ce résumé intègre l'accord de base du 30 janvier 2020 et l'avenant du 15 septembre 2023 — c'est la version en vigueur. L'avenant n°1 du 30 juin 2021, qui permettait de fractionner le taux de 50 % sur 2 semaines, n'est plus en vigueur et n'est donc pas repris ici. Les articles cités entre parenthèses renvoient au texte de l'accord de base sauf mention contraire.
 
 ---
 
@@ -62,8 +62,6 @@ Vous pouvez demander à passer à temps partiel (taux privilégiés : **50 %, 75
 2. Vous êtes au même taux d'activité depuis au moins 24 mois
 3. Vous avez plus de 10 ans d'ancienneté
 
-Si vous choisissez le taux de 50 %, l'avenant du 30 juin 2021 vous permet de l'organiser sur 2 semaines (une semaine à temps complet, une semaine complète à temps partiel), sous réserve de compatibilité avec l'organisation du service.
-
 *Comment faire la demande*
 
 Par lettre recommandée avec AR ou remise en main propre contre décharge, au moins 2 mois avant la date souhaitée. La direction répond sous 1 mois ; tout refus ou report est motivé. **Au moins 70 %** des demandes doivent être acceptées.
@@ -106,4 +104,4 @@ Accord à durée indéterminée. Un bilan est présenté chaque année au CSE ce
 
 ---
 
-**Base :** accord signé le 30 janvier 2020 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant n°1 du 30 juin 2021 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant du 15 septembre 2023 (CGT-FO, Sud Santé-Sociaux, CFE-CGC — la CFDT n'a pas signé ce second avenant).
+**Base :** accord signé le 30 janvier 2020 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant du 15 septembre 2023 (CGT-FO, Sud Santé-Sociaux, CFE-CGC — la CFDT n'a pas signé cet avenant). L'avenant n°1 du 30 juin 2021 n'est plus en vigueur.

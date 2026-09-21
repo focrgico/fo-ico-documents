@@ -31,6 +31,7 @@ recto-verso (retournement sur le bord court) et à plier en trois.
 | Stages de jour du personnel de nuit | [Depliant_stages_de_jour_personnel_nuit_FO.pdf](Depliant_stages_de_jour_personnel_nuit_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-travail-nuit-2026.md) |
 | Congé humanitaire | [Depliant_conge_humanitaire_FO.pdf](Depliant_conge_humanitaire_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-conge-humanitaire-2026.md) |
 | Accord intergénérationnel | [Depliant_intergenerationnel_FO.pdf](Depliant_intergenerationnel_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-intergenerationnel.md) |
+| Chèques syndicaux | [Depliant_cheques_syndicaux_FO.pdf](Depliant_cheques_syndicaux_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-cheques-syndicaux.md) |
 | CDD à objet défini | [Depliant_CDD_objet_defini_FO.pdf](Depliant_CDD_objet_defini_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-cdd-objet-defini-2021.md) |
 | Égalité professionnelle femmes-hommes | [Depliant_egalite_femmes_hommes_FO.pdf](Depliant_egalite_femmes_hommes_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-egalite-fh-2026.md) |
 | VAP (validation des acquis professionnels) | [Depliant_VAP_FO.pdf](Depliant_VAP_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-vap-2025.md) |

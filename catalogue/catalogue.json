@@ -293,7 +293,7 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Le texte de la version 2025 en vigueur (24 octobre 2025) est déjà correctement présent dans chemin_source_md, y compris l'ajout de la prime trottinette électrique absente en 2024. Ce qui manque encore : le PDF signé de cette version 2025 (chemin_pdf laissé vide en attendant). Le PDF et le Word de la version 2024 (obsolète, confirmée par David) ont été archivés le 21/09/2026 — attention, le Word transmis le 21/09/2026 sous le nom 'V_finale' était en réalité la version 2024 (daté du 26/04/2024, exclut les trottinettes), pas la 2025 : vérifié par lecture directe avant archivage, ne pas le réutiliser comme source de la version en vigueur.",
+      "note": "Le texte de la version 2025 en vigueur (24 octobre 2025) est confirmé fiable : retrouvé le 21/09/2026 dans docs/accords-locaux/Accords locaux Format word/Accord Forfait Mobilité Durable Vfinale.docx (Word source réel, daté et signé, incluant bien la prime trottinette électrique Article 3) — ce fichier dormait dans le dépôt sans être relié au catalogue. Il ne manque plus que le PDF signé (chemin_pdf toujours vide). Les 2 Word et le PDF de la version 2024 (obsolète) sont tous archivés.",
       "id": "forfait-mobilite-durable-2025",
       "titre": "Forfait Mobilité Durable",
       "categorie": "Accord local",

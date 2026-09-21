@@ -1,7 +1,7 @@
 {
   "genere_le": "2026-09-20",
   "source": "github.com/focrgico/fo-ico-documents (branche main, snapshot du jour)",
-  "avertissement": "Les champs statut / site / modalite_horaire / temps_travail sont volontairement vides pour la grande majorité des accords : ils n'ont PAS été déduits automatiquement du contenu juridique de chaque accord (non lu ligne à ligne dans cet exercice). Ils ne sont renseignés que lorsque le titre même de l'accord le rend certain (ex. 'ATT cadres'). Le reste est à compléter accord par accord avant toute mise en ligne du filtre 'Ma situation'. Mise à jour 20/09/2026 : correction chèques syndicaux/financement syndical, et rattachement des accords acquisition CP maladie aux résumés ATT cadres/non-cadres (vérifiés avec David). Mise à jour 20/09/2026 : ajout des grilles de rémunération CCN et des PV de désaccord NAO (2023-2026, non archivés par choix) ; retrait de l'accord de méthode NAO de la liste affichée.",
+  "avertissement": "Les champs statut / site / modalite_horaire / temps_travail sont volontairement vides pour la grande majorité des accords : ils n'ont PAS été déduits automatiquement du contenu juridique de chaque accord (non lu ligne à ligne dans cet exercice). Ils ne sont renseignés que lorsque le titre même de l'accord le rend certain (ex. 'ATT cadres'). Le reste est à compléter accord par accord avant toute mise en ligne du filtre 'Ma situation'. Mise à jour 20/09/2026 : correction chèques syndicaux/financement syndical, et rattachement des accords acquisition CP maladie aux résumés ATT cadres/non-cadres (vérifiés avec David). Mise à jour 20/09/2026 : ajout des grilles de rémunération CCN et des PV de désaccord NAO (2023-2026, non archivés par choix) ; retrait de l'accord de méthode NAO de la liste affichée. Mise a jour 21/09/2026 : ajout de l'accord intergenerationnel (base 2020 + avenants 2021/2023).",
   "champs_pdf_docx_depliant": "chemin_pdf = PDF signé (accord de base). chemin_resume_md = résumé texte tel que rédigé (source pour le futur site et pour la version Word). Aucun sous-dossier de résumés Word n'existe dans le dépôt à ce jour — seuls les résumés en Markdown y sont poussés. chemin_depliant = PDF tryptique dans docs/accords-locaux/Depliants_FO/ (ajouté au dépôt le 20/09/2026, relié ici depuis l'index.md de ce dossier — source faisant foi, pas de correspondance devinée). Un accord peut avoir plusieurs dépliants (ex. ATT cadres/non-cadres, un dépliant par thème) ; chemin_depliant est alors une liste.",
   "accords": [
     {
@@ -673,6 +673,23 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "« Praticiens » est une catégorie de personnel à part dans la CCN (médecins), distincte de la distinction cadre/non-cadre utilisée pour le personnel non praticien. Vérifié manuellement, fiable."
+    },
+    {
+      "id": "intergenerationnel",
+      "titre": "Accord intergénérationnel",
+      "categorie": "Accord local",
+      "theme": "Carrière",
+      "annee": "2020 (avenants 2021, 2023)",
+      "pdf_ok": true,
+      "chemin_pdf": "accords-locaux/Accord d'entreprise intergenerationnel_signé.pdf",
+      "chemin_source_md": "accords-locaux/Accord d'entreprise intergenerationnel_signé.md",
+      "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-intergenerationnel.md",
+      "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_intergenerationnel_FO.pdf",
+      "statut": [],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [],
+      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020, complété par l'avenant n°1 du 30/06/2021 (accords-locaux/accord-intergenerationnel-avenant1-2021.md) et l'avenant du 15/09/2023 (accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md) qui modifient tous deux l'article 3.4.2 (temps partiel fin de carrière). Les 3 fichiers PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent les 3 textes."
     }
   ]
 }

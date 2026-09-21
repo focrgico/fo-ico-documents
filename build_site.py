@@ -470,16 +470,18 @@ situationForm.addEventListener('submit', (e) => {
     situationResults.innerHTML = '<p class="note">Choisissez au moins un critère.</p>';
     return;
   }
+  const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
+    '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
   const matches = situationData.filter(a =>
     Object.entries(filters).every(([k, v]) => (a[k] || []).includes(v))
   );
   if (matches.length === 0) {
-    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>';
+    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
     return;
   }
   situationResults.innerHTML = '<h3>' + matches.length + ' accord(s) trouvé(s)</h3><div class="situation-list">' +
     matches.map(a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`).join('') +
-    '</div>';
+    '</div>' + ccnLink;
 });
 </script>
 """

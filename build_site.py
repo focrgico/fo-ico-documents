@@ -327,16 +327,19 @@ def html_fragment_to_docx(fragment_html, title, out_path):
 
 
 FACET_OPTIONS = {
-    "statut": [("cadre", "Cadre"), ("non-cadre", "Non-cadre")],
-    "site": [("saint-herblain", "Saint-Herblain"), ("angers", "Angers"), ("groupe", "Groupe (2 sites)")],
-    "modalite_horaire": [
-        ("forfait-jours", "Forfait jours"), ("forfait-heures", "Forfait heures"),
-        ("horaire-classique", "Horaire classique"),
+    "statut": [("cadre", "Cadre"), ("non-cadre", "Non-cadre"), ("praticien", "Cadre praticien")],
+    "profession": [
+        ("ide", "IDE (infirmier)"), ("as", "Aide-soignant"), ("mer", "MER (manipulateur radio)"),
+        ("ash", "ASH"), ("brancardier", "Brancardier"), ("dieteticien", "Diététicien"),
+        ("kine", "Kinésithérapeute"), ("enseignant-apa", "Enseignant APA"),
+        ("assistant-medical", "Assistant médical"), ("technicien-labo", "Technicien de laboratoire"),
+        ("physicien-medical", "Physicien médical"), ("ingenieur", "Ingénieur"),
     ],
+    "modalite_horaire": [("forfait-jours", "Forfait jours"), ("forfait-heures", "Forfait heures")],
     "temps_travail": [("temps-plein", "Temps plein"), ("temps-partiel", "Temps partiel")],
 }
 FACET_LABELS = {
-    "statut": "Statut", "site": "Site",
+    "statut": "Statut", "profession": "Catégorie professionnelle",
     "modalite_horaire": "Modalité horaire", "temps_travail": "Temps de travail",
 }
 
@@ -350,7 +353,7 @@ def build_situation_data(cat):
             "id": a["id"],
             "titre": a["titre"],
             "statut": a.get("statut", []),
-            "site": a.get("site", []),
+            "profession": a.get("profession", []),
             "modalite_horaire": a.get("modalite_horaire", []),
             "temps_travail": a.get("temps_travail", []),
             "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
@@ -408,7 +411,7 @@ def build_index(cat, out_dir):
     <div class="situation-grid">
       <div class="situation-text">
         <h2>Décrivez votre situation</h2>
-        <p>Cadre au forfait jours, non-cadre à temps partiel, Saint-Herblain ou Angers... choisissez ce
+        <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
         qui vous concerne.</p>
         <p class="note">Classement par statut/site/modalité/temps en cours — un critère sans résultat ne
         veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
@@ -416,7 +419,12 @@ def build_index(cat, out_dir):
       <form class="situation-form" id="situation-form">
 """
     for key, label in FACET_LABELS.items():
-        html += f"""        <label class="select-field">
+        wrapper_id = ""
+        if key == "modalite_horaire":
+            wrapper_id = ' id="field-modalite_horaire"'
+        elif key == "profession":
+            wrapper_id = ' id="field-profession"'
+        html += f"""        <label class="select-field"{wrapper_id}>
           <span class="select-label">{esc(label)}</span>
           <select name="{key}" class="real-select">
             <option value="">Tous</option>
@@ -436,6 +444,21 @@ def build_index(cat, out_dir):
 const situationData = JSON.parse(document.getElementById('situation-data').textContent);
 const situationForm = document.getElementById('situation-form');
 const situationResults = document.getElementById('situation-results');
+const statutSelect = situationForm.querySelector('select[name="statut"]');
+const modaliteField = document.getElementById('field-modalite_horaire');
+const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
+const professionField = document.getElementById('field-profession');
+const professionSelect = professionField.querySelector('select[name="profession"]');
+
+function toggleModaliteField() {
+  const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
+  modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
+  if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
+  professionField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { professionSelect.value = ''; }
+}
+statutSelect.addEventListener('change', toggleModaliteField);
+toggleModaliteField();
 
 situationForm.addEventListener('submit', (e) => {
   e.preventDefault();

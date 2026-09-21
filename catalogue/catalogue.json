@@ -88,9 +88,13 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-compteur-intermediaire.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_compteur_intermediaire_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
-      "modalite_horaire": [],
+      "modalite_horaire": [
+        "horaire-classique"
+      ],
       "temps_travail": [],
       "note": "Un seul résumé couvre 2 accords sources (postés + non postés) — 2 PDF distincts à relier.",
       "id": "compteur-intermediaire",
@@ -122,7 +126,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-cdd-objet-defini-2021.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_CDD_objet_defini_FO.pdf",
-      "statut": [],
+      "statut": [
+        "cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -190,7 +196,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-travail-nuit-2026.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_stages_de_jour_personnel_nuit_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -275,7 +283,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-prime-chaussures-2023.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_prime_chaussures_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -292,7 +302,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-prime-usc-2023.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_prime_USC_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -326,7 +338,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-prime-retour-inopine.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_prime_retour_inopine_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -343,7 +357,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-parcours-am-2025.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_parcours_assistant_medical_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -360,7 +376,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-parcours-ide-mer-2025.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_parcours_IDE_MER_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -377,7 +395,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-parcours-physiciens-2022.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_parcours_physiciens_medicaux_FO.pdf",
-      "statut": [],
+      "statut": [
+        "cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -394,7 +414,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-reprise-anciennete-mer-as-ide-2022.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_reprise_anciennete_MER_IDE_AS_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -445,7 +467,9 @@
       "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-due-parcours-macroscopie.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_parcours_macroscopie_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -479,7 +503,9 @@
       "pdf_ok": false,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-due-prime-pool-remplacement-am.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_prime_pool_remplacement_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
@@ -496,7 +522,9 @@
       "pdf_ok": false,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-due-prime-pool-remplacement-soignants.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_prime_pool_remplacement_FO.pdf",
-      "statut": [],
+      "statut": [
+        "non-cadre"
+      ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],

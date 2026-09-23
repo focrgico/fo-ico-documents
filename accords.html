@@ -443,10 +443,14 @@ function applyFilters() {
   const q = raw.toLowerCase();
 
   if (activeChip === 'CCN') {
-    docList.style.display = '';
     const catRows = Array.from(rows).filter(r => r.dataset.cat === 'CCN');
     rows.forEach(r => { r.style.display = 'none'; });
-    catRows.forEach(r => { r.style.display = 'flex'; });
+    if (q) {
+      docList.style.display = 'none';
+    } else {
+      docList.style.display = '';
+      catRows.forEach(r => { r.style.display = 'flex'; });
+    }
     accordsEmpty.style.display = 'none';
     runAccSearch('', 'CCN');
     runCcnSearch(raw);

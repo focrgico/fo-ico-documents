@@ -712,12 +712,38 @@ function runAccSearch(raw, cat) {
     accResults.innerHTML = '';
     return hits;
   }
-  const docIds = new Set();
-  matches.forEach(p => { docIds.add(p.a); hits.add(p.a); });
-  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + docIds.size + (docIds.size > 1 ? ' documents' : ' document');
+  const groups = {};
+  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
+  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' documents' : ' document');
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
   accCount.innerHTML = '<span class="note">' + msg + '</span>';
-  accResults.innerHTML = '';
+  const terms = mode === 'exact' ? [q] : words;
+  const qs = encodeURIComponent(raw.trim());
+  const card = (d, p) => `
+      <div class="ccn-result">
+        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
+        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
+        <a class="ccn-jump" href="textes/${p.a}.html?q=${qs}#p${p.i}">Voir dans le texte →</a>
+      </div>`;
+  accResults.innerHTML = ids.map(id => {
+    const d = accDocs[id], list = groups[id];
+    const first = list.slice(0, 3).map(p => card(d, p)).join('');
+    const rest = list.length > 3
+      ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 3) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(3).map(p => card(d, p)).join('') + '</div></details>'
+      : '';
+    return `
+    <div class="acc-group" style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="tag" style="background:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[0]};color:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[1]}">${escapeHtml(d.categorie)}</span>
+        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
+        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
+        ${d.ocr ? '<span class="note">⚠️ texte OCR, à vérifier sur le PDF</span>' : ''}
+        ${d.pdf ? '<a class="ccn-jump" style="margin-top:0" href="' + d.pdf + '" target="_blank" rel="noopener">PDF signé →</a>' : ''}
+      </div>
+      ${first}${rest}
+    </div>`;
+  }).join('');
   return hits;
 }
 
@@ -738,13 +764,13 @@ function applyFilters() {
     docList.style.display = '';
     const hits = runAccSearch(raw, 'all');
     const nq = norm(raw);
-    const rowsToShow = q ? Array.from(rows).filter(r => norm(r.dataset.title).includes(nq) || hits.has(r.dataset.id)) : Array.from(rows);
+    const rowsToShow = q ? Array.from(rows).filter(r => norm(r.dataset.title).includes(nq)) : Array.from(rows);
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     runCcnSearch(raw);
-    if (q && rowsToShow.length === 0) {
+    if (q && rowsToShow.length === 0 && hits.size === 0) {
       accordsEmpty.style.display = 'block';
-      accordsEmpty.textContent = 'Aucun accord ne contient « ' + raw + ' », ni dans son titre ni dans son texte.';
+      accordsEmpty.textContent = 'Aucun accord ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.';
     } else {
       accordsEmpty.style.display = 'none';
       accordsEmpty.textContent = '';
@@ -754,15 +780,15 @@ function applyFilters() {
     const catRows = Array.from(rows).filter(r => r.dataset.cat === activeChip);
     const hits = runAccSearch(raw, activeChip);
     const nq = norm(raw);
-    const rowsToShow = q ? catRows.filter(r => norm(r.dataset.title).includes(nq) || hits.has(r.dataset.id)) : catRows;
+    const rowsToShow = q ? catRows.filter(r => norm(r.dataset.title).includes(nq)) : catRows;
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     ccnSection.style.display = 'none';
     ccnResults.innerHTML = '';
     ccnCount.innerHTML = '';
-    if (q && rowsToShow.length === 0) {
+    if (q && rowsToShow.length === 0 && hits.size === 0) {
       accordsEmpty.style.display = 'block';
-      accordsEmpty.textContent = 'Aucun document « ' + activeChip + ' » ne contient « ' + raw + ' », ni dans son titre ni dans son texte.';
+      accordsEmpty.textContent = 'Aucun accord « ' + activeChip + ' » ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.';
     } else {
       accordsEmpty.style.display = 'none';
       accordsEmpty.textContent = '';
@@ -934,12 +960,35 @@ function runResSearch(raw, theme) {
     resResults.innerHTML = '';
     return hits;
   }
-  const docIds = new Set();
-  matches.forEach(p => { docIds.add(p.a); hits.add(p.a); });
-  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + docIds.size + (docIds.size > 1 ? ' résumés' : ' résumé');
+  const groups = {};
+  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
+  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
-  resResults.innerHTML = '';
+  const terms = mode === 'exact' ? [q] : words;
+  const qs = encodeURIComponent(raw.trim());
+  const card = (p) => `
+      <div class="ccn-result">
+        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
+        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
+      </div>`;
+  resResults.innerHTML = ids.map(id => {
+    const d = resDocs[id], list = groups[id];
+    const tc = themeColors[d.categorie] || ['#F4F6F9', '#5B6578'];
+    const first = list.slice(0, 2).map(card).join('');
+    const rest = list.length > 2 ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 2) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(2).map(card).join('') + '</div></details>' : '';
+    return `
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="tag" style="background:${tc[0]};color:${tc[1]}">${escapeHtml(d.categorie)}</span>
+        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
+        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
+        <a class="ccn-jump" style="margin-top:0" href="resumes/${id}.html?q=${qs}">Lire le résumé →</a>
+      </div>
+      ${first}${rest}
+    </div>`;
+  }).join('');
   return hits;
 }
 
@@ -950,7 +999,7 @@ function applyFilters() {
   const hits = runResSearch(raw, activeTheme);
   cards.forEach(c => {
     const themeOk = activeTheme === 'all' || c.dataset.theme === activeTheme;
-    const qOk = !q || norm(c.dataset.title).includes(nq) || hits.has(c.dataset.id);
+    const qOk = !q || norm(c.dataset.title).includes(nq);
     c.style.display = (themeOk && qOk) ? 'flex' : 'none';
   });
   themeLabels.forEach(label => {
@@ -958,8 +1007,9 @@ function applyFilters() {
     label.style.display = hasVisible ? 'block' : 'none';
   });
   const anyVisible = Array.from(cards).some(c => c.style.display !== 'none');
-  resEmpty.style.display = (q && !anyVisible) ? 'block' : 'none';
-  resEmpty.textContent = (q && !anyVisible) ? 'Aucun résumé ne contient « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
+  const noText = hits.size === 0;
+  resEmpty.style.display = (q && !anyVisible && noText) ? 'block' : 'none';
+  resEmpty.textContent = (q && !anyVisible && noText) ? 'Aucun résumé ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
 }
 search.addEventListener('input', applyFilters);
 themeChips.forEach(c => c.addEventListener('click', () => {

@@ -44,7 +44,13 @@
     <span class="chip" data-theme="Vie syndicale" style="--chip-color:#7A6540">Vie syndicale</span>
   </div>
   <div id="leaflet-empty" class="ccn-empty" style="display:none;"></div>
-  <div id="leaflet-hits" class="ccn-count" style="display:none;"></div>
+  <div id="leaflet-text-section" style="display:none; margin-bottom: 18px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+      <span class="bar"></span>
+      <h2 style="margin:0; font-size:16px; font-weight:700; color:var(--marine);">Dans le texte des dépliants</h2>
+    </div>
+    <div id="leaflet-hits" class="ccn-count"></div>
+  </div>
   <div class="leaflet-grid" id="leaflet-grid">
     <div class="doc-group-label full-row" data-theme="Carrière" style="color:#0F6B62;background:#E3F1EF;">Carrière</div>
     <a class="leaflet-card" data-id="intergenerationnel" data-title="accord intergénérationnel" data-theme="Carrière" href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/accords-locaux/Depliants_FO/Depliant_intergenerationnel_FO.pdf" target="_blank" rel="noopener">
@@ -616,14 +622,17 @@ function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
 function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
 depResData.forEach(p => { p.n = norm(p.t); });
 
+let lastAccMsg = '';
 function textHits(raw) {
   const hits = new Set();
+  lastAccMsg = '';
   if (raw.trim().length < 3) return hits;
   const q = norm(raw.trim());
   const words = q.split(/\s+/).filter(w => w.length >= 2);
   let matches = depResData.filter(p => hasTerm(p.n, q));
   if (matches.length === 0 && words.length > 1) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
   matches.forEach(p => hits.add(p.a));
+  if (matches.length) lastAccMsg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + hits.size + (hits.size > 1 ? ' documents' : ' document');
   return hits;
 }
 
@@ -643,9 +652,8 @@ function applyFilters() {
   const anyVisible = Array.from(leafletCards).some(c => c.style.display !== 'none');
   leafletEmpty.style.display = (raw && !anyVisible) ? 'block' : 'none';
   leafletEmpty.textContent = (raw && !anyVisible) ? 'Aucun dépliant ne contient « ' + raw + ' », ni dans son titre ni dans le texte du résumé associé.' : '';
-  const textOnly = raw ? Array.from(hits).length : 0;
-  leafletHits.style.display = (raw && textOnly) ? 'block' : 'none';
-  if (raw && textOnly) leafletHits.innerHTML = '<span class="note">Le mot « ' + raw + ' » apparaît dans le texte de ' + textOnly + ' résumé' + (textOnly > 1 ? 's' : '') + ' associé' + (textOnly > 1 ? 's' : '') + '.</span>';
+  document.getElementById('leaflet-text-section').style.display = (raw && lastAccMsg) ? 'block' : 'none';
+  leafletHits.innerHTML = lastAccMsg ? '<span class="note">' + lastAccMsg + '</span>' : '';
 }
 search.addEventListener('input', applyFilters);
 themeChips.forEach(c => c.addEventListener('click', () => {

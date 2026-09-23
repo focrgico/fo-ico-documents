@@ -855,12 +855,14 @@ THEME_COLORS = {
 }
 
 
-def build_resumes(cat, out_dir):
+def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
     """Page de liste des résumés — chaque carte renvoie vers sa page locale
     site/resumes/<id>.html plutôt que vers GitHub."""
     entries = dedup_by_resume(cat["accords"])
     entries_sorted = sorted(entries, key=lambda a: (a["theme"], a["titre"]))
     themes = sorted(set(a["theme"] for a in entries_sorted))
+    res_docs = res_docs or {}
+    res_passages = res_passages or []
 
     html = page_head("Résumés", "resumes.html")
     html += """
@@ -874,7 +876,7 @@ def build_resumes(cat, out_dir):
 </section>
 <section class="list-page">
   <div class="search-bar small">
-    <input type="text" id="filter-search" placeholder="Rechercher un résumé...">
+    <input type="text" id="filter-search" placeholder="Rechercher un résumé ou un mot dans son texte...">
   </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
@@ -883,6 +885,7 @@ def build_resumes(cat, out_dir):
         _, t_fg = THEME_COLORS.get(t, ("#F4F6F9", "#5B6578"))
         html += f'    <span class="chip" data-theme="{esc(t)}" style="--chip-color:{t_fg}">{esc(t)}</span>\n'
     html += """  </div>
+  <div id="res-empty" class="ccn-empty" style="display:none;"></div>
   <div class="cards-grid" id="doc-list">
 """
     current_theme = None
@@ -891,7 +894,7 @@ def build_resumes(cat, out_dir):
         if a["theme"] != current_theme:
             current_theme = a["theme"]
             html += f'    <div class="doc-group-label full-row" data-theme="{esc(current_theme)}" style="color:{fg};background:{bg};">{esc(current_theme)}</div>\n'
-        html += f"""    <div class="doc-card" data-title="{esc(a['titre'].lower())}" data-theme="{esc(a['theme'])}">
+        html += f"""    <div class="doc-card" data-id="{esc(a['id'])}" data-title="{esc(a['titre'].lower())}" data-theme="{esc(a['theme'])}">
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['theme'])}</span>
       <h3>{esc(a['titre'])}</h3>
       <a href="resumes/{esc(a['id'])}.html" class="link">Lire le résumé →</a>
@@ -899,24 +902,113 @@ def build_resumes(cat, out_dir):
 """
     html += "  </div>\n</section>\n"
     html += """
+<div id="res-section" style="display:none; margin-top: 32px; max-width: 1100px;">
+  <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+    <span class="bar"></span>
+    <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte des résumés</h2>
+  </div>
+  <div id="res-count" class="ccn-count"></div>
+  <div id="res-results" class="ccn-results"></div>
+</div>
+</section>
+<script id="res-docs" type="application/json">""" + json.dumps(res_docs, ensure_ascii=False).replace("</", "<\\/") + """</script>
+<script id="res-data" type="application/json">""" + json.dumps(res_passages, ensure_ascii=False).replace("</", "<\\/") + """</script>
 <script>
+const resDocs = JSON.parse(document.getElementById('res-docs').textContent);
+const resData = JSON.parse(document.getElementById('res-data').textContent);
+const themeColors = """ + json.dumps(THEME_COLORS, ensure_ascii=False) + """;
+const resSection = document.getElementById('res-section');
+const resResults = document.getElementById('res-results');
+const resCount = document.getElementById('res-count');
+const resEmpty = document.getElementById('res-empty');
 const search = document.getElementById('filter-search');
 const cards = document.querySelectorAll('.doc-card');
 const themeLabels = document.querySelectorAll('.doc-group-label');
 const themeChips = document.querySelectorAll('#theme-chips .chip');
 let activeTheme = 'all';
 
+function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
+function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
+function highlightAll(text, terms) {
+  const nt = norm(text);
+  let marks = [];
+  terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) marks.push([i, i + t.length]); i += t.length; } });
+  if (!marks.length) return escapeHtml(text);
+  marks.sort((a, b) => a[0] - b[0]);
+  const merged = [];
+  marks.forEach(m => { if (merged.length && m[0] <= merged[merged.length - 1][1]) merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], m[1]); else merged.push(m.slice()); });
+  let out = '', pos = 0;
+  merged.forEach(([a, b]) => { out += escapeHtml(text.slice(pos, a)) + '<mark>' + escapeHtml(text.slice(a, b)) + '</mark>'; pos = b; });
+  return out + escapeHtml(text.slice(pos));
+}
+resData.forEach(p => { p.n = norm(p.t); });
+
+function runResSearch(raw, theme) {
+  const hits = new Set();
+  if (raw.trim().length < 3) { resSection.style.display = 'none'; resResults.innerHTML = ''; resCount.innerHTML = ''; return hits; }
+  resSection.style.display = 'block';
+  const q = norm(raw.trim());
+  const words = q.split(/\s+/).filter(w => w.length >= 2);
+  const pool = resData.filter(p => theme === 'all' || resDocs[p.a].categorie === theme);
+  let matches = pool.filter(p => hasTerm(p.n, q));
+  let mode = 'exact';
+  if (matches.length === 0 && words.length > 1) { matches = pool.filter(p => words.every(w => hasTerm(p.n, w))); mode = 'approx'; }
+  if (matches.length === 0) {
+    resCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\\'apparaît dans le texte d\\'aucun résumé' + (theme === 'all' ? '' : ' « ' + escapeHtml(theme) + ' »') + '.</div>';
+    resResults.innerHTML = '';
+    return hits;
+  }
+  const groups = {};
+  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
+  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
+  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
+  resCount.innerHTML = '<span class="note">' + msg + '</span>';
+  const terms = mode === 'exact' ? [q] : words;
+  const qs = encodeURIComponent(raw.trim());
+  const card = (p) => `
+      <div class="ccn-result">
+        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
+        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
+      </div>`;
+  resResults.innerHTML = ids.map(id => {
+    const d = resDocs[id], list = groups[id];
+    const tc = themeColors[d.categorie] || ['#F4F6F9', '#5B6578'];
+    const first = list.slice(0, 2).map(card).join('');
+    const rest = list.length > 2 ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 2) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(2).map(card).join('') + '</div></details>' : '';
+    return `
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="tag" style="background:${tc[0]};color:${tc[1]}">${escapeHtml(d.categorie)}</span>
+        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
+        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
+        <a class="ccn-jump" style="margin-top:0" href="resumes/${id}.html?q=${qs}">Lire le résumé →</a>
+      </div>
+      ${first}${rest}
+    </div>`;
+  }).join('');
+  return hits;
+}
+
 function applyFilters() {
-  const q = search.value.trim().toLowerCase();
+  const raw = search.value.trim();
+  const q = raw.trim().toLowerCase();
+  const nq = norm(raw);
+  const hits = runResSearch(raw, activeTheme);
   cards.forEach(c => {
     const themeOk = activeTheme === 'all' || c.dataset.theme === activeTheme;
-    const qOk = !q || c.dataset.title.includes(q);
+    const qOk = !q || norm(c.dataset.title).includes(nq) || hits.has(c.dataset.id);
     c.style.display = (themeOk && qOk) ? 'flex' : 'none';
   });
   themeLabels.forEach(label => {
     const hasVisible = Array.from(cards).some(c => c.dataset.theme === label.dataset.theme && c.style.display !== 'none');
     label.style.display = hasVisible ? 'block' : 'none';
   });
+  const anyVisible = Array.from(cards).some(c => c.style.display !== 'none');
+  resEmpty.style.display = (q && !anyVisible) ? 'block' : 'none';
+  resEmpty.textContent = (q && !anyVisible) ? 'Aucun résumé ne contient « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
 }
 search.addEventListener('input', applyFilters);
 themeChips.forEach(c => c.addEventListener('click', () => {
@@ -956,9 +1048,33 @@ def build_resume_pages(cat, out_dir):
   </div>
 </section>
 
-<article class="resume-content">
+<article class="resume-content" id="resume-article">
 {fragment}
 </article>
+<script>
+(function () {{
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 2);
+  let first = null;
+  document.querySelectorAll('#resume-article p, #resume-article li, #resume-article td, #resume-article h2, #resume-article h3').forEach(el => {{
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => {{ let i = 0; while ((i = nt.indexOf(t, i)) !== -1) {{ if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += 1; }} }});
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    marks.forEach(m => {{ if (merged.length && m[0] <= merged[merged.length - 1][1]) merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], m[1]); else merged.push(m.slice()); }});
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    merged.forEach(([a, b]) => {{ out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; }});
+    el.innerHTML = out + esc(txt.slice(pos));
+    if (!first) first = el;
+  }});
+  if (first) first.scrollIntoView({{ block: 'center' }});
+}})();
+</script>
 
 <section class="download-box">
   <h2>Téléchargements</h2>
@@ -1057,22 +1173,23 @@ def clean_md_inline(s):
     return re.sub(r"\s+", " ", s).strip(" |")
 
 
-def build_accords_search_data(cat):
-    """Texte intégral cherchable de tous les documents du catalogue HORS CCN
-    (accords locaux, NAO, DUE, élections), découpé en paragraphes.
+def build_doc_search_data(entries, path_key, group_key="categorie"):
+    """Texte intégral cherchable d'une liste d'entrées du catalogue, découpé en
+    paragraphes. path_key est le champ du chemin .md à indexer (chemin_source_md
+    pour le texte intégral d'un accord, chemin_resume_md pour un résumé).
 
-    Source : le .md converti (chemin_source_md). Le bloc de métadonnées en tête
-    de fichier (date, 'converti depuis...') est ignoré jusqu'au premier '---'.
-    Retourne (docs, passages) :
-      docs     = {id: {titre, categorie, pdf, ocr, n}}
-      passages = liste de {a: id, i: idx, l: repère d'article, t: texte}
-    Les documents archivés (hors catalogue) ne sont pas indexés."""
+    Le bloc de métadonnées en tête de fichier (date, 'converti depuis...') est
+    ignoré jusqu'au premier '---'. Retourne (docs, passages) :
+      docs     = {id: {titre, categorie/theme, pdf, ocr, n}}
+      passages = liste de {a: id, i: idx, l: repère, t: texte}
+    Les entrées sans fichier trouvé sont silencieusement ignorées (juste un
+    avertissement en console) plutôt que de faire échouer la génération."""
     docs = {}
     passages = []
-    for a in cat["accords"]:
-        if a["categorie"] == "CCN":
+    for a in entries:
+        if group_key == "categorie" and a["categorie"] == "CCN":
             continue
-        rel = a.get("chemin_source_md")
+        rel = a.get(path_key)
         if not rel:
             continue
         local_path = os.path.join(DOCS_DIR, rel)
@@ -1104,12 +1221,24 @@ def build_accords_search_data(cat):
             idx += 1
         docs[a["id"]] = {
             "titre": a["titre"],
-            "categorie": a["categorie"],
+            "categorie": a.get(group_key, a["categorie"]),
             "pdf": url_for(a.get("chemin_pdf")),
             "ocr": ocr,
             "n": idx,
         }
     return docs, passages
+
+
+def build_accords_search_data(cat):
+    """Texte intégral cherchable de tous les documents du catalogue HORS CCN
+    (accords locaux, NAO, DUE, élections). Voir build_doc_search_data."""
+    return build_doc_search_data(cat["accords"], "chemin_source_md")
+
+
+def build_resumes_search_data(entries):
+    """Texte intégral cherchable des résumés salariés (un par accord, après
+    dédoublonnage). Voir build_doc_search_data."""
+    return build_doc_search_data(entries, "chemin_resume_md", group_key="theme")
 
 
 def build_accord_textes(docs, passages, out_dir):
@@ -1357,7 +1486,9 @@ PRINCIPAL_OVERRIDES = {
 }
 
 
-def build_depliants(cat, out_dir):
+def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
+    res_docs = res_docs or {}
+    res_passages = res_passages or []
     depliant_labels = load_depliant_labels()
     entries = dedup_by_resume(cat["accords"]) + [a for a in cat["accords"] if not a.get("chemin_resume_md")]
     entries = [a for a in entries if a.get("chemin_depliant")]
@@ -1375,6 +1506,10 @@ def build_depliants(cat, out_dir):
   </div>
 </section>
 <section class="list-page">
+  <div class="search-bar small">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
+    <input type="text" id="filter-search" placeholder="Rechercher un dépliant ou un mot dans son texte...">
+  </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
 """
@@ -1382,6 +1517,8 @@ def build_depliants(cat, out_dir):
         _, t_fg = THEME_COLORS.get(t, ("#F4F6F9", "#5B6578"))
         html += f'    <span class="chip" data-theme="{esc(t)}" style="--chip-color:{t_fg}">{esc(t)}</span>\n'
     html += """  </div>
+  <div id="leaflet-empty" class="ccn-empty" style="display:none;"></div>
+  <div id="leaflet-hits" class="ccn-count" style="display:none;"></div>
   <div class="leaflet-grid" id="leaflet-grid">
 """
     current_theme = None
@@ -1407,7 +1544,7 @@ def build_depliants(cat, out_dir):
 
             counter = f'<span class="leaflet-counter">{i + 1}/{len(dep_list)}</span>' if len(dep_list) > 1 else ""
             dep_url = url_for(d)
-            html += f"""    <a class="leaflet-card" data-theme="{esc(a['theme'])}" href="{esc(dep_url)}" target="_blank" rel="noopener">
+            html += f"""    <a class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}" href="{esc(dep_url)}" target="_blank" rel="noopener">
       <div class="leaflet-cover">
         <div class="leaflet-top">
           <div class="leaflet-top-left">
@@ -1425,25 +1562,62 @@ def build_depliants(cat, out_dir):
       <span class="leaflet-caption">Télécharger le PDF →</span>
     </a>
 """
-    html += "  </div>\n</section>\n"
+    html += "  </div>\n"
     html += """
+</section>
+<script id="dep-res-data" type="application/json">""" + json.dumps(res_passages, ensure_ascii=False).replace("</", "<\\/") + """</script>
 <script>
+const depResData = JSON.parse(document.getElementById('dep-res-data').textContent);
 const themeChips = document.querySelectorAll('#theme-chips .chip');
 const leafletCards = document.querySelectorAll('.leaflet-card');
 const leafletLabels = document.querySelectorAll('#leaflet-grid .doc-group-label');
+const search = document.getElementById('filter-search');
+const leafletEmpty = document.getElementById('leaflet-empty');
+const leafletHits = document.getElementById('leaflet-hits');
+let activeTheme = 'all';
 
-themeChips.forEach(c => c.addEventListener('click', () => {
-  themeChips.forEach(x => x.classList.remove('active'));
-  c.classList.add('active');
-  const activeTheme = c.dataset.theme;
+function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
+function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
+depResData.forEach(p => { p.n = norm(p.t); });
 
+function textHits(raw) {
+  const hits = new Set();
+  if (raw.trim().length < 3) return hits;
+  const q = norm(raw.trim());
+  const words = q.split(/\s+/).filter(w => w.length >= 2);
+  let matches = depResData.filter(p => hasTerm(p.n, q));
+  if (matches.length === 0 && words.length > 1) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
+  matches.forEach(p => hits.add(p.a));
+  return hits;
+}
+
+function applyFilters() {
+  const raw = search.value.trim();
+  const nq = norm(raw);
+  const hits = textHits(raw);
   leafletCards.forEach(card => {
-    card.style.display = (activeTheme === 'all' || card.dataset.theme === activeTheme) ? 'inline-flex' : 'none';
+    const themeOk = activeTheme === 'all' || card.dataset.theme === activeTheme;
+    const qOk = !raw || norm(card.dataset.title).includes(nq) || hits.has(card.dataset.id);
+    card.style.display = (themeOk && qOk) ? 'inline-flex' : 'none';
   });
   leafletLabels.forEach(label => {
     const hasVisible = Array.from(leafletCards).some(card => card.dataset.theme === label.dataset.theme && card.style.display !== 'none');
     label.style.display = hasVisible ? 'block' : 'none';
   });
+  const anyVisible = Array.from(leafletCards).some(c => c.style.display !== 'none');
+  leafletEmpty.style.display = (raw && !anyVisible) ? 'block' : 'none';
+  leafletEmpty.textContent = (raw && !anyVisible) ? 'Aucun dépliant ne contient « ' + raw + ' », ni dans son titre ni dans le texte du résumé associé.' : '';
+  const textOnly = raw ? Array.from(hits).length : 0;
+  leafletHits.style.display = (raw && textOnly) ? 'block' : 'none';
+  if (raw && textOnly) leafletHits.innerHTML = '<span class="note">Le mot « ' + raw + ' » apparaît dans le texte de ' + textOnly + ' résumé' + (textOnly > 1 ? 's' : '') + ' associé' + (textOnly > 1 ? 's' : '') + '.</span>';
+}
+search.addEventListener('input', applyFilters);
+themeChips.forEach(c => c.addEventListener('click', () => {
+  themeChips.forEach(x => x.classList.remove('active'));
+  c.classList.add('active');
+  activeTheme = c.dataset.theme;
+  applyFilters();
 }));
 </script>
 """
@@ -1478,9 +1652,10 @@ def main():
     build_accords(cat, OUT_DIR, acc_docs, acc_passages)
     build_accord_textes(acc_docs, acc_passages, OUT_DIR)
     build_ccn(cat, OUT_DIR)
-    build_resumes(cat, OUT_DIR)
+    res_docs, res_passages = build_resumes_search_data(dedup_by_resume(cat["accords"]))
+    build_resumes(cat, OUT_DIR, res_docs, res_passages)
     build_resume_pages(cat, OUT_DIR)
-    build_depliants(cat, OUT_DIR)
+    build_depliants(cat, OUT_DIR, res_docs, res_passages)
 
     print(f"Site généré dans {OUT_DIR} ({len(cat['accords'])} accords).")
 

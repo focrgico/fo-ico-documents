@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DUE : prime pool remplacement — AS / IDE — FO ICO</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="">
+<header class="nav">
+  <a href="../index.html" class="brand">
+    <span class="brand-title">FO ICO</span>
+    <span class="brand-sub">Base documentaire</span>
+  </a>
+  <nav>
+    <a href="../index.html" class="">Accueil</a>
+    <a href="../accords.html" class="active">Accords</a>
+    <a href="../resumes.html" class="">Résumés</a>
+    <a href="../depliants.html" class="">Dépliants</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <img src="../assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / ACCORDS / DUE / TEXTE</div>
+    <h1>DUE : prime pool remplacement — AS / IDE</h1>
+    <p>Texte converti, pour la lecture et la recherche. Pour une citation officielle,
+    référez-vous toujours à le PDF signé.</p>
+  </div>
+</section>
+<article class="resume-content ccn-texte">
+
+<p id="p0">L'institut de Cancérologie de l'Ouest a mis en place une politique de suppléance au sein des équipes d'aides-soignants(es) et Infirmiers(ères) Diplômés(ées) d'Etat.</p>
+<p id="p1">Cette politique vise à remplacer l'absentéisme prévisible de courte durée (remplacements de congés annuels, RTT, congés parentaux, formation, jours conventionnels...) et l'absentéisme inopiné de courte durée (maladie). Le pool de remplacement peut avoir pour mission de renforcer ponctuellement les secteurs qui développent une nouvelle activité, le temps de pouvoir réaliser un recrutement supplémentaire.</p>
+<p id="p2">Le pool de remplacement est affecté de façon programmée et alternée sur les différents postes qui nécessitent un remplacement. Il permet une continuité de la prise en charge des patients. Il est mobile et polyvalent, dispose d'une adaptabilité qui répond aux besoins de prise en charge des patients, selon les situations et contextes.</p>
+<p id="p3">L'équipe du pool de remplacement est composée d'une équipe à effectif stable qui pourra prendre en charge les remplacements dans les unités en fonction des profils et compétences développée.</p>
+<p id="p4">Le périmètre d'intervention du pool de remplacement est défini par les Cadres de Santé.</p>
+<p id="p5">Les salariés sur pool de remplacement bénéficient d'un parcours de formation spécifique, les préparant à tenir leur rôle dans les différents services, aux spécialités différentes.</p>
+<p id="p6">La Direction souhaite valoriser l'implication et la polyvalence de ses soignants, fidéliser ces profils au sein de l'établissement et du service de suppléance.</p>
+<p id="p7">C'est dans ce cadre que l'employeur prend, de manière unilatérale, la décision de verser une prime de pool de remplacement aux aides-soignants(es) et Infirmiers(ères) Diplômés(ées) d'Etat aux conditions suivantes :</p>
+<p id="p8">1 – Bénéficiaires :</p>
+<p id="p9">Le pool de remplacement est constitué de salariés(ées) qui sont liés à l'Institut de Cancérologie de l'Ouest par un contrat de travail à Durée Déterminée ou à Durée Indéterminée.</p>
+<p id="p10">Les salariés identifiés et affectés sur le pool de remplacement bénéficient du dispositif de prime de pool.</p>
+<p id="p11">Ils se démarquent des professionnels qui font preuve de polyvalence mais sont affectés de façon définitive sur un seul et même poste de travail/secteur.</p>
+<p id="p12">2 – Montant et modulation :</p>
+<p id="p13">Le montant de la prime est de 100 euros bruts mensuels pour chaque salarié bénéficiaire affecté sur le pool de remplacement à temps plein.</p>
+<p id="p14">Ce montant est réduit au prorata de la durée du travail prévue au contrat de travail pour le personnel à temps partiel d'autre part.</p>
+<p id="p15">3 – Date de versement :</p>
+<p id="p16">La prime de pool de remplacement est versée avec le salaire de chaque mois.</p>
+<p id="p17">4 – Cessation du versement de la prime de pool :</p>
+<p id="p18">Dès lors que le salarié du pool de remplacement est affecté sur un poste sédentaire de façon pérenne, le versement de la prime de pool cesse à la date de la nouvelle affectation.</p>
+<p id="p19">Les Cadres de Santé se chargent d'en informer le service RH pour mise en œuvre.</p>
+<p id="p20">5 – Date d'effet :</p>
+<p id="p21">La présente DUE entre en vigueur à effet rétroactif du 1er janvier 2024.</p>
+<p id="p22">Fait à Angers,</p>
+<p id="p23">Le 22 avril 2024</p>
+<p id="p24">Pr Mario CAMPONE Directeur Général</p>
+</article>
+<script>
+// Surligne le terme recherché (?q=...) dans le texte
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 3);
+  document.querySelectorAll('.ccn-texte p, .ccn-texte h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += t.length; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    marks.forEach(([a, b]) => { if (a < pos) return; out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+  });
+  if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+})();
+</script>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="../assets/logo.png" alt="Logo FO ICO" class="footer-logo">
+    <span>FO ICO — Base documentaire</span>
+  </div>
+  <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
+</footer>
+</body>
+</html>

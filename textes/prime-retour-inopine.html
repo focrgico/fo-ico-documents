@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prime de retour inopiné (DUE, non négociée) — FO ICO</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="">
+<header class="nav">
+  <a href="../index.html" class="brand">
+    <span class="brand-title">FO ICO</span>
+    <span class="brand-sub">Base documentaire</span>
+  </a>
+  <nav>
+    <a href="../index.html" class="">Accueil</a>
+    <a href="../accords.html" class="active">Accords</a>
+    <a href="../resumes.html" class="">Résumés</a>
+    <a href="../depliants.html" class="">Dépliants</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <img src="../assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / ACCORDS / DUE / TEXTE</div>
+    <h1>Prime de retour inopiné (DUE, non négociée)</h1>
+    <p>Texte converti, pour la lecture et la recherche. Pour une citation officielle,
+    référez-vous toujours à <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/DUE/DUE_Prime%20de%20retour%20inopin%C3%A9.pdf" target="_blank" rel="noopener">le PDF signé</a>.</p>
+  </div>
+</section>
+<article class="resume-content ccn-texte">
+
+<p id="p0">Depuis quelques mois, l'ICO rencontre régulièrement des difficultés pour organiser le remplacement des absences non programmées de ses équipes soignantes, via les missions d'intérim ou de CDD de courte durée, du fait d'une pénurie marquée de candidats sur ces métiers. Aussi, nos soignants sont régulièrement appelés pour modifier dans un délai très court leur planning de repos et venir remplacer ainsi leur collègue absent dans le cadre d'un retour inopiné. Conscient de l'investissement de ces professionnels, et soucieuse de le reconnaitre, la direction a souhaité négocier avec les partenaires sociaux l'installation d'une prime de retour inopiné. Faute d'avoir pu trouver un accord avec ces derniers, la direction prend donc une décision unilatérale visant a installer la prime de retour inopiné selon les conditions ci-après.</p>
+<h3 id="p1">1 - Notion de retour inopiné :</h3>
+<p id="p2">Est considéré comme un retour inopiné, le soignant, qui à la demande de la Direction :</p>
+<p id="p3">Revient au travail sur un jour planifié comme non travaillé (quel que soit le motif initial d'absence)</p>
+<p id="p4">Est amené à avancer de 4 heures, ou plus, sa prise de poste par rapport au planning communiqué</p>
+<p id="p5">Est amené à retarder de 4 heures, ou plus, sa sortie de poste par rapport au planning communiqué</p>
+<p id="p6">La demande faite par la Direction doit être formulée dans un délai de prévenance inférieur ou égal à 6 jours. Les échanges entre soignants ne sont pas concernés par ce dispositif.</p>
+<h3 id="p7">2 - Prime de retour inopiné :</h3>
+<p id="p8">Chaque retour inopiné donnera lieu au versement d'une prime de 75 € bruts.</p>
+<h3 id="p9">3 - Cas particuliers des 25 décembre et 1er janvier :</h3>
+<p id="p10">Une approche spécifique est installée pour les journées de noël et du 1er de l'an. Des lors que le retour inopiné amène le soignant à travailler, totalement ou partiellement, le 25 décembre ou le 1er janvier, entre 0h00 et minuit, le montant de la prime de retour inopiné passe à 300 € bruts.</p>
+<h3 id="p11">4 - Personnels éligibles :</h3>
+<p id="p12">La présente DUE vise les professionnels suivants : Aide-soignant Infirmier diplômé d'Etat. Elle s'applique à ces professionnels sur les 2 sites de l'ICO (Angers comme St Herblain) depuis la première DUE sur ce point (février 2023). Elle vise également les Manipulateurs en électroradiologie médicale des 2 sites de l'ICO à compter du 1er mai 2024.</p>
+<h3 id="p13">5 - Décompte du temps de travail :</h3>
+<p id="p14">Le temps travaillé dans le cadre d'un retour inopiné est enregistré dans l'outil de suivi des temps, Chronos. Selon l'état des compteurs, ce temps de travail sera traité en temps de travail ordinaire, en heures supplémentaires ou en heures complémentaires.</p>
+<h3 id="p15">6- Date d'effet et durée :</h3>
+<p id="p16">La présente DUE est prise à effet du 1er mai 2024, sans limite de durée.</p>
+<p id="p17">Fait à Angers,</p>
+<p id="p18">Le 29 avril 2024</p>
+<p id="p19">Pr Mario CAMPONE Directeur Général</p>
+</article>
+<script>
+// Surligne le terme recherché (?q=...) dans le texte
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 3);
+  document.querySelectorAll('.ccn-texte p, .ccn-texte h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += t.length; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    marks.forEach(([a, b]) => { if (a < pos) return; out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+  });
+  if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+})();
+</script>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="../assets/logo.png" alt="Logo FO ICO" class="footer-logo">
+    <span>FO ICO — Base documentaire</span>
+  </div>
+  <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
+</footer>
+</body>
+</html>

@@ -28,7 +28,7 @@
   </div>
 </section>
 
-<article class="resume-content">
+<article class="resume-content" id="resume-article">
 <h1>Durée et aménagement du temps de travail — personnel Non Cadre</h1>
 <blockquote>
 <p><strong>Dépliants à imprimer</strong> (PDF, 3 volets) — <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/accords-locaux/Depliants_FO/Depliant_ATT_non_cadres_1_horaires_FO.pdf">Horaires et repos</a> · <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/accords-locaux/Depliants_FO/Depliant_ATT_non_cadres_2_annualisation_FO.pdf">Annualisation et heures sup</a> · <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/accords-locaux/Depliants_FO/Depliant_ATT_non_cadres_3_conges_FO.pdf">Congés et astreintes</a> · <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/accords-locaux/Depliants_FO/Depliant_ATT_non_cadres_4_travail_de_nuit_FO.pdf">Travail de nuit</a></p>
@@ -97,6 +97,30 @@
 <h2>À retenir</h2>
 <p>Aujourd'hui, ce sont les règles de l'<strong>Avenant n°1 du 31 janvier 2022</strong> qui s'appliquent pour vos heures supplémentaires, et celles de l'<strong>avenant du 31 décembre 2025</strong> pour vos congés payés en cas d'arrêt maladie — tout le reste de l'accord de 2020 continue de s'appliquer tel quel. Pour les astreintes et le décès d'un proche pendant vos congés, pensez aussi à consulter les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).</p>
 </article>
+<script>
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 2);
+  let first = null;
+  document.querySelectorAll('#resume-article p, #resume-article li, #resume-article td, #resume-article h2, #resume-article h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += 1; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    marks.forEach(m => { if (merged.length && m[0] <= merged[merged.length - 1][1]) merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], m[1]); else merged.push(m.slice()); });
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    merged.forEach(([a, b]) => { out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+    if (!first) first = el;
+  });
+  if (first) first.scrollIntoView({ block: 'center' });
+})();
+</script>
 
 <section class="download-box">
   <h2>Téléchargements</h2>

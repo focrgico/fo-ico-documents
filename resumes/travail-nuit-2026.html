@@ -28,7 +28,7 @@
   </div>
 </section>
 
-<article class="resume-content">
+<article class="resume-content" id="resume-article">
 <h1>Maintien des compétences du personnel de nuit — Stages de jour</h1>
 <blockquote>
 <p><strong>Dépliant à imprimer</strong> — <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/accords-locaux/Depliants_FO/Depliant_stages_de_jour_personnel_nuit_FO.pdf">Stages de jour du personnel de nuit (PDF, 3 volets)</a></p>
@@ -57,6 +57,30 @@
 <hr />
 <p><em>Source : Accord maintien des compétences personnel de nuit (19/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.</em></p>
 </article>
+<script>
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 2);
+  let first = null;
+  document.querySelectorAll('#resume-article p, #resume-article li, #resume-article td, #resume-article h2, #resume-article h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += 1; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    marks.forEach(m => { if (merged.length && m[0] <= merged[merged.length - 1][1]) merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], m[1]); else merged.push(m.slice()); });
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    merged.forEach(([a, b]) => { out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+    if (!first) first = el;
+  });
+  if (first) first.scrollIntoView({ block: 'center' });
+})();
+</script>
 
 <section class="download-box">
   <h2>Téléchargements</h2>

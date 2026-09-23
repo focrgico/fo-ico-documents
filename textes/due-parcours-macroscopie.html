@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DUE : parcours techniciens de laboratoire / macroscopie — FO ICO</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body class="">
+<header class="nav">
+  <a href="../index.html" class="brand">
+    <span class="brand-title">FO ICO</span>
+    <span class="brand-sub">Base documentaire</span>
+  </a>
+  <nav>
+    <a href="../index.html" class="">Accueil</a>
+    <a href="../accords.html" class="active">Accords</a>
+    <a href="../resumes.html" class="">Résumés</a>
+    <a href="../depliants.html" class="">Dépliants</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <img src="../assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / ACCORDS / DUE / TEXTE</div>
+    <h1>DUE : parcours techniciens de laboratoire / macroscopie</h1>
+    <p>Texte converti, pour la lecture et la recherche. Pour une citation officielle,
+    référez-vous toujours à <a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/DUE/DUE%20Parcours%20techs%20de%20laboratoire-macroscopie_Version%20sign%C3%A9e.pdf" target="_blank" rel="noopener">le PDF signé</a>.</p>
+  </div>
+</section>
+<article class="resume-content ccn-texte">
+
+<p id="p0">L'organisation du service repose sur la polyvalence des techniciens. Le parcours de macroscopie fait donc partie intégrante du poste de technicien.</p>
+<p id="p1">1 – Parcours de formation en macroscopie :</p>
+<p id="p2">Début de formation de macroscopie : au moins un an après l'arrivée dans le service (à adapter en fonction des circonstances).</p>
+<p id="p3">Cycle de formation : Etendu sur environ deux ans, attestés par les entretiens annuels d'évaluation, le cycle est validé à l'issue de cette période et sous réserve de la validation des documents d'habilitation par le responsable du service.</p>
+<p id="p4">Le cycle de formation comprend initialement la prise en charge des biopsies et des petites pièces opératoires puis des pièces simples (de type tumorectomie mammaires) puis des pièces complexes (de type chirurgie digestive).</p>
+<p id="p5">Une formation théorique est à effectuer en tout début de formation (ou pendant la première année de formation pratique) soit en externe (organisme formateur type : « Bioformation ») et/ou en interne (cycle de formation par les pathologistes).</p>
+<p id="p6">Le cycle de de formation dure environ 2 ans (à adapter en fonction de la progression). Il est suivi par un cycle de consolidation d'une durée de 1 an. La phase de consolidation débute après la validation de l'habilitation et de la formation théorique.</p>
+<p id="p7">2 – Attribution d'une prime de technicien de laboratoire affecté à la macroscopie :</p>
+<p id="p8">L'attribution de la prime nécessite que le technicien remplisse les trois conditions suivantes :</p>
+<p id="p9">Cycle de formation pratique complet (attesté dans les entretiens annuels + fiches d'habilitation)</p>
+<p id="p10">Formation théorique à la macroscopie faite en externe ou en interne.</p>
+<p id="p11">Cycle de consolidation complet (soit 3 ans au total à partir du début de la formation)</p>
+<p id="p12">Le montant de cette prime est de 200 € bruts mensuels.</p>
+<p id="p13">Ce montant est porté à 250 € bruts mensuels pour les techniciens de laboratoire ayant à la fois suivi avec succès le parcours de formation interne et ayant obtenu le DU de Macroscopie.</p>
+<p id="p14">3 – Date de mise en œuvre :</p>
+<p id="p15">La présente DUE est mise en œuvre à effet du mois de décembre 2023.</p>
+<p id="p16">Fait à Angers,</p>
+<p id="p17">Le 8 décembre 2023</p>
+<p id="p18">Pr Mario CAMPONE Directeur Général</p>
+</article>
+<script>
+// Surligne le terme recherché (?q=...) dans le texte
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 3);
+  document.querySelectorAll('.ccn-texte p, .ccn-texte h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += t.length; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    marks.forEach(([a, b]) => { if (a < pos) return; out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+  });
+  if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+})();
+</script>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="../assets/logo.png" alt="Logo FO ICO" class="footer-logo">
+    <span>FO ICO — Base documentaire</span>
+  </div>
+  <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
+</footer>
+</body>
+</html>

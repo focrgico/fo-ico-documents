@@ -712,38 +712,12 @@ function runAccSearch(raw, cat) {
     accResults.innerHTML = '';
     return hits;
   }
-  const groups = {};
-  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
-  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
-  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' documents' : ' document');
+  const docIds = new Set();
+  matches.forEach(p => { docIds.add(p.a); hits.add(p.a); });
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + docIds.size + (docIds.size > 1 ? ' documents' : ' document');
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
   accCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = mode === 'exact' ? [q] : words;
-  const qs = encodeURIComponent(raw.trim());
-  const card = (d, p) => `
-      <div class="ccn-result">
-        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
-        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
-        <a class="ccn-jump" href="textes/${p.a}.html?q=${qs}#p${p.i}">Voir dans le texte →</a>
-      </div>`;
-  accResults.innerHTML = ids.map(id => {
-    const d = accDocs[id], list = groups[id];
-    const first = list.slice(0, 3).map(p => card(d, p)).join('');
-    const rest = list.length > 3
-      ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 3) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(3).map(p => card(d, p)).join('') + '</div></details>'
-      : '';
-    return `
-    <div class="acc-group" style="display:flex;flex-direction:column;gap:10px;">
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <span class="tag" style="background:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[0]};color:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[1]}">${escapeHtml(d.categorie)}</span>
-        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
-        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
-        ${d.ocr ? '<span class="note">⚠️ texte OCR, à vérifier sur le PDF</span>' : ''}
-        ${d.pdf ? '<a class="ccn-jump" style="margin-top:0" href="' + d.pdf + '" target="_blank" rel="noopener">PDF signé →</a>' : ''}
-      </div>
-      ${first}${rest}
-    </div>`;
-  }).join('');
+  accResults.innerHTML = '';
   return hits;
 }
 
@@ -960,35 +934,12 @@ function runResSearch(raw, theme) {
     resResults.innerHTML = '';
     return hits;
   }
-  const groups = {};
-  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
-  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
-  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
+  const docIds = new Set();
+  matches.forEach(p => { docIds.add(p.a); hits.add(p.a); });
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + docIds.size + (docIds.size > 1 ? ' résumés' : ' résumé');
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = mode === 'exact' ? [q] : words;
-  const qs = encodeURIComponent(raw.trim());
-  const card = (p) => `
-      <div class="ccn-result">
-        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
-        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
-      </div>`;
-  resResults.innerHTML = ids.map(id => {
-    const d = resDocs[id], list = groups[id];
-    const tc = themeColors[d.categorie] || ['#F4F6F9', '#5B6578'];
-    const first = list.slice(0, 2).map(card).join('');
-    const rest = list.length > 2 ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 2) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(2).map(card).join('') + '</div></details>' : '';
-    return `
-    <div style="display:flex;flex-direction:column;gap:10px;">
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-        <span class="tag" style="background:${tc[0]};color:${tc[1]}">${escapeHtml(d.categorie)}</span>
-        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
-        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
-        <a class="ccn-jump" style="margin-top:0" href="resumes/${id}.html?q=${qs}">Lire le résumé →</a>
-      </div>
-      ${first}${rest}
-    </div>`;
-  }).join('');
+  resResults.innerHTML = '';
   return hits;
 }
 
@@ -1518,7 +1469,13 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
         html += f'    <span class="chip" data-theme="{esc(t)}" style="--chip-color:{t_fg}">{esc(t)}</span>\n'
     html += """  </div>
   <div id="leaflet-empty" class="ccn-empty" style="display:none;"></div>
-  <div id="leaflet-hits" class="ccn-count" style="display:none;"></div>
+  <div id="leaflet-text-section" style="display:none; margin-bottom: 18px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:8px;">
+      <span class="bar"></span>
+      <h2 style="margin:0; font-size:16px; font-weight:700; color:var(--marine);">Dans le texte des dépliants</h2>
+    </div>
+    <div id="leaflet-hits" class="ccn-count"></div>
+  </div>
   <div class="leaflet-grid" id="leaflet-grid">
 """
     current_theme = None
@@ -1581,14 +1538,17 @@ function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
 function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
 depResData.forEach(p => { p.n = norm(p.t); });
 
+let lastAccMsg = '';
 function textHits(raw) {
   const hits = new Set();
+  lastAccMsg = '';
   if (raw.trim().length < 3) return hits;
   const q = norm(raw.trim());
   const words = q.split(/\s+/).filter(w => w.length >= 2);
   let matches = depResData.filter(p => hasTerm(p.n, q));
   if (matches.length === 0 && words.length > 1) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
   matches.forEach(p => hits.add(p.a));
+  if (matches.length) lastAccMsg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + hits.size + (hits.size > 1 ? ' documents' : ' document');
   return hits;
 }
 
@@ -1608,9 +1568,8 @@ function applyFilters() {
   const anyVisible = Array.from(leafletCards).some(c => c.style.display !== 'none');
   leafletEmpty.style.display = (raw && !anyVisible) ? 'block' : 'none';
   leafletEmpty.textContent = (raw && !anyVisible) ? 'Aucun dépliant ne contient « ' + raw + ' », ni dans son titre ni dans le texte du résumé associé.' : '';
-  const textOnly = raw ? Array.from(hits).length : 0;
-  leafletHits.style.display = (raw && textOnly) ? 'block' : 'none';
-  if (raw && textOnly) leafletHits.innerHTML = '<span class="note">Le mot « ' + raw + ' » apparaît dans le texte de ' + textOnly + ' résumé' + (textOnly > 1 ? 's' : '') + ' associé' + (textOnly > 1 ? 's' : '') + '.</span>';
+  document.getElementById('leaflet-text-section').style.display = (raw && lastAccMsg) ? 'block' : 'none';
+  leafletHits.innerHTML = lastAccMsg ? '<span class="note">' + lastAccMsg + '</span>' : '';
 }
 search.addEventListener('input', applyFilters);
 themeChips.forEach(c => c.addEventListener('click', () => {

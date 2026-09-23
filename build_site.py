@@ -753,10 +753,14 @@ function applyFilters() {
   const q = raw.toLowerCase();
 
   if (activeChip === 'CCN') {
-    docList.style.display = '';
     const catRows = Array.from(rows).filter(r => r.dataset.cat === 'CCN');
     rows.forEach(r => { r.style.display = 'none'; });
-    catRows.forEach(r => { r.style.display = 'flex'; });
+    if (q) {
+      docList.style.display = 'none';
+    } else {
+      docList.style.display = '';
+      catRows.forEach(r => { r.style.display = 'flex'; });
+    }
     accordsEmpty.style.display = 'none';
     runAccSearch('', 'CCN');
     runCcnSearch(raw);
@@ -876,6 +880,7 @@ def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
 </section>
 <section class="list-page">
   <div class="search-bar small">
+    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un résumé ou un mot dans son texte...">
   </div>
   <div class="chips" id="theme-chips">

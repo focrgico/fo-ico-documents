@@ -29,7 +29,16 @@ Pour republier le site après une mise à jour du catalogue ou d'un résumé :
     git add site/
     git commit -m "Regeneration du site"
     git push
-    git subtree push --prefix site origin gh-pages
+puis publication de site/ vers la branche gh-pages (site/ est dans .gitignore) :
+    git worktree add /tmp/gh-pages-deploy gh-pages
+    rm -rf /tmp/gh-pages-deploy/*
+    cp -r site/* /tmp/gh-pages-deploy/
+    cd /tmp/gh-pages-deploy && git add -A && git commit -m "Deploiement du site" && git push origin gh-pages
+    cd -  &&  git worktree remove /tmp/gh-pages-deploy --force
+
+Recherche (page accords.html) : plein texte sur la CCN ET sur tous les documents
+du catalogue (accords locaux, NAO, DUE, élections), à partir de leur .md converti.
+Chaque document a sa page de lecture site/textes/<id>.html (ancres #p<n>).
 """
 
 import json
@@ -490,9 +499,11 @@ situationForm.addEventListener('submit', (e) => {
         f.write(html)
 
 
-def build_accords(cat, out_dir):
+def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
     ccn = next((a for a in cat["accords"] if a["id"] == "ccn-clcc"), None)
     ccn_search_data = build_ccn_search_data(ccn.get("chemin_source_md")) if ccn else []
+    acc_docs = acc_docs or {}
+    acc_passages = acc_passages or []
 
     html = page_head("Accords", "accords.html")
     html += """
@@ -502,15 +513,15 @@ def build_accords(cat, out_dir):
     <div class="eyebrow-small" id="page-eyebrow">ACCUEIL / ACCORDS</div>
     <h1 id="page-title">Accords</h1>
     <p id="page-desc">Les textes signés : convention collective nationale, accords locaux, NAO, élections, DUE —
-    au format PDF, tels que déposés sur le dépôt GitHub FO ICO. La recherche porte aussi sur le texte
-    intégral de la CCN.</p>
+    au format PDF, tels que déposés sur le dépôt GitHub FO ICO. La recherche porte sur le texte
+    intégral de tous les accords et de la CCN.</p>
   </div>
 </section>
 
 <section class="list-page">
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
-    <input type="text" id="filter-search" placeholder="Rechercher un accord ou un terme dans la CCN...">
+    <input type="text" id="filter-search" placeholder="Rechercher un mot dans les accords et la CCN (ex. formation, astreinte)...">
   </div>
   <div class="chips" id="category-chips">
     <span class="chip active" data-cat="all">Tous</span>
@@ -539,7 +550,7 @@ def build_accords(cat, out_dir):
             action = f'<a href="{esc(pdf_url)}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
         else:
             action = '<span class="muted">PDF non disponible</span>'
-        html += f"""    <div class="doc-row" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">
+        html += f"""    <div class="doc-row" data-id="{esc(a['id'])}" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['categorie'])}</span>
       <span class="doc-title">{esc(a['titre'])}</span>
       <span class="doc-action">{action}</span>
@@ -547,6 +558,15 @@ def build_accords(cat, out_dir):
 """
     html += "  </div>\n"
     html += """
+  <div id="acc-section" style="display:none; margin-top: 32px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+      <span class="bar"></span>
+      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte des accords</h2>
+    </div>
+    <div id="acc-count" class="ccn-count"></div>
+    <div id="acc-results" class="ccn-results"></div>
+  </div>
+
   <div id="ccn-section" style="display:none; margin-top: 32px;">
     <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
       <span class="bar"></span>
@@ -558,8 +578,16 @@ def build_accords(cat, out_dir):
 </section>
 
 <script id="ccn-data" type="application/json">""" + json.dumps(ccn_search_data, ensure_ascii=False) + """</script>
+<script id="acc-docs" type="application/json">""" + json.dumps(acc_docs, ensure_ascii=False).replace("</", "<\\/") + """</script>
+<script id="acc-data" type="application/json">""" + json.dumps(acc_passages, ensure_ascii=False).replace("</", "<\\/") + """</script>
 <script>
 const ccnData = JSON.parse(document.getElementById('ccn-data').textContent);
+const accDocs = JSON.parse(document.getElementById('acc-docs').textContent);
+const accData = JSON.parse(document.getElementById('acc-data').textContent);
+const accSection = document.getElementById('acc-section');
+const accResults = document.getElementById('acc-results');
+const accCount = document.getElementById('acc-count');
+const catColors = """ + json.dumps(CATEGORY_COLORS, ensure_ascii=False) + """;
 const chips = document.querySelectorAll('.chip');
 const rows = document.querySelectorAll('.doc-row');
 const groupLabels = document.querySelectorAll('.doc-group-label');
@@ -581,6 +609,14 @@ function norm(s) {
 function escapeHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
+// Un terme n'est retenu qu'en début de mot : « formation » trouve « formations »
+// mais pas « information ».
+function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
+function hasTerm(nt, t) {
+  let i = 0;
+  while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; }
+  return false;
+}
 function highlightAll(text, terms) {
   const nt = norm(text);
   let marks = [];
@@ -589,7 +625,7 @@ function highlightAll(text, terms) {
     while (true) {
       const found = nt.indexOf(t, idx);
       if (found === -1) break;
-      marks.push([found, found + t.length]);
+      if (atWordStart(nt, found)) marks.push([found, found + t.length]);
       idx = found + t.length;
     }
   });
@@ -623,10 +659,10 @@ function runCcnSearch(raw) {
   ccnSection.style.display = 'block';
   const q = norm(raw.trim());
   const words = q.split(/\\s+/).filter(w => w.length >= 2);
-  let matches = ccnData.filter(p => norm(p.text).includes(q));
+  let matches = ccnData.filter(p => hasTerm(norm(p.text), q));
   let mode = 'exact';
   if (matches.length === 0 && words.length > 1) {
-    matches = ccnData.filter(p => { const t = norm(p.text); return words.every(w => t.includes(w)); });
+    matches = ccnData.filter(p => { const t = norm(p.text); return words.every(w => hasTerm(t, w)); });
     mode = 'approx';
   }
   if (matches.length === 0) {
@@ -651,6 +687,66 @@ function runCcnSearch(raw) {
   `).join('');
 }
 
+
+// Recherche plein texte dans les accords hors CCN. Renvoie l'ensemble des id
+// d'accords contenant le terme (pour afficher aussi leur ligne dans la liste).
+accData.forEach(p => { p.n = norm(p.t); });
+function runAccSearch(raw, cat) {
+  const hits = new Set();
+  if (raw.trim().length < 3) {
+    accSection.style.display = 'none'; accResults.innerHTML = ''; accCount.innerHTML = '';
+    return hits;
+  }
+  accSection.style.display = 'block';
+  const q = norm(raw.trim());
+  const words = q.split(/\\s+/).filter(w => w.length >= 2);
+  const pool = accData.filter(p => cat === 'all' || accDocs[p.a].categorie === cat);
+  let matches = pool.filter(p => hasTerm(p.n, q));
+  let mode = 'exact';
+  if (matches.length === 0 && words.length > 1) {
+    matches = pool.filter(p => words.every(w => hasTerm(p.n, w)));
+    mode = 'approx';
+  }
+  if (matches.length === 0) {
+    accCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\\'apparaît dans le texte d\\'aucun accord' + (cat === 'all' ? '' : ' « ' + escapeHtml(cat) + ' »') + '.</div>';
+    accResults.innerHTML = '';
+    return hits;
+  }
+  const groups = {};
+  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
+  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' documents' : ' document');
+  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
+  accCount.innerHTML = '<span class="note">' + msg + '</span>';
+  const terms = mode === 'exact' ? [q] : words;
+  const qs = encodeURIComponent(raw.trim());
+  const card = (d, p) => `
+      <div class="ccn-result">
+        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
+        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
+        <a class="ccn-jump" href="textes/${p.a}.html?q=${qs}#p${p.i}">Voir dans le texte →</a>
+      </div>`;
+  accResults.innerHTML = ids.map(id => {
+    const d = accDocs[id], list = groups[id];
+    const first = list.slice(0, 3).map(p => card(d, p)).join('');
+    const rest = list.length > 3
+      ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 3) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(3).map(p => card(d, p)).join('') + '</div></details>'
+      : '';
+    return `
+    <div class="acc-group" style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="tag" style="background:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[0]};color:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[1]}">${escapeHtml(d.categorie)}</span>
+        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
+        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
+        ${d.ocr ? '<span class="note">⚠️ texte OCR, à vérifier sur le PDF</span>' : ''}
+        ${d.pdf ? '<a class="ccn-jump" style="margin-top:0" href="' + d.pdf + '" target="_blank" rel="noopener">PDF signé →</a>' : ''}
+      </div>
+      ${first}${rest}
+    </div>`;
+  }).join('');
+  return hits;
+}
+
 function applyFilters() {
   const activeChip = document.querySelector('.chip.active').dataset.cat;
   const raw = search.value.trim();
@@ -662,16 +758,19 @@ function applyFilters() {
     rows.forEach(r => { r.style.display = 'none'; });
     catRows.forEach(r => { r.style.display = 'flex'; });
     accordsEmpty.style.display = 'none';
+    runAccSearch('', 'CCN');
     runCcnSearch(raw);
   } else if (activeChip === 'all') {
     docList.style.display = '';
-    const rowsToShow = q ? Array.from(rows).filter(r => r.dataset.title.includes(q)) : Array.from(rows);
+    const hits = runAccSearch(raw, 'all');
+    const nq = norm(raw);
+    const rowsToShow = q ? Array.from(rows).filter(r => norm(r.dataset.title).includes(nq) || hits.has(r.dataset.id)) : Array.from(rows);
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     runCcnSearch(raw);
     if (q && rowsToShow.length === 0) {
       accordsEmpty.style.display = 'block';
-      accordsEmpty.textContent = 'Aucun accord ne correspond à « ' + raw + ' » (voir les résultats CCN ci-dessous).';
+      accordsEmpty.textContent = 'Aucun accord ne contient « ' + raw + ' », ni dans son titre ni dans son texte.';
     } else {
       accordsEmpty.style.display = 'none';
       accordsEmpty.textContent = '';
@@ -679,7 +778,9 @@ function applyFilters() {
   } else {
     docList.style.display = '';
     const catRows = Array.from(rows).filter(r => r.dataset.cat === activeChip);
-    const rowsToShow = q ? catRows.filter(r => r.dataset.title.includes(q)) : catRows;
+    const hits = runAccSearch(raw, activeChip);
+    const nq = norm(raw);
+    const rowsToShow = q ? catRows.filter(r => norm(r.dataset.title).includes(nq) || hits.has(r.dataset.id)) : catRows;
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     ccnSection.style.display = 'none';
@@ -687,7 +788,7 @@ function applyFilters() {
     ccnCount.innerHTML = '';
     if (q && rowsToShow.length === 0) {
       accordsEmpty.style.display = 'block';
-      accordsEmpty.textContent = 'Aucun accord « ' + activeChip + ' » ne correspond à « ' + raw + ' ».';
+      accordsEmpty.textContent = 'Aucun document « ' + activeChip + ' » ne contient « ' + raw + ' », ni dans son titre ni dans son texte.';
     } else {
       accordsEmpty.style.display = 'none';
       accordsEmpty.textContent = '';
@@ -702,11 +803,11 @@ function applyFilters() {
   if (raw) {
     pageEyebrow.textContent = 'ACCUEIL / ACCORDS / RÉSULTATS';
     pageTitle.textContent = 'Résultats de recherche';
-    pageDesc.textContent = 'Pour « ' + raw + ' » — parmi les accords et dans le texte de la CCN.';
+    pageDesc.textContent = 'Pour « ' + raw + ' » — dans les titres et le texte des accords, et dans le texte de la CCN.';
   } else {
     pageEyebrow.textContent = 'ACCUEIL / ACCORDS';
     pageTitle.textContent = 'Accords';
-    pageDesc.textContent = "Les textes signés : convention collective nationale, accords locaux, NAO, élections, DUE — au format PDF, tels que déposés sur le dépôt GitHub FO ICO. La recherche porte aussi sur le texte intégral de la CCN.";
+    pageDesc.textContent = "Les textes signés : convention collective nationale, accords locaux, NAO, élections, DUE — au format PDF, tels que déposés sur le dépôt GitHub FO ICO. La recherche porte sur le texte intégral de tous les accords et de la CCN.";
   }
 }
 chips.forEach(c => c.addEventListener('click', () => {
@@ -932,6 +1033,144 @@ def build_ccn_search_data(md_relpath):
         r["before"] = results[i - 1]["text"][-160:] if i > 0 else ""
         r["after"] = results[i + 1]["text"][:160] if i < len(results) - 1 else ""
     return results
+
+
+LABEL_LINE_RE = re.compile(r"^(#{1,6}\s+\S|(?:\*\*)?\s*(ARTICLE|Article|TITRE|Titre|CHAPITRE|Chapitre|PREAMBULE|Préambule|PRÉAMBULE)\b)")
+
+
+def clean_md_inline(s):
+    """Retire la syntaxe Markdown/Pandoc la plus courante pour l'affichage en
+    texte brut dans les résultats de recherche (le texte lui-même n'est pas modifié)."""
+    s = re.sub(r"\{\.[a-z]+\}", "", s)            # {.underline}
+    s = re.sub(r"\^([^^\s]+)\^", r"\1", s)        # 1^er^ -> 1er
+    s = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", s)  # liens [texte](url)
+    s = re.sub(r"[\[\]]", "", s)
+    s = s.replace("**", "").replace("__", "")
+    s = re.sub(r"(^|\s)[*_]([^*_]+)[*_](?=\s|$|[.,;:])", r"\1\2", s)
+    s = re.sub(r"^\s*#{1,6}\s*", "", s)
+    s = re.sub(r"^\s*>\s?", "", s, flags=re.M)
+    s = re.sub(r"^\s*(?:[-*+]|\d+[.)])\s+", "", s, flags=re.M)
+    s = re.sub(r"\s*\|\s*", " | ", s)
+    s = re.sub(r"(?:\s*\|\s*[-:]{3,}\s*)+\|?", " ", s)
+    s = re.sub(r"\\([^\w\s])", r"\1", s)       # d\'organisation -> d'organisation
+    s = s.replace("--", "–")
+    return re.sub(r"\s+", " ", s).strip(" |")
+
+
+def build_accords_search_data(cat):
+    """Texte intégral cherchable de tous les documents du catalogue HORS CCN
+    (accords locaux, NAO, DUE, élections), découpé en paragraphes.
+
+    Source : le .md converti (chemin_source_md). Le bloc de métadonnées en tête
+    de fichier (date, 'converti depuis...') est ignoré jusqu'au premier '---'.
+    Retourne (docs, passages) :
+      docs     = {id: {titre, categorie, pdf, ocr, n}}
+      passages = liste de {a: id, i: idx, l: repère d'article, t: texte}
+    Les documents archivés (hors catalogue) ne sont pas indexés."""
+    docs = {}
+    passages = []
+    for a in cat["accords"]:
+        if a["categorie"] == "CCN":
+            continue
+        rel = a.get("chemin_source_md")
+        if not rel:
+            continue
+        local_path = os.path.join(DOCS_DIR, rel)
+        if not os.path.exists(local_path):
+            print(f"ATTENTION : texte introuvable pour la recherche : docs/{rel}")
+            continue
+        with open(local_path, encoding="utf-8") as f:
+            text = f.read()
+        lines = text.split("\n")
+        head = "\n".join(lines[:15])
+        ocr = "OCR" in head
+        # saute l'en-tête de métadonnées (titre + liste) jusqu'au premier ---
+        for k, l in enumerate(lines[:20]):
+            if l.strip() == "---":
+                lines = lines[k + 1:]
+                break
+        body = "\n".join(l for l in lines if not TOC_LINE_RE.search(l))
+        paras = [p.strip() for p in re.split(r"\n\s*\n", body) if p.strip()]
+        label = ""
+        idx = 0
+        for p in paras:
+            first = p.split("\n")[0].strip()
+            cleaned = clean_md_inline(p)
+            if len(re.sub(r"[\W\d_]", "", cleaned)) <= 3:
+                continue
+            if LABEL_LINE_RE.match(first):
+                label = clean_md_inline(first)[:90]
+            passages.append({"a": a["id"], "i": idx, "l": label, "t": cleaned})
+            idx += 1
+        docs[a["id"]] = {
+            "titre": a["titre"],
+            "categorie": a["categorie"],
+            "pdf": url_for(a.get("chemin_pdf")),
+            "ocr": ocr,
+            "n": idx,
+        }
+    return docs, passages
+
+
+def build_accord_textes(docs, passages, out_dir):
+    """Une page de lecture par document (site/textes/<id>.html), ancre #p<idx>
+    sur chaque paragraphe : cible des liens 'Voir dans le texte' des résultats."""
+    os.makedirs(os.path.join(out_dir, "textes"), exist_ok=True)
+    by_doc = {}
+    for p in passages:
+        by_doc.setdefault(p["a"], []).append(p)
+    for doc_id, d in docs.items():
+        html = page_head(d["titre"], "accords.html", base="../")
+        pdf = (f'<a href="{esc(d["pdf"])}" target="_blank" rel="noopener">le PDF signé</a>'
+               if d["pdf"] else "le PDF signé")
+        warn = ""
+        if d["ocr"]:
+            warn = ('<p class="ccn-empty">⚠️ Texte issu d\'une reconnaissance de caractères (OCR) '
+                    'sur un PDF scanné : des mots peuvent être mal transcrits.</p>')
+        html += f"""
+<section class="page-header">
+  <img src="../assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / ACCORDS / {esc(d['categorie'].upper())} / TEXTE</div>
+    <h1>{esc(d['titre'])}</h1>
+    <p>Texte converti, pour la lecture et la recherche. Pour une citation officielle,
+    référez-vous toujours à {pdf}.</p>
+  </div>
+</section>
+<article class="resume-content ccn-texte">
+{warn}
+"""
+        for p in by_doc.get(doc_id, []):
+            if p["l"] and p["t"] == p["l"]:
+                html += f'<h3 id="p{p["i"]}">{esc(p["t"])}</h3>\n'
+            else:
+                html += f'<p id="p{p["i"]}">{esc(p["t"])}</p>\n'
+        html += """</article>
+<script>
+// Surligne le terme recherché (?q=...) dans le texte
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+  const terms = norm(q.trim()).split(/\\s+/).filter(w => w.length >= 3);
+  document.querySelectorAll('.ccn-texte p, .ccn-texte h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += t.length; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    marks.forEach(([a, b]) => { if (a < pos) return; out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+  });
+  if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+})();
+</script>
+"""
+        html += page_foot(base="../")
+        with open(os.path.join(out_dir, "textes", f"{doc_id}.html"), "w", encoding="utf-8") as f:
+            f.write(html)
 
 
 def build_ccn_texte(md_relpath, search_data, out_dir):
@@ -1235,7 +1474,9 @@ def main():
     shutil.copy(style_src, os.path.join(OUT_DIR, "assets", "style.css"))
 
     build_index(cat, OUT_DIR)
-    build_accords(cat, OUT_DIR)
+    acc_docs, acc_passages = build_accords_search_data(cat)
+    build_accords(cat, OUT_DIR, acc_docs, acc_passages)
+    build_accord_textes(acc_docs, acc_passages, OUT_DIR)
     build_ccn(cat, OUT_DIR)
     build_resumes(cat, OUT_DIR)
     build_resume_pages(cat, OUT_DIR)

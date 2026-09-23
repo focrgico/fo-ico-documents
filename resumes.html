@@ -286,12 +286,35 @@ function runResSearch(raw, theme) {
     resResults.innerHTML = '';
     return hits;
   }
-  const docIds = new Set();
-  matches.forEach(p => { docIds.add(p.a); hits.add(p.a); });
-  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + docIds.size + (docIds.size > 1 ? ' résumés' : ' résumé');
+  const groups = {};
+  matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
+  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
-  resResults.innerHTML = '';
+  const terms = mode === 'exact' ? [q] : words;
+  const qs = encodeURIComponent(raw.trim());
+  const card = (p) => `
+      <div class="ccn-result">
+        ${p.l && !(p.t.length <= 95 && p.t.startsWith(p.l.slice(0, 80))) ? '<span class="ccn-label">' + escapeHtml(p.l) + '</span>' : ''}
+        <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
+      </div>`;
+  resResults.innerHTML = ids.map(id => {
+    const d = resDocs[id], list = groups[id];
+    const tc = themeColors[d.categorie] || ['#F4F6F9', '#5B6578'];
+    const first = list.slice(0, 2).map(card).join('');
+    const rest = list.length > 2 ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 2) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(2).map(card).join('') + '</div></details>' : '';
+    return `
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="tag" style="background:${tc[0]};color:${tc[1]}">${escapeHtml(d.categorie)}</span>
+        <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
+        <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
+        <a class="ccn-jump" style="margin-top:0" href="resumes/${id}.html?q=${qs}">Lire le résumé →</a>
+      </div>
+      ${first}${rest}
+    </div>`;
+  }).join('');
   return hits;
 }
 
@@ -302,7 +325,7 @@ function applyFilters() {
   const hits = runResSearch(raw, activeTheme);
   cards.forEach(c => {
     const themeOk = activeTheme === 'all' || c.dataset.theme === activeTheme;
-    const qOk = !q || norm(c.dataset.title).includes(nq) || hits.has(c.dataset.id);
+    const qOk = !q || norm(c.dataset.title).includes(nq);
     c.style.display = (themeOk && qOk) ? 'flex' : 'none';
   });
   themeLabels.forEach(label => {
@@ -310,8 +333,9 @@ function applyFilters() {
     label.style.display = hasVisible ? 'block' : 'none';
   });
   const anyVisible = Array.from(cards).some(c => c.style.display !== 'none');
-  resEmpty.style.display = (q && !anyVisible) ? 'block' : 'none';
-  resEmpty.textContent = (q && !anyVisible) ? 'Aucun résumé ne contient « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
+  const noText = hits.size === 0;
+  resEmpty.style.display = (q && !anyVisible && noText) ? 'block' : 'none';
+  resEmpty.textContent = (q && !anyVisible && noText) ? 'Aucun résumé ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
 }
 search.addEventListener('input', applyFilters);
 themeChips.forEach(c => c.addEventListener('click', () => {

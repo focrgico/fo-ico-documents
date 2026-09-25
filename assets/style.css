@@ -154,6 +154,7 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 }
 .situation-item:hover { border-color: var(--rouge); color: var(--rouge); }
 .situation-empty-note { margin-top: 2px !important; }
+.ccn-grille-chips { margin: 10px 0 0; }
 
 /* Page dédiée "Ma situation" (situation.html) — même formulaire que l'accueil,
    mais en pleine largeur et sans les contraintes de hauteur du bloc de l'accueil. */
@@ -184,6 +185,7 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .chip {
   background: #FFFFFF; border: 1px solid var(--bordure); color: var(--marine-text);
   font-size: 13px; font-weight: 600; padding: 8px 18px; border-radius: 999px; cursor: pointer;
+  text-decoration: none; display: inline-block;
 }
 .chip[data-cat]:not([data-cat="all"]), .chip[data-theme]:not([data-theme="all"]) { border-color: var(--chip-color, var(--bordure)); color: var(--chip-color, var(--marine-text)); }
 .chip.active { background: var(--rouge); border-color: var(--rouge); color: #FFFFFF; }

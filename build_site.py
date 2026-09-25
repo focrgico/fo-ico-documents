@@ -94,6 +94,7 @@ PAGE_HEAD = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — FO ICO</title>
+<link rel="icon" href="{base}assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="{base}assets/style.css">
 </head>
 <body class="{body_class}">
@@ -396,12 +397,38 @@ statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();
 """
 
+# Bloc CCN (texte intégral + grille de rémunération concernée) affiché après chaque
+# recherche. Suppose que `ccnData` est déjà défini (liste {id, titre, href, kind}
+# avec kind parmi 'texte' | 'non-praticien' | 'praticien').
+SITUATION_CCN_JS = """
+function renderCcnBlock(statut) {
+  const texte = ccnData.find(c => c.kind === 'texte');
+  const grilles = ccnData.filter(c => c.kind !== 'texte');
+  // Praticien = médecin (au sens de la CCN des CLCC) ; cadre et non-cadre relèvent
+  // tous deux de la grille "non-praticien". Sans statut choisi, les deux grilles
+  // sont proposées avec la grille non-praticien active par défaut (profil le plus courant).
+  const defaultKind = statut === 'praticien' ? 'praticien' : 'non-praticien';
+  let html = '<h4 class="situation-subheading">Convention collective (CCN)</h4><div class="situation-list">';
+  if (texte) html += `<a class="situation-item" href="${texte.href}">${texte.titre} →</a>`;
+  html += '</div>';
+  if (grilles.length > 0) {
+    html += '<div class="chips ccn-grille-chips">';
+    grilles.forEach(g => {
+      const label = g.kind === 'praticien' ? 'Grille de rémunération — praticiens' : 'Grille de rémunération — non-praticiens';
+      const active = g.kind === defaultKind ? ' active' : '';
+      html += `<a class="chip${active}" href="${g.href}" target="_blank" rel="noopener">${label}</a>`;
+    });
+    html += '</div>';
+  }
+  return html;
+}
+"""
+
 # Calcule et affiche les accords spécifiques puis généraux dans #situation-results.
 # Suppose que `situationData` et `situationResults` sont déjà définis.
 SITUATION_RENDER_JS = """
 function renderSituationResults(filters) {
-  const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
-    '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
+  const ccnBlock = renderCcnBlock(filters.statut || '');
   const filterEntries = Object.entries(filters);
   // Spécifiques : l'accord est explicitement tagué avec chacun des critères choisis.
   const specifiques = situationData.filter(a =>
@@ -415,7 +442,7 @@ function renderSituationResults(filters) {
     filterEntries.every(([k, v]) => (a[k] || []).length === 0)
   );
   if (specifiques.length === 0 && generaux.length === 0) {
-    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
+    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
     return;
   }
   const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
@@ -428,15 +455,18 @@ function renderSituationResults(filters) {
     html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
       generaux.map(renderList).join('') + '</div>';
   }
-  situationResults.innerHTML = html + ccnLink;
+  situationResults.innerHTML = html + ccnBlock;
 }
 """
 
 
 def build_situation_data(cat):
+    # La CCN est traitée à part (bloc dédié, cf. build_situation_ccn_data) : elle n'a
+    # pas de résumé propre et son lien générique vers accords.html n'apportait rien ici.
+    non_ccn = [a for a in cat["accords"] if a.get("categorie") != "CCN"]
     data = []
-    for a in dedup_by_resume(cat["accords"]) + [
-        a for a in cat["accords"] if not a.get("chemin_resume_md")
+    for a in dedup_by_resume(non_ccn) + [
+        a for a in non_ccn if not a.get("chemin_resume_md")
     ]:
         data.append({
             "id": a["id"],
@@ -447,6 +477,27 @@ def build_situation_data(cat):
             "temps_travail": a.get("temps_travail", []),
             "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
         })
+    return data
+
+
+# CCN CLCC : "praticien" = médecin ; cadre et non-cadre relèvent tous deux de la
+# grille "non praticien" (terminologie de la CCN elle-même, cf. titres des documents
+# sources dans catalogue.json).
+CCN_ID_TO_KIND = {
+    "ccn-clcc": "texte",
+    "ccn-grille-non-praticiens": "non-praticien",
+    "ccn-grille-praticiens": "praticien",
+}
+
+
+def build_situation_ccn_data(cat):
+    data = []
+    for a in cat["accords"]:
+        kind = CCN_ID_TO_KIND.get(a["id"])
+        if not kind:
+            continue
+        href = "ccn-texte.html" if kind == "texte" else (url_for(a.get("chemin_pdf")) or "ccn.html")
+        data.append({"id": a["id"], "titre": a["titre"], "href": href, "kind": kind})
     return data
 
 
@@ -565,11 +616,13 @@ def build_situation_page(cat, out_dir):
 </section>
 
 <script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
+<script id="situation-ccn-data" type="application/json">""" + json.dumps(build_situation_ccn_data(cat), ensure_ascii=False) + """</script>
 <script>
 const situationData = JSON.parse(document.getElementById('situation-data').textContent);
+const ccnData = JSON.parse(document.getElementById('situation-ccn-data').textContent);
 const situationForm = document.getElementById('situation-form');
 const situationResults = document.getElementById('situation-results');
-""" + SITUATION_TOGGLE_JS + SITUATION_RENDER_JS + """
+""" + SITUATION_TOGGLE_JS + SITUATION_CCN_JS + SITUATION_RENDER_JS + """
 function runSituationSearch() {
   const fd = new FormData(situationForm);
   const filters = {};
@@ -1760,6 +1813,12 @@ def main():
         shutil.copy(logo_src, os.path.join(OUT_DIR, "assets", "logo.png"))
     else:
         print(f"ATTENTION : logo introuvable à {logo_src} — copiez-le manuellement dans site/assets/logo.png")
+
+    favicon_src = os.path.join(ASSETS_SRC, "favicon.png")
+    if os.path.exists(favicon_src):
+        shutil.copy(favicon_src, os.path.join(OUT_DIR, "assets", "favicon.png"))
+    else:
+        print(f"ATTENTION : favicon introuvable à {favicon_src} — copiez-le manuellement dans site/assets/favicon.png")
 
     style_src = os.path.join(ASSETS_SRC, "style.css")
     shutil.copy(style_src, os.path.join(OUT_DIR, "assets", "style.css"))

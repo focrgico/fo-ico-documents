@@ -153,6 +153,21 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   padding: 7px 14px; font-size: 12px; font-weight: 600; color: var(--marine-text);
 }
 .situation-item:hover { border-color: var(--rouge); color: var(--rouge); }
+.situation-empty-note { margin-top: 2px !important; }
+
+/* Page dédiée "Ma situation" (situation.html) — même formulaire que l'accueil,
+   mais en pleine largeur et sans les contraintes de hauteur du bloc de l'accueil. */
+.situation-page { display: flex; flex-direction: column; gap: 18px; }
+.situation-form-page {
+  flex: none; max-width: none; flex-direction: row; flex-wrap: wrap; align-items: flex-end; gap: 16px;
+}
+.situation-form-page .select-field { flex: 1 1 200px; min-width: 160px; }
+.situation-form-page .select-label { font-size: 11px; }
+.situation-form-page .real-select { padding: 9px 34px 9px 14px; font-size: 14px; }
+.situation-form-page .situation-btn { flex: 0 0 auto; padding: 10px 22px; font-size: 13.5px; align-self: flex-end; }
+.situation-results-page { max-height: none; overflow: visible; margin-top: 4px; }
+.situation-results-page h3 { font-size: 16px; }
+.situation-results-page .situation-item { padding: 9px 16px; font-size: 13px; }
 
 /* PAGE HEADER (sous-pages) */
 .page-header {

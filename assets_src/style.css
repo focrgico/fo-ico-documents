@@ -145,6 +145,7 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .situation-btn:hover { background: var(--rouge-fonce); }
 .situation-results { margin-top: 10px; max-height: 90px; overflow-y: auto; }
 .situation-results h3 { margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--marine); }
+.situation-subheading { margin: 12px 0 8px; font-size: 11.5px; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.02em; }
 .situation-results .note { max-width: 100%; }
 .situation-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .situation-item {

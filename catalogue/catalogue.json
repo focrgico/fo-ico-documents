@@ -1,7 +1,7 @@
 {
   "genere_le": "2026-09-20",
   "source": "github.com/focrgico/fo-ico-documents (branche main, snapshot du jour)",
-  "avertissement": "Les champs statut / site / modalite_horaire / temps_travail sont volontairement vides pour la grande majorité des accords : ils n'ont PAS été déduits automatiquement du contenu juridique de chaque accord (non lu ligne à ligne dans cet exercice). Ils ne sont renseignés que lorsque le titre même de l'accord le rend certain (ex. 'ATT cadres'). Le reste est à compléter accord par accord avant toute mise en ligne du filtre 'Ma situation'. Mise à jour 20/09/2026 : correction chèques syndicaux/financement syndical, et rattachement des accords acquisition CP maladie aux résumés ATT cadres/non-cadres (vérifiés avec David). Mise à jour 20/09/2026 : ajout des grilles de rémunération CCN et des PV de désaccord NAO (2023-2026, non archivés par choix) ; retrait de l'accord de méthode NAO de la liste affichée. Mise a jour 21/09/2026 : ajout de l'accord intergenerationnel (base 2020 + avenants 2021/2023).",
+  "avertissement": "Les champs statut / site / modalite_horaire / temps_travail sont volontairement vides pour la grande majorité des accords : ils n'ont PAS été déduits automatiquement du contenu juridique de chaque accord (non lu ligne à ligne dans cet exercice). Ils ne sont renseignés que lorsque le titre même de l'accord le rend certain (ex. 'ATT cadres'). Le reste est à compléter accord par accord avant toute mise en ligne du filtre 'Ma situation'. Mise à jour 20/09/2026 : correction chèques syndicaux/financement syndical, et rattachement des accords acquisition CP maladie aux résumés ATT cadres/non-cadres (vérifiés avec David). Mise à jour 20/09/2026 : ajout des grilles de rémunération CCN et des PV de désaccord NAO (2023-2026, non archivés par choix) ; retrait de l'accord de méthode NAO de la liste affichée. Mise a jour 21/09/2026 : ajout de l'accord intergenerationnel (base 2020 + avenants 2021/2023). Mise à jour 25/09/2026 : premier passage de taggage modalite_horaire/temps_travail, vérifié texte par texte (pas déduit du titre) — att-cadres-2021 (forfait jours ET forfait heures, art. 1 et 2 de l'accord ; temps plein et temps partiel, art. 2.7), att-non-cadres-2020 (temps plein et temps partiel, art. de champ d'application + 2.7), pva-2022 (temps plein et temps partiel, prorata explicite pour les praticiens à temps partiel), acquisition-cp-maladie-cadres-2025 et acquisition-cp-maladie-non-cadres-2025 (temps plein et temps partiel, préambule renvoyant au champ d'application des accords ATT correspondants). Les 34 autres accords n'ont pas encore été relus pour ces deux critères — champs laissés vides volontairement, à ne pas interpréter comme 'ne s'applique pas'. Mise à jour 25/09/2026 (suite) : deuxième passage, les 34 accords restants ont été relus (grep + lecture des passages pertinents) pour modalite_horaire/temps_travail. 6 accords supplémentaires tagués temps_travail (temps plein ET temps partiel, règle de calcul/prorata explicite dans le texte) : due-prime-pool-remplacement-am, due-prime-pool-remplacement-soignants, teletravail-2021, compteur-intermediaire, interessement-2026, forfait-mobilite-durable-2025. Les autres accords relus (cet-2021, egalite-fh-2026, prime-usc-2023, intergenerationnel, pv-desaccord-nao 2023/2024/2025/2026, ccn-clcc, ccn-grille-non-praticiens, ccn-grille-praticiens, dialogue-social-2026, vote-electronique-2026, cdd-objet-defini-2021, vap-2025, bic-2025, parcours-physiciens-2022, prime-chaussures-2023, prime-retour-inopine, parcours-am-2025, parcours-ide-mer-2025, reprise-anciennete-mer-as-ide-2022, due-parcours-macroscopie, due-complementaire-frais-sante, cheques-syndicaux, conge-humanitaire-2026, percol-2021, travail-nuit-2026) n'ont volontairement PAS été tagués modalite_horaire/temps_travail : soit aucune mention forfait/temps partiel/temps plein dans le texte, soit la mention trouvée porte sur un thème ponctuel (ex. accès égal au temps partiel dans l'accord égalité FH, temps partiel fin de carrière dans l'accord intergénérationnel) et non sur une règle de champ d'application ou de calcul différenciée pour l'ensemble de l'accord — absence de tag = pas de certitude suffisante, PAS 'accord non applicable'. Aucun accord n'a de tag modalite_horaire en dehors de att-cadres-2021 (seul texte définissant explicitement les deux régimes forfait jours/forfait heures) : ce critère reste donc peu discriminant en l'état.",
   "champs_pdf_docx_depliant": "chemin_pdf = PDF signé (accord de base). chemin_resume_md = résumé texte tel que rédigé (source pour le futur site et pour la version Word). Aucun sous-dossier de résumés Word n'existe dans le dépôt à ce jour — seuls les résumés en Markdown y sont poussés. chemin_depliant = PDF tryptique dans docs/accords-locaux/Depliants_FO/ (ajouté au dépôt le 20/09/2026, relié ici depuis l'index.md de ce dossier — source faisant foi, pas de correspondance devinée). Un accord peut avoir plusieurs dépliants (ex. ATT cadres/non-cadres, un dépliant par thème) ; chemin_depliant est alors une liste.",
   "accords": [
     {
@@ -29,7 +29,10 @@
       "statut": [],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": null,
       "id": "teletravail-2021",
       "titre": "Télétravail",
@@ -51,8 +54,14 @@
         "cadre"
       ],
       "site": [],
-      "modalite_horaire": [],
-      "temps_travail": [],
+      "modalite_horaire": [
+        "forfait-jours",
+        "forfait-heures"
+      ],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "PDF signé de l'accord de base ajouté le 21/09/2026 (transmis par David). Contenu vérifié cohérent avec le résumé déjà rédigé (206 jours forfait, 1596h/1582h temps en heures, etc.).",
       "id": "att-cadres-2021",
       "titre": "Durée et aménagement du temps de travail — cadres",
@@ -77,7 +86,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Avenant n°1 intégré (Accord ATT NC_Avenant n1_Signé.pdf).",
       "id": "att-non-cadres-2020",
       "titre": "Durée et aménagement du temps de travail — non-cadres",
@@ -97,7 +109,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Un seul résumé couvre 2 accords sources (postés + non postés) — 2 PDF distincts à relier.",
       "id": "compteur-intermediaire",
       "titre": "Compteur intermédiaire — salariés postés et non postés",
@@ -274,7 +289,10 @@
       "statut": [],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Versions 2024 et 2025 encore présentes dans accords-locaux/ (non déplacées en archive) — à vérifier si elles doivent l'être.",
       "id": "interessement-2026",
       "titre": "Intéressement",
@@ -292,7 +310,10 @@
       "statut": [],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Le texte de la version 2025 en vigueur (24 octobre 2025) est confirmé fiable : retrouvé le 21/09/2026 dans docs/accords-locaux/Accords locaux Format word/Accord Forfait Mobilité Durable Vfinale.docx (Word source réel, daté et signé, incluant bien la prime trottinette électrique Article 3) — ce fichier dormait dans le dépôt sans être relié au catalogue. Il ne manque plus que le PDF signé (chemin_pdf toujours vide). Les 2 Word et le PDF de la version 2024 (obsolète) sont tous archivés.",
       "id": "forfait-mobilite-durable-2025",
       "titre": "Forfait Mobilité Durable",
@@ -362,7 +383,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": null,
       "id": "pva-2022",
       "titre": "PVA",
@@ -573,7 +597,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Vérifié le 20/09/2026 : le dépliant Depliant_DUE_prime_pool_remplacement_FO.pdf couvre à la fois cette décision (assistantes médicales) et son pendant AS/IDE dans un seul document.",
       "id": "due-prime-pool-remplacement-am",
       "titre": "DUE : prime pool remplacement — Assistantes Médicales",
@@ -595,7 +622,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Converti (Word reçu) mais aucun PDF signé retrouvé (point déjà identifié). Vérifié le 20/09/2026 : le dépliant Depliant_DUE_prime_pool_remplacement_FO.pdf couvre bien les deux décisions unilatérales du 22/04/2024 (assistantes médicales ET aides-soignants/IDE) dans un seul document — pas un dépliant manquant, un dépliant partagé. L'index du dépôt ne le mentionnait que sur la ligne AM, corrigé.",
       "id": "due-prime-pool-remplacement-soignants",
       "titre": "DUE : prime pool remplacement — AS / IDE",
@@ -639,7 +669,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Intégré au résumé et au dépliant ATT Cadres (pas de résumé séparé). Pas de PDF signé trouvé à ce nom dans le dépôt.",
       "id": "acquisition-cp-maladie-cadres-2025",
       "titre": "Acquisition de CP pendant un arrêt maladie — cadres",
@@ -664,7 +697,10 @@
       ],
       "site": [],
       "modalite_horaire": [],
-      "temps_travail": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
       "note": "Intégré au résumé et au dépliant ATT Non-Cadres (pas de résumé séparé). Pas de PDF signé trouvé à ce nom dans le dépôt.",
       "id": "acquisition-cp-maladie-non-cadres-2025",
       "titre": "Acquisition de CP pendant un arrêt maladie — non-cadres",

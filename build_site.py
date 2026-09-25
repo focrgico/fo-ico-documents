@@ -481,16 +481,33 @@ situationForm.addEventListener('submit', (e) => {
   }
   const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
     '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
-  const matches = situationData.filter(a =>
-    Object.entries(filters).every(([k, v]) => (a[k] || []).includes(v))
+  const filterEntries = Object.entries(filters);
+  // Spécifiques : l'accord est explicitement tagué avec chacun des critères choisis.
+  const specifiques = situationData.filter(a =>
+    filterEntries.every(([k, v]) => (a[k] || []).includes(v))
   );
-  if (matches.length === 0) {
+  const specifiquesIds = new Set(specifiques.map(a => a.id));
+  // Généraux : l'accord ne restreint aucun des critères choisis (champ vide = non tagué,
+  // donc a priori applicable à tous), et n'est pas déjà dans les résultats spécifiques.
+  const generaux = situationData.filter(a =>
+    !specifiquesIds.has(a.id) &&
+    filterEntries.every(([k, v]) => (a[k] || []).length === 0)
+  );
+  if (specifiques.length === 0 && generaux.length === 0) {
     situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
     return;
   }
-  situationResults.innerHTML = '<h3>' + matches.length + ' accord(s) trouvé(s)</h3><div class="situation-list">' +
-    matches.map(a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`).join('') +
-    '</div>' + ccnLink;
+  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
+  let html = '';
+  if (specifiques.length > 0) {
+    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-list">' +
+      specifiques.map(renderList).join('') + '</div>';
+  }
+  if (generaux.length > 0) {
+    html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
+      generaux.map(renderList).join('') + '</div>';
+  }
+  situationResults.innerHTML = html + ccnLink;
 });
 </script>
 """

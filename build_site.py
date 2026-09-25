@@ -353,6 +353,86 @@ FACET_LABELS = {
 }
 
 
+def situation_fields_html():
+    """Génère les <label class="select-field">...</select></label> du formulaire
+    'Décrivez votre situation' — factorisé car réutilisé sur la page d'accueil
+    (qui redirige vers situation.html) et sur situation.html elle-même (qui permet
+    de relancer la recherche avec d'autres critères sans repasser par l'accueil)."""
+    html = ""
+    for key, label in FACET_LABELS.items():
+        wrapper_id = ""
+        if key == "modalite_horaire":
+            wrapper_id = ' id="field-modalite_horaire"'
+        elif key == "profession":
+            wrapper_id = ' id="field-profession"'
+        html += f"""        <label class="select-field"{wrapper_id}>
+          <span class="select-label">{esc(label)}</span>
+          <select name="{key}" class="real-select">
+            <option value="">Tous</option>
+"""
+        for value, opt_label in FACET_OPTIONS[key]:
+            html += f'            <option value="{value}">{esc(opt_label)}</option>\n'
+        html += "          </select>\n        </label>\n"
+    return html
+
+
+# Bascule Modalité horaire / Catégorie professionnelle selon le Statut — identique
+# sur l'accueil et sur situation.html. Suppose que `situationForm` est déjà défini.
+SITUATION_TOGGLE_JS = """
+const statutSelect = situationForm.querySelector('select[name="statut"]');
+const modaliteField = document.getElementById('field-modalite_horaire');
+const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
+const professionField = document.getElementById('field-profession');
+const professionSelect = professionField.querySelector('select[name="profession"]');
+
+function toggleModaliteField() {
+  const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
+  modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
+  if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
+  professionField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { professionSelect.value = ''; }
+}
+statutSelect.addEventListener('change', toggleModaliteField);
+toggleModaliteField();
+"""
+
+# Calcule et affiche les accords spécifiques puis généraux dans #situation-results.
+# Suppose que `situationData` et `situationResults` sont déjà définis.
+SITUATION_RENDER_JS = """
+function renderSituationResults(filters) {
+  const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
+    '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
+  const filterEntries = Object.entries(filters);
+  // Spécifiques : l'accord est explicitement tagué avec chacun des critères choisis.
+  const specifiques = situationData.filter(a =>
+    filterEntries.every(([k, v]) => (a[k] || []).includes(v))
+  );
+  const specifiquesIds = new Set(specifiques.map(a => a.id));
+  // Généraux : l'accord ne restreint aucun des critères choisis (champ vide = non tagué,
+  // donc a priori applicable à tous), et n'est pas déjà dans les résultats spécifiques.
+  const generaux = situationData.filter(a =>
+    !specifiquesIds.has(a.id) &&
+    filterEntries.every(([k, v]) => (a[k] || []).length === 0)
+  );
+  if (specifiques.length === 0 && generaux.length === 0) {
+    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
+    return;
+  }
+  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
+  let html = '';
+  if (specifiques.length > 0) {
+    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-list">' +
+      specifiques.map(renderList).join('') + '</div>';
+  }
+  if (generaux.length > 0) {
+    html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
+      generaux.map(renderList).join('') + '</div>';
+  }
+  situationResults.innerHTML = html + ccnLink;
+}
+"""
+
+
 def build_situation_data(cat):
     data = []
     for a in dedup_by_resume(cat["accords"]) + [
@@ -422,30 +502,66 @@ def build_index(cat, out_dir):
         <h2>Décrivez votre situation</h2>
         <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
         qui vous concerne.</p>
-        <p class="note">Classement par statut/site/modalité/temps en cours — un critère sans résultat ne
+        <p class="note">Classement par statut/profession/modalité/temps en cours — un critère sans résultat ne
         veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
       </div>
       <form class="situation-form" id="situation-form">
-"""
-    for key, label in FACET_LABELS.items():
-        wrapper_id = ""
-        if key == "modalite_horaire":
-            wrapper_id = ' id="field-modalite_horaire"'
-        elif key == "profession":
-            wrapper_id = ' id="field-profession"'
-        html += f"""        <label class="select-field"{wrapper_id}>
-          <span class="select-label">{esc(label)}</span>
-          <select name="{key}" class="real-select">
-            <option value="">Tous</option>
-"""
-        for value, opt_label in FACET_OPTIONS[key]:
-            html += f'            <option value="{value}">{esc(opt_label)}</option>\n'
-        html += "          </select>\n        </label>\n"
-    html += """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+""" + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+        <p class="note situation-empty-note" id="situation-empty-note" style="display:none;">Choisissez au moins un critère.</p>
       </form>
     </div>
-    <div id="situation-results" class="situation-results"></div>
   </div>
+</section>
+
+<script>
+const situationForm = document.getElementById('situation-form');
+""" + SITUATION_TOGGLE_JS + """
+situationForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const fd = new FormData(situationForm);
+  const params = new URLSearchParams();
+  for (const [k, v] of fd.entries()) { if (v) params.set(k, v); }
+  const emptyNote = document.getElementById('situation-empty-note');
+  if ([...params.keys()].length === 0) {
+    emptyNote.style.display = '';
+    return;
+  }
+  emptyNote.style.display = 'none';
+  // Les résultats s'affichent sur une page dédiée, avec le même formulaire, pour
+  // permettre de relancer la recherche avec d'autres critères sans revenir ici.
+  location.href = 'situation.html?' + params.toString();
+});
+</script>
+"""
+    html += page_foot()
+    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+
+
+def build_situation_page(cat, out_dir):
+    """Page dédiée aux résultats du filtre 'Ma situation' : reprend le même
+    formulaire que l'accueil (pré-rempli depuis l'URL si on y arrive via l'accueil)
+    pour que le salarié puisse relancer la recherche avec d'autres critères sans
+    revenir en arrière."""
+    html = page_head("Ma situation", "index.html")
+    html += """
+<section class="page-header">
+  <img src="assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / MA SITUATION</div>
+    <h1>Décrivez votre situation</h1>
+    <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce qui vous concerne pour voir
+    les accords qui s'appliquent. Vous pouvez changer vos critères et relancer la recherche autant de
+    fois que nécessaire, directement depuis cette page.</p>
+  </div>
+</section>
+<section class="list-page situation-page">
+  <form class="situation-form situation-form-page" id="situation-form">
+""" + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+  </form>
+  <p class="note">Classement par statut/profession/modalité/temps en cours — un critère sans résultat ne
+  veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
+  <div id="situation-results" class="situation-results situation-results-page"></div>
 </section>
 
 <script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
@@ -453,66 +569,36 @@ def build_index(cat, out_dir):
 const situationData = JSON.parse(document.getElementById('situation-data').textContent);
 const situationForm = document.getElementById('situation-form');
 const situationResults = document.getElementById('situation-results');
-const statutSelect = situationForm.querySelector('select[name="statut"]');
-const modaliteField = document.getElementById('field-modalite_horaire');
-const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
-const professionField = document.getElementById('field-profession');
-const professionSelect = professionField.querySelector('select[name="profession"]');
-
-function toggleModaliteField() {
-  const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
-  modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
-  if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
-  professionField.style.display = isCadreOuPraticien ? 'none' : '';
-  if (isCadreOuPraticien) { professionSelect.value = ''; }
-}
-statutSelect.addEventListener('change', toggleModaliteField);
-toggleModaliteField();
-
-situationForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+""" + SITUATION_TOGGLE_JS + SITUATION_RENDER_JS + """
+function runSituationSearch() {
   const fd = new FormData(situationForm);
   const filters = {};
   for (const [k, v] of fd.entries()) { if (v) filters[k] = v; }
-
   if (Object.keys(filters).length === 0) {
     situationResults.innerHTML = '<p class="note">Choisissez au moins un critère.</p>';
     return;
   }
-  const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
-    '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
-  const filterEntries = Object.entries(filters);
-  // Spécifiques : l'accord est explicitement tagué avec chacun des critères choisis.
-  const specifiques = situationData.filter(a =>
-    filterEntries.every(([k, v]) => (a[k] || []).includes(v))
-  );
-  const specifiquesIds = new Set(specifiques.map(a => a.id));
-  // Généraux : l'accord ne restreint aucun des critères choisis (champ vide = non tagué,
-  // donc a priori applicable à tous), et n'est pas déjà dans les résultats spécifiques.
-  const generaux = situationData.filter(a =>
-    !specifiquesIds.has(a.id) &&
-    filterEntries.every(([k, v]) => (a[k] || []).length === 0)
-  );
-  if (specifiques.length === 0 && generaux.length === 0) {
-    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
-    return;
-  }
-  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
-  let html = '';
-  if (specifiques.length > 0) {
-    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-list">' +
-      specifiques.map(renderList).join('') + '</div>';
-  }
-  if (generaux.length > 0) {
-    html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
-      generaux.map(renderList).join('') + '</div>';
-  }
-  situationResults.innerHTML = html + ccnLink;
-});
+  renderSituationResults(filters);
+  // Met à jour l'URL (sans recharger la page) pour que le lien reste partageable
+  // et que la recherche survive à un rafraîchissement de la page.
+  history.replaceState(null, '', 'situation.html?' + new URLSearchParams(filters).toString());
+}
+situationForm.addEventListener('submit', (e) => { e.preventDefault(); runSituationSearch(); });
+
+// Arrivée depuis l'accueil (ou lien partagé) : pré-remplit le formulaire depuis
+// l'URL et lance la recherche automatiquement.
+const initialParams = new URLSearchParams(location.search);
+let hasInitialFilter = false;
+for (const [key, value] of initialParams.entries()) {
+  const field = situationForm.querySelector(`select[name="${key}"]`);
+  if (field) { field.value = value; hasInitialFilter = true; }
+}
+toggleModaliteField();
+if (hasInitialFilter) { runSituationSearch(); }
 </script>
 """
     html += page_foot()
-    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
+    with open(os.path.join(out_dir, "situation.html"), "w", encoding="utf-8") as f:
         f.write(html)
 
 
@@ -1679,6 +1765,7 @@ def main():
     shutil.copy(style_src, os.path.join(OUT_DIR, "assets", "style.css"))
 
     build_index(cat, OUT_DIR)
+    build_situation_page(cat, OUT_DIR)
     acc_docs, acc_passages = build_accords_search_data(cat)
     build_accords(cat, OUT_DIR, acc_docs, acc_passages)
     build_accord_textes(acc_docs, acc_passages, OUT_DIR)

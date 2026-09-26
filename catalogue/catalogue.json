@@ -60,19 +60,19 @@
       "justificatifs": {
         "type_contrat": {
           "cdi": {
-            "t": "Art. 3.3 — seuls apprentis, contrats de professionnalisation, CUI-CEC et stagiaires sont exclus (CDI non exclu)",
+            "t": "Art. 3.3 — « Les salariés en contrat d'apprentissage, en contrat de professionnalisation, en CUI-CEC ainsi que les stagiaires ne sont pas éligibles au télétravail » (CDD de droit commun non exclu)",
             "q": "exclus",
             "loc": "resumes"
           },
           "cdd": {
-            "t": "Art. 3.3 — seuls apprentis, contrats de professionnalisation, CUI-CEC et stagiaires sont exclus (CDD normal non exclu)",
+            "t": "Art. 3.3 — « Les salariés en contrat d'apprentissage, en contrat de professionnalisation, en CUI-CEC ainsi que les stagiaires ne sont pas éligibles au télétravail » (CDD de droit commun non exclu)",
             "q": "exclus",
             "loc": "resumes"
           }
         },
         "handicap": {
           "rqth": {
-            "t": "Art. 11 — mise en place favorisée pour les bénéficiaires d'une RQTH",
+            "t": "Art. 11 — « Une attention particulière sera portée à la mise en place du télétravail pour certaines catégories de personnel, notamment les bénéficiaires d'une RQTH »",
             "q": "RQTH",
             "loc": "textes"
           }
@@ -157,36 +157,36 @@
       "justificatifs": {
         "type_contrat": {
           "cdi": {
-            "t": "Préambule — s'applique en CDI, CDD ou contrat spécifique/aidé",
+            "t": "Art. 2.1 — « s'appliquera à l'ensemble du personnel non cadre [...] en contrat à durée indéterminée ainsi qu'aux salariés en contrat de travail à durée déterminée d'une durée initiale d'au moins 6 mois »",
             "q": "CDD",
             "loc": "resumes"
           },
           "cdd": {
-            "t": "Préambule — s'applique en CDI, CDD ou contrat spécifique/aidé",
+            "t": "Art. 2.1 — « s'appliquera à l'ensemble du personnel non cadre [...] en contrat à durée indéterminée ainsi qu'aux salariés en contrat de travail à durée déterminée d'une durée initiale d'au moins 6 mois »",
             "q": "CDD",
             "loc": "resumes"
           }
         },
         "travail_nuit": {
           "nuit": {
-            "t": "Art. 4.4.2 — définition légale du travailleur de nuit",
+            "t": "Art. 4.4.2 — « Est considéré comme travailleur de nuit [...] tout travailleur qui réalise, au moins deux fois par semaine, au moins trois heures de son temps de travail effectif quotidien durant la plage nocturne entre 21 heures et 7 heures »",
             "q": "nuit",
             "loc": "resumes"
           }
         },
         "situation_familiale": {
           "grossesse": {
-            "t": "Art. 4.4.8 — reclassement de jour sur demande pendant la grossesse",
+            "t": "Art. 4.4.8 — « Toute salariée en état de grossesse médicalement constaté sera [...] affectée à un poste de jour pendant la durée de sa grossesse »",
             "q": "enceinte",
             "loc": "resumes"
           },
           "enfant": {
-            "t": "Art. 4.4.10 — refus possible d'un poste de nuit en cas d'obligations familiales impérieuses (garde d'enfant)",
+            "t": "Art. 4.4.10 — « lorsque le travail de nuit est incompatible avec des obligations familiales impérieuses, notamment avec la garde d'un enfant [...], le salarié peut demander son affectation sur un poste de jour »",
             "q": "obligations familiales",
             "loc": "resumes"
           },
           "proche-aidant": {
-            "t": "Art. 4.4.10 — refus possible d'un poste de nuit en cas d'obligations familiales impérieuses (personne dépendante à charge)",
+            "t": "Art. 4.4.10 — « lorsque le travail de nuit est incompatible avec des obligations familiales impérieuses, notamment avec [...] la prise en charge d'une personne dépendante, le salarié peut demander son affectation sur un poste de jour »",
             "q": "obligations familiales",
             "loc": "resumes"
           }
@@ -229,12 +229,12 @@
       "justificatifs": {
         "travail_poste": {
           "non-poste": {
-            "t": "Art. 1 de l'accord non-postés (signé 23/03/2024) — vise les salariés à horaire non posté",
+            "t": "Art. 1 de l'accord non-postés (23/03/2024) — « Le présent accord vise les salariés bénéficiant d'un horaire de travail non posté »",
             "q": "non posté",
             "loc": "resumes"
           },
           "poste": {
-            "t": "Art. 1 de l'accord postés (signé 21/06/2024) — vise les salariés à horaire posté",
+            "t": "Art. 1 de l'accord postés (21/06/2024) — « Le présent accord vise les salariés bénéficiant d'un horaire de travail posté »",
             "q": "posté",
             "loc": "resumes"
           }
@@ -295,7 +295,7 @@
       "justificatifs": {
         "type_contrat": {
           "cdd": {
-            "t": "Art. 1 — l'accord crée et définit lui-même ce type de CDD",
+            "t": "Art. 1 — « Le contrat mis en œuvre par le présent accord permet l'embauche en contrat à durée déterminée à objet défini »",
             "q": "CDD",
             "loc": "resumes"
           }
@@ -352,7 +352,7 @@
       "justificatifs": {
         "type_contrat": {
           "cdi": {
-            "t": "Art. 1 — CDI en cours (contrat non suspendu)",
+            "t": "Art. 1 — « Titulaire d'un CDI »",
             "q": "CDI en cours",
             "loc": "resumes"
           }
@@ -388,17 +388,17 @@
       "justificatifs": {
         "situation_familiale": {
           "grossesse": {
-            "t": "Art. 7.1 — heures de grossesse, réduction d'1h/jour dès le 3e mois",
+            "t": "Art. 7.1 — « les salariées [...] bénéficient d'une réduction d'une heure de travail par jour [...] à partir du premier jour du troisième mois de la grossesse médicalement constatée »",
             "q": "grossesse",
             "loc": "resumes"
           },
           "enfant": {
-            "t": "Art. 2.4/2.5 — jours enfant malade doublés si les 2 parents sont salariés ICO ; seuil de handicap abaissé à 50 %",
+            "t": "Art. 2.4 — « 4 jours supplémentaires [...] en cas d'enfant handicapé » (taux d'invalidité abaissé à 50 % par l'accord ICO)",
             "q": "enfant",
             "loc": "resumes"
           },
           "parentalite": {
-            "t": "Art. 7.4 — congé de parentalité homoparental, 25 jours calendaires (CDI)",
+            "t": "Art. 7.4 — « En cas d'arrivée d'enfant(s) au sein d'un couple homoparental [...] il sera accordé un congé de parentalité de 25 jours calendaires au salarié en CDI »",
             "q": "homoparental",
             "loc": "resumes"
           }
@@ -437,7 +437,7 @@
       "justificatifs": {
         "travail_nuit": {
           "nuit": {
-            "t": "Préambule + Art. 1 — personnel de nuit, IDE et AS",
+            "t": "Préambule — « vise à sécuriser le maintien et le développement des compétences des professionnels paramédicaux travaillant de nuit à l'ICO » (IDE et AS, Art. 1)",
             "q": "IDE",
             "loc": "resumes"
           }
@@ -527,12 +527,12 @@
       "justificatifs": {
         "type_contrat": {
           "cdi": {
-            "t": "Art. 2 — tous les salariés, y compris en CDD",
+            "t": "Art. 2 — « Le présent accord s'applique à [...] les salariés sous contrat à durée déterminée »",
             "q": "CDD",
             "loc": "resumes"
           },
           "cdd": {
-            "t": "Art. 2 — tous les salariés, y compris en CDD",
+            "t": "Art. 2 — « Le présent accord s'applique à [...] les salariés sous contrat à durée déterminée »",
             "q": "CDD",
             "loc": "resumes"
           }
@@ -928,12 +928,12 @@
       "justificatifs": {
         "type_contrat": {
           "cdi": {
-            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "t": "Art. 1 — « Le pool de remplacement est constitué de salarié(e)s qui sont lié(e)s à l'Institut [...] par un contrat de travail à Durée Déterminée ou à Durée Indéterminée »",
             "q": "CDD ou CDI",
             "loc": "resumes"
           },
           "cdd": {
-            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "t": "Art. 1 — « Le pool de remplacement est constitué de salarié(e)s qui sont lié(e)s à l'Institut [...] par un contrat de travail à Durée Déterminée ou à Durée Indéterminée »",
             "q": "CDD ou CDI",
             "loc": "resumes"
           }
@@ -976,12 +976,12 @@
       "justificatifs": {
         "type_contrat": {
           "cdi": {
-            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "t": "Art. 1 — « Le pool de remplacement est constitué de salarié(e)s qui sont lié(e)s à l'Institut [...] par un contrat de travail à Durée Déterminée ou à Durée Indéterminée »",
             "q": "Durée Déterminée",
             "loc": "textes"
           },
           "cdd": {
-            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "t": "Art. 1 — « Le pool de remplacement est constitué de salarié(e)s qui sont lié(e)s à l'Institut [...] par un contrat de travail à Durée Déterminée ou à Durée Indéterminée »",
             "q": "Durée Déterminée",
             "loc": "textes"
           }
@@ -1240,7 +1240,7 @@
       "justificatifs": {
         "handicap": {
           "rqth": {
-            "t": "Art. 1 — seuils d'âge abaissés pour les travailleurs reconnus handicapés (jeune dès 30 ans, senior dès 50 ans)",
+            "t": "Art. 1 — « les jeunes [...] sont les personnes âgées de 28 ans et moins (30 ans pour les jeunes reconnus travailleurs handicapés) » ; « séniors [...] 55 ans et plus (50 ans pour les travailleurs reconnus handicapés) »",
             "q": "travailleur handicapé",
             "loc": "resumes"
           }

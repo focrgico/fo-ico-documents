@@ -33,6 +33,7 @@
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un résumé ou un mot dans son texte...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
@@ -340,6 +341,7 @@ function applyFilters() {
   resEmpty.textContent = (q && !anyVisible && noText) ? 'Aucun résumé ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
 }
 search.addEventListener('input', applyFilters);
+search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); applyFilters(); } });
 themeChips.forEach(c => c.addEventListener('click', () => {
   themeChips.forEach(x => x.classList.remove('active'));
   c.classList.add('active');

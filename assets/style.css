@@ -261,6 +261,12 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   align-self: flex-start; font-size: 9px; font-weight: 700; padding: 3px 9px; border-radius: 999px;
 }
 .leaflet-caption { font-size: 11px; font-weight: 700; }
+.leaflet-cover-link { display: block; }
+.leaflet-dl-btn {
+  display: block; text-align: center; background: var(--rouge); color: #FFFFFF;
+  font-size: 12px; font-weight: 700; padding: 7px 10px; border-radius: 999px;
+}
+.leaflet-dl-btn:hover { background: var(--rouge-fonce); color: #FFFFFF; }
 
 .red { color: #FF0000; }
 

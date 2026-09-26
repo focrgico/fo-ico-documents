@@ -718,6 +718,7 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un mot dans les accords et la CCN (ex. formation, astreinte)...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="category-chips">
     <span class="chip active" data-cat="all">Tous</span>
@@ -1083,6 +1084,7 @@ def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un résumé ou un mot dans son texte...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
@@ -1218,6 +1220,7 @@ function applyFilters() {
   resEmpty.textContent = (q && !anyVisible && noText) ? 'Aucun résumé ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
 }
 search.addEventListener('input', applyFilters);
+search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); applyFilters(); } });
 themeChips.forEach(c => c.addEventListener('click', () => {
   themeChips.forEach(x => x.classList.remove('active'));
   c.classList.add('active');
@@ -1717,6 +1720,7 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un dépliant ou un mot dans son texte...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
@@ -1758,23 +1762,25 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
 
             counter = f'<span class="leaflet-counter">{i + 1}/{len(dep_list)}</span>' if len(dep_list) > 1 else ""
             dep_url = url_for(d)
-            html += f"""    <a class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}" href="{esc(dep_url)}" target="_blank" rel="noopener">
-      <div class="leaflet-cover">
-        <div class="leaflet-top">
-          <div class="leaflet-top-left">
-            <span class="leaflet-eyebrow">Accord local ICO</span>
-            <span class="leaflet-theme-tag" style="background:{theme_bg};color:{theme_fg}">{esc(a['theme'])}</span>
+            html += f"""    <div class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}">
+      <a class="leaflet-cover-link" href="{esc(dep_url)}" target="_blank" rel="noopener" aria-label="Consulter {esc(real_label)}">
+        <div class="leaflet-cover">
+          <div class="leaflet-top">
+            <div class="leaflet-top-left">
+              <span class="leaflet-eyebrow">Accord local ICO</span>
+              <span class="leaflet-theme-tag" style="background:{theme_bg};color:{theme_fg}">{esc(a['theme'])}</span>
+            </div>
+            {counter}
           </div>
-          {counter}
+          <div class="leaflet-title-block">
+            <span class="leaflet-title-main">{esc(principal)}</span>
+            {f'<span class="leaflet-title-sub">{esc(secondaire)}</span>' if secondaire else ''}
+          </div>
+          <span class="leaflet-slogan"><span class="red">FO</span>, vos droits notre priorité</span>
         </div>
-        <div class="leaflet-title-block">
-          <span class="leaflet-title-main">{esc(principal)}</span>
-          {f'<span class="leaflet-title-sub">{esc(secondaire)}</span>' if secondaire else ''}
-        </div>
-        <span class="leaflet-slogan"><span class="red">FO</span>, vos droits notre priorité</span>
-      </div>
-      <span class="leaflet-caption">Télécharger le PDF →</span>
-    </a>
+      </a>
+      <a class="leaflet-dl-btn" href="{esc(dep_url)}" download="{esc(filename)}" rel="noopener">Télécharger →</a>
+    </div>
 """
     html += "  </div>\n"
     html += """
@@ -1829,6 +1835,7 @@ function applyFilters() {
   leafletHits.innerHTML = lastAccMsg ? '<span class="note">' + lastAccMsg + '</span>' : '';
 }
 search.addEventListener('input', applyFilters);
+search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); applyFilters(); } });
 themeChips.forEach(c => c.addEventListener('click', () => {
   themeChips.forEach(x => x.classList.remove('active'));
   c.classList.add('active');

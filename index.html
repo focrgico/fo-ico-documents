@@ -114,7 +114,7 @@
             <option value="nuit">Oui</option>
           </select>
         </label>
-        <label class="select-field">
+        <label class="select-field" id="field-travail_poste">
           <span class="select-label">Poste</span>
           <select name="travail_poste" class="real-select">
             <option value="">Tous</option>
@@ -152,11 +152,15 @@ const situationForm = document.getElementById('situation-form');
 const statutSelect = situationForm.querySelector('select[name="statut"]');
 const modaliteField = document.getElementById('field-modalite_horaire');
 const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
+const posteField = document.getElementById('field-travail_poste');
+const posteSelect = posteField.querySelector('select[name="travail_poste"]');
 
 function toggleModaliteField() {
   const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
   modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
   if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
+  posteField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { posteSelect.value = ''; }
 }
 statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();

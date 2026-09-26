@@ -70,40 +70,17 @@
         <h2>Décrivez votre situation</h2>
         <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
         qui vous concerne.</p>
-        <p class="note">Classement par statut/profession/modalité/temps en cours — un critère sans résultat ne
-        veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
+        <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
+        Voir aussi les <a href="accords.html">accords</a>.</p>
       </div>
       <form class="situation-form" id="situation-form">
         <label class="select-field">
           <span class="select-label">Statut</span>
           <select name="statut" class="real-select">
             <option value="">Tous</option>
-            <option value="cadre">Cadre</option>
             <option value="non-cadre">Non-cadre</option>
+            <option value="cadre">Cadre</option>
             <option value="praticien">Cadre praticien</option>
-          </select>
-        </label>
-        <label class="select-field" id="field-profession">
-          <span class="select-label">Catégorie professionnelle</span>
-          <select name="profession" class="real-select">
-            <option value="">Tous</option>
-            <option value="ide">IDE (infirmier)</option>
-            <option value="as">Aide-soignant</option>
-            <option value="mer">MER (manipulateur radio)</option>
-            <option value="ash">ASH</option>
-            <option value="brancardier">Brancardier</option>
-            <option value="dieteticien">Diététicien</option>
-            <option value="kine">Kinésithérapeute</option>
-            <option value="enseignant-apa">Enseignant APA</option>
-            <option value="assistant-medical">Assistant médical</option>
-            <option value="technicien-labo">Technicien de laboratoire</option>
-            <option value="physicien-medical">Physicien médical</option>
-            <option value="ingenieur">Ingénieur</option>
-            <option value="preparateur-pharmacie">Préparateur en pharmacie</option>
-            <option value="secretaire">Secrétaire</option>
-            <option value="assistant-social">Assistant social</option>
-            <option value="ibode">IBODE (infirmier de bloc opératoire)</option>
-            <option value="iade">IADE (infirmier anesthésiste)</option>
           </select>
         </label>
         <label class="select-field" id="field-modalite_horaire">
@@ -133,8 +110,8 @@
         <label class="select-field">
           <span class="select-label">Travail de nuit</span>
           <select name="travail_nuit" class="real-select">
-            <option value="">Tous</option>
-            <option value="nuit">Travail de nuit</option>
+            <option value="">Non</option>
+            <option value="nuit">Oui</option>
           </select>
         </label>
         <label class="select-field">
@@ -148,8 +125,8 @@
         <label class="select-field">
           <span class="select-label">Situation de handicap</span>
           <select name="handicap" class="real-select">
-            <option value="">Tous</option>
-            <option value="rqth">Situation de handicap (RQTH)</option>
+            <option value="">Non</option>
+            <option value="rqth">Oui</option>
           </select>
         </label>
         <label class="select-field">
@@ -175,15 +152,11 @@ const situationForm = document.getElementById('situation-form');
 const statutSelect = situationForm.querySelector('select[name="statut"]');
 const modaliteField = document.getElementById('field-modalite_horaire');
 const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
-const professionField = document.getElementById('field-profession');
-const professionSelect = professionField.querySelector('select[name="profession"]');
 
 function toggleModaliteField() {
   const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
   modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
   if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
-  professionField.style.display = isCadreOuPraticien ? 'none' : '';
-  if (isCadreOuPraticien) { professionSelect.value = ''; }
 }
 statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();

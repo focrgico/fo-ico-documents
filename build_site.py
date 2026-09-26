@@ -91,7 +91,7 @@ def pdf_list(a):
 
 
 CATEGORY_COLORS = {
-    "CCN": ("#AFC4EA", "#14203A"),          # bleu encore plus soutenu
+    "CCN": ("#AFC4EA", "#156082"),          # bleu encore plus soutenu
     "Accord local": ("#F5E1E3", "#7A1F2B"), # bordeaux — net écart avec le rouge vif des boutons/liens
     "NAO": ("#E3F1EF", "#0F6B62"),          # vert-bleu sobre
     "Élections": ("#F5EEE1", "#7A6540"),    # or
@@ -1047,7 +1047,7 @@ def dedup_by_resume(accords):
 
 
 THEME_COLORS = {
-    "Temps de travail / organisation": ("#C7D5F0", "#14203A"),
+    "Temps de travail / organisation": ("#C7D5F0", "#156082"),
     "Rémunération / épargne": ("#F5EEE1", "#7A6540"),
     "Carrière": ("#E3F1EF", "#0F6B62"),
     "Carrière / égalité": ("#E3F1EF", "#0F6B62"),
@@ -1056,7 +1056,7 @@ THEME_COLORS = {
     "Instances / dialogue social": ("#F3E3EC", "#8A2A5E"),
     "Protection sociale": ("#E9F1E7", "#4A6B3E"),
     "Vie syndicale": ("#F5EEE1", "#7A6540"),
-    "Convention collective": ("#C7D5F0", "#14203A"),
+    "Convention collective": ("#C7D5F0", "#156082"),
     "NAO": ("#F6E9DD", "#9C5B1F"),  # distinct des autres thèmes (roux/ambre), pas la même teinte que "Carrière"
 }
 

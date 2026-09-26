@@ -384,6 +384,8 @@ def situation_fields_html():
         wrapper_id = ""
         if key == "modalite_horaire":
             wrapper_id = ' id="field-modalite_horaire"'
+        elif key == "travail_poste":
+            wrapper_id = ' id="field-travail_poste"'
         default_label = "Non" if key in BOOLEAN_FACETS else "Tous"
         html += f"""        <label class="select-field"{wrapper_id}>
           <span class="select-label">{esc(label)}</span>
@@ -396,18 +398,25 @@ def situation_fields_html():
     return html
 
 
-# Bascule Modalité horaire selon le Statut (affichée pour cadre/praticien
-# seulement) — identique sur l'accueil et sur situation.html. Suppose que
-# `situationForm` est déjà défini.
+# Bascule Modalité horaire / Poste selon le Statut — identique sur l'accueil
+# et sur situation.html. Suppose que `situationForm` est déjà défini.
+# - Modalité horaire (forfait jours/heures) : concerne uniquement les cadres
+#   et cadres praticiens, donc affichée seulement pour ces deux statuts.
+# - Poste (posté/non posté) : notion réservée aux non-cadres (accords "postés"
+#   / "non postés"), donc masquée dès qu'on choisit cadre ou praticien.
 SITUATION_TOGGLE_JS = """
 const statutSelect = situationForm.querySelector('select[name="statut"]');
 const modaliteField = document.getElementById('field-modalite_horaire');
 const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
+const posteField = document.getElementById('field-travail_poste');
+const posteSelect = posteField.querySelector('select[name="travail_poste"]');
 
 function toggleModaliteField() {
   const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
   modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
   if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
+  posteField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { posteSelect.value = ''; }
 }
 statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();

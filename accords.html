@@ -41,26 +41,26 @@
   <div class="chips" id="category-chips">
     <span class="chip active" data-cat="all">Tous</span>
     <span class="chip" data-cat="Accord local" style="--chip-color:#7A1F2B">Accord local</span>
-    <span class="chip" data-cat="CCN" style="--chip-color:#14203A">CCN</span>
+    <span class="chip" data-cat="CCN" style="--chip-color:#156082">CCN</span>
     <span class="chip" data-cat="DUE" style="--chip-color:#5B6578">DUE</span>
     <span class="chip" data-cat="NAO" style="--chip-color:#0F6B62">NAO</span>
     <span class="chip" data-cat="Élections" style="--chip-color:#7A6540">Élections</span>
   </div>
   <div id="accords-empty" class="ccn-empty" style="display:none;"></div>
   <div class="doc-list" id="doc-list">
-    <div class="doc-group-label" data-cat="CCN" style="color:#14203A;background:#AFC4EA;">CCN</div>
+    <div class="doc-group-label" data-cat="CCN" style="color:#156082;background:#AFC4EA;">CCN</div>
     <div class="doc-row" data-id="ccn-clcc" data-cat="CCN" data-title="convention collective nationale des clcc (texte intégral)">
-      <span class="tag" style="background:#AFC4EA;color:#14203A">CCN</span>
+      <span class="tag" style="background:#AFC4EA;color:#156082">CCN</span>
       <span class="doc-title">Convention collective nationale des CLCC (texte intégral)</span>
       <span class="doc-action"><a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/ccn/CCN%20des%20CLCC%20-%201er%20f%C3%A9vrier%202026.pdf" target="_blank" rel="noopener">Télécharger le PDF →</a></span>
     </div>
     <div class="doc-row" data-id="ccn-grille-non-praticiens" data-cat="CCN" data-title="grille de rémunération et de classification — personnel non praticien">
-      <span class="tag" style="background:#AFC4EA;color:#14203A">CCN</span>
+      <span class="tag" style="background:#AFC4EA;color:#156082">CCN</span>
       <span class="doc-title">Grille de rémunération et de classification — personnel non praticien</span>
       <span class="doc-action"><a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/ccn/2025-01-01%20Grille%20de%20r%C3%A9mun%C3%A9ration%20CLCC%20non%20praticiens.pdf" target="_blank" rel="noopener">Télécharger le PDF →</a></span>
     </div>
     <div class="doc-row" data-id="ccn-grille-praticiens" data-cat="CCN" data-title="grille de rémunération — praticiens">
-      <span class="tag" style="background:#AFC4EA;color:#14203A">CCN</span>
+      <span class="tag" style="background:#AFC4EA;color:#156082">CCN</span>
       <span class="doc-title">Grille de rémunération — praticiens</span>
       <span class="doc-action"><a href="https://raw.githubusercontent.com/focrgico/fo-ico-documents/main/docs/ccn/Grille%20r%C3%A9mun%C3%A9ration%20praticien.pdf" target="_blank" rel="noopener">Télécharger le PDF →</a></span>
     </div>
@@ -279,7 +279,7 @@ const accData = JSON.parse(document.getElementById('acc-data').textContent);
 const accSection = document.getElementById('acc-section');
 const accResults = document.getElementById('acc-results');
 const accCount = document.getElementById('acc-count');
-const catColors = {"CCN": ["#AFC4EA", "#14203A"], "Accord local": ["#F5E1E3", "#7A1F2B"], "NAO": ["#E3F1EF", "#0F6B62"], "Élections": ["#F5EEE1", "#7A6540"], "DUE": ["#EEF1F6", "#5B6578"]};
+const catColors = {"CCN": ["#AFC4EA", "#156082"], "Accord local": ["#F5E1E3", "#7A1F2B"], "NAO": ["#E3F1EF", "#0F6B62"], "Élections": ["#F5EEE1", "#7A6540"], "DUE": ["#EEF1F6", "#5B6578"]};
 const chips = document.querySelectorAll('.chip');
 const rows = document.querySelectorAll('.doc-row');
 const groupLabels = document.querySelectorAll('.doc-group-label');

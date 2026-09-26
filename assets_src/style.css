@@ -335,3 +335,23 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   .nav, .hero, .explorer, .situation, .page-header, .list-page, .site-footer { padding-left: 20px; padding-right: 20px; }
   .cards-3 { grid-template-columns: 1fr; }
 }
+
+/* MOBILE (telephone) : le bloc hero-top (logo + titre + recherche) et les
+   3 cartes de l'accueil sont en ligne (flex) sans retour a la ligne au-dela
+   de 700px et debordent horizontalement sur un ecran de telephone (~390px) —
+   on les empile verticalement en dessous de 600px. */
+@media (max-width: 600px) {
+  .nav { padding: 10px 16px; }
+  .nav nav { gap: 12px; }
+  .nav nav a { margin-left: 0; }
+  .hero { padding: 16px 16px; gap: 10px; }
+  .hero-top { flex-direction: column; gap: 8px; }
+  .hero-logo-wrap { flex: none; }
+  .hero-logo { height: 70px; }
+  .hero-spacer { display: none; }
+  .hero h1 { font-size: 20px; max-width: 100%; }
+  .hero-sub { font-size: 12.5px; max-width: 100%; }
+  .search-bar, .search-bar.small { max-width: 100%; }
+  .hero-cards { flex-direction: column; max-width: 100%; }
+  .card.hero-card { flex: none; }
+}

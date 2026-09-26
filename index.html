@@ -99,6 +99,11 @@
             <option value="technicien-labo">Technicien de laboratoire</option>
             <option value="physicien-medical">Physicien médical</option>
             <option value="ingenieur">Ingénieur</option>
+            <option value="preparateur-pharmacie">Préparateur en pharmacie</option>
+            <option value="secretaire">Secrétaire</option>
+            <option value="assistant-social">Assistant social</option>
+            <option value="ibode">IBODE (infirmier de bloc opératoire)</option>
+            <option value="iade">IADE (infirmier anesthésiste)</option>
           </select>
         </label>
         <label class="select-field" id="field-modalite_horaire">
@@ -115,6 +120,46 @@
             <option value="">Tous</option>
             <option value="temps-plein">Temps plein</option>
             <option value="temps-partiel">Temps partiel</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span class="select-label">Type de contrat</span>
+          <select name="type_contrat" class="real-select">
+            <option value="">Tous</option>
+            <option value="cdi">CDI</option>
+            <option value="cdd">CDD</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span class="select-label">Travail de nuit</span>
+          <select name="travail_nuit" class="real-select">
+            <option value="">Tous</option>
+            <option value="nuit">Travail de nuit</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span class="select-label">Poste</span>
+          <select name="travail_poste" class="real-select">
+            <option value="">Tous</option>
+            <option value="poste">Posté</option>
+            <option value="non-poste">Non posté</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span class="select-label">Situation de handicap</span>
+          <select name="handicap" class="real-select">
+            <option value="">Tous</option>
+            <option value="rqth">Situation de handicap (RQTH)</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span class="select-label">Situation familiale</span>
+          <select name="situation_familiale" class="real-select">
+            <option value="">Tous</option>
+            <option value="grossesse">Grossesse / maternité</option>
+            <option value="enfant">Enfant malade ou handicapé</option>
+            <option value="proche-aidant">Proche aidant</option>
+            <option value="parentalite">Parentalité (naissance, adoption, congé parental)</option>
           </select>
         </label>
         <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>

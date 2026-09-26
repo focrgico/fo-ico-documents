@@ -80,10 +80,15 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .hero h1 { margin: 0; font-size: 28px; font-weight: 700; color: #FFFFFF; max-width: 780px; line-height: 1.15; }
 .hero-sub { margin: 0; font-size: 13.5px; color: #C7D0E0; max-width: 600px; line-height: 1.4; }
 .hero-cards { margin: 2px auto 0; text-align: left; width: 100%; max-width: 760px; display: flex; gap: 8px; }
-.hero-card { flex: 1 1 0; background: #FFFFFF; padding: 7px 12px; gap: 1px; border-radius: 8px; }
-.hero-card h3 { font-size: 13px; }
-.hero-card p { font-size: 10.5px; margin: 0; color: var(--secondary); line-height: 1.2; }
-.hero-card .link { font-size: 11px; }
+/* .card.hero-card (double classe) plutôt que .hero-card seul : la règle .card
+   générique (plus bas dans la feuille, même spécificité) écrasait sinon
+   silencieusement ce padding/ces tailles de police réduites — bug repéré au
+   passage, les cartes de l'accueil prenaient 28px de padding et du 18px/14px
+   au lieu du format compact prévu ici, d'où le dépassement de hauteur de page. */
+.card.hero-card { flex: 1 1 0; background: #FFFFFF; padding: 7px 12px; gap: 1px; border-radius: 8px; }
+.card.hero-card h3 { font-size: 13px; }
+.card.hero-card p { font-size: 10.5px; margin: 0; color: var(--secondary); line-height: 1.2; }
+.card.hero-card .link { font-size: 11px; }
 
 .search-bar {
   width: 100%; max-width: 480px;

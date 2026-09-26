@@ -56,7 +56,28 @@
       "handicap": [
         "rqth"
       ],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "type_contrat": {
+          "cdi": {
+            "t": "Art. 3.3 — seuls apprentis, contrats de professionnalisation, CUI-CEC et stagiaires sont exclus (CDI non exclu)",
+            "q": "exclus",
+            "loc": "resumes"
+          },
+          "cdd": {
+            "t": "Art. 3.3 — seuls apprentis, contrats de professionnalisation, CUI-CEC et stagiaires sont exclus (CDD normal non exclu)",
+            "q": "exclus",
+            "loc": "resumes"
+          }
+        },
+        "handicap": {
+          "rqth": {
+            "t": "Art. 11 — mise en place favorisée pour les bénéficiaires d'une RQTH",
+            "q": "RQTH",
+            "loc": "textes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -132,7 +153,45 @@
         "grossesse",
         "enfant",
         "proche-aidant"
-      ]
+      ],
+      "justificatifs": {
+        "type_contrat": {
+          "cdi": {
+            "t": "Préambule — s'applique en CDI, CDD ou contrat spécifique/aidé",
+            "q": "CDD",
+            "loc": "resumes"
+          },
+          "cdd": {
+            "t": "Préambule — s'applique en CDI, CDD ou contrat spécifique/aidé",
+            "q": "CDD",
+            "loc": "resumes"
+          }
+        },
+        "travail_nuit": {
+          "nuit": {
+            "t": "Art. 4.4.2 — définition légale du travailleur de nuit",
+            "q": "nuit",
+            "loc": "resumes"
+          }
+        },
+        "situation_familiale": {
+          "grossesse": {
+            "t": "Art. 4.4.8 — reclassement de jour sur demande pendant la grossesse",
+            "q": "enceinte",
+            "loc": "resumes"
+          },
+          "enfant": {
+            "t": "Art. 4.4.10 — refus possible d'un poste de nuit en cas d'obligations familiales impérieuses (garde d'enfant)",
+            "q": "obligations familiales",
+            "loc": "resumes"
+          },
+          "proche-aidant": {
+            "t": "Art. 4.4.10 — refus possible d'un poste de nuit en cas d'obligations familiales impérieuses (personne dépendante à charge)",
+            "q": "obligations familiales",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -166,7 +225,21 @@
         "poste"
       ],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "travail_poste": {
+          "non-poste": {
+            "t": "Art. 1 de l'accord non-postés (signé 23/03/2024) — vise les salariés à horaire non posté",
+            "q": "non posté",
+            "loc": "resumes"
+          },
+          "poste": {
+            "t": "Art. 1 de l'accord postés (signé 21/06/2024) — vise les salariés à horaire posté",
+            "q": "posté",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": false,
@@ -218,7 +291,16 @@
       "travail_nuit": [],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "type_contrat": {
+          "cdd": {
+            "t": "Art. 1 — l'accord crée et définit lui-même ce type de CDD",
+            "q": "CDD",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -266,7 +348,16 @@
       "travail_nuit": [],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "type_contrat": {
+          "cdi": {
+            "t": "Art. 1 — CDI en cours (contrat non suspendu)",
+            "q": "CDI en cours",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -293,7 +384,26 @@
         "grossesse",
         "enfant",
         "parentalite"
-      ]
+      ],
+      "justificatifs": {
+        "situation_familiale": {
+          "grossesse": {
+            "t": "Art. 7.1 — heures de grossesse, réduction d'1h/jour dès le 3e mois",
+            "q": "grossesse",
+            "loc": "resumes"
+          },
+          "enfant": {
+            "t": "Art. 2.4/2.5 — jours enfant malade doublés si les 2 parents sont salariés ICO ; seuil de handicap abaissé à 50 %",
+            "q": "enfant",
+            "loc": "resumes"
+          },
+          "parentalite": {
+            "t": "Art. 7.4 — congé de parentalité homoparental, 25 jours calendaires (CDI)",
+            "q": "homoparental",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -323,7 +433,16 @@
       ],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "travail_nuit": {
+          "nuit": {
+            "t": "Préambule + Art. 1 — personnel de nuit, IDE et AS",
+            "q": "IDE",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -404,7 +523,21 @@
       "travail_nuit": [],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "type_contrat": {
+          "cdi": {
+            "t": "Art. 2 — tous les salariés, y compris en CDD",
+            "q": "CDD",
+            "loc": "resumes"
+          },
+          "cdd": {
+            "t": "Art. 2 — tous les salariés, y compris en CDD",
+            "q": "CDD",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": false,
@@ -791,7 +924,21 @@
       "travail_nuit": [],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "type_contrat": {
+          "cdi": {
+            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "q": "CDD ou CDI",
+            "loc": "resumes"
+          },
+          "cdd": {
+            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "q": "CDD ou CDI",
+            "loc": "resumes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": false,
@@ -825,7 +972,21 @@
       "travail_nuit": [],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "type_contrat": {
+          "cdi": {
+            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "q": "Durée Déterminée",
+            "loc": "textes"
+          },
+          "cdd": {
+            "t": "Art. 1 — pool constitué de salarié(e)s en CDD ou CDI",
+            "q": "Durée Déterminée",
+            "loc": "textes"
+          }
+        }
+      }
     },
     {
       "pdf_ok": true,
@@ -1075,7 +1236,16 @@
       "handicap": [
         "rqth"
       ],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "handicap": {
+          "rqth": {
+            "t": "Art. 1 — seuils d'âge abaissés pour les travailleurs reconnus handicapés (jeune dès 30 ans, senior dès 50 ans)",
+            "q": "travailleur handicapé",
+            "loc": "resumes"
+          }
+        }
+      }
     }
   ]
 }

@@ -347,35 +347,31 @@ def html_fragment_to_docx(fragment_html, title, out_path):
 
 
 FACET_OPTIONS = {
-    "statut": [("cadre", "Cadre"), ("non-cadre", "Non-cadre"), ("praticien", "Cadre praticien")],
-    "profession": [
-        ("ide", "IDE (infirmier)"), ("as", "Aide-soignant"), ("mer", "MER (manipulateur radio)"),
-        ("ash", "ASH"), ("brancardier", "Brancardier"), ("dieteticien", "Diététicien"),
-        ("kine", "Kinésithérapeute"), ("enseignant-apa", "Enseignant APA"),
-        ("assistant-medical", "Assistant médical"), ("technicien-labo", "Technicien de laboratoire"),
-        ("physicien-medical", "Physicien médical"), ("ingenieur", "Ingénieur"),
-        ("preparateur-pharmacie", "Préparateur en pharmacie"), ("secretaire", "Secrétaire"),
-        ("assistant-social", "Assistant social"), ("ibode", "IBODE (infirmier de bloc opératoire)"),
-        ("iade", "IADE (infirmier anesthésiste)"),
-    ],
+    "statut": [("non-cadre", "Non-cadre"), ("cadre", "Cadre"), ("praticien", "Cadre praticien")],
     "modalite_horaire": [("forfait-jours", "Forfait jours"), ("forfait-heures", "Forfait heures")],
     "temps_travail": [("temps-plein", "Temps plein"), ("temps-partiel", "Temps partiel")],
     "type_contrat": [("cdi", "CDI"), ("cdd", "CDD")],
-    "travail_nuit": [("nuit", "Travail de nuit")],
+    "travail_nuit": [("nuit", "Oui")],
     "travail_poste": [("poste", "Posté"), ("non-poste", "Non posté")],
-    "handicap": [("rqth", "Situation de handicap (RQTH)")],
+    "handicap": [("rqth", "Oui")],
     "situation_familiale": [
         ("grossesse", "Grossesse / maternité"), ("enfant", "Enfant malade ou handicapé"),
         ("proche-aidant", "Proche aidant"), ("parentalite", "Parentalité (naissance, adoption, congé parental)"),
     ],
 }
 FACET_LABELS = {
-    "statut": "Statut", "profession": "Catégorie professionnelle",
+    "statut": "Statut",
     "modalite_horaire": "Modalité horaire", "temps_travail": "Temps de travail",
     "type_contrat": "Type de contrat", "travail_nuit": "Travail de nuit",
     "travail_poste": "Poste", "handicap": "Situation de handicap",
     "situation_familiale": "Situation familiale",
 }
+# Facettes à 1 seule valeur possible : rendues en Oui/Non plutôt qu'en
+# Tous/[valeur unique], plus lisible pour une caractéristique personnelle
+# binaire. "Non" reste techniquement équivalent à "Tous" (case vide, pas de
+# filtre) — l'absence du tag ne veut pas dire "accord non applicable", donc
+# on ne filtre pas non plus activement sur une exclusion.
+BOOLEAN_FACETS = {"travail_nuit", "handicap"}
 
 
 def situation_fields_html():
@@ -388,12 +384,11 @@ def situation_fields_html():
         wrapper_id = ""
         if key == "modalite_horaire":
             wrapper_id = ' id="field-modalite_horaire"'
-        elif key == "profession":
-            wrapper_id = ' id="field-profession"'
+        default_label = "Non" if key in BOOLEAN_FACETS else "Tous"
         html += f"""        <label class="select-field"{wrapper_id}>
           <span class="select-label">{esc(label)}</span>
           <select name="{key}" class="real-select">
-            <option value="">Tous</option>
+            <option value="">{default_label}</option>
 """
         for value, opt_label in FACET_OPTIONS[key]:
             html += f'            <option value="{value}">{esc(opt_label)}</option>\n'
@@ -401,21 +396,18 @@ def situation_fields_html():
     return html
 
 
-# Bascule Modalité horaire / Catégorie professionnelle selon le Statut — identique
-# sur l'accueil et sur situation.html. Suppose que `situationForm` est déjà défini.
+# Bascule Modalité horaire selon le Statut (affichée pour cadre/praticien
+# seulement) — identique sur l'accueil et sur situation.html. Suppose que
+# `situationForm` est déjà défini.
 SITUATION_TOGGLE_JS = """
 const statutSelect = situationForm.querySelector('select[name="statut"]');
 const modaliteField = document.getElementById('field-modalite_horaire');
 const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
-const professionField = document.getElementById('field-profession');
-const professionSelect = professionField.querySelector('select[name="profession"]');
 
 function toggleModaliteField() {
   const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
   modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
   if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
-  professionField.style.display = isCadreOuPraticien ? 'none' : '';
-  if (isCadreOuPraticien) { professionSelect.value = ''; }
 }
 statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();
@@ -470,10 +462,31 @@ function renderSituationResults(filters) {
     return;
   }
   const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
+  // Pour chaque critère choisi qui correspond à un article vérifié sur cet accord
+  // (a.justificatifs[critère][valeur]), affiche la citation avec un lien vers le
+  // passage concerné (résumé ou texte intégral, avec surlignage ?q=...). Un accord
+  // spécifique sans justificatif enregistré pour ce critère précis reste listé,
+  // simplement sans citation détaillée — jamais de référence inventée.
+  const renderCitations = a => {
+    const lines = [];
+    filterEntries.forEach(([k, v]) => {
+      const j = a.justificatifs && a.justificatifs[k] && a.justificatifs[k][v];
+      if (!j) return;
+      const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
+      const link = base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
+      lines.push('<li><a href="' + link + '">' + j.t + ' →</a></li>');
+    });
+    return lines.join('');
+  };
+  const renderSpecifique = a => {
+    const cites = renderCitations(a);
+    return '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a>' +
+      (cites ? '<ul class="situation-citations">' + cites + '</ul>' : '') + '</div>';
+  };
   let html = '';
   if (specifiques.length > 0) {
-    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-list">' +
-      specifiques.map(renderList).join('') + '</div>';
+    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-matches">' +
+      specifiques.map(renderSpecifique).join('') + '</div>';
   }
   if (generaux.length > 0) {
     html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
@@ -496,7 +509,11 @@ def build_situation_data(cat):
             "id": a["id"],
             "titre": a["titre"],
             "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
+            "resumeHref": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else None,
+            "texteHref": f"textes/{a['id']}.html" if a.get("chemin_source_md") else None,
         }
+        if a.get("justificatifs"):
+            entry["justificatifs"] = a["justificatifs"]
         for key in FACET_LABELS:
             entry[key] = a.get(key, [])
         data.append(entry)
@@ -576,8 +593,8 @@ def build_index(cat, out_dir):
         <h2>Décrivez votre situation</h2>
         <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
         qui vous concerne.</p>
-        <p class="note">Classement par statut/profession/modalité/temps en cours — un critère sans résultat ne
-        veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
+        <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
+        Voir aussi les <a href="accords.html">accords</a>.</p>
       </div>
       <form class="situation-form" id="situation-form">
 """ + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
@@ -633,8 +650,8 @@ def build_situation_page(cat, out_dir):
   <form class="situation-form situation-form-page" id="situation-form">
 """ + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
   </form>
-  <p class="note">Classement par statut/profession/modalité/temps en cours — un critère sans résultat ne
-  veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
+  <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
+  Voir aussi les <a href="accords.html">accords</a>.</p>
   <div id="situation-results" class="situation-results situation-results-page"></div>
 </section>
 

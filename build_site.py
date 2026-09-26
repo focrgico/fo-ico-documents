@@ -80,6 +80,16 @@ def url_for(rel_path, blob=False):
     return base + quote(rel_path, safe="/")
 
 
+def pdf_list(a):
+    """chemin_pdf peut être une chaîne (1 PDF) ou une liste (plusieurs accords
+    signés séparément regroupés sous un même résumé, ex. compteur intermédiaire
+    postés/non-postés). Retourne toujours une liste de chemins (peut être vide)."""
+    v = a.get("chemin_pdf")
+    if not v:
+        return []
+    return v if isinstance(v, list) else [v]
+
+
 CATEGORY_COLORS = {
     "CCN": ("#AFC4EA", "#14203A"),          # bleu encore plus soutenu
     "Accord local": ("#F5E1E3", "#7A1F2B"), # bordeaux — net écart avec le rouge vif des boutons/liens
@@ -344,13 +354,27 @@ FACET_OPTIONS = {
         ("kine", "Kinésithérapeute"), ("enseignant-apa", "Enseignant APA"),
         ("assistant-medical", "Assistant médical"), ("technicien-labo", "Technicien de laboratoire"),
         ("physicien-medical", "Physicien médical"), ("ingenieur", "Ingénieur"),
+        ("preparateur-pharmacie", "Préparateur en pharmacie"), ("secretaire", "Secrétaire"),
+        ("assistant-social", "Assistant social"), ("ibode", "IBODE (infirmier de bloc opératoire)"),
+        ("iade", "IADE (infirmier anesthésiste)"),
     ],
     "modalite_horaire": [("forfait-jours", "Forfait jours"), ("forfait-heures", "Forfait heures")],
     "temps_travail": [("temps-plein", "Temps plein"), ("temps-partiel", "Temps partiel")],
+    "type_contrat": [("cdi", "CDI"), ("cdd", "CDD")],
+    "travail_nuit": [("nuit", "Travail de nuit")],
+    "travail_poste": [("poste", "Posté"), ("non-poste", "Non posté")],
+    "handicap": [("rqth", "Situation de handicap (RQTH)")],
+    "situation_familiale": [
+        ("grossesse", "Grossesse / maternité"), ("enfant", "Enfant malade ou handicapé"),
+        ("proche-aidant", "Proche aidant"), ("parentalite", "Parentalité (naissance, adoption, congé parental)"),
+    ],
 }
 FACET_LABELS = {
     "statut": "Statut", "profession": "Catégorie professionnelle",
     "modalite_horaire": "Modalité horaire", "temps_travail": "Temps de travail",
+    "type_contrat": "Type de contrat", "travail_nuit": "Travail de nuit",
+    "travail_poste": "Poste", "handicap": "Situation de handicap",
+    "situation_familiale": "Situation familiale",
 }
 
 
@@ -468,15 +492,14 @@ def build_situation_data(cat):
     for a in dedup_by_resume(non_ccn) + [
         a for a in non_ccn if not a.get("chemin_resume_md")
     ]:
-        data.append({
+        entry = {
             "id": a["id"],
             "titre": a["titre"],
-            "statut": a.get("statut", []),
-            "profession": a.get("profession", []),
-            "modalite_horaire": a.get("modalite_horaire", []),
-            "temps_travail": a.get("temps_travail", []),
             "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
-        })
+        }
+        for key in FACET_LABELS:
+            entry[key] = a.get(key, [])
+        data.append(entry)
     return data
 
 
@@ -701,11 +724,16 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         if a["categorie"] != current_cat:
             current_cat = a["categorie"]
             html += f'    <div class="doc-group-label" data-cat="{esc(current_cat)}" style="color:{fg};background:{bg};">{esc(current_cat)}</div>\n'
-        pdf_url = url_for(a.get("chemin_pdf"))
-        if pdf_url:
-            action = f'<a href="{esc(pdf_url)}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
-        else:
+        pdfs = pdf_list(a)
+        if not pdfs:
             action = '<span class="muted">PDF non disponible</span>'
+        elif len(pdfs) == 1:
+            action = f'<a href="{esc(url_for(pdfs[0]))}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
+        else:
+            action = " · ".join(
+                f'<a href="{esc(url_for(p))}" target="_blank" rel="noopener">PDF {i + 1}/{len(pdfs)} →</a>'
+                for i, p in enumerate(pdfs)
+            )
         html += f"""    <div class="doc-row" data-id="{esc(a['id'])}" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['categorie'])}</span>
       <span class="doc-title">{esc(a['titre'])}</span>
@@ -1258,9 +1286,10 @@ def build_resume_pages(cat, out_dir):
         if not dep_list:
             html += '    <span class="muted">Pas encore de dépliant pour cet accord.</span>\n'
 
-        pdf_url = url_for(a.get("chemin_pdf"))
-        if pdf_url:
-            html += f'    <a class="download-btn" href="{esc(pdf_url)}" target="_blank" rel="noopener">Voir l\'accord signé (PDF) →</a>\n'
+        pdfs = pdf_list(a)
+        for i, p in enumerate(pdfs):
+            label = "Voir l'accord signé (PDF) →" if len(pdfs) == 1 else f"Voir l'accord signé {i + 1}/{len(pdfs)} (PDF) →"
+            html += f'    <a class="download-btn" href="{esc(url_for(p))}" target="_blank" rel="noopener">{label}</a>\n'
 
         html += "  </div>\n</section>\n"
         html += page_foot(base="../")
@@ -1384,7 +1413,7 @@ def build_doc_search_data(entries, path_key, group_key="categorie"):
         docs[a["id"]] = {
             "titre": a["titre"],
             "categorie": a.get(group_key, a["categorie"]),
-            "pdf": url_for(a.get("chemin_pdf")),
+            "pdf": url_for(pdf_list(a)[0]) if pdf_list(a) else None,
             "ocr": ocr,
             "n": idx,
         }

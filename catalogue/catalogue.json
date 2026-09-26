@@ -1,7 +1,7 @@
 {
   "genere_le": "2026-09-20",
   "source": "github.com/focrgico/fo-ico-documents (branche main, snapshot du jour)",
-  "avertissement": "Les champs statut / site / modalite_horaire / temps_travail sont volontairement vides pour la grande majorité des accords : ils n'ont PAS été déduits automatiquement du contenu juridique de chaque accord (non lu ligne à ligne dans cet exercice). Ils ne sont renseignés que lorsque le titre même de l'accord le rend certain (ex. 'ATT cadres'). Le reste est à compléter accord par accord avant toute mise en ligne du filtre 'Ma situation'. Mise à jour 20/09/2026 : correction chèques syndicaux/financement syndical, et rattachement des accords acquisition CP maladie aux résumés ATT cadres/non-cadres (vérifiés avec David). Mise à jour 20/09/2026 : ajout des grilles de rémunération CCN et des PV de désaccord NAO (2023-2026, non archivés par choix) ; retrait de l'accord de méthode NAO de la liste affichée. Mise a jour 21/09/2026 : ajout de l'accord intergenerationnel (base 2020 + avenants 2021/2023). Mise à jour 25/09/2026 : premier passage de taggage modalite_horaire/temps_travail, vérifié texte par texte (pas déduit du titre) — att-cadres-2021 (forfait jours ET forfait heures, art. 1 et 2 de l'accord ; temps plein et temps partiel, art. 2.7), att-non-cadres-2020 (temps plein et temps partiel, art. de champ d'application + 2.7), pva-2022 (temps plein et temps partiel, prorata explicite pour les praticiens à temps partiel), acquisition-cp-maladie-cadres-2025 et acquisition-cp-maladie-non-cadres-2025 (temps plein et temps partiel, préambule renvoyant au champ d'application des accords ATT correspondants). Les 34 autres accords n'ont pas encore été relus pour ces deux critères — champs laissés vides volontairement, à ne pas interpréter comme 'ne s'applique pas'. Mise à jour 25/09/2026 (suite) : deuxième passage, les 34 accords restants ont été relus (grep + lecture des passages pertinents) pour modalite_horaire/temps_travail. 6 accords supplémentaires tagués temps_travail (temps plein ET temps partiel, règle de calcul/prorata explicite dans le texte) : due-prime-pool-remplacement-am, due-prime-pool-remplacement-soignants, teletravail-2021, compteur-intermediaire, interessement-2026, forfait-mobilite-durable-2025. Les autres accords relus (cet-2021, egalite-fh-2026, prime-usc-2023, intergenerationnel, pv-desaccord-nao 2023/2024/2025/2026, ccn-clcc, ccn-grille-non-praticiens, ccn-grille-praticiens, dialogue-social-2026, vote-electronique-2026, cdd-objet-defini-2021, vap-2025, bic-2025, parcours-physiciens-2022, prime-chaussures-2023, prime-retour-inopine, parcours-am-2025, parcours-ide-mer-2025, reprise-anciennete-mer-as-ide-2022, due-parcours-macroscopie, due-complementaire-frais-sante, cheques-syndicaux, conge-humanitaire-2026, percol-2021, travail-nuit-2026) n'ont volontairement PAS été tagués modalite_horaire/temps_travail : soit aucune mention forfait/temps partiel/temps plein dans le texte, soit la mention trouvée porte sur un thème ponctuel (ex. accès égal au temps partiel dans l'accord égalité FH, temps partiel fin de carrière dans l'accord intergénérationnel) et non sur une règle de champ d'application ou de calcul différenciée pour l'ensemble de l'accord — absence de tag = pas de certitude suffisante, PAS 'accord non applicable'. Aucun accord n'a de tag modalite_horaire en dehors de att-cadres-2021 (seul texte définissant explicitement les deux régimes forfait jours/forfait heures) : ce critère reste donc peu discriminant en l'état.",
+  "avertissement": "Les champs statut / site / modalite_horaire / temps_travail sont volontairement vides pour la grande majorité des accords : ils n'ont PAS été déduits automatiquement du contenu juridique de chaque accord (non lu ligne à ligne dans cet exercice). Ils ne sont renseignés que lorsque le titre même de l'accord le rend certain (ex. 'ATT cadres'). Le reste est à compléter accord par accord avant toute mise en ligne du filtre 'Ma situation'. Mise à jour 20/09/2026 : correction chèques syndicaux/financement syndical, et rattachement des accords acquisition CP maladie aux résumés ATT cadres/non-cadres (vérifiés avec David). Mise à jour 20/09/2026 : ajout des grilles de rémunération CCN et des PV de désaccord NAO (2023-2026, non archivés par choix) ; retrait de l'accord de méthode NAO de la liste affichée. Mise a jour 21/09/2026 : ajout de l'accord intergenerationnel (base 2020 + avenants 2021/2023). Mise à jour 25/09/2026 : premier passage de taggage modalite_horaire/temps_travail, vérifié texte par texte (pas déduit du titre) — att-cadres-2021 (forfait jours ET forfait heures, art. 1 et 2 de l'accord ; temps plein et temps partiel, art. 2.7), att-non-cadres-2020 (temps plein et temps partiel, art. de champ d'application + 2.7), pva-2022 (temps plein et temps partiel, prorata explicite pour les praticiens à temps partiel), acquisition-cp-maladie-cadres-2025 et acquisition-cp-maladie-non-cadres-2025 (temps plein et temps partiel, préambule renvoyant au champ d'application des accords ATT correspondants). Les 34 autres accords n'ont pas encore été relus pour ces deux critères — champs laissés vides volontairement, à ne pas interpréter comme 'ne s'applique pas'. Mise à jour 25/09/2026 (suite) : deuxième passage, les 34 accords restants ont été relus (grep + lecture des passages pertinents) pour modalite_horaire/temps_travail. 6 accords supplémentaires tagués temps_travail (temps plein ET temps partiel, règle de calcul/prorata explicite dans le texte) : due-prime-pool-remplacement-am, due-prime-pool-remplacement-soignants, teletravail-2021, compteur-intermediaire, interessement-2026, forfait-mobilite-durable-2025. Les autres accords relus (cet-2021, egalite-fh-2026, prime-usc-2023, intergenerationnel, pv-desaccord-nao 2023/2024/2025/2026, ccn-clcc, ccn-grille-non-praticiens, ccn-grille-praticiens, dialogue-social-2026, vote-electronique-2026, cdd-objet-defini-2021, vap-2025, bic-2025, parcours-physiciens-2022, prime-chaussures-2023, prime-retour-inopine, parcours-am-2025, parcours-ide-mer-2025, reprise-anciennete-mer-as-ide-2022, due-parcours-macroscopie, due-complementaire-frais-sante, cheques-syndicaux, conge-humanitaire-2026, percol-2021, travail-nuit-2026) n'ont volontairement PAS été tagués modalite_horaire/temps_travail : soit aucune mention forfait/temps partiel/temps plein dans le texte, soit la mention trouvée porte sur un thème ponctuel (ex. accès égal au temps partiel dans l'accord égalité FH, temps partiel fin de carrière dans l'accord intergénérationnel) et non sur une règle de champ d'application ou de calcul différenciée pour l'ensemble de l'accord — absence de tag = pas de certitude suffisante, PAS 'accord non applicable'. Aucun accord n'a de tag modalite_horaire en dehors de att-cadres-2021 (seul texte définissant explicitement les deux régimes forfait jours/forfait heures) : ce critère reste donc peu discriminant en l'état. Mise à jour 26/09/2026 : ajout de 5 nouveaux critères (facettes) après lecture complète des 39 documents (accords locaux, CCN, NAO, DUE, élections) — type_contrat (cdi/cdd), travail_nuit, travail_poste (poste/non-poste), handicap (rqth), situation_familiale (grossesse/enfant/proche-aidant/parentalite). Tagués sur preuve textuelle directe uniquement (citation + article vérifiés), jamais déduits du titre. Accords tagués : teletravail-2021 (cdi+cdd art.3.3 ; rqth art.11), att-non-cadres-2020 (cdi+cdd art.2.1 ; nuit art.4.4 ; grossesse/enfant/proche-aidant art.4.4.8+4.4.10), conge-humanitaire-2026 (cdi seul, art.1), cdd-objet-defini-2021 (cdd, art.1), interessement-2026 (cdi+cdd, art.2), due-prime-pool-remplacement-am et -soignants (cdi+cdd, art.1), compteur-intermediaire (poste+non-poste — correction 26/09/2026 : il s'agit bien de 2 accords distincts signés séparément, pas d'un seul ; chemin_pdf corrigé en liste des 2 PDF signés [non-postés 23/03/2024 + postés 21/06/2024, dates et signatures vérifiées visuellement], voir champ 'note' de cet accord pour le détail), travail-nuit-2026 (nuit), intergenerationnel (rqth, modifie les seuils d'âge), egalite-fh-2026 (grossesse/enfant/parentalite, art.2.1+2.4+2.5+4+7.4). Les autres accords n'ont pas de critère explicite trouvé sur ces 5 dimensions (champ laissé vide, pas d'interprétation). Par ailleurs, correction : prime-chaussures-2023 était incomplet sur son propre champ profession existant (ide, mer, technicien-labo et préparateur en pharmacie listés dans le texte, art.2, mais absents du tag) — corrigé. 5 nouvelles valeurs de métier ajoutées à la liste profession, vérifiées dans la classification CCN (A-1.3.1) et les grilles de rémunération : preparateur-pharmacie, secretaire, assistant-social, ibode, iade — aucun accord local ne les cite actuellement comme bénéficiaires directs (uniquement mentions informelles en NAO ou listes d'astreinte non restrictives), donc aucune valeur appliquée pour l'instant, options ajoutées pour un futur accord/DUE les concernant.",
   "champs_pdf_docx_depliant": "chemin_pdf = PDF signé (accord de base). chemin_resume_md = résumé texte tel que rédigé (source pour le futur site et pour la version Word). Aucun sous-dossier de résumés Word n'existe dans le dépôt à ce jour — seuls les résumés en Markdown y sont poussés. chemin_depliant = PDF tryptique dans docs/accords-locaux/Depliants_FO/ (ajouté au dépôt le 20/09/2026, relié ici depuis l'index.md de ce dossier — source faisant foi, pas de correspondance devinée). Un accord peut avoir plusieurs dépliants (ex. ATT cadres/non-cadres, un dépliant par thème) ; chemin_depliant est alors une liste.",
   "accords": [
     {
@@ -20,7 +20,12 @@
       "annee": "2026-02-01",
       "chemin_pdf": "ccn/CCN des CLCC - 1er février 2026.pdf",
       "chemin_source_md": "ccn/ccn-clcc.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -41,7 +46,17 @@
       "annee": "2021",
       "chemin_pdf": "accords-locaux/Accord Télétravail_signé.pdf",
       "chemin_source_md": "accords-locaux/accord-teletravail-2021.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [
+        "cdi",
+        "cdd"
+      ],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [
+        "rqth"
+      ],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -70,7 +85,12 @@
       "annee": "2021",
       "chemin_pdf": "accords-locaux/Accord Durée et ATT Cadres_signé.pdf",
       "chemin_source_md": "accords-locaux/accord-duree-att-cadres-2021.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -98,7 +118,21 @@
       "annee": "2020",
       "chemin_pdf": "accords-locaux/Accord ATT Non Cadre + PV_Signé.pdf",
       "chemin_source_md": "accords-locaux/accord-duree-att-non-cadres-2020.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [
+        "cdi",
+        "cdd"
+      ],
+      "travail_nuit": [
+        "nuit"
+      ],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": [
+        "grossesse",
+        "enfant",
+        "proche-aidant"
+      ]
     },
     {
       "pdf_ok": true,
@@ -113,15 +147,26 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Un seul résumé couvre 2 accords sources (postés + non postés) — 2 PDF distincts à relier.",
+      "note": "Ce résumé et ce dépliant couvrent 2 accords distincts, signés séparément : « Compteur intermédiaire — personnel non posté » (avenant à l'accord ATT, signé 23/03/2024, vérifié visuellement sur PDF — signatures CGT-FO et CFE-CGC visibles, Sud Santé-Sociaux non visible sur la page de signature) et « Compteur intermédiaire — personnel posté » (signé 21/06/2024, mêmes signataires visibles). Les 2 PDF signés sont maintenant reliés ci-dessus. Seul le texte intégral du premier (non postés) est indexé dans la recherche plein texte de la page Accords — le texte du second (postés) est disponible en Markdown dans le dépôt (docs/accords-locaux/Accord compteur intermediaire salarie poste_signe.md) mais pas encore branché sur cette recherche.",
       "id": "compteur-intermediaire",
       "titre": "Compteur intermédiaire — salariés postés et non postés",
       "categorie": "Accord local",
       "theme": "Temps de travail / organisation",
       "annee": "2024",
-      "chemin_pdf": "accords-locaux/Accord compteur intermédiaire salarié posté_signé.pdf",
+      "chemin_pdf": [
+        "accords-locaux/Avenant accord ATT_ Mise en place compteur intermédiaire_Salariés non postés.pdf",
+        "accords-locaux/Accord compteur intermédiaire salarié posté_signé.pdf"
+      ],
       "chemin_source_md": "accords-locaux/accord-compteur-intermediaire-non-postes-2024.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [
+        "non-poste",
+        "poste"
+      ],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -139,7 +184,12 @@
       "annee": "2021 (avenant 2022)",
       "chemin_pdf": "accords-locaux/Accord CET_Avenant n1_signé.pdf",
       "chemin_source_md": "accords-locaux/accord-cet-2021.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -161,7 +211,14 @@
       "chemin_source_md": "accords-locaux/accord-cdd-objet-defini-2021.md",
       "profession": [
         "ingenieur"
-      ]
+      ],
+      "type_contrat": [
+        "cdd"
+      ],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -179,7 +236,12 @@
       "annee": "2021",
       "chemin_pdf": "accords-locaux/Accord PERCOL_Signé.pdf",
       "chemin_source_md": "accords-locaux/accord-percol-2021.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -197,7 +259,14 @@
       "annee": "2026",
       "chemin_pdf": "accords-locaux/Accord Congé Humanitaire (2026).pdf",
       "chemin_source_md": "accords-locaux/Accord Conge Humanitaire (2026).md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [
+        "cdi"
+      ],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -215,7 +284,16 @@
       "annee": "2026",
       "chemin_pdf": "accords-locaux/Accord égalité FH 2026.pdf",
       "chemin_source_md": "accords-locaux/Accord egalite FH 2026.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": [
+        "grossesse",
+        "enfant",
+        "parentalite"
+      ]
     },
     {
       "pdf_ok": true,
@@ -238,7 +316,14 @@
       "profession": [
         "ide",
         "as"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [
+        "nuit"
+      ],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -259,7 +344,12 @@
       "annee": "2025",
       "chemin_pdf": "accords-locaux/Accord sur la validation des acquis professionnels _Version signée.pdf",
       "chemin_source_md": "accords-locaux/Accord sur la validation des acquis professionnels _Version signee.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -280,7 +370,12 @@
       "annee": "2025",
       "chemin_pdf": "accords-locaux/Accord relatif à la répartition de la BIC_Version signée.pdf",
       "chemin_source_md": "accords-locaux/Accord relatif a la repartition de la BIC_Version signee.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -301,7 +396,15 @@
       "annee": "2026",
       "chemin_pdf": "accords-locaux/Accord d'entreprise relatif à l'intéressement (2026).pdf",
       "chemin_source_md": "accords-locaux/Accord d'entreprise relatif a l'interessement (2026).md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [
+        "cdi",
+        "cdd"
+      ],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -322,7 +425,12 @@
       "annee": "2025-10-24",
       "chemin_pdf": null,
       "chemin_source_md": "accords-locaux/ACCORD FORFAIT MOBILITE DURABLE_Version signee.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -347,9 +455,18 @@
         "ash",
         "brancardier",
         "dieteticien",
+        "enseignant-apa",
+        "ide",
         "kine",
-        "enseignant-apa"
-      ]
+        "mer",
+        "preparateur-pharmacie",
+        "technicien-labo"
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -372,7 +489,12 @@
       "profession": [
         "ide",
         "as"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -395,7 +517,12 @@
       "annee": "2022",
       "chemin_pdf": "accords-locaux/Accord PVA_2022_Signé.pdf",
       "chemin_source_md": "accords-locaux/Accord PVA_2022_Signe.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -419,7 +546,12 @@
         "as",
         "ide",
         "mer"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -441,7 +573,12 @@
       "chemin_source_md": "accords-locaux/Accord relatif au parcours des assistantes medicales_Version signee.md",
       "profession": [
         "assistant-medical"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -464,7 +601,12 @@
       "profession": [
         "ide",
         "mer"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -486,7 +628,12 @@
       "chemin_source_md": "accords-locaux/Accord Parcours Phycisiens_2022_Signe.md",
       "profession": [
         "physicien-medical"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -510,7 +657,12 @@
         "mer",
         "ide",
         "as"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -528,7 +680,12 @@
       "annee": "2026",
       "chemin_pdf": "elections/Accord dialogue social 2026.pdf",
       "chemin_source_md": "elections/Accord dialogue social 2026.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -546,7 +703,12 @@
       "annee": "2026",
       "chemin_pdf": "elections/ACCORD VOTE ELECTRONIQUE _ Elections professionnelles 2026.pdf",
       "chemin_source_md": "elections/ACCORD VOTE ELECTRONIQUE _ Elections professionnelles 2026.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -568,7 +730,12 @@
       "chemin_source_md": "DUE/DUE Parcours techs de laboratoire-macroscopie_Version signee.md",
       "profession": [
         "technicien-labo"
-      ]
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -586,7 +753,12 @@
       "annee": "2024",
       "chemin_pdf": null,
       "chemin_source_md": "DUE/due-complementaire-frais-sante.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -611,7 +783,15 @@
       "chemin_source_md": "DUE/due-prime-pool-remplacement-am.md",
       "profession": [
         "assistant-medical"
-      ]
+      ],
+      "type_contrat": [
+        "cdi",
+        "cdd"
+      ],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -637,7 +817,15 @@
       "profession": [
         "as",
         "ide"
-      ]
+      ],
+      "type_contrat": [
+        "cdi",
+        "cdd"
+      ],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,
@@ -655,7 +843,12 @@
       "annee": null,
       "chemin_pdf": "accords-locaux/Accord-Chèques syndicaux_v signée.pdf",
       "chemin_source_md": "accords-locaux/Accord-Cheques syndicaux_v signee.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -681,7 +874,12 @@
       "annee": "2025",
       "chemin_pdf": null,
       "chemin_source_md": "accords-locaux/accord-acquisition-cp-maladie-cadres-2025.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": false,
@@ -709,7 +907,12 @@
       "annee": "2025",
       "chemin_pdf": null,
       "chemin_source_md": "accords-locaux/accord-acquisition-cp-maladie-non-cadres-2025.md",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "pv-desaccord-nao-2023",
@@ -727,7 +930,12 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "PV de désaccord NAO — ne s'archive pas (conservé indéfiniment dans nao/, contrairement aux autres accords qui sont remplacés par leur version la plus récente) ; nécessite un résumé mais pas de dépliant (point confirmé par David le 20/09/2026). Converti le 21/09/2026 par lecture directe des 4 pages du PDF scanné (aucun texte sélectionnable dans le fichier source, donc pas d'OCR automatique utilisé) — transcription fidèle, à comparer au PDF avant tout usage officiel comme toute conversion.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "pv-desaccord-nao-2024",
@@ -745,7 +953,12 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "PV de désaccord NAO — ne s'archive pas (conservé indéfiniment dans nao/, contrairement aux autres accords qui sont remplacés par leur version la plus récente) ; nécessite un résumé mais pas de dépliant (point confirmé par David le 20/09/2026). Pas encore résumé.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "pv-desaccord-nao-2025",
@@ -763,7 +976,12 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "PV de désaccord NAO — ne s'archive pas (conservé indéfiniment dans nao/, contrairement aux autres accords qui sont remplacés par leur version la plus récente) ; nécessite un résumé mais pas de dépliant (point confirmé par David le 20/09/2026). Pas encore résumé.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "pv-desaccord-nao-2026",
@@ -781,7 +999,12 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "PV de désaccord NAO — ne s'archive pas (conservé indéfiniment dans nao/, contrairement aux autres accords qui sont remplacés par leur version la plus récente) ; nécessite un résumé mais pas de dépliant (point confirmé par David le 20/09/2026). Converti par OCR, erreurs de transcription probables, pas de bloc de signature identifié — à relire avant tout usage officiel (point déjà identifié). Pas encore résumé.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "ccn-grille-non-praticiens",
@@ -799,7 +1022,12 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "⚠️ Couvre à la fois les cadres ET les non-cadres du personnel non praticien (les deux sont dans le même PDF, avec des sections séparées) — ce n'est PAS une grille \"cadres\" à part entière. Vérifié manuellement, fiable.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "ccn-grille-praticiens",
@@ -817,7 +1045,12 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "« Praticiens » est une catégorie de personnel à part dans la CCN (médecins), distincte de la distinction cadre/non-cadre utilisée pour le personnel non praticien. Vérifié manuellement, fiable.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "intergenerationnel",
@@ -835,7 +1068,14 @@
       "modalite_horaire": [],
       "temps_travail": [],
       "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020 (PDF : \"Accord Intergénérationnel du 30 01 2020_signé.pdf\"), complété par l'avenant du 15/09/2023 (PDF : \"Avenant accord d'entreprise intergénérationnel_2023_Version signée.pdf\", source : accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md), qui modifie l'article 3.4.2 (temps partiel fin de carrière). L'avenant n°1 du 30/06/2021 n'est plus en vigueur (confirmé par David le 21/09/2026) — archivé dans archive-accords-locaux/ sous \"Accord intergenerationnel_Avenant n1_Signe plus en vigueur\". Les PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent uniquement les textes en vigueur.",
-      "profession": []
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [
+        "rqth"
+      ],
+      "situation_familiale": []
     }
   ]
 }

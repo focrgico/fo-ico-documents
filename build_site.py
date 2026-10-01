@@ -350,7 +350,6 @@ FACET_OPTIONS = {
     "statut": [("non-cadre", "Non-cadre"), ("cadre", "Cadre"), ("praticien", "Cadre praticien")],
     "modalite_horaire": [("forfait-jours", "Forfait jours"), ("forfait-heures", "Forfait heures")],
     "temps_travail": [("temps-plein", "Temps plein"), ("temps-partiel", "Temps partiel")],
-    "type_contrat": [("cdi", "CDI"), ("cdd", "CDD")],
     "travail_nuit": [("nuit", "Oui")],
     "travail_poste": [("poste", "Posté"), ("non-poste", "Non posté")],
     "handicap": [("rqth", "Oui")],
@@ -362,10 +361,13 @@ FACET_OPTIONS = {
 FACET_LABELS = {
     "statut": "Statut",
     "modalite_horaire": "Modalité horaire", "temps_travail": "Temps de travail",
-    "type_contrat": "Type de contrat", "travail_nuit": "Travail de nuit",
+    "travail_nuit": "Travail de nuit",
     "travail_poste": "Poste", "handicap": "Situation de handicap",
     "situation_familiale": "Situation familiale",
 }
+# Libellés affichés pour chaque valeur de facette (ex. statut/non-cadre -> "Non-cadre") —
+# dérivé de FACET_OPTIONS, utilisé côté JS pour titrer les blocs de résultats par critère.
+FACET_VALUE_LABELS = {key: dict(opts) for key, opts in FACET_OPTIONS.items()}
 # Facettes à 1 seule valeur possible : rendues en Oui/Non plutôt qu'en
 # Tous/[valeur unique], plus lisible pour une caractéristique personnelle
 # binaire. "Non" reste techniquement équivalent à "Tous" (case vide, pas de
@@ -455,48 +457,48 @@ SITUATION_RENDER_JS = """
 function renderSituationResults(filters) {
   const ccnBlock = renderCcnBlock(filters.statut || '');
   const filterEntries = Object.entries(filters);
-  // Spécifiques : l'accord est explicitement tagué avec chacun des critères choisis.
-  const specifiques = situationData.filter(a =>
-    filterEntries.every(([k, v]) => (a[k] || []).includes(v))
-  );
-  const specifiquesIds = new Set(specifiques.map(a => a.id));
+  const matchedIds = new Set();
+  // Pour l'accord et le critère (k, v) affichés, cherche la citation vérifiée
+  // correspondante (a.justificatifs[k][v]) et son lien vers le passage concerné
+  // (résumé ou texte intégral, avec surlignage ?q=...). Pas de justificatif
+  // enregistré pour ce critère précis : l'accord reste listé, simplement sans
+  // citation détaillée — jamais de référence inventée.
+  const renderCitation = (a, k, v) => {
+    const j = a.justificatifs && a.justificatifs[k] && a.justificatifs[k][v];
+    if (!j) return '';
+    const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
+    const link = base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
+    return '<ul class="situation-citations"><li><a href="' + link + '">' + j.t + ' →</a></li></ul>';
+  };
+  const renderMatch = (a, k, v) =>
+    '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a>' +
+    renderCitation(a, k, v) + '</div>';
+
+  let html = '';
+  // Un bloc de résultats par critère coché, chacun traité indépendamment (OR) :
+  // un accord qui ne concerne qu'un seul des critères choisis doit quand même
+  // remonter, pas seulement les accords qui répondraient à tous les critères
+  // à la fois.
+  filterEntries.forEach(([k, v]) => {
+    const matches = situationData.filter(a => (a[k] || []).includes(v));
+    matches.forEach(a => matchedIds.add(a.id));
+    if (matches.length === 0) return;
+    const label = (facetValueLabels[k] && facetValueLabels[k][v]) || v;
+    html += '<h3>' + matches.length + ' accord(s) — ' + (facetLabels[k] || k) + ' : ' + label + '</h3>' +
+      '<div class="situation-matches">' + matches.map(a => renderMatch(a, k, v)).join('') + '</div>';
+  });
+
   // Généraux : l'accord ne restreint aucun des critères choisis (champ vide = non tagué,
-  // donc a priori applicable à tous), et n'est pas déjà dans les résultats spécifiques.
+  // donc a priori applicable à tous), et ne remonte déjà dans aucun bloc ci-dessus.
   const generaux = situationData.filter(a =>
-    !specifiquesIds.has(a.id) &&
+    !matchedIds.has(a.id) &&
     filterEntries.every(([k, v]) => (a[k] || []).length === 0)
   );
-  if (specifiques.length === 0 && generaux.length === 0) {
+  if (matchedIds.size === 0 && generaux.length === 0) {
     situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
     return;
   }
   const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
-  // Pour chaque critère choisi qui correspond à un article vérifié sur cet accord
-  // (a.justificatifs[critère][valeur]), affiche la citation avec un lien vers le
-  // passage concerné (résumé ou texte intégral, avec surlignage ?q=...). Un accord
-  // spécifique sans justificatif enregistré pour ce critère précis reste listé,
-  // simplement sans citation détaillée — jamais de référence inventée.
-  const renderCitations = a => {
-    const lines = [];
-    filterEntries.forEach(([k, v]) => {
-      const j = a.justificatifs && a.justificatifs[k] && a.justificatifs[k][v];
-      if (!j) return;
-      const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
-      const link = base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
-      lines.push('<li><a href="' + link + '">' + j.t + ' →</a></li>');
-    });
-    return lines.join('');
-  };
-  const renderSpecifique = a => {
-    const cites = renderCitations(a);
-    return '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a>' +
-      (cites ? '<ul class="situation-citations">' + cites + '</ul>' : '') + '</div>';
-  };
-  let html = '';
-  if (specifiques.length > 0) {
-    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-matches">' +
-      specifiques.map(renderSpecifique).join('') + '</div>';
-  }
   if (generaux.length > 0) {
     html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
       generaux.map(renderList).join('') + '</div>';
@@ -666,9 +668,13 @@ def build_situation_page(cat, out_dir):
 
 <script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
 <script id="situation-ccn-data" type="application/json">""" + json.dumps(build_situation_ccn_data(cat), ensure_ascii=False) + """</script>
+<script id="facet-labels-data" type="application/json">""" + json.dumps(FACET_LABELS, ensure_ascii=False) + """</script>
+<script id="facet-value-labels-data" type="application/json">""" + json.dumps(FACET_VALUE_LABELS, ensure_ascii=False) + """</script>
 <script>
 const situationData = JSON.parse(document.getElementById('situation-data').textContent);
 const ccnData = JSON.parse(document.getElementById('situation-ccn-data').textContent);
+const facetLabels = JSON.parse(document.getElementById('facet-labels-data').textContent);
+const facetValueLabels = JSON.parse(document.getElementById('facet-value-labels-data').textContent);
 const situationForm = document.getElementById('situation-form');
 const situationResults = document.getElementById('situation-results');
 """ + SITUATION_TOGGLE_JS + SITUATION_CCN_JS + SITUATION_RENDER_JS + """

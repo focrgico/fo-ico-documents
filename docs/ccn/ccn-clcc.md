@@ -1,6 +1,8 @@
 # Convention Collective Nationale des CLCC — texte intégral
 
-> **Note technique.** Ce fichier est une conversion automatique du PDF source (375 pages, mise à jour au 1er février 2026) en texte brut. La structure narrative (articles, chapitres) est fiable. **Les tableaux (grilles de classification et de rémunération) perdent leur alignement colonnes/lignes lors de cette conversion** — ne vous fiez pas aux chiffres tels qu'ils apparaissent ici. Pour les grilles de rémunération, utilisez [grilles-remuneration.md](grilles-remuneration.md), transcrit et vérifié manuellement depuis les pages PDF en image.
+> **Note technique.** Ce fichier est une conversion automatique du PDF source (texte intégral, mise à jour au 1er juillet 2026) en texte brut. La structure narrative (articles, chapitres) est fiable. **Les tableaux (grilles de classification et de rémunération) perdent leur alignement colonnes/lignes lors de cette conversion** — ne vous fiez pas aux chiffres tels qu'ils apparaissent ici. Pour les grilles de rémunération, utilisez [grilles-remuneration.md](grilles-remuneration.md), transcrit et vérifié manuellement depuis les pages PDF en image.
+>
+> **Mise à jour du 1er octobre 2026 (passage de la version du 1er février 2026 à celle du 1er juillet 2026).** Patch ciblé, pas une reconversion intégrale : insertion des avenants 2026-01 et son avenant n°1 (nouvelle Annexe 9 — formation et développement des compétences), 2026-05 (Comité Paritaire de Prévoyance, articles 2.12.4.6.2 à 2.12.4.6.3.4) et 2026-06 (article 2.9.1.1 et tableau de l'Annexe 9), ainsi que l'avis d'interprétation A-9.1.6 du 25 juin 2024 (parcours IDE/MER). Les annexes suivant la nouvelle Annexe 9 ont été renumérotées en conséquence (ARTT : 8→10 ; avis d'interprétation : 9→11 ; tableau récapitulatif des accords : 10→12), conformément à l'article 6.1 de l'avenant 2026-01 qui le prescrit explicitement. **Incohérence du document source non résolue par nous** : le corps du texte continue de dire « mis à jour au 1er février 2026 » à plusieurs endroits (préambule notamment) alors que la couverture indique le 1er juillet 2026 ; nous avons conservé le texte source tel quel (voir règle du projet : ne pas trancher une incohérence du document à la place de l'auteur) et retenu le 1er juillet 2026 comme date de référence du site, sur consigne explicite. Le sommaire (TOC) en début de fichier n'a pas été mis à jour avec de nouvelles entrées de pagination pour l'Annexe 9 — il s'agit d'un texte décoratif hérité du PDF, sans fonction dans ce site.
 
 ---
 
@@ -13,7 +15,7 @@ DE LUTTE CONTRE LE CANCER
 du 1er janvier 1999
 
 Mise à jour
-1er février 2026
+1er juillet 2026
 
 Fédération Nationale des Centres de Lutte Contre le Cancer
 F.N.C.L.C.C.
@@ -593,10 +595,18 @@ Signataires : FNCLCC ; CFDT ; CGT-FO ; UNSA
 hommes du 3 juillet 2025
 Signataires : FNCLCC ; CFE-CGC ; CGT-FO ; UNSA
 
+▪  Avenant n°2026-01 relatif à la formation et au développement des compétences dans la
+branche des centres de lutte contre le cancer
+Signataire : FNCLCC ; CGT-FO ; CFE-CGC ; UNSA
+
 ▪  Avenant national n°2026-02 relatif à l’indemnisation des services d’astreinte et de garde
 mis  en  place  dans  la  Convention  Collective  Nationale  des  Centres  de  Lutte  Contre  le
 Cancer du 5 janvier 2026
 Signataires : FNCLCC ; CFE-CGC ; CGT-FO ; CGT ; UNSA
+
+▪  Avenant n°1 a l’avenant 2026-01 relatif à la formation et au développement des
+compétences dans la branche des centres de lutte contre le cancer
+Signataires : FNCLCC ; CGT-FO ; CFE-CGC ; UNSA
 
 10
 
@@ -1380,16 +1390,18 @@ CAS DE MALADIE, D’ACCIDENT ET DE MATERNITÉ ..................................
 
 RÉGIME DE PREVOYANCE ....................................................................................... 110
 
-2.12.3.1.  Champ d’application ................................................................................ 110
-2.12.3.2.
+2.12.4.1.  Champ d’application ................................................................................ 110
+2.12.4.2.
 Incapacité temporaire de travail ............................................................. 110
 Invalidité .................................................................................................... 111
-2.12.3.3.
-2.12.3.4.  Décès ......................................................................................................... 111
-2.12.3.5.  Financement et gestion ........................................................................... 111
-2.12.3.6.  Comité Paritaire de Prévoyance ............................................................. 111
+2.12.4.3.
+2.12.4.4.  Décès ......................................................................................................... 111
+2.12.4.5.  Financement et gestion ........................................................................... 111
+2.12.4.6.  Comité Paritaire de Prévoyance ............................................................. 111
+2.12.4.6.3.  Convocation, documents de travail, compte rendu, autorisations d’absence
+(avenant 2026-05) ...................................................................................... 111
 
-2.12.4.
+2.12.5.
 
 DÉNONCIATION PARTIELLE ..................................................................................... 112
 
@@ -2439,6 +2451,8 @@ A-9.1.3.  AVIS D’INTERPRÉTATION DU 7 JANVIER 1999 ...........................
 A-9.1.4.  AVIS D’INTERPRÉTATION DU 11 JANVIER 2000 .................................................... 369
 
 A-9.1.5.  AVIS D’INTERPRÉTATION DU 14 JANVIER 2000 .................................................... 369
+
+A-9.1.6.  AVIS D’INTERPÉTATION DU 25 JUIN 2024 ............................................................ 369
 
 31
 
@@ -5656,6 +5670,7 @@ Principes généraux
 Article modifié par avenant 2002-01 du 25.03.2002
 Article modifié par avenant 2008-02 du 21.02.2008
 Article modifié par avenant 2019-04 du 05.07.2019
+Article modifié par avenant 2026-06 du 29.05.2026
 
 La formation continue est une donnée majeure du développement des ressources humaines.
 Les Centres entendent conforter leurs efforts d’investissement formation et associer en amont
@@ -7024,12 +7039,12 @@ praticien des CLCC ».
 
 RÉGIME DE PREVOYANCE
 
-2.12.3.1.  Champ d’application
+2.12.4.1.  Champ d’application
 
 Les dispositions ci-après concernent de façon identique l’ensemble des personnels auxquels
 s’applique la présente Convention Collective.
 
-2.12.3.2.
+2.12.4.2.
 
 Incapacité temporaire de travail
 
@@ -7044,7 +7059,7 @@ salarié, reconnue et indemnisée par la Sécurité sociale, il est versé aprè
 d’arrêt de travail une indemnité journalière égale au moins à 80 % du salaire net moyen des
 12 derniers mois, sous déduction des prestations versées par la Sécurité Sociale.
 
-2.12.3.3.
+2.12.4.3.
 
 Invalidité
 
@@ -7059,7 +7074,7 @@ temporaire de travail prévues à l’article 2.12.3.2.
 Dans le cas où l’invalidité disparaîtrait, le salarié bénéficie d’une priorité de réembauchage à
 condition d’en formuler la demande auprès de la Direction du Centre.
 
-2.12.3.4.  Décès
+2.12.4.4.  Décès
 
 Dans le cadre de l’assurance décès, le régime de prévoyance propose 3 options au choix du
 salarié, en fonction de sa situation de famille définie, comme suit :
@@ -7076,7 +7091,7 @@ annuelles par enfant de 25 % du capital ;
 
 derniers mois au prorata de l’âge de décès.
 
-2.12.3.5.  Financement et gestion
+2.12.4.5.  Financement et gestion
 
 La  participation  de  l’établissement  à  ce  régime  de  prévoyance  est  égale  à  la  moitié  des
 cotisations.
@@ -7084,9 +7099,9 @@ cotisations.
 Les Centres pourront adhérer soit à un contrat bilatéral, soit à un accord collectif multicentre
 dans les conditions définies ci-après.
 
-2.12.3.6.  Comité Paritaire de Prévoyance
+2.12.4.6.  Comité Paritaire de Prévoyance
 
-2.12.3.6.1.  Constitution
+2.12.4.6.1.  Constitution
 
 Article modifié par avenant 2019-04 du 05.07.2019
 
@@ -7103,21 +7118,54 @@ adhérente de la présente Convention Collective.
 Pour  les  Centres  qui  ne  participeront  pas  à  ce  comité  paritaire,  une  Commission  du  Comité
 Social et Économique sera constituée.
 
-2.12.3.6.2.  Rôle
+2.12.4.6.2.  Rôle
 
 Article modifié par avenant 2019-04 du 05.07.2019
+Article modifié par avenant 2026-05 du 17.04.2026
 
-La Commission du Comité Social et Économique ou le Comité Paritaire de Prévoyance ont
-pour  mission  de  rechercher  l’organisme  gestionnaire  le  plus  compétent  à  répondre  aux
-demandes des Centres.
+Le Comité Paritaire de Prévoyance est dédié au suivi du régime de prévoyance de branche. Il
+pourra formuler des propositions et des recommandations à la CPPNI.
 
-Ils  participeront  à  la  constitution  du  cahier  des  charges,  à  l’appel  d’offres  et  au  choix  de
-l’organisme.
+2.12.4.6.3.  Convocation
 
-D’autre  part,  chaque  année,  ils  étudieront  la  situation  du  risque  et  émettront  un  avis  sur
-l’actualisation du régime.
+Article créé par avenant 2026-05 du 17.04.2026
 
-2.12.4.
+La Fédération Nationale des Centres de Lutte Contre le Cancer convoque le Comité Paritaire
+de Prévoyance par mail. Les documents de travail sont transmis, sauf exception, au moins
+une semaine avant la réunion. Les réunions seront organisées en présentiel au siège de la
+FNCLCC et/ou sous forme de visioconférence.
+
+2.12.4.6.3.2.  Documents de travail
+
+Article créé par avenant 2026-05 du 17.04.2026
+
+Les documents de travail nécessaires aux réunions sont confidentiels. Il sera demandé de ne
+pas les diffuser à des personnes extérieures au Comité Paritaire de Prévoyance.
+
+2.12.4.6.3.3.  Compte rendu des réunions
+
+Article créé par avenant 2026-05 du 17.04.2026
+
+Le compte-rendu des réunions du Comité Paritaire de Prévoyance est établi par la DRH
+Groupe de la FNCLCC. Il est approuvé en début de séance de la réunion suivante.
+
+2.12.4.6.3.4.  Autorisations d’absence et remboursement de frais
+
+Article créé par avenant 2026-05 du 17.04.2026
+
+Les membres du Comité Paritaire de Prévoyance régulièrement convoqués et présents aux
+réunions afférentes à la mise en place du régime bénéficient :
+
+▪  d’une journée préparatoire à chaque réunion du Comité Paritaire de Prévoyance.
+
+▪  d’une autorisation d’absence pour participer au Comité Paritaire de Prévoyance.
+
+Ces absences n’entraînent aucune diminution de leur rémunération.
+
+Les frais de transport, de repas et d’hébergement sont pris en charge par la FNCLCC selon
+les règles habituelles.
+
+2.12.5.
 
 DÉNONCIATION PARTIELLE
 
@@ -24775,7 +24823,1159 @@ représailles.
 
 355
 
-Annexe 8
+Annexe 9
+
+CHAPITRE 1
+
+AVENANT N°2026-01 RELATIF A LA FORMATION ET AU DEVELOPPEMENT DES
+COMPETENCES DANS LA BRANCHE DES CENTRES DE LUTTE CONTRE LE CANCER
+
+Annexe créée par l’avenant 2026-01 relatif a la formation et au développement des 
+compétences dans la branche des centres de lutte contre le cancer
+Préambule
+Conformément aux obligations légales, les organisations syndicales représentatives au niveau de 
+la branche des Centres de Lutte Contre le Cancer ont été invitées à une négociation en vue de 
+conclure à la signature d’un avenant relatif à la formation et au développement des compétences 
+dans cette même branche. Cet avenant s’applique aux établissements entrant dans le champ de 
+l’article 1.1.1 de la Convention Collective Nationale des Centres de Lutte Contre le Cancer du 1er 
+janvier 1999, à savoir les Centres de Lutte Contre le Cancer, l’Ensemble hospitalier de l’Institut 
+Curie et l’UES UNICANCER qui est composée du Groupement de Coopération Sanitaire 
+Unicancer et de la Fédération Nationale des Centres de Lutte Contre le Cancer (F.N.C.L.C.C.), ciaprès dénommés « le ou les Centre(s) ». 
+
+A la suite de l’envoi du courrier de la dénonciation de l’accord sur la formation et le développement 
+des compétences dans le secteur sanitaire, social et médico-social privé à but non lucratif du 9 
+septembre 2020 qui a eu lieu le 26 novembre 2025, le présent avenant constitue un accord de 
+substitution, au sens de l’article L. 2261-11 du Code du travail, à l’accord susmentionné. 
+
+Il a également été procédé à la dénonciation de l’accord sur la promotion et reconversion en 
+alternance dans le secteur sanitaire, social et médico-social privé à but non lucratif du 7 décembre 
+2020 par courrier envoyé le 26 novembre 2025. Les dispositions relatives à la Pro-A, dispositif 
+disparu le 1er janvier 2026, sont en partie reprises et négociées à l’article 2.1 du présent accord 
+de substitution, qui sera dédié à la période de reconversion.
+
+En conséquence, les accords du 9 septembre 2020 et du 7 décembre 2020 susvisés cesseront, 
+en application de la conclusion du présent accord de substitution, de s’appliquer dans leur 
+intégralité, et dans toutes leurs dispositions. Ils cesseront aussi de produire effet pour les salariés 
+de la branche des Centres de Lutte Contre le Cancer à compter de la date d’entrée en vigueur du 
+présent avenant, le 1er janvier 2027.
+
+Cet avenant national n°2026-01 porte modification de la Convention Collective Nationale (CCN) 
+des CLCC du 1er janvier 1999.
+
+Les défis identifiés dans la branche à l’horizon 2030
+La cancérologie a bénéficié de nombreux progrès thérapeutiques. Elle s’inscrit aussi dans un 
+contexte social de transformation des systèmes de santé, notamment en France. La prise en 
+charge des patients nécessite non seulement un accès aux traitements, aux professionnels et aux 
+établissements de santé spécialisés, comme c’est le cas depuis longtemps, mais exige en outre 
+désormais une meilleure coordination entre différents types de professionnels, dans et hors des 
+établissements, à différentes échelles.
+
+1. L’évolution de la prise en charge et des parcours de soins :
+• La réorganisation des parcours de soins :
+- Structurer des parcours de prise en charge hors les murs.
+- Mettre en place des parcours de soins intégrant la détection rapide des besoins en soins 
+de support, des effets indésirables induits et des rechutes,
+- Développer l’HAD en cancérologie, 
+- Encourager l’évaluation des parcours de soins,
+- Favoriser la communication avec la ville et les hôpitaux de proximité.
+• Accompagner l’évolution des missions et des métiers 
+- Renforcer la formation et l’accompagnement des parcours professionnels,
+- Former les professionnels aux évolutions induites par la personnalisation de la prise en 
+charge,
+- Réorganiser les missions au sein des équipes de soins.
+
+2. L’impact des données et du numérique sur la prise en charge et la recherche
+- Développer la formation continue des personnels notamment à l’IA pour les personnels 
+impliqués dans le développement et l’utilisation d’outils numériques,
+- Anticiper et accompagner la transformation des métiers liée à l’introduction du numérique 
+et de l’IA dans les pratiques médicales et paramédicales,
+- Le recrutement de nouveaux profils : bio-informaticiens, data-scientists voire des 
+ingénieurs IA…
+3. Renforcer l’attractivité des CLCC et la fidélisation des professionnels 
+- Favoriser la qualification des salariés,
+- Développer les parcours d’évolution professionnelle et favoriser la promotion 
+professionnelle,
+- Développer et reconnaître l’expertise développée par les professionnels travaillant dans 
+les CLCC,
+- Mise en place d’une politique de GEPP,
+- Mettre en place des parcours d’intégration pour les jeunes et nouveaux salariés afin de 
+favoriser une meilleure insertion dans les établissements,
+- Développer les compétences au management des salariés ayant des responsabilités 
+d'encadrement,
+- Favoriser la mobilité interne et les reconversions avec un accompagnement formation.
+
+Les objectifs généraux de la formation professionnelle au niveau de la branche
+Les organisations syndicales et patronale de la branche insistent sur l’importance de la formation 
+professionnelle pour permettre à chaque salarié, tout au long de sa vie professionnelle, d’acquérir, 
+de développer ou de renouveler ses connaissances, ses compétences et ses aptitudes 
+professionnelles, afin de favoriser son évolution professionnelle et de sécuriser son parcours.
+
+Dans ce cadre, ils se sont attachés à définir les objectifs de développement des compétences et 
+des qualifications autour des axes prioritaires suivants au niveau de la branche :
+- Favoriser la qualification professionnelle des salariés, 
+- Élaborer une politique de l’emploi et de développement des compétences visant à 
+
+répondre aux besoins de professionnalisation des salariés et à anticiper puis à 
+accompagner l’évolution des accompagnements et des prises en charge,
+- Poursuivre le développement de l’apprentissage,
+- Mettre en place des certifications en lien avec les besoins et la spécificité de la 
+cancérologie, 
+- Promouvoir l’égalité professionnelle en favorisant l’accès à la formation professionnelle à 
+tous les salariés, quels que soient leur âge, leur sexe, leur ancienneté et leur métier,
+- Développer les compétences transversales : management, organisation, 
+accompagnement du changement, gestion de projet, numérique, finances, etc.,
+- Accompagner les initiatives innovantes, les généraliser après évaluation favorable par la 
+CPNEFP, avec l’appui, si besoin, des services techniques de l’OPCO Santé,
+- Soutenir la démarche d’amélioration de la qualité et de la sécurité des accompagnements 
+et des soins,
+- Promouvoir les parcours d’intégration et de professionnalisation,
+- Promouvoir et accompagner la VAE 
+- Maintenir le niveau des compétences des seniors et sécuriser leur maintien dans l’emploi, 
+- Développer le co-investissement au service d’un projet de parcours professionnel, 
+répondant à un intérêt partagé entre l’employeur et le salarié.
+
+Les axes / actions prioritaires de formation :
+- Les actions contribuant à élever le niveau de qualification des salariés, notamment les 
+formations diplômantes,
+- Les actions favorisant l’adaptation des salariés à l’évolution de leur emploi, des techniques 
+et des modes de prise en charge,
+- Les actions permettant l’accès des salariés à un emploi supérieur de la grille de 
+classification de la CCN (parcours professionnels, promotions, reconversions,)
+- Les actions permettant de développer les compétences des salariés en vue d’assurer une 
+meilleure prise en charge des patients,
+- Les actions permettant le développement de compétences spécifiques aux CLCC : 
+
+recherche, cancérologie ….
+- Les actions de prévention aux différents risques professionnels, 
+- Pour les salariés ayant des responsabilités d’encadrement, les actions visant à 
+développer les compétences en management.
+
+ARTICLE 1. LE DEVELOPPEMENT DES COMPETENCES DES SALARIES DES CENTRES DE 
+LUTTE CONTRE LE CANCER
+1.1. Le Plan de Développement des Compétences 
+1.1.1 Définition et périmètre du Plan de développement des compétences
+Le plan de développement des compétences fait partie des moyens permettant à l’employeur 
+d’assurer la mise en œuvre de son obligation en matière de formation, à savoir l’obligation 
+d’assurer l’adaptation des salariés à leur poste de travail et le maintien ou l’évolution des 
+compétences dans son emploi.
+
+Le plan de développement des compétences intervient en déclinaison notamment : 
+
+- Du projet Médico-Scientifique du Centre pour répondre à la forte évolution de la 
+cancérologie au niveau des traitements, du diagnostic ou des modes de prise en charge. 
+
+Un accent particulier est mis sur les patients et leurs proches sur l’innovation, l’excellence, 
+l’humanité, la qualité et la pluridisciplinarité tout au long du parcours de soins,
+- Du projet social et managérial du Centre,
+- Des orientations définies par la Haute Autorité de Santé et par l’Agence Régionale de 
+Santé, des recommandations de l’OECI (Organisation of European Cancer Institutes), 
+dans le cadre notamment de l’amélioration de la prise en charge des patients, de la qualité 
+et sécurité des soins ainsi que dans la gestion des risques et des démarches de 
+certification HAS,
+- De la loi du 5 septembre 2018 pour la liberté de choisir son avenir professionnel (n° 2018-
+771). France Compétence est l’autorité nationale de financement et de régulation de la 
+formation professionnelle et de l’apprentissage.
+- Des règles de financement de l’OPCO SANTE en application du présent avenant.
+- De la convention collective nationale des Centres de lutte contre le cancer et des actions 
+et priorités définies par la CPNEFP de la branche des Centres de Lutte Contre le Cancer.
+
+Le plan de développement des compétences prend en compte :
+- Les enjeux de modernisation, d’adaptation, d’évolution des emplois, de l’organisation du 
+travail, des services et prestations assurées par le Centre,
+- Les priorités de formation définies par la branche,
+- Les formations obligatoires,
+- Les formations répondant aux objectifs stratégiques du centre et/ou du service,
+- Les formations permettant aux salariés d’évoluer dans le cadre des parcours 
+professionnels négociés,
+- Les formations individuelles.
+
+Le plan de développement des compétences regroupe l’ensemble des actions mises en œuvre 
+par le Centre pour développer les compétences des salariés. Il peut comprendre :
+- Des actions de formation professionnelle,
+- Des actions d’apprentissage,
+- Des actions de validation des acquis de l’expérience,
+- Des actions de bilan de compétences,
+- Des actions développant les qualifications dans le déroulement des carrières 
+professionnelles notamment par des promotions (formations diplômantes).
+
+Par révision de tout ou partie de leurs accords d’entreprise, les Centres peuvent définir une 
+répartition pluriannuelle des sommes consacrées à la mise en œuvre du plan de développement 
+des compétences, ainsi qu’un fléchage des actions de formation qu’elles financeront. 
+
+1.1.2 Missions du CSE et de la commission formation 
+Le comité social et économique (CSE) du Centre est consulté sur les orientations stratégiques du 
+Centre, notamment en matière de formation professionnelle. 
+
+Dans les établissements d'au moins trois cents salariés, le comité social et économique constitue 
+une commission de la formation. Cette commission est chargée :
+- De préparer les délibérations du CSE prévues aux 1° et 3° de l'article L. 2312-17 dans les 
+domaines qui relèvent de sa compétence ;
+- D'étudier les moyens permettant de favoriser l'expression des salariés en matière de 
+formation et de participer à leur information dans ce domaine ;
+- D'étudier les problèmes spécifiques concernant l'emploi et le travail des jeunes et des 
+travailleurs handicapés.
+
+1.2. L’entretien de parcours professionnel
+Il est rappelé que depuis le 26 octobre 2025, l’entretien de parcours professionnel remplace 
+l’entretien professionnel.
+
+1.2.1. Périodicité
+A l'occasion de son embauche, le salarié est informé qu'il bénéficie d'un entretien de parcours 
+professionnel au cours de la première année suivant son embauche.
+
+Pour les salariés déjà en poste au moment de la mise en œuvre de cet entretien de parcours 
+professionnel, celui-ci doit être organisé par l’employeur tous les 4 ans. 
+
+Tous les huit ans, l'entretien de parcours professionnel fait un état des lieux récapitulatif du 
+parcours professionnel du salarié. 
+
+Lorsqu'il s'agit du premier état des lieux récapitulatif du parcours professionnel que le salarié 
+réalise après son embauche, celui-ci peut être organisé sept ans après l'entretien réalisé au cours 
+de la première année suivant l’embauche tel que mentionné au premier alinéa.
+
+1.2.2. Objet de l’entretien de parcours professionnel
+Conformément aux dispositions légales, l’entretien de parcours professionnel est consacré aux 
+points suivants :
+
+1° Aux compétences du salarié et aux qualifications mobilisées dans son emploi actuel ainsi qu'à 
+leur évolution possible au regard des transformations dans le Centre ;
+
+2° A sa situation et à son parcours professionnel, au regard des évolutions des métiers et des 
+perspectives d'emploi dans le Centre ;
+
+3° A ses besoins de formation, qu'ils soient liés à son activité professionnelle actuelle, à l'évolution 
+de son emploi au regard des transformations dans le Centre ou à un projet personnel ;
+
+4° A ses souhaits d'évolution professionnelle. L'entretien peut ouvrir la voie à une reconversion 
+interne ou externe, à un projet de transition professionnelle, à un bilan de compétences ou à une 
+validation des acquis de l'expérience ;
+
+5° A l'activation par le salarié de son compte personnel de formation, aux abondements de ce 
+compte que l'employeur est susceptible de financer et au conseil en évolution professionnelle.
+
+L'entretien de parcours professionnel n’a pas pour objet d’évaluer le travail du salarié. Il est 
+organisé par l'employeur et réalisé par le supérieur hiérarchique ou un membre de la Direction 
+des Ressources Humaines, et est assimilé à du temps de travail effectif.
+
+Cet entretien de parcours professionnel donne lieu à la rédaction d'un document dont une copie 
+est remise au salarié. Ce document est cosigné des 2 parties (évaluateur et évalué).
+
+Un avenant de branche relatif à l’entretien de parcours professionnel sera proposé ultérieurement 
+à la négociation, incluant notamment le parcours professionnel des représentants du personnel.
+
+1.2.3. Etat des lieux à huit ans
+Tous les huit ans, l'entretien de parcours professionnel fait un état des lieux récapitulatif du 
+
+parcours professionnel du salarié et permet de vérifier que le salarié a bénéficié, au cours des huit 
+dernières années, des entretiens de parcours professionnels et d'apprécier également s'il a : 
+- Suivi au moins une action de formation 
+- Acquis des éléments de certification par la formation ou par une validation des acquis de 
+son expérience ;
+- Bénéficié d'une progression salariale ou professionnelle
+Pour les salariés nouvellement embauchés, ce premier état des lieux pourra avoir lieu sept ans 
+après l’entretien initial réalisé au cours de la première année suivant l’embauche.
+
+Lorsque, au cours de ces huit années, le salarié n'a bénéficié ni des entretiens prévus, ni d'au 
+moins une formation autre qu’une formation obligatoire au sens de l'article L. 6321-2 du Code du 
+Travail, son compte personnel de formation (CPF) est abondé de 3 000 €, conformément aux 
+dispositions légales. Cette pénalité est à verser à la Caisse des dépôts et consignations (CDC), 
+qui gère les contributions CPF.
+
+1.2.4. En cas d’absence de longue durée
+L’employeur est tenu d’organiser un entretien de parcours professionnel pour les salariés :
+- au retour de congé maternité ;
+- au retour de congé parental d’éducation ;
+- au retour d’un congé de proche aidant ;
+- au retour d’une période de mobilité volontaire sécurisée dans les établissements d’au 
+moins 300 salariés ;
+- au retour d’un congé d’adoption ;
+- au retour d’un congé sabbatique ;
+- au terme d’une période d’activité à temps partiel après un congé de maternité ou 
+d’adoption ;
+- au retour d’un arrêt de travail pour longue maladie (supérieur à 6 mois) ;
+- à l’issue d’un mandat syndical.
+
+1.2.5. Entretiens spécifiques
+- Entretien de mi-carrière
+Il est rappelé qu’une visite médicale de mi-carrière doit être organisée durant l’année civile des 45 
+ans du salarié afin de vérifier l’adéquation entre le poste de travail et l’état de santé du salarié.
+
+Deux mois après cette visite médicale de mi-carrière, un entretien de parcours professionnel doit 
+être organisé.
+
+L’entretien de parcours professionnel abordera les points listés ci-dessus mais aussi :
+- les éventuelles mesures proposées par le médecin du travail lors de la visite médicale ;
+- et s’il y a lieu, l’adaptation ou l’aménagement des missions et du poste de travail, la 
+prévention des situations d’usure professionnelle, les besoins en formation et les éventuels 
+souhaits de mobilité ou de reconversion professionnelle du salarié.
+- Entretien de fin de carrière
+Dans les deux années précédant le 60ème anniversaire du salarié, un entretien de parcours 
+professionnel doit être organisé et abordera les points listés ci-dessus ainsi que les conditions de 
+Toute action de formation qui conditionne l'exercice d'une activité ou d'une fonction
+
+maintien dans l’emploi et les possibilités d’aménagements de fin de carrière, notamment le 
+passage à temps partiel ou la retraite progressive.
+
+Si l’entretien de mi-carrière ou de fin de carrière doit être prévu au cours des 4 années séparant 
+deux entretiens de parcours professionnels, cet entretien (de mi-carrière ou de fin de carrière) se 
+substitue à l’entretien de parcours professionnel et constitue ainsi le point de départ de la nouvelle 
+période de 4 ans. A cette occasion, les sujets relatifs à l’entretien de parcours professionnel 
+s’ajoutent aux dispositions devant être évoquées au cours l’entretien de mi-carrière ou de fin de 
+carrière. 
+
+1.3. Le Développement professionnel continu (DPC)
+Les professionnels de santé (médecins et professionnels paramédicaux) sont soumis à certaines 
+obligations du Code de la santé publique en matière de formation continue.
+
+Le développement professionnel continu a pour objectifs le maintien et l'actualisation des 
+connaissances et des compétences ainsi que l'amélioration des pratiques. Il constitue une 
+obligation pour les professionnels de santé. 
+
+Chaque professionnel de santé doit, par période de 3 ans, suivre un parcours de DPC combinant 
+de la formation et/ou de l’évaluation de pratiques professionnelles et/ou de la gestion des risques. 
+
+Un minimum de deux actions de deux types différents est requis pour remplir son obligation de 
+DPC.
+
+Dans l’élaboration et le financement de son plan de développement des compétences, l’employeur 
+est tenu de prendre en compte cette obligation faite aux professionnels de santé concernés.
+
+1.4. La certification périodique des professionnels de santé
+La certification périodique constitue un dispositif applicable depuis le 1er janvier 2023 pour 7 
+professions de santé à ordre : chirurgiens-dentistes, infirmiers, masseurs-kinés, médecins, 
+pédicures-podologues, pharmaciens, sage-femmes.
+
+Ce dispositif vise à garantir : 
+- le maintien des compétences de professions ciblées ;
+- la qualité des pratiques professionnelles et pluriprofessionnelles ;
+- l’actualisation et le niveau des connaissances.
+
+Les professionnels de santé visés doivent, pour répondre à cette obligation, suivre et réaliser des 
+actions de certification dans un cadre de référence préétabli portant sur les 4 axes : 
+- actualiser les connaissances et les compétences ;
+- renforcer la qualité des pratiques professionnelles ;
+- améliorer les relations avec leurs patients ;
+- mieux prendre en compte sa santé personnelle.
+
+Chaque professionnel de santé doit justifier de ces obligations de certification périodique : 
+- tous les 9 ans pour les professionnels déjà actifs puis tous les 6 ans ;
+- tous les 6 ans pour ceux qui commenceront à exercer après le 1er janvier 2023
+Les conseils nationaux professionnels (CNP) élaborent les référentiels de certification qui 
+identifieront les actions pertinentes pour chacun des 4 axes prenant en compte les critères 
+d’objectivité des connaissances professionnelles, scientifiques et universitaires et des règles 
+
+déontologiques rappelées par le conseil national de la certification périodique. 
+
+Dans l’élaboration et le financement de son plan de développement des compétences, l’employeur 
+est tenu de prendre en compte cette obligation de certification périodique faite aux professionnels 
+de santé salariés concernés.
+
+ARTICLE 2. LA PROMOTION, L’EVOLUTION ET LA RECONVERSION PROFESSIONNELLE
+2.1. Les parcours professionnels mis en place au niveau de la CCN
+Afin de favoriser le développement professionnel et de reconnaître l’expertise des salariés, 
+plusieurs parcours professionnels permettent une promotion vers un / d’autre(s) emplois 
+supérieurs dans la grille de classification.
+
+Les parcours intégrés dans la CCN pour les emplois suivants :
+
+✓ Aide-soignant
+✓ Auxiliaire de puériculture
+✓ Infirmier
+✓ Manipulateur en Electroradiologie Médicale
+✓ Attaché de Recherche Clinique
+✓ Assistant Médical
+✓ Technicien de Laboratoire
+✓ Préparateur en Pharmacie
+Plusieurs autres parcours sont à ce jour encore en cours de construction.
+
+Les promotions intervenues dans le cadre de ces parcours professionnels font l’objet d’un suivi 
+annuel en Commission Paritaire Nationale de l’Emploi et de la Formation Professionnelle 
+(CPNEFP). Les actions de formation qui sont notamment nécessaires à la promotion des salariés 
+dans le cadre de ces parcours professionnels figurent parmi les axes prioritaires de la formation 
+professionnelle de la branche.
+
+2.2. Les dispositifs de formation concourant à la promotion et à la reconversion 
+2.2.1. La période de reconversion
+Cet article se substitue à l’accord sur la promotion et reconversion en alternance dans le secteur 
+sanitaire, social et médico-social privé à but non lucratif du 7 décembre 2020, et ce d’autant plus 
+que la période de reconversion se substitue à la Pro-A et Transco, dispositifs qui disparaissent au 
+1er janvier 2026.
+
+Tout salarié souhaitant bénéficier d’une mobilité professionnelle interne ou externe au Centre peut 
+recourir à une période de reconversion, ayant pour objet l’acquisition d’une qualification ou d’un 
+ou plusieurs blocs de compétences. 
+
+Le salarié peut bénéficier d’un conseil en évolution professionnelle pendant son temps de travail. 
+• Déroulement de la période de reconversion
+La durée des actions de formation est comprise entre 150 heures et 450 heures, réparties sur une 
+période ne pouvant excéder 12 mois, à l’exception de celles permettant l’acquisition du socle de 
+
+connaissances et de compétences. 
+
+Pendant la durée des actions de formation, le salarié bénéficie de la législation de la sécurité 
+sociale relative à la protection en matière d’accidents du travail et de maladies professionnelles.
+• La période de reconversion interne
+Lorsque le salarié bénéficie d’une période de reconversion interne dans le Centre, les modalités 
+d’organisation de cette période, notamment sa durée font l’objet d’un accord écrit entre 
+l’employeur et le salarié. Cet accord doit également mentionner les conditions d’emploi proposées 
+à l’issue de la période de reconversion, en tenant compte d’une priorité d’accès à l’emploi visé par 
+les nouvelles qualifications obtenues, dès que celui-ci devient disponible dans le Centre. Pendant 
+cette période de reconversion, le contrat de travail est maintenu et le salarié perçoit sa 
+rémunération habituelle. 
+• La période de reconversion externe
+Lorsque le salarié bénéficie d’une période de reconversion externe au Centre, son contrat de 
+travail est suspendu. Un accord écrit détermine les modalités de la suspension du contrat, 
+notamment sa durée ainsi que les modalités d’un éventuel retour anticipé du salarié en cas de 
+rupture de la période d’essai dans la structure d’accueil. 
+
+Cette période de reconversion externe prend la forme d’un contrat à durée indéterminée ou d’un 
+contrat à durée déterminée d’au moins six mois, précise les modalités d’organisation de ladite 
+période de reconversion et doit prévoir une période d’essai.
+
+Au terme de la période d’essai, lorsque le salarié du Centre et l’employeur de la structure d’accueil 
+souhaitent poursuivre leurs relations contractuelles, le contrat de travail du salarié conclu avec le 
+Centre sera rompu selon les modalités applicables à la rupture conventionnelle si le salarié en 
+question est en CDI dans le Centre, et d’un commun accord si le salarié est en CDD dans le 
+Centre.
+• Financement 
+Financement par le salarié
+Les actions de formation éligibles à la période de reconversion peuvent faire l’objet d’un 
+cofinancement par la mobilisation du compte personnel de formation du salarié, sous réserve de 
+son accord. 
+
+Pour une période de reconversion interne, le montant des droits mobilisés ne peut excéder la 
+moitié des droits inscrits sur le compte personnel de formation du salarié. Pour une période de 
+reconversion externe, le montant des droits mobilisés n’est pas limité.
+
+Financement par l’OPCO
+L’OPCO assurera le financement des périodes de reconversion selon des critères qui auront été 
+définis par son conseil d’administration, sur proposition des branches professionnelles, dans le 
+respect d’un montant moyen fixé par décret et dans la limite de la dotation allouée par France 
+compétences à l’OPCO.
+
+2.2.2. Le Compte Personnel de Formation (CPF) 
+
+• Principe
+Le compte personnel de formation concerne tous les actifs et fait partie intégrante du compte 
+personnel d’activité. Il est ouvert dès l’entrée sur le marché du travail et n’est fermé qu’au décès 
+de la personne. Il cesse toutefois d’être alimenté lorsque son titulaire liquide l’ensemble de ses 
+droits à la retraite.
+
+Le compte personnel de formation est un compte individuel dont le suivi des droits est géré par 
+un organisme extérieur à l’établissement et commun à l’ensemble des bénéficiaires du compte 
+personnel de formation : la Caisse des dépôts et consignations. 
+
+Le bénéficiaire du CPF a accès à son compte via un site internet dédié.
+
+Le CPF permet à toute personne active, dès son entrée sur le marché du travail et jusqu'à sa 
+retraite, de cumuler des droits à la formation professionnelle. Ce dispositif permet de favoriser le 
+développement des compétences des travailleurs.
+• Alimentation
+L’alimentation du CPF s’entend pour toute personne active – de l’entrée sur le marché du travail 
+jusqu’au départ à la retraite – conformément à la législation en vigueur, en fonction du temps 
+travaillé au regard du droit privé.
+
+Une personne ayant sur l’année une activité à temps complet ou égale à au moins la moitié de la 
+durée légale ou conventionnelle de travail, bénéficie de 500 € par année de travail dans la limite 
+d’un plafond total de 5 000 €.
+
+Lorsque le salarié n’a pas effectué une durée de travail à temps complet ou égale à la moitié de 
+la durée légale ou conventionnelle sur l’ensemble de l’année, l’alimentation est calculée à due 
+proportion du temps de travail effectué.
+
+Le compte est alimenté de 800 euros par an dans la limite de 8 000 euros pour le salarié qui a 
+effectué au moins un mi-temps sur l’année et qui n’a pas atteint un niveau de formation sanctionné 
+par :
+
+✓ Un diplôme classé au niveau 3 ; 
+
+✓ Un titre professionnel enregistré et classé au niveau 3 du Répertoire national des 
+certifications professionnelles 
+✓ Ou une certification reconnue par une convention collective nationale de branche.
+
+L’alimentation du compte personnel de formation des personnes handicapées bénéficiaires de 
+l’obligation d’emploi est majorée chaque année d’un montant de 300 euros. Le plafond applicable 
+au CPF de ces personnes est de 8 000 euros.
+• Formations éligibles
+Les salariés qui souhaitent mobiliser leur compte personnel de formation choisissent parmi les 
+actions de formation sanctionnées par :
+
+✓ Les actions de formation préparant aux certifications enregistrées au répertoire national 
+des certifications professionnelles (RNCP) ou au Répertoire spécifique (RS).
+
+✓ Les actions de formation préparant un ou plusieurs blocs de compétences d'une 
+certification inscrite au RNCP sont également éligibles au CPF.
+
+✓ Les actions permettant de faire valider les acquis de l’expérience (VAE).
+
+✓ Les bilans de compétences.
+
+✓ La préparation aux épreuves théoriques et pratiques de toutes les catégories de permis 
+de conduire d'un véhicule terrestre à moteur
+
+✓ Les actions de formation d'accompagnement et de conseil dispensées aux créateurs ou 
+repreneurs d'entreprises ayant pour objet de réaliser leur projet de création ou de reprise 
+d'entreprise et de pérenniser l'activité de celle-ci.
+• Mobilisation du CPF
+Le CPF ne peut être mobilisé qu’avec l’accord exprès du salarié. Le refus de ce dernier de le 
+mobiliser ne constitue pas une faute.
+• Abondement du CPF dans le cadre d’un projet coconstruit entre le salarié et 
+l’employeur
+Par ailleurs, les CLCC pourront mettre en place une politique permettant l’abondement du CPF 
+en lien avec leurs besoins en compétences et en qualifications et conforme à l’orientation du 
+salarié vers les actions de formation les plus pertinentes ou encore à la mobilisation du CPF pour 
+tout ou partie sur le temps de travail.
+
+Cet abondement s’inscrit dans le cadre de l’investissement formation au titre du plan de 
+développement des compétences du Centre.
+
+La CPNEFP des CLCC pourra également décider de définir des priorités et modalités 
+d’abondement via les fonds mutualisés de branche.
+
+Le décret n°2024-394 du 29 avril 2024 relatif à la participation obligatoire au financement des 
+formations éligibles au compte personnel de formation a instauré une participation forfaitaire 
+obligatoire en cas de mobilisation du CPF par le salarié.
+
+Toutefois, cette participation obligatoire n’est pas due par le salarié, lorsque la formation est 
+co/construite entre le salarié et l’employeur dans le cadre d’un cofinancement entre le plan de 
+développement de compétences et le CPF. 
+• Lien avec le compte professionnel de prévention (C2P)
+Le salarié titulaire d’un compte professionnel de prévention (C2P) peut décider de mobiliser tout 
+ou partie des points inscrits sur ce compte pour la prise en charge des frais d’une action de 
+formation professionnelle en vue d’accéder à un emploi non exposé ou moins exposé à un ou des 
+facteurs de risques professionnels.
+
+Lorsqu’il décide d’une telle utilisation, ses points sont convertis en euros pour abonder le CPF. Le 
+titulaire d’un compte professionnel de prévention qui veut abonder son compte personnel de 
+formation doit faire une demande sur le site internet dédié.
+
+2.3. Le Projet de Transition Professionnelle (PTP)
+2.3.1. Formations financées par le PTP
+Le PTP peut être utilisé pour financer des formations certifiantes, éligibles au CPF, destinées à 
+permettre au salarié de changer de métier ou de profession.
+
+2.3.2. Conditions et modalités
+Pour bénéficier d’un projet de transition professionnelle, le salarié doit justifier d’une ancienneté 
+d’au moins 24 mois, consécutifs ou non, dont 12 mois dans le Centre, quelle qu’ait été la nature 
+des contrats de travail successifs.
+
+L’ancienneté s’apprécie à la date de départ en formation du salarié.
+
+Les actions de formation du projet de transition professionnelle s’accomplissent en tout ou partie 
+pendant le temps de travail, sauf cas particulier.
+
+La demande de congé dans le cadre d’un projet de transition professionnelle est adressée à 
+l’employeur par écrit, au plus tard 120 jours avant le début de l’action de formation lorsqu’elle 
+comporte une interruption continue de travail d’au moins six mois.
+
+Elle est adressée au plus tard 60 jours avant le début de l’action de formation lorsqu’elle concerne 
+:
+- soit la participation à une action de formation d’une durée inférieure à six mois ;
+- soit une action de formation réalisée à temps partiel.
+
+L’employeur doit répondre au salarié dans les 30 jours suivant la réception de la demande de 
+congé. En cas de report ou de rejet de la demande, il doit en indiquer les motifs. En l’absence de 
+réponse de l’employeur dans le délai imparti, l’autorisation de congé est acquise de plein droit.
+
+L’employeur peut reporter le départ en formation du salarié jusqu’à 9 mois maximum, mais la 
+décision doit être motivée par au moins l’une des raisons suivantes :
+
+✓ Son absence peut avoir des conséquences préjudiciables à la production et à la bonne 
+marche de l’établissement ;
+
+✓ Le PTP ne peut bénéficier qu’à un salarié à la fois pour un établissement de moins de 100 
+salariés. Pour un établissement de 100 salariés et plus, le pourcentage de salariés 
+simultanément absents au titre du PTP ne peut pas dépasser 2% de l’effectif total (en ETP) 
+;
+
+✓ Le délai minimum n’est pas respecté entre un premier PTP effectué par le salarié au sein 
+de l’établissement et sa nouvelle demande de PTP. Ce délai minimum est égal à dix fois 
+la durée du projet de transition professionnelle précédemment suivi, exprimée en mois. Ce 
+délai ne peut être inférieur à six mois, ni supérieur à six ans.
+
+2.3.3. Rémunération et droits durant le PTP
+La rémunération pendant le congé de transition professionnelle est définie par les articles D. 6323-
+18-1 et suivants du Code du travail.
+
+Le salarié est considéré comme stagiaire de la formation professionnelle, bénéficie du maintien 
+de sa protection sociale et est couvert contre le risque d’accident de travail.
+
+Le temps passé en formation est assimilé à du temps de travail effectif pour le calcul des congés 
+payés, de l’ancienneté et des droits qui y sont liés. Le salarié en congé de formation conserve le 
+droit d’exercer des mandats de représentant du personnel ou syndical au sein du Centre ou de la 
+branche. Il reste également électeur et éligible aux élections professionnelles.
+
+Il doit justifier de sa présence en formation, et à l’issue, réintègre son poste de travail ou un poste 
+équivalent.
+
+2.4. La Validation des Acquis de l’Expérience (VAE)
+La loi n°2022-1598 du 21 décembre 2022 portant mesures d’urgence relatives au fonctionnement 
+du marché du travail en vue du plein emploi, a fait évoluer les dispositions relatives à la validation 
+de l’expérience professionnelle (VAE).
+
+Le service public de la validation des acquis de l'expérience a pour mission d'orienter et 
+d'accompagner toute personne demandant la validation des acquis de son expérience et justifiant 
+d'une activité en rapport direct avec le contenu de la certification visée.
+
+Ainsi, toute personne, quel que soit son âge, sa nationalité, son statut et son niveau de formation, 
+qui justifie d’au moins 1 an d’expérience en rapport direct avec la certification visée, peut prétendre 
+à la VAE. 
+
+La VAE permet d’obtenir :
+- Un diplôme ou titre professionnel national délivré par l’État ;
+- Un diplôme délivré par un établissement d’enseignement supérieur ;
+- Un titre délivré par un organisme de formation ou une chambre consulaire ;
+- Un certificat de qualification professionnelle (CQP) créé par la Commission paritaire 
+nationale de l’emploi (CPNE) d’une branche professionnelle.
+
+Le service public de la VAE est porté par un groupement d’intérêt public (GIP) dont la mission est 
+d’orienter et d’accompagner toute personne demandant la validation des acquis de son 
+expérience. Le GIP doit contribuer à l’information des personnes et à leur orientation dans 
+l’organisation de leur parcours, à la promotion de la VAE ainsi qu’à l’animation et à la cohérence 
+des pratiques sur le territoire. Il doit permettre d’assurer le suivi statistique des parcours.
+
+Pour les formations inscrites sur le portail France VAE, le candidat doit réaliser son inscription sur 
+ce portail et peut demander à bénéficier d'un accompagnement dans les démarches de 
+constitution des dossiers et dans la mobilisation des financements. Il choisit la personne 
+accompagnatrice, appelée architecte accompagnateur de parcours (AAP) sur une liste mise à 
+disposition sur le portail France VAE. 
+
+Si le candidat souhaite s’engager dans un projet de VAE en vue d’acquérir une certification autre 
+que celles inscrites sur le portail France VAE, il devra passer par le parcours VAE issue de la loi 
+de 2002.
+
+L’accompagnement à la VAE est à la charge du salarié mais peut également être financé par :
+- Le Compte Personnel de Formation (CPF)
+- Des abondements complémentaires (employeur, OPCO Santé, ou région)
+Ces dispositions pourront être modifiées au regard des évolutions légales.
+
+Expérimentation d’actions de VAE intégrées au contrat de professionnalisation :
+
+Afin de favoriser l’accès à la certification et à l’insertion professionnelles dans les secteurs 
+rencontrant des difficultés de recrutement, la loi n°2022-1598 du 21 décembre 2022 prévoit 
+l’expérimentation pour une durée de trois ans, du 1er mars 2023 au 28 février 2026, de contrats 
+de professionnalisation comportant des actions de VAE.
+
+La VAE inversée vise à intégrer au contrat de professionnalisation des actions permettant de faire 
+valider les acquis de l’expérience afin de favoriser l’accès à la certification et à l’insertion 
+professionnelles dans les secteurs rencontrant des difficultés particulières de recrutement.
+
+Le candidat pourra faire valoir, d’une part, ses compétences préalablement acquises, et d’autre 
+part, acquérir de nouvelles compétences :
+- Dans le cadre de la partie pratique de la formation alternée réalisée dans le Centre ;
+- En situation de formation selon différentes modalités : au sein d’un organisme de 
+formation, en entreprise dès lors qu’elle dispose d’un service de formation interne ou dans 
+le cadre d’une action de formation en situation de travail.
+
+Lorsqu’un salarié réussit une VAE dans le cadre du plan de développement des compétences de 
+l’établissement, et qu’un poste devient vacant, sa candidature sera étudiée en priorité. 
+
+2.5. Les dispositifs d’accompagnement à l’évolution professionnelle 
+2.5.1 Le Conseil en Evolution Professionnelle (CEP)
+Toute personne peut bénéficier tout au long de sa vie professionnelle d’un conseil en évolution 
+professionnelle, dont l’objectif est de favoriser l’évolution et la sécurisation de son parcours 
+professionnel. 
+
+Le conseil est un service gratuit et est mis en œuvre dans le cadre du service public régional de 
+l’orientation mentionné à l’article L.6111-3. L’opérateur du conseil en évolution professionnelle 
+accompagne la personne dans la formalisation et la mise en œuvre de ses projets d’évolution 
+professionnelle, en lien avec les besoins économiques et sociaux existants et prévisibles dans les 
+territoires. Il facilite l’accès à la formation, en identifiant les compétences de la personne, les 
+qualifications et les formations répondant aux besoins qu’elle exprime ainsi que les financements 
+disponibles.
+
+Les salariés peuvent bénéficier librement en dehors de leur temps de travail d’un conseil en 
+évolution professionnelle auprès des structures habilitées à réaliser cette prestation. Le CEP peut 
+également être réalisé sur le temps de travail avec l’accord de l’employeur ou de son représentant, 
+et sous réserve de respecter un délai de prévenance d’au moins 8 jours.
+
+Font partie des structures habilitées à réaliser cette prestation : 
+- Cap Emploi,
+- France Travail,
+- Les Missions locales,
+- L’APEC,
+- Les opérateurs régionaux sélectionnés par France compétences. 
+
+L’employeur informe chaque salarié sur le CEP à l’occasion de l’entretien professionnel. 
+
+2.5.2. Le Bilan de Compétences
+Le bilan de compétences permet d’analyser les compétences professionnelles et personnelles, 
+les aptitudes et les motivations en appui d’un projet d’évolution professionnelle et, le cas échéant, 
+de formation. 
+
+Il permet :
+- D’analyser ses compétences personnelles et professionnelles, ses aptitudes et ses 
+motivations
+- De définir son projet professionnel et, le cas échéant, un projet de formation
+- D’utiliser ses atouts comme un instrument de négociation pour un emploi, une formation 
+
+ou une évolution de carrière.
+
+Salariés comme demandeurs d’emploi peuvent y accéder. 
+
+Le salarié peut se voir proposer un bilan de compétences par son employeur à l’occasion de 
+l’entretien professionnel. Le consentement du salarié est obligatoire. Ce dernier peut le réaliser 
+de lui-même en mobilisant son CPF.
+
+Le bilan de compétence peut être financé par les fonds dont chaque salarié dispose sur son CPF.
+
+Le bilan de compétences est réalisé par un organisme agréé extérieur au Centre, qui ne peut 
+organiser en interne le bilan pour ses salariés.
+
+ARTICLE 3. DEVELOPPER UNE POLITIQUE D’ALTERNANCE ATTRACTIVE
+Conscients de l’importance de préparer au mieux les futurs salariés aux spécificités de la 
+cancérologie, les Centres visent à développer les contrats d’apprentissage et les contrats de 
+professionnalisation sur :
+- Les emplois cœur de métier (filière soins, filière médico-technique, assistants médicaux),
+- Les emplois liés à la recherche,
+- Les emplois supports qui connaissent un essor important ces dernières années 
+(informatique, qualité, logistique).
+
+Conscientes de l’importance d’une intégration réussie, les organisations syndicales et patronale 
+de la branche réfléchiront sur une charte de l’alternance s’adressant aussi bien aux professionnels 
+des Centres (et futurs tuteurs et maîtres d’apprentissage) qu’aux alternants. Elle abordera 
+notamment les points-clés suivants :
+- Accueil et intégration des alternants dans les services,
+- Missions, droits et devoirs des tuteurs et maîtres d’apprentissage,
+- Droits et devoirs des alternants.
+
+3.1. L’apprentissage
+3.1.1. Objet du contrat d’apprentissage
+Le contrat d’apprentissage, ouvert aux jeunes de 16 à 29 ans révolus (sauf exceptions), vise 
+l'obtention d'une qualification. Ce dispositif favorise l’embauche et l’intégration des jeunes dans 
+les centres de lutte contre le cancer.
+
+3.1.2. Les bénéficiaires
+Les contrats d'apprentissage sont ouverts aux jeunes âgés de 16 ans au moins à 29 ans révolus 
+en début d'apprentissage.
+
+Toutefois, les jeunes âgés d'au moins 15 ans peuvent débuter un contrat d'apprentissage s'ils 
+justifient avoir accompli la scolarité du premier cycle de l'enseignement secondaire.
+
+De même, les jeunes qui atteignent l'âge de 15 ans avant le terme de l'année civile peuvent être 
+inscrits, sous statut scolaire, dans un lycée professionnel ou dans un CFA pour débuter leur 
+formation, dans des conditions fixées par décret en Conseil d'État.
+
+Par ailleurs, la limite d'âge de 29 ans révolus n'est pas applicable dans les cas suivants :
+
+- Lorsque le contrat ou la période d’apprentissage proposée fait suite à un contrat ou à une 
+période d’apprentissage précédemment exécutée et conduit à un niveau de diplôme 
+supérieur à celui obtenu à l’issue du contrat ou de la période d’apprentissage précédente 
+;
+- Lorsqu’il y a eu rupture de contrat pour des causes indépendantes de la volonté de 
+l’apprenti ou suite à une inaptitude physique et temporaire de celui-ci.
+
+Pour l'apprenti reconnu comme personne handicapée, des aménagements de la formation sont 
+possibles, conformément aux dispositions du Code du travail.
+
+3.1.3. Durée du contrat d’apprentissage 
+Le contrat d'apprentissage peut être conclu pour une durée déterminée ou indéterminée. Dans ce 
+dernier cas, il débute par une période d'apprentissage et se poursuit selon les règles relatives au 
+CDI de droit commun, sans qu'une période d'essai puisse être imposée.
+
+La durée du contrat varie entre 6 mois et 3 ans, sous réserve des cas de prolongation prévus par 
+le code du travail ou lors d'une mobilité à l'étranger.
+
+Cette durée est égale à la durée du cycle de formation préparant à la qualification qui fait l'objet 
+du contrat.
+
+La durée de formation en centre de formation tient compte des exigences propres à chaque niveau 
+de qualification. Sous réserve, le cas échéant, des règles fixées par l'organisme certificateur du 
+diplôme ou titre à finalité professionnelle visée, cette durée ne peut être inférieure à 25 % de la 
+durée totale du contrat.
+
+3.1.4. Statut de l’apprenti
+L’apprenti a un statut particulier puisqu’il est à la fois en formation et dans le Centre. En raison de 
+son statut, des dispositions spécifiques s’appliquent en matière de temps de travail. Des 
+dispositions protectrices s’appliquent également pour l’apprenti mineur exposé à des risques 
+particuliers ou des travaux dangereux. L’apprenti bénéficie par ailleurs d’aides financières et 
+d’exonérations fiscales.
+
+3.1.5. Rémunération de l’apprenti
+Les organisations syndicales et patronale de la branche souhaitent rendre attractif l’apprentissage 
+et ont déterminé, pour cela, des niveaux de rémunération supérieurs aux dispositions légales.
+
+Le salaire minimum perçu par l’apprenti pendant le contrat ou la période d’apprentissage est fixé 
+: 
+
+1° Pour les jeunes âgés de 16 à 17 ans : 
+
+a) A 35 % du SMIC pendant la première année d’exécution du contrat,
+b) A 45 % du SMIC pendant la deuxième année d’exécution du contrat,
+c) A 55 % du SMIC pendant la troisième année d’exécution du contrat.
+
+2° Pour les jeunes âgés de 18 à 20 ans : 
+
+a) A 50 % du SMIC pendant la première année d’exécution du contrat,
+b) A 60 % du SMIC pendant la deuxième année d’exécution du contrat,
+c) A 70 % du SMIC pendant la troisième année d’exécution du contrat.
+
+3° Pour les jeunes âgés de 21 à 25 ans : 
+
+a) A 65 % du SMIC ou, s’il est supérieur, du salaire minimum conventionnel correspondant à 
+l’emploi occupé pendant la première année d’exécution du contrat ; 
+
+b) A 75 % du SMIC ou, s’il est supérieur, du salaire minimum conventionnel correspondant à 
+l’emploi occupé pendant la deuxième année d’exécution du contrat ; 
+
+c) A 85 % du SMIC, s’il est supérieur, du salaire minimum conventionnel correspondant à l’emploi 
+occupé pendant la troisième année d’exécution du contrat.
+
+4° Pour les jeunes âgés de 26 ans et plus, à 100 % du SMIC ou s’il est supérieur, du salaire 
+minimum conventionnel correspondant à l’emploi occupé pendant la durée d’exécution du contrat 
+d’apprentissage.
+
+L’apprenti, rémunéré sur une base conventionnelle bénéficie par ailleurs des augmentations 
+salariales conventionnelles, de l’ensemble des augmentations salariales générales ou 
+individuelles et de tous les éléments complémentaires de rémunération (intéressement, prime, 
+etc.) du Centre dans les mêmes conditions que les autres salariés.
+
+Lorsqu’un apprenti conclut un nouveau contrat d’apprentissage avec le même employeur, sa 
+rémunération est au moins égale à celle qu’il percevait lors de la dernière année d’exécution du 
+contrat précédent, sauf quand l’application des rémunérations prévues à la présente sous-section 
+en fonction de son âge est plus favorable. 
+
+Lorsqu’un apprenti conclut un nouveau contrat d’apprentissage avec un employeur différent, sa 
+rémunération est au moins égale à celle à laquelle il pouvait prétendre lors de la dernière année 
+d’exécution du contrat précédent, lorsque ce dernier a conduit à l’obtention du titre ou du diplôme 
+ainsi préparé, sauf quand l’application des rémunérations prévues à la présente sous-section en 
+fonction de son âge est plus favorable. 
+
+Lorsqu’un contrat d’apprentissage est conclu pour une durée inférieure ou égale à un an pour 
+préparer un diplôme ou un titre de même niveau que celui précédemment obtenu, lorsque la 
+nouvelle qualification recherchée est en rapport direct avec celle qui résulte du diplôme ou du titre 
+précédemment obtenu, une majoration de 15 points (soit par exemple 60 % au lieu de 45 %) est 
+appliquée à la rémunération.
+
+Dans ce cas, les jeunes issus d’une voie de formation autre que celle de l’apprentissage sont 
+considérés, en ce qui concerne leur rémunération minimale, comme ayant accompli la durée 
+d’apprentissage pour l’obtention de leur diplôme ou titre. 
+
+3.1.6. Financement des contrats d’apprentissage
+La CPNEFP de la branche des Centres de Lutte Contre le Cancer est compétente pour fixer les 
+niveaux de prise en charge des contrats d’apprentissage. À défaut, ils sont fixés par décret. 
+
+Les organisations syndicales et patronale de la branche détermineront principalement les niveaux 
+de prise en charge des contrats d'apprentissage définis par certains diplômes ou titres 
+professionnels préparés par les apprentis accueillis dans les Centres de Lutte Contre le Cancer.
+
+3.1.7. Lien avec l’OPCO Santé
+L’OPCO Santé communiquera chaque année à la CPNEFP de la branche des Centres de lutte 
+contre le cancer un bilan qualitatif et quantitatif du développement de l’apprentissage dans la 
+branche.
+
+3.1.8. Le maître d’apprentissage
+• Missions
+En liaison avec le CFA, le maître d’apprentissage a pour mission de contribuer à l’acquisition par 
+l’apprenti, dans l’établissement, des compétences correspondant à la qualification recherchée et 
+au titre ou diplôme préparé.
+
+Le maître d’apprentissage fait le lien entre le Centre dans laquelle l’apprenti reçoit sa formation 
+pratique et l’établissement de formation dans lequel l’apprenti se forme théoriquement. Il est 
+directement responsable des conditions de formation de son apprenti.
+
+Pour assurer la fonction de maître d’apprentissage, l’intéressé doit avoir un rôle :
+
+✓ D’écoute, de conseil, d’aide, d’accompagnement et de présentation de la profession et du 
+Centre auprès de l’apprenti,
+✓ D’accompagnement dans l’élaboration et la mise en œuvre du projet professionnel de 
+l’apprenti,
+✓ De contribution à l’acquisition de connaissances, de compétences et d’aptitudes 
+professionnelles par l’apprenti, au travers d’actions de formation en situation 
+professionnelle, notamment à travers l’organisation de l’activité de l’apprenti, le cas 
+échéant auprès d’autres salariés intéressés,
+✓ De veiller au respect de l’emploi du temps de l’apprenti et des conditions spécifiques 
+d’emploi des apprentis,
+✓ De participation à l’évaluation des compétences acquises dans le cadre de la formation 
+délivrée par le Centre,
+✓ De contrôle de l’assiduité et de la qualité du travail de l’apprenti,
+✓ De rencontre et débat avec le centre de formation d’apprentis,
+✓ De participation aux actions de suivi et de bilan de l’apprentissage
+✓ De veille professionnelle et d’actualisation des connaissances, notamment au regard des 
+référentiels des diplômes préparés.
+• Sélection du maître d’apprentissage par l’employeur
+Le maître d’apprentissage doit être salarié du Centre, volontaire et titulaire d’un diplôme ou d’un 
+titre relevant du domaine professionnel correspondant à la finalité du diplôme ou du titre préparé 
+par l’apprenti et justifier d’une expérience professionnelle d’au moins 2 ans dans le domaine ayant 
+un lien direct avec la qualification visée. 
+
+Dans la mesure du possible, le maître d’apprentissage exerce ou a exercé l’emploi/le poste auquel 
+prépare la formation de/des l’apprenti(s) qu’il encadre. 
+
+Un apprenti peut être encadré par plusieurs maîtres d'apprentissage formant une équipe tutorale. 
+
+Un des maîtres est alors désigné comme référent pour assurer la coordination de l’équipe et la 
+liaison avec le centre de formation d'apprentis.
+• Conditions d’exercice
+Pour permettre au maître d’apprentissage de remplir ses missions dans les conditions optimales, 
+les organisations syndicales et patronale de la branche conviennent que le maître d’apprentissage 
+ne peut exercer ses fonctions de maître d’apprentissage ou du tuteur simultanément à l’égard de 
+plus de 2 alternants au total.
+
+L’employeur doit dégager du temps au maître d’apprentissage pour réaliser l’accompagnement 
+
+de l’apprenti et gérer les relations avec le CFA. A ce titre, le maître d’apprentissage dispose jusqu’à 
+3 heures par semaine sur son temps de travail consacrées soit à l’accompagnement de l’apprenti 
+lorsque ce dernier est présent sur site, soit aux relations avec le CFA (coordination, réunions …) 
+qui dans ce cas devront être justifiées moyennant un délai de prévenance de 12 jours ouvrables.
+• Formation du maître d’apprentissage
+Conformément à l’article L6223-8 du Code du Travail, l’employeur doit veiller à ce que le maître 
+d’apprentissage bénéficie de formations qui lui permettent d’exercer correctement sa mission et 
+de suivre l’évolution du contenu des formations dispensées à l’apprenti et des diplômes qui les 
+valident.
+
+Lorsque la formation est réalisée au cours du contrat, elle doit avoir lieu durant le premier trimestre 
+d’exécution du contrat d’apprentissage.
+• Financement de la formation du maître d’apprentissage et de l’exercice de la 
+fonction
+Conformément à l’article L.6332-1-3, l’OPCO Santé prend en charge les contrats d'apprentissage, 
+les dépenses afférentes à la formation du maître d'apprentissage et à l'exercice de leurs fonctions.
+• Valorisation financière et professionnelle de la fonction de maître 
+d’apprentissage
+Le salarié maître d’apprentissage percevra, en plus de sa rémunération, une indemnité de 26 MG 
+brut par mois complet d’exercice de la fonction de maître d’apprentissage par salarié encadré. 
+
+Cette indemnité peut, au choix du salarié, prendre la forme :
+- Soit d’une indemnité financière versée mensuellement au salarié,
+- Soit d’un abondement sur le CPF qui sera versé à l’issue de la période d’exercice de maître 
+d’apprentissage,
+Cette 2ème option devra expressément être demandée par le maître d’apprentissage à la DRH 
+au moins huit jours avant le début de sa mission. A défaut, l’indemnité financière lui sera versée.
+
+Dans le cas où l’apprenti est encadré par plusieurs maîtres d'apprentissage, l’indemnité financière 
+ou l’abondement à hauteur de 26 MG mensuel sera réparti(e) entre les maîtres d’apprentissage 
+proportionnellement au temps consacré mensuellement par chacun à cette fonction.
+
+Les cadres supérieurs (groupes L, M et N de la Convention Collective) et le personnel praticien 
+référencé au chapitre 4 de l’annexe 2 de la Convention Collective Nationale des Centres de Lutte 
+Contre le Cancer exerçant des fonctions managériales, ne bénéficient pas de cette indemnité. 
+
+Cette indemnité financière ou cet abondement est versé(e) pendant toute la durée de formation 
+de l’apprenti. En cas de mois incomplet de mission de maître d’apprentissage (début ou fin de la 
+fonction d’encadrement en cours de mois), l’indemnité financière ou l’abondement est calculé au 
+prorata temporis. 
+
+Dans le cadre du parcours d’évolution professionnelle du salarié, les compétences acquises au 
+titre de l’exercice de la fonction de maître d’apprentissage seront évaluées lors de l’EAA. 
+
+3.2. Le contrat de professionnalisation
+3.2.1. Objet 
+Le contrat de professionnalisation a pour but d’acquérir une qualification professionnelle reconnue 
+(un diplôme ou un titre professionnel enregistré dans le répertoire national des certifications 
+professionnelles [RNCP]) ; un certificat de qualification professionnelle (CQP) ; une qualification 
+reconnue dans les classifications d’une convention collective nationale.
+
+3.2.2. Bénéficiaires
+Le contrat de professionnalisation est ouvert :
+- aux jeunes âgés de 16 à 25 ans révolus pour compléter leur formation initiale ;
+- aux demandeurs d’emploi âgés de 26 ans et plus, inscrits à Pôle emploi ;
+- aux bénéficiaires des minima sociaux suivants : revenu de solidarité active (RSA), allocation 
+spécifique de solidarité (ASS), allocation aux adultes handicapés (AAH) ;
+- aux personnes ayant bénéficié d’un contrat unique d’insertion – CUI – en CDD ou CDI.
+
+3.2.3. Durée du contrat
+Le contrat de professionnalisation peut être conclu pour une durée déterminée ou indéterminée.
+
+La durée d’un contrat de professionnalisation faisant l’objet d’un contrat de travail à durée 
+déterminée ou d’une action de professionnalisation se situant en début de contrat de travail à 
+durée indéterminée est comprise entre 6 et 12 mois.
+
+Toutefois pour tenir compte de la spécificité des diplômes du secteur, les organisations syndicales 
+et patronale de la branche décident que pour tous les titres et diplômes préparant à un métier 
+spécifique du secteur :
+- La durée du contrat de professionnalisation est portée, si nécessaire, jusqu’à 24 mois,
+- La durée des actions d’évaluation, d’accompagnement et d’enseignements généraux, 
+professionnels et technologiques est portée si nécessaire jusqu’à 2200 heures.
+
+3.2.4. Rémunération
+Les organisations syndicales et patronale de la branche souhaitent rendre attractif le contrat de 
+professionnalisation et ont pour cela déterminé des niveaux de rémunération supérieurs aux 
+dispositions légales. 
+
+La rémunération du salarié en contrat de professionnalisation est fixée comme suit :
+
+1) Pour les salariés non titulaires d’une qualification au moins égale à celle d’un baccalauréat 
+professionnel ou d’un titre ou diplôme à finalité professionnelle de même niveau :
+- Les salariés âgés de moins de 21 ans : 60 % du SMIC,
+- Les salariés âgés de 21 ans et moins de 26 ans : 75 % du SMIC.
+
+2) Pour les salariés titulaires d’une qualification au moins égale à celle d’un baccalauréat 
+professionnel ou d’un titre ou diplôme à finalité professionnelle de même niveau :
+- Les salariés âgés de moins de 21 ans : 70 % du SMIC,
+- Les salariés âgés de 21 ans et moins de 26 ans : 85 % du SMIC.
+
+3) Les salariés âgés de 26 ans et plus perçoivent une rémunération qui ne peut être inférieure 
+
+ni au SMIC, ni à 85 % de la rémunération minimale prévue par les dispositions 
+conventionnelles dont relève l’employeur.
+
+3.2.5. Financement des contrats de professionnalisation
+La CPNEFP de la branche des Centres de lutte contre le cancer détermine les montants et 
+modalités de prises en charge par l’OPCO Santé des contrats de professionnalisation.
+
+3.2.6. Le tuteur 
+Les dispositions relatives au maître d’apprentissage figurant à l’article 1.8 du présent avenant sont 
+intégralement applicables aux salariés qui exercent la mission de tuteur dans le cadre d’un contrat 
+de professionnalisation.
+
+ARTICLE 4. LE FINANCEMENT DE LA FORMATION PROFESSIONNELLE PAR LES 
+CENTRES
+Conformément à l’article 2.9.1.1 de la Convention Collective, le montant consacré par les Centres 
+de Lutte Contre le Cancer au financement de la formation continue ne peut être inférieur à 2,45 % 
+de la masse salariale brute (MSB).
+
+Cet investissement global formation est constitué de 2 éléments :
+
+ Conformément aux dispositions de l’article L6331-3 du Code du Travail, une contribution 
+légale, d’un montant de 1 % de la masse salariale brute annuelle, 
+ Une obligation conventionnelle pour chaque Centre de 1,45 % de la MSB destinée à 
+développer la formation professionnelle continue dans les établissements qui comprend :
+- Une part libre de 1,15 % de la MSB qui peut être gérée directement par 
+l’établissement ou faire l’objet, en tout ou partie, d’un versement à l’OPCO santé. 
+
+En cas de versement à l’OPCO Santé, la fraction ne pourra être inférieure à 0,65% 
+de la MSB. 
+- Une part mutualisée de 0,30 % de la MSB obligatoirement versée à l’OPCO Santé 
+par chaque Centre, sous réserve de la création d’une Section Paritaire 
+Professionnelle (SPP). Cette contribution est mutualisée dès réception au sein 
+d’un compte exclusivement réservé aux Centres de Lutte Contre le Cancer.
+
+Le pilotage financier de cette part mutualisée sera confié par la CPNEFP à la Section Paritaire 
+Professionnelle (SPP) dont la création doit faire l’objet d’un vote favorable du CA de l’OPCO 
+Santé.
+
+En l’absence de SPP, la collecte et la mutualisation de cette contribution par l’OPCO Santé ne 
+pourront se faire et chaque Centre conservera cette part de 0,30%.
+
+L’existence de cette contribution de 0,30 % est conditionnée à sa collecte par l’OPCO Santé en 
+vue de sa mutualisation. Si cette contribution ne pouvait plus être collectée par l’OPCO Santé, les 
+dispositions du présent article seraient caduques et prendraient fin le 31 décembre de la dernière 
+année civile au titre de laquelle l’OPCO Santé serait habilité à collecter.
+
+Le reliquat de l’enveloppe mutualisée non consommée en fin d’année s’ajoute à la contribution 
+conventionnelle mutualisée de l’année suivante. Toutefois, la CPNEFP pourra décider de 
+constituer ponctuellement des fonds de réserve. Elle en déléguera la gestion à la SPP.
+
+Les Centres peuvent décider de verser à l’OPCO Santé une contribution supérieure à l’obligation 
+conventionnelle mentionnée au point 2 ci-dessus. 
+
+La part mutualisée de 0,30% pourra évoluer par un avenant au présent avenant, au regard des 
+différents services et modalités de gestion que l’OPCO Santé sera en mesure de proposer pour 
+répondre aux besoins et attentes des Centres de Lutte Contre le Cancer. La capacité de l’OPCO 
+Santé à mobiliser des cofinancements extérieurs (Etat, ARS …) pour les formations sanitaires 
+sera également prise en compte.
+
+Les partenaires sociaux confient à la CPNEFP le soin de fixer les conditions et modalités 
+d’utilisation de cette contribution de 0,30%, dont une part sera obligatoirement affectée à la 
+qualification. La CPNEFP pourra décider de réaliser des transferts entre enveloppes financières 
+ou décider de la fongibilité de ces enveloppes afin d’optimiser la gestion des fonds. Elle en 
+déléguera la gestion à la SPP.
+
+Les partenaires sociaux au sein de la Commission Paritaire Nationale de l’Emploi et de la 
+Formation Professionnelle (CPNEFP) réaliseront un suivi annuel de l’utilisation de la part libre.
+
+La partie versée à l’OPCO Santé fera l’objet d’un bilan annuel d’utilisation globalisé réalisé par 
+l’OPCO Santé. La partie gérée en interne par les établissements fera l’objet d’un suivi au moyen 
+d’un tableau synthétique globalisé élaboré par la CPNEFP. Les Centres feront ainsi remonter 
+chaque année à UNICANCER la trame complétée. UNICANCER en réalisera une compilation des 
+données pour présenter en CPNEFP un bilan globalisé pour les différents champs figurant dans 
+la trame conçue paritairement.
+
+Les représentants de la branche au sein de l’OPCO Santé détermineront avec l’OPCO Santé le 
+niveau des frais de collecte et de gestion afférents à cette cotisation conventionnelle mutualisée 
+et les services mis en place par l’OPCO Santé dans le cadre de ces frais de gestion. Ces frais 
+feront l’objet d’une délibération votée en CA de l’OPCO Santé. Les frais de gestion de l’année N 
+seront votés en Conseil d’Administration de l’OPCO en fin d’année N.
+
+ARTICLE 5. LES MISSIONS CONFIEES A LA CPNEFP
+Conformément aux dispositions de l’avenant national n°2022-06 relatif à la création de la 
+Commission Paritaire Nationale de l’Emploi et de la Formation Professionnelle de la branche des 
+Centres de Lutte Contre le Cancer, les organisations syndicales et patronale de la branche 
+tiennent à rappeler les missions confiées à la CPNEFP :
+- Définir les orientations prioritaires de la branche en matière d’emploi et de formation 
+professionnelle, et, plus particulièrement, en matière d’observations prospectives des 
+métiers et des qualifications, d’alternance, de formation et de certifications 
+professionnelles de la branche, détermination des moyens nécessaires à leur mise en 
+œuvre et approbation des éventuels travaux réalisés ;
+- Fixer les coûts de prise en charge des contrats d’apprentissage, de professionnalisation et 
+de la professionnalisation en alternance conformément aux dispositions conventionnelles 
+et légales applicables ;
+- Définir les actions de formation prioritaires qui pourront faire l’objet d’un financement au 
+titre de l’abondement du CPF ;
+- Rechercher des partenariats pour favoriser le développement de la formation 
+professionnelle ;
+
+- Prendre des initiatives afin de pouvoir obtenir des pouvoirs publics les engagements 
+nécessaires au développement de la formation professionnelle ;
+- Suivre l'application des avenants applicables à la branche en matière de formation 
+professionnelle ;
+- Eventuellement, déterminer et conduire la politique de certification des compétences de la 
+branche (création et suivi des certifications professionnelles, inscription au RNCP ou au 
+Répertoire spécifique des habilitations et certifications…) ;
+- Etablir un bilan annuel des promotions réalisées dans le cadre des parcours professionnels 
+mis en place par la branche ;
+- Mettre en œuvre toute action de promotion et de développement de la formation 
+professionnelle et de l’apprentissage nécessaire ;
+- Avoir un rôle de veille et de propositions en matière d’innovations pédagogiques et 
+technologiques ;
+- Proposer les moyens de toute nature à mettre en œuvre dans les Centres pour garantir 
+l’adéquation des compétences des salariés à l’évolution des emplois et des métiers dans 
+leur parcours professionnel, en lien avec les travaux des instances paritaires des CLCC et 
+de l’Observatoire de l’OPCO Santé ;
+- Analyser les politiques de GPEC mises en place dans les Centres dans le cadre des 
+avenants en place en vue d’adapter les ressources disponibles aux besoins futurs ;
+- Examiner périodiquement l’évolution quantitative et qualitative des emplois et des 
+qualifications dans la branche.
+
+ARTICLE 6. DISPOSITIONS DIVERSES
+6.1 Durée de l’avenant et entrée en vigueur
+Modifié par avenant 2026.06 du 29.05.2026
+Le présent avenant est conclu pour une durée indéterminée et est intégré à la Convention 
+Collective Nationale des Centres de Lutte Contre le Cancer du 1er janvier 1999 dans une annexe 
+9. Les annexes 9, 10 et 11 seront renumérotées annexes 10, 11 et 12. Il entrera en vigueur le 1er 
+janvier 2027.
+
+A la suite de l’envoi du courrier de la dénonciation de l’accord sur la formation et le développement 
+des compétences dans le secteur sanitaire, social et médico-social privé à but non lucratif du 9 
+septembre 2020, qui a eu lieu le 26 novembre 2025, le présent avenant constitue un accord de 
+substitution, au sens de l’article L. 2261-11 du Code du travail, à l’accord susmentionné. 
+
+Il a également été procédé à la dénonciation de l’accord sur la promotion et reconversion en 
+alternance dans le secteur sanitaire, social et médico-social privé à but non lucratif du 7 décembre 
+2020 par courrier envoyé le 26 novembre 2025. Les dispositions relatives à la Pro-A, dispositif 
+amené à disparaître au 1er janvier 2026, sont en partie reprises et négociées à l’article 2.1 du 
+présent avenant de substitution.
+
+En conséquence, les accords du 9 septembre 2020 et du 7 décembre 2020 susvisés cesseront, 
+
+en application de la conclusion du présent accord de substitution, de s’appliquer dans leur 
+intégralité, et dans toutes leurs dispositions. Ils cesseront aussi de produire effet pour les salariés 
+de la branche des Centres de Lutte Contre le Cancer à compter de la date d’entrée en vigueur du 
+présent avenant, le 1er janvier 2027.
+
+6.2. Dépôt et publicité 
+Conformément aux dispositions des articles D. 2231-2 et D. 2231-3 du Code du Travail, le 
+présent avenant est déposé auprès des services centraux du Ministre chargé du travail, ainsi 
+qu’auprès du greffe du Conseil de Prud’hommes de Paris. Il sera également notifié à l’ensemble 
+des organisations de salariés représentatives dans la branche des Centres de Lutte Contre le 
+Cancer à l’issue de la procédure de signature, conformément à l’article L. 2231-5 du Code du 
+Travail. Il est publié dans la base de données nationale, conformément aux dispositions des 
+articles L. 2231-5-1 et R. 2231-1-1 du Code du Travail. En outre, un exemplaire est établi pour 
+chacune des parties signataires.
+
+ANNEXE n°1
+
+Modifié par avenant 2026.06 du 29.05.2026
+
+Découpage de la contribution relative à la formation professionnelle :
+
+▪  Investissement formation obligatoire minimal de 2,45 % de la masse salariale brute, réparti comme suit :
+   – Contribution légale : 1 %
+   – Contribution conventionnelle gérée par les Centres : 1,45 %
+
+  _________________________________________________________________________________________
+
+Annexe 10
 
 CHAPITRE 1
 
@@ -25432,7 +26632,7 @@ Cet accord vaut avenant à la Convention Collective du 1er janvier 1999.
 
 366
 
-Annexe 9
+Annexe 11
 
  ___________________________________________________________________
 
@@ -25484,7 +26684,7 @@ sa rémunération devra entraîner proratisation du D.I.T.
 
 367
 
-Annexe 9
+Annexe 11
 
 ▪  Différentiel d’Indemnité Transitoire : modalité de calcul
 
@@ -25546,7 +26746,7 @@ dans la Convention  Collective  de 1971  n’a pas été repris  dans  la Conven
 
 368
 
-Annexe 9
+Annexe 11
 
 À  titre  de  disposition  transitoire,  le  montant  acquis  du  supplément  familial  au  31  décembre
 1998 continue a être versé selon les dispositions de l’article 5.1.8. Ainsi, la C.N.P.I. rappelle
@@ -25598,9 +26798,39 @@ un gel pour l’année 2000.
 Cette  prime  versée  en  2000  deviendra,  à  compter  du  1er  janvier  2001,  mensuelle  et  donc,
 devra être divisée par 12 et incorporée à la BAC.
 
+A-9.1.6.  AVIS D’INTERPÉTATION DU 25 JUIN 2024
+
+▪  Parcours professionnel d’Infirmier Diplômé d’État (IDE) et de Manipulateur
+d’Électroradiologie Médicale
+
+La Commission Paritaire Permanente de Négociation et d’Interprétation (CPPNI), est
+interrogée sur l’interprétation de deux points de la fiche emploi CCN « IDE spécialisé ».
+
+Concernant le terme « coordination » figurant dans la première mission principale : « assurer
+en transversalité un rôle d’organisation, de coordination dans l’exercice de missions relevant
+de son domaine de spécialité » :
+
+L’interprétation retenue pour le terme « coordination » est la suivante :
+
+« Agencer et synchroniser les interventions et actions des différents acteurs, dans et hors les
+murs, intervenant dans son domaine de spécialité pour optimiser la prise en charge du patient. »
+
+Concernant l’onglet « Formation / Expérience », notamment le caractère obligatoire ou non de
+l’obtention d’un diplôme universitaire (DU) pour accéder à l’emploi d’IDE spécialisé, la fiche
+emploi précise que l’IDE spécialisé doit être titulaire de formations complémentaires internes
+ou externes en lien avec le domaine de spécialité (DU Douleur, EMSP, …) et/ou d’expériences
+équivalentes.
+
+L’interprétation retenue est la suivante :
+
+Cette rédaction ne rend pas obligatoire la formation, notamment l’obtention d’un diplôme
+universitaire (DU). Des expériences équivalentes peuvent s’avérer suffisantes. Il peut, en
+outre, s’agir de formations internes (sans délivrance de diplôme ou de certificat) ou de
+formations externes autres qu’un DU.
+
 369
 
-Annexe 10
+Annexe 12
 
  ___________________________________________________________________
 
@@ -25672,7 +26902,7 @@ UNIFED, CFE-CGC, CFTC
 
 370
 
-Annexe 10
+Annexe 12
 
 Accord relatif au travail à temps partiel
 

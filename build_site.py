@@ -381,6 +381,7 @@ SITUATION_EXCLUDED_IDS = {
     "due-parcours-macroscopie", "due-prime-pool-remplacement-am",
     "due-prime-pool-remplacement-soignants", "reprise-anciennete-mer-as-ide-2022",
     "vote-electronique-2026", "dialogue-social-2026", "cheques-syndicaux",
+    "cdd-objet-defini-2021",
 }
 SITUATION_EXCLUDED_CATEGORIES = {"NAO"}
 # Facettes à 1 seule valeur possible : rendues en Oui/Non plutôt qu'en
@@ -503,11 +504,19 @@ function renderSituationResults(filters) {
       '<div class="situation-matches">' + matches.map(a => renderMatch(a, k, v)).join('') + '</div>';
   });
 
-  // Généraux : l'accord ne restreint aucun des critères choisis (champ vide = non tagué,
-  // donc a priori applicable à tous), et ne remonte déjà dans aucun bloc ci-dessus.
+  // Généraux : l'accord ne remonte déjà dans aucun bloc ci-dessus. Seul le statut
+  // (cadre/non-cadre/praticien) partage réellement la population en groupes
+  // mutuellement exclusifs (ex. ATT cadres vs ATT non-cadres, parcours
+  // professionnel réservé aux non-cadres) : un accord tagué sur un autre statut
+  // que celui choisi ne s'applique effectivement pas, donc il reste exclu. Les
+  // autres critères (situation familiale, temps de travail...) ne sont que des
+  // citations additionnelles -- un accord qui n'a pas de citation pour la valeur
+  // choisie (ex. ATT non-cadres n'a pas de citation « parentalité » alors qu'il
+  // en a pour grossesse/enfant/proche aidant) reste malgré tout potentiellement
+  // applicable, simplement sans article spécifique dédié pour ce critère précis.
   const generaux = situationData.filter(a =>
     !matchedIds.has(a.id) &&
-    filterEntries.every(([k, v]) => (a[k] || []).length === 0)
+    (!filters.statut || (a.statut || []).length === 0 || (a.statut || []).includes(filters.statut))
   );
   if (matchedIds.size === 0 && generaux.length === 0) {
     situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;

@@ -12,7 +12,7 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Mise à jour au 1er juillet 2026, vérifiée visuellement sur le PDF (couverture, préambule, Annexe 9) : avenants 2026-01 + son avenant n°1 (Annexe 9 formation), 2026-05 (Comité Paritaire de Prévoyance) et 2026-06 (art. 2.9.1.1 et tableau Annexe 9), + avis d'interprétation A-9.1.6 du 25.06.2024, intégrés par patch ciblé. PDF non signé mais officiel (fourni par l'auteur du site). Incohérence du document source : le texte interne dit encore \"mis à jour au 1er février 2026\" par endroits malgré la couverture datée du 1er juillet 2026 (confirmé visuellement, non corrigé par nous). Grilles de classification et rémunération vérifiées manuellement (fiables) ; reste du texte narratif fiable ; autres tableaux non vérifiés un par un.",
+      "note": "Mise à jour au 1er juillet 2026, vérifiée visuellement sur le PDF (couverture, préambule, Annexe 9) : avenants 2026-01 + son avenant n°1 (Annexe 9 formation), 2026-05 (Comité Paritaire de Prévoyance) et 2026-06 (art. 2.9.1.1 et tableau Annexe 9), + avis d'interprétation A-9.1.6 du 25.06.2024, intégrés par patch ciblé. PDF non signé mais officiel. Grilles de classification et rémunération vérifiées manuellement (fiables) ; reste du texte narratif fiable ; autres tableaux non vérifiés un par un.",
       "id": "ccn-clcc",
       "titre": "Convention collective nationale des CLCC (texte intégral)",
       "categorie": "CCN",

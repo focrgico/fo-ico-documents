@@ -368,6 +368,21 @@ FACET_LABELS = {
 # Libellés affichés pour chaque valeur de facette (ex. statut/non-cadre -> "Non-cadre") —
 # dérivé de FACET_OPTIONS, utilisé côté JS pour titrer les blocs de résultats par critère.
 FACET_VALUE_LABELS = {key: dict(opts) for key, opts in FACET_OPTIONS.items()}
+
+# Accords retirés des résultats de "Décrivez votre situation" (validé avec David Di Peri
+# le 2026-10-01) : spécifiques à une seule catégorie professionnelle (parcours pro, primes
+# de pool de remplacement et reprise d'ancienneté réservées à certaines professions), ou
+# relevant du fonctionnement syndical/institutionnel plutôt que des droits individuels du
+# salarié (NAO, élections, dialogue social, chèques syndicaux) — hors-sujet pour cet outil
+# centré sur "qu'est-ce qui s'applique à MA situation personnelle". Restent consultables
+# normalement sur les pages Accords / Résumés.
+SITUATION_EXCLUDED_IDS = {
+    "parcours-am-2025", "parcours-ide-mer-2025", "parcours-physiciens-2022",
+    "due-parcours-macroscopie", "due-prime-pool-remplacement-am",
+    "due-prime-pool-remplacement-soignants", "reprise-anciennete-mer-as-ide-2022",
+    "vote-electronique-2026", "dialogue-social-2026", "cheques-syndicaux",
+}
+SITUATION_EXCLUDED_CATEGORIES = {"NAO"}
 # Facettes à 1 seule valeur possible : rendues en Oui/Non plutôt qu'en
 # Tous/[valeur unique], plus lisible pour une caractéristique personnelle
 # binaire. "Non" reste techniquement équivalent à "Tous" (case vide, pas de
@@ -500,7 +515,13 @@ function renderSituationResults(filters) {
   }
   const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
   if (generaux.length > 0) {
-    html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
+    // Aucun critère coché : la liste "générale" est simplement la liste complète,
+    // pas des accords confirmés applicables à tous — intitulé distinct pour ne pas
+    // l'affirmer à tort.
+    const generauxHeading = filterEntries.length === 0
+      ? generaux.length + ' accord(s) — aucun critère sélectionné'
+      : generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés';
+    html += '<h4 class="situation-subheading">' + generauxHeading + '</h4><div class="situation-list">' +
       generaux.map(renderList).join('') + '</div>';
   }
   situationResults.innerHTML = html + ccnBlock;
@@ -511,7 +532,12 @@ function renderSituationResults(filters) {
 def build_situation_data(cat):
     # La CCN est traitée à part (bloc dédié, cf. build_situation_ccn_data) : elle n'a
     # pas de résumé propre et son lien générique vers accords.html n'apportait rien ici.
-    non_ccn = [a for a in cat["accords"] if a.get("categorie") != "CCN"]
+    non_ccn = [
+        a for a in cat["accords"]
+        if a.get("categorie") != "CCN"
+        and a.get("categorie") not in SITUATION_EXCLUDED_CATEGORIES
+        and a["id"] not in SITUATION_EXCLUDED_IDS
+    ]
     data = []
     for a in dedup_by_resume(non_ccn) + [
         a for a in non_ccn if not a.get("chemin_resume_md")
@@ -682,27 +708,26 @@ function runSituationSearch() {
   const fd = new FormData(situationForm);
   const filters = {};
   for (const [k, v] of fd.entries()) { if (v) filters[k] = v; }
-  if (Object.keys(filters).length === 0) {
-    situationResults.innerHTML = '<p class="note">Choisissez au moins un critère.</p>';
-    return;
-  }
+  // Sans aucun critère coché, on affiche quand même la liste complète des accords
+  // (plutôt que de bloquer sur "Choisissez au moins un critère") : renderSituationResults
+  // gère déjà ce cas, un filtre vide ne restreignant aucun accord.
   renderSituationResults(filters);
   // Met à jour l'URL (sans recharger la page) pour que le lien reste partageable
   // et que la recherche survive à un rafraîchissement de la page.
-  history.replaceState(null, '', 'situation.html?' + new URLSearchParams(filters).toString());
+  const qs = new URLSearchParams(filters).toString();
+  history.replaceState(null, '', 'situation.html' + (qs ? '?' + qs : ''));
 }
 situationForm.addEventListener('submit', (e) => { e.preventDefault(); runSituationSearch(); });
 
 // Arrivée depuis l'accueil (ou lien partagé) : pré-remplit le formulaire depuis
-// l'URL et lance la recherche automatiquement.
+// l'URL. La recherche se lance systématiquement, avec ou sans critère dans l'URL.
 const initialParams = new URLSearchParams(location.search);
-let hasInitialFilter = false;
 for (const [key, value] of initialParams.entries()) {
   const field = situationForm.querySelector(`select[name="${key}"]`);
-  if (field) { field.value = value; hasInitialFilter = true; }
+  if (field) { field.value = value; }
 }
 toggleModaliteField();
-if (hasInitialFilter) { runSituationSearch(); }
+runSituationSearch();
 </script>
 """
     html += page_foot()

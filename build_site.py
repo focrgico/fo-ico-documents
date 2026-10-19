@@ -48,7 +48,7 @@ import re
 import shutil
 import sys
 from html.parser import HTMLParser
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 
 try:
     import markdown as mdlib
@@ -96,6 +96,60 @@ def url_for(rel_path, blob=False):
         return None
     base = BLOB_BASE if blob else RAW_BASE
     return base + quote(rel_path, safe="/")
+
+
+def local_pdf_url(rel_path, subdir="pdf"):
+    """URL locale (relative à la racine du site) d'un PDF déjà copié par
+    copy_site_pdfs() dans site/<subdir>/ — à préfixer de '../' quand on l'utilise
+    depuis une page située dans un sous-dossier (resumes/, textes/).
+
+    Sert plutôt que url_for() (qui pointe vers raw.githubusercontent.com) pour tout
+    lien PDF du site : GitHub sert les fichiers bruts avec
+    Content-Type: application/octet-stream (+ X-Content-Type-Options: nosniff),
+    quel que soit le type réel du fichier — ce qui force un téléchargement
+    systématique dans le navigateur, même pour un lien censé juste ouvrir le PDF
+    en consultation (vérifié par curl -I le 19/10/2026). Un fichier servi par le
+    site lui-même (même origine) reçoit le bon Content-Type (application/pdf) :
+    un lien simple l'ouvre dans l'onglet, et l'attribut HTML "download" (honoré
+    uniquement en same-origin par les navigateurs) déclenche un vrai téléchargement
+    quand on le souhaite explicitement."""
+    if not rel_path:
+        return None
+    return subdir + "/" + quote(os.path.basename(rel_path))
+
+
+def copy_site_pdfs(cat, out_dir):
+    """Copie dans site/ tous les PDF référencés par le catalogue — chemin_pdf
+    (accords signés, grilles CCN) dans pdf/, chemin_depliant dans depliants/ —
+    pour qu'ils soient servis en même origine que le site (cf. local_pdf_url).
+    Un même fichier (même nom de base) n'est copié qu'une fois ; aucune collision
+    de nom entre chemins différents n'a été constatée dans le catalogue actuel
+    (vérifié par script le 19/10/2026)."""
+    def copy_unique(paths, subdir):
+        dest_dir = os.path.join(out_dir, subdir)
+        os.makedirs(dest_dir, exist_ok=True)
+        seen = set()
+        for p in paths:
+            if not p:
+                continue
+            filename = os.path.basename(p)
+            if filename in seen:
+                continue
+            seen.add(filename)
+            src = os.path.join(DOCS_DIR, p)
+            if os.path.exists(src):
+                shutil.copy(src, os.path.join(dest_dir, filename))
+            else:
+                print(f"ATTENTION : PDF introuvable à {src} (référencé dans le catalogue)")
+
+    pdf_paths, dep_paths = [], []
+    for a in cat["accords"]:
+        pdf_paths.extend(pdf_list(a))
+        dep = a.get("chemin_depliant")
+        if dep:
+            dep_paths.extend(dep if isinstance(dep, list) else [dep])
+    copy_unique(pdf_paths, "pdf")
+    copy_unique(dep_paths, "depliants")
 
 
 def pdf_list(a):
@@ -202,6 +256,27 @@ def fix_relative_links(html_fragment, resume_rel_path):
         return f'{attr}="{url_for(resolved)}"'
 
     return LINK_ATTR_RE.sub(repl, html_fragment)
+
+
+DEPLIANT_LINK_RE = re.compile(
+    re.escape(RAW_BASE) + r"accords-locaux/Depliants_FO/([^\"'\s)]+)"
+)
+
+
+def localize_depliant_links(html_fragment):
+    """Dans un fragment de résumé déjà passé par fix_relative_links() (ex. le bloc
+    « Dépliant à imprimer » en tête de résumé), réécrit les liens vers un dépliant
+    du chemin GitHub absolu vers le chemin local site/depliants/ — même raison que
+    local_pdf_url() : raw.githubusercontent.com sert tout fichier en
+    Content-Type: application/octet-stream, ce qui force un téléchargement même
+    pour un lien voulu comme simple consultation (vérifié par curl -I le
+    19/10/2026). À appliquer seulement à la version HTML du fragment : le .docx
+    exporté (fichier autonome, ouvert hors du site) doit garder l'URL GitHub
+    absolue pour que le lien reste utilisable une fois téléchargé."""
+    def repl(m):
+        filename = unquote(m.group(1))
+        return local_pdf_url(filename, subdir="../depliants")
+    return DEPLIANT_LINK_RE.sub(repl, html_fragment)
 
 
 COUVERTURE_RE = re.compile(
@@ -639,7 +714,7 @@ def build_situation_ccn_data(cat):
         kind = CCN_ID_TO_KIND.get(a["id"])
         if not kind:
             continue
-        href = "ccn-texte.html" if kind == "texte" else (url_for(a.get("chemin_pdf")) or "ccn.html")
+        href = "ccn-texte.html" if kind == "texte" else (local_pdf_url(a.get("chemin_pdf")) or "ccn.html")
         data.append({"id": a["id"], "titre": a["titre"], "href": href, "kind": kind})
     return data
 
@@ -865,10 +940,10 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         if not pdfs:
             action = '<span class="muted">PDF non disponible</span>'
         elif len(pdfs) == 1:
-            action = f'<a href="{esc(url_for(pdfs[0]))}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
+            action = f'<a href="{esc(local_pdf_url(pdfs[0]))}" download="{esc(os.path.basename(pdfs[0]))}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
         else:
             action = " · ".join(
-                f'<a href="{esc(url_for(p))}" target="_blank" rel="noopener">PDF {i + 1}/{len(pdfs)} →</a>'
+                f'<a href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" target="_blank" rel="noopener">PDF {i + 1}/{len(pdfs)} →</a>'
                 for i, p in enumerate(pdfs)
             )
         html += f"""    <div class="doc-row" data-id="{esc(a['id'])}" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">
@@ -1366,6 +1441,10 @@ def build_resume_pages(cat, out_dir):
         if fragment is None:
             skipped.append(a["id"])
             continue
+        # fragment garde ses URL GitHub absolues pour le .docx exporté plus bas
+        # (fichier autonome, doit rester cliquable hors du site) ; fragment_html
+        # est la version affichée sur la page, avec les liens dépliant localisés.
+        fragment_html = localize_depliant_links(fragment)
 
         html = page_head(a["titre"], "resumes.html", base="../")
         html += f"""
@@ -1378,7 +1457,7 @@ def build_resume_pages(cat, out_dir):
 </section>
 
 <article class="resume-content" id="resume-article">
-{fragment}
+{fragment_html}
 </article>
 <script>
 (function () {{
@@ -1421,14 +1500,15 @@ def build_resume_pages(cat, out_dir):
         dep_list = dep if isinstance(dep, list) else ([dep] if dep else [])
         for i, d in enumerate(dep_list):
             label = "Télécharger le dépliant (PDF) →" if len(dep_list) == 1 else f"Télécharger le dépliant {i + 1}/{len(dep_list)} (PDF) →"
-            html += f'    <a class="download-btn primary" href="{esc(url_for(d))}" target="_blank" rel="noopener">{label}</a>\n'
+            dep_filename = os.path.basename(d)
+            html += f'    <a class="download-btn primary" href="../{esc(local_pdf_url(d, subdir="depliants"))}" download="{esc(dep_filename)}" rel="noopener">{label}</a>\n'
         if not dep_list:
             html += '    <span class="muted">Pas encore de dépliant pour cet accord.</span>\n'
 
         pdfs = pdf_list(a)
         for i, p in enumerate(pdfs):
             label = "Voir l'accord signé (PDF) →" if len(pdfs) == 1 else f"Voir l'accord signé {i + 1}/{len(pdfs)} (PDF) →"
-            html += f'    <a class="download-btn" href="{esc(url_for(p))}" target="_blank" rel="noopener">{label}</a>\n'
+            html += f'    <a class="download-btn" href="../{esc(local_pdf_url(p))}" target="_blank" rel="noopener">{label}</a>\n'
 
         html += "  </div>\n</section>\n"
         html += page_foot(base="../")
@@ -1552,7 +1632,7 @@ def build_doc_search_data(entries, path_key, group_key="categorie"):
         docs[a["id"]] = {
             "titre": a["titre"],
             "categorie": a.get(group_key, a["categorie"]),
-            "pdf": url_for(pdf_list(a)[0]) if pdf_list(a) else None,
+            "pdf": local_pdf_url(pdf_list(a)[0]) if pdf_list(a) else None,
             "ocr": ocr,
             "n": idx,
         }
@@ -1580,7 +1660,7 @@ def build_accord_textes(docs, passages, out_dir):
         by_doc.setdefault(p["a"], []).append(p)
     for doc_id, d in docs.items():
         html = page_head(d["titre"], "accords.html", base="../")
-        pdf = (f'<a href="{esc(d["pdf"])}" target="_blank" rel="noopener">le PDF signé</a>'
+        pdf = (f'<a href="../{esc(d["pdf"])}" target="_blank" rel="noopener">le PDF signé</a>'
                if d["pdf"] else "le PDF signé")
         warn = ""
         if d["ocr"]:
@@ -1684,7 +1764,7 @@ def build_ccn(cat, out_dir):
   </div>
   <p class="note" style="margin: -10px 0 20px;">Découpage automatique en passages à partir du texte converti — les numéros
   d'article affichés sont indicatifs (conversion automatique du PDF, cf. dépôt) ; vérifiez toujours sur le
-  <a href="{esc(url_for(ccn.get('chemin_pdf')))}" target="_blank" rel="noopener">PDF signé</a> pour une citation officielle.</p>
+  <a href="{esc(local_pdf_url(ccn.get('chemin_pdf')))}" target="_blank" rel="noopener">PDF signé</a> pour une citation officielle.</p>
   <div id="ccn-count" class="ccn-count"></div>
   <div id="ccn-results" class="ccn-results"></div>
 </section>
@@ -1880,7 +1960,9 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
             secondaire = secondaire[:1].upper() + secondaire[1:] if secondaire else ""
 
             counter = f'<span class="leaflet-counter">{i + 1}/{len(dep_list)}</span>' if len(dep_list) > 1 else ""
-            dep_url = url_for(d)
+            # Copié dans site/depliants/ par copy_site_pdfs() (même origine que le
+            # site, requis pour que "download" fonctionne — cf. local_pdf_url).
+            dep_url = local_pdf_url(d, subdir="depliants")
             html += f"""    <div class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}">
       <a class="leaflet-cover-link" href="{esc(dep_url)}" target="_blank" rel="noopener" aria-label="Consulter {esc(real_label)}">
         <div class="leaflet-cover">
@@ -1994,6 +2076,8 @@ def main():
 
     style_src = os.path.join(ASSETS_SRC, "style.css")
     shutil.copy(style_src, os.path.join(OUT_DIR, "assets", "style.css"))
+
+    copy_site_pdfs(cat, OUT_DIR)
 
     build_index(cat, OUT_DIR)
     build_situation_page(cat, OUT_DIR)

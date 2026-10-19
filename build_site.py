@@ -1522,7 +1522,7 @@ def build_resume_pages(cat, out_dir):
             html += f'    <a class="download-btn primary" href="{esc(a["id"])}.docx">Télécharger le résumé (.docx) →</a>\n'
         except Exception as e:
             print(f"ATTENTION : conversion .docx échouée pour {a['id']} ({e}) — repli sur le .md brut.")
-            html += f'    <a class="download-btn" href="{esc(resume_raw_url)}" target="_blank" rel="noopener">Télécharger le résumé (.md) →</a>\n'
+            html += f'    <a class="download-btn primary" href="{esc(resume_raw_url)}" target="_blank" rel="noopener">Télécharger le résumé (.md) →</a>\n'
 
         dep = a.get("chemin_depliant")
         dep_list = dep if isinstance(dep, list) else ([dep] if dep else [])
@@ -1536,7 +1536,7 @@ def build_resume_pages(cat, out_dir):
         pdfs = pdf_list(a)
         for i, p in enumerate(pdfs):
             label = "Voir l'accord signé (PDF) →" if len(pdfs) == 1 else f"Voir l'accord signé {i + 1}/{len(pdfs)} (PDF) →"
-            html += f'    <a class="download-btn" href="../{esc(local_pdf_url(p))}" target="_blank" rel="noopener">{label}</a>\n'
+            html += f'    <a class="download-btn primary" href="../{esc(local_pdf_url(p))}" target="_blank" rel="noopener">{label}</a>\n'
 
         html += "  </div>\n</section>\n"
         html += page_foot(base="../")

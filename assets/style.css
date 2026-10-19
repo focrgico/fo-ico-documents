@@ -221,7 +221,12 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   border-bottom: 1px solid var(--bordure); background: #FFFFFF;
 }
 .doc-row:last-child { border-bottom: none; }
+.doc-row-avenant { padding-left: 52px; background: var(--gris); position: relative; }
+.doc-row-avenant::before {
+  content: "↳"; position: absolute; left: 24px; color: var(--muted); font-size: 15px;
+}
 .tag { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; flex-shrink: 0; }
+.tag-avenant { background: #F3E6D0; color: #8A5A1E; }
 .doc-title { flex-grow: 1; font-size: 14.5px; }
 .doc-action { flex-shrink: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .doc-btn {

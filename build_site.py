@@ -41,6 +41,7 @@ du catalogue (accords locaux, NAO, DUE, élections), à partir de leur .md conve
 Chaque document a sa page de lecture site/textes/<id>.html (ancres #p<n>).
 """
 
+import hashlib
 import json
 import os
 import re
@@ -70,6 +71,23 @@ CATALOGUE_PATH = os.path.join(ROOT, "catalogue", "catalogue.json")
 DOCS_DIR = os.path.join(ROOT, "docs")
 OUT_DIR = os.path.join(ROOT, "site")
 ASSETS_SRC = os.path.join(ROOT, "assets_src")  # logo.png, style.css attendus ici
+
+
+def _css_version():
+    """Hash court du contenu de style.css, utilisé comme paramètre ?v= sur son
+    lien <link> : GitHub Pages (CDN Fastly) a mis en cache l'URL assets/style.css
+    pendant plus de 20 minutes lors de la mise à jour du 19/10/2026, et un
+    rechargement forcé côté navigateur ne force pas le CDN à revalider. Changer
+    l'URL (nouveau hash) à chaque modification du CSS force une requête fraîche,
+    sans dépendre d'une purge de cache côté GitHub."""
+    style_path = os.path.join(ASSETS_SRC, "style.css")
+    if not os.path.exists(style_path):
+        return "0"
+    with open(style_path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:10]
+
+
+CSS_VERSION = _css_version()
 
 
 def url_for(rel_path, blob=False):
@@ -105,7 +123,7 @@ PAGE_HEAD = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — FO ICO</title>
 <link rel="icon" href="{base}assets/favicon.png" type="image/png">
-<link rel="stylesheet" href="{base}assets/style.css">
+<link rel="stylesheet" href="{base}assets/style.css?v={css_version}">
 </head>
 <body class="{body_class}">
 <header class="nav">
@@ -142,7 +160,9 @@ def nav_classes(active):
 
 
 def page_head(title, active, base="", body_class=""):
-    return PAGE_HEAD.format(title=title, base=base, body_class=body_class, **nav_classes(active))
+    return PAGE_HEAD.format(
+        title=title, base=base, body_class=body_class, css_version=CSS_VERSION, **nav_classes(active)
+    )
 
 
 def page_foot(base=""):

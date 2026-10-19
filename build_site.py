@@ -404,6 +404,8 @@ def situation_fields_html():
             wrapper_id = ' id="field-modalite_horaire"'
         elif key == "travail_poste":
             wrapper_id = ' id="field-travail_poste"'
+        elif key == "travail_nuit":
+            wrapper_id = ' id="field-travail_nuit"'
         default_label = "Non" if key in BOOLEAN_FACETS else "Tous"
         html += f"""        <label class="select-field"{wrapper_id}>
           <span class="select-label">{esc(label)}</span>
@@ -416,18 +418,26 @@ def situation_fields_html():
     return html
 
 
-# Bascule Modalité horaire / Poste selon le Statut — identique sur l'accueil
-# et sur situation.html. Suppose que `situationForm` est déjà défini.
+# Bascule Modalité horaire / Poste / Travail de nuit selon le Statut — identique
+# sur l'accueil et sur situation.html. Suppose que `situationForm` est déjà défini.
 # - Modalité horaire (forfait jours/heures) : concerne uniquement les cadres
 #   et cadres praticiens, donc affichée seulement pour ces deux statuts.
 # - Poste (posté/non posté) : notion réservée aux non-cadres (accords "postés"
 #   / "non postés"), donc masquée dès qu'on choisit cadre ou praticien.
+# - Travail de nuit : à l'ICO, le statut de "travailleur de nuit" n'est défini
+#   (accords ATT non-cadres art. 4.4.2 et accord "Travail de nuit" 2026) que
+#   pour le personnel non cadre (IDE/AS/ASH) ; les praticiens relèvent d'un
+#   régime distinct de gardes/astreintes (art. 2.6.3.2 et s. de la CCN), pas du
+#   statut de travailleur de nuit. Masquée dès qu'on choisit cadre ou praticien,
+#   pour les mêmes raisons que Poste.
 SITUATION_TOGGLE_JS = """
 const statutSelect = situationForm.querySelector('select[name="statut"]');
 const modaliteField = document.getElementById('field-modalite_horaire');
 const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
 const posteField = document.getElementById('field-travail_poste');
 const posteSelect = posteField.querySelector('select[name="travail_poste"]');
+const nuitField = document.getElementById('field-travail_nuit');
+const nuitSelect = nuitField.querySelector('select[name="travail_nuit"]');
 
 function toggleModaliteField() {
   const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
@@ -435,6 +445,8 @@ function toggleModaliteField() {
   if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
   posteField.style.display = isCadreOuPraticien ? 'none' : '';
   if (isCadreOuPraticien) { posteSelect.value = ''; }
+  nuitField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { nuitSelect.value = ''; }
 }
 statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();
@@ -476,19 +488,39 @@ function renderSituationResults(filters) {
   const matchedIds = new Set();
   // Pour l'accord et le critère (k, v) affichés, cherche la citation vérifiée
   // correspondante (a.justificatifs[k][v]) et son lien vers le passage concerné
-  // (résumé ou texte intégral, avec surlignage ?q=...). Pas de justificatif
-  // enregistré pour ce critère précis : l'accord reste listé, simplement sans
-  // citation détaillée — jamais de référence inventée.
+  // (résumé, texte intégral de l'accord, ou — loc "ccn" — texte intégral de la
+  // CCN elle-même, avec surlignage ?q=... et ancre #p<idx> sur le paragraphe
+  // repéré). Pas de justificatif enregistré pour ce critère précis : l'accord
+  // reste listé, simplement sans citation détaillée — jamais de référence
+  // inventée. Une entrée peut être un objet unique ou un tableau d'objets
+  // (ex. plusieurs articles CCN pertinents pour un même critère).
+  const citationLink = (a, j) => {
+    if (j.loc === 'ccn') return 'ccn-texte.html?q=' + encodeURIComponent(j.q) + (j.p != null ? '#p' + j.p : '');
+    const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
+    return base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
+  };
   const renderCitation = (a, k, v) => {
     const j = a.justificatifs && a.justificatifs[k] && a.justificatifs[k][v];
     if (!j) return '';
-    const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
-    const link = base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
-    return '<ul class="situation-citations"><li><a href="' + link + '">' + j.t + ' →</a></li></ul>';
+    const items = Array.isArray(j) ? j : [j];
+    return '<ul class="situation-citations">' +
+      items.map(it => '<li><a href="' + citationLink(a, it) + '">' + it.t + ' →</a></li>').join('') +
+      '</ul>';
   };
   const renderMatch = (a, k, v) =>
     '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a>' +
     renderCitation(a, k, v) + '</div>';
+
+  // Seul le statut (cadre/non-cadre/praticien) partage réellement la population
+  // en groupes mutuellement exclusifs (cf. note sur `generaux` plus bas) : un
+  // accord tagué sur un autre statut que celui choisi ne s'applique pas à la
+  // personne, donc il ne doit apparaître dans AUCUN bloc de résultat, y compris
+  // les blocs par critère ci-dessous (pas seulement le bloc "Statut" lui-même) —
+  // sinon un accord non-cadre peut remonter dans le bloc "Temps de travail" ou
+  // "Travail de nuit" simplement parce qu'il correspond à ce critère-là, alors
+  // qu'il ne concerne pas la personne.
+  const statutCompatible = a =>
+    !filters.statut || (a.statut || []).length === 0 || (a.statut || []).includes(filters.statut);
 
   let html = '';
   // Un bloc de résultats par critère coché, chacun traité indépendamment (OR) :
@@ -496,7 +528,7 @@ function renderSituationResults(filters) {
   // remonter, pas seulement les accords qui répondraient à tous les critères
   // à la fois.
   filterEntries.forEach(([k, v]) => {
-    const matches = situationData.filter(a => (a[k] || []).includes(v));
+    const matches = situationData.filter(a => (a[k] || []).includes(v) && statutCompatible(a));
     matches.forEach(a => matchedIds.add(a.id));
     if (matches.length === 0) return;
     const label = (facetValueLabels[k] && facetValueLabels[k][v]) || v;
@@ -504,20 +536,14 @@ function renderSituationResults(filters) {
       '<div class="situation-matches">' + matches.map(a => renderMatch(a, k, v)).join('') + '</div>';
   });
 
-  // Généraux : l'accord ne remonte déjà dans aucun bloc ci-dessus. Seul le statut
-  // (cadre/non-cadre/praticien) partage réellement la population en groupes
-  // mutuellement exclusifs (ex. ATT cadres vs ATT non-cadres, parcours
-  // professionnel réservé aux non-cadres) : un accord tagué sur un autre statut
-  // que celui choisi ne s'applique effectivement pas, donc il reste exclu. Les
-  // autres critères (situation familiale, temps de travail...) ne sont que des
-  // citations additionnelles -- un accord qui n'a pas de citation pour la valeur
-  // choisie (ex. ATT non-cadres n'a pas de citation « parentalité » alors qu'il
-  // en a pour grossesse/enfant/proche aidant) reste malgré tout potentiellement
-  // applicable, simplement sans article spécifique dédié pour ce critère précis.
-  const generaux = situationData.filter(a =>
-    !matchedIds.has(a.id) &&
-    (!filters.statut || (a.statut || []).length === 0 || (a.statut || []).includes(filters.statut))
-  );
+  // Généraux : l'accord ne remonte déjà dans aucun bloc ci-dessus (même filtre
+  // de compatibilité de statut, cf. plus haut). Les autres critères (situation
+  // familiale, temps de travail...) ne sont que des citations additionnelles --
+  // un accord qui n'a pas de citation pour la valeur choisie (ex. ATT non-cadres
+  // n'a pas de citation « parentalité » alors qu'il en a pour grossesse/enfant/
+  // proche aidant) reste malgré tout potentiellement applicable, simplement sans
+  // article spécifique dédié pour ce critère précis.
+  const generaux = situationData.filter(a => !matchedIds.has(a.id) && statutCompatible(a));
   if (matchedIds.size === 0 && generaux.length === 0) {
     situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
     return;

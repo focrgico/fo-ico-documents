@@ -111,7 +111,25 @@
       "travail_nuit": [],
       "travail_poste": [],
       "handicap": [],
-      "situation_familiale": []
+      "situation_familiale": [],
+      "justificatifs": {
+        "statut": {
+          "cadre": [
+            {
+              "t": "A-1.3.1.2 (Annexe 1, Chapitre 3) — « Le classement des personnels cadres se fait par application de la méthodologie définie par la F.N.C.L.C.C »",
+              "q": "classement des personnels cadres",
+              "loc": "ccn",
+              "p": 2598
+            },
+            {
+              "t": "Art. 8, Annexe 10 (avenant ARTT) — « Les cadres effectuant des horaires fixes et réguliers bénéficient des mesures de réduction de temps de travail »",
+              "q": "horaires fixes et réguliers",
+              "loc": "ccn",
+              "p": 7166
+            }
+          ]
+        }
+      }
     },
     {
       "pdf_ok": true,

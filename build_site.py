@@ -80,8 +80,18 @@ def url_for(rel_path, blob=False):
     return base + quote(rel_path, safe="/")
 
 
+def pdf_list(a):
+    """chemin_pdf peut être une chaîne (1 PDF) ou une liste (plusieurs accords
+    signés séparément regroupés sous un même résumé, ex. compteur intermédiaire
+    postés/non-postés). Retourne toujours une liste de chemins (peut être vide)."""
+    v = a.get("chemin_pdf")
+    if not v:
+        return []
+    return v if isinstance(v, list) else [v]
+
+
 CATEGORY_COLORS = {
-    "CCN": ("#AFC4EA", "#14203A"),          # bleu encore plus soutenu
+    "CCN": ("#AFC4EA", "#156082"),          # bleu encore plus soutenu
     "Accord local": ("#F5E1E3", "#7A1F2B"), # bordeaux — net écart avec le rouge vif des boutons/liens
     "NAO": ("#E3F1EF", "#0F6B62"),          # vert-bleu sobre
     "Élections": ("#F5EEE1", "#7A6540"),    # or
@@ -94,6 +104,7 @@ PAGE_HEAD = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} — FO ICO</title>
+<link rel="icon" href="{base}assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="{base}assets/style.css">
 </head>
 <body class="{body_class}">
@@ -336,37 +347,243 @@ def html_fragment_to_docx(fragment_html, title, out_path):
 
 
 FACET_OPTIONS = {
-    "statut": [("cadre", "Cadre"), ("non-cadre", "Non-cadre"), ("praticien", "Cadre praticien")],
-    "profession": [
-        ("ide", "IDE (infirmier)"), ("as", "Aide-soignant"), ("mer", "MER (manipulateur radio)"),
-        ("ash", "ASH"), ("brancardier", "Brancardier"), ("dieteticien", "Diététicien"),
-        ("kine", "Kinésithérapeute"), ("enseignant-apa", "Enseignant APA"),
-        ("assistant-medical", "Assistant médical"), ("technicien-labo", "Technicien de laboratoire"),
-        ("physicien-medical", "Physicien médical"), ("ingenieur", "Ingénieur"),
-    ],
+    "statut": [("non-cadre", "Non-cadre"), ("cadre", "Cadre"), ("praticien", "Cadre praticien")],
     "modalite_horaire": [("forfait-jours", "Forfait jours"), ("forfait-heures", "Forfait heures")],
     "temps_travail": [("temps-plein", "Temps plein"), ("temps-partiel", "Temps partiel")],
+    "travail_nuit": [("nuit", "Oui")],
+    "travail_poste": [("poste", "Posté"), ("non-poste", "Non posté")],
+    "handicap": [("rqth", "Oui")],
+    "situation_familiale": [
+        ("grossesse", "Grossesse / maternité"), ("enfant", "Enfant malade ou handicapé"),
+        ("proche-aidant", "Proche aidant"), ("parentalite", "Parentalité (naissance, adoption, congé parental)"),
+    ],
 }
 FACET_LABELS = {
-    "statut": "Statut", "profession": "Catégorie professionnelle",
+    "statut": "Statut",
     "modalite_horaire": "Modalité horaire", "temps_travail": "Temps de travail",
+    "travail_nuit": "Travail de nuit",
+    "travail_poste": "Poste", "handicap": "Situation de handicap",
+    "situation_familiale": "Situation familiale",
 }
+# Libellés affichés pour chaque valeur de facette (ex. statut/non-cadre -> "Non-cadre") —
+# dérivé de FACET_OPTIONS, utilisé côté JS pour titrer les blocs de résultats par critère.
+FACET_VALUE_LABELS = {key: dict(opts) for key, opts in FACET_OPTIONS.items()}
+
+# Accords retirés des résultats de "Décrivez votre situation" (validé avec David Di Peri
+# le 2026-10-01) : spécifiques à une seule catégorie professionnelle (parcours pro, primes
+# de pool de remplacement et reprise d'ancienneté réservées à certaines professions), ou
+# relevant du fonctionnement syndical/institutionnel plutôt que des droits individuels du
+# salarié (NAO, élections, dialogue social, chèques syndicaux) — hors-sujet pour cet outil
+# centré sur "qu'est-ce qui s'applique à MA situation personnelle". Restent consultables
+# normalement sur les pages Accords / Résumés.
+SITUATION_EXCLUDED_IDS = {
+    "parcours-am-2025", "parcours-ide-mer-2025", "parcours-physiciens-2022",
+    "due-parcours-macroscopie", "due-prime-pool-remplacement-am",
+    "due-prime-pool-remplacement-soignants", "reprise-anciennete-mer-as-ide-2022",
+    "vote-electronique-2026", "dialogue-social-2026", "cheques-syndicaux",
+    "cdd-objet-defini-2021",
+}
+SITUATION_EXCLUDED_CATEGORIES = {"NAO"}
+# Facettes à 1 seule valeur possible : rendues en Oui/Non plutôt qu'en
+# Tous/[valeur unique], plus lisible pour une caractéristique personnelle
+# binaire. "Non" reste techniquement équivalent à "Tous" (case vide, pas de
+# filtre) — l'absence du tag ne veut pas dire "accord non applicable", donc
+# on ne filtre pas non plus activement sur une exclusion.
+BOOLEAN_FACETS = {"travail_nuit", "handicap"}
+
+
+def situation_fields_html():
+    """Génère les <label class="select-field">...</select></label> du formulaire
+    'Décrivez votre situation' — factorisé car réutilisé sur la page d'accueil
+    (qui redirige vers situation.html) et sur situation.html elle-même (qui permet
+    de relancer la recherche avec d'autres critères sans repasser par l'accueil)."""
+    html = ""
+    for key, label in FACET_LABELS.items():
+        wrapper_id = ""
+        if key == "modalite_horaire":
+            wrapper_id = ' id="field-modalite_horaire"'
+        elif key == "travail_poste":
+            wrapper_id = ' id="field-travail_poste"'
+        default_label = "Non" if key in BOOLEAN_FACETS else "Tous"
+        html += f"""        <label class="select-field"{wrapper_id}>
+          <span class="select-label">{esc(label)}</span>
+          <select name="{key}" class="real-select">
+            <option value="">{default_label}</option>
+"""
+        for value, opt_label in FACET_OPTIONS[key]:
+            html += f'            <option value="{value}">{esc(opt_label)}</option>\n'
+        html += "          </select>\n        </label>\n"
+    return html
+
+
+# Bascule Modalité horaire / Poste selon le Statut — identique sur l'accueil
+# et sur situation.html. Suppose que `situationForm` est déjà défini.
+# - Modalité horaire (forfait jours/heures) : concerne uniquement les cadres
+#   et cadres praticiens, donc affichée seulement pour ces deux statuts.
+# - Poste (posté/non posté) : notion réservée aux non-cadres (accords "postés"
+#   / "non postés"), donc masquée dès qu'on choisit cadre ou praticien.
+SITUATION_TOGGLE_JS = """
+const statutSelect = situationForm.querySelector('select[name="statut"]');
+const modaliteField = document.getElementById('field-modalite_horaire');
+const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
+const posteField = document.getElementById('field-travail_poste');
+const posteSelect = posteField.querySelector('select[name="travail_poste"]');
+
+function toggleModaliteField() {
+  const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
+  modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
+  if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
+  posteField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { posteSelect.value = ''; }
+}
+statutSelect.addEventListener('change', toggleModaliteField);
+toggleModaliteField();
+"""
+
+# Bloc CCN (texte intégral + grille de rémunération concernée) affiché après chaque
+# recherche. Suppose que `ccnData` est déjà défini (liste {id, titre, href, kind}
+# avec kind parmi 'texte' | 'non-praticien' | 'praticien').
+SITUATION_CCN_JS = """
+function renderCcnBlock(statut) {
+  const texte = ccnData.find(c => c.kind === 'texte');
+  const grilles = ccnData.filter(c => c.kind !== 'texte');
+  // Praticien = médecin (au sens de la CCN des CLCC) ; cadre et non-cadre relèvent
+  // tous deux de la grille "non-praticien". Sans statut choisi, les deux grilles
+  // sont proposées avec la grille non-praticien active par défaut (profil le plus courant).
+  const defaultKind = statut === 'praticien' ? 'praticien' : 'non-praticien';
+  let html = '<h4 class="situation-subheading">Convention collective (CCN)</h4><div class="situation-list">';
+  if (texte) html += `<a class="situation-item" href="${texte.href}">${texte.titre} →</a>`;
+  html += '</div>';
+  if (grilles.length > 0) {
+    html += '<div class="chips ccn-grille-chips">';
+    grilles.forEach(g => {
+      const label = g.kind === 'praticien' ? 'Grille de rémunération — praticiens' : 'Grille de rémunération — non-praticiens';
+      const active = g.kind === defaultKind ? ' active' : '';
+      html += `<a class="chip${active}" href="${g.href}" target="_blank" rel="noopener">${label}</a>`;
+    });
+    html += '</div>';
+  }
+  return html;
+}
+"""
+
+# Calcule et affiche les accords spécifiques puis généraux dans #situation-results.
+# Suppose que `situationData` et `situationResults` sont déjà définis.
+SITUATION_RENDER_JS = """
+function renderSituationResults(filters) {
+  const ccnBlock = renderCcnBlock(filters.statut || '');
+  const filterEntries = Object.entries(filters);
+  const matchedIds = new Set();
+  // Pour l'accord et le critère (k, v) affichés, cherche la citation vérifiée
+  // correspondante (a.justificatifs[k][v]) et son lien vers le passage concerné
+  // (résumé ou texte intégral, avec surlignage ?q=...). Pas de justificatif
+  // enregistré pour ce critère précis : l'accord reste listé, simplement sans
+  // citation détaillée — jamais de référence inventée.
+  const renderCitation = (a, k, v) => {
+    const j = a.justificatifs && a.justificatifs[k] && a.justificatifs[k][v];
+    if (!j) return '';
+    const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
+    const link = base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
+    return '<ul class="situation-citations"><li><a href="' + link + '">' + j.t + ' →</a></li></ul>';
+  };
+  const renderMatch = (a, k, v) =>
+    '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a>' +
+    renderCitation(a, k, v) + '</div>';
+
+  let html = '';
+  // Un bloc de résultats par critère coché, chacun traité indépendamment (OR) :
+  // un accord qui ne concerne qu'un seul des critères choisis doit quand même
+  // remonter, pas seulement les accords qui répondraient à tous les critères
+  // à la fois.
+  filterEntries.forEach(([k, v]) => {
+    const matches = situationData.filter(a => (a[k] || []).includes(v));
+    matches.forEach(a => matchedIds.add(a.id));
+    if (matches.length === 0) return;
+    const label = (facetValueLabels[k] && facetValueLabels[k][v]) || v;
+    html += '<h3>' + matches.length + ' accord(s) — ' + (facetLabels[k] || k) + ' : ' + label + '</h3>' +
+      '<div class="situation-matches">' + matches.map(a => renderMatch(a, k, v)).join('') + '</div>';
+  });
+
+  // Généraux : l'accord ne remonte déjà dans aucun bloc ci-dessus. Seul le statut
+  // (cadre/non-cadre/praticien) partage réellement la population en groupes
+  // mutuellement exclusifs (ex. ATT cadres vs ATT non-cadres, parcours
+  // professionnel réservé aux non-cadres) : un accord tagué sur un autre statut
+  // que celui choisi ne s'applique effectivement pas, donc il reste exclu. Les
+  // autres critères (situation familiale, temps de travail...) ne sont que des
+  // citations additionnelles -- un accord qui n'a pas de citation pour la valeur
+  // choisie (ex. ATT non-cadres n'a pas de citation « parentalité » alors qu'il
+  // en a pour grossesse/enfant/proche aidant) reste malgré tout potentiellement
+  // applicable, simplement sans article spécifique dédié pour ce critère précis.
+  const generaux = situationData.filter(a =>
+    !matchedIds.has(a.id) &&
+    (!filters.statut || (a.statut || []).length === 0 || (a.statut || []).includes(filters.statut))
+  );
+  if (matchedIds.size === 0 && generaux.length === 0) {
+    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
+    return;
+  }
+  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
+  if (generaux.length > 0) {
+    // Aucun critère coché : la liste "générale" est simplement la liste complète,
+    // pas des accords confirmés applicables à tous — intitulé distinct pour ne pas
+    // l'affirmer à tort.
+    const generauxHeading = filterEntries.length === 0
+      ? generaux.length + ' accord(s) — aucun critère sélectionné'
+      : generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés';
+    html += '<h4 class="situation-subheading">' + generauxHeading + '</h4><div class="situation-list">' +
+      generaux.map(renderList).join('') + '</div>';
+  }
+  situationResults.innerHTML = html + ccnBlock;
+}
+"""
 
 
 def build_situation_data(cat):
+    # La CCN est traitée à part (bloc dédié, cf. build_situation_ccn_data) : elle n'a
+    # pas de résumé propre et son lien générique vers accords.html n'apportait rien ici.
+    non_ccn = [
+        a for a in cat["accords"]
+        if a.get("categorie") != "CCN"
+        and a.get("categorie") not in SITUATION_EXCLUDED_CATEGORIES
+        and a["id"] not in SITUATION_EXCLUDED_IDS
+    ]
     data = []
-    for a in dedup_by_resume(cat["accords"]) + [
-        a for a in cat["accords"] if not a.get("chemin_resume_md")
+    for a in dedup_by_resume(non_ccn) + [
+        a for a in non_ccn if not a.get("chemin_resume_md")
     ]:
-        data.append({
+        entry = {
             "id": a["id"],
             "titre": a["titre"],
-            "statut": a.get("statut", []),
-            "profession": a.get("profession", []),
-            "modalite_horaire": a.get("modalite_horaire", []),
-            "temps_travail": a.get("temps_travail", []),
             "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
-        })
+            "resumeHref": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else None,
+            "texteHref": f"textes/{a['id']}.html" if a.get("chemin_source_md") else None,
+        }
+        if a.get("justificatifs"):
+            entry["justificatifs"] = a["justificatifs"]
+        for key in FACET_LABELS:
+            entry[key] = a.get(key, [])
+        data.append(entry)
+    return data
+
+
+# CCN CLCC : "praticien" = médecin ; cadre et non-cadre relèvent tous deux de la
+# grille "non praticien" (terminologie de la CCN elle-même, cf. titres des documents
+# sources dans catalogue.json).
+CCN_ID_TO_KIND = {
+    "ccn-clcc": "texte",
+    "ccn-grille-non-praticiens": "non-praticien",
+    "ccn-grille-praticiens": "praticien",
+}
+
+
+def build_situation_ccn_data(cat):
+    data = []
+    for a in cat["accords"]:
+        kind = CCN_ID_TO_KIND.get(a["id"])
+        if not kind:
+            continue
+        href = "ccn-texte.html" if kind == "texte" else (url_for(a.get("chemin_pdf")) or "ccn.html")
+        data.append({"id": a["id"], "titre": a["titre"], "href": href, "kind": kind})
     return data
 
 
@@ -422,97 +639,108 @@ def build_index(cat, out_dir):
         <h2>Décrivez votre situation</h2>
         <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
         qui vous concerne.</p>
-        <p class="note">Classement par statut/site/modalité/temps en cours — un critère sans résultat ne
-        veut pas dire qu'aucun accord ne s'applique à vous. Voir aussi les <a href="accords.html">accords</a>.</p>
+        <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
+        Voir aussi les <a href="accords.html">accords</a>.</p>
       </div>
       <form class="situation-form" id="situation-form">
-"""
-    for key, label in FACET_LABELS.items():
-        wrapper_id = ""
-        if key == "modalite_horaire":
-            wrapper_id = ' id="field-modalite_horaire"'
-        elif key == "profession":
-            wrapper_id = ' id="field-profession"'
-        html += f"""        <label class="select-field"{wrapper_id}>
-          <span class="select-label">{esc(label)}</span>
-          <select name="{key}" class="real-select">
-            <option value="">Tous</option>
-"""
-        for value, opt_label in FACET_OPTIONS[key]:
-            html += f'            <option value="{value}">{esc(opt_label)}</option>\n'
-        html += "          </select>\n        </label>\n"
-    html += """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+""" + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+        <p class="note situation-empty-note" id="situation-empty-note" style="display:none;">Choisissez au moins un critère.</p>
       </form>
     </div>
-    <div id="situation-results" class="situation-results"></div>
   </div>
 </section>
 
-<script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
 <script>
-const situationData = JSON.parse(document.getElementById('situation-data').textContent);
 const situationForm = document.getElementById('situation-form');
-const situationResults = document.getElementById('situation-results');
-const statutSelect = situationForm.querySelector('select[name="statut"]');
-const modaliteField = document.getElementById('field-modalite_horaire');
-const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
-const professionField = document.getElementById('field-profession');
-const professionSelect = professionField.querySelector('select[name="profession"]');
-
-function toggleModaliteField() {
-  const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
-  modaliteField.style.display = isCadreOuPraticien ? '' : 'none';
-  if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
-  professionField.style.display = isCadreOuPraticien ? 'none' : '';
-  if (isCadreOuPraticien) { professionSelect.value = ''; }
-}
-statutSelect.addEventListener('change', toggleModaliteField);
-toggleModaliteField();
-
+""" + SITUATION_TOGGLE_JS + """
 situationForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const fd = new FormData(situationForm);
-  const filters = {};
-  for (const [k, v] of fd.entries()) { if (v) filters[k] = v; }
-
-  if (Object.keys(filters).length === 0) {
-    situationResults.innerHTML = '<p class="note">Choisissez au moins un critère.</p>';
+  const params = new URLSearchParams();
+  for (const [k, v] of fd.entries()) { if (v) params.set(k, v); }
+  const emptyNote = document.getElementById('situation-empty-note');
+  if ([...params.keys()].length === 0) {
+    emptyNote.style.display = '';
     return;
   }
-  const ccnLink = '<p class="situation-ccn-link">Ces critères touchent aussi la convention collective ? ' +
-    '<a href="ccn-texte.html">Consulter le texte intégral de la CCN →</a></p>';
-  const filterEntries = Object.entries(filters);
-  // Spécifiques : l'accord est explicitement tagué avec chacun des critères choisis.
-  const specifiques = situationData.filter(a =>
-    filterEntries.every(([k, v]) => (a[k] || []).includes(v))
-  );
-  const specifiquesIds = new Set(specifiques.map(a => a.id));
-  // Généraux : l'accord ne restreint aucun des critères choisis (champ vide = non tagué,
-  // donc a priori applicable à tous), et n'est pas déjà dans les résultats spécifiques.
-  const generaux = situationData.filter(a =>
-    !specifiquesIds.has(a.id) &&
-    filterEntries.every(([k, v]) => (a[k] || []).length === 0)
-  );
-  if (specifiques.length === 0 && generaux.length === 0) {
-    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnLink;
-    return;
-  }
-  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
-  let html = '';
-  if (specifiques.length > 0) {
-    html += '<h3>' + specifiques.length + ' accord(s) spécifique(s) à votre situation</h3><div class="situation-list">' +
-      specifiques.map(renderList).join('') + '</div>';
-  }
-  if (generaux.length > 0) {
-    html += '<h4 class="situation-subheading">' + generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés</h4><div class="situation-list">' +
-      generaux.map(renderList).join('') + '</div>';
-  }
-  situationResults.innerHTML = html + ccnLink;
+  emptyNote.style.display = 'none';
+  // Les résultats s'affichent sur une page dédiée, avec le même formulaire, pour
+  // permettre de relancer la recherche avec d'autres critères sans revenir ici.
+  location.href = 'situation.html?' + params.toString();
 });
 </script>
 """
     html += page_foot()
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+
+
+def build_situation_page(cat, out_dir):
+    """Page dédiée aux résultats du filtre 'Ma situation' : reprend le même
+    formulaire que l'accueil (pré-rempli depuis l'URL si on y arrive via l'accueil)
+    pour que le salarié puisse relancer la recherche avec d'autres critères sans
+    revenir en arrière."""
+    html = page_head("Ma situation", "index.html")
+    html += """
+<section class="page-header">
+  <img src="assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / MA SITUATION</div>
+    <h1>Décrivez votre situation</h1>
+    <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce qui vous concerne pour voir
+    les accords qui s'appliquent. Vous pouvez changer vos critères et relancer la recherche autant de
+    fois que nécessaire, directement depuis cette page.</p>
+  </div>
+</section>
+<section class="list-page situation-page">
+  <form class="situation-form situation-form-page" id="situation-form">
+""" + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+  </form>
+  <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
+  Voir aussi les <a href="accords.html">accords</a>.</p>
+  <div id="situation-results" class="situation-results situation-results-page"></div>
+</section>
+
+<script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
+<script id="situation-ccn-data" type="application/json">""" + json.dumps(build_situation_ccn_data(cat), ensure_ascii=False) + """</script>
+<script id="facet-labels-data" type="application/json">""" + json.dumps(FACET_LABELS, ensure_ascii=False) + """</script>
+<script id="facet-value-labels-data" type="application/json">""" + json.dumps(FACET_VALUE_LABELS, ensure_ascii=False) + """</script>
+<script>
+const situationData = JSON.parse(document.getElementById('situation-data').textContent);
+const ccnData = JSON.parse(document.getElementById('situation-ccn-data').textContent);
+const facetLabels = JSON.parse(document.getElementById('facet-labels-data').textContent);
+const facetValueLabels = JSON.parse(document.getElementById('facet-value-labels-data').textContent);
+const situationForm = document.getElementById('situation-form');
+const situationResults = document.getElementById('situation-results');
+""" + SITUATION_TOGGLE_JS + SITUATION_CCN_JS + SITUATION_RENDER_JS + """
+function runSituationSearch() {
+  const fd = new FormData(situationForm);
+  const filters = {};
+  for (const [k, v] of fd.entries()) { if (v) filters[k] = v; }
+  // Sans aucun critère coché, on affiche quand même la liste complète des accords
+  // (plutôt que de bloquer sur "Choisissez au moins un critère") : renderSituationResults
+  // gère déjà ce cas, un filtre vide ne restreignant aucun accord.
+  renderSituationResults(filters);
+  // Met à jour l'URL (sans recharger la page) pour que le lien reste partageable
+  // et que la recherche survive à un rafraîchissement de la page.
+  const qs = new URLSearchParams(filters).toString();
+  history.replaceState(null, '', 'situation.html' + (qs ? '?' + qs : ''));
+}
+situationForm.addEventListener('submit', (e) => { e.preventDefault(); runSituationSearch(); });
+
+// Arrivée depuis l'accueil (ou lien partagé) : pré-remplit le formulaire depuis
+// l'URL. La recherche se lance systématiquement, avec ou sans critère dans l'URL.
+const initialParams = new URLSearchParams(location.search);
+for (const [key, value] of initialParams.entries()) {
+  const field = situationForm.querySelector(`select[name="${key}"]`);
+  if (field) { field.value = value; }
+}
+toggleModaliteField();
+runSituationSearch();
+</script>
+"""
+    html += page_foot()
+    with open(os.path.join(out_dir, "situation.html"), "w", encoding="utf-8") as f:
         f.write(html)
 
 
@@ -539,6 +767,7 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un mot dans les accords et la CCN (ex. formation, astreinte)...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="category-chips">
     <span class="chip active" data-cat="all">Tous</span>
@@ -562,11 +791,16 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         if a["categorie"] != current_cat:
             current_cat = a["categorie"]
             html += f'    <div class="doc-group-label" data-cat="{esc(current_cat)}" style="color:{fg};background:{bg};">{esc(current_cat)}</div>\n'
-        pdf_url = url_for(a.get("chemin_pdf"))
-        if pdf_url:
-            action = f'<a href="{esc(pdf_url)}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
-        else:
+        pdfs = pdf_list(a)
+        if not pdfs:
             action = '<span class="muted">PDF non disponible</span>'
+        elif len(pdfs) == 1:
+            action = f'<a href="{esc(url_for(pdfs[0]))}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
+        else:
+            action = " · ".join(
+                f'<a href="{esc(url_for(p))}" target="_blank" rel="noopener">PDF {i + 1}/{len(pdfs)} →</a>'
+                for i, p in enumerate(pdfs)
+            )
         html += f"""    <div class="doc-row" data-id="{esc(a['id'])}" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['categorie'])}</span>
       <span class="doc-title">{esc(a['titre'])}</span>
@@ -862,7 +1096,7 @@ def dedup_by_resume(accords):
 
 
 THEME_COLORS = {
-    "Temps de travail / organisation": ("#C7D5F0", "#14203A"),
+    "Temps de travail / organisation": ("#C7D5F0", "#156082"),
     "Rémunération / épargne": ("#F5EEE1", "#7A6540"),
     "Carrière": ("#E3F1EF", "#0F6B62"),
     "Carrière / égalité": ("#E3F1EF", "#0F6B62"),
@@ -871,7 +1105,7 @@ THEME_COLORS = {
     "Instances / dialogue social": ("#F3E3EC", "#8A2A5E"),
     "Protection sociale": ("#E9F1E7", "#4A6B3E"),
     "Vie syndicale": ("#F5EEE1", "#7A6540"),
-    "Convention collective": ("#C7D5F0", "#14203A"),
+    "Convention collective": ("#C7D5F0", "#156082"),
     "NAO": ("#F6E9DD", "#9C5B1F"),  # distinct des autres thèmes (roux/ambre), pas la même teinte que "Carrière"
 }
 
@@ -899,6 +1133,7 @@ def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un résumé ou un mot dans son texte...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
@@ -1034,6 +1269,7 @@ function applyFilters() {
   resEmpty.textContent = (q && !anyVisible && noText) ? 'Aucun résumé ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.' : '';
 }
 search.addEventListener('input', applyFilters);
+search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); applyFilters(); } });
 themeChips.forEach(c => c.addEventListener('click', () => {
   themeChips.forEach(x => x.classList.remove('active'));
   c.classList.add('active');
@@ -1119,9 +1355,10 @@ def build_resume_pages(cat, out_dir):
         if not dep_list:
             html += '    <span class="muted">Pas encore de dépliant pour cet accord.</span>\n'
 
-        pdf_url = url_for(a.get("chemin_pdf"))
-        if pdf_url:
-            html += f'    <a class="download-btn" href="{esc(pdf_url)}" target="_blank" rel="noopener">Voir l\'accord signé (PDF) →</a>\n'
+        pdfs = pdf_list(a)
+        for i, p in enumerate(pdfs):
+            label = "Voir l'accord signé (PDF) →" if len(pdfs) == 1 else f"Voir l'accord signé {i + 1}/{len(pdfs)} (PDF) →"
+            html += f'    <a class="download-btn" href="{esc(url_for(p))}" target="_blank" rel="noopener">{label}</a>\n'
 
         html += "  </div>\n</section>\n"
         html += page_foot(base="../")
@@ -1245,7 +1482,7 @@ def build_doc_search_data(entries, path_key, group_key="categorie"):
         docs[a["id"]] = {
             "titre": a["titre"],
             "categorie": a.get(group_key, a["categorie"]),
-            "pdf": url_for(a.get("chemin_pdf")),
+            "pdf": url_for(pdf_list(a)[0]) if pdf_list(a) else None,
             "ocr": ocr,
             "n": idx,
         }
@@ -1532,6 +1769,7 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
     <input type="text" id="filter-search" placeholder="Rechercher un dépliant ou un mot dans son texte...">
+    <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="theme-chips">
     <span class="chip active" data-theme="all">Tous</span>
@@ -1573,23 +1811,25 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
 
             counter = f'<span class="leaflet-counter">{i + 1}/{len(dep_list)}</span>' if len(dep_list) > 1 else ""
             dep_url = url_for(d)
-            html += f"""    <a class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}" href="{esc(dep_url)}" target="_blank" rel="noopener">
-      <div class="leaflet-cover">
-        <div class="leaflet-top">
-          <div class="leaflet-top-left">
-            <span class="leaflet-eyebrow">Accord local ICO</span>
-            <span class="leaflet-theme-tag" style="background:{theme_bg};color:{theme_fg}">{esc(a['theme'])}</span>
+            html += f"""    <div class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}">
+      <a class="leaflet-cover-link" href="{esc(dep_url)}" target="_blank" rel="noopener" aria-label="Consulter {esc(real_label)}">
+        <div class="leaflet-cover">
+          <div class="leaflet-top">
+            <div class="leaflet-top-left">
+              <span class="leaflet-eyebrow">Accord local ICO</span>
+              <span class="leaflet-theme-tag" style="background:{theme_bg};color:{theme_fg}">{esc(a['theme'])}</span>
+            </div>
+            {counter}
           </div>
-          {counter}
+          <div class="leaflet-title-block">
+            <span class="leaflet-title-main">{esc(principal)}</span>
+            {f'<span class="leaflet-title-sub">{esc(secondaire)}</span>' if secondaire else ''}
+          </div>
+          <span class="leaflet-slogan"><span class="red">FO</span>, vos droits notre priorité</span>
         </div>
-        <div class="leaflet-title-block">
-          <span class="leaflet-title-main">{esc(principal)}</span>
-          {f'<span class="leaflet-title-sub">{esc(secondaire)}</span>' if secondaire else ''}
-        </div>
-        <span class="leaflet-slogan"><span class="red">FO</span>, vos droits notre priorité</span>
-      </div>
-      <span class="leaflet-caption">Télécharger le PDF →</span>
-    </a>
+      </a>
+      <a class="leaflet-dl-btn" href="{esc(dep_url)}" download="{esc(filename)}" rel="noopener">Télécharger →</a>
+    </div>
 """
     html += "  </div>\n"
     html += """
@@ -1644,6 +1884,7 @@ function applyFilters() {
   leafletHits.innerHTML = lastAccMsg ? '<span class="note">' + lastAccMsg + '</span>' : '';
 }
 search.addEventListener('input', applyFilters);
+search.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); applyFilters(); } });
 themeChips.forEach(c => c.addEventListener('click', () => {
   themeChips.forEach(x => x.classList.remove('active'));
   c.classList.add('active');
@@ -1675,10 +1916,17 @@ def main():
     else:
         print(f"ATTENTION : logo introuvable à {logo_src} — copiez-le manuellement dans site/assets/logo.png")
 
+    favicon_src = os.path.join(ASSETS_SRC, "favicon.png")
+    if os.path.exists(favicon_src):
+        shutil.copy(favicon_src, os.path.join(OUT_DIR, "assets", "favicon.png"))
+    else:
+        print(f"ATTENTION : favicon introuvable à {favicon_src} — copiez-le manuellement dans site/assets/favicon.png")
+
     style_src = os.path.join(ASSETS_SRC, "style.css")
     shutil.copy(style_src, os.path.join(OUT_DIR, "assets", "style.css"))
 
     build_index(cat, OUT_DIR)
+    build_situation_page(cat, OUT_DIR)
     acc_docs, acc_passages = build_accords_search_data(cat)
     build_accords(cat, OUT_DIR, acc_docs, acc_passages)
     build_accord_textes(acc_docs, acc_passages, OUT_DIR)

@@ -105,7 +105,8 @@
         "accords-locaux/Depliants_FO/Depliant_ATT_cadres_en_heures_FO.pdf"
       ],
       "statut": [
-        "cadre"
+        "cadre",
+        "praticien"
       ],
       "site": [],
       "modalite_horaire": [
@@ -116,7 +117,7 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "PDF signé de l'accord de base ajouté le 21/09/2026 (transmis par David). Contenu vérifié cohérent avec le résumé déjà rédigé (206 jours forfait, 1596h/1582h temps en heures, etc.).",
+      "note": "PDF signé de l'accord de base ajouté le 21/09/2026 (transmis par David). Contenu vérifié cohérent avec le résumé déjà rédigé (206 jours forfait, 1596h/1582h temps en heures, etc.). Statut praticien ajouté le 19/10/2026 (confirmé par David) : le texte précise explicitement \"qu'ils soient praticiens ou cadres non médicaux\".",
       "id": "att-cadres-2021",
       "titre": "Durée et aménagement du temps de travail — cadres",
       "categorie": "Accord local",
@@ -287,12 +288,13 @@
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-cdd-objet-defini-2021.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_CDD_objet_defini_FO.pdf",
       "statut": [
-        "cadre"
+        "cadre",
+        "praticien"
       ],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": null,
+      "note": "Statut praticien ajouté le 19/10/2026 (confirmé par David) : le CDD à objet défini est un type de contrat réservé par la loi aux ingénieurs et cadres, catégorie qui inclut les praticiens.",
       "id": "cdd-objet-defini-2021",
       "titre": "CDD à objet défini",
       "categorie": "Accord local",
@@ -991,7 +993,8 @@
         "accords-locaux/Depliants_FO/Depliant_ATT_cadres_en_heures_FO.pdf"
       ],
       "statut": [
-        "cadre"
+        "cadre",
+        "praticien"
       ],
       "site": [],
       "modalite_horaire": [],
@@ -999,7 +1002,7 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Intégré au résumé et au dépliant ATT Cadres (pas de résumé séparé). Pas de PDF signé trouvé à ce nom dans le dépôt.",
+      "note": "Intégré au résumé et au dépliant ATT Cadres (pas de résumé séparé). Pas de PDF signé trouvé à ce nom dans le dépôt. Statut praticien ajouté le 19/10/2026 (confirmé par David) : modifie l'article 3.1.4 de l'accord ATT-cadres 2021, qui s'applique aux praticiens.",
       "id": "acquisition-cp-maladie-cadres-2025",
       "titre": "Acquisition de CP pendant un arrêt maladie — cadres",
       "categorie": "Accord local",

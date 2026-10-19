@@ -940,10 +940,15 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         if not pdfs:
             action = '<span class="muted">PDF non disponible</span>'
         elif len(pdfs) == 1:
-            action = f'<a href="{esc(local_pdf_url(pdfs[0]))}" download="{esc(os.path.basename(pdfs[0]))}" target="_blank" rel="noopener">Télécharger le PDF →</a>'
+            p = pdfs[0]
+            action = (
+                f'<a class="doc-btn" href="{esc(local_pdf_url(p))}" target="_blank" rel="noopener">Voir →</a>'
+                f'<a class="doc-btn primary" href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" rel="noopener">Télécharger →</a>'
+            )
         else:
-            action = " · ".join(
-                f'<a href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" target="_blank" rel="noopener">PDF {i + 1}/{len(pdfs)} →</a>'
+            action = "".join(
+                f'<a class="doc-btn" href="{esc(local_pdf_url(p))}" target="_blank" rel="noopener">Voir {i + 1}/{len(pdfs)} →</a>'
+                f'<a class="doc-btn primary" href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" rel="noopener">Télécharger {i + 1}/{len(pdfs)} →</a>'
                 for i, p in enumerate(pdfs)
             )
         html += f"""    <div class="doc-row" data-id="{esc(a['id'])}" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">

@@ -223,7 +223,13 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .doc-row:last-child { border-bottom: none; }
 .tag { font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 999px; flex-shrink: 0; }
 .doc-title { flex-grow: 1; font-size: 14.5px; }
-.doc-action { flex-shrink: 0; font-size: 13px; font-weight: 700; }
+.doc-action { flex-shrink: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.doc-btn {
+  display: inline-block; font-size: 12.5px; font-weight: 700; padding: 6px 14px;
+  border-radius: 999px; border: 1px solid var(--bordure); color: var(--marine-text); background: #FFFFFF;
+}
+.doc-btn.primary { background: var(--rouge); border-color: var(--rouge); color: #FFFFFF; }
+.doc-btn.primary:hover { background: var(--rouge-fonce); border-color: var(--rouge-fonce); }
 .muted { color: var(--muted); font-weight: 600; font-size: 12.5px; }
 
 .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }

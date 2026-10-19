@@ -496,7 +496,7 @@ function renderCcnBlock(filters) {
   // tous deux de la grille "non-praticien". Sans statut choisi, les deux grilles
   // sont proposées avec la grille non-praticien active par défaut (profil le plus courant).
   const defaultKind = statut === 'praticien' ? 'praticien' : 'non-praticien';
-  let html = '<h4 class="situation-subheading">Convention collective (CCN)</h4><div class="situation-list">';
+  let html = '<h3>Convention collective (CCN)</h3><div class="situation-list">';
   if (texte) html += `<a class="situation-item" href="${texte.href}">${texte.titre} →</a>`;
   html += '</div>';
 
@@ -587,7 +587,7 @@ function renderSituationResults(filters) {
     const generauxHeading = filterEntries.length === 0
       ? generaux.length + ' accord(s) — aucun critère sélectionné'
       : generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés';
-    html += '<h4 class="situation-subheading">' + generauxHeading + '</h4><div class="situation-list">' +
+    html += '<h3>' + generauxHeading + '</h3><div class="situation-list">' +
       generaux.map(renderList).join('') + '</div>';
   }
   situationResults.innerHTML = html + ccnBlock;

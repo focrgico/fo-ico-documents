@@ -468,15 +468,15 @@ FACET_VALUE_LABELS = {key: dict(opts) for key, opts in FACET_OPTIONS.items()}
 # le 2026-10-01) : spécifiques à une seule catégorie professionnelle (parcours pro, primes
 # de pool de remplacement et reprise d'ancienneté réservées à certaines professions), ou
 # relevant du fonctionnement syndical/institutionnel plutôt que des droits individuels du
-# salarié (NAO, élections, dialogue social, chèques syndicaux) — hors-sujet pour cet outil
-# centré sur "qu'est-ce qui s'applique à MA situation personnelle". Restent consultables
-# normalement sur les pages Accords / Résumés.
+# salarié (NAO, chèques syndicaux) — hors-sujet pour cet outil centré sur "qu'est-ce qui
+# s'applique à MA situation personnelle". Restent consultables normalement sur les pages
+# Accords / Résumés. (Élections et Dialogue social retirés du catalogue le 19/10/2026,
+# donc plus besoin de les exclure ici.)
 SITUATION_EXCLUDED_IDS = {
     "parcours-am-2025", "parcours-ide-mer-2025", "parcours-physiciens-2022",
     "due-parcours-macroscopie", "due-prime-pool-remplacement-am",
     "due-prime-pool-remplacement-soignants", "reprise-anciennete-mer-as-ide-2022",
-    "vote-electronique-2026", "dialogue-social-2026", "cheques-syndicaux",
-    "cdd-objet-defini-2021",
+    "cheques-syndicaux", "cdd-objet-defini-2021",
 }
 SITUATION_EXCLUDED_CATEGORIES = {"NAO"}
 # Facettes à 1 seule valeur possible : rendues en Oui/Non plutôt qu'en
@@ -1977,6 +1977,7 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
             <span class="leaflet-title-main">{esc(principal)}</span>
             {f'<span class="leaflet-title-sub">{esc(secondaire)}</span>' if secondaire else ''}
           </div>
+          <span class="leaflet-view-btn">Afficher ce dépliant →</span>
           <span class="leaflet-slogan"><span class="red">FO</span>, vos droits notre priorité</span>
         </div>
       </a>

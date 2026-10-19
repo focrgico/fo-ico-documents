@@ -452,11 +452,24 @@ statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();
 """
 
-# Bloc CCN (texte intégral + grille de rémunération concernée) affiché après chaque
-# recherche. Suppose que `ccnData` est déjà défini (liste {id, titre, href, kind}
-# avec kind parmi 'texte' | 'non-praticien' | 'praticien').
+# Bloc CCN (texte intégral + citations d'articles pertinentes + grille de
+# rémunération concernée) affiché après chaque recherche. Suppose que `ccnData`
+# et `ccnJustificatifs` sont déjà définis (ccnData : liste {id, titre, href,
+# kind} avec kind parmi 'texte' | 'non-praticien' | 'praticien' ; ccnJustificatifs :
+# {critere: {valeur: [{t, q, loc:'ccn', p}, ...]}}, porté par l'entrée catalogue
+# ccn-clcc). Les citations d'articles vérifiées ne concernent QUE la CCN ici :
+# les accords locaux ne listent qu'un lien vers l'accord cité (cf. renderMatch),
+# jamais de citation d'article détaillée.
 SITUATION_CCN_JS = """
-function renderCcnBlock(statut) {
+// Lien vers le passage repéré du texte intégral de la CCN : surlignage du
+// terme recherché (?q=...) + ancre #p<idx> sur le paragraphe concerné.
+function ccnCitationLink(j) {
+  return 'ccn-texte.html?q=' + encodeURIComponent(j.q) + (j.p != null ? '#p' + j.p : '');
+}
+
+function renderCcnBlock(filters) {
+  filters = filters || {};
+  const statut = filters.statut || '';
   const texte = ccnData.find(c => c.kind === 'texte');
   const grilles = ccnData.filter(c => c.kind !== 'texte');
   // Praticien = médecin (au sens de la CCN des CLCC) ; cadre et non-cadre relèvent
@@ -466,6 +479,22 @@ function renderCcnBlock(statut) {
   let html = '<h4 class="situation-subheading">Convention collective (CCN)</h4><div class="situation-list">';
   if (texte) html += `<a class="situation-item" href="${texte.href}">${texte.titre} →</a>`;
   html += '</div>';
+
+  // Citations d'articles CCN pour les critères sélectionnés (ex. statut : cadre
+  // -> classification des personnels cadres). Un critère sans citation enregistrée
+  // n'affiche simplement rien ici — jamais de référence inventée.
+  let citations = [];
+  Object.entries(filters).forEach(([k, v]) => {
+    const j = ccnJustificatifs[k] && ccnJustificatifs[k][v];
+    if (!j) return;
+    citations = citations.concat(Array.isArray(j) ? j : [j]);
+  });
+  if (citations.length > 0) {
+    html += '<ul class="situation-citations">' +
+      citations.map(it => '<li><a href="' + ccnCitationLink(it) + '">' + it.t + ' →</a></li>').join('') +
+      '</ul>';
+  }
+
   if (grilles.length > 0) {
     html += '<div class="chips ccn-grille-chips">';
     grilles.forEach(g => {
@@ -483,33 +512,15 @@ function renderCcnBlock(statut) {
 # Suppose que `situationData` et `situationResults` sont déjà définis.
 SITUATION_RENDER_JS = """
 function renderSituationResults(filters) {
-  const ccnBlock = renderCcnBlock(filters.statut || '');
+  const ccnBlock = renderCcnBlock(filters);
   const filterEntries = Object.entries(filters);
   const matchedIds = new Set();
-  // Pour l'accord et le critère (k, v) affichés, cherche la citation vérifiée
-  // correspondante (a.justificatifs[k][v]) et son lien vers le passage concerné
-  // (résumé, texte intégral de l'accord, ou — loc "ccn" — texte intégral de la
-  // CCN elle-même, avec surlignage ?q=... et ancre #p<idx> sur le paragraphe
-  // repéré). Pas de justificatif enregistré pour ce critère précis : l'accord
-  // reste listé, simplement sans citation détaillée — jamais de référence
-  // inventée. Une entrée peut être un objet unique ou un tableau d'objets
-  // (ex. plusieurs articles CCN pertinents pour un même critère).
-  const citationLink = (a, j) => {
-    if (j.loc === 'ccn') return 'ccn-texte.html?q=' + encodeURIComponent(j.q) + (j.p != null ? '#p' + j.p : '');
-    const base = j.loc === 'textes' ? a.texteHref : a.resumeHref;
-    return base ? base + '?q=' + encodeURIComponent(j.q) : a.href;
-  };
-  const renderCitation = (a, k, v) => {
-    const j = a.justificatifs && a.justificatifs[k] && a.justificatifs[k][v];
-    if (!j) return '';
-    const items = Array.isArray(j) ? j : [j];
-    return '<ul class="situation-citations">' +
-      items.map(it => '<li><a href="' + citationLink(a, it) + '">' + it.t + ' →</a></li>').join('') +
-      '</ul>';
-  };
+  // Un accord local n'affiche qu'un lien vers l'accord lui-même, jamais de
+  // citation d'article détaillée : seule la CCN cite des articles précis
+  // (cf. renderCcnBlock / ccnJustificatifs) — pour un accord, le texte intégral
+  // d'un clic suffit à vérifier la disposition exacte.
   const renderMatch = (a, k, v) =>
-    '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a>' +
-    renderCitation(a, k, v) + '</div>';
+    '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a></div>';
 
   // Seul le statut (cadre/non-cadre/praticien) partage réellement la population
   // en groupes mutuellement exclusifs (cf. note sur `generaux` plus bas) : un
@@ -611,6 +622,17 @@ def build_situation_ccn_data(cat):
         href = "ccn-texte.html" if kind == "texte" else (url_for(a.get("chemin_pdf")) or "ccn.html")
         data.append({"id": a["id"], "titre": a["titre"], "href": href, "kind": kind})
     return data
+
+
+def build_situation_ccn_justificatifs(cat):
+    """Citations d'articles CCN (texte intégral) pertinentes pour un critère de
+    'Décrivez votre situation' (ex. statut/cadre -> classification des cadres),
+    portées par l'entrée catalogue ccn-clcc elle-même (même format que les
+    justificatifs d'accord : {critere: {valeur: [{t, q, loc: "ccn", p}, ...]}}).
+    Affichées sous le bloc CCN des résultats, jamais sous un accord local —
+    les accords locaux ne citent que leur propre texte, pas celui de la CCN."""
+    ccn = next((a for a in cat["accords"] if a["id"] == "ccn-clcc"), None)
+    return (ccn or {}).get("justificatifs", {})
 
 
 def build_index(cat, out_dir):
@@ -729,11 +751,13 @@ def build_situation_page(cat, out_dir):
 
 <script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
 <script id="situation-ccn-data" type="application/json">""" + json.dumps(build_situation_ccn_data(cat), ensure_ascii=False) + """</script>
+<script id="situation-ccn-justificatifs-data" type="application/json">""" + json.dumps(build_situation_ccn_justificatifs(cat), ensure_ascii=False) + """</script>
 <script id="facet-labels-data" type="application/json">""" + json.dumps(FACET_LABELS, ensure_ascii=False) + """</script>
 <script id="facet-value-labels-data" type="application/json">""" + json.dumps(FACET_VALUE_LABELS, ensure_ascii=False) + """</script>
 <script>
 const situationData = JSON.parse(document.getElementById('situation-data').textContent);
 const ccnData = JSON.parse(document.getElementById('situation-ccn-data').textContent);
+const ccnJustificatifs = JSON.parse(document.getElementById('situation-ccn-justificatifs-data').textContent);
 const facetLabels = JSON.parse(document.getElementById('facet-labels-data').textContent);
 const facetValueLabels = JSON.parse(document.getElementById('facet-value-labels-data').textContent);
 const situationForm = document.getElementById('situation-form');

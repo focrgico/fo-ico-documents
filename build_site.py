@@ -1712,20 +1712,22 @@ def build_accord_textes(docs, passages, out_dir):
             f.write(html)
 
 
-def build_ccn_texte(md_relpath, search_data, out_dir):
+def build_ccn_texte(md_relpath, search_data, out_dir, pdf_path=None):
     """Page de lecture du texte intégral de la CCN, avec une ancre #p<idx> sur
     chaque passage — cible des liens 'Voir dans la CCN' depuis les résultats de
     recherche. Un seul long fichier, volontairement : la CCN n'a pas de découpage
     fiable en chapitres dans le texte source (cf. note du dépôt)."""
+    pdf_link = (f'<a href="{esc(local_pdf_url(pdf_path))}" target="_blank" rel="noopener">PDF signé</a>'
+                if pdf_path else "PDF signé")
     html = page_head("Texte intégral CCN", "accords.html", base="")
-    html += """
+    html += f"""
 <section class="page-header">
   <img src="assets/logo.png" alt="Logo FO ICO" class="page-logo">
   <div>
     <div class="eyebrow-small">ACCUEIL / ACCORDS / CCN / TEXTE</div>
     <h1>CCN — texte intégral</h1>
     <p>Défilement du texte converti, avec repères d'articles indicatifs. Pour une citation officielle,
-    référez-vous toujours au PDF signé.</p>
+    référez-vous toujours au {pdf_link}.</p>
   </div>
 </section>
 <article class="resume-content ccn-texte">
@@ -1743,7 +1745,8 @@ def build_ccn(cat, out_dir):
     if not ccn:
         return
     search_data = build_ccn_search_data(ccn.get("chemin_source_md") or "ccn/ccn-clcc.md")
-    build_ccn_texte(ccn.get("chemin_source_md") or "ccn/ccn-clcc.md", search_data, out_dir)
+    build_ccn_texte(ccn.get("chemin_source_md") or "ccn/ccn-clcc.md", search_data, out_dir,
+                     pdf_path=ccn.get("chemin_pdf"))
 
     html = page_head("Recherche CCN", "accords.html")
     html += f"""

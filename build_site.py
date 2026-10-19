@@ -925,9 +925,40 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
   <div id="accords-empty" class="ccn-empty" style="display:none;"></div>
   <div class="doc-list" id="doc-list">
 """
+    def doc_action(a):
+        pdfs = pdf_list(a)
+        if not pdfs:
+            return '<span class="muted">PDF non disponible</span>'
+        elif len(pdfs) == 1:
+            p = pdfs[0]
+            return (
+                f'<a class="doc-btn" href="{esc(local_pdf_url(p))}" target="_blank" rel="noopener">Voir →</a>'
+                f'<a class="doc-btn primary" href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" rel="noopener">Télécharger →</a>'
+            )
+        else:
+            return "".join(
+                f'<a class="doc-btn" href="{esc(local_pdf_url(p))}" target="_blank" rel="noopener">Voir {i + 1}/{len(pdfs)} →</a>'
+                f'<a class="doc-btn primary" href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" rel="noopener">Télécharger {i + 1}/{len(pdfs)} →</a>'
+                for i, p in enumerate(pdfs)
+            )
+
+    # Un accord qui modifie un accord de base (champ "avenant_de") n'est pas
+    # trié dans la liste principale : il est rattaché, en sous-ligne indentée
+    # et taguée "Avenant", juste sous la ligne de son accord de base — plutôt
+    # que mélangé dans l'ordre alphabétique général ou fusionné en plusieurs
+    # boutons sur la ligne de l'accord de base (ancien comportement, abandonné
+    # le 19/10/2026 à la demande de David : une ligne par accord).
+    avenants_by_base = {}
+    for a in cat["accords"]:
+        if a.get("avenant_de"):
+            avenants_by_base.setdefault(a["avenant_de"], []).append(a)
+    for lst in avenants_by_base.values():
+        lst.sort(key=lambda a: (a.get("annee") or "", a["titre"]))
+
     category_order = ["CCN", "Accord local", "NAO", "DUE", "Élections"]
+    base_accords = [a for a in cat["accords"] if not a.get("avenant_de")]
     sorted_accords = sorted(
-        cat["accords"],
+        base_accords,
         key=lambda a: (category_order.index(a["categorie"]) if a["categorie"] in category_order else len(category_order), a["titre"])
     )
     current_cat = None
@@ -936,25 +967,17 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         if a["categorie"] != current_cat:
             current_cat = a["categorie"]
             html += f'    <div class="doc-group-label" data-cat="{esc(current_cat)}" style="color:{fg};background:{bg};">{esc(current_cat)}</div>\n'
-        pdfs = pdf_list(a)
-        if not pdfs:
-            action = '<span class="muted">PDF non disponible</span>'
-        elif len(pdfs) == 1:
-            p = pdfs[0]
-            action = (
-                f'<a class="doc-btn" href="{esc(local_pdf_url(p))}" target="_blank" rel="noopener">Voir →</a>'
-                f'<a class="doc-btn primary" href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" rel="noopener">Télécharger →</a>'
-            )
-        else:
-            action = "".join(
-                f'<a class="doc-btn" href="{esc(local_pdf_url(p))}" target="_blank" rel="noopener">Voir {i + 1}/{len(pdfs)} →</a>'
-                f'<a class="doc-btn primary" href="{esc(local_pdf_url(p))}" download="{esc(os.path.basename(p))}" rel="noopener">Télécharger {i + 1}/{len(pdfs)} →</a>'
-                for i, p in enumerate(pdfs)
-            )
         html += f"""    <div class="doc-row" data-id="{esc(a['id'])}" data-cat="{esc(a['categorie'])}" data-title="{esc(a['titre'].lower())}">
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['categorie'])}</span>
       <span class="doc-title">{esc(a['titre'])}</span>
-      <span class="doc-action">{action}</span>
+      <span class="doc-action">{doc_action(a)}</span>
+    </div>
+"""
+        for av in avenants_by_base.get(a["id"], []):
+            html += f"""    <div class="doc-row doc-row-avenant" data-id="{esc(av['id'])}" data-cat="{esc(av['categorie'])}" data-title="{esc(av['titre'].lower())}">
+      <span class="tag tag-avenant">Avenant</span>
+      <span class="doc-title">{esc(av['titre'])}</span>
+      <span class="doc-action">{doc_action(av)}</span>
     </div>
 """
     html += "  </div>\n"

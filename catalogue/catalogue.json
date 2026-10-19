@@ -225,23 +225,19 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Ce résumé et ce dépliant couvrent 2 accords distincts, signés séparément : « Compteur intermédiaire — personnel non posté » (avenant à l'accord ATT, signé 23/03/2024, vérifié visuellement sur PDF — signatures CGT-FO et CFE-CGC visibles, Sud Santé-Sociaux non visible sur la page de signature) et « Compteur intermédiaire — personnel posté » (signé 21/06/2024, mêmes signataires visibles). Les 2 PDF signés sont maintenant reliés ci-dessus. Seul le texte intégral du premier (non postés) est indexé dans la recherche plein texte de la page Accords — le texte du second (postés) est disponible en Markdown dans le dépôt (docs/accords-locaux/Accord compteur intermediaire salarie poste_signe.md) mais pas encore branché sur cette recherche.",
+      "note": "Résumé et dépliant partagés avec « Compteur intermédiaire — personnel posté » (accord distinct, voir cette entrée) : les deux accords étaient regroupés sur une seule ligne sur la page Accords, séparés en deux lignes le 19/10/2026 à la demande de David (une ligne par accord). Signé le 23/03/2024 ; signatures vérifiées visuellement sur le PDF : CGT-FO et CFE-CGC visibles, Sud Santé-Sociaux non visible sur la page de signature. Le nom de fichier du PDF commence par « Avenant » (il modifie formellement l'accord ATT sur ce point), mais le résumé le traite comme un accord autonome, conformément à sa propre présentation (« Deux accords distincts »).",
       "id": "compteur-intermediaire",
-      "titre": "Compteur intermédiaire — salariés postés et non postés",
+      "titre": "Compteur intermédiaire — personnel non posté",
       "categorie": "Accord local",
       "theme": "Temps de travail / organisation",
       "annee": "2024",
-      "chemin_pdf": [
-        "accords-locaux/Avenant accord ATT_ Mise en place compteur intermédiaire_Salariés non postés.pdf",
-        "accords-locaux/Accord compteur intermédiaire salarié posté_signé.pdf"
-      ],
+      "chemin_pdf": "accords-locaux/Avenant accord ATT_ Mise en place compteur intermédiaire_Salariés non postés.pdf",
       "chemin_source_md": "accords-locaux/accord-compteur-intermediaire-non-postes-2024.md",
       "profession": [],
       "type_contrat": [],
       "travail_nuit": [],
       "travail_poste": [
-        "non-poste",
-        "poste"
+        "non-poste"
       ],
       "handicap": [],
       "situation_familiale": [],
@@ -251,7 +247,41 @@
             "t": "Art. 1 de l'accord non-postés (23/03/2024) — « Le présent accord vise les salariés bénéficiant d'un horaire de travail non posté »",
             "q": "non posté",
             "loc": "resumes"
-          },
+          }
+        }
+      }
+    },
+    {
+      "pdf_ok": true,
+      "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-compteur-intermediaire.md",
+      "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_compteur_intermediaire_FO.pdf",
+      "statut": [
+        "non-cadre"
+      ],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [
+        "temps-plein",
+        "temps-partiel"
+      ],
+      "note": "Résumé et dépliant partagés avec « Compteur intermédiaire — personnel non posté » (accord distinct, voir cette entrée) : séparés en deux lignes sur la page Accords le 19/10/2026 à la demande de David, qui a aussi permis de brancher son texte intégral (docs/accords-locaux/Accord compteur intermediaire salarie poste_signe.md) sur la recherche plein texte de la page Accords — jusque-là non indexé. Signé le 21/06/2024 ; signatures vérifiées visuellement sur le PDF, mêmes signataires visibles que l'accord non-postés.",
+      "id": "compteur-intermediaire-postes",
+      "titre": "Compteur intermédiaire — personnel posté",
+      "categorie": "Accord local",
+      "theme": "Temps de travail / organisation",
+      "annee": "2024",
+      "chemin_pdf": "accords-locaux/Accord compteur intermédiaire salarié posté_signé.pdf",
+      "chemin_source_md": "accords-locaux/Accord compteur intermediaire salarie poste_signe.md",
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [
+        "poste"
+      ],
+      "handicap": [],
+      "situation_familiale": [],
+      "justificatifs": {
+        "travail_poste": {
           "poste": {
             "t": "Art. 1 de l'accord postés (21/06/2024) — « Le présent accord vise les salariés bénéficiant d'un horaire de travail posté »",
             "q": "posté",
@@ -475,17 +505,40 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Confirmé le 21/09/2026 (lecture directe du PDF) : l'avenant « Avenant à l'accord d'entreprise relatif à la Validation des Acquis Professionnels _04.02.2025_0.pdf » (signé le 4 février 2025) porte bien l'étiquette « V2025-2 », identique à celle du Word conservé — le lien antérieurement incertain entre les deux est résolu. Cet avenant automatise le 3e palier de VAP (institué par l'avenant CCN Unicancer 2024-04, effet 1er janvier 2025) ; le résumé existant couvre déjà correctement ce point. Avenant ajouté au PDF téléchargeable le 19/10/2026 (confirmé par David : les avenants sont intégrés au résumé/dépliant de l'accord de base, mais peuvent être ajoutés séparément à la liste des accords).",
+      "note": "Avenant du 04/02/2025 désormais listé séparément sur la page Accords, sous-catégorie « Avenant » (voir l'entrée avenant-vap-2025) — avant le 19/10/2026 il apparaissait comme un second bouton sur cette même ligne.",
       "id": "vap-2025",
       "titre": "Validation des Acquis Professionnels (VAP)",
       "categorie": "Accord local",
       "theme": "Carrière",
       "annee": "2025",
-      "chemin_pdf": [
-        "accords-locaux/Accord sur la validation des acquis professionnels _Version signée.pdf",
-        "accords-locaux/Avenant à l'accord d'entreprise relatif à la Validation des Acquis Professionnels _04.02.2025_0.pdf"
-      ],
+      "chemin_pdf": "accords-locaux/Accord sur la validation des acquis professionnels _Version signée.pdf",
       "chemin_source_md": "accords-locaux/Accord sur la validation des acquis professionnels _Version signee.md",
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
+    },
+    {
+      "pdf_ok": true,
+      "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-vap-2025.md",
+      "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_VAP_FO.pdf",
+      "statut": [
+        "cadre",
+        "non-cadre"
+      ],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [],
+      "note": "Confirmé le 21/09/2026 (lecture directe du PDF) : l'avenant « Avenant à l'accord d'entreprise relatif à la Validation des Acquis Professionnels _04.02.2025_0.pdf » (signé le 4 février 2025) porte bien l'étiquette « V2025-2 », identique à celle du Word conservé — le lien antérieurement incertain entre les deux est résolu. Cet avenant automatise le 3e palier de VAP (institué par l'avenant CCN Unicancer 2024-04, effet 1er janvier 2025) ; le résumé existant (partagé avec l'accord de base) couvre déjà correctement ce point. Listé séparément sur la page Accords depuis le 19/10/2026 (sous-catégorie « Avenant », sous l'accord de base).",
+      "id": "avenant-vap-2025",
+      "avenant_de": "vap-2025",
+      "titre": "Avenant — VAP (04/02/2025)",
+      "categorie": "Accord local",
+      "theme": "Carrière",
+      "annee": "2025",
+      "chemin_pdf": "accords-locaux/Avenant à l'accord d'entreprise relatif à la Validation des Acquis Professionnels _04.02.2025_0.pdf",
       "profession": [],
       "type_contrat": [],
       "travail_nuit": [],
@@ -634,17 +687,42 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Avenant du 26/04/2024 existe (PDF: AVENANT ACCORD PRIME USC_Version signée.pdf) mais aucun Word reçu. Avenant ajouté au PDF téléchargeable le 19/10/2026 (confirmé par David : les avenants sont intégrés au résumé/dépliant de l'accord de base, mais peuvent être ajoutés séparément à la liste des accords).",
+      "note": "Avenant du 26/04/2024 désormais listé séparément sur la page Accords, sous-catégorie « Avenant » (voir l'entrée avenant-prime-usc-2023) — avant le 19/10/2026 il apparaissait comme un second bouton sur cette même ligne.",
       "id": "prime-usc-2023",
       "titre": "Prime USC",
       "categorie": "Accord local",
       "theme": "Rémunération / épargne",
       "annee": "2023",
-      "chemin_pdf": [
-        "accords-locaux/Accord prime USC signé.pdf",
-        "accords-locaux/AVENANT ACCORD PRIME USC_Version signée.pdf"
-      ],
+      "chemin_pdf": "accords-locaux/Accord prime USC signé.pdf",
       "chemin_source_md": "accords-locaux/Accord prime USC signe.md",
+      "profession": [
+        "ide",
+        "as"
+      ],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
+    },
+    {
+      "pdf_ok": true,
+      "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-prime-usc-2023.md",
+      "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_prime_USC_FO.pdf",
+      "statut": [
+        "non-cadre"
+      ],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [],
+      "note": "Avenant du 26/04/2024 (aucun Word reçu, PDF signé seul disponible). Résumé partagé avec l'accord de base. Listé séparément sur la page Accords depuis le 19/10/2026 (sous-catégorie « Avenant », sous l'accord de base).",
+      "id": "avenant-prime-usc-2023",
+      "avenant_de": "prime-usc-2023",
+      "titre": "Avenant — Prime USC (26/04/2024)",
+      "categorie": "Accord local",
+      "theme": "Rémunération / épargne",
+      "annee": "2024",
+      "chemin_pdf": "accords-locaux/AVENANT ACCORD PRIME USC_Version signée.pdf",
       "profession": [
         "ide",
         "as"
@@ -1010,7 +1088,8 @@
       ],
       "note": "Intégré au résumé et au dépliant ATT Cadres (pas de résumé séparé). Statut praticien ajouté le 19/10/2026 (confirmé par David) : modifie l'article 3.1.4 de l'accord ATT-cadres 2021, qui s'applique aux praticiens. PDF signé ajouté le 19/10/2026 (transmis par David) : avenant daté du 31/12/2025. ⚠️ Vérification visuelle page par page des signatures : seuls le DG (Mario Campone) et la CFE-CGC ont signé — les emplacements CGT-FO et Sud Santé-Sociaux sont restés vierges sur ce PDF. ⚠️ Incohérence relevée dans le préambule de ce PDF : sa dernière phrase mentionne l'« accord d'ATT des salariés non-cadre » alors que le titre et l'article 1 concernent bien les cadres — probable erreur de copier-coller du document, signalée ici sans trancher sur sa portée juridique.",
       "id": "acquisition-cp-maladie-cadres-2025",
-      "titre": "Acquisition de CP pendant un arrêt maladie — cadres",
+      "avenant_de": "att-cadres-2021",
+      "titre": "Avenant — Congés payés pendant un arrêt maladie (31/12/2025)",
       "categorie": "Accord local",
       "theme": "Congés",
       "annee": "2025",
@@ -1043,7 +1122,8 @@
       ],
       "note": "Intégré au résumé et au dépliant ATT Non-Cadres (pas de résumé séparé). PDF signé ajouté le 19/10/2026 (transmis par David) : avenant daté du 31/12/2025. ⚠️ ANOMALIE DE SIGNATURE relevée par vérification visuelle page par page : CGT-FO, Sud Santé-Sociaux ET CFE-CGC ont signé, mais l'emplacement du Directeur Général (Mario Campone) est resté vierge sur ce PDF — aucune signature employeur. Un accord sans signature de l'employeur n'est en principe pas valablement conclu. Point signalé à David le 19/10/2026 ; décision prise : l'ajouter malgré tout au dépôt, en le signalant clairement ici et dans le résumé, plutôt que de l'omettre. À clarifier auprès de la Direction (version définitive signée existante ? erreur d'exemplaire transmis ?).",
       "id": "acquisition-cp-maladie-non-cadres-2025",
-      "titre": "Acquisition de CP pendant un arrêt maladie — non-cadres",
+      "avenant_de": "att-non-cadres-2020",
+      "titre": "Avenant — Congés payés pendant un arrêt maladie (31/12/2025)",
       "categorie": "Accord local",
       "theme": "Congés",
       "annee": "2025",
@@ -1201,10 +1281,7 @@
       "theme": "Carrière",
       "annee": "2020 (avenants 2021, 2023)",
       "pdf_ok": true,
-      "chemin_pdf": [
-        "accords-locaux/Accord Intergénérationnel du 30 01 2020_signé.pdf",
-        "accords-locaux/Avenant accord d'entreprise intergénérationnel_2023_Version signée.pdf"
-      ],
+      "chemin_pdf": "accords-locaux/Accord Intergénérationnel du 30 01 2020_signé.pdf",
       "chemin_source_md": "accords-locaux/Accord Intergenerationnel du 30 01 2020_signe.md",
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-intergenerationnel.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_intergenerationnel_FO.pdf",
@@ -1212,7 +1289,7 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020 (PDF : \"Accord Intergénérationnel du 30 01 2020_signé.pdf\"), complété par l'avenant du 15/09/2023 (PDF : \"Avenant accord d'entreprise intergénérationnel_2023_Version signée.pdf\", source : accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md), qui modifie l'article 3.4.2 (temps partiel fin de carrière). L'avenant n°1 du 30/06/2021 n'est plus en vigueur (confirmé par David le 21/09/2026) — archivé dans archive-accords-locaux/ sous \"Accord intergenerationnel_Avenant n1_Signe plus en vigueur\". Les PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent uniquement les textes en vigueur. Avenant 2023 (en vigueur) ajouté au PDF téléchargeable le 19/10/2026 (confirmé par David : les avenants sont intégrés au résumé/dépliant de l'accord de base, mais peuvent être ajoutés séparément à la liste des accords).",
+      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020, complété par l'avenant du 15/09/2023 qui modifie l'article 3.4.2 (temps partiel fin de carrière) — listé séparément sur la page Accords depuis le 19/10/2026, sous-catégorie « Avenant » (voir l'entrée avenant-intergenerationnel-2023). L'avenant n°1 du 30/06/2021 n'est plus en vigueur (confirmé par David le 21/09/2026) — archivé dans archive-accords-locaux/ sous \"Accord intergenerationnel_Avenant n1_Signe plus en vigueur\". Les PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent uniquement les textes en vigueur.",
       "profession": [],
       "type_contrat": [],
       "travail_nuit": [],
@@ -1230,6 +1307,30 @@
           }
         }
       }
+    },
+    {
+      "id": "avenant-intergenerationnel-2023",
+      "avenant_de": "intergenerationnel",
+      "titre": "Avenant — Accord intergénérationnel (15/09/2023)",
+      "categorie": "Accord local",
+      "theme": "Carrière",
+      "annee": "2023",
+      "pdf_ok": true,
+      "chemin_pdf": "accords-locaux/Avenant accord d'entreprise intergénérationnel_2023_Version signée.pdf",
+      "chemin_source_md": "accords-locaux/Avenant accord d'entreprise intergenerationnel_2023_Version signee.md",
+      "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-intergenerationnel.md",
+      "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_intergenerationnel_FO.pdf",
+      "statut": [],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [],
+      "note": "Avenant du 15/09/2023, en vigueur, modifie l'article 3.4.2 de l'accord de base (temps partiel fin de carrière). Résumé partagé avec l'accord de base. Listé séparément sur la page Accords depuis le 19/10/2026 (sous-catégorie « Avenant », sous l'accord de base).",
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "pdf_ok": true,

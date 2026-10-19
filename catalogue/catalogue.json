@@ -563,7 +563,7 @@
       }
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-forfait-mobilite-durable-2025.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_forfait_mobilite_durable_FO.pdf",
       "statut": [],
@@ -573,13 +573,13 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Le texte de la version 2025 en vigueur (24 octobre 2025) est confirmé fiable : retrouvé le 21/09/2026 dans docs/accords-locaux/Accords locaux Format word/Accord Forfait Mobilité Durable Vfinale.docx (Word source réel, daté et signé, incluant bien la prime trottinette électrique Article 3) — ce fichier dormait dans le dépôt sans être relié au catalogue. Il ne manque plus que le PDF signé (chemin_pdf toujours vide). Les 2 Word et le PDF de la version 2024 (obsolète) sont tous archivés.",
+      "note": "Le texte de la version 2025 en vigueur (24 octobre 2025) est confirmé fiable : retrouvé le 21/09/2026 dans docs/accords-locaux/Accords locaux Format word/Accord Forfait Mobilité Durable Vfinale.docx (Word source réel, daté et signé, incluant bien la prime trottinette électrique Article 3) — ce fichier dormait dans le dépôt sans être relié au catalogue. PDF signé ajouté le 19/10/2026 (transmis par David), vérifié visuellement page par page : daté du 24/10/2025, signé par le DG (Mario Campone), CGT-FO (David Di Peri) et CFE-CGC (Maxime Bremaud). Sud Santé-Sociaux (Julien Rosan) n'a pas signé — ligne vide sur le PDF. Les 2 Word et le PDF de la version 2024 (obsolète) sont tous archivés.",
       "id": "forfait-mobilite-durable-2025",
       "titre": "Forfait Mobilité Durable",
       "categorie": "Accord local",
       "theme": "Rémunération / épargne",
       "annee": "2025-10-24",
-      "chemin_pdf": null,
+      "chemin_pdf": "accords-locaux/Accord Forfait Mobilite Durable 2025.pdf",
       "chemin_source_md": "accords-locaux/ACCORD FORFAIT MOBILITE DURABLE_Version signee.md",
       "profession": [],
       "type_contrat": [],
@@ -851,20 +851,20 @@
       "situation_familiale": []
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-due-complementaire-frais-sante.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_complementaire_frais_sante_FO.pdf",
       "statut": [],
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Converti (Word reçu) mais aucun PDF signé retrouvé (point déjà identifié).",
+      "note": "PDF signé ajouté le 19/10/2026 (transmis par David), vérifié visuellement : signé par le DG (Pr Mario Campone) le 19/06/2024 à Angers, en fin de texte. La note précédente indiquant une date de signature non identifiée était erronée — corrigée.",
       "id": "due-complementaire-frais-sante",
       "titre": "DUE : complémentaire frais de santé",
       "categorie": "DUE",
       "theme": "Protection sociale",
       "annee": "2024",
-      "chemin_pdf": null,
+      "chemin_pdf": "DUE/DUE regime frais de sante 2024.pdf",
       "chemin_source_md": "DUE/due-complementaire-frais-sante.md",
       "profession": [],
       "type_contrat": [],
@@ -874,7 +874,7 @@
       "situation_familiale": []
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-due-prime-pool-remplacement-am.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_prime_pool_remplacement_FO.pdf",
       "statut": [
@@ -886,13 +886,13 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Vérifié le 20/09/2026 : le dépliant Depliant_DUE_prime_pool_remplacement_FO.pdf couvre à la fois cette décision (assistantes médicales) et son pendant AS/IDE dans un seul document.",
+      "note": "Vérifié le 20/09/2026 : le dépliant Depliant_DUE_prime_pool_remplacement_FO.pdf couvre à la fois cette décision (assistantes médicales) et son pendant AS/IDE dans un seul document. PDF signé ajouté le 19/10/2026 (transmis par David), vérifié visuellement : conforme au résumé existant, sans écart constaté.",
       "id": "due-prime-pool-remplacement-am",
       "titre": "DUE : prime pool remplacement — Assistantes Médicales",
       "categorie": "DUE",
       "theme": "Rémunération / épargne",
       "annee": "2024",
-      "chemin_pdf": null,
+      "chemin_pdf": "DUE/DUE prime pool remplacement assistantes medicales 2024.pdf",
       "chemin_source_md": "DUE/due-prime-pool-remplacement-am.md",
       "profession": [
         "assistant-medical"
@@ -921,7 +921,7 @@
       }
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-due-prime-pool-remplacement-soignants.md",
       "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_DUE_prime_pool_remplacement_FO.pdf",
       "statut": [
@@ -933,13 +933,13 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Converti (Word reçu) mais aucun PDF signé retrouvé (point déjà identifié). Vérifié le 20/09/2026 : le dépliant Depliant_DUE_prime_pool_remplacement_FO.pdf couvre bien les deux décisions unilatérales du 22/04/2024 (assistantes médicales ET aides-soignants/IDE) dans un seul document — pas un dépliant manquant, un dépliant partagé. L'index du dépôt ne le mentionnait que sur la ligne AM, corrigé.",
+      "note": "Vérifié le 20/09/2026 : le dépliant Depliant_DUE_prime_pool_remplacement_FO.pdf couvre bien les deux décisions unilatérales du 22/04/2024 (assistantes médicales ET aides-soignants/IDE) dans un seul document — pas un dépliant manquant, un dépliant partagé. L'index du dépôt ne le mentionnait que sur la ligne AM, corrigé. PDF signé ajouté le 19/10/2026 (transmis par David), vérifié visuellement : conforme au résumé existant, sans écart constaté.",
       "id": "due-prime-pool-remplacement-soignants",
       "titre": "DUE : prime pool remplacement — AS / IDE",
       "categorie": "DUE",
       "theme": "Rémunération / épargne",
       "annee": "2024",
-      "chemin_pdf": null,
+      "chemin_pdf": "DUE/DUE prime pool remplacement AS IDE 2024.pdf",
       "chemin_source_md": "DUE/due-prime-pool-remplacement-soignants.md",
       "profession": [
         "as",
@@ -992,7 +992,7 @@
       "situation_familiale": []
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-att-cadres-2021.md",
       "chemin_depliant": [
         "accords-locaux/Depliants_FO/Depliant_ATT_cadres_forfait_jours_FO.pdf",
@@ -1008,13 +1008,13 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Intégré au résumé et au dépliant ATT Cadres (pas de résumé séparé). Pas de PDF signé trouvé à ce nom dans le dépôt. Statut praticien ajouté le 19/10/2026 (confirmé par David) : modifie l'article 3.1.4 de l'accord ATT-cadres 2021, qui s'applique aux praticiens.",
+      "note": "Intégré au résumé et au dépliant ATT Cadres (pas de résumé séparé). Statut praticien ajouté le 19/10/2026 (confirmé par David) : modifie l'article 3.1.4 de l'accord ATT-cadres 2021, qui s'applique aux praticiens. PDF signé ajouté le 19/10/2026 (transmis par David) : avenant daté du 31/12/2025. ⚠️ Vérification visuelle page par page des signatures : seuls le DG (Mario Campone) et la CFE-CGC ont signé — les emplacements CGT-FO et Sud Santé-Sociaux sont restés vierges sur ce PDF. ⚠️ Incohérence relevée dans le préambule de ce PDF : sa dernière phrase mentionne l'« accord d'ATT des salariés non-cadre » alors que le titre et l'article 1 concernent bien les cadres — probable erreur de copier-coller du document, signalée ici sans trancher sur sa portée juridique.",
       "id": "acquisition-cp-maladie-cadres-2025",
       "titre": "Acquisition de CP pendant un arrêt maladie — cadres",
       "categorie": "Accord local",
       "theme": "Congés",
       "annee": "2025",
-      "chemin_pdf": null,
+      "chemin_pdf": "accords-locaux/Avenant ATT cadres incidences absences conges payes 2025.pdf",
       "chemin_source_md": "accords-locaux/accord-acquisition-cp-maladie-cadres-2025.md",
       "profession": [],
       "type_contrat": [],
@@ -1024,7 +1024,7 @@
       "situation_familiale": []
     },
     {
-      "pdf_ok": false,
+      "pdf_ok": true,
       "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-att-non-cadres-2020.md",
       "chemin_depliant": [
         "accords-locaux/Depliants_FO/Depliant_ATT_non_cadres_1_horaires_FO.pdf",
@@ -1041,13 +1041,13 @@
         "temps-plein",
         "temps-partiel"
       ],
-      "note": "Intégré au résumé et au dépliant ATT Non-Cadres (pas de résumé séparé). Pas de PDF signé trouvé à ce nom dans le dépôt.",
+      "note": "Intégré au résumé et au dépliant ATT Non-Cadres (pas de résumé séparé). PDF signé ajouté le 19/10/2026 (transmis par David) : avenant daté du 31/12/2025. ⚠️ ANOMALIE DE SIGNATURE relevée par vérification visuelle page par page : CGT-FO, Sud Santé-Sociaux ET CFE-CGC ont signé, mais l'emplacement du Directeur Général (Mario Campone) est resté vierge sur ce PDF — aucune signature employeur. Un accord sans signature de l'employeur n'est en principe pas valablement conclu. Point signalé à David le 19/10/2026 ; décision prise : l'ajouter malgré tout au dépôt, en le signalant clairement ici et dans le résumé, plutôt que de l'omettre. À clarifier auprès de la Direction (version définitive signée existante ? erreur d'exemplaire transmis ?).",
       "id": "acquisition-cp-maladie-non-cadres-2025",
       "titre": "Acquisition de CP pendant un arrêt maladie — non-cadres",
       "categorie": "Accord local",
       "theme": "Congés",
       "annee": "2025",
-      "chemin_pdf": null,
+      "chemin_pdf": "accords-locaux/Avenant ATT non cadres incidences absences conges payes 2025.pdf",
       "chemin_source_md": "accords-locaux/accord-acquisition-cp-maladie-non-cadres-2025.md",
       "profession": [],
       "type_contrat": [],

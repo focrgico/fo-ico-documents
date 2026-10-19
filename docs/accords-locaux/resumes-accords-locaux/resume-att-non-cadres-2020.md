@@ -5,6 +5,8 @@
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
 **Source : accord du 14 septembre 2020, tel que modifié par l'Avenant n°1 du 31 janvier 2022 (heures supplémentaires) et par l'avenant du 31 décembre 2025 (congés payés pendant un arrêt maladie). Le reste de l'accord de 2020 est inchangé.**
 
+> ⚠️ **Anomalie de signature sur l'avenant du 31/12/2025** : sur le PDF retrouvé, CGT-FO, Sud Santé-Sociaux et CFE-CGC ont signé, mais l'emplacement du Directeur Général est resté vierge — pas de signature employeur (vérification visuelle page par page, 19/10/2026). Un accord sans signature de l'employeur n'est en principe pas valablement conclu. Ce point a été signalé et reste à clarifier auprès de la Direction ; le document est néanmoins intégré ici, avec cette réserve clairement indiquée plutôt que passée sous silence.
+
 ## Qui est concerné
 
 Vous êtes non-cadre à l'ICO ? Cet accord s'applique à vous, que vous soyez en CDI, CDD ou contrat spécifique/aidé, à temps plein ou à temps partiel (Préambule).

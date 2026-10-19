@@ -5,6 +5,8 @@
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
 **Source : accord du 12 mai 2021, tel que modifié par l'avenant du 31 décembre 2025 (article 3.1.4 sur les congés payés pendant un arrêt maladie, seul point modifié — le reste de l'accord de 2021 est inchangé).**
 
+> ⚠️ **À noter sur l'avenant du 31/12/2025** : sur le PDF signé retrouvé, seuls le Directeur Général et la CFE-CGC ont signé — les emplacements CGT-FO et Sud Santé-Sociaux sont restés vierges (vérification visuelle page par page, 19/10/2026). Par ailleurs, le préambule de ce document comporte une incohérence : sa dernière phrase mentionne l'« accord d'ATT des salariés non-cadre », alors que le titre et l'article 1 portent bien sur les cadres — probable erreur de copier-coller, signalée ici sans en tirer de conclusion juridique.
+
 ## Qui est concerné
 
 Si vous êtes cadre à l'ICO, cet accord vous classe dans l'une de deux catégories (Préambule) :

@@ -1,8 +1,8 @@
 # DUE — Complémentaire Frais de Santé (CFS)
 
-- **Date :** évolution du régime à effet du 1er juin 2024 (date de signature non identifiée dans le texte — document se terminant par une attestation salarié vierge)
-- **Source :** converti depuis `DUE CFS_v2024 05 27.docx` (Word)
-- **Document de référence :** aucun PDF signé trouvé dans le dossier pour cette DUE
+- **Date :** évolution du régime à effet du 1er juin 2024, décision signée le 19 juin 2024 (PDF signé retrouvé et ajouté le 19/10/2026, confirme le texte — la note précédente disant la date de signature non identifiée était une erreur, la signature figure en fin de texte)
+- **Source :** converti depuis `DUE CFS_v2024 05 27.docx` (Word), vérifié contre le PDF signé
+- **Document de référence :** PDF signé par le Pr Mario Campone (DG) le 19/06/2024
 - **Nature :** Décision Unilatérale de l'Employeur (DUE) — pas un accord négocié, pas de signataires syndicaux.
 
 ---

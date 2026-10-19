@@ -184,9 +184,10 @@ function renderSituationResults(filters) {
   // Un accord local n'affiche qu'un lien vers l'accord lui-même, jamais de
   // citation d'article détaillée : seule la CCN cite des articles précis
   // (cf. renderCcnBlock / ccnJustificatifs) — pour un accord, le texte intégral
-  // d'un clic suffit à vérifier la disposition exacte.
-  const renderMatch = (a, k, v) =>
-    '<div class="situation-match"><a class="situation-item" href="' + a.href + '">' + a.titre + ' →</a></div>';
+  // d'un clic suffit à vérifier la disposition exacte. Même style de puce
+  // compacte (pas de carte pleine largeur) que les blocs généraux/CCN plus bas,
+  // pour un rendu visuel homogène sur toute la page.
+  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
 
   // Seul le statut (cadre/non-cadre/praticien) partage réellement la population
   // en groupes mutuellement exclusifs (cf. note sur `generaux` plus bas) : un
@@ -210,7 +211,7 @@ function renderSituationResults(filters) {
     if (matches.length === 0) return;
     const label = (facetValueLabels[k] && facetValueLabels[k][v]) || v;
     html += '<h3>' + matches.length + ' accord(s) — ' + (facetLabels[k] || k) + ' : ' + label + '</h3>' +
-      '<div class="situation-matches">' + matches.map(a => renderMatch(a, k, v)).join('') + '</div>';
+      '<div class="situation-list">' + matches.map(renderList).join('') + '</div>';
   });
 
   // Généraux : l'accord ne remonte déjà dans aucun bloc ci-dessus (même filtre
@@ -225,7 +226,6 @@ function renderSituationResults(filters) {
     situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
     return;
   }
-  const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
   if (generaux.length > 0) {
     // Aucun critère coché : la liste "générale" est simplement la liste complète,
     // pas des accords confirmés applicables à tous — intitulé distinct pour ne pas

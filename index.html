@@ -99,7 +99,7 @@
             <option value="temps-partiel">Temps partiel</option>
           </select>
         </label>
-        <label class="select-field">
+        <label class="select-field" id="field-travail_nuit">
           <span class="select-label">Travail de nuit</span>
           <select name="travail_nuit" class="real-select">
             <option value="">Non</option>
@@ -146,6 +146,8 @@ const modaliteField = document.getElementById('field-modalite_horaire');
 const modaliteSelect = modaliteField.querySelector('select[name="modalite_horaire"]');
 const posteField = document.getElementById('field-travail_poste');
 const posteSelect = posteField.querySelector('select[name="travail_poste"]');
+const nuitField = document.getElementById('field-travail_nuit');
+const nuitSelect = nuitField.querySelector('select[name="travail_nuit"]');
 
 function toggleModaliteField() {
   const isCadreOuPraticien = statutSelect.value === 'cadre' || statutSelect.value === 'praticien';
@@ -153,6 +155,8 @@ function toggleModaliteField() {
   if (!isCadreOuPraticien) { modaliteSelect.value = ''; }
   posteField.style.display = isCadreOuPraticien ? 'none' : '';
   if (isCadreOuPraticien) { posteSelect.value = ''; }
+  nuitField.style.display = isCadreOuPraticien ? 'none' : '';
+  if (isCadreOuPraticien) { nuitSelect.value = ''; }
 }
 statutSelect.addEventListener('change', toggleModaliteField);
 toggleModaliteField();

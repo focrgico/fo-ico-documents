@@ -12,7 +12,7 @@
 Les **praticiens** de l'ICO en CDI ou CDD, réunissant toutes ces conditions :
 - Taux d'activité **≥ 50%**
 - Au moins **6 mois d'ancienneté continue** au 1er janvier de l'année de versement
-- Toujours **inscrit aux effectifs** au moment du versement
+- Toujours **inscrit aux effectifs** au mois du versement (si vous quittez l'ICO dans l'année de versement mais avant le versement, un **rappel** de PVA aura lieu)
 - N'ayant **pas refusé** de passer son entretien annuel d'appréciation (EAA)
 
 **Catégories éligibles :** PU-PH (hors DG), MCU-PH, Chefs de Clinique, Praticiens spécialistes, Praticiens des CLCC, Assistants Spécialistes, Assistants Généralistes.
@@ -33,7 +33,7 @@ L'enveloppe est d'abord répartie entre les services **au prorata des ETP**. Les
 
 ## Votre PVA individuelle *(Art. 6)*
 
-Le montant individuel ne peut dépasser **8% de votre salaire de base annuel moyen**.
+Le montant individuel ne peut dépasser **8% de votre salaire de base annuel moyen**. La PVA normale est identique pour tous les praticiens, au prorata du temps de travail, quelles que soient leur classification et leur ancienneté. Si vous êtes à temps partiel ou si votre taux d'activité a changé en cours d'année, le taux retenu pour le calcul est votre **taux moyen d'activité de l'année**, apprécié au 31/12 de l'année précédant le versement.
 
 Le niveau de PVA dépend des résultats de votre EAA selon 4 niveaux :
 

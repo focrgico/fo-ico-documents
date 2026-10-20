@@ -1294,10 +1294,23 @@ applyFilters();
         f.write(html)
 
 
+# Titre affiché pour un résumé qui couvre plusieurs accords : sans cela, c'est le titre
+# du premier accord rencontré qui s'affiche (ex. « personnel non posté » seul, alors que
+# le résumé traite aussi les postés). Clé = id du premier accord concerné.
+RESUME_TITLE_OVERRIDES = {
+    "compteur-intermediaire": "Compteur intermédiaire — postés et non postés",
+    "prevoyance-axa-non-cadre": "Prévoyance AXA (décès, incapacité, invalidité) — cadres et non cadres",
+    "travail-nuit-2026": "Maintien des compétences du personnel de nuit — Stages de jour",
+    "interessement-2026": "Intéressement 2026",
+    "forfait-mobilite-durable-2025": "Forfait Mobilité Durable (2025)",
+}
+
+
 def dedup_by_resume(accords):
     """Plusieurs accords (ex. Acquisition CP maladie cadres/non-cadres) pointent
     vers le même résumé source (ex. ATT cadres/non-cadres) : on ne liste/génère
-    qu'une seule fois par fichier résumé source, sous le premier titre rencontré."""
+    qu'une seule fois par fichier résumé source, sous le premier titre rencontré
+    (sauf titre imposé dans RESUME_TITLE_OVERRIDES)."""
     seen = set()
     result = []
     for a in accords:
@@ -1305,6 +1318,8 @@ def dedup_by_resume(accords):
         if not path or path in seen:
             continue
         seen.add(path)
+        if a["id"] in RESUME_TITLE_OVERRIDES:
+            a = dict(a, titre=RESUME_TITLE_OVERRIDES[a["id"]])
         result.append(a)
     return result
 

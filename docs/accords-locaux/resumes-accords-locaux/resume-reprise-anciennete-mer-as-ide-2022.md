@@ -29,7 +29,7 @@ La CCN des CLCC prévoit une reprise d'expérience professionnelle à **50%** po
 La reprise à 100% est automatique, sous réserve de fournir vos justificatifs d'emploi (certificats de travail, bulletins de salaire ou contrats) **dans les 3 mois suivant votre embauche**. Au-delà, la prise en compte ne sera effective qu'au 1er jour du mois suivant la production des justificatifs.
 
 **Si vous étiez déjà en poste à la signature (mai 2022) :**
-La demande devait être effectuée avant le **30 juin 2022** via le formulaire en ligne, avec envoi par mail des justificatifs à la DRH. La PEP ainsi recalculée a été mise en place rétroactivement au **1er janvier 2022**, versée avec la paie d'octobre 2022.
+La demande devait être effectuée avant le **30 juin 2022** via le formulaire en ligne, avec envoi par mail des justificatifs à la DRH. **Tout dossier incomplet n'était pas étudié**, et **à défaut de demande selon ce processus, la reprise à 100% n'était pas effectuée** *(Art. 4-2)*. La PEP ainsi recalculée a été mise en place rétroactivement au **1er janvier 2022**, versée avec la paie d'octobre 2022.
 
 ---
 *Source : Accord reprise d'ancienneté MER, AS, IDE (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*

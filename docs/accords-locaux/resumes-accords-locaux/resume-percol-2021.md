@@ -8,7 +8,7 @@ Un plan d'épargne retraite d'entreprise, régi par le Code monétaire et financ
 
 **Qui peut y adhérer** *(Art. 1)*
 
-Vous, dès **3 mois d'ancienneté** (les stages rémunérés de plus de 2 mois comptent dans ce délai s'ils débouchent sur une embauche). Si vous quittez l'ICO, vous pouvez continuer à verser, sans abondement, tant que vous n'avez pas accès à un autre PERCOL chez votre nouvel employeur.
+Vous, dès **3 mois d'ancienneté** (les stages de plus de 2 mois comptent dans ce délai s'ils débouchent sur une embauche ; les périodes de suspension du contrat ne sont pas déduites de ce calcul d'ancienneté). Si vous quittez l'ICO, vous pouvez continuer à verser, sans abondement et avec les frais de gestion à votre charge exclusive, tant que vous n'avez pas accès à un autre PERCOL chez votre nouvel employeur *(Art. 1)*.
 
 **Comment l'alimenter** *(Art. 2)*
 
@@ -27,6 +27,12 @@ Par défaut, vous êtes en **gestion pilotée** (profil "équilibré horizon ret
 - **À l'échéance normale** : à votre départ à la retraite (liquidation de la pension), avec une possibilité de sortie en rente viagère via un contrat BPCE Vie
 - **Un déblocage anticipé reste possible** (versement unique), si : décès de votre conjoint/partenaire de PACS, invalidité (la vôtre, celle de vos enfants, de votre conjoint/partenaire), surendettement, fin de droits au chômage, cessation d'activité non salariée suite à liquidation judiciaire, **achat de votre résidence principale** (demande à faire dans les 6 mois suivant l'événement pour ce dernier motif)
 - Votre décès avant l'échéance entraîne la clôture du Plan
+
+**Si vous quittez l'ICO (une fois le PERCOL ouvert)** *(Art. 9)*
+
+- Vous recevez un état récapitulatif de toutes vos sommes épargnées
+- Vous pouvez **conserver vos avoirs** dans le Plan — mais les frais de tenue de compte vous seront alors facturés par prélèvement sur vos avoirs
+- Vous pouvez aussi demander le **transfert** de vos sommes vers un autre plan d'épargne retraite (nouvelle entreprise), ce qui clôture votre compte dans le Plan de l'ICO
 
 **Dates et signataires**
 

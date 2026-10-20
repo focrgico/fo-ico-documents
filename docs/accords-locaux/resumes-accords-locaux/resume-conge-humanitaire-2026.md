@@ -35,7 +35,7 @@ La demande est écrite (LRAR ou remise en main propre à la DRH) et doit précis
 
 **Pendant le congé : le contrat est suspendu, le salarié n'est pas rémunéré.**
 
-Toutefois, vous pouvez financer tout ou partie du congé avec vos **congés payés** ou votre **CET** (le délai de préavis habituel du CET ne s'applique pas dans ce cas — à mentionner dans votre demande). La durée de l'absence compte comme du **temps de travail effectif** pour l'ancienneté (PEP) et l'avancement (VAP).
+Toutefois, vous pouvez financer tout ou partie du congé avec vos **congés payés** ou votre **CET** (le délai de préavis habituel du CET ne s'applique pas dans ce cas — à mentionner dans votre demande). Dans ce cas, ce sont les règles et usages habituels de pose des congés payés/CET qui s'appliquent pour cette partie — un refus éventuel sur cette partie ne suit donc pas la procédure de l'Art. 3 (délais de 15 jours / 24h) mais les règles habituelles de pose de congés *(Art. 5)*. La durée de l'absence compte comme du **temps de travail effectif** pour l'ancienneté (PEP) et l'avancement (VAP).
 
 ---
 
@@ -50,6 +50,7 @@ Pour éviter de désorganiser les services, l'employeur peut refuser si :
 ## Le retour *(Art. 6)*
 
 - La date de retour est celle fixée dans la demande initiale, ou anticipée si la mission s'interrompt pour cause de force majeure
+- **Si vous avez financé tout ou partie du congé par des congés payés ou des jours de CET et que la mission s'interrompt**, votre retour effectif n'intervient qu'au terme de ces congés payés/CET, et non dès l'interruption de la mission *(Art. 6)*
 - À votre retour, vous devez fournir une **attestation de fin de mission** délivrée par l'association
 
 ---

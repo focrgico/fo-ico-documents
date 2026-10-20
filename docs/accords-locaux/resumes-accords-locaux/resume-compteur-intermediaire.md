@@ -11,7 +11,7 @@
 - **Qui est concerné** : vous, si vous êtes non-cadre à horaires non postés (plages fixes/variables), quel que soit votre contrat, à temps plein ou partiel (Article 1).
 - **Comment ça marche** : chaque jour, le temps que vous faites au-delà de 7h39 (votre durée journalière de référence) alimente automatiquement votre compteur intermédiaire, dans la limite de **30 minutes par jour**. Au-delà de 30 minutes de dépassement, il faut faire une demande d'heures (DHP) dès la 1ère minute — dans ce cas, le compteur ne bouge pas ce jour-là (Article 2).
 - **Le plafond** : +/- 4 heures cumulées sur l'année (Article 2).
-- **Pour récupérer** : jusqu'à 1h/jour en autonomie sur les plages fixes, ou avec l'accord de votre N+1 ; au-delà d'1h et jusqu'à une demi-journée, l'accord du N+1 est obligatoire (Article 2).
+- **Pour récupérer** : jusqu'à 1h/jour en autonomie sur les plages fixes, ou avec l'accord de votre N+1 ; au-delà d'1h et jusqu'à une demi-journée, l'accord du N+1 est obligatoire, accordé selon les contraintes d'effectifs et de planning (Article 2).
 - **En fin d'année civile** : votre solde est intégré au résultat d'annualisation — bascule en RCR l'année suivante, versement au CET, ou paiement des heures si positif ; minoration si négatif (Article 3).
 
 ## Si vous êtes posté(e)

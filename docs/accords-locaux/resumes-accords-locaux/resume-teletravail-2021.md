@@ -19,13 +19,17 @@ Depuis 2021, le télétravail a sa place à l'ICO. Cet accord est né d'une dema
 - Travailler au moins **50 %** d'un temps plein *(Art. 3.3)*
 - Votre poste doit pouvoir se faire à distance — les métiers en contact direct avec les patients (accueil, soins) restent en dehors du dispositif, pour que la prise en charge ne soit jamais interrompue *(Art. 3.1)*
 - Sont exclus : apprentis, contrats de professionnalisation, CUI-CEC, stagiaires *(Art. 3.3)*
+- **Exception pour le personnel médical en lien avec le soin** : le télétravail peut être justifié pour les projets de recherche ou médicaux, les publications, les congrès ou réunions scientifiques, et pour la structuration de l'organisation du service en complément du chef de service. Sur validation du chef de département, il peut aussi être mis en œuvre pour des activités techniques et cliniques (télémédecine), après une période d'adaptation — la téléconsultation restant toujours exclue *(Art. 3.1)*
+- **Un bénéficiaire d'une RQTH (reconnaissance qualité travailleur handicapé)** verra son accès au télétravail favorisé, sur préconisation du médecin du travail, avec des aménagements de poste étudiés si besoin *(Art. 11)*
 
 **Ce qu'il faut retenir** *(Art. 6 — Fréquence et nombre de jours)*
 
-- Jusqu'à **47 jours de télétravail par an** pour un temps plein, proratisés si vous êtes à temps partiel *(Art. 6, al. 1-3)*
+- Jusqu'à **47 jours de télétravail par an** pour un temps plein. Si vous êtes à temps partiel à 80 % ou plus, ce plafond n'est pas proratisé ; en dessous de 80 %, il est proratisé à votre temps de travail *(Art. 6, al. 1-3)*
 - Concrètement, ça représente **1 jour par semaine en moyenne** pour les non-cadres et cadres en heures (2 jours possibles selon le service) *(Art. 6)*
 - Et jusqu'à **3 jours par semaine** pour les cadres au forfait jour *(Art. 6)*
 - Vous changez d'avis ? Le télétravail est **réversible à tout moment**, à votre seule initiative *(Art. 5.1 — Clause de réversibilité)*
+- **L'employeur peut aussi y mettre fin**, pour l'un de ces motifs : réorganisation de l'ICO, changement de fonction, évolution réglementaire rendant le télétravail incompatible, absence de remontée d'informations sur votre activité, ou non-respect des règles de durée du travail de l'accord. Dans ce cas, vous êtes informé par écrit et le retour au travail sur site prend effet au maximum **1 mois** après que vous avez reçu la décision — sauf en cas de manquement avéré aux règles de sécurité, confidentialité ou protection des données, où il est mis fin sans délai *(Art. 5.1)*
+- **Le télétravail peut aussi être suspendu ponctuellement et sans préavis** : nécessité de présence physique, panne technique, absentéisme important dans le service, ou congés (CP/RTT/temps partiel, prioritaires sur le télétravail) dans votre service. Les jours de télétravail non effectués peuvent alors être reportés, dans la limite de l'année civile *(Art. 5.3)*
 
 ---
 
@@ -37,6 +41,7 @@ Depuis 2021, le télétravail a sa place à l'ICO. Cet accord est né d'une dema
 2. La DRH doit vous répondre par écrit, et de façon motivée, sous **1 mois maximum** *(Art. 4.3)*
 3. Les jours sont ensuite validés via l'outil de gestion des temps (GTA) *(Art. 4.2)*
 4. Si c'est non, ce n'est jamais un motif de sanction — et le refus doit être justifié par écrit, noir sur blanc *(Art. 4.4)*
+5. **Un autre motif de refus possible** : votre responsable doit veiller à ce que le nombre de salariés en télétravail le même jour reste compatible avec le bon fonctionnement du service ; si les demandes sont trop nombreuses dans une même équipe, il peut en refuser certaines et mettra en place un roulement équitable entre les candidats *(Art. 4.5)*
 
 **Les délais à avoir en tête** *(Art. 6)*
 
@@ -52,6 +57,11 @@ Un PC portable, une souris filaire, l'alimentation et une sacoche. En revanche, 
 - Disposer chez vous d'un espace dédié et d'une connexion internet suffisante *(Art. 3.4)*
 - Souscrire une assurance habitation multirisques avec responsabilité civile *(Art. 8.3)*
 - Veiller à une confidentialité renforcée : données, mots de passe, etc. *(Art. 10.3)*
+
+**Si la connexion ne fonctionne pas** *(Art. 8.2)*
+
+- **Cause externe** (panne chez vous) : vous devez soit vous rendre sur site, soit poser une journée de CP ou de RTT, en accord avec votre responsable *(Art. 8.2)*
+- **Cause interne** (panne du réseau de l'ICO) : vous pouvez rester chez vous en attendant le rétablissement par la DSI *(Art. 8.2)*
 
 **⚠ Un point à ne pas négliger** *(Art. 7.2 et 7.3 — Droit à la déconnexion)*
 

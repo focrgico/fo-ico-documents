@@ -29,3 +29,5 @@ Vous, si vous êtes salarié **non-praticien** et éligible — la BIC est un co
 
 ---
 *Source : accord du 11 mars 2025. Références CCN : art. 2.5.2.2 et 2.5.2.2.3.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord ou de la CCN des CLCC. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20relatif%20%C3%A0%20la%20r%C3%A9partition%20de%20la%20BIC_Version%20sign%C3%A9e.pdf).*

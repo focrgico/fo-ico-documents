@@ -5,8 +5,6 @@
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
 **Source : accord du 12 mai 2021, tel que modifié par l'avenant du 31 décembre 2025 (article 3.1.4 sur les congés payés pendant un arrêt maladie, seul point modifié — le reste de l'accord de 2021 est inchangé).**
 
-> ⚠️ **À noter sur l'avenant du 31/12/2025** : sur le PDF signé retrouvé, seuls le Directeur Général et la CFE-CGC ont signé — les emplacements CGT-FO et Sud Santé-Sociaux sont restés vierges (vérification visuelle page par page, 19/10/2026). Par ailleurs, le préambule de ce document comporte une incohérence : sa dernière phrase mentionne l'« accord d'ATT des salariés non-cadre », alors que le titre et l'article 1 portent bien sur les cadres — probable erreur de copier-coller, signalée ici sans en tirer de conclusion juridique.
-
 ## Qui est concerné
 
 Si vous êtes cadre à l'ICO, cet accord vous classe dans l'une de deux catégories (Préambule) :
@@ -65,3 +63,6 @@ Un seul changement depuis 2021 : l'avenant du 31/12/2025 a mis à jour la règle
 - **Révision** : procédure renvoyant à l'article L. 2261-7-1 du Code du travail (Article 4.3).
 - **Dénonciation** : possible à tout moment par lettre recommandée avec accusé de réception ; l'accord cesse en principe de s'appliquer au dernier jour des mandats des membres du CSE ; déclaration à déposer auprès de l'Unité Territoriale de Maine-et-Loire de la DIRECCTE d'Angers (Article 4.4).
 - **Avenant du 31/12/2025 (congés payés pendant un arrêt maladie)** : pas de commission de suivi propre à l'avenant ; durée indéterminée, entrée en vigueur dès la signature (Article 2.1 de l'avenant) ; révision (Article 2.2 de l'avenant) et dénonciation (Article 2.3 de l'avenant, dépôt auprès de la DREETS d'Angers) selon les mêmes mécanismes que l'accord de 2021.
+
+---
+*Les références entre parenthèses renvoient aux articles de l'accord ou de l'avenant. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Dur%C3%A9e%20et%20ATT%20Cadres_sign%C3%A9.pdf).*

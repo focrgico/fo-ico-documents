@@ -35,3 +35,5 @@ Signé le **13 août 2021** par ICO (Mario Campone, DG), CGT-FO, Sud Santé-Soci
 
 ---
 *Source : `accord-cdd-objet-defini-2021.md`.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20CDD%20%C3%A0%20objet%20d%C3%A9fini_Sign%C3%A9.pdf).*

@@ -98,3 +98,5 @@ Votre droit à la déconnexion est garanti : personne ne doit vous solliciter pr
 ---
 
 *Base : accord signé le 27 avril 2021 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC).*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20T%C3%A9l%C3%A9travail_sign%C3%A9.pdf).*

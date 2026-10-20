@@ -39,3 +39,5 @@ Cette prime est maintenue si vous passez au Groupe G1 (par ancienneté ou spéci
 
 ---
 *Source : Accord parcours IDE et MER (28/03/2025), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20parcours%20IDE%20et%20MER_Version%20sign%C3%A9e.pdf).*

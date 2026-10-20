@@ -45,3 +45,5 @@ Aucune clause de révision, de bilan ou de commission de suivi n'est prévue. Le
 
 ---
 *Source : DUE Prime de retour inopiné (29/04/2024) — Décision de l'ICO, aucun syndicat signataire.*
+
+*Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence : [décision complète (PDF)](../../DUE/DUE_Prime%20de%20retour%20inopin%C3%A9.pdf).*

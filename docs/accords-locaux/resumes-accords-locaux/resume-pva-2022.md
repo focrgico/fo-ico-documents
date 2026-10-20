@@ -62,3 +62,5 @@ Si vous contestez votre PVA, vous disposez de **15 jours** après notification p
 
 ---
 *Source : Accord PVA (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20PVA_2022_Sign%C3%A9.pdf).*

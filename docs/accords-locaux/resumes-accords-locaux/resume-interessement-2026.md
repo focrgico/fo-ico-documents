@@ -2,8 +2,8 @@
 
 > **Dépliant à imprimer** — [Intéressement (PDF, 3 volets)](../Depliants_FO/Depliant_interessement_FO.pdf)
 
-**Signé le 29 mai 2026 par l'ICO (Mario CAMPONE) et CGT-FO et CFE-CGC. Sud Santé-Sociaux n'a pas signé.**
-*Accord à durée déterminée. Le préambule annonce les exercices 2026, 2027 et 2028, mais l'article 9.1 limite la durée à l'exercice 2026 seul — voir la coquille signalée dans « Suivi de l'accord » ci-dessous. Versement au plus tard le 31 mai de l'année suivante.*
+**Signé le 29 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO et CFE-CGC.**
+*Accord à durée déterminée couvrant les exercices 2026, 2027 et 2028. Versement au plus tard le 31 mai de l'année suivante.*
 
 ---
 
@@ -94,8 +94,9 @@ Un abondement de l'ICO sur le PEE peut être décidé lors de la NAO, dans la li
 - **Règlement des différends** : tout salarié peut saisir le Directeur Général par courrier ; le litige et la réponse apportée sont communiqués aux délégués syndicaux signataires ; un bilan annuel des litiges éventuels est présenté lors de la NAO *(Art. 9.2)*
 - **Révision** : toute demande doit être accompagnée d'un projet de rédaction nouvelle ; les parties doivent se rencontrer dans les 3 mois ; une nouvelle négociation est obligatoire sans délai en cas d'évolution légale/réglementaire modifiant l'équilibre financier de l'accord *(Art. 9.3)*
 - **Dénonciation** : possible à tout moment, doit être motivée, préavis de 3 mois puis maintien des effets pendant 1 an *(Art. 9.4)*
-- **Durée** : l'article 9.1 fixe une durée déterminée correspondant à l'exercice comptable 2026 (01/01/2026-31/12/2026).
-  - **⚠ Coquille confirmée dans l'accord source** : le préambule indique que le nouveau dispositif « concerne les exercices comptables de 2026, 2027 et 2028 », ce qui contredit la durée d'un seul exercice fixée à l'article 9.1. Contradiction relevée lors de l'audit du 20/10/2026 et confirmée comme une erreur de rédaction par David Di Peri — à défaut d'avenant, seul l'exercice 2026 est couvert par le texte normatif de l'article 9.1 ; les exercices 2027 et 2028 devront faire l'objet d'un nouvel accord ou d'un avenant.
+- **Durée** : accord à durée déterminée couvrant les exercices comptables 2026, 2027 et 2028 *(Préambule)*.
 
 ---
 *Source : Accord d'intéressement (29/05/2026), signé CGT-FO, CFE-CGC. Couvre les exercices 2026, 2027 et 2028.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20d%27entreprise%20relatif%20%C3%A0%20l%27int%C3%A9ressement%20%282026%29.pdf).*

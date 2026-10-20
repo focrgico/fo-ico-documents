@@ -59,3 +59,5 @@ Aucune commission de suivi, bilan annuel présenté à une instance, ou clause d
 
 ---
 *Sources : Accord compteur intermédiaire — personnel non posté (23/03/2024) ; Accord compteur intermédiaire — personnel posté (21/06/2024) ; note explicative RH du 25/08/2025 (exemples pratiques et modalités de suivi — document interne non publié, contenu intégré ici en substance).*
+
+*Les références entre parenthèses renvoient aux articles de chaque accord. Seul le texte intégral fait référence : [accord non posté (PDF)](../Avenant%20accord%20ATT_%20Mise%20en%20place%20compteur%20interm%C3%A9diaire_Salari%C3%A9s%20non%20post%C3%A9s.pdf) / [accord posté (PDF)](../Accord%20compteur%20interm%C3%A9diaire%20salari%C3%A9%20post%C3%A9_sign%C3%A9.pdf).*

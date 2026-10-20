@@ -65,3 +65,5 @@ Aucune commission de suivi, bilan annuel ou clause de revoyure n'est prévu par 
 
 ---
 *Source : Accord congé humanitaire (31/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Cong%C3%A9%20Humanitaire%20%282026%29.pdf).*

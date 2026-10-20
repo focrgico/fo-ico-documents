@@ -41,3 +41,5 @@ Concrètement : si vous avez travaillé 8 ans avant d'entrer à l'ICO et que cet
 
 ---
 *Source : Accord parcours Physiciens médicaux (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Parcours%20Phycisiens_2022_Sign%C3%A9.pdf).*

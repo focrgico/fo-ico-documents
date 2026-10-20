@@ -49,3 +49,5 @@ Par défaut, vous êtes en **gestion pilotée** (profil "équilibré horizon ret
 
 ---
 *Source : `accord-percol-2021.md` (19/03/2021). Rappel : le PERCOL est aussi l'une des 3 options de placement possibles pour l'intéressement (voir résumé Intéressement).*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20PERCOL_Sign%C3%A9.pdf).*

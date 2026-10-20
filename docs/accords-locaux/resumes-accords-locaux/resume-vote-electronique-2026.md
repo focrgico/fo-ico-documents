@@ -1,6 +1,6 @@
 # Vote électronique — Élections professionnelles 2026
 
-**Signé le 29 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO et CFE-CGC. Sud Santé-Sociaux n'a pas signé.**
+**Signé le 29 mai 2026 par l'ICO (Mario CAMPONE), CGT-FO et CFE-CGC.**
 *Valable pour la seule durée des élections professionnelles 2026 ; prend fin dès l'élection définitive des représentants.*
 
 ---
@@ -54,4 +54,6 @@ Le flux du vote et le flux d'identification de l'électeur sont **séparés et c
 Aucune commission de suivi, bilan ou indicateur spécifique n'est prévu par cet accord.
 
 ---
-*Source : Accord vote électronique (29/05/2026), signé CGT-FO, CFE-CGC (Sud Santé-Sociaux n'a pas signé). Relu intégralement et revérifié contre le texte source le 20/10/2026 : aucune coquille relevée dans le corps de l'accord.*
+*Source : Accord vote électronique (29/05/2026), signé CGT-FO, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../../elections/ACCORD%20VOTE%20ELECTRONIQUE%20_%20Elections%20professionnelles%202026.pdf).*

@@ -24,9 +24,9 @@ Vous, si vous êtes IDE ou Aide-Soignant(e) affecté(e), en tout ou partie de vo
 **Dates et signataires**
 
 - Signé le **1er décembre 2023**, effet **rétroactif au 1er janvier 2023**, durée indéterminée.
-- Signé par : ICO (Mario Campone, DG), **CGT-FO** — signé **par délégation de pouvoir de Miguel Boisseau** (pas David Di Peri), **CFE-CGC** (Maxime Brémaud). **Sud Santé-Sociaux (Julien Rosan) n'a pas signé.**
+- Signé par : ICO (Mario Campone, DG), **CGT-FO** (par délégation de pouvoir), **CFE-CGC** (Maxime Brémaud).
 
-**⚠ À noter** : un avenant à cet accord existe en PDF signé (26/04/2024) mais aucune version Word/Markdown n'a encore été retrouvée — son contenu n'est donc pas repris ici.
+Un avenant du 26 avril 2024 complète cet accord.
 
 **Suivi de l'accord**
 
@@ -37,3 +37,5 @@ Vous, si vous êtes IDE ou Aide-Soignant(e) affecté(e), en tout ou partie de vo
 
 ---
 *Source : `Accord prime USC signe.md` (01/12/2023).*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20prime%20USC%20sign%C3%A9.pdf).*

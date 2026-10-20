@@ -39,3 +39,5 @@ Aucun mécanisme de suivi n'est prévu par cette DUE : ni commission de suivi, n
 
 ---
 *Source : DUE Parcours macroscopie techniciens de laboratoire (08/12/2023) — Décision de l'ICO, aucun syndicat signataire.*
+
+*Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence : [décision complète (PDF)](../../DUE/DUE%20Parcours%20techs%20de%20laboratoire-macroscopie_Version%20sign%C3%A9e.pdf).*

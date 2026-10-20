@@ -55,3 +55,5 @@ Vous pouvez demander à ne pas adhérer si vous bénéficiez déjà d'une couver
 
 ---
 *Source : DUE Complémentaire Frais de Santé (19/06/2024) — Décision de l'ICO, aucun syndicat signataire.*
+
+*Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence : [décision complète (PDF)](../../DUE/DUE%20regime%20frais%20de%20sante%202024.pdf).*

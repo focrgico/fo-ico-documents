@@ -48,3 +48,5 @@ Il définit uniquement les **règles d'organisation** de la négociation annuell
 
 ---
 *Source : Accord de méthode NAO au titre de 2026 (22/01/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../../nao/Accord%20de%20m%C3%A9thode%20NAO%20au%20titre%20de%202026.pdf).*

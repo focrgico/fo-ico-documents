@@ -27,3 +27,5 @@ Aucune clause de révision négociée, de commission de suivi, de bilan ou d'ind
 
 ---
 *Source : DUE du 22 avril 2024.*
+
+*Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence : [décision complète (PDF)](../../DUE/DUE%20prime%20pool%20remplacement%20AS%20IDE%202024.pdf).*

@@ -48,3 +48,5 @@ Pour les formations inscrites au plan prévisionnel de développement des compé
 
 ---
 *Source : Accord maintien des compétences personnel de nuit (19/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20travail%20de%20nuit%20-%202026.pdf).*

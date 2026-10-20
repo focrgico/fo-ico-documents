@@ -86,7 +86,7 @@ Il prépare les prochaines élections et définit précisément comment fonction
 
 Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'est prévu par cet accord.
 
-**⚠ Coquilles relevées dans l'accord source** (sans incidence sur les droits résumés ci-dessus) : l'article 4.3 (participation de l'ICO aux frais de PV) renvoie par erreur à « l'article 1.1.9.1 » pour le budget de fonctionnement des CSE locaux, alors que la section réelle est 1.1.8.1 ; les articles 5.3 et 5.4 portent le même titre « Formalités de dépôt et publicité » alors que le 5.3 traite en réalité de la dénonciation ; l'accord utilise encore le terme obsolète « DIRECCTE » (renommée DREETS/DDETS depuis avril 2021).
-
 ---
-*Source : Accord sur le dialogue social (13/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux. Relu intégralement et revérifié contre le texte source le 20/10/2026.*
+*Source : Accord sur le dialogue social (13/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../../elections/Accord%20dialogue%20social%202026.pdf).*

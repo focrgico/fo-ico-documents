@@ -49,7 +49,6 @@ Toute offre d'emploi rédigée sans stéréotype de genre ; critères de sélect
 - **Allaitement** : lieu dédié mis à disposition ; absence au poste organisée par le responsable de service
 - **Temps partiel** : égalité d'accès entre femmes et hommes, suivi annuel
 - **Congé de parentalité pour couples homoparentaux** *(Art. 7.4)* : **25 jours calendaires rémunérés**, salaire maintenu, accordés au salarié en CDI dont le/la partenaire ne peut bénéficier d'un congé maternité. Si les 2 membres du couple sont salariés de l'ICO, le congé n'est accordé qu'à l'un des deux. À demander par écrit (avec justificatifs) **un mois avant** la prise du congé, qui doit intervenir dans les **6 mois suivant l'arrivée de l'enfant**. Ce congé n'a pas d'impact sur le calcul de l'ancienneté
-  - **⚠ Coquille confirmée dans l'accord source** : le corps de l'article 7.4 limite ce congé à un seul des deux membres du couple si les deux travaillent à l'ICO, mais le tableau récapitulatif qui suit dans le même article attribue 25 jours à chacun des deux parents (biologique et social) dans la 1ère situation décrite. Contradiction interne relevée lors de l'audit du 20/10/2026 et confirmée comme une erreur de rédaction par David Di Peri — le résumé ci-dessus retient la règle du corps de l'article (un seul congé par couple si les deux sont salariés ICO).
 
 ---
 
@@ -70,3 +69,5 @@ Toute offre d'emploi rédigée sans stéréotype de genre ; critères de sélect
 
 ---
 *Source : Accord égalité professionnelle F/H (29/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20%C3%A9galit%C3%A9%20FH%202026.pdf).*

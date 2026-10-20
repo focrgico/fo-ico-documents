@@ -28,3 +28,5 @@ Vous, si vous êtes assistant médical classé en **Groupe E**, sur l'un des 2 s
 
 ---
 *Source : accord du 11 mars 2025, en vigueur depuis le 1er avril 2025.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20relatif%20au%20parcours%20des%20assistantes%20m%C3%A9dicales_Version%20sign%C3%A9e.pdf).*

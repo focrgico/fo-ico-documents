@@ -39,3 +39,5 @@ Un suivi de l'accord est mis en place dans le cadre du **CSE Central**, organis�
 
 ---
 *Source : Accord reprise d'ancienneté MER, AS, IDE (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Reprise%20Exp%C3%A9rience%20professionnelle%20MER-AS-IDE_2022_Sign%C3%A9.pdf).*

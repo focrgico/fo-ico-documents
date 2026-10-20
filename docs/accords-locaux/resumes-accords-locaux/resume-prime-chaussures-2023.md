@@ -39,3 +39,5 @@ Le montant est proraté au temps de travail contractuel et versé uniquement les
 
 ---
 *Source : Accord prime chaussures (21/06/2023), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20prime%20chaussure%20version%20sign%C3%A9e.pdf).*

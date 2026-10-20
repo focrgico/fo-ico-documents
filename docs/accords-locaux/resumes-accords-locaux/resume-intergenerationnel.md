@@ -2,7 +2,7 @@ Accord intergénérationnel — résumé pour tryptique
 
 > **Dépliant à imprimer** — [Accord intergénérationnel (PDF, 3 volets)](../Depliants_FO/Depliant_intergenerationnel_FO.pdf)
 
-**Sur les versions et les références :** ce résumé intègre l'accord de base du 30 janvier 2020 et l'avenant du 15 septembre 2023 — c'est la version en vigueur. L'avenant n°1 du 30 juin 2021, qui permettait de fractionner le taux de 50 % sur 2 semaines, n'est plus en vigueur et n'est donc pas repris ici. Les articles cités entre parenthèses renvoient au texte de l'accord de base sauf mention contraire.
+**Sur les versions et les références :** ce résumé intègre l'accord de base du 30 janvier 2020, l'avenant n°1 du 30 juin 2021 et l'avenant du 15 septembre 2023 — les trois s'appliquent ensemble. L'avenant 2023 modifie uniquement les conditions d'éligibilité de l'Article 3.4.2 ; il ne mentionne pas et n'abroge pas la possibilité, ajoutée par l'avenant 2021, de fractionner un temps partiel à 50 % sur 2 semaines — cette disposition reste donc en vigueur. Les articles cités entre parenthèses renvoient au texte de l'accord de base sauf mention contraire.
 
 ---
 
@@ -62,6 +62,8 @@ Vous pouvez demander à passer à temps partiel (taux privilégiés : **50 %, 75
 2. Vous êtes au même taux d'activité depuis au moins 24 mois
 3. Vous avez plus de 10 ans d'ancienneté
 
+**Si vous passez à 50 % : une organisation sur 2 semaines reste possible** (Avenant n°1 du 30/06/2021, Art. 3.4.2) — une semaine travaillée à temps complet, une semaine complète à temps partiel, sous réserve de compatibilité avec l'organisation du service.
+
 *Comment faire la demande*
 
 Par lettre recommandée avec AR ou remise en main propre contre décharge, au moins 2 mois avant la date souhaitée. La direction répond sous 1 mois ; tout refus ou report est motivé. **Au moins 70 %** des demandes doivent être acceptées.
@@ -98,10 +100,15 @@ Si vous avez 50 ans ou plus, une ancienneté d'au moins 10 ans et 15 ans dans vo
 
 Les engagements pris dans le cadre de l'accord égalité professionnelle s'appliquent aussi à la mise en œuvre des objectifs de cet accord (recrutement, maintien dans l'emploi des seniors).
 
-*Durée et suivi (Article 6)*
+---
 
-Accord à durée indéterminée. Un bilan est présenté chaque année au CSE central et transmis aux organisations syndicales signataires, avec une clause de revoyure au terme de la première année d'application.
+**Suivi de l'accord (Article 6)**
+
+- **Indicateurs** : un indicateur est mis en place pour chacun des objectifs chiffrés de l'accord *(Art. 6.1)*
+- **Bilan annuel** : un bilan du contrat de génération est présenté au **CSE Central** au deuxième trimestre de chaque exercice, et transmis aux organisations syndicales signataires *(Art. 6.1)*
+- **Clause de revoyure** : réunion de revoyure prévue au terme de la première année d'application de l'accord, au regard des éléments du bilan *(Art. 6.1)*
+- **Durée** : accord à durée indéterminée *(Art. 6.2)*
 
 ---
 
-**Base :** accord signé le 30 janvier 2020 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant du 15 septembre 2023 (CGT-FO, Sud Santé-Sociaux, CFE-CGC — la CFDT n'a pas signé cet avenant). L'avenant n°1 du 30 juin 2021 n'est plus en vigueur.
+**Base :** accord signé le 30 janvier 2020 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant n°1 du 30 juin 2021 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant du 15 septembre 2023 (CGT-FO, Sud Santé-Sociaux, CFE-CGC — la CFDT n'a pas signé cet avenant). Les trois textes s'appliquent ensemble, l'avenant 2023 ne modifiant que les conditions d'éligibilité du temps partiel de fin de carrière.

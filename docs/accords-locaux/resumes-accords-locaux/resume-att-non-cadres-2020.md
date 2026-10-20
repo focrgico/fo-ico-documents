@@ -72,3 +72,13 @@ Vous êtes non-cadre à l'ICO ? Cet accord s'applique à vous, que vous soyez en
 ## À retenir
 
 Aujourd'hui, ce sont les règles de l'**Avenant n°1 du 31 janvier 2022** qui s'appliquent pour vos heures supplémentaires, et celles de l'**avenant du 31 décembre 2025** pour vos congés payés en cas d'arrêt maladie — tout le reste de l'accord de 2020 continue de s'appliquer tel quel. Pour les astreintes et le décès d'un proche pendant vos congés, pensez aussi à consulter les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
+
+## Suivi de l'accord
+
+- **Commission de suivi** : composée des délégués syndicaux, elle se réunit l'année suivant l'entrée en vigueur de l'accord (Article 5.1).
+- **Bilan** : un bilan quantitatif et qualitatif de l'application de l'accord est établi à cette occasion (Article 5.1) — l'accord ne précise pas devant quelle instance (CSE, CSEC...) ce bilan est présenté.
+- **Durée de l'accord** : durée indéterminée ; entrée en vigueur au 1er janvier 2021, les dispositions antérieures continuant à produire leurs effets jusqu'au 31 décembre 2020 (Article 5.2).
+- **Révision** : procédure renvoyant à l'article L. 2261-7-1 du Code du travail (Article 5.3).
+- **Dénonciation** : possible à tout moment par lettre recommandée avec accusé de réception ; l'accord cesse en principe de s'appliquer au dernier jour des mandats des membres du CSE ; déclaration à déposer auprès de l'Unité Territoriale de Maine-et-Loire de la DIRECCTE d'Angers (Article 5.4).
+- **Avenant n°1 du 31/01/2022 (CET heures supplémentaires)** : durée indéterminée, entrée en vigueur le lendemain du dépôt (Article 2.1 de l'avenant) ; pas de commission de suivi propre à l'avenant.
+- **Avenant du 31/12/2025 (congés payés pendant un arrêt maladie)** : durée indéterminée, entrée en vigueur dès la signature (Article 2.1 de l'avenant) ; révision (Article 2.2 de l'avenant) et dénonciation (Article 2.3 de l'avenant, dépôt auprès de la DREETS d'Angers).

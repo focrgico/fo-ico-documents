@@ -2,8 +2,8 @@
 
 - **Date de signature :** 30 juin 2021
 - **Source :** converti depuis `Accord_Intergénérationnel_Avenant_n_1_vDéfinitive.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
-- **Note :** ⚠️ Le PDF signé visible dans votre dépôt s'appelle "...intergénérationnel_2023_..." alors que ce Word est daté de 2021 — à vérifier s'il s'agit bien du même document (erreur de nommage du PDF ?) ou d'un avenant distinct de 2023 non encore reçu.
+- **Document signé de référence (preuve juridique) :** `Accord Intergenerationnel Avenant n1 signe.pdf`, conservé dans le même dossier
+- **Statut (vérifié le 20/10/2026) :** réintégré au catalogue principal — cet avenant n°1 modifie uniquement l'Article 3.4.2 (ajout de la possibilité de fractionner un temps partiel à 50 % sur 2 semaines). L'avenant du 15/09/2023 modifie uniquement les conditions d'éligibilité du même article, sans jamais mentionner ni abroger cet ajout de 2021. Règle appliquée : un avenant qui ne stipule pas expressément qu'il efface l'avenant précédent laisse ce dernier en vigueur — cet avenant 2021 s'applique donc toujours, en parallèle de l'avenant 2023.
 
 ---
 

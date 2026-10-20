@@ -30,4 +30,12 @@ Si vous exercez dans le cadre d'un **protocole de coopération sanitaire**, vous
 Cette prime est maintenue si vous passez au Groupe G1 (par ancienneté ou spécialisation), **tant que vous continuez à exercer dans le cadre du protocole**. Elle est retirée le mois suivant la cessation de cette fonction.
 
 ---
+
+## Suivi de l'accord *(Art. 4)*
+
+- Accord conclu pour une **durée indéterminée**, entré en vigueur le 1er mai 2025 *(Art. 4.1)*
+- Révision possible à la demande d'une organisation syndicale représentative ou de la Direction *(Art. 4.2)* ; dénonciation possible par lettre recommandée, l'accord restant applicable jusqu'au dernier jour des mandats CSE en cours *(Art. 4.3)*
+- **Aucune commission de suivi ni bilan périodique spécifique** n'est prévu par l'accord.
+
+---
 *Source : Accord parcours IDE et MER (28/03/2025), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

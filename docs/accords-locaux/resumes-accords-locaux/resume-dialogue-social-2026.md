@@ -76,4 +76,17 @@ Il prépare les prochaines élections et définit précisément comment fonction
   - **En cas de signature non majoritaire ou d'absence de signature** : un procès-verbal de désaccord est dressé et notifié par mail avec accusé de réception aux DS, puis transmis à l'administration
 
 ---
-*Source : Accord sur le dialogue social (13/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux.*
+
+## Suivi de l'accord
+
+- **Durée et entrée en vigueur** *(Art. 5.1)* : accord conclu pour la durée de la mandature ; entrée en vigueur le 1er jour suivant la proclamation des résultats des élections professionnelles de fin 2026.
+- **Révision** *(Art. 5.2)* : jusqu'à la fin du cycle électoral, seules les organisations signataires ou adhérentes peuvent l'engager ; au-delà, toute organisation représentative le peut. Négociation engagée sous 2 mois après demande écrite.
+- **Dénonciation** *(Art. 5.3)* : possible à tout moment par lettre recommandée avec accusé de réception ; l'application cesse en principe au dernier jour des mandats CSE ; accord indivisible, sans dénonciation partielle possible.
+- **Publicité** *(Art. 5.4)* : accord remis à chaque délégué syndical, publié sur l'intranet, déposé sur TéléAccords et au greffe du conseil de prud'hommes d'Angers.
+
+Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'est prévu par cet accord.
+
+**⚠ Coquilles relevées dans l'accord source** (sans incidence sur les droits résumés ci-dessus) : l'article 4.3 (participation de l'ICO aux frais de PV) renvoie par erreur à « l'article 1.1.9.1 » pour le budget de fonctionnement des CSE locaux, alors que la section réelle est 1.1.8.1 ; les articles 5.3 et 5.4 portent le même titre « Formalités de dépôt et publicité » alors que le 5.3 traite en réalité de la dénonciation ; l'accord utilise encore le terme obsolète « DIRECCTE » (renommée DREETS/DDETS depuis avril 2021).
+
+---
+*Source : Accord sur le dialogue social (13/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux. Relu intégralement et revérifié contre le texte source le 20/10/2026.*

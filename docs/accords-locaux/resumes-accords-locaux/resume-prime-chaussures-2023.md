@@ -29,4 +29,13 @@
 Le montant est proraté au temps de travail contractuel et versé uniquement les mois de travail effectif (pas pendant les congés payés).
 
 ---
+
+**Suivi de l'accord**
+
+- Durée : accord à durée indéterminée, en vigueur depuis le 1er juillet 2023 *(Art. 4.1)*
+- Révision : procédure légale classique — demande écrite d'une organisation syndicale représentative, puis convocation par la Direction dans un délai de 2 mois *(Art. 4.2)*
+- Dénonciation : possible à tout moment par lettre recommandée avec accusé de réception ; l'application cesse en principe au dernier jour des mandats CSE ; l'accord est indivisible, sans dénonciation partielle possible *(Art. 4.3)*
+- Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'est prévu par cet accord.
+
+---
 *Source : Accord prime chaussures (21/06/2023), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

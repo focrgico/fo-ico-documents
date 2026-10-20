@@ -46,4 +46,12 @@ Vous pouvez demander à ne pas adhérer si vous bénéficiez déjà d'une couver
 - **Anciens salariés** (retraite, invalidité, chômage) : maintien possible sur demande auprès de l'assureur (loi Evin)
 
 ---
+
+## Suivi de la décision *(Art. 9-11)*
+
+- **Information individuelle** *(Art. 9)* : une notice d'information décrivant les garanties est remise à chaque salarié ; toute modification de cette notice doit être communiquée dans les mêmes conditions.
+- **Information et consultation du CSE** *(Art. 10)* : le CSE doit être informé et consulté préalablement à toute mise en place ou modification du régime.
+- **Durée et modification** *(Art. 11)* : régime à durée indéterminée. Il peut être modifié ou dénoncé par l'employeur selon la procédure jurisprudentielle applicable aux engagements unilatéraux — pas de clause de révision négociée avec les syndicats, puisqu'il s'agit d'une DUE.
+
+---
 *Source : DUE Complémentaire Frais de Santé (19/06/2024) — Décision de l'ICO, aucun syndicat signataire.*

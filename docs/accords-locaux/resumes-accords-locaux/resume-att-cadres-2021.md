@@ -55,3 +55,13 @@ Restent en dehors de cet accord : contrats de professionnalisation/apprentissage
 ## À retenir
 
 Un seul changement depuis 2021 : l'avenant du 31/12/2025 a mis à jour la règle sur les congés payés pendant un arrêt maladie (voir ci-dessus) — tout le reste de l'accord reste identique. Pour les astreintes et le décès d'un proche pendant les congés, pensez aussi à vérifier les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
+
+## Suivi de l'accord
+
+- **Commission de suivi** : composée des délégués syndicaux, elle se réunit l'année suivant l'entrée en vigueur de l'accord (Article 4.1).
+- **Bilan** : un bilan quantitatif et qualitatif de l'application de l'accord est établi à cette occasion (Article 4.1) — l'accord ne précise pas devant quelle instance (CSE, CSEC...) ce bilan est présenté.
+- **Suivi individuel du forfait jours** : document de contrôle mensuel des jours travaillés/de repos et des alertes sur le respect des repos, transmis au service RH (Article 1.3, numéroté « 1.1.3 » dans le texte) ; dispositif d'alerte automatique vers le N+1 en cas de non-remise du document ou de non-respect des repos plus de 5 fois dans le mois, avec entretien sous 30 jours (Article 1.3, numéroté « 1.1.4 ») ; entretien annuel dédié (Article 1.3, numéroté « 1.1.5 »).
+- **Durée de l'accord** : durée indéterminée ; entrée en vigueur le premier jour du mois suivant son dépôt (Article 4.2).
+- **Révision** : procédure renvoyant à l'article L. 2261-7-1 du Code du travail (Article 4.3).
+- **Dénonciation** : possible à tout moment par lettre recommandée avec accusé de réception ; l'accord cesse en principe de s'appliquer au dernier jour des mandats des membres du CSE ; déclaration à déposer auprès de l'Unité Territoriale de Maine-et-Loire de la DIRECCTE d'Angers (Article 4.4).
+- **Avenant du 31/12/2025 (congés payés pendant un arrêt maladie)** : pas de commission de suivi propre à l'avenant ; durée indéterminée, entrée en vigueur dès la signature (Article 2.1 de l'avenant) ; révision (Article 2.2 de l'avenant) et dénonciation (Article 2.3 de l'avenant, dépôt auprès de la DREETS d'Angers) selon les mêmes mécanismes que l'accord de 2021.

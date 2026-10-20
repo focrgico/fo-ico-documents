@@ -38,4 +38,13 @@ Pour les formations inscrites au plan prévisionnel de développement des compé
 - **Jours suivants** : comptés à **1h de moins** que l'horaire de nuit théorique (9h10 à Angers, 10h à St Herblain)
 
 ---
+
+## Suivi de l'accord
+
+- **Durée de l'accord** : durée indéterminée ; entrée en vigueur le 1er août 2026 (Article 3.1).
+- **Révision** : révisable au gré des parties. Toute demande de révision doit être accompagnée d'une proposition de rédaction nouvelle et notifiée par lettre recommandée avec accusé de réception ou contre décharge ; les parties doivent se rencontrer dans les 3 mois suivant la demande ; une nouvelle négociation doit être ouverte sans délai en cas d'évolution législative ou réglementaire remettant en cause le contenu de l'accord ou son équilibre financier (Article 3.2).
+- **Dénonciation** : possible à tout moment, par lettre recommandée avec accusé de réception, moyennant un préavis de 3 mois pendant lequel le texte continue à s'appliquer ; à l'issue du préavis, le texte continue de produire ses effets pendant 1 an (Article 3.3).
+- **Aucune commission de suivi ni bilan annuel dédié n'a été identifié** dans cet accord, au-delà des clauses de durée, révision et dénonciation ci-dessus.
+
+---
 *Source : Accord maintien des compétences personnel de nuit (19/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

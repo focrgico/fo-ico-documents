@@ -2,9 +2,9 @@
 
 - **Date de signature :** 24 octobre 2025
 - **Source :** converti depuis `Accord_Forfait_Mobilité_Durable_Vfinale.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
-- **Note :** Remplace et annule l'accord 2024 (retiré de ce dépôt, confirmé par David comme obsolète). Ajoute une prime trottinette électrique et révise les montants. Seule version conservée.
-- **⚠️ Vérification PDF (08/09/2026) :** le seul PDF signé présent sur GitHub correspond en réalité à la version **2024** (signée le 26/04/2024, par CGT-FO et CFE-CGC seulement — Sud Santé-Sociaux n'a pas signé), pas à cette version 2025. Le PDF signé de la version en vigueur manque encore.
+- **Document signé de référence (preuve juridique) :** `Accord Forfait Mobilite Durable 2025 signe.pdf`, conservé dans le même dossier
+- **Note :** Remplace et annule l'accord 2024 (l'accord le précise lui-même dans son préambule — retiré de ce dépôt, confirmé par David comme obsolète). Ajoute une prime trottinette électrique et révise les montants. Seule version conservée.
+- **✅ Vérification PDF (20/10/2026) :** le PDF signé de la version 2025 a été transmis par David et vérifié visuellement page par page. Signatures confirmées : Mario CAMPONE (ICO), David DI PERI (CGT-FO), Maxime BREMAUD (CFE-CGC). **Aucune signature visible pour Julien ROSAN (Sud Santé-Sociaux)** — comme pour la version 2024, Sud Santé-Sociaux n'a pas signé la version 2025. Seul un PDF du texte reste à convertir en Word si une version Word doit un jour être retrouvée ; en l'absence de Word, ce .md (converti depuis `Accord_Forfait_Mobilité_Durable_Vfinale.md`) fait foi pour le texte, le PDF signé fait foi pour les signatures.
 
 ---
 

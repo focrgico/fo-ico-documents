@@ -2,10 +2,8 @@
 
 > **Dépliant à imprimer** — [Forfait mobilité durable (PDF, 3 volets)](../Depliants_FO/Depliant_forfait_mobilite_durable_FO.pdf)
 
-**Signé le 24 octobre 2025 par l'ICO (Mario CAMPONE), CGT-FO, Sud Santé-Sociaux et CFE-CGC.**
-*En vigueur rétroactivement depuis le 1er janvier 2025, durée indéterminée. Remplace et annule l'accord 2024.*
-
-⚠️ *Le PDF signé disponible sur GitHub correspond à la version 2024 — le PDF de la version 2025 n'a pas encore été déposé dans le dépôt.*
+**Signé le 24 octobre 2025 par l'ICO (Mario CAMPONE), CGT-FO et CFE-CGC. Sud Santé-Sociaux n'a pas signé.**
+*En vigueur rétroactivement depuis le 1er janvier 2025, durée indéterminée. Remplace et annule l'accord 2024 (l'accord lui-même le précise dans son préambule).*
 
 ---
 
@@ -43,4 +41,13 @@ L'ICO prend en charge **60% de votre abonnement** de transport en commun (contre
 La prime FMD est **cumulable** avec le remboursement de l'abonnement de transport en commun, dans la limite du plafond légal (**900 € en 2025**, à titre indicatif). Si l'addition des deux dépasse ce plafond, c'est le montant de **la prime FMD qui est réduit** à hauteur du plafond, pas le remboursement du titre de transport *(Art. 5)*.
 
 ---
-*Source : Accord Forfait Mobilité Durable (24/10/2025), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*
+
+## Suivi de l'accord
+
+- **Révision** *(Art. 6.2)* : procédure classique de révision à l'initiative d'une organisation syndicale représentative ou de la Direction.
+- **Durée et dénonciation** *(Art. 6.1 et 6.3)* : accord à durée indéterminée ; il peut être dénoncé à tout moment, l'application cessant alors en principe au dernier jour des mandats des membres du CSE.
+
+Aucune commission de suivi, bilan annuel ou clause de revoyure n'est prévu par cet accord. Le dispositif a toutefois déjà été revu deux fois par la voie des NAO (2024 puis 2025), ce qui joue de fait un rôle de clause de revoyure, sans que l'accord lui-même ne l'impose.
+
+---
+*Source : Accord Forfait Mobilité Durable (24/10/2025), signé CGT-FO et CFE-CGC (Sud Santé-Sociaux n'a pas signé). PDF signé vérifié visuellement page par page le 20/10/2026.*

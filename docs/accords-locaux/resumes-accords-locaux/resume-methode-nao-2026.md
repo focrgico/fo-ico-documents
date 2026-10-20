@@ -37,4 +37,14 @@ Il définit uniquement les **règles d'organisation** de la négociation annuell
 - En fin de NAO : PV final reprenant les revendications de chaque OS et la position de la direction, mis à la signature pendant **2 semaines** (1 semaine par site) à l'automne 2026
 
 ---
+
+## Suivi de l'accord *(Art. 4.1, 4.3, 5.1-5.4)*
+
+- **Traçabilité de chaque réunion** *(Art. 4.1 et 4.3)* : compte rendu écrit transmis sous 5 jours après chaque réunion ; PV final récapitulant les revendications de chaque OS et la position de la direction, mis à la signature à l'automne 2026.
+- **Durée** *(Art. 5.1)* : accord à durée déterminée, prenant fin à l'issue de la NAO 2026 et au plus tard le 31 décembre 2026.
+- **Révision** *(Art. 5.2)* : procédure ouverte aux organisations syndicales représentatives signataires ou adhérentes (ou à la direction), conformément à l'article L. 2261-7-1 du Code du travail — convocation écrite de la direction dans les 2 mois suivant une demande de révision.
+- **Dénonciation** *(Art. 5.3)* : possible à tout moment par lettre recommandée avec AR, selon l'article L. 2222-6 du Code du travail ; l'accord est indivisible (pas de dénonciation partielle possible).
+- **Dépôt et publicité** *(Art. 5.4)* : dépôt sur la plateforme TéléAccords et au greffe du conseil de prud'hommes ; mise en ligne sur l'intranet pour informer le personnel.
+
+---
 *Source : Accord de méthode NAO au titre de 2026 (22/01/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

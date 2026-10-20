@@ -85,4 +85,16 @@ Votre droit à la déconnexion est garanti : personne ne doit vous solliciter pr
 
 ---
 
+## Suivi de l'accord
+
+- **Commission de suivi** : le suivi de l'accord est assuré par la CSSCT centrale, qui se réunit au moins une fois par an (Article 12.1). Elle est chargée de vérifier le respect de l'application de l'accord, de suivre le nombre de salariés en télétravail, de suivre les entrées et sorties du dispositif (et leurs raisons), et de proposer des améliorations du texte et des pratiques (Article 12.1).
+- **Bilan** : une rubrique spécifique est ajoutée au bilan social, mentionnant le nombre de salariés en télétravail et le bilan des demandes acceptées/refusées (Article 12.1).
+- **Saisine ad hoc** : la commission de suivi peut être saisie, à l'initiative de l'employeur ou d'un salarié, pour des situations particulières (Article 12.1).
+- **Clause de revoyure** : une réunion de « revoyure » est prévue au terme de la première année d'application de l'accord, pour envisager son éventuelle adaptation (Article 12.1).
+- **Durée de l'accord** : durée indéterminée ; entrée en vigueur le mois suivant son dépôt (Article 12.2).
+- **Révision** : procédure renvoyant à l'article L. 2261-7-1 du Code du travail (Article 12.3).
+- **Dénonciation** : possible à tout moment par lettre recommandée avec accusé de réception ; l'accord cesse en principe de s'appliquer au dernier jour des mandats des membres du CSE ; déclaration à déposer auprès de l'Unité Territoriale de Maine-et-Loire de la DIRECCTE d'Angers (Article 12.4).
+
+---
+
 *Base : accord signé le 27 avril 2021 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC).*

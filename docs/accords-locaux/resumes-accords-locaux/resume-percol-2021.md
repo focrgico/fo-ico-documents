@@ -39,5 +39,13 @@ Par défaut, vous êtes en **gestion pilotée** (profil "équilibré horizon ret
 - Signé le **19 mars 2021**, durée indéterminée, prend effet à compter du dépôt.
 - Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Isabelle Fouillet), **CFDT** (Corinne Lanio), **CFE-CGC** (Geneviève Perrocheau) — les 4 organisations ont signé.
 
+**Suivi de l'accord**
+
+- **Gouvernance par les conseils de surveillance des FCPE** *(Art. 8)* : chaque FCPE du Plan dispose d'un conseil de surveillance chargé de l'examen de sa gestion financière, administrative et comptable. Il se réunit **au moins une fois par an** pour examiner le **rapport annuel de gestion**, et décide des fusions, scissions ou liquidations. Les membres salariés y sont désignés par les organisations syndicales représentatives.
+- **Information périodique du personnel et des titulaires** *(Art. 7)* : l'ICO informe le personnel de l'existence et du contenu du Plan, et communique immédiatement toute modification. Le gestionnaire adresse chaque année à chaque titulaire une information sur son épargne accumulée, et une information détaillée (performances, frais) avant l'ouverture du Plan puis actualisée chaque année.
+- **Révision** *(Art. 10)* : toute modification du règlement du Plan fait l'objet d'un avenant conclu dans les mêmes formes que le règlement initial, déposé à la DIRECCTE.
+- **Durée et dénonciation** *(Art. 6)* : Plan conclu pour une durée indéterminée ; il peut être dénoncé à tout moment avec un préavis de 3 mois, notifié à la DIRECCTE et, le cas échéant, aux partenaires sociaux.
+- **Règlement amiable des litiges** *(Art. 11)* : avant de saisir les tribunaux, la direction et les titulaires du Plan s'efforcent de résoudre les différends à l'amiable au sein de l'Entreprise.
+
 ---
 *Source : `accord-percol-2021.md` (19/03/2021). Rappel : le PERCOL est aussi l'une des 3 options de placement possibles pour l'intéressement (voir résumé Intéressement).*

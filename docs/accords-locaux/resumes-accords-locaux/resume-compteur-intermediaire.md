@@ -9,7 +9,7 @@
 **Source : Accord compteur intermédiaire — personnel non posté, signé le 23/03/2024, en vigueur depuis le 01/04/2024.**
 
 - **Qui est concerné** : vous, si vous êtes non-cadre à horaires non postés (plages fixes/variables), quel que soit votre contrat, à temps plein ou partiel (Article 1).
-- **Comment ça marche** : chaque jour, le temps que vous faites au-delà de 7h39 (votre durée journalière de référence) alimente automatiquement votre compteur intermédiaire, dans la limite de **30 minutes par jour**. Au-delà de 30 minutes de dépassement, il faut faire une demande d'heures (DHP) dès la 1ère minute — dans ce cas, le compteur ne bouge pas ce jour-là (Article 2).
+- **Comment ça marche** : chaque jour, le temps que vous faites au-delà de 7h39 (votre durée journalière de référence) alimente automatiquement votre compteur intermédiaire, dans la limite de **30 minutes par jour**. Au-delà de 30 minutes de dépassement, il faut faire une demande d'heures (DHP) — dans ce cas, le compteur ne bouge pas ce jour-là (Article 2).
 - **Le plafond** : +/- 4 heures cumulées sur l'année (Article 2).
 - **Pour récupérer** : jusqu'à 1h/jour en autonomie sur les plages fixes, ou avec l'accord de votre N+1 ; au-delà d'1h et jusqu'à une demi-journée, l'accord du N+1 est obligatoire, accordé selon les contraintes d'effectifs et de planning (Article 2).
 - **En fin d'année civile** : votre solde est intégré au résultat d'annualisation — bascule en RCR l'année suivante, versement au CET, ou paiement des heures si positif ; minoration si négatif (Article 3).
@@ -45,6 +45,17 @@
 ## Comment suivre votre compteur
 
 Le suivi se fait via le formulaire « Temps du jour H » (données exprimées en HH:MM). Au 31 décembre de chaque année, votre cumul (positif ou négatif) est ajouté à votre réalisé de l'année.
+
+---
+
+## Suivi de l'accord
+
+Les deux accords (non postés et postés) comportent des dispositions finales identiques sur ce point :
+
+- **Révision** *(Article 4.2 des deux accords)* : procédure classique de révision à l'initiative d'une organisation syndicale représentative ou de la Direction.
+- **Durée et dénonciation** *(Article 4.1 et 4.3 des deux accords)* : accords à durée indéterminée ; ils peuvent être dénoncés à tout moment, l'application cessant alors en principe au dernier jour des mandats des membres du CSE.
+
+Aucune commission de suivi, bilan annuel présenté à une instance, ou clause de revoyure n'est prévu par ces deux accords.
 
 ---
 *Sources : Accord compteur intermédiaire — personnel non posté (23/03/2024) ; Accord compteur intermédiaire — personnel posté (21/06/2024) ; note explicative RH du 25/08/2025 (exemples pratiques et modalités de suivi — document interne non publié, contenu intégré ici en substance).*

@@ -55,5 +55,9 @@ Transfert limité à **10 jours par an**, avec un abondement de l'ICO à hauteur
 - Avenant n°1 signé le **31 janvier 2022** par ICO (Mario Campone, DG), CGT-FO (David Di Peri), CFDT (Corinne Lanio), CFE-CGC (Geneviève Perrocheau). **Sud Santé-Sociaux n'a pas signé l'avenant.**
 - Accord conclu pour une durée indéterminée *(Art. 8.2)*.
 
+**Suivi de l'accord**
+
+Un bilan quantitatif et qualitatif de l'application de l'accord est établi et présenté chaque année au CSE central *(Art. 8.1)*.
+
 ---
 *Source : accord CET (19/03/2021) et son avenant n°1 (31/01/2022).*

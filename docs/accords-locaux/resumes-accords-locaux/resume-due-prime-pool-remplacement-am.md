@@ -21,5 +21,9 @@ Vous, si vous êtes assistant(e) médical(e) en CDD ou CDI, affecté(e) au **poo
 
 Décision du 22 avril 2024, avec effet rétroactif au 1er janvier 2024.
 
+**Suivi de la décision**
+
+Aucune clause de révision négociée, de commission de suivi, de bilan ou d'indicateur n'est prévue : s'agissant d'une DUE, l'employeur peut la modifier ou y mettre fin à tout moment, sans concertation formalisée avec les organisations syndicales. Le seul mécanisme prévu est administratif : les Cadres Responsables des Secrétariats Médicaux informent le service RH dès qu'un salarié quitte le pool de remplacement, ce qui déclenche l'arrêt du versement de la prime.
+
 ---
 *Source : DUE du 22 avril 2024.*

@@ -32,4 +32,10 @@ La reprise à 100% est automatique, sous réserve de fournir vos justificatifs d
 La demande devait être effectuée avant le **30 juin 2022** via le formulaire en ligne, avec envoi par mail des justificatifs à la DRH. **Tout dossier incomplet n'était pas étudié**, et **à défaut de demande selon ce processus, la reprise à 100% n'était pas effectuée** *(Art. 4-2)*. La PEP ainsi recalculée a été mise en place rétroactivement au **1er janvier 2022**, versée avec la paie d'octobre 2022.
 
 ---
+
+## Suivi de l'accord *(Art. 6.1)*
+
+Un suivi de l'accord est mis en place dans le cadre du **CSE Central**, organisé avant la fin de l'année 2022. Le nombre de salariés présents à l'ICO ayant demandé la reprise à 100% y est communiqué.
+
+---
 *Source : Accord reprise d'ancienneté MER, AS, IDE (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*

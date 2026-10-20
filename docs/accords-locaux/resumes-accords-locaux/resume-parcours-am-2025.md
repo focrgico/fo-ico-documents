@@ -20,5 +20,11 @@ Vous, si vous êtes assistant médical classé en **Groupe E**, sur l'un des 2 s
 
 **Signataires** : ICO (Mario Campone, DG), CGT-FO (signature par délégation de Miguel Boisseau), Sud Santé-Sociaux, CFE-CGC. *(Pas de signataire CFDT.)*
 
+**Suivi de l'accord** *(Art. 4)*
+
+- Accord conclu pour une **durée indéterminée**, entré en vigueur le 1er avril 2025 *(Art. 4.1)*
+- Révision possible à la demande d'une organisation syndicale représentative ou de la Direction *(Art. 4.2)* ; dénonciation possible par lettre recommandée, l'accord restant applicable jusqu'au dernier jour des mandats CSE en cours *(Art. 4.3)*
+- **Aucune commission de suivi ni bilan périodique spécifique** à ce parcours n'est prévu par l'accord.
+
 ---
 *Source : accord du 11 mars 2025, en vigueur depuis le 1er avril 2025.*

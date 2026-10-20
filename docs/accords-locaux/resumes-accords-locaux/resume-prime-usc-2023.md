@@ -19,7 +19,7 @@ Vous, si vous êtes IDE ou Aide-Soignant(e) affecté(e), en tout ou partie de vo
 - **Si vous êtes soignant de jour** : (nombre de jours travaillés à l'USC ÷ 20 jours/mois en moyenne) × 130 €, plafonné à 130 €/mois
 - **Si vous êtes soignant de nuit à Angers** : (nombre de nuits à l'USC ÷ 12 nuits/mois en moyenne) × 130 €. *Exemple donné dans l'accord : 5 nuits à l'USC en mai → prime de 54,17 € bruts sur la paie de juin.*
 - **Si vous êtes soignant de nuit à Saint-Herblain** : (nombre de nuits à l'USC ÷ 11 nuits/mois en moyenne) × 130 €. *Exemple : 5 nuits → 59,09 € bruts.*
-- **Si vous êtes IDE de nuit à Saint-Herblain (cas particulier)** : vous êtes éligible dès que 50 % ou plus de vos nuits du mois sont consacrées à l'USC ; montant proraté à votre temps de travail contractuel. *Exemple : 6 nuits sur 11 planifiées, temps de travail à 80 % → (130 € ÷ 80 %) = 104 € bruts.*
+- **Si vous êtes IDE de nuit à Saint-Herblain (cas particulier)** : vous êtes éligible dès que 50 % ou plus de vos nuits du mois sont consacrées à l'USC ; montant proraté à votre temps de travail contractuel. *Exemple : 6 nuits sur 11 planifiées, temps de travail à 80 % → (130 € × 80 %) = 104 € bruts.*
 
 **Dates et signataires**
 
@@ -27,6 +27,13 @@ Vous, si vous êtes IDE ou Aide-Soignant(e) affecté(e), en tout ou partie de vo
 - Signé par : ICO (Mario Campone, DG), **CGT-FO** — signé **par délégation de pouvoir de Miguel Boisseau** (pas David Di Peri), **CFE-CGC** (Maxime Brémaud). **Sud Santé-Sociaux (Julien Rosan) n'a pas signé.**
 
 **⚠ À noter** : un avenant à cet accord existe en PDF signé (26/04/2024) mais aucune version Word/Markdown n'a encore été retrouvée — son contenu n'est donc pas repris ici.
+
+**Suivi de l'accord**
+
+- Durée : accord à durée indéterminée, à effet rétroactif au 1er janvier 2023 *(Art. 4.1)*
+- Révision : procédure légale classique — demande écrite d'une organisation syndicale représentative, puis convocation par la Direction dans un délai de 2 mois *(Art. 4.2)*
+- Dénonciation : possible à tout moment par lettre recommandée avec accusé de réception ; l'application cesse en principe au dernier jour des mandats CSE ; l'accord est indivisible, sans dénonciation partielle possible *(Art. 4.3)*
+- Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'est prévu par cet accord.
 
 ---
 *Source : `Accord prime USC signe.md` (01/12/2023).*

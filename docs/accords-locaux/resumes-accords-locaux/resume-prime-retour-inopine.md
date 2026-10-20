@@ -38,4 +38,10 @@ Les échanges de planning entre collègues ne sont pas concernés.
 Le temps travaillé est enregistré dans Chronos et traité selon l'état de vos compteurs : temps ordinaire, heures supplémentaires ou heures complémentaires.
 
 ---
+
+## Suivi de la décision *(point 5-6)*
+
+Aucune clause de révision, de bilan ou de commission de suivi n'est prévue. Le seul dispositif mentionné est administratif : le temps travaillé au titre d'un retour inopiné est enregistré dans l'outil Chronos *(point 5)*, ce qui assure la traçabilité du décompte du temps de travail — ce n'est pas un mécanisme de contrôle de l'application de la DUE elle-même. La décision est prise sans limite de durée *(point 6)* et peut être modifiée ou arrêtée unilatéralement par l'employeur à tout moment.
+
+---
 *Source : DUE Prime de retour inopiné (29/04/2024) — Décision de l'ICO, aucun syndicat signataire.*

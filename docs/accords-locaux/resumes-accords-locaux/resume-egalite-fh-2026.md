@@ -49,6 +49,7 @@ Toute offre d'emploi rédigée sans stéréotype de genre ; critères de sélect
 - **Allaitement** : lieu dédié mis à disposition ; absence au poste organisée par le responsable de service
 - **Temps partiel** : égalité d'accès entre femmes et hommes, suivi annuel
 - **Congé de parentalité pour couples homoparentaux** *(Art. 7.4)* : **25 jours calendaires rémunérés**, salaire maintenu, accordés au salarié en CDI dont le/la partenaire ne peut bénéficier d'un congé maternité. Si les 2 membres du couple sont salariés de l'ICO, le congé n'est accordé qu'à l'un des deux. À demander par écrit (avec justificatifs) **un mois avant** la prise du congé, qui doit intervenir dans les **6 mois suivant l'arrivée de l'enfant**. Ce congé n'a pas d'impact sur le calcul de l'ancienneté
+  - **⚠ Coquille confirmée dans l'accord source** : le corps de l'article 7.4 limite ce congé à un seul des deux membres du couple si les deux travaillent à l'ICO, mais le tableau récapitulatif qui suit dans le même article attribue 25 jours à chacun des deux parents (biologique et social) dans la 1ère situation décrite. Contradiction interne relevée lors de l'audit du 20/10/2026 et confirmée comme une erreur de rédaction par David Di Peri — le résumé ci-dessus retient la règle du corps de l'article (un seul congé par couple si les deux sont salariés ICO).
 
 ---
 
@@ -58,6 +59,14 @@ Toute offre d'emploi rédigée sans stéréotype de genre ; critères de sélect
 - **Réseau partenaires** (assistance sociale, logement, juridique) constitué avant fin 2026
 - **Temps d'audition** convoqué par les forces de l'ordre pendant le temps de travail : compté comme temps de travail effectif
 - Formation de l'ensemble des managers à la détection des violences domestiques d'ici fin 2028
+
+---
+
+## Suivi de l'accord *(Art. 8 — Dispositions finales, et Art. 8.2.4)*
+
+- **Bilan annuel** : un bilan quantitatif et qualitatif de l'application de l'accord est présenté une fois par an au **CSE central**
+- **Clause de revoyure** : réunion de revoyure prévue au terme de la première année d'application pour envisager une éventuelle adaptation
+- **Suivi spécifique des violences domestiques** *(Art. 8.2.4)* : un état statistique des situations rencontrées et un exposé des réponses apportées sont présentés annuellement en **commission Formation Égalité FH**
 
 ---
 *Source : Accord égalité professionnelle F/H (29/05/2026), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

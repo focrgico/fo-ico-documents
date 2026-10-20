@@ -32,4 +32,10 @@ Une fois les 3 conditions remplies (cycle pratique validé + formation théoriqu
 - **250 € bruts/mois** si vous avez suivi avec succès le **parcours de formation interne** (et non externe) ET obtenu le **DU de Macroscopie** *(point 2)*
 
 ---
+
+## Suivi de la décision
+
+Aucun mécanisme de suivi n'est prévu par cette DUE : ni commission de suivi, ni bilan, ni indicateur, ni clause de révision ou de durée limitée. L'employeur peut la modifier ou y mettre fin à tout moment, sans procédure de concertation formalisée avec les organisations syndicales.
+
+---
 *Source : DUE Parcours macroscopie techniciens de laboratoire (08/12/2023) — Décision de l'ICO, aucun syndicat signataire.*

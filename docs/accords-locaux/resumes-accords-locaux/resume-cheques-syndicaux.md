@@ -1,6 +1,4 @@
-Chèques syndicaux — résumé pour tryptique
-
-> **Dépliant à imprimer** — [Chèques syndicaux (PDF, 3 volets)](../Depliants_FO/Depliant_cheques_syndicaux_FO.pdf)
+Chèques syndicaux — résumé
 
 **Sur les références :** cet accord s'appuie sur l'article 4.2.3.6 de la CCN des CLCC, qui a institué le « chèque syndical » depuis l'an 2000 et renvoie à une négociation locale pour en fixer les modalités concrètes. C'est l'objet du présent accord.
 
@@ -55,4 +53,14 @@ L'accord est déposé sur la plateforme TéléAccords et au greffe du conseil de
 
 ---
 
-**Base :** accord signé le 3 octobre 2022, par les 4 organisations syndicales représentatives (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC).
+**Suivi de l'accord**
+
+- **Révision** *(Article 4)* : possible à tout moment selon les modalités du code du travail ; toute demande doit préciser les dispositions dont la révision est demandée.
+- **Durée et entrée en vigueur** *(Article 5)* : accord à durée indéterminée, entré en vigueur le lendemain de son dépôt.
+- **Publicité** *(Article 6)* : dépôt sur la plateforme TéléAccords et au greffe du conseil de prud'hommes d'Angers ; un exemplaire est remis au CSE et aux délégués syndicaux.
+
+Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'est prévu par cet accord.
+
+---
+
+**Base :** accord signé le 3 octobre 2022, par les 4 organisations syndicales représentatives (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC). Relu intégralement et revérifié contre le texte source le 20/10/2026 : aucune coquille ou incohérence relevée dans le corps de l'accord.

@@ -44,4 +44,14 @@ Le flux du vote et le flux d'identification de l'électeur sont **séparés et c
 À la clôture du scrutin, les opérations de dépouillement se font dans les bureaux de vote, sous l'autorité du **président du bureau**, en présence obligatoire des assesseurs, délégués de liste et représentant de l'employeur. Aucun résultat partiel n'est communiqué pendant le scrutin.
 
 ---
-*Source : Accord vote électronique (29/05/2026), signé CGT-FO, CFE-CGC.*
+
+## Suivi de l'accord
+
+- **Révision** *(Art. 4)* : possible à tout moment selon les modalités du code du travail.
+- **Durée** *(Art. 5)* : durée déterminée, liée aux élections professionnelles 2026 — l'accord cesse de produire effet dès l'élection définitive des représentants (recours épuisés). Entrée en vigueur le lendemain de son dépôt.
+- **Publicité** *(Art. 6)* : dépôt sur TéléAccords et au greffe du conseil de prud'hommes d'Angers ; exemplaire remis au CSE et aux délégués syndicaux.
+
+Aucune commission de suivi, bilan ou indicateur spécifique n'est prévu par cet accord.
+
+---
+*Source : Accord vote électronique (29/05/2026), signé CGT-FO, CFE-CGC (Sud Santé-Sociaux n'a pas signé). Relu intégralement et revérifié contre le texte source le 20/10/2026 : aucune coquille relevée dans le corps de l'accord.*

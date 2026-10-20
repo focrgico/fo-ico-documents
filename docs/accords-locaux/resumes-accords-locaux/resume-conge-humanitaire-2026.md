@@ -54,4 +54,14 @@ Pour éviter de désorganiser les services, l'employeur peut refuser si :
 - À votre retour, vous devez fournir une **attestation de fin de mission** délivrée par l'association
 
 ---
+
+## Suivi de l'accord
+
+- **Consultation du CSE en cas de refus (demande « ordinaire »)** *(Art. 3.1)* : tout refus de l'employeur à une demande de congé humanitaire « ordinaire » doit être motivé et faire l'objet d'une consultation du CSE de rattachement du salarié (cette consultation n'est pas requise en cas de refus d'une demande d'urgence humanitaire, Art. 3.2).
+- **Révision** *(Art. 7.2)* : procédure classique de révision à l'initiative d'une organisation syndicale représentative ou de la Direction.
+- **Durée et dénonciation** *(Art. 7.1 et 7.3)* : accord à durée indéterminée ; il peut être dénoncé à tout moment, l'application cessant alors en principe au dernier jour des mandats des membres du CSE.
+
+Aucune commission de suivi, bilan annuel ou clause de revoyure n'est prévu par cet accord.
+
+---
 *Source : Accord congé humanitaire (31/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux.*

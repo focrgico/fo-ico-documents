@@ -20,5 +20,12 @@ Vous, si vous êtes salarié **non-praticien** et éligible — la BIC est un co
 
 **Signataires** : CGT-FO, Sud Santé-Sociaux, CFE-CGC — les 3 organisations ont signé.
 
+**Suivi de l'accord**
+
+- Durée : accord à durée indéterminée, entrée en vigueur le 1er jour du mois suivant son dépôt *(Art. 3.1)*
+- Révision : procédure légale classique — une ou plusieurs organisations syndicales représentatives (signataires/adhérentes jusqu'à la fin du cycle électoral, puis toute organisation représentative) peuvent demander une révision ; la Direction doit alors convoquer une négociation dans un délai de 2 mois *(Art. 3.2)*
+- Dénonciation : possible à tout moment par lettre recommandée avec accusé de réception adressée à chacun des signataires ; l'application cesse en principe au dernier jour des mandats des membres du CSE ; l'accord est indivisible, sans dénonciation partielle possible *(Art. 3.3)*
+- Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'est prévu par cet accord pour contrôler son application.
+
 ---
 *Source : accord du 11 mars 2025. Références CCN : art. 2.5.2.2 et 2.5.2.2.3.*

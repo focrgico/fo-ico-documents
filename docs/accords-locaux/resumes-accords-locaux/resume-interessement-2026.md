@@ -3,7 +3,7 @@
 > **Dépliant à imprimer** — [Intéressement (PDF, 3 volets)](../Depliants_FO/Depliant_interessement_FO.pdf)
 
 **Signé le 29 mai 2026 par l'ICO (Mario CAMPONE) et CGT-FO et CFE-CGC. Sud Santé-Sociaux n'a pas signé.**
-*Accord à durée déterminée couvrant les exercices 2026, 2027 et 2028. Versement au plus tard le 31 mai de l'année suivante.*
+*Accord à durée déterminée. Le préambule annonce les exercices 2026, 2027 et 2028, mais l'article 9.1 limite la durée à l'exercice 2026 seul — voir la coquille signalée dans « Suivi de l'accord » ci-dessous. Versement au plus tard le 31 mai de l'année suivante.*
 
 ---
 
@@ -81,6 +81,21 @@ Dans les **15 jours** après réception de votre fiche (au plus tard le 15 mai N
 - **Sans réponse** : versement automatique sur le fonds le moins risqué du PEE
 
 Un abondement de l'ICO sur le PEE peut être décidé lors de la NAO, dans la limite du triple de votre versement et de 8% du plafond annuel SS.
+
+---
+
+## Suivi de l'accord
+
+- **Information du CSE Central** : l'application de l'accord est suivie par le CSE Central, qui se réunit chaque fois qu'il y a lieu de calculer ou de répartir l'intéressement ; les éléments de calcul lui sont transmis au moins 8 jours avant la réunion *(Art. 8.1)*
+- **Bilan annuel** : les résultats annuels de l'intéressement font l'objet d'un bilan présenté en CSE Central, indiquant le montant attribué et le nombre de bénéficiaires *(Art. 8.1)*
+- **Fiche individuelle** : chaque salarié reçoit une fiche détaillant le calcul de sa prime (montant global, montant moyen, droits individuels, CSG/CRDS, délai de réponse) *(Art. 8.2)*
+- **Clause de revoyure sur les indicateurs** : en cas de modification ou d'abandon d'un indicateur par la HAS, la Direction s'engage à réunir rapidement les partenaires sociaux pour définir un indicateur équivalent *(Art. 4.1)*
+- **Supplément d'intéressement** : en cas d'intention de verser un supplément, la Direction s'engage à ouvrir une négociation avec les délégués syndicaux *(Art. 4.3)*
+- **Règlement des différends** : tout salarié peut saisir le Directeur Général par courrier ; le litige et la réponse apportée sont communiqués aux délégués syndicaux signataires ; un bilan annuel des litiges éventuels est présenté lors de la NAO *(Art. 9.2)*
+- **Révision** : toute demande doit être accompagnée d'un projet de rédaction nouvelle ; les parties doivent se rencontrer dans les 3 mois ; une nouvelle négociation est obligatoire sans délai en cas d'évolution légale/réglementaire modifiant l'équilibre financier de l'accord *(Art. 9.3)*
+- **Dénonciation** : possible à tout moment, doit être motivée, préavis de 3 mois puis maintien des effets pendant 1 an *(Art. 9.4)*
+- **Durée** : l'article 9.1 fixe une durée déterminée correspondant à l'exercice comptable 2026 (01/01/2026-31/12/2026).
+  - **⚠ Coquille confirmée dans l'accord source** : le préambule indique que le nouveau dispositif « concerne les exercices comptables de 2026, 2027 et 2028 », ce qui contredit la durée d'un seul exercice fixée à l'article 9.1. Contradiction relevée lors de l'audit du 20/10/2026 et confirmée comme une erreur de rédaction par David Di Peri — à défaut d'avenant, seul l'exercice 2026 est couvert par le texte normatif de l'article 9.1 ; les exercices 2027 et 2028 devront faire l'objet d'un nouvel accord ou d'un avenant.
 
 ---
 *Source : Accord d'intéressement (29/05/2026), signé CGT-FO, CFE-CGC. Couvre les exercices 2026, 2027 et 2028.*

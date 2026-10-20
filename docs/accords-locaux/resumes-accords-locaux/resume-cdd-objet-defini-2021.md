@@ -27,5 +27,11 @@ Si le contrat ne débouche pas sur un CDI : indemnité spécifique de **10 % de 
 
 Signé le **13 août 2021** par ICO (Mario Campone, DG), CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC — les 4 organisations ont signé.
 
+**Suivi de l'accord** *(Art. 6)*
+
+- Les élus du **CSE central sont informés** de la conclusion et de la fin de chaque contrat à objet défini, lors de la réunion de CSE Central qui suit : service concerné, période du contrat, description du projet, définition des tâches et résultat objectif déterminant la fin *(Art. 6.1)*
+- Accord conclu pour une **durée indéterminée** *(Art. 6.2)*
+- Révision possible à la demande d'une organisation syndicale représentative ou de la Direction *(Art. 6.3)* ; dénonciation possible par lettre recommandée, l'accord restant applicable jusqu'au dernier jour des mandats CSE en cours *(Art. 6.4)*
+
 ---
 *Source : `accord-cdd-objet-defini-2021.md`.*

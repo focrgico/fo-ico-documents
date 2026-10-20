@@ -54,9 +54,11 @@ Si vous contestez votre PVA, vous disposez de **15 jours** après notification p
 
 ---
 
-## Suivi *(Art. 7-8)*
+## Suivi de l'accord *(Art. 7-8.1)*
 
-Des indicateurs par service et au total (nombre de PVA à 0, minorées, normales, majorées) sont communiqués chaque année au CSE Central. Un bilan annuel est présenté et une **réunion de revoyure** est prévue au terme de la première année d'application.
+- **Indicateurs de suivi** *(Art. 7)* : par service et au total (taux moyen de PVA, nombre de PVA à 0, minorées, normales, majorées), communiqués chaque année au **CSE Central**
+- **Bilan annuel** *(Art. 8.1)* : bilan quantitatif et qualitatif de l'application de l'accord, établi chaque année à destination du **CSE Central**
+- **Clause de revoyure** *(Art. 8.1)* : réunion de revoyure prévue au terme de la première année d'application pour envisager une éventuelle adaptation
 
 ---
 *Source : Accord PVA (19/05/2022), signé CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC.*

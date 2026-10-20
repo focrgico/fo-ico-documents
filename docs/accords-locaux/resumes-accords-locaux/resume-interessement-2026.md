@@ -60,7 +60,15 @@ Basé sur l'évolution de l'activité (scanner, IRM, TEP, scintigraphie, chirurg
 ## Répartition entre salariés *(Art. 5)*
 
 - **Moitié de la prime** : répartie **uniformément** entre tous les bénéficiaires (au prorata de la présence et du temps de travail pour les temps partiels et les entrées/sorties en cours d'année)
-- **Autre moitié** : répartie **au prorata des heures de travail effectif** ou assimilé (CP, jours fériés, RTT, formations, congés maternité/paternité, AT/MP, heures de délégation, jours de grève — mais pas les maladies ordinaires ni les absences non rémunérées)
+- **Autre moitié** : répartie **au prorata des heures de travail effectif** ou assimilé (CP, jours fériés, RTT, formations, congés maternité/paternité, AT/MP, heures de délégation, jours de grève — mais pas les maladies ordinaires ni les absences non rémunérées), **à l'exclusion des heures supplémentaires** pour les salariés à temps complet *(Art. 5)*
+
+---
+
+## Plafonds *(Art. 6)*
+
+- **Plafond global** : le montant total distribué à l'ensemble des salariés ne peut pas dépasser **20 % de la masse des salaires bruts** versés aux salariés couverts par l'accord *(Art. 6-1)*
+- **Plafond individuel** : votre prime d'intéressement ne peut pas dépasser **la moitié du plafond annuel de la sécurité sociale (PASS)** en vigueur pour l'exercice concerné — proraté si vous n'avez pas une année complète de présence *(Art. 6-2)*
+- En cas de dépassement, votre prime est automatiquement ramenée à ce plafond, **sans compensation ni report** sur les autres salariés ou dans le temps *(Art. 6-2)*
 
 ---
 

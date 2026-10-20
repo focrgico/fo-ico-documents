@@ -122,8 +122,6 @@ def local_pdf_url(rel_path, subdir="pdf"):
 # aucune page du site ne les liste ni ne les référence. Ils servent aux liens du
 # tableau de suivi (Suivi accord ICO.xlsx). Chemins relatifs à docs/.
 PDF_HORS_CATALOGUE = [
-    "accords-locaux/Accord ATT NC_Avenant n1_Signé.pdf",
-    "accords-locaux/Accord CET_Avenant n1_signé.pdf",
     "accords-locaux/Accord Intergenerationnel Avenant n1 signe.pdf",
     "accords-locaux/Accord-Cheques syndicaux_v signee.pdf",
     "nao/Accord de méthode NAO au titre de 2026.pdf",

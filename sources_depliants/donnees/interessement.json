@@ -1,0 +1,159 @@
+{
+  "slug": "Depliant_interessement_FO",
+  "titre_pdf": "Accord d'Intéressement",
+  "surtitre": "Accord local ICO — Intéressement",
+  "titre": [
+    "Accord",
+    "d'Intéressement"
+  ],
+  "sous_titre": "2026, 2027, 2028 :\nce que ça change pour vous.",
+  "chiffre": {
+    "valeur": "3",
+    "unite": "crit.",
+    "unite_rouge": true,
+    "libelle": "critères indépendants : satisfaction patients, activité, capacité d'autofinancement"
+  },
+  "pastilles": [
+    "Ne peut pas être refusé",
+    "15 jours pour choisir"
+  ],
+  "recto": {
+    "rabat": [
+      {
+        "t": "encadre",
+        "style": "alerte",
+        "titre": "Point de vigilance — 15 jours pour choisir",
+        "contenu": [
+          {
+            "t": "p",
+            "texte": "Vous avez **15 jours** après réception de votre fiche (au plus tard le **15 mai N+1**) pour choisir l'affectation de votre prime {ref:Art. 7}. Sans réponse, elle est versée automatiquement sur le **fonds le moins risqué du PEE**."
+          }
+        ]
+      },
+      {
+        "t": "picto",
+        "svg": "horloge_15_jours.svg",
+        "legende": "Paiement direct, PEE ou PERCOL : le choix vous appartient.",
+        "avant": 20.5,
+        "ecart": 23.2,
+        "apres": 15.2
+      },
+      {
+        "t": "encadre",
+        "style": "alerte",
+        "titre": "Bon à savoir",
+        "contenu": [
+          {
+            "t": "p",
+            "texte": "L'intéressement **ne peut pas être refusé** {ref:Art. 2}, et **aucun versement** n'a lieu si le résultat comptable est déficitaire {ref:Art. 3-4}."
+          }
+        ]
+      }
+    ],
+    "contact": {
+      "accroche": "Une question sur le calcul de votre prime ou sur votre choix d'affectation ? Vos élus FO vous accompagnent.",
+      "courriel": "fo.nantes@unicancer.fr",
+      "poste": "Poste 9188",
+      "picto": {
+        "svg": "vague_et_plume.svg",
+        "legende": "Un accord négocié, signé par deux organisations sur trois.",
+        "avant": 13.9,
+        "ecart": 18.9
+      }
+    },
+    "source": {
+      "texte": "Accord d'intéressement de l'ICO, signé le **29 mai 2026** par la CGT-FO et la CFE-CGC, à durée déterminée couvrant les exercices 2026, 2027 et 2028. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+      "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+      "liens": [
+        {
+          "texte": "accord complet (PDF)",
+          "pdf": "accords-locaux/Accord d'entreprise relatif à l'intéressement (2026).pdf"
+        }
+      ]
+    }
+  },
+  "verso": [
+    [
+      {
+        "t": "section",
+        "titre": "Qui est concerné ?"
+      },
+      {
+        "t": "p",
+        "texte": "**Tous les salariés de l'ICO** (médicaux et non médicaux, cadres dirigeants, CDD, temps partiel), avec **3 mois d'ancienneté minimum** au cours de l'exercice concerné {ref:Art. 2}."
+      },
+      {
+        "t": "puces",
+        "items": [
+          "L'intéressement **ne peut pas être refusé** {ref:Art. 2}",
+          "Entrées/sorties en cours d'année : proraté au **nombre de mois complets** de présence {ref:Art. 2}"
+        ]
+      },
+      {
+        "t": "encadre",
+        "titre": "Durée de l'accord",
+        "titre_grand": true,
+        "contenu": [
+          {
+            "t": "p",
+            "texte": "Durée déterminée, couvrant les **exercices 2026, 2027 et 2028**. Versement au plus tard le 31 mai de l'année suivante."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "t": "section",
+        "titre": "Ce qu'il faut retenir"
+      },
+      {
+        "t": "p",
+        "taille": 10.5,
+        "texte": "L'intéressement additionne **3 critères indépendants**, sous réserve d'un résultat comptable positif {ref:Art. 3-4} :"
+      },
+      {
+        "t": "puces",
+        "items": [
+          "**Satisfaction des patients** (E-Satis +48h et Chirurgie ambulatoire) : de 0 € à 100 000 € par score, max **200 000 €** {ref:Art. 3-4}",
+          "**Développement de l'activité** en volume (vs N-1) : de 0 € à **500 000 €** selon l'évolution {ref:Art. 3-4}",
+          "**Capacité d'autofinancement** (CAF) : de 0% à 6% de la CAF, plafonné à **1 320 000 €** {ref:Art. 3-4}"
+        ]
+      },
+      {
+        "t": "p",
+        "taille": 10,
+        "avant": 7.4,
+        "texte": "Formule finale : **I = SG + AV + CAF**, ajustée au résultat comptable."
+      },
+      {
+        "t": "picto",
+        "svg": "histogramme_trois_barres.svg",
+        "legende": "Trois critères additionnés, plafonnés chacun.",
+        "avant": 18.8,
+        "ecart": 14.6
+      }
+    ],
+    [
+      {
+        "t": "section",
+        "titre": "Vos démarches"
+      },
+      {
+        "t": "puces",
+        "items": [
+          "**Répartition** : moitié uniforme entre tous les bénéficiaires, moitié au prorata des heures de travail effectif ou assimilé (CP, jours fériés, RTT, formations, congés mat./pat., AT/MP, heures de délégation, jours de grève) {ref:Art. 5}",
+          "Les **maladies ordinaires** et absences non rémunérées ne sont pas assimilées {ref:Art. 5}",
+          "Sous **15 jours** après réception de votre fiche : paiement direct, affectation au PEE ou au PERCOL {ref:Art. 7}",
+          "Sans réponse : versement automatique sur le fonds le moins risqué du PEE {ref:Art. 7}"
+        ]
+      },
+      {
+        "t": "picto",
+        "svg": "tirelire.svg",
+        "legende": "Paiement direct, PEE ou PERCOL : à vous de choisir.",
+        "avant": 20.5,
+        "ecart": 22.9
+      }
+    ]
+  ]
+}

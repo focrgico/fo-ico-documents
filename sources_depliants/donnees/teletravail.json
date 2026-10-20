@@ -1,0 +1,165 @@
+{
+  "slug": "Depliant_teletravail_FO",
+  "titre_pdf": "Accord télétravail",
+  "surtitre": "Accord local ICO",
+  "titre": [
+    "Accord",
+    "télétravail"
+  ],
+  "sous_titre": "Ce que ça change pour vous.",
+  "chiffre": {
+    "valeur": "47",
+    "unite": "j",
+    "unite_rouge": false,
+    "libelle": "de télétravail par an à temps plein"
+  },
+  "pastilles": [
+    "Matériel fourni",
+    "Mêmes droits qu'au bureau"
+  ],
+  "recto": {
+    "rabat": [
+      {
+        "t": "encadre",
+        "style": "alerte",
+        "titre": "Point de vigilance — droit à la déconnexion",
+        "contenu": [
+          {
+            "t": "p",
+            "texte": "Aucune sollicitation professionnelle avant **8h** ni après **20h**, hors urgence exceptionnelle {ref:Art. 7.2}. Les plages horaires de contact sont fixées avec le manager {ref:Art. 7.3}."
+          }
+        ]
+      },
+      {
+        "t": "picto",
+        "svg": "horloge_lune_soleil.svg",
+        "legende": "Entre 8h et 20h : la plage de contact. Avant, après : le repos."
+      },
+      {
+        "t": "encadre",
+        "style": "alerte",
+        "titre": "Bon à savoir",
+        "contenu": [
+          {
+            "t": "puces",
+            "items": [
+              "Un accident survenu à domicile un jour de télétravail relève du **même régime** qu'un accident sur site {ref:Art. 9.2}",
+              "**Mêmes droits collectifs et individuels** que sur site : informations syndicales, élections professionnelles, formation {ref:Art. 10.1}",
+              "Suivi de l'accord une fois par an en CSSCT centrale {ref:Art. 12.1}"
+            ]
+          }
+        ]
+      }
+    ],
+    "contact": {
+      "accroche": "Une question sur le télétravail, un refus non motivé, un litige sur vos jours ? Vos élus FO vous accompagnent dans vos démarches.",
+      "courriel": "fo.nantes@unicancer.fr",
+      "poste": "Poste 9188",
+      "picto": {
+        "svg": "maison_vers_bureau.svg",
+        "legende": "Même accord, même protection, où que vous travailliez."
+      }
+    },
+    "source": {
+      "texte": "Accord télétravail de l'ICO, signé le 27 avril 2021 par la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+      "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+      "liens": [
+        {
+          "texte": "accord complet (PDF)",
+          "pdf": "accords-locaux/Accord Télétravail_signé.pdf"
+        }
+      ]
+    }
+  },
+  "verso": [
+    [
+      {
+        "t": "section",
+        "titre": "Qui est concerné ?"
+      },
+      {
+        "t": "p",
+        "texte": "Le télétravail est **volontaire** : ni l'ICO ni le salarié ne peuvent l'imposer à l'autre {ref:Art. 4.1}."
+      },
+      {
+        "t": "puces",
+        "items": [
+          "Ancienneté minimale de **6 mois** et temps de travail **≥ 50 %** {ref:Art. 3.3}",
+          "Poste compatible avec le travail à distance : les métiers en lien direct avec les patients (accueil, soins) ne sont pas éligibles {ref:Art. 3.1}",
+          "Non éligibles : apprentis, contrats de professionnalisation, CUI-CEC, stagiaires {ref:Art. 3.3}",
+          "Le télétravail est **réversible à tout moment** à l'initiative du salarié {ref:Art. 5.1}"
+        ]
+      }
+    ],
+    [
+      {
+        "t": "section",
+        "titre": "Ce qu'il faut retenir"
+      },
+      {
+        "t": "puces",
+        "items": [
+          "Jusqu'à **47 jours par an** à temps plein, proratisés pour les temps partiels {ref:Art. 6}",
+          "**1 jour/semaine** en moyenne pour les non-cadres et les cadres en heures, 2 jours possibles selon le service {ref:Art. 6}",
+          "Jusqu'à **3 jours/semaine** pour les cadres au forfait jour {ref:Art. 6}"
+        ]
+      },
+      {
+        "t": "encadre",
+        "titre": "Délais à connaître",
+        "contenu": [
+          {
+            "t": "p",
+            "texte": "Modification d'un jour : **48h de prévenance** (72h pour les cadres au forfait jour). Planification établie par trimestre, au moins 1 mois à l'avance {ref:Art. 6}."
+          }
+        ]
+      },
+      {
+        "t": "section",
+        "titre": "Ce que l'ICO fournit"
+      },
+      {
+        "t": "p",
+        "texte": "PC portable, souris filaire, alimentation et sacoche {ref:Art. 8.1}. Le deuxième écran, l'imprimante et la chaise ergonomique ne sont pas fournis. Aucune indemnité financière n'est prévue pour les frais liés au télétravail {ref:Art. 8.3}."
+      },
+      {
+        "t": "picto",
+        "svg": "ordinateur_portable.svg",
+        "decalage_x": -3.35
+      }
+    ],
+    [
+      {
+        "t": "section",
+        "titre": "Vos démarches"
+      },
+      {
+        "t": "puces",
+        "numerote": true,
+        "items": [
+          "Demande écrite auprès du/de la responsable hiérarchique {ref:Art. 4.2}",
+          "Réponse écrite et motivée de la DRH sous **1 mois maximum** {ref:Art. 4.3}",
+          "Validation des jours dans l'outil de gestion des temps (GTA) {ref:Art. 4.2}",
+          "Un refus doit être justifié par écrit et ne constitue jamais une sanction {ref:Art. 4.4}"
+        ]
+      },
+      {
+        "t": "section",
+        "titre": "Vos obligations"
+      },
+      {
+        "t": "puces",
+        "items": [
+          "Disposer d'un **espace dédié à domicile** et d'une connexion internet suffisante {ref:Art. 3.4}",
+          "Souscrire une **assurance habitation multirisques** avec responsabilité civile {ref:Art. 8.3}",
+          "Respecter une **confidentialité renforcée** : données, mots de passe {ref:Art. 10.3}"
+        ]
+      },
+      {
+        "t": "picto",
+        "svg": "bouclier_coche.svg",
+        "legende": "Chez vous comme au bureau : confidentialité et assurance restent de votre ressort."
+      }
+    ]
+  ]
+}

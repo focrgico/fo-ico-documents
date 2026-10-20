@@ -1,0 +1,138 @@
+/* Feuille de style commune des dépliants FO ICO.
+   Reconstruite le 20/10/2026 à partir des PDF publiés (mesures sur Depliant_teletravail_FO.pdf)
+   et des règles du projet. Unités en points (pt) : 1 pt = 1/72 pouce.
+   Format : A4 paysage 841,92 x 594,96 pt, 2 pages, pli en lettre. */
+
+@font-face { font-family: "Poppins"; font-weight: 400; src: url("polices/Poppins-Regular.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 500; src: url("polices/Poppins-Medium.ttf"); }
+@font-face { font-family: "Poppins"; font-weight: 700; src: url("polices/Poppins-Bold.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 400; font-style: normal; src: url("polices/Carlito-Regular.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 700; font-style: normal; src: url("polices/Carlito-Bold.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 400; font-style: italic; src: url("polices/Carlito-Italic.ttf"); }
+@font-face { font-family: "Carlito"; font-weight: 700; font-style: italic; src: url("polices/Carlito-BoldItalic.ttf"); }
+
+:root {
+  --marine: #14203A;
+  --gris-fond: #F4F6F9;
+  --rouge: #C1121F;
+  --rouge-fonce: #9C0B10;
+  --rouge-vif: #FF0000;
+  --corail: #FF6B6B;          /* « vos droits notre priorité » */
+  --or: #B08D57;
+  --or-texte: #7A6540;
+  --texte: #2B3242;
+  --texte-2: #5B6578;
+  --ref: #8A93A3;             /* références d'articles */
+  --ref-marine: #8FA0BA;      /* références et pictos sur fond marine */
+  --sur-marine: #E8EDF5;
+  --filet: #DDE2EA;
+  --alerte-fond: #FFF6F6;
+  --alerte-bord: #F3D6D8;
+  --page-w: 841.92pt;
+  --page-h: 594.96pt;
+}
+
+@page { size: 841.92pt 594.96pt; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: var(--page-w); background: #fff; }
+body { font-family: "Carlito", sans-serif; font-size: 11.5pt; line-height: 1.24; color: var(--texte);
+       -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+.page { position: relative; width: var(--page-w); height: var(--page-h); overflow: hidden; page-break-after: always; break-after: page; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+
+/* ---------- Volets (largeurs mesurées sur les PDF publiés) ---------- */
+.volet { position: absolute; top: 0; height: 100%; padding-top: 34.3pt; }
+/* recto : rabat | Vos élus FO | titre */
+.r1 { left: 0;        width: 277.5pt;  background: var(--gris-fond); padding-left: 33.8pt; padding-right: 33.7pt; }
+.r2 { left: 277.5pt;  width: 282pt;    background: var(--marine);    padding-left: 33.7pt; padding-right: 33.7pt; }
+.r3 { left: 559.5pt;  width: 282.42pt; background: #fff;            padding-left: 34.1pt; padding-right: 33.8pt; }
+/* verso : Qui est concerné | colonne 1 | colonne 2 */
+.v1 { left: 0;        width: 280.5pt;  background: #fff;            padding-left: 33.8pt; padding-right: 34pt; }
+.v2 { left: 280.5pt;  width: 280.5pt;  background: var(--gris-fond); padding-left: 34.5pt; padding-right: 33.8pt; }
+.v3 { left: 561pt;    width: 280.92pt; background: #fff;            padding-left: 34.5pt; padding-right: 33.8pt; }
+
+/* ---------- Textes ---------- */
+p { margin: 0 0 5.95pt 0; }
+b, strong { font-weight: 700; }
+.art { font-style: italic; font-size: 8.5pt; color: var(--ref); }
+sup { font-size: 0.65em; line-height: 0; vertical-align: 0.45em; }
+
+.sec { position: relative; font-family: "Poppins", sans-serif; font-weight: 700; font-size: 14.5pt; line-height: 1.5;
+       color: var(--marine); padding-left: 10pt; margin: 18.7pt 0 4.25pt 0; }
+.sec:first-child { margin-top: 0; }
+.sec::before { content: ""; position: absolute; left: 0; top: 2.5pt; width: 3pt; height: 16.4pt; background: var(--rouge); }
+.r2 .sec::before { background: var(--rouge-vif); }
+.r2 .sec { color: #fff; font-size: 14.5pt; }
+
+ul.puces { list-style: none; margin: 0 0 6pt 0; }
+ul.puces li { position: relative; padding-left: 11.3pt; margin: 0 0 7.45pt 0; }
+ul.puces li::before { content: "●"; position: absolute; left: 0; top: -0.2pt; font-size: 8pt; line-height: 14.25pt; color: var(--rouge); }
+ul.puces li:last-child { margin-bottom: 0; }
+
+/* ---------- Encadrés ---------- */
+.box { background: #fff; border: 0.75pt solid var(--filet); border-left: 2.25pt solid var(--marine);
+       padding: 8.6pt 9.15pt 7.8pt 9.3pt; margin: 7.05pt 0 0 0; font-size: 10.5pt; line-height: 1.215; }
+.box + .sec { margin-top: 13.3pt; }
+.box .box-titre { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 11.5pt; line-height: 1.5; color: var(--marine); margin: 0 0 4.2pt 0; }
+.box p { margin: 0 0 4pt 0; }
+.box p:last-child { margin-bottom: 0; }
+.box.alerte { background: var(--alerte-fond); border-color: var(--alerte-bord); border-left-color: var(--rouge); }
+.box.alerte .box-titre { color: var(--rouge-fonce); font-size: 12.49pt; }
+.box.alerte { padding-bottom: 8.6pt; }
+.box.grand .box-titre { font-size: 12.49pt; }
+.box.alerte ul.puces { font-size: 11.5pt; line-height: 1.24; }
+.box.alerte ul.puces li { margin-bottom: 5.95pt; }
+.box.alerte ul.puces li:last-child { margin-bottom: 0; }
+.box.alerte .box-titre { margin-bottom: 3.4pt; }
+.box.alerte ul.puces li::before { top: -0.2pt; }
+.r1 .box { margin-top: 2.5pt; }
+.r1 .picto { margin-bottom: 19.7pt; }
+.r1 .picto + .box { margin-top: 0; }
+
+/* ---------- Pictogrammes ---------- */
+.picto { display: flex; flex-direction: column; align-items: center; }
+.picto img { display: block; }
+.picto .leg { max-width: 210pt; font-style: italic; font-size: 8pt; line-height: 1.24; color: var(--texte-2); text-align: center; margin-top: 10.4pt; }
+.picto.rabat { margin-top: 31.4pt; }
+.picto.rabat .leg { margin-top: 17.2pt; }
+.r2 .picto .leg { color: var(--ref-marine); margin-top: 17.1pt; }
+.picto.verso { margin-top: 15pt; }
+
+/* ---------- Recto centre : Vos élus FO ---------- */
+.r2 .accroche { color: var(--sur-marine); margin: 0 0 11.2pt 0; }
+.contact { display: flex; align-items: center; color: #fff; font-weight: 700; margin: 0 0 5.2pt 0; line-height: 14.25pt; }
+.contact svg { width: 9.4pt; height: 9.4pt; margin-right: 8.2pt; flex: none; fill: none; stroke: #fff; stroke-width: 0.94pt; stroke-linecap: round; stroke-linejoin: round; }
+.r2 .picto { margin-top: 34.4pt; }
+.source { position: absolute; left: 33.7pt; right: 33.7pt; bottom: 51.16pt; border: 0.75pt solid rgba(255,255,255,0.25);
+          border-left: 2.25pt solid var(--ref-marine); padding: 7.3pt 9.35pt 7.8pt 9.35pt; font-size: 9pt; line-height: 1.24; color: var(--sur-marine); }
+.source .titre { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 11pt; line-height: 1.5; color: #fff; margin: 0 0 3.6pt 0; }
+.source p { margin: 0 0 5.7pt 0; }
+.source b { color: #fff; }
+.source .renvoi { font-style: italic; color: var(--ref-marine); margin: 0; }
+.source .renvoi a { color: #fff; text-decoration: underline; }
+
+/* ---------- Recto droite : titre ---------- */
+.r3 .logo { display: block; width: 119pt; height: auto; margin: 2.7pt 0 0 0; }
+.eyebrow { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 7pt; letter-spacing: 0.1em; text-transform: uppercase; color: var(--or); line-height: 1.5; margin: 13.2pt 0 0 0; }
+.titre { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 23pt; line-height: 1.139; color: var(--marine); margin: 7.7pt 0 0 0; }
+.filet { width: 31.4pt; height: 3pt; background: var(--rouge); margin: 7.3pt 0 0 0; }
+.sous-titre { font-size: 10.5pt; color: var(--texte-2); margin: 9.4pt 0 0 0; line-height: 1.215; }
+.chiffre { margin: 18.4pt 0 0 0; line-height: 1.4; color: var(--marine); }
+.chiffre .num { font-family: "Poppins", sans-serif; font-weight: 700; font-size: 32pt; }
+.chiffre .unite { margin-left: 4.5pt; font-family: "Poppins", sans-serif; font-weight: 400; font-size: 12pt; color: var(--texte-2); }
+.chiffre .unite.rouge { font-weight: 700; color: var(--rouge); }
+.chiffre-libelle { font-size: 9.5pt; line-height: 1.215; color: var(--texte-2); margin: 2.2pt 0 0 0; }
+.pastilles { display: flex; flex-wrap: wrap; gap: 0.75pt 8.3pt; margin-top: 12pt; max-width: 207pt; }
+.pastille { font-family: "Poppins", sans-serif; font-weight: 500; font-size: 7.5pt; color: var(--or-texte); border: 0.75pt solid var(--or);
+            border-radius: 10.1pt; height: 20.2pt; line-height: 18.7pt; padding: 0 8.95pt; white-space: nowrap; }
+.slogan { position: absolute; left: 0; right: 0; bottom: 0; height: 33.96pt; background: var(--marine); padding-left: 34.1pt;
+          font-family: "Poppins", sans-serif; font-weight: 700; font-size: 9pt; line-height: 35pt; color: #fff; }
+.slogan span { color: var(--corail); }
+
+/* Source posée sur fond blanc de couverture (variante sans chiffre clé) n'est pas dans ce gabarit : voir README. */
+
+/* ---------- Tableaux (composant non mesuré sur un PDF de référence, voir README) ---------- */
+table.tab { border-collapse: collapse; width: 100%; font-size: 10pt; line-height: 1.2; margin: 6pt 0; }
+table.tab th { background: var(--marine); color: #fff; font-family: "Poppins", sans-serif; font-weight: 700; font-size: 9pt; text-align: left; padding: 4pt 6pt; }
+table.tab td { border: 0.75pt solid var(--filet); padding: 4pt 6pt; vertical-align: top; background: #fff; }

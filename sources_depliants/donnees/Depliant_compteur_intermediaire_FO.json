@@ -1,0 +1,174 @@
+{
+ "slug": "Depliant_compteur_intermediaire_FO",
+ "titre_pdf": "Compteur intermédiaire",
+ "surtitre": "ACCORDS LOCAUX ICO — TEMPS DE TRAVAIL",
+ "titre": [
+  "Compteur",
+  "intermédiaire"
+ ],
+ "sous_titre": "Postés et non postés : deux régimes, un même\nplafond.",
+ "chiffres": [
+  {
+   "valeur": "4",
+   "unite": "h",
+   "unite_rouge": true,
+   "libelle": "cumulées maximum sur l'année, en plus ou en moins, pour les deux régimes"
+  }
+ ],
+ "pastilles": [
+  "Non postés : 30 min/j",
+  "Postés : 5 min/j"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Au-delà de la tolérance journalière (**30 min** si vous êtes non posté, **5 min** si vous êtes posté), le compteur ne bouge plus automatiquement : une **demande d'heures**"
+     },
+     {
+      "t": "p",
+      "texte": "**(DHP)** est obligatoire dès la 1^ère^ minute de dépassement {ref:Article 2, les deux accords}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_compteur_intermediaire_FO_1.svg",
+    "legende": "Passé le seuil journalier, place à la demande d'heures.",
+    "ecart": 20.71,
+    "decalage_x": -0.8,
+    "avant": 21.2,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le plafond annuel est de **+/- 4 heures cumulées**, identique pour les deux régimes {ref:Article 2}. En fin d'année, votre solde est intégré au résultat d'annualisation : bascule en RCR l'année suivante, versement au CET, ou paiement si positif ; minoration si négatif {ref:Article 3}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": -0.13
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre compteur ou sur une demande de DHP ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Deux accords distincts : non posté (signé le 23/03/2024, en vigueur depuis le 01/04/2024) et posté (signé le 21/06/2024, en vigueur depuis le 01/09/2024). **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de chaque accord. Seul le texte intégral fait référence :",
+   "liens_sep": [
+    " / "
+   ],
+   "liens": [
+    {
+     "texte": "accord non posté (PDF)",
+     "pdf": "accords-locaux/Avenant accord ATT_ Mise en place compteur intermédiaire_Salariés non postés.pdf"
+    },
+    {
+     "texte": "accord posté (PDF)",
+     "pdf": "accords-locaux/Accord compteur intermédiaire salarié posté_signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_compteur_intermediaire_FO_2.svg",
+    "legende": "Postés : horaires fixes. Non postés : des plages avec autonomie.",
+    "decalage_x": 0.4,
+    "avant": 19.84
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Non postés** : non-cadres à horaires non postés (plages fixes/variables), quel que soit le contrat, à temps plein ou partiel {ref:Article 1, accord non postés}",
+     "**Postés** : salariés à horaires postés, sans autonomie sur leurs horaires — heure de début et de fin fixes {ref:Article 1, accord postés}"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Ce qui distingue les deux régimes",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Tolérance avant DHP : **30 min** (non postés) / **5 min** (postés)",
+       "Autonomie horaire : **oui** (plages fixes/variables) pour les non postés, **non** pour les postés",
+       "Récupération sans accord du N+1 : **jusqu'à 1h/jour** pour les non postés, **aucune** pour les postés"
+      ],
+      "taille": 11.5
+     }
+    ],
+    "titre_grand": true
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Non postés** : au-delà de votre durée journalière de référence (**7h39**), le dépassement alimente le compteur, dans la limite de **30 min/jour** {ref:Article 2, accord non postés}",
+     "**Postés** : l'écart entre horaire réel et horaire attendu alimente le compteur, dans la limite de **5 min/jour** {ref:Article 2, accord postés}",
+     "Plafond annuel identique : **+/- 4h** cumulées, pour les deux régimes {ref:Article 2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_compteur_intermediaire_FO_3.svg",
+    "legende": "Exemple posté (horaire type 8h-16h) : 7h55 → 16h00 = +5 min ; 8h05 → 16h00 = −5 min.",
+    "ecart": 23.53,
+    "decalage_x": -6.2,
+    "avant": 22.09
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Non postés** : récupération jusqu'à 1h/jour en autonomie sur les plages fixes, ou avec l'accord du N+1 ; au-delà d'1h et jusqu'à une demi-journée, l'accord du N+1 est obligatoire {ref:Article 2, accord non postés}",
+     "**Postés** : récupération uniquement avec l'accord du N+1 {ref:Article 2, accord postés}",
+     "Au-delà de la tolérance journalière : **DHP obligatoire** dès la 1^ère^ minute de dépassement {ref:Article 2, les deux accords}",
+     "Suivi via le formulaire « Temps du jour H » (en HH:MM) ; au 31 décembre, votre cumul est ajouté à votre réalisé de l'année (note explicative RH du 25/08/2025)"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_compteur_intermediaire_FO_4.svg",
+    "legende": "Le formulaire « Temps du jour H » trace votre compteur au jour le jour.",
+    "ecart": 13.03,
+    "decalage_x": -1.1,
+    "avant": 14.56
+   }
+  ]
+ ]
+}

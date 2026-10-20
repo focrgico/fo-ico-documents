@@ -1,0 +1,165 @@
+{
+ "slug": "Depliant_DUE_prime_retour_inopine_FO",
+ "titre_pdf": "Prime de retour inopiné",
+ "surtitre": "DÉCISION UNILATÉRALE ICO",
+ "titre": [
+  "Prime de retour",
+  "inopiné"
+ ],
+ "sous_titre": "Une indemnisation quand votre planning est\nbousculé sans préavis suffisant.",
+ "chiffres": [
+  {
+   "valeur": "75",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts par retour inopiné"
+  },
+  {
+   "valeur": "300",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts si le retour inopiné vous fait travailler le 25 décembre ou le 1^er^ janvier",
+   "ajust": 1.5
+  }
+ ],
+ "pastilles": [
+  "MER · IDE · AS"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Ce qui n'est pas concerné",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les **échanges de planning entre collègues** ne donnent pas droit à cette prime {ref:point 1}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_prime_retour_inopine_FO_1.svg",
+    "legende": "Un rappel avec 6 jours de prévenance ou moins : c'est un retour inopiné.",
+    "ecart": 32.7,
+    "avant": 32.43,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "**≤ 6 jours**",
+    "taille": 10.0,
+    "avant": 3.2,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Comment c'est décompté",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le temps travaillé est enregistré dans **Chronos** et traité selon l'état de vos compteurs : temps ordinaire, heures supplémentaires ou heures complémentaires {ref:point 5}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": -5.12
+   }
+  ],
+  "contact": {
+   "accroche": "Un rappel de dernière minute non indemnisé, une prime du 25 décembre ou du 1^er^ janvier manquante sur votre bulletin ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Décision unilatérale de l'employeur (DUE), signée le **29 avril 2024** par le Pr Mario Campone. En vigueur depuis le 1^er^ mai 2024 pour les MER, depuis février 2023 pour les IDE et AS. Durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "DUE/DUE_Prime de retour inopiné.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_prime_retour_inopine_FO_2.svg",
+    "legende": "Signée par la Direction, sans négociation avec les organisations syndicales.",
+    "ecart": 12.93,
+    "decalage_x": -5.6,
+    "avant": 19.75
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Trois métiers, sur les deux sites {ref:point 4}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Aides-soignant(e)s (AS)** — depuis février 2023",
+     "**Infirmiers diplômés d'État (IDE)** — depuis février 2023",
+     "**Manipulateurs en électroradiologie médicale (MER)** — depuis le 1^er^ mai 2024"
+    ]
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "p",
+    "texte": "Un retour inopiné, c'est quand la Direction vous demande, avec **6 jours de prévenance ou moins** {ref:point 1} :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "De venir travailler un **jour planifié comme non travaillé**",
+     "D'**avancer votre prise de poste de 4h ou plus**",
+     "De **retarder votre fin de poste de 4h ou plus**"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_prime_retour_inopine_FO_3.svg",
+    "legende": "Un décalage de 4h ou plus par rapport au planning prévu ouvre droit à la prime.",
+    "ecart": 9.98,
+    "avant": 19.14
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Le montant de la prime"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**75 € bruts** par retour inopiné {ref:point 2}",
+     "**300 € bruts** si le retour inopiné vous amène à travailler tout ou partie du **25 décembre** ou du **1**^er^** janvier** (entre 0h et minuit) {ref:point 3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_prime_retour_inopine_FO_4.svg",
+    "legende": "Le montant quadruple si le retour inopiné tombe sur le 25 décembre ou le 1er janvier.",
+    "ecart": 7.2,
+    "decalage_x": 3.0,
+    "avant": 66.95
+   }
+  ]
+ ]
+}

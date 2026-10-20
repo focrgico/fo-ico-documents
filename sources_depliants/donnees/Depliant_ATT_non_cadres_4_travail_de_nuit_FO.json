@@ -1,0 +1,182 @@
+{
+ "slug": "Depliant_ATT_non_cadres_4_travail_de_nuit_FO",
+ "titre_pdf": "Travail de nuit non-cadres",
+ "surtitre": "ACCORD LOCAL ICO — FEUILLET 4 SUR 4",
+ "titre": [
+  "Travail de nuit",
+  "non-cadres"
+ ],
+ "sous_titre": "Vos conditions, votre repos, vos indemnités.",
+ "chiffres": [
+  {
+   "valeur": "1490",
+   "unite": "h/an",
+   "unite_rouge": false,
+   "libelle": "durée annuelle réduite pour les IDE et aides-soignant(e)s de nuit, 2 jours de repos supplémentaires inclus {ref:Art. 4.4.4}"
+  },
+  {
+   "valeur": "11",
+   "unite": "h",
+   "unite_rouge": true,
+   "libelle": "de repos minimum après une nuit travaillée {ref:Art. 4.4.3}",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "Feuillet 4 sur 4"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — si vous êtes enceinte",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Vous avez droit à un **reclassement de jour sur simple demande**, prolongeable d'1 mois après votre congé maternité si le médecin du travail le juge nécessaire {ref:Art. 4.4.8}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_4_travail_de_nuit_FO_1.svg",
+    "legende": "Au moins 3h entre 21h et 7h, deux fois par semaine, ou 40h/mois.",
+    "ecart": 5.72,
+    "decalage_x": 1.3,
+    "avant": 25.7,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Une **indemnité conventionnelle de nuit** pour chaque heure entre 21h et 7h {ref:Art. 4.4.7}",
+       "Un **suivi médical renforcé** par le médecin du travail, avec reclassement de jour possible si votre état de santé l'exige {ref:Art. 4.4.8}"
+      ],
+      "taille": 11.5
+     }
+    ],
+    "titre_grand": true,
+    "avant": 2.5
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur vos indemnités de nuit, votre suivi médical, ou un passage de nuit à jour ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord ATT non-cadres du **14 septembre 2020**, article 4.4 (inchangé par les avenants 2022 et 2025). Signé par l'ICO, la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord ATT Non Cadre + PV_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_4_travail_de_nuit_FO_2.svg",
+    "legende": "Prioritaire sur les demandes de mobilité, nuit comme jour.",
+    "ecart": 22.63,
+    "decalage_x": -1.8,
+    "avant": 20.59
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Vous, si vous faites au moins **3h de travail effectif entre 21h et 7h**, deux fois par semaine, ou au moins **40h/mois** sur cette plage {ref:Art. 4.4.2}.",
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Vos durées maximales",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "**12h/jour** (dérogation possible), **44h/semaine** en moyenne sur 12 semaines {ref:Art. 4.4.3}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 7.97,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Votre repos après une nuit",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "**11h** minimum {ref:Art. 4.4.3}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 10.93
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Votre durée annuelle réduite : **1 490h/an** pour les IDE et aides-soignant(e)s (2 jours de repos supplémentaires inclus) ; **1 596h/an + 2 jours** pour les ASH de nuit {ref:Art. 4.4.4}",
+     "Entre deux périodes de travail : au moins **2 nuits non travaillées**, sauf si vous êtes d'accord ou en cas de circonstances exceptionnelles {ref:Art. 4.4.4}",
+     "Vos indemnités : indemnité conventionnelle de nuit pour chaque heure entre 21h et 7h, et indemnité dimanches/jours fériés pour chaque heure effectuée {ref:Art. 4.4.7}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_4_travail_de_nuit_FO_3.svg",
+    "legende": "Entre deux périodes de nuits travaillées.",
+    "ecart": 11.53,
+    "decalage_x": -11.4,
+    "avant": 39.34
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Si votre état de santé l'exige** : un reclassement de jour est possible, sur avis du médecin du travail {ref:Art. 4.4.8}",
+     "**Si vous êtes enceinte** : reclassement de jour sur simple demande, prolongeable d'1 mois après votre congé maternité si le médecin le juge nécessaire {ref:Art. 4.4.8}",
+     "**Passage nuit ↔ jour** : vous êtes prioritaire sur les demandes de mobilité ; vous pouvez refuser un poste de nuit sans sanction en cas d'obligations familiales impérieuses (garde d'enfant, personne dépendante à charge) {ref:Art. 4.4.10}",
+     "**Stage de jour** : possible pour les IDE et AS de nuit qui veulent actualiser leurs compétences, selon la procédure validée en commission de soins {ref:Art. 4.4.12}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_4_travail_de_nuit_FO_4.svg",
+    "legende": "Un suivi médical renforcé, et un reclassement de jour si besoin.",
+    "ecart": 20.45,
+    "decalage_x": -3.7,
+    "avant": 16.89
+   }
+  ]
+ ]
+}

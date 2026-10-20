@@ -1,0 +1,231 @@
+{
+ "slug": "Depliant_ATT_non_cadres_1_horaires_FO",
+ "titre_pdf": "Non-cadres : horaires et repos",
+ "surtitre": "ACCORD LOCAL ICO — FEUILLET 1 SUR 4",
+ "titre": [
+  "Non-cadres :",
+  "horaires et repos"
+ ],
+ "sous_titre": "Durée et aménagement du temps de travail.",
+ "chiffres": [
+  {
+   "valeur": "12",
+   "unite": "h",
+   "unite_rouge": false,
+   "libelle": "par jour et 48h par semaine : les durées maximales"
+  },
+  {
+   "valeur": "11",
+   "unite": "h",
+   "unite_rouge": false,
+   "libelle": "de repos minimum entre deux journées",
+   "ajust": 1.5
+  }
+ ],
+ "pastilles": [
+  "Feuillet 1 sur 4"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "section",
+    "titre": "Vos repos"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**11h consécutives minimum** entre deux journées, réductibles à 9h en alternance matin/après-midi ou pour la continuité des soins {ref:Art. 1.7}",
+     "**Repos hebdomadaire** : 2 jours, dont au moins 35h consécutives {ref:Art. 1.8}",
+     "Un **dimanche de repos** au moins une semaine sur deux {ref:Art. 1.8}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Si votre repos est réduit à 9h",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Vous avez droit à **2h de repos compensateur**, cumulables jusqu'à 8h, à prendre en journée ou demi-journée sous 6 mois — sinon elles sont payées intégralement {ref:Art. 1.7}."
+     }
+    ],
+    "avant": 7.34,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_1_horaires_FO_1.svg",
+    "legende": "Le repos quotidien et le repos hebdomadaire : deux compteurs distincts.",
+    "ecart": 20.78,
+    "decalage_x": 0.5,
+    "avant": 33.93
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur vos horaires, vos repos, vos congés ou vos compteurs ? Vos élus FO vous accompagnent. **1** — horaires et repos **2** — annualisation, JRTT et heures supplémentaires **3** — congés, astreintes et pool de remplacement **4** — travail de nuit",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord du **14 septembre 2020**, modifié par l'avenant n°1 du **31 janvier 2022** (heures supplémentaires) et par l'avenant du **31 décembre 2025** (congés payés pendant un arrêt maladie). **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord ou des avenants. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord ATT Non Cadre + PV_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Quatre dépliants pour cet accord",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "**1** — horaires et repos",
+       "**2** — annualisation, JRTT et heures supplémentaires",
+       "**3** — congés, astreintes et pool de remplacement",
+       "**4** — travail de nuit"
+      ]
+     }
+    ],
+    "avant": -37.66,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_1_horaires_FO_2.svg",
+    "legende": "Vous lisez le premier des quatre dépliants de cet accord.",
+    "ecart": 14.28,
+    "decalage_x": 0.4,
+    "avant": 19.92
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Vous, si vous êtes **non-cadre à l'ICO** — en CDI, CDD ou contrat spécifique et aidé, à temps plein comme à temps partiel {ref:Préambule}.",
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Le temps de travail effectif",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "C'est le temps où vous êtes à la disposition de l'employeur sans pouvoir vaquer à vos occupations personnelles {ref:Art. 1.1}."
+     },
+     {
+      "t": "p",
+      "texte": "N'en font pas partie : les pauses, même rémunérées, le temps de déplacement sauf exception, et les astreintes hors intervention {ref:Art. 1.1}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 7.97,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Si vous êtes en horaires individualisés",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Sur avis conforme du CSE, pour les postes administratifs et à temps plein uniquement {ref:Art. 3}. Plages fixes de présence obligatoire : **9h30-11h30** et **14h00-16h30**, soit 4h30 minimum par jour {ref:Art. 3.2.2}. Plages variables : 7h30-9h30, 11h30-14h00, 16h30-19h, avec une pause déjeuner mobile de 45 minutes minimum entre 11h30 et 14h00 {ref:Art. 3.2.2}. Vous pouvez cumuler jusqu'à **10h** en positif ou négatif, à récupérer sous 4 semaines une fois ce plafond atteint ; vos heures positives ne sont pas des heures supplémentaires {ref:Art. 3.2.3}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 13.69,
+    "apres": 0
+   },
+   {
+    "t": "note",
+    "texte": "Ce dépliant couvre vos pauses, l'habillage, les déplacements, les durées maximales, vos repos et les horaires individualisés.",
+    "avant": 12.68
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos pauses"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Dès **6h de travail effectif consécutif** : pause de 20 minutes minimum {ref:Art. 1.2}",
+     "**Coupure repas** : 30 minutes minimum, 45 conseillées, en principe non comptée comme temps de travail {ref:Art. 1.2}",
+     "Si vous restez à la disposition de votre encadrement pendant le repas, il est compté et payé comme temps de travail effectif, dans la limite de **30 minutes** {ref:Art. 1.2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_1_horaires_FO_3.svg",
+    "legende": "Une vraie pause après 6h, une coupure repas distincte du temps de travail.",
+    "ecart": 10.78,
+    "decalage_x": -9.2,
+    "avant": 10.09,
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "Habillage et déshabillage",
+    "avant": 10.07
+   },
+   {
+    "t": "p",
+    "texte": "Si vous portez une **tenue complète**, ce temps est pris sur votre temps de travail {ref:Art. 1.3}."
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos déplacements"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Formation ou mission** : récupérés intégralement si le trajet dépasse votre trajet domicile-travail habituel {ref:Art. 1.4}",
+     "**À l'étranger** : compensés pour moitié, dans la limite de 12h {ref:Art. 1.4}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "Vos durées maximales",
+    "avant": 12.32
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**12h par jour**, 48h par semaine civile, 46h en moyenne sur 12 semaines consécutives {ref:Art. 1.5}",
+     "Journée entre **5h et 12h** selon le planning {ref:Art. 1.6}",
+     "Au-delà de **9h par jour** : accord préalable des 2/3 de votre équipe, consultée au moins 4 semaines avant {ref:Art. 1.6}"
+    ]
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_1_horaires_FO_4.svg",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_1_horaires_FO_5.svg",
+    "legende": "Des plafonds à ne jamais dépasser, sauf accord exprès de l'équipe.",
+    "ecart": 11.74,
+    "avant": 8.87
+   }
+  ]
+ ]
+}

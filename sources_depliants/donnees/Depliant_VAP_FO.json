@@ -1,0 +1,175 @@
+{
+ "slug": "Depliant_VAP_FO",
+ "titre_pdf": "Validation des Acquis Professionnels",
+ "surtitre": "ACCORD LOCAL ICO — CLASSIFICATION",
+ "titre": [
+  "Validation des",
+  "Acquis",
+  "Professionnels"
+ ],
+ "sous_titre": "Vos paliers, validés automatiquement.",
+ "chiffres": [
+  {
+   "valeur": "3",
+   "unite": "paliers",
+   "unite_rouge": false,
+   "libelle": "automatisés : plus aucune démarche à faire pour votre VAP"
+  }
+ ],
+ "pastilles": [
+  "Palier 3 depuis le 1er janvier 2025"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir — un taux de réussite déjà très élevé",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Depuis plusieurs années, **plus de 98%** des passages de palier sont validés à l'ICO {ref:Art. 2}. C'est ce constat qui a permis d'automatiser le processus."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_VAP_FO_1.svg",
+    "legende": "Un taux de validation déjà très élevé, qui justifie l'automatisation.",
+    "ecart": 26.71,
+    "decalage_x": 5.2,
+    "avant": 17.45,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir — les critères ne changent pas",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les critères d'évaluation (**EAA et GPEC**) restent inchangés. Seul le **processus administratif** est simplifié {ref:Art. 2}."
+     }
+    ],
+    "avant": 14.71
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre passage de palier ou sur votre classification ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord VAP de base signé le **22 mars 2024**, complété par un avenant signé le **4 février 2025**, à effet du 1^er^ janvier 2025. Accord à durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord sur la validation des acquis professionnels _Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_VAP_FO_2.svg",
+    "legende": "Le palier change de lui-même, dès l'ancienneté requise.",
+    "ecart": 27.12,
+    "decalage_x": 1.9,
+    "avant": 28.84
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Tout le **personnel non-praticien** de l'ICO, pour les passages de palier prévus par la CCN des Centres de Lutte Contre le Cancer {ref:CCN art. 2.9.1.2}.",
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Accord à **durée indéterminée**."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 7.97,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "L'avenant VAP 2025",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "L'avenant du **4 février 2025** est déjà intégré à cet accord : il n'existe pas de document séparé pour le palier 3."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 10.93
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Palier 1 et 2** : automatisés depuis l'accord du **22 mars 2024** — le passage s'effectue d'office dès que les conditions d'ancienneté de la CCN pour votre emploi sont réunies {ref:Art. 2}",
+     "**Palier 3** : automatisé par l'avenant du **4 février 2025**, à effet du **1**^er^ **janvier 2025** — instauré au niveau de la branche Unicancer par l'avenant CCN 2024-04 {ref:Art. 2}"
+    ]
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_VAP_FO_3.svg",
+    "legende": "Deux dates, trois paliers : tous automatisés, du plus ancien au plus récent.",
+    "ecart": 21.8,
+    "decalage_x": -5.0
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "p",
+    "texte": "Aucune démarche à faire : le passage de palier intervient **de lui-même**, dès que les conditions d'ancienneté définies par la CCN pour votre emploi sont réunies {ref:Art. 2}.",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_VAP_FO_4.svg",
+    "legende": "Rien à demander : votre passage de palier se fait sans démarche.",
+    "ecart": 13.12,
+    "avant": 21.22,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Ce qui ne change pas",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les critères d'évaluation (**EAA et GPEC**) restent les mêmes. Seul le processus administratif de validation est simplifié {ref:Art. 2}."
+     }
+    ],
+    "avant": 14.8
+   }
+  ]
+ ]
+}

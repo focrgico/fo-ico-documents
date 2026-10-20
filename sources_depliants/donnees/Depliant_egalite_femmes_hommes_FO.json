@@ -1,0 +1,188 @@
+{
+ "slug": "Depliant_egalite_femmes_hommes_FO",
+ "titre_pdf": "Égalité Femmes- Hommes",
+ "surtitre": "ACCORD LOCAL ICO — ÉGALITÉ",
+ "titre": [
+  "Égalité",
+  "Femmes-",
+  "Hommes"
+ ],
+ "sous_titre": "Ce que ça change pour vous.",
+ "chiffres": [
+  {
+   "valeur": "25",
+   "unite": "j",
+   "unite_rouge": true,
+   "libelle": "de congé de parentalité rémunéré pour les couples homoparentaux",
+   "ajust": 10.5
+  }
+ ],
+ "pastilles": [
+  "100% du salaire dès 3 mois",
+  "6 référents dédiés"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — délai à ne pas manquer",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le congé de parentalité pour les couples homoparentaux doit être **demandé par écrit un mois avant** et pris dans les **6 mois suivant l'arrivée de l'enfant** {ref:Art. 7.4}. Passé ce délai, le droit n'est plus ouvert."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_egalite_femmes_hommes_FO_1.svg",
+    "legende": "6 mois pour prendre le congé, à compter de l'arrivée de l'enfant.",
+    "decalage_x": 5.2,
+    "avant": 30.95,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Maintien de salaire à **100%** pendant les congés maternité et paternité dès **3 mois d'ancienneté**, au lieu de 9 mois dans la CCN {ref:Art. 4}",
+       "Les salariées en congé maternité perçoivent le **montant moyen de la BIC**, comme si elles avaient travaillé {ref:Art. 4}",
+       "Suivi une fois par an en CSE central, avec une « revoyure » au terme de la 1^ère^ année d'application {ref:Art. 8.1}"
+      ]
+     }
+    ],
+    "avant": 15.99
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur le congé de parentalité, une démarche pour des violences domestiques, un doute sur vos jours enfant malade ? Vos élus FO vous accompagnent, en toute confidentialité.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord égalité professionnelle Femmes-Hommes de l'ICO, signé le **29 mai 2026** par la CGT-FO, Sud Santé-Sociaux et la CFE-CGC, pour une durée de 3 ans à compter de sa notification. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord égalité FH 2026.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_egalite_femmes_hommes_FO_2.svg",
+    "decalage_x": 0.4,
+    "avant": 15.34,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_egalite_femmes_hommes_FO_3.svg",
+    "legende": "Un même texte pour l'ensemble des salariés, femmes et hommes.",
+    "ecart": 16.29,
+    "decalage_x": 0.4,
+    "avant": 25.76
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "L'accord s'applique à **tous les salariés de l'ICO**, quel que soit leur sexe, leur situation familiale ou leur contrat."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Tout candidat à l'embauche ou à une mobilité interne : recrutement sans distinction de sexe, critères fondés sur les seules compétences {ref:Art. 3}",
+     "Les salariées enceintes ou allaitantes {ref:Art. 7.1 et 7.2}",
+     "Les parents dont l'enfant est malade ou en situation de handicap {ref:Art. 2.4 et 2.5}",
+     "Les couples homoparentaux accueillant un enfant {ref:Art. 7.4}",
+     "Les salariés victimes de violences domestiques {ref:Art. 8}"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Conclu pour une **durée déterminée de 3 ans** à compter de sa notification aux organisations syndicales {ref:Art. 8.2}."
+     }
+    ],
+    "titre_grand": true
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Maintien de salaire à **100%** pendant le congé maternité et le congé paternité, dès **3 mois d'ancienneté** {ref:Art. 4}",
+     "**Heures de grossesse** : 1h de réduction par jour dès le 3^e^ mois, prise en heures, en journées cumulées ou en journées anticipées selon le service — le choix est définitif pour la période {ref:Art. 7.1}",
+     "Jusqu'à **12 jours par famille et par an** pour enfant malade si les 2 parents sont salariés de l'ICO (non simultanés) {ref:Art. 2.5}",
+     "Seuil d'invalidité pour les jours enfant handicapé abaissé de **80% à 50%** {ref:Art. 2.4}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_egalite_femmes_hommes_FO_4.svg",
+    "legende": "Une heure en moins chaque jour, sans perte de salaire.",
+    "ecart": 16.78,
+    "decalage_x": -4.3,
+    "avant": 21.31
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Livret de parentalité** : remis automatiquement sur présentation d'une attestation CPAM de maternité, d'un calendrier de grossesse ou d'un certificat de naissance {ref:Art. 2.1}",
+     "**Entretien de ré-accueil** : systématique dès 6 mois d'absence consécutifs, sur demande entre 4 et 6 mois ; une journée de doublure est organisée dès 4 mois d'absence {ref:Art. 2.2}",
+     "**Congé de parentalité homoparental** : demande écrite avec justificatifs un mois avant le départ {ref:Art. 7.4}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "Violences domestiques",
+    "avant": 16.82,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "**6 référents** désignés parmi les élus CSE Central (3 par site), nommés avant le **31 juillet 2026** et formés avant le **31 décembre 2026**, tenus à un strict devoir de confidentialité {ref:Art. 8.1.1}. Le temps d'audition par les forces de l'ordre pendant le temps de travail est compté comme temps de travail effectif {ref:Art. 8.2.3}.",
+    "avant": 7.62,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_egalite_femmes_hommes_FO_5.svg",
+    "legende": "Un accueil confidentiel, par des élus formés.",
+    "ecart": 11.94,
+    "avant": 14.15
+   }
+  ]
+ ]
+}

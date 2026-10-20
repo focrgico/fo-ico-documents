@@ -32,11 +32,19 @@ Le contrôle (`--verifier`) vérifie : 2 pages exactement, mention « Résumé �
 ## Écrire un nouveau dépliant
 
 1. Copier `donnees/teletravail.json` sous un autre nom et remplacer les textes.
-2. Le contenu du verso est une liste de 3 colonnes. Blocs possibles : `section`, `p`, `puces`, `encadre` (style `neutre` ou `alerte`), `picto`, `tableau`.
+2. Le contenu du verso est une liste de 3 colonnes. Blocs possibles : `section`, `p`, `puces` (option `taille`), `encadre` (style `neutre`, `alerte` ou `marine`), `picto`, `note`, `tableau`. Couverture : `chiffre` ou liste `chiffres`. Volet bleu : liste `recto.marine` (encadrés et pictos sous les contacts). Source : `liens_sep` pour les séparateurs entre plusieurs liens.
 3. Balisage dans les textes : `**gras**`, `{ref:Art. 7.2}` pour une référence d'article, `^er^` pour un exposant. Une espace insécable est ajoutée avant `?`, `!` et `;`.
 4. Le lien « accord complet (PDF) » se renseigne par `"pdf": "accords-locaux/<nom du PDF signé>.pdf"`, tel que dans `chemin_pdf` du catalogue. Le gabarit en fait une adresse GitHub.
 5. Pictogramme : prendre un SVG de `pictos/` ou en extraire un d'un PDF avec l'outil. Les espaces autour se règlent bloc par bloc : `avant` (au-dessus), `ecart` (entre le picto et sa légende), `apres` (en dessous), `decalage_x`.
 6. Un paragraphe en corps réduit : `"taille": 10.5`. Un titre d'encadré en 12,5 pt : `"titre_grand": true`.
+
+## Importer un dépliant publié
+
+```
+python3 -W ignore outils/importer_depliant.py ../docs/accords-locaux/Depliants_FO --sauf Prevoyance_AXA Assistances_AXA
+```
+
+L'outil relit chaque PDF publié, écrit `donnees/<nom>.json` et les pictos, régénère le PDF dans `sortie/` et compare texte par texte (position, retours à la ligne). Il n'écrase jamais les PDF publiés. État au 20/10/2026 sur 28 dépliants : 49 textes absents sur 4 325, 183 décalés de plus de 1,6 pt. Les écarts restants sont listés par dépliant dans la sortie de l'outil.
 
 ## Ce qui est mesuré et ce qui ne l'est pas
 
@@ -59,3 +67,13 @@ Le gabarit suit les PDF, qui sont ce qui est imprimé. Sont en désaccord avec l
 - Interligne du texte courant : 14,25 pt pour 11,5 pt (mesuré), alors que les notes donnent 17,25 pt.
 - Les PDF publiés arrêtent la barre du slogan à 837 pt, ce qui laisse une bande blanche de 5 pt à droite de la page. Le gabarit la prolonge jusqu'au bord.
 - Pas d'espace insécable avant « : », comme dans les PDF publiés (les deux-points peuvent donc tomber en début de ligne).
+
+## Copie conforme HTML d'un PDF (outils/pdf_vers_html.py)
+
+Produit, pour chaque PDF de dépliant, un HTML où textes, tracés, découpes et images sont posés à leur position exacte
+(SVG, une section par page). Ce n'est pas un gabarit modifiable : c'est une reproduction du PDF.
+
+    python3 -W ignore outils/pdf_vers_html.py ../docs/accords-locaux/Depliants_FO
+
+Sortie : `sortie/html_copie/` (HTML + dossier `polices/` à garder à côté). Contrôle du 20/10/2026 sur les 32 PDF :
+2 pages sur 2, aucun texte absent, 0,7 à 2,1 % de pixels différents (anti crénelage).

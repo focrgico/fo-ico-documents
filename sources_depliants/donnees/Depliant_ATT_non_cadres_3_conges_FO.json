@@ -1,0 +1,202 @@
+{
+ "slug": "Depliant_ATT_non_cadres_3_conges_FO",
+ "titre_pdf": "Congés et astreintes",
+ "surtitre": "ACCORD LOCAL ICO — FEUILLET 3 SUR 4",
+ "titre": [
+  "Congés",
+  "et astreintes"
+ ],
+ "sous_titre": "Vos congés payés, la maladie pendant vos\ncongés, vos astreintes.",
+ "chiffres": [
+  {
+   "valeur": "25",
+   "unite": "j",
+   "unite_rouge": true,
+   "libelle": "de congés payés par an, + 2 jours de fractionnement automatiques {ref:Art. 4.1.1-4.1.2}"
+  },
+  {
+   "valeur": "15",
+   "unite": "mois",
+   "unite_rouge": false,
+   "libelle": "pour poser vos congés reportés en cas de maladie pendant vos congés {ref:Art. 4.1.4}",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "Feuillet 3 sur 4"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — maladie pendant vos congés",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Si vous tombez malade pendant vos congés, votre congé est **reporté à une date ultérieure**, à redéfinir avec votre responsable dans un délai de **15 jours**. Vous disposez ensuite de **15 mois** pour poser ces congés reportés {ref:Art. 4.1.4}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_3_conges_FO_1.svg",
+    "legende": "Malade pendant vos congés : le congé est reporté.",
+    "ecart": 8.72,
+    "decalage_x": 3.5,
+    "avant": 27.95,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "**25 jours ouvrés** de congés payés par an, + 2 jours de fractionnement accordés automatiquement {ref:Art. 4.1.1-4.1.2}",
+       "Votre planification de congés est validée par la Direction au plus tard le **15 janvier** (période mai-octobre) ou le **15 juin** (novembre-avril) {ref:Art. 4.1.3}"
+      ],
+      "taille": 11.5
+     }
+    ],
+    "titre_grand": true,
+    "avant": 2.66
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur vos congés, une maladie qui tombe pendant vos vacances, une astreinte à organiser ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord ATT non-cadres du **14 septembre 2020** (congés payés, astreintes), modifié par l'avenant du **31 décembre 2025** (congés payés pendant un arrêt maladie). **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord ou de l'avenant. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord ATT Non Cadre + PV_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_3_conges_FO_2.svg",
+    "legende": "Vos congés, et votre téléphone toujours à portée en cas",
+    "ecart": 24.12,
+    "decalage_x": -7.1,
+    "avant": 14.59,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "legende": "d'astreinte.",
+    "avant": 0.18
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Vous, pour vos congés payés, si vous êtes **non-cadre à l'ICO** {ref:Préambule}.",
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Qui est concerné par les astreintes ?",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les **IBODE, infirmier(e)s anesthésistes D.E., manipulateurs ER imagerie**, ainsi que les services **technique, informatique** et les **masseurs-kinésithérapeutes** {ref:Art. 4.2.2}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 7.97,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Votre planification de congés",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "3 semaines consécutives minimum l'été (4 si le service le permet) ; pas de modification à moins d'1 mois du départ pour un congé d'1 semaine ou plus {ref:Art. 4.1.3}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 11.7,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Si vous êtes au pool de remplacement",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Votre planning prévisionnel mensuel vous est communiqué au moins **3 mois à l'avance** {ref:Art. 4.5.1}. Vous bénéficiez d'**1 jour de congé supplémentaire par an** (au prorata de votre temps de travail), pour compenser la polyvalence et les changements de planning fréquents {ref:Art. 4.5.2}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 11.68
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Malade avant des congés programmés** : vos congés non pris sont reportés {ref:Art. 4.1.4, modifié par l'avenant du 31/12/2025}",
+     "**Malade pendant vos congés** : votre congé est reporté à une date ultérieure, à redéfinir avec votre responsable dans un délai de **15 jours** {ref:Art. 4.1.4, avenant du 31/12/2025}",
+     "À votre retour, vous êtes informé(e) du report sur votre bulletin de salaire ou par mail, et vous avez **15 mois** pour poser les congés non pris {ref:Art. 4.1.4}",
+     "**Décès d'un membre de votre famille** pendant vos congés (au sens de l'Art. 2.4.3.3 de la CCN) : votre congé est interrompu {ref:Art. 4.1.6}",
+     "**Maladie grave d'un proche** : congé accordé sous réserve d'un délai de 3 jours {ref:Art. 4.1.7}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_3_conges_FO_3.svg",
+    "legende": "En cas de maladie pendant vos congés : report, pas d'interruption sèche.",
+    "ecart": 23.63,
+    "avant": 27.27
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos astreintes"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Votre planning d'astreinte vous est communiqué au moins **7 jours à l'avance** {ref:Art. 4.2.2}",
+     "Votre intervention, trajet inclus, compte comme **temps de travail effectif**, et vos frais sont remboursés {ref:Art. 4.2.2}",
+     "Les contreparties sont définies par les accords de branche et la **CCN des CLCC** {ref:Art. 4.2.5}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_3_conges_FO_4.svg",
+    "legende": "Le trajet et l'intervention comptent comme temps de travail effectif.",
+    "ecart": 26.04,
+    "decalage_x": -4.9,
+    "avant": 13.59
+   }
+  ]
+ ]
+}

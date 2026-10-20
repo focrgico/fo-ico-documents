@@ -1,0 +1,193 @@
+{
+ "slug": "Depliant_ATT_non_cadres_2_annualisation_FO",
+ "titre_pdf": "Temps de travail non-cadres",
+ "surtitre": "ACCORD LOCAL ICO — FEUILLET 2 SUR 4",
+ "titre": [
+  "Temps de travail",
+  "non-cadres"
+ ],
+ "sous_titre": "Annualisation et heures supplémentaires.",
+ "chiffres": [
+  {
+   "valeur": "1596",
+   "unite": "h/an",
+   "unite_rouge": false,
+   "libelle": "durée annuelle de référence (38h15/semaine) + JRTT"
+  },
+  {
+   "valeur": "19",
+   "unite": "j",
+   "unite_rouge": true,
+   "libelle": "de JRTT par an pour un temps plein avec droits complets {ref:Art. 2.3}",
+   "ajust": 14.25
+  }
+ ],
+ "pastilles": [
+  "Feuillet 2 sur 4"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — faites votre choix",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Pour vos heures supplémentaires au-delà de 40h validées au 31 décembre : **sans choix de votre part, elles sont payées automatiquement** (pas de versement par défaut sur le CET) {ref:Avenant n°1, Art. 1.1}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_2_annualisation_FO_1.svg",
+    "legende": "Vos jours de JRTT, à votre initiative ou à celle de l'Institut.",
+    "ecart": 14.71,
+    "decalage_x": 0.7,
+    "avant": 24.95,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Vos JRTT : jusqu'à **19 jours/an** pour un temps plein avec droits complets, réduits au prorata en cas d'absence {ref:Art. 2.3}",
+       "Votre planning est communiqué **3 mois à l'avance**, modifiable sous 7 jours (72h si absentéisme imprévu non régulable, 48h si réduction d'effectifs) {ref:Art. 2.4}",
+       "Votre compteur annualisation ne peut jamais descendre sous **-21h** {ref:Art. 2.9}"
+      ],
+      "taille": 11.5
+     }
+    ],
+    "titre_grand": true,
+    "avant": 2.87
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre planning, vos JRTT, vos heures supplémentaires ou votre compteur annualisation ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord ATT non-cadres du **14 septembre 2020** (durée annuelle, JRTT, planning), modifié par l'**Avenant n°1 du 31 janvier 2022** pour les heures supplémentaires. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord ou de l'avenant. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord ATT Non Cadre + PV_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_2_annualisation_FO_2.svg",
+    "legende": "1596h par an, réparties sur votre planning annuel.",
+    "ecart": 12.88,
+    "decalage_x": 0.4,
+    "avant": 13.09
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Vous, si vous êtes **non-cadre à l'ICO et travaillez en horaire collectif ou sur planning** {ref:Art. 2}.",
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Si vous êtes à temps partiel",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le temps partiel annualisé nécessite votre **accord exprès** {ref:Art. 2.7}."
+     },
+     {
+      "t": "p",
+      "texte": "Vos heures complémentaires sont majorées de **10%** jusqu'à 1/10 de votre durée annuelle contractuelle, puis de **25%** au-delà, plafonnées à 1/3 de votre durée contractuelle {ref:Art. 2.7}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 7.97,
+    "apres": 0
+   },
+   {
+    "t": "note",
+    "texte": "Ce dépliant couvre votre durée annuelle, vos JRTT, votre planning et vos heures supplémentaires.",
+    "avant": 13.3
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Votre durée annuelle"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**1 596h/an** (1 582h avec 2 jours de fractionnement complets), soit 38h15 hebdomadaires de référence + des JRTT {ref:Art. 2.2-2.3}",
+     "Vos JRTT sont réduits au prorata en cas d'absence {ref:Art. 2.3}",
+     "Votre compteur annualisation ne peut jamais descendre sous **-21h** {ref:Art. 2.9}"
+    ]
+   },
+   {
+    "t": "p",
+    "texte": "**0**",
+    "taille": 7.0,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_2_annualisation_FO_3.svg",
+    "legende": "Le compteur annualisation ne peut jamais descendre sous -21h.",
+    "ecart": 20.77,
+    "decalage_x": -2.3,
+    "avant": 27.09
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos heures supplémentaires",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_2_annualisation_FO_4.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Décomptées au **31 décembre**, majorées de **25%** au-delà de 1 582h {ref:Avenant n°1, Art. 1.1}",
+     "Au-delà de **40h** validées au 31/12 : payées en janvier N+1 ou versées sur votre CET, **à votre choix** {ref:Avenant n°1, Art. 1.1}",
+     "Jusqu'à 40h : payées en janvier, en repos compensateur sous 12 mois, ou sur le CET, toujours à votre choix {ref:Avenant n°1, Art. 1.1}",
+     "Dès que votre compteur atteint **7h** : vous pouvez demander à être payé tout ou partie sur la paie d'avril, juillet ou octobre, avec **10% de majoration** dans ce cas {ref:Avenant n°1, Art. 1.1}"
+    ],
+    "avant": 6.41,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_non_cadres_2_annualisation_FO_5.svg",
+    "legende": "Payées, en repos, ou sur le CET : le choix vous appartient.",
+    "ecart": 17.07,
+    "decalage_x": -1.9,
+    "avant": 18.02
+   }
+  ]
+ ]
+}

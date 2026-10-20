@@ -1,0 +1,190 @@
+{
+ "slug": "Depliant_parcours_assistant_medical_FO",
+ "titre_pdf": "Parcours Assistant médical",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "Parcours",
+  "Assistant",
+  "médical"
+ ],
+ "sous_titre": "Votre progression de groupe, automatique.",
+ "chiffres": [
+  {
+   "valeur": "5",
+   "unite": "ans",
+   "unite_rouge": false,
+   "libelle": "entre chaque changement de groupe, après votre VAP2"
+  },
+  {
+   "valeur": "15",
+   "unite": "ans",
+   "unite_rouge": false,
+   "libelle": "de VAP2 au Groupe E pour rejoindre le Groupe F par la voie transitoire",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Si vous étiez en **Groupe E, RMAG 0 ou RMAG 1, VAP2 pas encore obtenue**, la règle transitoire ne s'applique pas : vous suivez le parcours normal {ref:Art. 2-3}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_assistant_medical_FO_1.svg",
+    "legende": "Deux chemins vers le Groupe F : la voie transitoire va plus vite.",
+    "ecart": 24.89,
+    "decalage_x": -1.9,
+    "avant": 21.51,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Par la voie transitoire, le passage au Groupe F se déclenche **15 ans après votre VAP2 du Groupe E**, et non 5 ans après celle du Groupe E1 : ce chemin est donc plus rapide {ref:Art. 2-3}."
+     }
+    ],
+    "avant": 13.38
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre classification, votre RMAG ou votre passage de groupe ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord du **11 mars 2025**, en vigueur depuis le 1^er^ avril 2025. Signé par l'ICO, la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord relatif au parcours des assistantes médicales_Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Ces passages sont automatiques",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Vous n'avez pas de démarche à faire : le changement de groupe intervient de lui-même dès que la condition d'ancienneté est remplie {ref:Art. 2-1, 2-2}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_assistant_medical_FO_2.svg",
+    "legende": "Le temps passe, le groupe change — sans démarche de votre",
+    "ecart": 27.71,
+    "decalage_x": 4.2,
+    "avant": 24.79,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "legende": "part.",
+    "avant": 0.19
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les assistants médicaux classés en **Groupe E**, sur l'un des deux sites de l'ICO {ref:Art. 1}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "À l'embauche, vous êtes classé en **Groupe E, RMAG 0** {ref:Art. 2-1}",
+     "Vous obtenez ensuite vos **VAP selon le calendrier de la CCN UNICANCER** {ref:Art. 2-1}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_assistant_medical_FO_3.svg",
+    "legende": "Assistant médical, Groupe E au départ.",
+    "ecart": 35.53,
+    "avant": 37.09
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Le parcours normal"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**5 ans après votre VAP2 du Groupe E** → vous passez au Groupe E1, au RMAG 1 {ref:Art. 2-2}",
+     "**5 ans après votre VAP2 du Groupe E1** → vous passez au Groupe F, au RMAG 0 {ref:Art. 2-2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_assistant_medical_FO_4.svg",
+    "legende": "Deux paliers de 5 ans, chacun déclenché par votre VAP2.",
+    "ecart": 25.08,
+    "avant": 32.53
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Si vous étiez déjà au Groupe E le 11 mars 2025",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_assistant_medical_FO_5.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "En VAP2 depuis **15 ans ou plus** → vous passez directement au Groupe F, RMAG 0 {ref:Art. 2-3}",
+     "En VAP2 depuis **moins de 15 ans** → vous passez d'abord en E1 selon les règles normales, puis en Groupe F, RMAG 0 dès que 15 années civiles se sont écoulées depuis votre VAP2 du Groupe E {ref:Art. 2-3}"
+    ],
+    "avant": 6.41,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "La VAP",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "La validation des acquis professionnels fait l'objet d'un **accord dédié**, résumé dans un dépliant séparé."
+     }
+    ],
+    "avant": 9.9
+   }
+  ]
+ ]
+}

@@ -1,0 +1,185 @@
+{
+ "slug": "Depliant_parcours_IDE_MER_FO",
+ "titre_pdf": "Parcours IDE & MER",
+ "surtitre": "ACCORD LOCAL ICO — PARCOURS",
+ "titre": [
+  "Parcours",
+  "IDE & MER"
+ ],
+ "sous_titre": "Votre passage de groupe, votre prime protocole.",
+ "chiffres": [
+  {
+   "valeur": "20",
+   "unite": "ans",
+   "unite_rouge": false,
+   "libelle": "de présence à l'ICO pour passer du Groupe F1 au Groupe G1",
+   "ajust": 10.5
+  },
+  {
+   "valeur": "150",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts/mois de prime protocole de coopération sanitaire (au prorata de votre ETP)",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "F1",
+  "G1",
+  "Salaire garanti"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le passage au Groupe G1 par ancienneté ne correspond **pas** à la spécialisation prévue par l'accord de branche Unicancer. Vous ne conservez donc pas la VAP acquise en Groupe F1 — mais la garantie de rémunération ci-contre s'y substitue {ref:Art. 2}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_IDE_MER_FO_1.svg",
+    "legende": "La VAP F1 n'est pas conservée, mais votre salaire est garanti.",
+    "ecart": 26.7,
+    "avant": 29.43,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Votre salaire brut (hors sujétions, hors impact temps de travail) **ne peut pas diminuer** lors du passage en G1 {ref:Art. 2}",
+       "La prime protocole de coopération sanitaire est **maintenue** après le passage en G1, tant que vous exercez dans ce cadre {ref:Art. 3}"
+      ]
+     }
+    ],
+    "avant": 11.88
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre classification, votre RMAG ou la prime protocole de coopération sanitaire ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord parcours professionnel IDE et MER, signé le **28 mars 2025** par l'ICO, la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. En vigueur depuis le 1^er^ mai 2025, durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord parcours IDE et MER_Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_IDE_MER_FO_2.svg",
+    "legende": "IDE et manipulateurs en électroradiologie médicale.",
+    "ecart": 16.62,
+    "decalage_x": 0.4,
+    "avant": 22.84
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les **infirmiers diplômés d'État (IDE)** et les **manipulateurs en électroradiologie médicale (MER)** de l'ICO {ref:Art. 1}.",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_IDE_MER_FO_3.svg",
+    "legende": "IDE ou MER, classé en Groupe F1 à l'embauche.",
+    "ecart": 33.37,
+    "avant": 29.47,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Accord **à durée indéterminée**, en vigueur"
+     },
+     {
+      "t": "p",
+      "texte": "depuis le 1^er^ mai 2025."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 14.96
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "À l'embauche, vous êtes classé en **Groupe F1** (CCN des CLCC) {ref:Art. 2}",
+     "Après **20 ans révolus de présence à l'ICO**, vous passez au **Groupe G1**, le premier jour du mois suivant votre anniversaire des 20 ans {ref:Art. 2}",
+     "Vous êtes rattaché au **premier RMAG du Groupe G1** dont le montant est supérieur à celui que vous aviez en F1 {ref:Art. 2}",
+     "Une fois en G1, vous progressez selon les **périodicités de la CCN**, à partir de la date anniversaire de votre passage {ref:Art. 2}"
+    ]
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_IDE_MER_FO_4.svg",
+    "legende": "Un seul palier : 20 ans révolus de présence à l'ICO.",
+    "ecart": 18.92
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Prime protocole de coopération sanitaire",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_IDE_MER_FO_5.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Si vous exercez dans le cadre d'un **protocole de coopération sanitaire**, vous bénéficiez d'une prime de **150 € bruts/mois**, au prorata de votre ETP {ref:Art. 3}",
+     "Cette prime est **maintenue** si vous passez au Groupe G1 (par ancienneté ou spécialisation), tant que vous continuez à exercer dans le cadre du protocole {ref:Art. 3}",
+     "Elle est **retirée le mois suivant** la cessation de cette fonction {ref:Art. 3}"
+    ],
+    "avant": 6.41,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_IDE_MER_FO_6.svg",
+    "legende": "150 € bruts/mois, au prorata de votre ETP.",
+    "ecart": 24.64,
+    "avant": 22.46
+   }
+  ]
+ ]
+}

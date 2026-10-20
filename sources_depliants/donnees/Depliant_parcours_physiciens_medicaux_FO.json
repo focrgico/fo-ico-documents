@@ -1,0 +1,240 @@
+{
+ "slug": "Depliant_parcours_physiciens_medicaux_FO",
+ "titre_pdf": "Parcours Physiciens médicaux",
+ "surtitre": "ACCORD LOCAL ICO — PARCOURS",
+ "titre": [
+  "Parcours",
+  "Physiciens",
+  "médicaux"
+ ],
+ "sous_titre": "Votre classification, votre ancienneté reprise.",
+ "chiffres": [
+  {
+   "valeur": "8",
+   "unite": "ans",
+   "unite_rouge": false,
+   "libelle": "d'ancienneté pour passer de Cadre supérieur 1 (Groupe L) à Cadre supérieur 2 (Groupe M)",
+   "ajust": 10.5
+  },
+  {
+   "valeur": "18",
+   "unite": "ans",
+   "unite_rouge": false,
+   "libelle": "d'ancienneté pour passer à Cadre supérieur 3 (Groupe N)",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "CS1",
+  "CS2",
+  "CS3",
+  "Ancienneté reprise à l'embauche"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Votre ancienneté pour ces paliers **ne part pas** de votre date d'embauche à l'ICO, mais de la **date de reprise de votre expérience professionnelle** telle qu'elle vous a été accordée à l'embauche {ref:Art. 2}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_1.svg",
+    "legende": "L'expérience reprise à l'embauche s'ajoute à votre présence à l'ICO.",
+    "ecart": 55.27,
+    "decalage_x": -35.5,
+    "avant": 21.86,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "**embauche**",
+    "taille": 6.0,
+    "avant": -8.79,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Si vous avez travaillé 8 ans avant d'entrer à l'ICO et que cette expérience vous a été **intégralement reprise**, vous pouvez être directement classé CS2 à l'embauche et atteindre CS3 **bien avant vos 18 ans de présence** à l'ICO {ref:Art. 2}."
+     }
+    ],
+    "avant": 12.94
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur la reprise de votre expérience professionnelle ou votre classification ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord parcours professionnel des physiciens médicaux, signé le **19 mai 2022** par l'ICO, la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC. En vigueur depuis le 1^er^ juillet 2022, durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord Parcours Phycisiens_2022_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_2.svg",
+    "legende": "Physiciens médicaux, dosimétrie et radioprotection.",
+    "ecart": 4.44,
+    "decalage_x": 0.4,
+    "avant": 16.28
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les **physiciens médicaux** de l'ICO, en **CDI**.",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_3.svg",
+    "legende": "Physicien médical, classé Cadre supérieur 1 à l'embauche.",
+    "ecart": 33.37,
+    "avant": 29.47,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Ce qui ne compte pas dans l'ancienneté",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les périodes non assimilées à du temps de travail effectif : **congé parental, congé sabbatique, longue maladie** {ref:Art. 2}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 14.96
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Votre parcours de classification",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_4.svg",
+    "decalage_x": -104.4,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "À l'embauche",
+    "taille": 11.0,
+    "avant": 12.41,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "**CS1 — Groupe L**",
+    "taille": 11.0,
+    "avant": 41.93,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_5.svg",
+    "avant": -51.55,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Après 8 ans d'ancienneté",
+    "taille": 11.0,
+    "avant": 5.05,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "**CS2 — Groupe M**",
+    "taille": 11.0,
+    "avant": 67.43,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_6.svg",
+    "avant": -77.2,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Après 18 ans d'ancienneté",
+    "taille": 11.0,
+    "avant": 5.2,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "**CS3 — Groupe N**",
+    "taille": 11.0,
+    "avant": 92.93,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "{ref:Art. 1}",
+    "avant": -96.06,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_7.svg",
+    "legende": "Ces durées se comptent depuis la reprise de votre expérience professionnelle.",
+    "ecart": 25.37,
+    "avant": 21.72
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Comment se calcule votre ancienneté",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_parcours_physiciens_medicaux_FO_8.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Elle part de la **date de reprise de votre expérience professionnelle** telle qu'accordée à l'embauche — pas de votre date d'embauche à l'ICO {ref:Art. 2}",
+     "Une expérience antérieure intégralement reprise peut donc vous faire **atteindre CS3 avant 18 ans de présence** à l'ICO {ref:Art. 2}",
+     "Les périodes de **congé parental, congé sabbatique ou longue maladie** ne comptent pas dans le calcul {ref:Art. 2}"
+    ],
+    "avant": 6.41
+   }
+  ]
+ ]
+}

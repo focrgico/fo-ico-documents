@@ -1,0 +1,189 @@
+{
+ "slug": "Depliant_CDD_objet_defini_FO",
+ "titre_pdf": "CDD à objet défini",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "CDD",
+  "à objet défini"
+ ],
+ "sous_titre": "Ingénieurs et cadres recrutés sur un projet\ntemporaire.",
+ "chiffres": [
+  {
+   "valeur": "18",
+   "unite": "à 36 mois",
+   "unite_rouge": false,
+   "libelle": "de durée, non renouvelable"
+  },
+  {
+   "valeur": "10",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "de votre rémunération totale brute en indemnité de fin de contrat",
+   "ajust": 1.5
+  }
+ ],
+ "pastilles": [
+  "Ingénieurs et cadres"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Vos garanties",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Accès au **plan de formation et au CIF**, même après la fin du contrat {ref:Art. 4}",
+       "Bilan professionnel d'outplacement jusqu'à **24h ou 800€ TTC** {ref:Art. 4}",
+       "Co-investissement **CPF** possible par l'ICO, jusqu'à 20h {ref:Art. 4}",
+       "**10h par mois** d'autorisation d'absence pendant le préavis, pour organiser la suite {ref:Art. 4}"
+      ]
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CDD_objet_defini_FO_1.svg",
+    "legende": "Même en CDD à objet défini, vos droits à la formation restent protégés.",
+    "ecart": 13.04,
+    "avant": 16.11
+   }
+  ],
+  "contact": {
+   "accroche": "Une fin de contrat mal notifiée, une indemnité non versée, une priorité d'embauche ignorée ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord du **13 août 2021**. Signé par l'ICO, la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord CDD à objet défini_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Ce contrat a une limite stricte",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Il ne peut **jamais servir à pourvoir un emploi permanent** {ref:Art. 1}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Votre priorité d'embauche",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Priorité d'embauche en **CDI pendant le contrat**, puis priorité d'accès aux emplois CDI et CDD pendant **12 mois après**, sur demande à la DRH {ref:Art. 4}."
+     }
+    ],
+    "avant": 10.03,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CDD_objet_defini_FO_2.svg",
+    "legende": "En tête de file pour les postes en CDI, pendant et après le contrat.",
+    "ecart": 21.03,
+    "decalage_x": -7.8,
+    "avant": 25.51
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les ingénieurs et cadres, au sens de la CCN des CLCC {ref:Art. 1}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Recrutés pour un **travail de recherche temporaire** : étude clinique, projet à financement dédié, PHRC {ref:Art. 1}",
+     "Ou pour une **mission de conseil ou d'expertise** sur un projet non pérenne {ref:Art. 1}",
+     "Ce contrat ne peut jamais servir à pourvoir un emploi permanent {ref:Art. 1}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CDD_objet_defini_FO_3.svg",
+    "legende": "Un contrat qui s'arrête de lui-même, à la fin du projet.",
+    "ecart": 12.95,
+    "decalage_x": -11.3,
+    "avant": 22.14
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Durée et fin de contrat"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**18 à 36 mois**, non renouvelable {ref:Art. 2}",
+     "Fin automatique à la réalisation de l'objet, avec un délai de prévenance de **2 mois** {ref:Art. 2}",
+     "Rupture anticipée possible pour cause réelle et sérieuse, aux dates anniversaires de **18 ou 24 mois** {ref:Art. 2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CDD_objet_defini_FO_4.svg",
+    "legende": "Rupture anticipée possible uniquement à 18 ou 24 mois.",
+    "ecart": 13.06,
+    "decalage_x": -3.2,
+    "avant": 22.09
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Votre indemnité de fin de contrat",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CDD_objet_defini_FO_5.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**10%** de votre rémunération totale brute si le contrat ne débouche pas sur un CDI {ref:Art. 3}",
+     "Elle **remplace l'indemnité de précarité** classique {ref:Art. 3}",
+     "Elle est également due en cas de rupture à l'initiative de l'employeur aux dates anniversaires {ref:Art. 3}"
+    ],
+    "avant": 6.41,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CDD_objet_defini_FO_6.svg",
+    "legende": "Si le contrat ne se transforme pas en CDI.",
+    "ecart": 9.72,
+    "avant": 26.15
+   }
+  ]
+ ]
+}

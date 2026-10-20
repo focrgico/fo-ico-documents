@@ -1,0 +1,180 @@
+{
+ "slug": "Depliant_reprise_anciennete_MER_IDE_AS_FO",
+ "titre_pdf": "Reprise d'ancienneté à 100 %",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "Reprise",
+  "d'ancienneté",
+  "à 100 %"
+ ],
+ "sous_titre": "Toute votre expérience professionnelle\nantérieure prise en compte.",
+ "chiffres": [
+  {
+   "valeur": "100",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "de votre expérience professionnelle antérieure reprise, au lieu de 50 % dans la CCN"
+  }
+ ],
+ "pastilles": [
+  "MER · IDE · AS"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Si vous êtes embauché(e) après cet accord, vous devez fournir vos justificatifs **dans les 3 mois suivant votre embauche**. Au-delà, la"
+     },
+     {
+      "t": "p",
+      "texte": "reprise ne sera effective qu'au 1^er^ jour du mois suivant leur production {ref:Art. 3-4}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_reprise_anciennete_MER_IDE_AS_FO_1.svg",
+    "legende": "Certificats de travail, bulletins de salaire ou contrats, à envoyer sans tarder.",
+    "ecart": 16.23,
+    "decalage_x": 0.7,
+    "avant": 27.2,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Pour les salariés déjà en poste en mai 2022, la fenêtre de demande (avant le 30 juin 2022) est désormais close : elle ne concerne que l'historique de mise en place de l'accord {ref:Art. 3-4}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 9.88
+   }
+  ],
+  "contact": {
+   "accroche": "Une expérience professionnelle antérieure mal reprise, un salaire d'embauche qui ne reflète pas votre ancienneté réelle ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "La CCN des CLCC prévoit une reprise d'expérience à 50 % pour les nouveaux embauchés ; cet accord local la porte à 100 % pour les MER, IDE et AS. Accord signé le **19 mai 2022** par l'ICO, la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC. En vigueur depuis le 1^er^ janvier 2022, durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord Reprise Expérience professionnelle MER-AS-IDE_2022_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_reprise_anciennete_MER_IDE_AS_FO_2.svg",
+    "legende": "De 50 % dans la convention collective à 100 % à l'ICO.",
+    "ecart": 26.38,
+    "decalage_x": 1.9,
+    "avant": 20.59
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "{ref:Art. 1}"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Manipulateurs en électroradiologie (MER)** affectés en imagerie médicale, médecine nucléaire ou radiothérapie",
+     "**Infirmiers diplômés d'État (IDE)** affectés sous la direction des soins",
+     "**Aides-soignant(e)s (AS)** affectés sous la direction des soins"
+    ]
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce que cet accord change"
+   },
+   {
+    "t": "p",
+    "texte": "La reprise passe de **50 %** (CCN des CLCC) à **100 %**, pour les nouveaux arrivants comme pour les salariés déjà en poste à la date de signature {ref:Art. 2}."
+   },
+   {
+    "t": "p",
+    "texte": "Concrètement : si vous avez travaillé **6 ans** en tant qu'IDE dans un autre établissement avant de rejoindre l'ICO, les 6 années sont intégralement prises en compte, et non 3 comme avec la seule CCN.",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_reprise_anciennete_MER_IDE_AS_FO_3.svg",
+    "avant": 9.6,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Exemple : 6 ans d'expérience IDE avant l'ICO",
+    "taille": 6.5,
+    "avant": 5.38,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_reprise_anciennete_MER_IDE_AS_FO_4.svg",
+    "legende": "La reprise double, de 50 % à 100 % de l'expérience antérieure.",
+    "ecart": 20.43,
+    "avant": 19.16
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Comment en bénéficier"
+   },
+   {
+    "t": "p",
+    "texte": "**Embauché après l'accord** : reprise à 100 % automatique, sous réserve de fournir vos justificatifs (certificats de travail, bulletins de salaire ou contrats) dans les 3 mois suivant votre embauche {ref:Art. 3}."
+   },
+   {
+    "t": "p",
+    "texte": "**Déjà en poste à la signature (mai 2022)** : demande à faire avant le 30 juin 2022 via le formulaire en ligne, justificatifs envoyés par mail à la DRH. La PEP recalculée a été mise en",
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "place rétroactivement au 1^er^ janvier 2022, versée avec la paie d'octobre 2022 {ref:Art. 4}.",
+    "avant": -0.06,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_reprise_anciennete_MER_IDE_AS_FO_5.svg",
+    "legende": "Deux parcours selon votre situation au moment de l'accord.",
+    "ecart": 32.79,
+    "decalage_x": 1.2,
+    "avant": 14.32,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Demande avant le 30/06/202",
+    "taille": 6.0,
+    "avant": -15.75
+   }
+  ]
+ ]
+}

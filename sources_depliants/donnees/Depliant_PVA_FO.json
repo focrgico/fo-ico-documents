@@ -1,0 +1,173 @@
+{
+ "slug": "Depliant_PVA_FO",
+ "titre_pdf": "PVA — Part Variable Additionnelle",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "PVA — Part",
+  "Variable",
+  "Additionnelle"
+ ],
+ "sous_titre": "Une prime annuelle pour les praticiens, liée aux\nrésultats de l'entretien annuel.",
+ "chiffres": [
+  {
+   "valeur": "2",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "minimum des rémunérations des praticiens éligibles, dans l'enveloppe globale"
+  },
+  {
+   "valeur": "8",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "maximum de votre salaire de base annuel moyen, à titre individuel",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "Praticiens CDI/CDD"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "En cas de contestation, vous ne disposez que de **15 jours après notification** pour exercer un recours {ref:Art. 6}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PVA_FO_1.svg",
+    "legende": "Un délai de recours court, à ne pas laisser passer.",
+    "ecart": 13.23,
+    "decalage_x": -3.8,
+    "avant": 24.93,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le vote de répartition entre praticiens d'un même service peut se faire **à bulletin secret** sur demande. Une répartition égalitaire doit être votée à l'unanimité {ref:Art. 6}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 10.04
+   }
+  ],
+  "contact": {
+   "accroche": "Une PVA non versée, un calcul contesté, une enveloppe de service peu claire ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Cet accord organise la Part Variable Additionnelle des praticiens, liée aux résultats de l'entretien annuel d'appréciation (EAA). Accord signé le **19 mai 2022** par l'ICO, la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC. En vigueur depuis le 1^er^ jour du mois suivant le dépôt, durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord PVA_2022_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_PVA_FO_2.svg",
+    "legende": "Un accord signé par quatre organisations syndicales.",
+    "ecart": 20.38,
+    "avant": 23.59
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les praticiens de l'ICO en CDI ou CDD réunissant toutes ces conditions {ref:Art. 2} :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Taux d'activité **≥ 50 %**",
+     "Au moins **6 mois d'ancienneté continue** au 1^er^ janvier de l'année de versement",
+     "Toujours **inscrit aux effectifs** au moment du versement",
+     "N'ayant **pas refusé** de passer son entretien annuel d'appréciation (EAA)"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Catégories éligibles : PU-PH (hors DG), MCU-PH, Chefs de Clinique, Praticiens spécialistes, Praticiens des CLCC, Assistants Spécialistes, Assistants Généralistes.",
+    "avant": 7.5
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "L'enveloppe globale ne peut être **inférieure à 2 %** des rémunérations des praticiens éligibles (hors indemnités et primes de sujétions) {ref:Art. 4}",
+     "Elle est fixée chaque année par la Direction Générale après approbation de l'EPRD, et communiquée à la CME et au CSE Central {ref:Art. 4}",
+     "Elle est d'abord répartie entre services **au prorata des ETP** ; les chefs de département forment un service à part entière {ref:Art. 5}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PVA_FO_3.svg",
+    "avant": 16.09,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PVA_FO_4.svg",
+    "legende": "L'enveloppe globale descend vers les services, au prorata des ETP.",
+    "ecart": 8.27,
+    "avant": 16.01
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Votre PVA individuelle"
+   },
+   {
+    "t": "p",
+    "texte": "Maximum **8 % de votre salaire de base annuel moyen**, selon 4 niveaux liés à votre EAA {ref:Art. 6} :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Objectifs non atteints** → PVA à 0",
+     "**Objectifs partiellement atteints** → PVA minorée (−25 %)",
+     "**Objectifs atteints** → PVA normale (¾ du taux DG)",
+     "**Contribution particulière** → PVA majorée (+1 part du reliquat) ^Non atteints Partiels Atteints Dépassés^"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PVA_FO_5.svg",
+    "legende": "Le niveau de PVA suit les résultats de votre entretien annuel.",
+    "ecart": 17.55,
+    "avant": 6.29
+   }
+  ]
+ ]
+}

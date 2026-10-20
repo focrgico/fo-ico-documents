@@ -1,0 +1,186 @@
+{
+ "slug": "Depliant_forfait_mobilite_durable_FO",
+ "titre_pdf": "Forfait Mobilité Durable",
+ "surtitre": "ACCORD LOCAL ICO — MOBILITÉ DURABLE",
+ "titre": [
+  "Forfait Mobilité",
+  "Durable"
+ ],
+ "sous_titre": "Vélo, covoiturage, trottinette :\nce que ça change pour vous.",
+ "chiffres": [
+  {
+   "valeur": "300",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts/an pour le mode de transport doux retenu"
+  }
+ ],
+ "pastilles": [
+  "Non cumulables entre elles",
+  "60% du transport en commun"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — une seule prime à la fois",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les primes **vélo, covoiturage et trottinette électrique ne sont pas cumulables entre elles** {ref:Art. 1-3}. Une seule peut être versée par an, même si vous utilisez plusieurs modes."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_forfait_mobilite_durable_FO_1.svg",
+    "legende": "Un seul mode de transport doux indemnisé à la fois.",
+    "ecart": 46.96,
+    "decalage_x": 7.4,
+    "avant": 14.45,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Une **attestation sur l'honneur est obligatoire**, à transmettre à la DRH dans les délais impartis {ref:Art. 1-3}",
+       "Temps partiel : montant plein si votre taux d'activité est **> 50%**, proportionnel au-dessous {ref:Art. 1-3}"
+      ]
+     }
+    ],
+    "avant": 14.87
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre prime mobilité ou votre prise en charge transport en commun ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord Forfait Mobilité Durable de l'ICO, signé le **24 octobre 2025** par la CGT-FO et la CFE-CGC, en vigueur rétroactivement depuis le 1^er^ janvier 2025. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord Forfait Mobilite Durable 2025 signe.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_forfait_mobilite_durable_FO_2.svg",
+    "legende": "Un accord négocié et signé par les syndicats.",
+    "ecart": 20.38,
+    "decalage_x": 0.4,
+    "avant": 21.34
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Tout salarié de l'ICO qui réalise ses trajets domicile-travail :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "en **vélo** {ref:Art. 1-3}",
+     "en **covoiturage** (conducteur ou passager) {ref:Art. 1-3}",
+     "en **trottinette électrique** {ref:Art. 1-3}"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "**Durée indéterminée**, en vigueur"
+     },
+     {
+      "t": "p",
+      "texte": "rétroactivement depuis le 1^er^ janvier 2025."
+     }
+    ],
+    "titre_grand": true,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_forfait_mobilite_durable_FO_3.svg",
+    "legende": "Trois modes de déplacement doux reconnus par l'accord.",
+    "ecart": 36.11,
+    "avant": 16.7
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**300 € bruts/an** pour le vélo, le covoiturage ou la trottinette électrique, **non cumulables** entre elles {ref:Art. 1-3}",
+     "Versement **en une fois, en décembre** {ref:Art. 1-3}",
+     "Proraté au temps de présence pour les entrées/sorties en cours d'année {ref:Art. 1-3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_forfait_mobilite_durable_FO_4.svg",
+    "legende": "Un versement unique, chaque année en décembre.",
+    "ecart": 28.03,
+    "avant": 29.59
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Attestation sur l'honneur** obligatoire, à transmettre à la DRH dans les délais impartis {ref:Art. 1-3}",
+     "Temps partiel : montant plein si taux d'activité **> 50%**, proportionnel au-dessous {ref:Art. 1-3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "Transport en commun",
+    "avant": 16.07,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "L'ICO prend en charge **60% de votre abonnement** (contre 50% légalement obligatoire, taux amélioré depuis la NAO 2022) {ref:Art. 4}. Cumulable avec la prime FMD, dans la limite du **plafond légal (900 € en 2025)** {ref:Art. 4}.",
+    "avant": 7.62,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_forfait_mobilite_durable_FO_5.svg",
+    "legende": "60% de l'abonnement transport pris en charge.",
+    "ecart": 21.0,
+    "avant": 11.84
+   }
+  ]
+ ]
+}

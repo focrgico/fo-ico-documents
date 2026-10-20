@@ -1,0 +1,169 @@
+{
+ "slug": "Depliant_PERCOL_FO",
+ "titre_pdf": "PERCOL",
+ "surtitre": "ACCORD LOCAL ICO — ÉPARGNE RETRAITE",
+ "titre": [
+  "PERCOL"
+ ],
+ "sous_titre": "Votre plan d'épargne retraite collectif.",
+ "chiffres": [
+  {
+   "valeur": "15",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "d'abondement de l'ICO sur les montants transférés depuis votre CET"
+  },
+  {
+   "valeur": "3",
+   "unite": "mois",
+   "unite_rouge": false,
+   "libelle": "d'ancienneté pour adhérer au PERCOL",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "10 j de CET/an",
+  "6 cas de déblocage anticipé"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — délai à ne pas manquer",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Pour un déblocage anticipé au titre de l'**achat de votre résidence principale**, la demande doit être faite dans les **6 mois suivant l'événement** {ref:Art. 5}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PERCOL_FO_1.svg",
+    "legende": "6 mois pour demander le déblocage, à compter de l'achat.",
+    "decalage_x": 4.4,
+    "avant": 29.45,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Par défaut, votre épargne est en **gestion pilotée** (profil « équilibré horizon retraite », qui réduit progressivement le risque) — vous pouvez changer de mode de gestion à tout moment {ref:Art. 3}",
+       "Les stages rémunérés de plus de **2 mois** comptent dans le délai d'adhésion s'ils débouchent sur une embauche {ref:Art. 1}"
+      ]
+     }
+    ],
+    "avant": 14.65
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre adhésion au PERCOL, l'abondement ou le déblocage anticipé ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Plan d'Épargne Retraite Collectif (PERCOL) de l'ICO, signé le **19 mars 2021** par les 4 organisations syndicales représentatives. Durée indéterminée, effet dès son dépôt. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord PERCOL_Signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_PERCOL_FO_2.svg",
+    "legende": "Votre épargne, alimentée par vos versements et l'abondement ICO.",
+    "ecart": 15.76,
+    "decalage_x": 1.4,
+    "avant": 18.44
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Tous les salariés de l'ICO, dès **3 mois d'ancienneté** {ref:Art. 1}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Les **stages rémunérés de plus de 2 mois** comptent dans ce délai s'ils débouchent sur une embauche {ref:Art. 1}",
+     "Si vous quittez l'ICO, vous pouvez continuer à verser, **sans abondement**, tant que vous n'avez pas accès à un autre PERCOL chez votre nouvel employeur {ref:Art. 1}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Signé le **19 mars 2021**, à **durée indéterminée**, prend effet à compter de son dépôt."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 10.34
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Alimentation : versements volontaires (déductibles de votre revenu imposable, sauf renonciation expresse), sommes issues de l'**intéressement**, droits du **CET** dans la limite de **10 jours/an**, transferts depuis d'autres plans d'épargne retraite {ref:Art. 2}",
+     "**Abondement de l'ICO** : 15% des montants transférés depuis le CET, plafonné au triple de vos versements et au plafond légal (16% du PASS, soit 6 581,76 € en 2020) {ref:Art. 2}",
+     "Par défaut, **gestion pilotée** (profil « équilibré horizon retraite ») ; changement possible à tout moment {ref:Art. 3}"
+    ]
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PERCOL_FO_3.svg",
+    "legende": "Vos versements, majorés par l'abondement de l'ICO.",
+    "ecart": 12.9,
+    "decalage_x": -7.1
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Récupérer votre épargne"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**À l'échéance normale** : à votre départ à la retraite (liquidation de la pension), avec possibilité de sortie en rente viagère via un contrat BPCE Vie {ref:Art. 5}",
+     "**Déblocage anticipé** (versement unique) possible pour 6 situations : décès du conjoint/partenaire de PACS ; invalidité (vous, vos enfants, votre conjoint/partenaire) ; surendettement ; fin de droits au chômage ; cessation d'activité non salariée suite à liquidation judiciaire ; **achat de votre résidence principale** (demande dans les 6 mois) {ref:Art. 5}",
+     "Votre décès avant l'échéance entraîne la **clôture du Plan** {ref:Art. 5}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_PERCOL_FO_4.svg",
+    "legende": "6 situations ouvrent un déblocage anticipé.",
+    "ecart": 27.28,
+    "decalage_x": -22.9,
+    "avant": 28.09
+   }
+  ]
+ ]
+}

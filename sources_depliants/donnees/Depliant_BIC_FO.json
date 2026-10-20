@@ -1,0 +1,169 @@
+{
+ "slug": "Depliant_BIC_FO",
+ "titre_pdf": "BIC",
+ "surtitre": "ACCORD LOCAL ICO — RÉMUNÉRATION",
+ "titre": [
+  "BIC"
+ ],
+ "sous_titre": "Bonification Individuelle de Carrière — un même\ntaux pour tous.",
+ "chiffres": [
+  {
+   "valeur": "0,5",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "minimum de l'enveloppe globale de BIC, chaque année, calculé sur la masse des RMAG"
+  }
+ ],
+ "pastilles": [
+  "Plafond individuel : 2 % de la RMAG",
+  "Versée sur la paie d'avril"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "picto",
+    "svg": "Depliant_BIC_FO_1.svg",
+    "avant": 25.06,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_BIC_FO_2.svg",
+    "legende": "Deux pourcentages de votre RMAG : l'enveloppe globale et votre plafond individuel.",
+    "ecart": 17.43,
+    "avant": 14.87,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Le minimum de **0,5 %** de la masse des RMAG **ne peut pas être pris sur les augmentations générales** {ref:CCN, art. 2.5.2.2.3}",
+       "Votre éligibilité est évaluée lors de votre **entretien annuel d'appréciation** {ref:CCN, art. 2.5.2.2.2}"
+      ],
+      "taille": 11.5
+     }
+    ],
+    "titre_grand": true,
+    "avant": -0.01
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre éligibilité à la BIC ou sur son versement ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord local de répartition de la BIC, signé le **11 mars 2025** par la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord ou de la CCN des CLCC. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord relatif à la répartition de la BIC_Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_BIC_FO_3.svg",
+    "legende": "Les 3 organisations syndicales représentatives ont signé cet accord.",
+    "ecart": 9.12,
+    "decalage_x": 0.4,
+    "avant": 16.09
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Vous, si vous êtes salarié **non-praticien** et éligible : la BIC est un complément individuel de rémunération prévu par la CCN des CLCC."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Condition d'éligibilité : au moins **6 mois d'ancienneté** {ref:CCN, art. 2.5.2.2.2}",
+     "Votre éligibilité est évaluée lors de votre **entretien annuel d'appréciation** {ref:CCN, art. 2.5.2.2.2}"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Ce que cet accord local change",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Votre BIC n'est plus modulée selon votre évaluation individuelle : **le même taux est appliqué à tous les salariés éligibles** de l'ICO, calculé en pourcentage de votre RMAG. Tout le reste (éligibilité, plafond, versement) reste celui fixé par la CCN."
+     }
+    ],
+    "titre_grand": true
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Chaque année, l'enveloppe totale de BIC ne peut être **inférieure à 0,5 %** de la masse des RMAG {ref:CCN, art. 2.5.2.2.3}",
+     "Votre BIC individuelle est plafonnée à **2 %** de votre RMAG {ref:CCN, art. 2.5.2.2.3}",
+     "Versée **en une fois**, sur la **paie d'avril**, et apparaît distinctement sur votre bulletin de salaire {ref:CCN, art. 2.5.2.2.3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_BIC_FO_4.svg",
+    "legende": "Une ligne distincte sur votre bulletin, une fois par an.",
+    "ecart": 43.03,
+    "avant": 17.59
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Aucune démarche à engager : la BIC est versée **automatiquement** sur la paie d'avril si vous êtes éligible {ref:CCN, art. 2.5.2.2.3}",
+     "Votre éligibilité se vérifie lors de votre **entretien annuel d'appréciation** {ref:CCN, art. 2.5.2.2.2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Signataires",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Accord signé le **11 mars 2025** par la **CGT-FO**, **Sud Santé-Sociaux** et la **CFE-CGC** — les 3 organisations représentatives de l'ICO."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 8.78,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_BIC_FO_5.svg",
+    "legende": "Votre BIC apparaît sur la paie du mois d'avril.",
+    "ecart": 14.43,
+    "avant": 29.43
+   }
+  ]
+ ]
+}

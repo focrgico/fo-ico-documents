@@ -1,0 +1,180 @@
+{
+ "slug": "Depliant_stages_de_jour_personnel_nuit_FO",
+ "titre_pdf": "Stages de jour du personnel de nuit",
+ "surtitre": "ACCORD LOCAL ICO — PERSONNEL DE NUIT",
+ "titre": [
+  "Stages de jour",
+  "du personnel de",
+  "nuit"
+ ],
+ "sous_titre": "Actualiser vos compétences, sans perdre votre\nprime.",
+ "chiffres": [
+  {
+   "valeur": "3",
+   "unite": "ans",
+   "unite_rouge": false,
+   "libelle": "entre deux stages de jour, pour les IDE et AS de nuit"
+  }
+ ],
+ "pastilles": [
+  "Prime de nuit maintenue",
+  "Remplacé(e) sur votre poste"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir — votre prime de nuit",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Pendant votre stage de jour, vous **conservez votre prime de nuit**. Ce temps ne remplace pas du personnel de jour : vous êtes remplacé(e) sur votre poste de nuit {ref:Art. 1}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_stages_de_jour_personnel_nuit_FO_1.svg",
+    "legende": "Tous les 3 ans, une période de travail de jour pour actualiser vos compétences.",
+    "ecart": 16.21,
+    "decalage_x": -3.9,
+    "avant": 30.95,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir — si la date ne convient pas",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Si vous ne pouvez pas respecter la date prévue pour raisons **familiales ou professionnelles**, le stage est reporté d'un commun accord avec l'encadrement, dans **l'année suivante** {ref:Art. 1}."
+     }
+    ],
+    "avant": 16.28
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre stage de jour, sur le décompte de vos nuits ou sur une formation ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord maintien des compétences du personnel de nuit, signé le **19 mai 2026** par l'ICO, la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. Accord à durée indéterminée, en vigueur depuis le 1^er^ août 2026. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord travail de nuit - 2026.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_stages_de_jour_personnel_nuit_FO_2.svg",
+    "decalage_x": -7.4,
+    "avant": 29.59,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "legende": "De la nuit au jour, le temps d'actualiser vos compétences.",
+    "avant": 35.75
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les **infirmières (IDE)** et les **aides-soignantes (AS)** travaillant de nuit à l'ICO {ref:Art. 1}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**IDE** : stage de **2 semaines** (2 × 5 jours, soit 38h15/semaine), fractionnable en journées à la demande du salarié ou de l'encadrement {ref:Art. 1}",
+     "**AS** : stage de **1 semaine** (5 jours, 38h15 au total) {ref:Art. 1}"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Accord à **durée indéterminée**, en vigueur"
+     },
+     {
+      "t": "p",
+      "texte": "depuis le 1^er^ août 2026."
+     }
+    ],
+    "titre_grand": true
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Les dates de stage sont communiquées au moins **3 mois à l'avance** {ref:Art. 1}",
+     "Les heures de jour effectuées pendant le stage sont **converties en nuits** pour le calcul de votre temps de travail {ref:Art. 1}",
+     "**IDE** : 2 semaines de stage = **8 nuits** décomptées {ref:Art. 1}",
+     "**AS** : 1 semaine de stage = **4 nuits** décomptées {ref:Art. 1}"
+    ]
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_stages_de_jour_personnel_nuit_FO_3.svg",
+    "legende": "Les jours de stage sont décomptés en nuits travaillées.",
+    "ecart": 21.92
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Formation professionnelle"
+   },
+   {
+    "t": "p",
+    "texte": "Pour les formations inscrites au **plan prévisionnel de développement des compétences** {ref:Art. 2} :",
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**1**^er^ **jour de formation** : compté à hauteur de votre horaire de nuit complet — **10h10 à Angers**, **11h à Saint-Herblain** {ref:Art. 2}",
+     "**Jours suivants** : comptés à **1h de moins** que l'horaire de nuit théorique — **9h10 à Angers**, **10h à Saint-Herblain** {ref:Art. 2}"
+    ],
+    "avant": 6.45,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_stages_de_jour_personnel_nuit_FO_4.svg",
+    "legende": "horaire de nuit.",
+    "ecart": 26.6,
+    "decalage_x": -3.7,
+    "avant": 22.25,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "À partir du 2e jour de formation, une heure de moins que votre",
+    "taille": 8.0,
+    "avant": -24.0
+   }
+  ]
+ ]
+}

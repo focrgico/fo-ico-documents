@@ -1,0 +1,179 @@
+{
+ "slug": "Depliant_prime_chaussures_FO",
+ "titre_pdf": "Prime chaussures",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "Prime",
+  "chaussures"
+ ],
+ "sous_titre": "Une prime annuelle pour l'achat de vos\nchaussures de travail.",
+ "chiffres": [
+  {
+   "valeur": "48",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts par an, versés en 12 mensualités de 4 € bruts"
+  }
+ ],
+ "pastilles": [
+  "Versée avec le salaire"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "La prime **n'est pas versée pendant vos congés payés** : sur l'année, le total perçu peut donc être inférieur à 48 € {ref:Art. 1}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_chaussures_FO_1.svg",
+    "legende": "Pendant les congés, le compteur de la prime s'arrête aussi.",
+    "ecart": 28.2,
+    "decalage_x": -4.6,
+    "avant": 26.43
+   }
+  ],
+  "contact": {
+   "accroche": "Votre métier figure dans la liste et la prime n'apparaît pas sur votre bulletin ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord du **21 juin 2023**, en vigueur depuis le 1^er^ juillet 2023, à durée indéterminée. Signé par l'ICO, la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord prime chaussure version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Comment elle est versée",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "**4 € bruts par mois**, sur votre bulletin de salaire, proratés à votre temps de travail contractuel {ref:Art. 1}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_chaussures_FO_2.svg",
+    "decalage_x": 0.4,
+    "avant": 21.03,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "legende": "Une ligne discrète, mais fixe, chaque mois.",
+    "avant": 43.09
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Dix métiers ouvrent droit à la prime {ref:Art. 2}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Aide-soignant(e), hors bloc",
+     "Agent de service hospitalier (ASH)",
+     "Brancardier",
+     "Diététicien(ne)",
+     "Enseignant(e) APA",
+     "Kinésithérapeute",
+     "Infirmier(e) diplômé(e) d'État, hors bloc",
+     "Manipulateur en électroradiologie (MER)",
+     "Préparateur en pharmacie",
+     "Technicien de laboratoire"
+    ]
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Le montant"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**48 € bruts par an** {ref:Art. 1}",
+     "Versés en **12 mensualités de 4 € bruts** {ref:Art. 1}"
+    ]
+   },
+   {
+    "t": "p",
+    "texte": "**48€**",
+    "taille": 16.5
+   },
+   {
+    "t": "p",
+    "texte": "en 12 fois",
+    "taille": 7.0,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_chaussures_FO_3.svg",
+    "legende": "Douze pièces de 4 € qui, mises bout à bout, paient vos chaussures.",
+    "ecart": 10.05,
+    "decalage_x": -7.7,
+    "avant": 25.8
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qui fait varier le montant",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_chaussures_FO_4.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Le montant est **proraté à votre temps de travail contractuel** {ref:Art. 1}",
+     "Il n'est versé que les **mois de travail effectif** {ref:Art. 1}"
+    ],
+    "avant": 6.41,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_chaussures_FO_5.svg",
+    "avant": 30.26
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_chaussures_FO_6.svg",
+    "legende": "Proportionnel au temps de travail, suspendu en l'absence d'activité.",
+    "ecart": 17.97
+   }
+  ]
+ ]
+}

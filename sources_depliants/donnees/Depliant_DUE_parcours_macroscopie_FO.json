@@ -1,0 +1,180 @@
+{
+ "slug": "Depliant_DUE_parcours_macroscopie_FO",
+ "titre_pdf": "Parcours Macroscopie",
+ "surtitre": "DÉCISION UNILATÉRALE ICO",
+ "titre": [
+  "Parcours",
+  "Macroscopie"
+ ],
+ "sous_titre": "Techniciens de laboratoire —\nservice d'anatomopathologie.",
+ "chiffres": [
+  {
+   "valeur": "200",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts/mois une fois le parcours validé — 250 € avec le DU de Macroscopie"
+  }
+ ],
+ "pastilles": [
+  "Parcours d'environ 3 ans"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — la prime n'est pas automatique",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "La prime n'est versée qu'une fois les **3 conditions remplies** : cycle pratique validé, formation théorique faite **et** cycle de consolidation complet. Un parcours d'environ **3 ans**."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_parcours_macroscopie_FO_1.svg",
+    "legende": "Trois étapes à valider avant le versement de la prime.",
+    "ecart": 20.4,
+    "decalage_x": -0.7,
+    "avant": 74.02,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Avec le **DU de Macroscopie** obtenu en plus, la prime passe de **200 € à 250 € bruts/mois**."
+     }
+    ],
+    "avant": 15.19
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre parcours de formation ou votre prime de macroscopie ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Décision unilatérale de l'employeur. Signée le **8 décembre 2023** par le Pr Mario Campone. En vigueur depuis décembre 2023, durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "DUE/DUE Parcours techs de laboratoire-macroscopie_Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Ce n'est pas un accord négocié",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Il s'agit d'une **décision unilatérale de l'employeur** : elle n'a pas été négociée ni signée par les organisations syndicales."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_parcours_macroscopie_FO_2.svg",
+    "legende": "Décidée seule par la direction, sans signature syndicale.",
+    "ecart": 9.71,
+    "decalage_x": 7.9,
+    "avant": 13.54
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les **techniciens de laboratoire** affectés au service d'anatomopathologie de l'ICO.",
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de la décision",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Décision unilatérale à **durée indéterminée**, en vigueur depuis décembre 2023."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 6.47,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_parcours_macroscopie_FO_3.svg",
+    "legende": "Un métier technique au cœur de l'anatomopathologie.",
+    "ecart": 21.98,
+    "decalage_x": -5.0,
+    "avant": 39.18
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Le parcours de formation"
+   },
+   {
+    "t": "p",
+    "texte": "Débute **au moins 1 an après l'arrivée** dans le service {ref:point 1}, en 3 phases :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Cycle de formation pratique** (~2 ans) : biopsies/petites pièces → pièces simples (tumorectomies mammaires) → pièces complexes (chirurgie digestive), validé par les entretiens annuels et les fiches d'habilitation {ref:point 1}",
+     "**Formation théorique**, en début ou pendant la 1^ère^ année : en externe (type « Bioformation ») et/ou en interne (pathologistes) {ref:point 1}",
+     "**Cycle de consolidation** (1 an), après validation de l'habilitation et de la formation théorique {ref:point 1}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Durée totale du parcours : **environ 3 ans**.",
+    "taille": 10.5,
+    "avant": 7.5
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "La prime"
+   },
+   {
+    "t": "p",
+    "texte": "Une fois les 3 conditions remplies (cycle pratique validé + formation théorique faite + cycle de consolidation complet) {ref:point 2} :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**200 € bruts/mois**",
+     "**250 € bruts/mois** si vous avez en plus obtenu le **DU de Macroscopie**"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_parcours_macroscopie_FO_4.svg",
+    "legende": "Le DU de Macroscopie porte la prime à 250 €.",
+    "ecart": 13.03,
+    "avant": 30.34
+   }
+  ]
+ ]
+}

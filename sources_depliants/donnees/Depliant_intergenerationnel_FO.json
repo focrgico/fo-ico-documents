@@ -1,0 +1,200 @@
+{
+ "slug": "Depliant_intergenerationnel_FO",
+ "titre_pdf": "Accord intergénérationnel",
+ "surtitre": "ACCORD LOCAL ICO — INTERGÉNÉRATIONNEL",
+ "titre": [
+  "Accord",
+  "intergénérationnel"
+ ],
+ "sous_titre": "Recrutement, tutorat, fin de carrière.",
+ "chiffres": [
+  {
+   "valeur": "18",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "des recrutements en CDI réservés aux jeunes salariés"
+  },
+  {
+   "valeur": "70",
+   "unite": "%",
+   "unite_rouge": true,
+   "libelle": "au moins des demandes de temps partiel de fin de carrière doivent être acceptées",
+   "ajust": 1.5
+  }
+ ],
+ "pastilles": [
+  "Jeunes ≤ 28 ans",
+  "Seniors 55 ans et +"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — temps partiel de fin de carrière",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Trois conditions **cumulatives** : retraite liquidée dans les **2 ans**, même taux d'activité depuis au moins **24 mois**, plus de **10 ans d'ancienneté** {ref:Art. 3.4.2}. À 50 %, une organisation **sur 2 semaines** reste possible, sous réserve de l'organisation du service {ref:Avenant n°1 du 30/06/2021, Art. 3.4.2}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_intergenerationnel_FO_1.svg",
+    "legende": "À 50 %, l'organisation sur 2 semaines reste possible.",
+    "ecart": 19.21,
+    "avant": 24.2,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "1 semaine complète, 1 semaine à temps partiel",
+    "taille": 6.5,
+    "avant": 24.95,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Des journées d'intégration pour les nouveaux embauchés sont organisées **deux fois par an** {ref:Art. 2.2.1}",
+       "Le tutorat des contrats d'apprentissage ou de professionnalisation est ouvert **en priorité aux salariés de 50 ans et plus** {ref:Art. 2.2.4}"
+      ]
+     }
+    ],
+    "avant": -22.48
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre entretien de 2^e^ partie de carrière, votre passage à temps partiel de fin de carrière ou le tutorat ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord intergénérationnel de l'ICO, signé le **30 janvier 2020** par la CGT-FO, Sud Santé-Sociaux et la CFE-CGC ; avenant n°1 du **30 juin 2021** signé par la CGT-FO, Sud Santé-Sociaux, la CFDT et la CFE-CGC ; avenant du **15 septembre 2023** signé par la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. Durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord de base. Seul le texte intégral fait référence :",
+   "liens_sep": [
+    ", ",
+    " et "
+   ],
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord Intergénérationnel du 30 01 2020_signé.pdf"
+    },
+    {
+     "texte": "avenant 2021 (PDF)",
+     "pdf": "accords-locaux/Accord Intergenerationnel Avenant n1 signe.pdf"
+    },
+    {
+     "texte": "avenant 2023 (PDF)",
+     "pdf": "accords-locaux/Avenant accord d'entreprise intergénérationnel_2023_Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_intergenerationnel_FO_2.svg",
+    "legende": "Jeunes et seniors : une coopération organisée dans les deux",
+    "ecart": 30.18,
+    "decalage_x": 0.4,
+    "avant": 28.0,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "legende": "sens.",
+    "avant": 0.19
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Tous les salariés de l'ICO, selon les dispositifs : recrutement, tutorat, entretiens de carrière, fin de carrière {ref:Art. 1}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Jeune** : salarié de 28 ans et moins (30 ans si vous êtes reconnu travailleur handicapé) {ref:Art. 1}",
+     "**Senior** : salarié de 55 ans et plus (50 ans si vous êtes reconnu travailleur handicapé) {ref:Art. 1}"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de l'accord",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Accord à **durée indéterminée**. Bilan présenté chaque année en CSE central, avec"
+     },
+     {
+      "t": "p",
+      "texte": "une clause de revoyure au terme de la 1^ère^ année d'application {ref:Art. 6}."
+     }
+    ],
+    "titre_grand": true
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**18%** des recrutements en CDI doivent concerner des jeunes (y compris titularisation de CDD) {ref:Art. 2.1}",
+     "**15%** des recrutements en CDI doivent concerner des seniors, sous réserve de candidatures valables {ref:Art. 3.1}",
+     "Entretien de 2^e^ partie de carrière dès **45 ans**, sur votre temps de travail, renouvelable tous les **5 ans** {ref:Art. 3.3.1}",
+     "Accès prioritaire au bilan de compétences après **25 ans d'activité** et dès votre **50**^e^ **anniversaire** (max. 24h, sur le temps de travail) {ref:Art. 3.3.2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_intergenerationnel_FO_3.svg",
+    "legende": "Deux quotas de recrutement en CDI, cumulatifs.",
+    "ecart": 2.98,
+    "decalage_x": -3.6,
+    "avant": 14.13
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Temps partiel de fin de carrière** (50%, 75% ou 80%) : demande par LRAR ou remise en main propre contre décharge, au moins **2 mois avant** ; réponse motivée sous **1 mois** ; au moins **70%** des demandes doivent être acceptées {ref:Art. 3.4.2}",
+     "**Conversion de l'indemnité de départ en retraite en temps**, sur un CET à votre nom, avec l'accord de la direction {ref:Art. 3.4.3}",
+     "**Anticipation des congés payés** : jusqu'à 5 congés annuels complémentaires, répartis sur les 5 années précédant votre départ, sur demande à la DRH {ref:Art. 3.4.4}",
+     "**Mobilité interne** vers un poste moins contraignant étudiée en priorité dès 55 ans {ref:Art. 3.4.5}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_intergenerationnel_FO_4.svg",
+    "legende": "Votre indemnité de départ, convertie en temps sur votre CET.",
+    "ecart": 15.95,
+    "avant": 16.89
+   }
+  ]
+ ]
+}

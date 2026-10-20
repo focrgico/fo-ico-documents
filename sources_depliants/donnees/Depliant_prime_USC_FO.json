@@ -1,0 +1,182 @@
+{
+ "slug": "Depliant_prime_USC_FO",
+ "titre_pdf": "Prime USC",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "Prime USC"
+ ],
+ "sous_titre": "Pour les IDE et aides-soignant(e)s exerçant en\nunité de soins continus.",
+ "chiffres": [
+  {
+   "valeur": "130",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts par mois au maximum, proratés à votre temps réel en USC"
+  }
+ ],
+ "pastilles": [
+  "IDE · AS en USC"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — IDE et AS de nuit à Saint-Herblain",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Vous êtes éligible dès que **50 % ou plus** de vos nuits du mois sont consacrées à l'USC {ref:Art. 3.3 ; avenant du 26/04/2024, Art. 1}. À l'ouverture du **bâtiment Ambicion** ou de l'**USIP** à Saint-Herblain, le calcul devient celui de vos collègues de jour de Saint-Herblain ou d'Angers {ref:avenant, Art. 2}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_USC_FO_1.svg",
+    "legende": "IDE et AS de nuit à Saint-Herblain : 50 % de nuits à l'USC suffisent.",
+    "ecart": 29.71,
+    "avant": 24.2,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Les autres personnels paramédicaux (psychologue, brancardier, kiné...) consacrant **moins de 50 % de leur temps à l'USC** ne sont pas éligibles {ref:Art. 1}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 10.21
+   }
+  ],
+  "contact": {
+   "accroche": "Une prime USC absente ou mal calculée sur votre bulletin ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord signé le **1**^er^ **décembre 2023**, effet rétroactif au 1^er^ janvier 2023, durée indéterminée. Signé par l'ICO, la CGT-FO (par délégation de pouvoir) et la CFE-CGC. Avenant signé le **26 avril 2024** par l'ICO, la CGT-FO, Sud Santé-Sociaux et la CFE-CGC. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens_sep": [
+    " et "
+   ],
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord prime USC signé.pdf"
+    },
+    {
+     "texte": "avenant (PDF)",
+     "pdf": "accords-locaux/AVENANT ACCORD PRIME USC_Version signée.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_USC_FO_2.svg",
+    "legende": "Calculée chaque mois sur vos jours ou nuits à l'USC.",
+    "ecart": 13.62,
+    "decalage_x": 0.4,
+    "avant": 16.84
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "{ref:Art. 1}"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Vous êtes **IDE ou aide-soignant(e)**",
+     "**Affecté(e), en tout ou partie de votre temps**, à l'Unité de Soins Continus (USC) de votre site",
+     "Les autres personnels paramédicaux (psychologue, brancardier, kiné...) ne sont éligibles que s'ils consacrent **50 % ou plus** de leur temps à l'USC"
+    ]
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Comment c'est calculé"
+   },
+   {
+    "t": "p",
+    "texte": "Montant de base : **130 € bruts/mois**, fixé par l'accord de branche Unicancer, proraté à votre temps réel en USC {ref:Art. 2}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Soignant de jour** : (jours à l'USC ÷ 20 jours/mois) × 130 €, plafonné à 130 €",
+     "**Nuit à Angers** : (nuits à l'USC ÷ 12 nuits/mois) × 130 € — ex. 5 nuits en mai → 54,17 € sur la paie de juin",
+     "**Nuit à Saint-Herblain (calcul de base)** : (nuits à l'USC ÷ 11 nuits/mois) × 130 € — ex. 5 nuits → 59,09 €. Pour les IDE et AS de nuit, voir la règle particulière ci-contre."
+    ],
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "{ref:Art. 3}",
+    "avant": 3.0,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_USC_FO_3.svg",
+    "legende": "Le diviseur dépend de votre rythme de travail et de votre site.",
+    "ecart": 28.4,
+    "decalage_x": 1.7,
+    "avant": 9.72,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Chaque dénominateur varie selon le site et le poste",
+    "taille": 6.5,
+    "avant": -9.75
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Cas particulier : IDE et AS de nuit à Saint-Herblain",
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_USC_FO_4.svg",
+    "decalage_x": -104.6,
+    "avant": -33.41,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Vous êtes éligible dès que **50 % ou plus** de vos nuits du mois sont consacrées à l'USC. Le montant est alors proraté à votre **temps de travail contractuel** {ref:Art. 3.3 ; avenant du 26/04/2024, Art. 1}.",
+    "avant": 6.41,
+    "apres": 0
+   },
+   {
+    "t": "p",
+    "texte": "Exemple donné dans l'accord : **6 nuits sur 11 planifiées**, temps de travail à **80 %** → (130 € × 80 %) = **104 € bruts**.",
+    "avant": 5.18,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_prime_USC_FO_5.svg",
+    "legende": "Un cas de calcul propre aux IDE et AS de nuit de Saint-Herblain.",
+    "ecart": 12.78,
+    "avant": 24.58
+   }
+  ]
+ ]
+}

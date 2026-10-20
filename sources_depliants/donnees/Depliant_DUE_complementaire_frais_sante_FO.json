@@ -1,0 +1,192 @@
+{
+ "slug": "Depliant_DUE_complementaire_frais_sante_FO",
+ "titre_pdf": "Complémentaire Frais de Santé",
+ "surtitre": "DÉCISION UNILATÉRALE ICO",
+ "titre": [
+  "Complémentaire",
+  "Frais de Santé"
+ ],
+ "sous_titre": "Votre mutuelle d'entreprise :\nce que ça change pour vous.",
+ "chiffres": [
+  {
+   "valeur": "45,20",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "pris en charge par l'ICO chaque mois, quelle que soit votre formule"
+  }
+ ],
+ "pastilles": [
+  "Obligatoire sauf dispense",
+  "Portabilité jusqu'à 12 mois"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — affiliation automatique",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Si vous ne faites **aucune démarche de dispense**, vous êtes **automatiquement affilié** à la mutuelle ICO, avec la cotisation prélevée sur votre salaire."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_complementaire_frais_sante_FO_1.svg",
+    "legende": "Une couverture santé pour tous les salariés de l'ICO.",
+    "ecart": 24.46,
+    "avant": 33.2,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Les **ayants droit** peuvent adhérer facultativement, mais la cotisation est alors **à 100% à votre charge** {ref:Art. 2-3}",
+       "La dispense doit être **formalisée par une déclaration sur l'honneur**, avec justificatifs, remise à la DRH {ref:Art. 3}"
+      ]
+     }
+    ],
+    "avant": 14.87
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre dispense, vos cotisations ou votre portabilité en cas de départ ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Décision unilatérale de l'employeur, après consultation du CSE. Signée le **19 juin 2024** par le Pr Mario Campone. En vigueur depuis le 1^er^ juin 2024, durée indéterminée. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux points de la décision. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "prevoyance-mutuelle-retraite/DUE regime frais de sante 2024.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Ce n'est pas un accord négocié",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Il s'agit d'une **décision unilatérale de l'employeur**, prise après **consultation du CSE** — mais sans signature syndicale."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_complementaire_frais_sante_FO_2.svg",
+    "legende": "Décidée seule par la direction, après avis du CSE.",
+    "ecart": 9.71,
+    "decalage_x": 7.9,
+    "avant": 13.54
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "**Tous les salariés de l'ICO** : adhésion **obligatoire**, sauf cas de dispense {ref:Art. 2-3}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Les **ayants droit** peuvent adhérer facultativement, à **100% à la charge du salarié** {ref:Art. 2-3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Durée de la décision",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Décision unilatérale à **durée indéterminée**,"
+     },
+     {
+      "t": "p",
+      "texte": "en vigueur depuis le 1^er^ juin 2024."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 8.03,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_complementaire_frais_sante_FO_3.svg",
+    "legende": "Un même socle de couverture pour l'ensemble du personnel.",
+    "ecart": 16.7,
+    "decalage_x": 3.7,
+    "avant": 22.7
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Cotisation de base {ref:(Art. 5, au 1}{ref:^er^}{ref:janvier 2024)} : **58,43 €** (isolé), **94,81 €** (duo), **112,44 €** (famille)",
+     "**L'ICO prend en charge 45,20 €/mois**, quelle que soit votre formule {ref:Art. 5}",
+     "Renforts 1 et 2 (optionnels) : de **+16,54 € à +54,02 €** selon la formule, **intégralement à votre charge** {ref:Art. 5}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_DUE_complementaire_frais_sante_FO_4.svg",
+    "legende": "45,20 € pris en charge par l'ICO, chaque mois.",
+    "ecart": 19.03,
+    "avant": 25.84
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Les cas de dispense"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Complémentaire santé solidaire** (CSS), jusqu'à la fin de ce droit {ref:Art. 3}",
+     "Assurance individuelle souscrite **avant l'embauche**, jusqu'à échéance {ref:Art. 3}",
+     "**Couverture collective obligatoire** d'un autre employeur ou du conjoint {ref:Art. 3}",
+     "Régimes spéciaux (Alsace-Moselle, IEG, fonction publique, loi Madelin) {ref:Art. 3}",
+     "**CDD/mission de moins de 3 mois**, avec couverture responsable par ailleurs {ref:Art. 3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "Arrêt de travail et départ",
+    "avant": 15.32
+   },
+   {
+    "t": "p",
+    "texte": "Couverture **maintenue** pendant un arrêt avec maintien de salaire ; maintenue si vous payez la cotisation totale sans maintien {ref:Art. 6-7}. En cas de rupture ouvrant droit au chômage : **portabilité** jusqu'à 12 mois {ref:Art. 7}. Pour les retraités : maintien possible sur demande (loi Evin) {ref:Art. 7}.",
+    "taille": 10.5
+   }
+  ]
+ ]
+}

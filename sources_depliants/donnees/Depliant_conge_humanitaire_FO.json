@@ -1,0 +1,163 @@
+{
+ "slug": "Depliant_conge_humanitaire_FO",
+ "titre_pdf": "Congé humanitaire",
+ "surtitre": "ACCORD LOCAL ICO — CONGÉS SPÉCIFIQUES",
+ "titre": [
+  "Congé",
+  "humanitaire"
+ ],
+ "sous_titre": "Partir en mission pour une association agréée, à\nl'international.",
+ "chiffres": [
+  {
+   "valeur": "6",
+   "unite": "mois",
+   "unite_rouge": true,
+   "libelle": "durée maximale en situation normale (6 semaines en urgence humanitaire)"
+  }
+ ],
+ "pastilles": [
+  "12 mois d'ancienneté requis",
+  "Accord tacite sous 15 jours"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Pendant le congé humanitaire, votre **contrat de travail est suspendu** : vous n'êtes **pas rémunéré** {ref:Art. 5}. Vous pouvez toutefois le financer avec vos congés payés ou votre CET (le délai de préavis habituel du CET ne s'applique pas dans ce cas — à mentionner dans votre demande) {ref:Art. 5}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_conge_humanitaire_FO_1.svg",
+    "legende": "Une mission à l'international, pour une association agréée.",
+    "ecart": 20.7,
+    "decalage_x": -3.8,
+    "avant": 28.68,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "La durée de l'absence compte comme **temps de travail effectif** pour votre ancienneté (PEP) et votre avancement (VAP) {ref:Art. 5}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": -0.12
+   }
+  ],
+  "contact": {
+   "accroche": "Vous préparez une mission humanitaire et avez une question sur votre demande ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord congé humanitaire de l'ICO, signé le **31 mars 2026** par l'ICO, la CGT-FO, la CFE-CGC et Sud Santé-Sociaux, à durée indéterminée, en vigueur depuis le 1^er^ mai 2026. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord Congé Humanitaire (2026).pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "picto",
+    "svg": "Depliant_conge_humanitaire_FO_2.svg",
+    "legende": "Un accord signé par l'ICO et les 3 organisations syndicales.",
+    "ecart": 27.88,
+    "decalage_x": 5.9,
+    "avant": 16.09
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Tout salarié de l'ICO réunissant les deux conditions suivantes {ref:Art. 1} :"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**CDI en cours**, contrat non suspendu",
+     "**12 mois d'ancienneté révolus** à la date de la demande"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Les limites à connaître",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "L'employeur peut refuser si **plus d'un salarié par service** serait absent simultanément, ou si **plus de 6 salariés de l'ICO** seraient en congé humanitaire au même moment {ref:Art. 4}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 8.09
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Ce qu'il faut retenir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Demande écrite (LRAR ou remise en main propre à la DRH), précisant les dates, l'association (agréée par les pouvoirs publics) et la mission (**à l'international**, hors France) {ref:Art. 2-3}",
+     "Délai normal : **15 jours calendaires** pour refuser (refus motivé, consultation du CSE) — passé ce délai, **accord tacite** {ref:Art. 2-3}",
+     "Urgence humanitaire (catastrophe naturelle, conflit) : **24 heures ouvrables** pour refuser, sans motivation ni consultation du CSE obligatoire {ref:Art. 2-3}"
+    ]
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_conge_humanitaire_FO_3.svg",
+    "legende": "Deux délais de refus selon la situation : normale ou urgence humanitaire.",
+    "ecart": 19.1,
+    "decalage_x": -0.9
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Vos démarches"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Durée maximale : **6 mois** en situation normale, **6 semaines** en urgence humanitaire {ref:Art. 5}",
+     "Vous pouvez financer le congé avec vos **congés payés** ou votre **CET** (délai de préavis CET non applicable dans ce cas — à mentionner dans la demande) {ref:Art. 5}",
+     "Retour : date fixée dans la demande initiale, ou anticipée en cas de **force majeure** interrompant la mission {ref:Art. 6}",
+     "À votre retour, fournir une **attestation de fin de mission** délivrée par l'association {ref:Art. 6}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_conge_humanitaire_FO_4.svg",
+    "legende": "Au retour, l'attestation de fin de mission de l'association.",
+    "ecart": 27.95,
+    "decalage_x": 3.4,
+    "avant": 21.39
+   }
+  ]
+ ]
+}

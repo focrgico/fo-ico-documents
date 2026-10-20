@@ -1,0 +1,234 @@
+{
+ "slug": "Depliant_CET_FO",
+ "titre_pdf": "Compte épargne temps",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "Compte",
+  "épargne temps"
+ ],
+ "sous_titre": "Épargner des jours, les utiliser quand vous en\navez besoin.",
+ "chiffres": [
+  {
+   "valeur": "20",
+   "unite": "j / an",
+   "unite_rouge": false,
+   "libelle": "maximum que vous pouvez déposer par année civile, tous types cumulés"
+  },
+  {
+   "valeur": "1 820",
+   "unite": "h",
+   "unite_rouge": false,
+   "libelle": "d'épargne au maximum sur votre compte",
+   "ajust": 2.25
+  }
+ ],
+ "pastilles": [
+  "Dès 6 mois d'ancienneté",
+  "Volontariat"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — la date de votre demande",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "La demande de versement se dépose **avant le 15 janvier** de l'année suivante {ref:Art. 3.3}. Cette date tient compte de l'annualisation du temps de travail, qui ne permet pas de connaître son solde avant la fin novembre."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CET_FO_1.svg",
+    "legende": "Le 15 janvier, pas avant : votre solde n'est connu qu'en fin d'année.",
+    "ecart": 26.71,
+    "decalage_x": 2.6,
+    "avant": 18.95,
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Bon à savoir",
+    "contenu": [
+     {
+      "t": "puces",
+      "items": [
+       "Pour une **prime** (BIC, PPI, intéressement...), vous avez **15 jours après son versement** pour demander à la DRH de l'affecter au CET — passé ce délai, c'est trop tard {ref:Art. 3.2}",
+       "Le PERCOL accepte les droits transférés depuis le CET, dans la limite de **10 jours par an**, avec un abondement de l'ICO de **15%**. Voir le dépliant PERCOL {ref:Art. 5.3.1}"
+      ]
+     }
+    ],
+    "avant": 10.21
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre solde, votre demande de versement ou l'utilisation de vos jours ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord du **19 mars 2021** et son avenant n°1 du **31 janvier 2022**. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord ou de l'avenant. Seul le texte intégral fait référence :",
+   "liens_sep": [
+    " et"
+   ],
+   "liens": [
+    {
+     "texte": "accord de base (PDF)",
+     "pdf": "accords-locaux/accord-cet-2021.pdf"
+    },
+    {
+     "texte": "avenant n°1 (PDF)",
+     "pdf": "accords-locaux/Accord CET_Avenant n1_signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "La date à ne pas manquer",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Votre demande de versement doit être déposée **avant le 15 janvier** de l'année suivante {ref:Art. 3.3}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CET_FO_2.svg",
+    "legende": "Des jours mis de côté dans la tirelire, comme une épargne.",
+    "ecart": 16.47,
+    "decalage_x": 1.5,
+    "avant": 19.53
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Tout salarié, dès **6 mois d'ancienneté**, sur la base du volontariat {ref:Art. 1-2}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Vous pouvez déposer **20 jours maximum par année civile**, tous types cumulés {ref:Art. 3.1}",
+     "Seule la **5**^e^ **semaine de congés payés** (et au-delà) peut alimenter le CET, jusqu'à la moitié de vos heures de RTT (non-cadres), vos jours de RTT (cadres au forfait jours), ou vos heures sup (7h à 35h) {ref:Art. 3.1}",
+     "Le plafond global d'épargne est de **1 820 heures** {ref:Art. 4.4}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Pour déposer des jours, vous devez",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Continuer à respecter la durée hebdomadaire maximale de **48h** et prendre effectivement vos **4 semaines de congés payés** dans l'année. Vos repos légaux de santé et sécurité (repos quotidien, hebdomadaire, contreparties du travail de nuit) ne peuvent jamais être versés au CET {ref:Art. 3.1}."
+     }
+    ],
+    "titre_grand": true,
+    "avant": 8.06,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CET_FO_3.svg",
+    "legende": "Jours de congés, RTT ou primes : tout se cumule dans un seul compte.",
+    "ecart": 12.88,
+    "decalage_x": -3.8,
+    "avant": 17.45
+   }
+  ],
+  [
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Avant de pouvoir l'utiliser",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Vous devez avoir épargné au moins l'équivalent de **35 heures** (environ 1 semaine à temps complet, au prorata pour un temps partiel) {ref:Art. 4.4}. Votre demande doit être écrite ; pour un **congé pour convenance personnelle de plus d'une semaine**, comptez **3 mois** de délai de prévenance {ref:Art. 5.1.2}."
+     }
+    ],
+    "avant": 2.45,
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "À quoi sert votre CET",
+    "avant": 12.21
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Financer un **projet personnel** ou une **formation** {ref:Art. 1}",
+     "Financer un **passage à temps partiel** {ref:Art. 1}",
+     "Anticiper votre **départ en retraite** {ref:Art. 1}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CET_FO_4.svg",
+    "legende": "Trois façons d'utiliser vos jours épargnés, à votre rythme.",
+    "ecart": 17.87,
+    "avant": 11.97
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Le transformer en argent"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**Complément de rémunération immédiate**, jusqu'à **2 000 €** — par exemple en cas de carence maladie ou de soins coûteux {ref:Art. 5.2}",
+     "**Racheter des trimestres de retraite** {ref:Art. 5.4}",
+     "Alimenter le **PEE** ou le **PERCOL** de l'ICO"
+    ]
+   },
+   {
+    "t": "encadre",
+    "style": "neutre",
+    "titre": "Un refus est possible",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "L'employeur peut refuser tout ou partie de la prise de vos jours en l'absence de justificatifs requis, ou pour raisons de service appréciées par la Direction {ref:Art. 5.1.2}."
+     }
+    ],
+    "titre_grand": true,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CET_FO_5.svg",
+    "decalage_x": 0.8,
+    "avant": 24.18,
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_CET_FO_6.svg",
+    "legende": "Un jour épargné peut redevenir de l'argent, quand vous en avez besoin.",
+    "ecart": 21.03,
+    "decalage_x": -18.7,
+    "avant": 19.76
+   }
+  ]
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "slug": "Depliant_ATT_cadres_en_heures_FO",
+ "titre_pdf": "Cadres en heures",
+ "surtitre": "ACCORD LOCAL ICO",
+ "titre": [
+  "Cadres",
+  "en heures"
+ ],
+ "sous_titre": "Durée et aménagement du temps de travail. Ce\nque ça change pour vous.",
+ "chiffres": [
+  {
+   "valeur": "1596",
+   "unite": "h",
+   "unite_rouge": false,
+   "libelle": "travaillées par an, à temps plein"
+  },
+  {
+   "valeur": "19",
+   "unite": "j",
+   "unite_rouge": false,
+   "libelle": "de JRTT par an, à temps plein",
+   "ajust": 1.5
+  }
+ ],
+ "pastilles": [
+  "Décompte en heures"
+ ],
+ "recto": {
+  "rabat": [
+   {
+    "t": "section",
+    "titre": "Vos congés payés"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "**27 jours ouvrés** par an, 2 jours de fractionnement déjà inclus {ref:Art. 3.1.1-3.1.2}",
+     "Validation par la Direction au plus tard le **15 janvier** pour la période mai-octobre, le **15 juin** pour novembre-avril {ref:Art. 3.1.3}",
+     "**3 semaines consécutives minimum** l'été, 4 si le service le permet ; pas de changement à moins d'1 mois du départ {ref:Art. 3.1.3}",
+     "Malade avant des congés déjà programmés : vos congés non pris sont **reportés** {ref:Art. 3.1.4}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "encadre",
+    "style": "alerte",
+    "titre": "Point de vigilance — malade pendant vos congés",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Votre congé est reporté à une date ultérieure, à redéfinir avec votre responsable dans un délai de 15 jours. Vous disposez ensuite de **15 mois** pour poser ces congés reportés {ref:Art. 3.1.4}."
+     }
+    ],
+    "avant": 6.64
+   }
+  ],
+  "contact": {
+   "accroche": "Une question sur votre planning, vos heures supplémentaires, vos congés ou vos astreintes ? Vos élus FO vous accompagnent.",
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
+  },
+  "source": {
+   "texte": "Accord du **12 mai 2021**, modifié par l'avenant du **31 décembre 2025**. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "renvoi": "Les références entre parenthèses renvoient aux articles de l'accord ou de l'avenant. Seul le texte intégral fait référence :",
+   "liens": [
+    {
+     "texte": "accord complet (PDF)",
+     "pdf": "accords-locaux/Accord Durée et ATT Cadres_signé.pdf"
+    }
+   ]
+  },
+  "marine": [
+   {
+    "t": "encadre",
+    "style": "marine",
+    "titre": "Astreintes",
+    "contenu": [
+     {
+      "t": "p",
+      "texte": "Le temps où vous devez rester joignable et prêt à intervenir sur appel, sans être sur site {ref:Art. 3.2.1}. Concerne notamment le personnel médical, le service technique, l'informatique et les cadres administratifs {ref:Art. 3.2.2}. Planning communiqué au moins 7 jours avant ; si vous intervenez, trajet compris, ce temps compte comme du travail effectif et vos frais sont remboursés {ref:Art. 3.2.4}."
+     }
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_cadres_en_heures_FO_1.svg",
+    "legende": "Joignable sur appel, trajet et frais couverts si vous intervenez.",
+    "ecart": 17.97,
+    "decalage_x": 11.9,
+    "avant": 17.28
+   }
+  ]
+ },
+ "verso": [
+  [
+   {
+    "t": "section",
+    "titre": "Qui est concerné ?"
+   },
+   {
+    "t": "p",
+    "texte": "Les cadres dont le temps de travail est décompté **en heures**, et non en jours {ref:Art. 2}."
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Vous suivez un **planning** établi par votre service, à la différence des cadres au forfait jours {ref:Art. 2}",
+     "**1596 heures** travaillées par an à temps plein, soit l'équivalent de 35h hebdomadaires en moyenne sur l'année {ref:Art. 2.1}",
+     "**19 jours de JRTT** par an à temps plein, pour compenser les semaines au-delà de 35h {ref:Art. 2.1}"
+    ]
+   },
+   {
+    "t": "note",
+    "texte": "Vous disposez d'une réelle autonomie dans l'organisation de votre temps ? C'est l'autre dépliant, « Cadres au forfait jours », qui vous concerne."
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Votre planning"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Un **planning prévisionnel** est établi par votre service, communiqué à l'avance {ref:Art. 2.2}",
+     "Les **heures supplémentaires** effectuées au-delà de votre durée contractuelle, à la demande de votre hiérarchie, sont **majorées** conformément à la CCN des CLCC {ref:Art. 2.3}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_cadres_en_heures_FO_2.svg",
+    "legende": "Les heures faites en plus, à la demande de votre service, sont majorées.",
+    "ecart": 13.07,
+    "decalage_x": 1.3,
+    "avant": 16.03,
+    "apres": 0
+   },
+   {
+    "t": "section",
+    "titre": "Temps partiel annualisé",
+    "avant": 10.07
+   },
+   {
+    "t": "p",
+    "texte": "Si vous travaillez à temps partiel, votre durée peut être annualisée selon les mêmes principes, proratisée à votre quotité {ref:Art. 2.4}."
+   }
+  ],
+  [
+   {
+    "t": "section",
+    "titre": "Bon à savoir"
+   },
+   {
+    "t": "puces",
+    "items": [
+     "Les **JRTT** sont posés en accord entre vous et votre responsable, en tenant compte des nécessités de service {ref:Art. 2.1}",
+     "Votre temps de travail reste suivi par un **outil de gestion du temps**, à la différence du forfait jours {ref:Art. 2.2}"
+    ],
+    "apres": 0
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_cadres_en_heures_FO_3.svg",
+    "avant": 22.39
+   },
+   {
+    "t": "picto",
+    "svg": "Depliant_ATT_cadres_en_heures_FO_4.svg",
+    "legende": "À temps partiel, heures et JRTT sont calculés au prorata.",
+    "ecart": 8.6
+   }
+  ]
+ ]
+}

@@ -51,8 +51,8 @@ Transfert limité à **10 jours par an**, avec un abondement de l'ICO à hauteur
 
 **Dates et signataires**
 
-- Accord de base signé le **19 mars 2021** par les 4 organisations syndicales (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC).
-- Avenant n°1 signé le **31 janvier 2022** par ICO (Mario Campone, DG), CGT-FO (David Di Peri), CFDT (Corinne Lanio), CFE-CGC (Geneviève Perrocheau). **Sud Santé-Sociaux n'a pas signé l'avenant.**
+- Accord de base signé le **19 mars 2021** par ICO (Mario Campone, DG), CGT-FO (David Di Peri), CFDT (Corinne Lanio), CFE-CGC (Geneviève Perrocheau).
+- Avenant n°1 signé le **31 janvier 2022** par ICO (Mario Campone, DG), CGT-FO (David Di Peri), CFDT (Corinne Lanio), CFE-CGC (Geneviève Perrocheau).
 - Accord conclu pour une durée indéterminée *(Art. 8.2)*.
 
 **Suivi de l'accord**
@@ -61,3 +61,5 @@ Un bilan quantitatif et qualitatif de l'application de l'accord est établi et p
 
 ---
 *Source : accord CET (19/03/2021) et son avenant n°1 (31/01/2022).*
+
+*Les références entre parenthèses renvoient aux articles de l'accord ou de l'avenant. Seul le texte intégral fait référence : [accord de base (PDF)](../accord-cet-2021.pdf) et [avenant n°1 (PDF)](../Accord%20CET_Avenant%20n1_sign%C3%A9.pdf).*

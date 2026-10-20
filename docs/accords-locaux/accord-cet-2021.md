@@ -2,7 +2,8 @@
 
 - **Date de signature :** 19 mars 2021
 - **Source :** converti depuis `Accord_CET_vDéfinitive.md` (Word), version de travail définitive avant signature
-- **Document signé de référence (preuve juridique) :** PDF correspondant, conservé dans le même dossier
+- **Document signé de référence (preuve juridique) :** `accord-cet-2021.pdf`, conservé dans le même dossier
+- **Signataires (vérifiés sur PDF) :** CAMPONE (DG) a signé ; CGT-FO (D. DI PERI), CFDT (C. LANIO) et CFE-CGC (G. PERROCHEAU) ont signé. Sud Santé-Sociaux (I. FOUILLET), bien que partie à l'accord, n'a **pas** de signature visible sur la page de signature du PDF.
 
 ---
 

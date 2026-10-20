@@ -89,7 +89,7 @@ Les garanties Arrêt de travail et Décès accidentel ouvrent droit à des servi
 - Si l'atteinte grave vous **immobilise à domicile plus de 5 jours** sur prescription médicale : venue d'un proche à votre chevet (si aucun membre de votre famille n'habite à moins de 50 km), **garde de vos enfants** de moins de 15 ans (jusqu'à 30 heures réparties sur 15 jours) et **aide-ménagère à domicile** (jusqu'à 30 heures réparties sur 15 jours, demande à faire dans les 8 jours).
 - En cas de décès accidentel : services d'accompagnement des proches (rapatriement du corps, présence d'un proche, numéro d'information).
 
-Le document « ICO Information Assistance AXA » décrit un autre contrat d'assistance (n° 2713840) aux limites différentes ; son rattachement à ce régime n'est pas établi.
+Une autre notice d'information décrit l'ensemble des assistances AXA possibles (contrat n° 2713840), aux limites différentes : voir le [résumé Assistances AXA](resume-assistance-axa.md).
 
 ---
 

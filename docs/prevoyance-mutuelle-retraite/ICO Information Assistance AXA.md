@@ -22,14 +22,14 @@ En cas de problème pour joindre ce numéro, appeler le 01 55 92 12 29 (AXA Assi
 
 ## Description des services (extrait du contrat AXA)
 
-Les prestations ci-dessous sont accordées si aucun membre de la famille du bénéficiaire ne se trouve dans un rayon de 50 km de son domicile (ou de celui du bénéficiaire concerné). Sauf mention contraire, une seule intervention par an est prise en charge par prestation ; au-delà, AXA peut communiquer les coordonnées de prestataires qualifiés dont le coût reste à la charge du bénéficiaire.
+Pour chaque prestation d'hospitalisation ou d'immobilisation, une seule intervention par an est prise en charge ; au-delà, AXA peut communiquer les coordonnées de prestataires qualifiés dont le coût reste à la charge du bénéficiaire.
 
 ### En cas d'hospitalisation ou d'immobilisation au domicile de plus de 5 jours
 
-- **Garde des enfants (ou petits-enfants) de moins de 16 ans** : organisation et prise en charge dès le 1ᵉʳ jour (venue d'un proche, acheminement des enfants chez un proche, ou personne qualifiée à domicile, trajets école pris en charge jusqu'à 75 € par hospitalisation/immobilisation).
+- **Garde des enfants (ou petits-enfants) de moins de 16 ans** : organisation et prise en charge dès le 1ᵉʳ jour (venue d'un proche, acheminement des enfants chez un proche, ou personne qualifiée à domicile, trajets école pris en charge jusqu'à 75 € par hospitalisation/immobilisation) ; limitée à 40 heures sur 20 jours, 2 heures consécutives minimum par jour).
 - **Aide-ménagère à domicile** : demande à faire dans les 8 jours suivant l'hospitalisation ; aide limitée à 40 heures sur 20 jours (2 heures consécutives minimum par jour).
 - **Garde malade** : demande à faire dans les 8 jours suivant l'hospitalisation ; aide limitée à 40 heures sur 20 jours suivant l'hospitalisation (4 heures consécutives minimum par jour).
-- **Présence d'un proche au chevet** : transport aller-retour (avion classe économique ou train 1ʳᵉ classe) pour un proche résidant en France, hébergement pris en charge jusqu'à 3 nuits (80 €/nuit, chambre et petit-déjeuner inclus).
+- **Présence d'un proche au chevet** : transport aller-retour (avion classe économique ou train 1ʳᵉ classe) pour un proche résidant en France, hébergement pris en charge jusqu'à 3 nuits (80 €/nuit, chambre et petit-déjeuner inclus). Cette prestation n'est accordée que si aucun membre de la famille n'habite dans un rayon de 50 km du domicile.
 
 ### Organisation de services (hospitalisation, chimiothérapie/radiothérapie)
 

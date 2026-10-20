@@ -15,6 +15,7 @@ Les deux DUE de 2022 portent dans leur titre le mot « Prévoyance » alors que 
 
 - [Prévoyance AXA — décès, incapacité, invalidité](../accords-locaux/resumes-accords-locaux/resume-prevoyance-axa.md) (cadres et non cadres, clause bénéficiaire incluse) — [dépliant à imprimer](../accords-locaux/Depliants_FO/Depliant_Prevoyance_AXA_FO.pdf)
 - [DUE Complémentaire Frais de Santé](../accords-locaux/resumes-accords-locaux/resume-due-complementaire-frais-sante.md) (mutuelle, régime en vigueur)
+- [Assistances AXA — ce que vous pouvez demander](../accords-locaux/resumes-accords-locaux/resume-assistance-axa.md) (notice d'information des services d'assistance)
 
 ## Documents disponibles
 
@@ -26,7 +27,7 @@ Les deux DUE de 2022 portent dans leur titre le mot « Prévoyance » alors que 
 | [Notice prévoyance AXA — non cadres](Notice%20prevoyance%20non%20cadres%20AXA%202015.md) | Prévoyance (notice d'information, contrat AXA n°2257604120000Q) | notice du 23/11/2015, effet 01/01/2016 | En vigueur (sous réserve de confirmation) |
 | [Notice prévoyance AXA — cadres](Notice%20prevoyance%20cadres%20AXA%202015.md) | Prévoyance (notice d'information, contrat AXA n°2257604110000Q) | notice du 23/11/2015, effet 01/01/2016 | En vigueur (sous réserve de confirmation) — garanties strictement identiques à la notice non cadres |
 | [Clause bénéficiaire Prévoyance AXA](Clause%20beneficiaire%20Prevoyance%20AXA%202019.md) | Formulaire de désignation de bénéficiaire en cas de décès | VF 2019 | Formulaire individuel, à remplir par le salarié |
-| [ICO Information Assistance AXA](ICO%20Information%20Assistance%20AXA.md) | Coordonnées et prestations d'assistance (Henner/ITELIS, contrat AXA n°2713840) | — | Information pratique |
+| [ICO Information Assistance AXA](ICO%20Information%20Assistance%20AXA.md) | Coordonnées et prestations d'assistance (Henner/ITELIS, contrat AXA n°2713840) | — | Notice d'information des assistances AXA possibles, avec les numéros à appeler |
 
 ## ⚠️ Point de vigilance : le régime 2022 (« Prévoyance ») et le régime 2024 (« Frais de Santé »)
 

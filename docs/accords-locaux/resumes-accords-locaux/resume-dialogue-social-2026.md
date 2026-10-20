@@ -67,9 +67,13 @@ Il prépare les prochaines élections et définit précisément comment fonction
 - Après signature : délai d'opposition, puis dépôt légal
 
 ## La NAO *(Art. 3)*
-- Même composition que la négociation ordinaire (DS central + 2 personnes)
-- Revendications syndicales formalisées par écrit au plus tard lors de la 1ère réunion
-- PV final de NAO incluant les revendications de chaque OS et la position de la direction ; mis à la signature à l'automne
+- Composition : DS central, accompagné de 2 personnes de son choix maximum (délégation de 3 personnes au maximum) *(Art. 3.1)*
+- Invitation écrite adressée à chaque DS **5 jours ouvrés** avant la réunion *(Art. 3.2)*
+- Revendications des organisations syndicales formalisées par écrit, remises au plus tard lors de la **1ère réunion** de NAO *(Art. 3.2)*
+- Compte rendu de réunion rédigé par la direction, adressé aux personnes présentes ainsi qu'aux DS excusés *(Art. 3.3)*
+- À l'issue de la NAO, un protocole d'accord est présenté aux DS par mail avec accusé de réception, avec un calendrier de signature *(Art. 3.4)* :
+  - **En cas de signature valable** : l'accord est notifié à chaque DS, ce qui ouvre le délai d'opposition des organisations non signataires ; une fois ce délai écoulé sans opposition valable, l'accord est transmis à l'administration
+  - **En cas de signature non majoritaire ou d'absence de signature** : un procès-verbal de désaccord est dressé et notifié par mail avec accusé de réception aux DS, puis transmis à l'administration
 
 ---
 *Source : Accord sur le dialogue social (13/03/2026), signé CGT-FO, CFE-CGC, Sud Santé-Sociaux.*

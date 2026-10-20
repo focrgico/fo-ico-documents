@@ -63,4 +63,6 @@ Aucune commission de suivi, bilan annuel ou indicateur de suivi spécifique n'es
 
 ---
 
-**Base :** accord signé le 3 octobre 2022, par les 4 organisations syndicales représentatives (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC). Relu intégralement et revérifié contre le texte source le 20/10/2026 : aucune coquille ou incohérence relevée dans le corps de l'accord.
+**Base :** accord signé le 3 octobre 2022, par les 4 organisations syndicales représentatives (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC).
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord-Cheques%20syndicaux_v%20signee.pdf).*

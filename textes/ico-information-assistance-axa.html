@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICO Information Assistance AXA — FO ICO</title>
+<link rel="icon" href="../assets/favicon.png" type="image/png">
+<link rel="stylesheet" href="../assets/style.css?v=d7da99467b">
+</head>
+<body class="">
+<header class="nav">
+  <a href="../index.html" class="brand">
+    <span class="brand-title">FO ICO</span>
+    <span class="brand-sub">Base documentaire</span>
+  </a>
+  <nav>
+    <a href="../index.html" class="">Accueil</a>
+    <a href="../accords.html" class="active">Accords</a>
+    <a href="../resumes.html" class="">Résumés</a>
+    <a href="../depliants.html" class="">Dépliants</a>
+  </nav>
+</header>
+
+<section class="page-header">
+  <img src="../assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / ACCORDS / PRÉVOYANCE, MUTUELLE, RETRAITE / TEXTE</div>
+    <h1>ICO Information Assistance AXA</h1>
+    <p>Texte converti, pour la lecture et la recherche. Pour une citation officielle,
+    référez-vous toujours à <a href="../pdf/ICO%20Information%20Assistance%20AXA.pdf" target="_blank" rel="noopener">le PDF signé</a>.</p>
+  </div>
+</section>
+<article class="resume-content ccn-texte">
+
+<h3 id="p0">Comment contacter les services d'assistance</h3>
+<p id="p1">Contacter ITELIS : numéro dédié Henner 01 72 59 51 60</p>
+<p id="p2">Informations à fournir : Nom, prénom, date de naissance, adresse postale, numéro de téléphone Nom de l'employeur : Institut de Cancérologie de l'Ouest (en toutes lettres)</p>
+<p id="p3">Référence à rappeler : N° de contrat AXA : 2713840 N° de convention : 7203052</p>
+<p id="p4">En cas de problème pour joindre ce numéro, appeler le 01 55 92 12 29 (AXA Assistance Direct) et communiquer le numéro de convention, ou contacter Henner — Unité de gestion n°9 au 02 51 88 77 09.</p>
+<h3 id="p5">Description des services (extrait du contrat AXA)</h3>
+<p id="p6">Les prestations ci-dessous sont accordées si aucun membre de la famille du bénéficiaire ne se trouve dans un rayon de 50 km de son domicile (ou de celui du bénéficiaire concerné). Sauf mention contraire, une seule intervention par an est prise en charge par prestation ; au-delà, AXA peut communiquer les coordonnées de prestataires qualifiés dont le coût reste à la charge du bénéficiaire.</p>
+<h3 id="p7">En cas d'hospitalisation ou d'immobilisation au domicile de plus de 5 jours</h3>
+<p id="p8">Garde des enfants (ou petits-enfants) de moins de 16 ans : organisation et prise en charge dès le 1ᵉʳ jour (venue d'un proche, acheminement des enfants chez un proche, ou personne qualifiée à domicile, trajets école pris en charge jusqu'à 75 € par hospitalisation/immobilisation). Aide-ménagère à domicile : demande à faire dans les 8 jours suivant l'hospitalisation ; aide limitée à 40 heures sur 20 jours (2 heures consécutives minimum par jour). Garde malade : demande à faire dans les 8 jours suivant l'hospitalisation ; aide limitée à 40 heures sur 20 jours suivant l'hospitalisation (4 heures consécutives minimum par jour). Présence d'un proche au chevet : transport aller-retour (avion classe économique ou train 1ʳᵉ classe) pour un proche résidant en France, hébergement pris en charge jusqu'à 3 nuits (80 €/nuit, chambre et petit-déjeuner inclus).</p>
+<h3 id="p9">Organisation de services (hospitalisation, chimiothérapie/radiothérapie)</h3>
+<p id="p10">À la demande du bénéficiaire ou d'un proche : accompagnement dans les déplacements, recherche de personnel médical/paramédical/de confort, livraison de courses, pressing, coiffeur, portage de repas, pédicure, kinésithérapeute, personne de compagnie, petit dépannage (serrurerie, plomberie, électricité, vitrerie), petit jardinage, petit bricolage. Le coût de ces services reste à la charge du salarié — seule leur organisation est prise en charge par AXA.</p>
+<h3 id="p11">Autres services</h3>
+<p id="p12">Recherche d'une place en milieu hospitalier (sur prescription médicale, établissements dans un rayon de 50 km du domicile). Soins à domicile (infirmière, kinésithérapeute, sur prescription médicale) — frais de déplacement et honoraires restant à la charge du salarié. Soutien pédagogique : si l'enfant est immobilisé à domicile plus de 15 jours consécutifs sur prescription médicale, recherche de répétiteurs pour les matières principales (à partir du 16ᵉ jour d'immobilisation, hors vacances scolaires) — coût à la charge du salarié. Informations maternité : renseignements généraux et documentaires (grossesse, naissance, prestations familiales, congés parentaux…) — ne constitue pas une consultation médicale personnalisée. Assistance en cas de déplacement à plus de 50 km du domicile : en cas d'atteinte corporelle grave, organisation et prise en charge du rapatriement sanitaire vers le centre hospitalier le plus adapté, le plus proche du domicile, ou le domicile lui-même, selon décision de l'équipe médicale AXA. Garantie valable dans le monde entier pour le rapatriement ; les autres garanties s'exercent en France.</p>
+<h3 id="p13">Limites générales</h3>
+<p id="p14">AXA ne peut être tenu pour responsable des dommages à caractère professionnel ou commercial liés à une intervention des services d'assistance, ni se substituer aux organismes locaux ou nationaux de secours d'urgence (dont les frais ne sont pas pris en charge).</p>
+</article>
+<script>
+// Surligne le terme recherché (?q=...) dans le texte
+(function () {
+  const q = new URLSearchParams(location.search).get('q');
+  if (!q || q.trim().length < 3) return;
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 3);
+  document.querySelectorAll('.ccn-texte p, .ccn-texte h3').forEach(el => {
+    const txt = el.textContent, nt = norm(txt);
+    let marks = [];
+    terms.forEach(t => { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (i === 0 || !/[a-z0-9]/.test(nt[i - 1])) marks.push([i, i + t.length]); i += t.length; } });
+    if (!marks.length) return;
+    marks.sort((a, b) => a[0] - b[0]);
+    let out = '', pos = 0;
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    marks.forEach(([a, b]) => { if (a < pos) return; out += esc(txt.slice(pos, a)) + '<mark>' + esc(txt.slice(a, b)) + '</mark>'; pos = b; });
+    el.innerHTML = out + esc(txt.slice(pos));
+  });
+  if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+})();
+</script>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <img src="../assets/logo.png" alt="Logo FO ICO" class="footer-logo">
+    <span>FO ICO — Base documentaire</span>
+  </div>
+  <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
+</footer>
+</body>
+</html>

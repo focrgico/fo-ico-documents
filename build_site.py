@@ -263,7 +263,9 @@ def fix_relative_links(html_fragment, resume_rel_path):
         attr, target = m.group(1), m.group(2)
         if target.startswith(("http://", "https://", "mailto:", "#")):
             return m.group(0)
-        resolved = os.path.normpath(os.path.join(resume_dir, target)).replace("\\", "/")
+        # target vient d'un lien Markdown déjà encodé (%20, %C3%A9) : on le décode
+        # avant de résoudre, car url_for() ré-encode (sinon double encodage %2520).
+        resolved = os.path.normpath(os.path.join(resume_dir, unquote(target))).replace("\\", "/")
         return f'{attr}="{url_for(resolved)}"'
 
     return LINK_ATTR_RE.sub(repl, html_fragment)
@@ -288,6 +290,34 @@ def localize_depliant_links(html_fragment):
         filename = unquote(m.group(1))
         return local_pdf_url(filename, subdir="../depliants")
     return DEPLIANT_LINK_RE.sub(repl, html_fragment)
+
+
+PDF_ACCORD_LINK_RE = re.compile(
+    re.escape(RAW_BASE) + r"(?!accords-locaux/Depliants_FO/)([^\"'\s)]+\.pdf)"
+)
+
+
+def site_pdf_basenames(cat):
+    """Noms de base des PDF copiés dans site/pdf/ (catalogue + PDF_HORS_CATALOGUE)."""
+    names = set()
+    for a in cat["accords"]:
+        names.update(os.path.basename(p) for p in pdf_list(a) if p)
+    names.update(os.path.basename(p) for p in PDF_HORS_CATALOGUE)
+    return names
+
+
+def localize_accord_pdf_links(html_fragment, cat):
+    """Version HTML d'un résumé : les liens « accord complet (PDF) » pointent vers le
+    PDF servi par le site (site/pdf/) quand il y est, plutôt que vers GitHub (même
+    raison que local_pdf_url()). Le .docx exporté garde l'URL GitHub absolue."""
+    names = site_pdf_basenames(cat)
+
+    def repl(m):
+        filename = os.path.basename(unquote(m.group(1)))
+        if filename in names:
+            return local_pdf_url(filename, subdir="../pdf")
+        return m.group(0)
+    return PDF_ACCORD_LINK_RE.sub(repl, html_fragment)
 
 
 COUVERTURE_RE = re.compile(
@@ -1483,7 +1513,7 @@ def build_resume_pages(cat, out_dir):
         # fragment garde ses URL GitHub absolues pour le .docx exporté plus bas
         # (fichier autonome, doit rester cliquable hors du site) ; fragment_html
         # est la version affichée sur la page, avec les liens dépliant localisés.
-        fragment_html = localize_depliant_links(fragment)
+        fragment_html = localize_accord_pdf_links(localize_depliant_links(fragment), cat)
 
         html = page_head(a["titre"], "resumes.html", base="../")
         html += f"""

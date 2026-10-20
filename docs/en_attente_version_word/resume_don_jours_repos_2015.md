@@ -1,5 +1,3 @@
-⚠️ **Résumé provisoire**, établi à partir d'une transcription OCR du PDF scanné (lecture visuelle page par page). À vérifier/compléter dès que la version Word sera retrouvée.
-
 # Don de jours de repos non pris
 
 **Accord signé le 9 janvier 2015 par l'ICO (Pr F.R Bataille) et les 4 organisations syndicales (CGT-FO, CGT, CFE-CGC, Sud Santé-Sociaux).**
@@ -43,6 +41,6 @@ Par écrit, auprès de la DRH, en précisant le nombre de jours donnés et leur 
 - Vous conservez tous les avantages que vous aviez acquis avant votre absence
 
 ---
-*Source : Accord signé le 09/01/2015 par l'ICO et CGT-FO, CGT, CFE-CGC, Sud Santé-Sociaux.*
+*Source : accord signé le 9 janvier 2015 par l'ICO, la CGT-FO, la CGT, la CFE-CGC et Sud Santé-Sociaux.*
 
-*Note : l'en-tête de chaque page du PDF signé porte la mention « Projet accord - 19 novembre 2014 », malgré la signature et la date du 9 janvier 2015 — vraisemblablement un en-tête de modèle non mis à jour, sans incidence apparente sur le contenu signé.*
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../accords-locaux/Accord%20don%20de%20jours%20de%20repos%202015.pdf).*

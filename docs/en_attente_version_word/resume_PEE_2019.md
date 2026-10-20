@@ -1,8 +1,6 @@
-⚠️ **Résumé provisoire**, établi à partir d'une transcription OCR du PDF scanné (lecture visuelle page par page). À vérifier/compléter dès que la version Word de l'accord sera retrouvée.
-
 # Plan d'Épargne d'Entreprise (PEE)
 
-**Accord signé le 22 février 2019 par l'ICO (Pr Mario Campone), la CGT-FO et la CFE-CGC.** La CGT et Sud Santé-Sociaux ne l'ont pas signé.
+**Accord signé le 22 février 2019 par l'ICO (Pr Mario Campone), la CGT-FO et la CFE-CGC.**
 *Accord à durée indéterminée.*
 
 ---
@@ -50,7 +48,7 @@ La demande doit être faite dans les 6 mois suivant l'événement, sauf en cas d
 - Une **commission de souscription** à chaque investissement *(Art. 4)*
 - Les **frais de tenue de compte sont pris en charge par l'ICO** tant que vous êtes salarié ; ils deviennent à votre charge après votre départ *(Art. 3 et 6)*
 
-⚠️ **Point à vérifier** : l'article 2 du règlement mentionne un « versement complémentaire (abondement) de l'Entreprise tel que défini à l'article 3 », mais l'article 3 ne décrit que la prise en charge des frais de tenue de compte — aucun montant d'abondement n'est chiffré dans ce document. À confirmer sur la version Word : soit il n'existe pas d'abondement monétaire au-delà de la prise en charge des frais, soit un article a été omis dans la transcription.
-
 ---
-*Source : Plan d'Épargne d'Entreprise signé le 22/02/2019 par l'ICO, la CGT-FO et la CFE-CGC (CGT et Sud Santé-Sociaux non signataires). Gestion : Natixis Interépargne (teneur de compte), CACEIS Bank France (dépositaire).*
+*Source : Plan d'Épargne d'Entreprise signé le 22 février 2019 par l'ICO, la CGT-FO et la CFE-CGC. Gestion : Natixis Interépargne (teneur de compte), CACEIS Bank France (dépositaire).*
+
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../accords-locaux/Accord%20PEE%20signe%20par%20FO%20et%20CGC.pdf).*

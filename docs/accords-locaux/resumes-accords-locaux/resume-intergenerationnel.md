@@ -1,8 +1,6 @@
-Accord intergénérationnel — résumé pour tryptique
+Accord intergénérationnel
 
 > **Dépliant à imprimer** — [Accord intergénérationnel (PDF, 3 volets)](../Depliants_FO/Depliant_intergenerationnel_FO.pdf)
-
-**Sur les versions et les références :** ce résumé intègre l'accord de base du 30 janvier 2020, l'avenant n°1 du 30 juin 2021 et l'avenant du 15 septembre 2023 — les trois s'appliquent ensemble. L'avenant 2023 modifie uniquement les conditions d'éligibilité de l'Article 3.4.2 ; il ne mentionne pas et n'abroge pas la possibilité, ajoutée par l'avenant 2021, de fractionner un temps partiel à 50 % sur 2 semaines — cette disposition reste donc en vigueur. Les articles cités entre parenthèses renvoient au texte de l'accord de base sauf mention contraire.
 
 ---
 
@@ -111,6 +109,6 @@ Les engagements pris dans le cadre de l'accord égalité professionnelle s'appli
 
 ---
 
-**Base :** accord signé le 30 janvier 2020 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant n°1 du 30 juin 2021 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant du 15 septembre 2023 (CGT-FO, Sud Santé-Sociaux, CFE-CGC). Les trois textes s'appliquent ensemble, l'avenant 2023 ne modifiant que les conditions d'éligibilité du temps partiel de fin de carrière.
+**Base :** accord signé le 30 janvier 2020 (CGT-FO, Sud Santé-Sociaux, CFE-CGC) ; avenant n°1 du 30 juin 2021 (CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC) ; avenant du 15 septembre 2023 (CGT-FO, Sud Santé-Sociaux, CFE-CGC).
 
 *Les références entre parenthèses renvoient aux articles de l'accord de base. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Interg%C3%A9n%C3%A9rationnel%20du%2030%2001%202020_sign%C3%A9.pdf).*

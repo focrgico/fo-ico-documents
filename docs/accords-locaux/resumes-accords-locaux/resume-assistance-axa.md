@@ -1,5 +1,7 @@
 # Assistances AXA — ce que vous pouvez demander
 
+> **Dépliant à imprimer** — [Assistances AXA (PDF, 3 volets)](../Depliants_FO/Depliant_Assistances_AXA_FO.pdf)
+
 *Notice d'information des services d'assistance AXA (extrait du contrat AXA, contrat n° 2713840, convention n° 7203052), complétée d'une fiche pratique de l'ICO avec les numéros à appeler. Ce n'est pas un accord négocié : il n'y a pas de signataire syndical.*
 
 ---

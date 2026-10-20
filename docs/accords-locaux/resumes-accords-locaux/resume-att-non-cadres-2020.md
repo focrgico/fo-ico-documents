@@ -3,7 +3,7 @@
 > **Dépliants à imprimer** (PDF, 3 volets) — [Horaires et repos](../Depliants_FO/Depliant_ATT_non_cadres_1_horaires_FO.pdf) · [Annualisation et heures sup](../Depliants_FO/Depliant_ATT_non_cadres_2_annualisation_FO.pdf) · [Congés et astreintes](../Depliants_FO/Depliant_ATT_non_cadres_3_conges_FO.pdf) · [Travail de nuit](../Depliants_FO/Depliant_ATT_non_cadres_4_travail_de_nuit_FO.pdf)
 
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
-**Source : accord du 14 septembre 2020, tel que modifié par l'Avenant n°1 du 31 janvier 2022 (heures supplémentaires) et par l'avenant du 31 décembre 2025 (congés payés pendant un arrêt maladie). Le reste de l'accord de 2020 est inchangé.**
+**Source : accord du 14 septembre 2020, avenant n°1 du 31 janvier 2022 (heures supplémentaires) et avenant du 31 décembre 2025 (congés payés pendant un arrêt maladie).**
 
 ## Qui est concerné
 
@@ -27,7 +27,7 @@ Vous êtes non-cadre à l'ICO ? Cet accord s'applique à vous, que vous soyez en
 - **Votre durée annuelle** : 1 596h/an (1 582h avec 2 jours de fractionnement complets), soit 38h15 hebdomadaires de référence + des JRTT (Article 2.2-2.3).
 - **Vos JRTT** : jusqu'à 19 jours/an pour un temps plein avec droits complets, réduits au prorata en cas d'absence. Une partie à votre initiative (demande 4 semaines à l'avance), une partie à celle de l'Institut (Article 2.3).
 - **Votre planning** : communiqué au moins 3 mois à l'avance ; modifiable sous 7 jours (réductible à 72h en cas d'absentéisme imprévu non régulable, ou 48h en cas de réduction d'effectifs) (Article 2.4).
-- **Vos heures supplémentaires — version en vigueur (Avenant n°1, 31/01/2022, remplace l'ex-article 2.6)** : décomptées au 31 décembre, majorées de 25% au-delà de 1 582h. **À vous de choisir** : pour les heures au-delà de 40h validées au 31/12, soit vous les faites payer en janvier N+1, soit vous les versez sur votre CET — si vous n'exprimez aucun choix, elles vous sont payées automatiquement en janvier N+1. Pour les heures jusqu'à 40h : payées en janvier, en repos compensateur sous 12 mois, ou sur le CET, toujours à votre choix. Dès que votre compteur atteint 7h, vous pouvez demander à être payé tout ou partie sur la paie d'avril, juillet ou octobre (avec 10% de majoration dans ce cas) (Avenant n°1, Article 1.1).
+- **Vos heures supplémentaires (Avenant n°1, 31/01/2022)** : décomptées au 31 décembre, majorées de 25% au-delà de 1 582h. **À vous de choisir** : pour les heures au-delà de 40h validées au 31/12, soit vous les faites payer en janvier N+1, soit vous les versez sur votre CET — si vous n'exprimez aucun choix, elles vous sont payées automatiquement en janvier N+1. Pour les heures jusqu'à 40h : payées en janvier, en repos compensateur sous 12 mois, ou sur le CET, toujours à votre choix. Dès que votre compteur atteint 7h, vous pouvez demander à être payé tout ou partie sur la paie d'avril, juillet ou octobre (avec 10% de majoration dans ce cas) (Avenant n°1, Article 1.1).
 - **Temps partiel annualisé** : nécessite votre accord exprès ; vos heures complémentaires sont majorées de 10% jusqu'à 1/10 de votre durée annuelle contractuelle, puis 25% au-delà, plafonnées à 1/3 de votre durée contractuelle. Vos interruptions d'activité dans la journée sont limitées à 2, chacune de 2h maximum, avec une période de travail continue d'au moins 3h (Article 2.7).
 - **Compteur annualisation** : plafonné à -21h (Article 2.9).
 
@@ -43,7 +43,7 @@ Vous êtes non-cadre à l'ICO ? Cet accord s'applique à vous, que vous soyez en
 - **Planification** : validée par la Direction au plus tard le 15 janvier (période mai-octobre) ou le 15 juin (novembre-avril) ; 3 semaines consécutives minimum l'été (4 si le service le permet) ; pas de modification à moins d'1 mois du départ pour un congé d'1 semaine ou plus (Article 4.1.3).
 - **Si vous tombez malade avant des congés programmés** : vos congés non pris sont reportés (Article 4.1.4, tel que modifié par l'avenant du 31/12/2025).
 - **Si vous reprenez le travail après la fin de la période de prise des congés** (suite à maternité, maladie, accident du travail ou maladie professionnelle) : vos congés non pris peuvent être reportés jusqu'à **fin janvier de l'année suivante** ; si ce report n'est pas possible, ils sont placés sur votre CET (Article 4.1.5).
-- **Si vous tombez malade pendant vos congés (version en vigueur depuis le 31/12/2025)** : votre congé est **reporté à une date ultérieure**, à redéfinir avec votre responsable dans un délai de **15 jours**. *(Ceci remplace la règle d'origine de 2020, qui maintenait le congé sans interruption.)* À votre retour, vous êtes informé(e) du report sur votre bulletin de salaire ou par mail, et vous avez **15 mois** pour poser les congés non pris (Article 4.1.4, avenant du 31/12/2025).
+- **Si vous tombez malade pendant vos congés (avenant du 31/12/2025)** : votre congé est **reporté à une date ultérieure**, à redéfinir avec votre responsable dans un délai de **15 jours**. À votre retour, vous êtes informé(e) du report sur votre bulletin de salaire ou par mail, et vous avez **15 mois** pour poser les congés non pris (Article 4.1.4, avenant du 31/12/2025).
 - **Un événement familial pendant vos congés** : votre congé est interrompu en cas de décès d'un membre de votre famille — *au sens de l'article 2.4.3.3 de la CCN* (Article 4.1.6).
 - **Congé pour maladie grave d'un proche** : accordé sous réserve d'un délai de 3 jours (Article 4.1.7).
 - **Si vous êtes d'astreinte** : concerne les IBODE, infirmier(e)s anesthésistes D.E., manipulateurs ER imagerie, service technique, informatique, masseurs-kinésithérapeutes (Article 4.2.2). Le planning vous est communiqué au moins 7 jours à l'avance. Votre intervention (trajet inclus) compte comme temps de travail effectif, et vos frais sont remboursés. *Les contreparties sont définies par les accords de branche et la CCN des CLCC* (Article 4.2.5).
@@ -69,7 +69,7 @@ Vous êtes non-cadre à l'ICO ? Cet accord s'applique à vous, que vous soyez en
 
 ## À retenir
 
-Aujourd'hui, ce sont les règles de l'**Avenant n°1 du 31 janvier 2022** qui s'appliquent pour vos heures supplémentaires, et celles de l'**avenant du 31 décembre 2025** pour vos congés payés en cas d'arrêt maladie — tout le reste de l'accord de 2020 continue de s'appliquer tel quel. Pour les astreintes et le décès d'un proche pendant vos congés, pensez aussi à consulter les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
+Pour les astreintes et le décès d'un proche pendant vos congés, consultez aussi les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
 
 ## Suivi de l'accord
 

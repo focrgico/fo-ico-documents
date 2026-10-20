@@ -52,7 +52,7 @@ Restent en dehors de cet accord : contrats de professionnalisation/apprentissage
 
 ## À retenir
 
-Un seul changement depuis 2021 : l'avenant du 31/12/2025 a mis à jour la règle sur les congés payés pendant un arrêt maladie (voir ci-dessus) — tout le reste de l'accord reste identique. Pour les astreintes et le décès d'un proche pendant les congés, pensez aussi à vérifier les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
+Pour les astreintes et le décès d'un proche pendant les congés, consultez aussi les articles correspondants de la CCN des CLCC (respectivement 2.5.4.3 et 2.4.3.3).
 
 ## Suivi de l'accord
 

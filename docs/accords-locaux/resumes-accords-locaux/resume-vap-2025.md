@@ -23,6 +23,6 @@ Depuis plusieurs années, le taux de validation des passages de palier est supé
 Les critères d'évaluation (EAA et GPEC) restent inchangés. Seul le processus administratif est simplifié.
 
 ---
-*Source : Accord VAP (22/03/2024) et son avenant (04/02/2025), les deux PDF signés vérifiés visuellement page par page le 20/10/2026.*
+*Source : Accord VAP (22/03/2024) et son avenant (04/02/2025).*
 
 *Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20sur%20la%20validation%20des%20acquis%20professionnels%20_Version%20sign%C3%A9e.pdf).*

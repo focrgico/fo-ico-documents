@@ -1,17 +1,10 @@
-# Accord télétravail — résumé pour tryptique
+# Accord télétravail
 
 > **Dépliant à imprimer** — [Accord télétravail (PDF, 3 volets)](../Depliants_FO/Depliant_teletravail_FO.pdf)
-*Contenu prêt à intégrer dans la mise en page.*
-
-**Sur les références :** le dépôt GitHub ne contient, pour cet accord, que la version convertie en Markdown — pas de PDF signé retrouvé à ce jour dans le dossier `accords-locaux`. Les articles/sous-articles cités ci-dessous viennent du texte source (numérotés explicitement) ; pas de numéro de page tant que le PDF signé n'est pas disponible.
 
 ---
 
-## VOLET 1 — Pourquoi cet accord ?
-
-**Le contexte en bref** *(Préambule)*
-
-Depuis 2021, le télétravail a sa place à l'ICO. Cet accord est né d'une demande simple des salariés : mieux équilibrer vie pro et vie perso, gagner du temps de trajet, réduire le risque d'accident sur la route — sans jamais fragiliser la continuité et la sécurité des soins. Un principe protège tout le monde des deux côtés : le télétravail reste **volontaire**, personne ne peut vous l'imposer, et vous ne pouvez pas l'imposer non plus à votre service *(Art. 4.1 — double volontariat)*.
+## VOLET 1 — Qui est concerné ?
 
 **Qui peut en bénéficier ?** *(Art. 3 — Critères d'éligibilité)*
 
@@ -20,6 +13,7 @@ Depuis 2021, le télétravail a sa place à l'ICO. Cet accord est né d'une dema
 - Votre poste doit pouvoir se faire à distance — les métiers en contact direct avec les patients (accueil, soins) restent en dehors du dispositif, pour que la prise en charge ne soit jamais interrompue *(Art. 3.1)*
 - Sont exclus : apprentis, contrats de professionnalisation, CUI-CEC, stagiaires *(Art. 3.3)*
 - **Exception pour le personnel médical en lien avec le soin** : le télétravail peut être justifié pour les projets de recherche ou médicaux, les publications, les congrès ou réunions scientifiques, et pour la structuration de l'organisation du service en complément du chef de service. Sur validation du chef de département, il peut aussi être mis en œuvre pour des activités techniques et cliniques (télémédecine), après une période d'adaptation — la téléconsultation restant toujours exclue *(Art. 3.1)*
+- Le télétravail est **volontaire des deux côtés** : personne ne peut vous l'imposer, et vous ne pouvez pas l'imposer à votre service *(Art. 4.1 — double volontariat)*
 - **Un bénéficiaire d'une RQTH (reconnaissance qualité travailleur handicapé)** verra son accès au télétravail favorisé, sur préconisation du médecin du travail, avec des aménagements de poste étudiés si besoin *(Art. 11)*
 
 **Ce qu'il faut retenir** *(Art. 6 — Fréquence et nombre de jours)*

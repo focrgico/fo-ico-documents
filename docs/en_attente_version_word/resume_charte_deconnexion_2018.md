@@ -1,8 +1,6 @@
-⚠️ **Résumé provisoire**, établi à partir d'une transcription OCR du PDF scanné (lecture visuelle page par page). À vérifier/compléter dès que la version Word sera retrouvée.
-
 # DUE — Charte sur le droit à la déconnexion
 
-**⚠ Décision unilatérale de l'employeur, pas un accord négocié.** Seule la CFE-CGC avait signé l'accord négocié visé par le préambule ; cette négociation n'a pas abouti.
+**Décision unilatérale de l'employeur, pas un accord négocié.**
 
 ---
 
@@ -44,4 +42,6 @@ Un questionnaire personnel et anonyme vous est adressé chaque fin d'année, **s
 Cette charte s'applique depuis le **22 juin 2018**, après consultation du CHSCT et du Comité Central d'Entreprise. Elle est révisée au moins une fois par an.
 
 ---
-*Source : Charte signée uniquement par le Directeur Général de l'ICO (Pr Mario Campone), le 22/06/2018.*
+*Source : décision unilatérale de l'employeur, signée le 22 juin 2018 par le Directeur Général de l'ICO (Pr Mario Campone).*
+
+*Les références entre parenthèses renvoient aux articles de la charte. Seul le texte intégral fait référence : [accord complet (PDF)](../DUE/Charte%20deconnexion%202018.pdf).*

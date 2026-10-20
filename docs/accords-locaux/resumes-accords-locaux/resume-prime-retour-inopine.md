@@ -17,7 +17,7 @@
 
 ## Qu'est-ce qu'un retour inopiné ? *(point 1)*
 
-C'est quand la Direction vous demande, avec **moins de 6 jours de prévenance** :
+C'est quand la Direction vous demande, avec **6 jours de prévenance ou moins** :
 - De venir travailler un **jour planifié comme non travaillé**
 - D'**avancer votre prise de poste de 4h ou plus**
 - De **retarder votre fin de poste de 4h ou plus**

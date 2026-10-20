@@ -2,10 +2,6 @@
 
 > **Dépliant à imprimer** — [PERCOL (PDF, 3 volets)](../Depliants_FO/Depliant_PERCOL_FO.pdf)
 
-**Le contexte en bref** *(Préambule)*
-
-Un plan d'épargne retraite d'entreprise, régi par le Code monétaire et financier, ouvert à tous les salariés.
-
 **Qui peut y adhérer** *(Art. 1)*
 
 Vous, dès **3 mois d'ancienneté** (les stages de plus de 2 mois comptent dans ce délai s'ils débouchent sur une embauche ; les périodes de suspension du contrat ne sont pas déduites de ce calcul d'ancienneté). Si vous quittez l'ICO, vous pouvez continuer à verser, sans abondement et avec les frais de gestion à votre charge exclusive, tant que vous n'avez pas accès à un autre PERCOL chez votre nouvel employeur *(Art. 1)*.

@@ -3,7 +3,7 @@
 > **Dépliant à imprimer** — [Forfait mobilité durable (PDF, 3 volets)](../Depliants_FO/Depliant_forfait_mobilite_durable_FO.pdf)
 
 **Signé le 24 octobre 2025 par l'ICO (Mario CAMPONE), CGT-FO et CFE-CGC.**
-*En vigueur rétroactivement depuis le 1er janvier 2025, durée indéterminée. Remplace et annule l'accord 2024 (l'accord lui-même le précise dans son préambule).*
+*En vigueur rétroactivement depuis le 1er janvier 2025, durée indéterminée.*
 
 ---
 
@@ -50,6 +50,6 @@ La prime FMD est **cumulable** avec le remboursement de l'abonnement de transpor
 Aucune commission de suivi, bilan annuel ou clause de revoyure n'est prévu par cet accord. Le dispositif a toutefois déjà été revu deux fois par la voie des NAO (2024 puis 2025), ce qui joue de fait un rôle de clause de revoyure, sans que l'accord lui-même ne l'impose.
 
 ---
-*Source : Accord Forfait Mobilité Durable (24/10/2025), signé CGT-FO et CFE-CGC. PDF signé vérifié visuellement page par page le 20/10/2026.*
+*Source : Accord Forfait Mobilité Durable (24/10/2025), signé CGT-FO et CFE-CGC.*
 
-*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Forfait%20Mobilite%20Durable%202025.pdf).*
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20Forfait%20Mobilite%20Durable%202025%20signe.pdf).*

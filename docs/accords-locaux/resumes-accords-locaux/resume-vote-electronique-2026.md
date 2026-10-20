@@ -24,7 +24,7 @@ La société **AKG SOLUTIONS** est retenue. Son système a été audité et l'au
 ## Comment voter *(Art. 3)*
 
 - Des ordinateurs sont mis à disposition dans un lieu garantissant la confidentialité, pendant la période du scrutin
-- Vote possible également **depuis son domicile** ou tout lieu avec internet
+- Si vous êtes **absent pendant la période du scrutin**, vous pouvez voter par internet **depuis votre domicile** ou tout autre lieu avec accès internet
 - L'électeur reçoit un **identifiant et un mot de passe** générés aléatoirement, remis contre émargement au bureau de vote (ou envoyés par courrier postal si absent)
 - Authentification par une question personnelle (ex. date de naissance)
 - Le choix peut être modifié avant validation ; une fois validé, un **accusé de réception** est délivré (imprimable)

@@ -7,9 +7,9 @@
 
 ---
 
-## Qui est concerné
+## Qui est concerné *(Art. 1)*
 
-Les **physiciens médicaux** de l'ICO, en CDI.
+Les **physiciens médicaux** de l'ICO.
 
 ---
 

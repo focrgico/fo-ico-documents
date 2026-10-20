@@ -19,9 +19,9 @@ Si le contrat ne débouche pas sur un CDI : indemnité spécifique de **10 % de 
 **Vos garanties** *(Art. 4)*
 
 - Accès au plan de formation et au CIF, même après la fin du contrat ; bilan professionnel outplacement jusqu'à **24h**/**800 € TTC**
-- Co-investissement CPF possible par l'ICO, jusqu'à **20h**
-- **Priorité d'embauche en CDI** pendant le contrat, puis priorité d'accès aux emplois CDI/CDD pendant **12 mois** après, sur demande à la DRH
-- **10h/mois** d'autorisation d'absence pendant le préavis, pour organiser la suite
+- Co-investissement CPF possible par l'ICO, jusqu'à **20h**, si vos heures CPF ne suffisent pas — la formation doit être engagée **avant la fin du contrat** et se terminer dans un délai de **6 mois après la rupture du contrat** ; à titre exceptionnel, elle peut débuter après la fin du contrat si son financement a été validé avant votre départ
+- **Priorité d'embauche en CDI** pendant toute la durée du contrat, avec accès automatique à la liste des postes à pourvoir (mail + intranet), puis **priorité d'accès** aux emplois en CDI ou CDD pendant **12 mois** après la fin du contrat — pour continuer à recevoir les offres par mail durant ces 12 mois, vous devez en faire la demande à la DRH
+- **10h/mois** d'autorisation d'absence pendant le délai de prévenance, prises en accord avec votre hiérarchie, pour organiser la suite de votre parcours — ce droit cesse dès que vous avez trouvé un autre emploi
 
 **Dates et signataires**
 

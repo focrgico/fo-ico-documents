@@ -29,7 +29,7 @@ Durée totale du parcours : **environ 3 ans**.
 Une fois les 3 conditions remplies (cycle pratique validé + formation théorique faite + cycle de consolidation complet) :
 
 - **200 € bruts/mois**
-- **250 € bruts/mois** si vous avez en plus obtenu le **DU de Macroscopie**
+- **250 € bruts/mois** si vous avez suivi avec succès le **parcours de formation interne** (et non externe) ET obtenu le **DU de Macroscopie** *(point 2)*
 
 ---
 *Source : DUE Parcours macroscopie techniciens de laboratoire (08/12/2023) — Décision de l'ICO, aucun syndicat signataire.*

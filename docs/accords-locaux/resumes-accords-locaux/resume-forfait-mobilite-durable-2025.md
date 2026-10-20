@@ -13,6 +13,9 @@
 
 Tout salarié de l'ICO qui réalise ses trajets domicile-travail en vélo, en covoiturage (conducteur ou passager) ou en trottinette électrique.
 
+- Pour le **vélo** et la **trottinette électrique** : vous devez utiliser ce mode de façon **quasi exclusive** pour vos trajets domicile-travail *(Art. 1-1, Art. 3-1)*. Les **déplacements réalisés à pied sont exclus du dispositif** *(Art. 1-1)*.
+- Pour le **covoiturage**, aucune condition de quasi-exclusivité n'est posée *(Art. 2-1)*.
+
 ---
 
 ## Les trois primes *(Art. 1-3)*
@@ -29,7 +32,7 @@ Ces trois primes ne sont **pas cumulables entre elles** — une seule peut être
 - Versement en une fois en **décembre** de l'année
 - Proraté au temps de présence pour les entrées/sorties en cours d'année
 - Pour les temps partiels : montant plein si taux d'activité > 50% ; proportionnel au-dessous
-- Une attestation sur l'honneur est obligatoire, à transmettre à la DRH dans les délais impartis
+- Une attestation sur l'honneur est obligatoire, à transmettre à la DRH dans les délais impartis — **au-delà de ce délai, la demande ne pourra plus être traitée** *(Art. 1-3, 2-3, 3-3)*
 
 ---
 
@@ -37,7 +40,7 @@ Ces trois primes ne sont **pas cumulables entre elles** — une seule peut être
 
 L'ICO prend en charge **60% de votre abonnement** de transport en commun (contre 50% légalement obligatoire, taux amélioré depuis la NAO 2022).
 
-La prime FMD est **cumulable** avec le remboursement de l'abonnement de transport en commun, dans la limite du plafond légal (**900 € en 2025**).
+La prime FMD est **cumulable** avec le remboursement de l'abonnement de transport en commun, dans la limite du plafond légal (**900 € en 2025**, à titre indicatif). Si l'addition des deux dépasse ce plafond, c'est le montant de **la prime FMD qui est réduit** à hauteur du plafond, pas le remboursement du titre de transport *(Art. 5)*.
 
 ---
 *Source : Accord Forfait Mobilité Durable (24/10/2025), signé CGT-FO, Sud Santé-Sociaux, CFE-CGC.*

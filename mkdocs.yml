@@ -17,6 +17,9 @@ nav:
       - Présentation: ccn/index.md
       - Grilles de rémunération: ccn/grilles-remuneration.md
       - Texte intégral: ccn/ccn-clcc.md
+  - Règlement intérieur:
+      - Sommaire: reglement-interieur/index.md
+      - Reglement interieur ICO 2024: reglement-interieur/Reglement interieur ICO 2024.md
   - Accords locaux:
       - Sommaire: accords-locaux/index.md
       - Résumés salariés:

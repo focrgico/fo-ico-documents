@@ -1406,6 +1406,29 @@
       "travail_poste": [],
       "handicap": [],
       "situation_familiale": []
+    },
+    {
+      "pdf_ok": true,
+      "chemin_resume_md": null,
+      "chemin_depliant": null,
+      "statut": [],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [],
+      "note": "Document unilatéral (pas d'accord négocié, pas de signature syndicale) : soumis à l'avis du CSE Central le 2 avril 2024, signé par le Pr Mario Campone (Directeur Général) le 5 avril 2024, entré en vigueur le 23/10/2024. PDF source récupéré par David sous un nom de téléchargement Chrome interrompu (« Non confirmé 237163.crdownload ») ; contenu vérifié complet et cohérent sur les 29 pages (texte extrait + rendu visuel page par page) malgré ce nom de fichier anormal — confirmation demandée à David avant intégration, qui a validé la poursuite avec ce fichier. Point de vigilance : l'Annexe 1 (Charte d'accès et d'usage du système d'information) est annoncée par son titre en fin de document mais son contenu est absent du PDF fourni — seule la page de contact suit la signature. À demander à la DRH. Autre point : la clause 2.3.4.4 du PDF signé contient une incise non ponctuée qui ressemble à une note de rédaction non retirée avant signature (« si elle le souhaite ajouter le cas échéant « et d'un salarié assistant l'employeur » »), reproduite mot pour mot dans le .md par fidélité au document signé.",
+      "id": "reglement-interieur-ico-2024",
+      "titre": "Règlement intérieur de l'ICO",
+      "categorie": "Règlement intérieur",
+      "theme": "Discipline, hygiène et sécurité",
+      "annee": "2024-10-23",
+      "chemin_pdf": "reglement-interieur/Reglement interieur ICO 2024.pdf",
+      "chemin_source_md": "reglement-interieur/Reglement interieur ICO 2024.md",
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     }
   ]
 }

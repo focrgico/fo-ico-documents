@@ -1319,7 +1319,7 @@
       "site": [],
       "modalite_horaire": [],
       "temps_travail": [],
-      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020, complété par l'avenant du 15/09/2023 qui modifie l'article 3.4.2 (temps partiel fin de carrière) — listé séparément sur la page Accords depuis le 19/10/2026, sous-catégorie « Avenant » (voir l'entrée avenant-intergenerationnel-2023). L'avenant n°1 du 30/06/2021 n'est plus en vigueur (confirmé par David le 21/09/2026) — archivé dans archive-accords-locaux/ sous \"Accord intergenerationnel_Avenant n1_Signe plus en vigueur\". Les PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent uniquement les textes en vigueur.",
+      "note": "Ajouté le 21/09/2026. Accord de base du 30/01/2020, complété par l'avenant du 15/09/2023 qui modifie l'article 3.4.2 (temps partiel fin de carrière) — listé séparément sur la page Accords depuis le 19/10/2026, sous-catégorie « Avenant » (voir l'entrée avenant-intergenerationnel-2023). L'avenant n°1 du 30/06/2021 (alinéa ajouté à l'art. 3.4.2 : temps partiel à 50 % organisable sur 2 semaines) est en vigueur : il est complémentaire de l'avenant 2023, qui ne modifie que les conditions d'accès (confirmé par David le 20/10/2026, après relecture des PDF). Il est listé séparément sur la page Accords. Les PDF sont scannés (transcrits directement, pas d'OCR). Le résumé et le dépliant intègrent les trois textes.",
       "profession": [],
       "type_contrat": [],
       "travail_nuit": [],
@@ -1337,6 +1337,29 @@
           }
         }
       }
+    },
+    {
+      "pdf_ok": true,
+      "chemin_resume_md": "accords-locaux/resumes-accords-locaux/resume-intergenerationnel.md",
+      "chemin_depliant": "accords-locaux/Depliants_FO/Depliant_intergenerationnel_FO.pdf",
+      "statut": [],
+      "site": [],
+      "modalite_horaire": [],
+      "temps_travail": [],
+      "note": "Avenant n°1 du 30/06/2021. Signatures relues visuellement sur le PDF le 20/10/2026 : ICO, CGT-FO, Sud Santé-Sociaux, CFDT, CFE-CGC. Complémentaire de l'avenant 2023. Résumé et dépliant partagés avec l'accord de base.",
+      "id": "avenant-intergenerationnel-2021",
+      "avenant_de": "intergenerationnel",
+      "titre": "Avenant — Accord intergénérationnel n°1 (30/06/2021)",
+      "categorie": "Accord local",
+      "theme": "Carrière",
+      "annee": "2021",
+      "chemin_pdf": "accords-locaux/Accord Intergenerationnel Avenant n1 signe.pdf",
+      "profession": [],
+      "type_contrat": [],
+      "travail_nuit": [],
+      "travail_poste": [],
+      "handicap": [],
+      "situation_familiale": []
     },
     {
       "id": "avenant-intergenerationnel-2023",

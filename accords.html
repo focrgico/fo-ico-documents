@@ -751,15 +751,19 @@ function runCcnSearch(raw) {
   if (matches.length > 40) countMsg += ' (limité aux 40 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
   const terms = altTerms(words);
-  ccnResults.innerHTML = shown.map(p => `
+  const ccnCard = p => `
     <div class="ccn-result">
       ${p.label ? '<span class="ccn-label">' + escapeHtml(p.label) + '</span>' : ''}
       ${p.before ? '<p class="ccn-context">…' + escapeHtml(p.before) + '</p>' : ''}
       <p>${highlightAll(p.text, terms)}</p>
       ${p.after ? '<p class="ccn-context">' + escapeHtml(p.after) + '…</p>' : ''}
       <a class="ccn-jump" href="ccn-texte.html#p${p.idx}">Voir dans la CCN →</a>
-    </div>
-  `).join('');
+    </div>`;
+  const CCN_OPEN = 3;
+  ccnResults.innerHTML = shown.slice(0, CCN_OPEN).map(ccnCard).join('') +
+    (shown.length > CCN_OPEN
+      ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (shown.length - CCN_OPEN) + ' autres passages de la CCN</summary><div class="ccn-results" style="margin-top:10px">' + shown.slice(CCN_OPEN).map(ccnCard).join('') + '</div></details>'
+      : '');
 }
 
 

@@ -1033,15 +1033,6 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
 """
     html += "  </div>\n"
     html += """
-  <div id="acc-section" style="display:none; margin-top: 32px;">
-    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-      <span class="bar"></span>
-      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte des accords</h2>
-    </div>
-    <div id="acc-count" class="ccn-count"></div>
-    <div id="acc-results" class="ccn-results"></div>
-  </div>
-
   <div id="ccn-section" style="display:none; margin-top: 32px;">
     <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
       <span class="bar"></span>
@@ -1049,6 +1040,15 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
     </div>
     <div id="ccn-count" class="ccn-count"></div>
     <div id="ccn-results" class="ccn-results"></div>
+  </div>
+
+  <div id="acc-section" style="display:none; margin-top: 32px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+      <span class="bar"></span>
+      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte des accords</h2>
+    </div>
+    <div id="acc-count" class="ccn-count"></div>
+    <div id="acc-results" class="ccn-results"></div>
   </div>
 </section>
 
@@ -1201,13 +1201,21 @@ function runAccSearch(raw, cat) {
         <p>${highlightAll(p.t.length > 600 ? p.t.slice(0, 600) + '…' : p.t, terms)}</p>
         <a class="ccn-jump" href="textes/${p.a}.html?q=${qs}#p${p.i}">Voir dans le texte →</a>
       </div>`;
+  const NORM_LEVELS = { 'CCN': 0, 'Accord local': 1, 'Élections': 1, 'Règlement intérieur': 2, 'DUE': 3, 'Prévoyance, mutuelle, retraite': 4, 'NAO': 5 };
+  const NORM_LABELS = ["Convention collective", "Accords d'entreprise", "Règlement intérieur", "Décisions unilatérales de l'employeur (DUE)", "Prévoyance, mutuelle, retraite", "NAO : procès-verbaux de désaccord (pas d'accord signé)"];
+  const lvl = id => (NORM_LEVELS[accDocs[id].categorie] !== undefined ? NORM_LEVELS[accDocs[id].categorie] : 6);
+  ids.sort((x, y) => lvl(x) - lvl(y));
+  accCount.innerHTML += '<div class="note" style="margin-top:6px">Classement : hiérarchie des normes (convention collective, accords d’entreprise, règlement intérieur, décisions unilatérales), puis pertinence dans chaque niveau.</div>';
+  let lastLvl = -1;
   accResults.innerHTML = ids.map(id => {
     const d = accDocs[id], list = groups[id];
+    const head = lvl(id) !== lastLvl ? '<h3 class="norm-h">' + (NORM_LABELS[lvl(id)] || 'Autres') + '</h3>' : '';
+    lastLvl = lvl(id);
     const first = list.slice(0, 3).map(p => card(d, p)).join('');
     const rest = list.length > 3
       ? '<details><summary class="ccn-jump" style="cursor:pointer">Voir les ' + (list.length - 3) + ' autres passages</summary><div class="ccn-results" style="margin-top:10px">' + list.slice(3).map(p => card(d, p)).join('') + '</div></details>'
       : '';
-    return `
+    return head + `
     <div class="acc-group" style="display:flex;flex-direction:column;gap:10px;">
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
         <span class="tag" style="background:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[0]};color:${(catColors[d.categorie]||['#F4F6F9','#5B6578'])[1]}">${escapeHtml(d.categorie)}</span>

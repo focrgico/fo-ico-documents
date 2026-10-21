@@ -1140,17 +1140,8 @@ function runCcnSearch(raw) {
   ccnSection.style.display = 'block';
   const q = norm(raw.trim());
   const words = queryWords(q);
-  let matches = ccnData.filter(p => hasTerm(norm(p.text), q) || (words.length === 1 && hasTerm(norm(p.text), words[0])));
-  if (words.length === 1) matches = litFirst(matches, p => norm(p.text), q);
-  let mode = 'exact';
-  if (matches.length === 0 && words.length > 0) {
-    matches = ccnData.filter(p => { const t = norm(p.text); return words.every(w => hasTerm(t, w)); });
-    mode = 'approx';
-  }
-  if (matches.length === 0 && words.length > 1) {
-    matches = rankAny(ccnData, p => norm(p.text), words);
-    mode = 'any';
-  }
+  const R = rankSearch(ccnData, ccnN, words, q);
+  const matches = R.matches, mode = R.mode;
   if (matches.length === 0) {
     ccnCount.innerHTML = '<div class="ccn-empty">Aucun résultat dans la CCN pour « ' + escapeHtml(raw.trim()) + ' ».</div>';
     ccnResults.innerHTML = '';
@@ -1158,11 +1149,10 @@ function runCcnSearch(raw) {
   }
   const shown = matches.slice(0, 40);
   let countMsg = shown.length + (shown.length > 1 ? ' passages trouvés' : ' passage trouvé');
-  if (mode === 'approx') countMsg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
-  if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
+  if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots : résultats classés par pertinence, les mots rares en premier';
   if (matches.length > 40) countMsg += ' (limité aux 40 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
-  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
+  const terms = altTerms(words);
   ccnResults.innerHTML = shown.map(p => `
     <div class="ccn-result">
       ${p.label ? '<span class="ccn-label">' + escapeHtml(p.label) + '</span>' : ''}
@@ -1190,17 +1180,8 @@ function runAccSearch(raw, cat) {
   const q = norm(raw.trim());
   const words = queryWords(q);
   const pool = accData.filter(p => cat === 'all' || accDocs[p.a].categorie === cat);
-  let matches = pool.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
-  if (words.length === 1) matches = litFirst(matches, p => p.n, q);
-  let mode = 'exact';
-  if (matches.length === 0 && words.length > 0) {
-    matches = pool.filter(p => words.every(w => hasTerm(p.n, w)));
-    mode = 'approx';
-  }
-  if (matches.length === 0 && words.length > 1) {
-    matches = rankAny(pool, p => p.n, words);
-    mode = 'any';
-  }
+  const R = rankSearch(pool, p => p.n, words, q);
+  const matches = R.matches, mode = R.mode;
   if (matches.length === 0) {
     accCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\\'apparaît dans le texte d\\'aucun accord' + (cat === 'all' ? '' : ' « ' + escapeHtml(cat) + ' »') + '.</div>';
     accResults.innerHTML = '';
@@ -1208,12 +1189,11 @@ function runAccSearch(raw, cat) {
   }
   const groups = {};
   matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
-  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  const ids = rankGroups(groups, R, id => accDocs[id].titre);
   let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' documents' : ' document');
-  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
-  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
+  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots : résultats classés par pertinence, les mots rares en premier';
   accCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
+  const terms = altTerms(words);
   const qs = encodeURIComponent(raw.trim());
   const card = (d, p) => `
       <div class="ccn-result">
@@ -1551,11 +1531,8 @@ function runResSearch(raw, theme) {
   const q = norm(raw.trim());
   const words = queryWords(q);
   const pool = resData.filter(p => theme === 'all' || resDocs[p.a].categorie === theme);
-  let matches = pool.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
-  if (words.length === 1) matches = litFirst(matches, p => p.n, q);
-  let mode = 'exact';
-  if (matches.length === 0 && words.length > 0) { matches = pool.filter(p => words.every(w => hasTerm(p.n, w))); mode = 'approx'; }
-  if (matches.length === 0 && words.length > 1) { matches = rankAny(pool, p => p.n, words); mode = 'any'; }
+  const R = rankSearch(pool, p => p.n, words, q);
+  const matches = R.matches, mode = R.mode;
   if (matches.length === 0) {
     resCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\\'apparaît dans le texte d\\'aucun résumé' + (theme === 'all' ? '' : ' « ' + escapeHtml(theme) + ' »') + '.</div>';
     resResults.innerHTML = '';
@@ -1563,12 +1540,11 @@ function runResSearch(raw, theme) {
   }
   const groups = {};
   matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
-  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  const ids = rankGroups(groups, R, id => resDocs[id].titre);
   let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
-  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
-  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
+  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots : résultats classés par pertinence, les mots rares en premier';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
+  const terms = altTerms(words);
   const qs = encodeURIComponent(raw.trim());
   const card = (p) => `
       <div class="ccn-result">
@@ -2051,22 +2027,8 @@ function runCcnSearch() {{
   const q = norm(raw);
   const words = queryWords(q);
 
-  let matches = ccnData.filter(p => norm(p.text).includes(q) || (words.length === 1 && hasAlt(norm(p.text), words[0])));
-  if (words.length === 1) matches = litFirst(matches, p => norm(p.text), q);
-  let mode = 'exact';
-
-  if (matches.length === 0 && words.length > 0) {{
-    matches = ccnData.filter(p => {{
-      const t = norm(p.text);
-      return words.every(w => hasAlt(t, w));
-    }});
-    mode = 'approx';
-  }}
-  if (matches.length === 0 && words.length > 1) {{
-    matches = rankAny(ccnData, p => norm(p.text), words, hasAlt);
-    mode = 'any';
-  }}
-
+  const R = rankSearch(ccnData, ccnN, words, q);
+  const matches = R.matches, mode = R.mode;
   if (matches.length === 0) {{
     ccnCount.innerHTML = '<div class="ccn-empty">Aucun résultat pour « ' + escapeHtml(raw) + ' ». Essayez avec moins de mots, un seul mot-clé, ou une autre formulation (singulier/pluriel, synonyme).</div>';
     ccnResults.innerHTML = '';
@@ -2075,12 +2037,11 @@ function runCcnSearch() {{
 
   const shown = matches.slice(0, 80);
   let countMsg = shown.length + (shown.length > 1 ? ' passages trouvés' : ' passage trouvé');
-  if (mode === 'approx') countMsg += ' — aucune correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
-  if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
+  if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots : résultats classés par pertinence, les mots rares en premier';
   if (matches.length > 80) countMsg += ' (affichage limité aux 80 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
 
-  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
+  const terms = altTerms(words);
   ccnResults.innerHTML = shown.map(p => `
     <div class="ccn-result">
       ${{p.label ? '<span class="ccn-label">' + escapeHtml(p.label) + '</span>' : ''}}
@@ -2257,9 +2218,7 @@ function textHits(raw) {
   if (raw.trim().length < 3) return hits;
   const q = norm(raw.trim());
   const words = queryWords(q);
-  let matches = depResData.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
-  if (matches.length === 0 && words.length > 0) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
-  if (matches.length === 0 && words.length > 1) matches = rankAny(depResData, p => p.n, words);
+  const matches = rankSearch(depResData, p => p.n, words, q).matches;
   matches.forEach(p => hits.add(p.a));
   if (matches.length) lastAccMsg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + hits.size + (hits.size > 1 ? ' documents' : ' document');
   return hits;

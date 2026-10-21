@@ -348,6 +348,8 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .footer-left { display: flex; align-items: center; gap: 12px; font-size: 13px; color: #C7D0E0; }
 .footer-logo { height: 32px; width: auto; }
 .footer-slogan { font-size: 14px; font-weight: 700; }
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 13px; }
+.footer-links a { color: #C7D0E0; text-decoration: underline; }
 
 @media (max-width: 700px) {
   .nav, .hero, .explorer, .situation, .page-header, .list-page, .site-footer { padding-left: 20px; padding-right: 20px; }
@@ -373,3 +375,19 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   .hero-cards { flex-direction: column; max-width: 100%; }
   .card.hero-card { flex: none; }
 }
+
+
+/* Titre exact du ou des documents sources, sous le titre d'un resume */
+.doc-source { font-size: 13px; color: var(--muted); line-height: 1.4; }
+.doc-source ul { margin: 2px 0 0; padding-left: 18px; }
+.doc-source-label { font-weight: 700; text-transform: uppercase; font-size: 11px; letter-spacing: .04em; }
+
+/* Pages de liens et mentions legales */
+.liens-groupe { font-size: 18px; color: var(--marine); margin: 28px 0 8px; }
+.liens-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.liens-table td { padding: 6px 8px; border-bottom: 1px solid var(--bordure); vertical-align: top; }
+.liens-type { white-space: nowrap; color: var(--muted); }
+.liens-url { word-break: break-all; }
+.a-completer { background: #FFF3CD; padding: 0 4px; border-radius: 3px; }
+@media (max-width: 700px) { .liens-table tr { display: block; padding: 6px 0; } .liens-table td { display: block; border: 0; padding: 1px 0; } }
+.page-header .doc-source { color: #D5DCE8; }

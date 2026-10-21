@@ -67,6 +67,9 @@ RAW_BASE = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/docs/"
 BLOB_BASE = f"https://github.com/{REPO}/blob/{BRANCH}/docs/"
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+SEARCH_MARK = '/*@@SEARCH_JS@@*/'
+with open(os.path.join(ROOT, 'assets_src', 'search.js'), encoding='utf-8') as _f:
+    SEARCH_JS = _f.read()
 CATALOGUE_PATH = os.path.join(ROOT, "catalogue", "catalogue.json")
 DOCS_DIR = os.path.join(ROOT, "docs")
 OUT_DIR = os.path.join(ROOT, "site")
@@ -863,7 +866,7 @@ situationForm.addEventListener('submit', (e) => {
 """
     html += page_foot()
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def build_situation_page(cat, out_dir):
@@ -934,7 +937,7 @@ runSituationSearch();
 """
     html += page_foot()
     with open(os.path.join(out_dir, "situation.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
@@ -1083,13 +1086,7 @@ function escapeHtml(s) {
 }
 // Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
 // est toléré (formation / formations), les apostrophes typographiques sont normalisées.
-const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
-function queryWords(q) {
-  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
-  let k = ws.filter(w => !STOP.has(w));
-  if (!k.length) k = ws;
-  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
-}
+/*@@SEARCH_JS@@*/
 // Passages contenant au moins un des mots, classés par nombre de mots trouvés.
 function rankAny(pool, get, words, has) {
   const h = has || hasTerm;
@@ -1100,14 +1097,6 @@ function titleMatch(title, nq) {
   if (nt.includes(nq)) return true;
   const w = queryWords(nq);
   return w.length > 0 && w.every(x => hasTerm(nt, x));
-}
-// Un terme n'est retenu qu'en début de mot : « formation » trouve « formations »
-// mais pas « information ».
-function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
-function hasTerm(nt, t) {
-  let i = 0;
-  while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; }
-  return false;
 }
 function highlightAll(text, terms) {
   const nt = norm(text);
@@ -1151,7 +1140,8 @@ function runCcnSearch(raw) {
   ccnSection.style.display = 'block';
   const q = norm(raw.trim());
   const words = queryWords(q);
-  let matches = ccnData.filter(p => hasTerm(norm(p.text), q));
+  let matches = ccnData.filter(p => hasTerm(norm(p.text), q) || (words.length === 1 && hasTerm(norm(p.text), words[0])));
+  if (words.length === 1) matches = litFirst(matches, p => norm(p.text), q);
   let mode = 'exact';
   if (matches.length === 0 && words.length > 0) {
     matches = ccnData.filter(p => { const t = norm(p.text); return words.every(w => hasTerm(t, w)); });
@@ -1172,7 +1162,7 @@ function runCcnSearch(raw) {
   if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   if (matches.length > 40) countMsg += ' (limité aux 40 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
-  const terms = mode === 'exact' ? [q] : words;
+  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
   ccnResults.innerHTML = shown.map(p => `
     <div class="ccn-result">
       ${p.label ? '<span class="ccn-label">' + escapeHtml(p.label) + '</span>' : ''}
@@ -1188,6 +1178,8 @@ function runCcnSearch(raw) {
 // Recherche plein texte dans les accords hors CCN. Renvoie l'ensemble des id
 // d'accords contenant le terme (pour afficher aussi leur ligne dans la liste).
 accData.forEach(p => { p.n = norm(p.t); });
+setVocabSource(() => accData.map(p => p.n).concat(ccnData.map(p => norm(p.text))));
+initKeywords();
 function runAccSearch(raw, cat) {
   const hits = new Set();
   if (raw.trim().length < 3) {
@@ -1198,7 +1190,8 @@ function runAccSearch(raw, cat) {
   const q = norm(raw.trim());
   const words = queryWords(q);
   const pool = accData.filter(p => cat === 'all' || accDocs[p.a].categorie === cat);
-  let matches = pool.filter(p => hasTerm(p.n, q));
+  let matches = pool.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
+  if (words.length === 1) matches = litFirst(matches, p => p.n, q);
   let mode = 'exact';
   if (matches.length === 0 && words.length > 0) {
     matches = pool.filter(p => words.every(w => hasTerm(p.n, w)));
@@ -1220,7 +1213,7 @@ function runAccSearch(raw, cat) {
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
   if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   accCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = mode === 'exact' ? [q] : words;
+  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
   const qs = encodeURIComponent(raw.trim());
   const card = (d, p) => `
       <div class="ccn-result">
@@ -1328,7 +1321,7 @@ applyFilters();
 """
     html += page_foot()
     with open(os.path.join(out_dir, "accords.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 # Titre affiché pour un résumé qui couvre plusieurs accords : sans cela, c'est le titre
@@ -1521,8 +1514,6 @@ let activeTheme = 'all';
 
 function norm(s) { return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
 function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
-function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
 function highlightAll(text, terms) {
   const nt = norm(text);
   let marks = [];
@@ -1537,13 +1528,7 @@ function highlightAll(text, terms) {
 }
 // Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
 // est toléré (formation / formations), les apostrophes typographiques sont normalisées.
-const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
-function queryWords(q) {
-  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
-  let k = ws.filter(w => !STOP.has(w));
-  if (!k.length) k = ws;
-  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
-}
+/*@@SEARCH_JS@@*/
 // Passages contenant au moins un des mots, classés par nombre de mots trouvés.
 function rankAny(pool, get, words, has) {
   const h = has || hasTerm;
@@ -1556,6 +1541,8 @@ function titleMatch(title, nq) {
   return w.length > 0 && w.every(x => hasTerm(nt, x));
 }
 resData.forEach(p => { p.n = norm(p.t); });
+setVocabSource(() => resData.map(p => p.n));
+initKeywords();
 
 function runResSearch(raw, theme) {
   const hits = new Set();
@@ -1564,7 +1551,8 @@ function runResSearch(raw, theme) {
   const q = norm(raw.trim());
   const words = queryWords(q);
   const pool = resData.filter(p => theme === 'all' || resDocs[p.a].categorie === theme);
-  let matches = pool.filter(p => hasTerm(p.n, q));
+  let matches = pool.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
+  if (words.length === 1) matches = litFirst(matches, p => p.n, q);
   let mode = 'exact';
   if (matches.length === 0 && words.length > 0) { matches = pool.filter(p => words.every(w => hasTerm(p.n, w))); mode = 'approx'; }
   if (matches.length === 0 && words.length > 1) { matches = rankAny(pool, p => p.n, words); mode = 'any'; }
@@ -1580,7 +1568,7 @@ function runResSearch(raw, theme) {
   if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
   if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = mode === 'exact' ? [q] : words;
+  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
   const qs = encodeURIComponent(raw.trim());
   const card = (p) => `
       <div class="ccn-result">
@@ -1637,7 +1625,7 @@ themeChips.forEach(c => c.addEventListener('click', () => {
 """
     html += page_foot()
     with open(os.path.join(out_dir, "resumes.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def build_resume_pages(cat, out_dir):
@@ -1730,7 +1718,7 @@ def build_resume_pages(cat, out_dir):
         html += page_foot(base="../")
 
         with open(os.path.join(resumes_dir, f"{a['id']}.html"), "w", encoding="utf-8") as f:
-            f.write(html)
+            f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
     if skipped:
         print(f"ATTENTION : résumé introuvable en local pour {skipped} — page(s) non générée(s).")
@@ -1928,7 +1916,7 @@ def build_accord_textes(docs, passages, out_dir):
 """
         html += page_foot(base="../")
         with open(os.path.join(out_dir, "textes", f"{doc_id}.html"), "w", encoding="utf-8") as f:
-            f.write(html)
+            f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def build_ccn_texte(md_relpath, search_data, out_dir, pdf_path=None):
@@ -1956,7 +1944,7 @@ def build_ccn_texte(md_relpath, search_data, out_dir, pdf_path=None):
     html += "</article>\n"
     html += page_foot()
     with open(os.path.join(out_dir, "ccn-texte.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def build_ccn(cat, out_dir):
@@ -2038,13 +2026,7 @@ function highlightAll(text, terms) {{
 
 // Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
 // est toléré (formation / formations), les apostrophes typographiques sont normalisées.
-const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
-function queryWords(q) {{
-  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
-  let k = ws.filter(w => !STOP.has(w));
-  if (!k.length) k = ws;
-  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
-}}
+/*@@SEARCH_JS@@*/
 // Passages contenant au moins un des mots, classés par nombre de mots trouvés.
 function rankAny(pool, get, words, has) {{
   const h = has || hasTerm;
@@ -2057,6 +2039,8 @@ function titleMatch(title, nq) {{
   return w.length > 0 && w.every(x => hasTerm(nt, x));
 }}
 
+setVocabSource(() => ccnData.map(p => norm(p.text)));
+initKeywords();
 function runCcnSearch() {{
   const raw = ccnSearch.value.trim();
   if (raw.length < 3) {{
@@ -2067,18 +2051,19 @@ function runCcnSearch() {{
   const q = norm(raw);
   const words = queryWords(q);
 
-  let matches = ccnData.filter(p => norm(p.text).includes(q));
+  let matches = ccnData.filter(p => norm(p.text).includes(q) || (words.length === 1 && hasAlt(norm(p.text), words[0])));
+  if (words.length === 1) matches = litFirst(matches, p => norm(p.text), q);
   let mode = 'exact';
 
   if (matches.length === 0 && words.length > 0) {{
     matches = ccnData.filter(p => {{
       const t = norm(p.text);
-      return words.every(w => t.includes(w));
+      return words.every(w => hasAlt(t, w));
     }});
     mode = 'approx';
   }}
   if (matches.length === 0 && words.length > 1) {{
-    matches = rankAny(ccnData, p => norm(p.text), words, (t, w) => t.includes(w));
+    matches = rankAny(ccnData, p => norm(p.text), words, hasAlt);
     mode = 'any';
   }}
 
@@ -2095,7 +2080,7 @@ function runCcnSearch() {{
   if (matches.length > 80) countMsg += ' (affichage limité aux 80 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
 
-  const terms = mode === 'exact' ? [q] : words;
+  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
   ccnResults.innerHTML = shown.map(p => `
     <div class="ccn-result">
       ${{p.label ? '<span class="ccn-label">' + escapeHtml(p.label) + '</span>' : ''}}
@@ -2114,7 +2099,7 @@ window.addEventListener('DOMContentLoaded', () => {{ if (ccnSearch.value.trim().
 """
     html += page_foot()
     with open(os.path.join(out_dir, "ccn.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def load_depliant_labels():
@@ -2247,17 +2232,9 @@ const leafletHits = document.getElementById('leaflet-hits');
 let activeTheme = 'all';
 
 function norm(s) { return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
-function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
-function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
 // Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
 // est toléré (formation / formations), les apostrophes typographiques sont normalisées.
-const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
-function queryWords(q) {
-  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
-  let k = ws.filter(w => !STOP.has(w));
-  if (!k.length) k = ws;
-  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
-}
+/*@@SEARCH_JS@@*/
 // Passages contenant au moins un des mots, classés par nombre de mots trouvés.
 function rankAny(pool, get, words, has) {
   const h = has || hasTerm;
@@ -2270,6 +2247,8 @@ function titleMatch(title, nq) {
   return w.length > 0 && w.every(x => hasTerm(nt, x));
 }
 depResData.forEach(p => { p.n = norm(p.t); });
+setVocabSource(() => depResData.map(p => p.n));
+initKeywords();
 
 let lastAccMsg = '';
 function textHits(raw) {
@@ -2278,7 +2257,7 @@ function textHits(raw) {
   if (raw.trim().length < 3) return hits;
   const q = norm(raw.trim());
   const words = queryWords(q);
-  let matches = depResData.filter(p => hasTerm(p.n, q));
+  let matches = depResData.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
   if (matches.length === 0 && words.length > 0) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
   if (matches.length === 0 && words.length > 1) matches = rankAny(depResData, p => p.n, words);
   matches.forEach(p => hits.add(p.a));
@@ -2317,7 +2296,7 @@ themeChips.forEach(c => c.addEventListener('click', () => {
 """
     html += page_foot()
     with open(os.path.join(out_dir, "depliants.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 SITE_BASE = "https://foico.fr/"  # adresse prévue du site ; à confirmer une fois le dépôt FTP fait (OVH)
@@ -2382,7 +2361,7 @@ def build_liens(cat, out_dir):
         html += "  </table>\n</section>\n"
         html += page_foot()
         with open(os.path.join(out_dir, nom), "w", encoding="utf-8") as f:
-            f.write(html)
+            f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def build_mentions(out_dir):
@@ -2425,7 +2404,7 @@ Téléphone : {tbc("à compléter d'après les mentions légales d'OVH")}</p>
 """
     html += page_foot()
     with open(os.path.join(out_dir, "mentions-legales.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
 def main():

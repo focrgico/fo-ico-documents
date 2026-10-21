@@ -1076,10 +1076,30 @@ const params = new URLSearchParams(location.search);
 if (params.get('q')) search.value = params.get('q');
 
 function norm(s) {
-  return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+  return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
 }
 function escapeHtml(s) {
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+// Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
+// est toléré (formation / formations), les apostrophes typographiques sont normalisées.
+const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+function queryWords(q) {
+  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let k = ws.filter(w => !STOP.has(w));
+  if (!k.length) k = ws;
+  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
+}
+// Passages contenant au moins un des mots, classés par nombre de mots trouvés.
+function rankAny(pool, get, words, has) {
+  const h = has || hasTerm;
+  return pool.map(p => [p, words.filter(w => h(get(p), w)).length]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+}
+function titleMatch(title, nq) {
+  const nt = norm(title);
+  if (nt.includes(nq)) return true;
+  const w = queryWords(nq);
+  return w.length > 0 && w.every(x => hasTerm(nt, x));
 }
 // Un terme n'est retenu qu'en début de mot : « formation » trouve « formations »
 // mais pas « information ».
@@ -1130,12 +1150,16 @@ function runCcnSearch(raw) {
   }
   ccnSection.style.display = 'block';
   const q = norm(raw.trim());
-  const words = q.split(/\\s+/).filter(w => w.length >= 2);
+  const words = queryWords(q);
   let matches = ccnData.filter(p => hasTerm(norm(p.text), q));
   let mode = 'exact';
-  if (matches.length === 0 && words.length > 1) {
+  if (matches.length === 0 && words.length > 0) {
     matches = ccnData.filter(p => { const t = norm(p.text); return words.every(w => hasTerm(t, w)); });
     mode = 'approx';
+  }
+  if (matches.length === 0 && words.length > 1) {
+    matches = rankAny(ccnData, p => norm(p.text), words);
+    mode = 'any';
   }
   if (matches.length === 0) {
     ccnCount.innerHTML = '<div class="ccn-empty">Aucun résultat dans la CCN pour « ' + escapeHtml(raw.trim()) + ' ».</div>';
@@ -1144,7 +1168,8 @@ function runCcnSearch(raw) {
   }
   const shown = matches.slice(0, 40);
   let countMsg = shown.length + (shown.length > 1 ? ' passages trouvés' : ' passage trouvé');
-  if (mode === 'approx') countMsg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
+  if (mode === 'approx') countMsg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
+  if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   if (matches.length > 40) countMsg += ' (limité aux 40 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
   const terms = mode === 'exact' ? [q] : words;
@@ -1171,13 +1196,17 @@ function runAccSearch(raw, cat) {
   }
   accSection.style.display = 'block';
   const q = norm(raw.trim());
-  const words = q.split(/\\s+/).filter(w => w.length >= 2);
+  const words = queryWords(q);
   const pool = accData.filter(p => cat === 'all' || accDocs[p.a].categorie === cat);
   let matches = pool.filter(p => hasTerm(p.n, q));
   let mode = 'exact';
-  if (matches.length === 0 && words.length > 1) {
+  if (matches.length === 0 && words.length > 0) {
     matches = pool.filter(p => words.every(w => hasTerm(p.n, w)));
     mode = 'approx';
+  }
+  if (matches.length === 0 && words.length > 1) {
+    matches = rankAny(pool, p => p.n, words);
+    mode = 'any';
   }
   if (matches.length === 0) {
     accCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\\'apparaît dans le texte d\\'aucun accord' + (cat === 'all' ? '' : ' « ' + escapeHtml(cat) + ' »') + '.</div>';
@@ -1188,7 +1217,8 @@ function runAccSearch(raw, cat) {
   matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
   const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
   let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' documents' : ' document');
-  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
+  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
+  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   accCount.innerHTML = '<span class="note">' + msg + '</span>';
   const terms = mode === 'exact' ? [q] : words;
   const qs = encodeURIComponent(raw.trim());
@@ -1240,7 +1270,7 @@ function applyFilters() {
     docList.style.display = '';
     const hits = runAccSearch(raw, 'all');
     const nq = norm(raw);
-    const rowsToShow = q ? Array.from(rows).filter(r => norm(r.dataset.title).includes(nq)) : Array.from(rows);
+    const rowsToShow = q ? Array.from(rows).filter(r => titleMatch(r.dataset.title, nq)) : Array.from(rows);
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     runCcnSearch(raw);
@@ -1256,7 +1286,7 @@ function applyFilters() {
     const catRows = Array.from(rows).filter(r => r.dataset.cat === activeChip);
     const hits = runAccSearch(raw, activeChip);
     const nq = norm(raw);
-    const rowsToShow = q ? catRows.filter(r => norm(r.dataset.title).includes(nq)) : catRows;
+    const rowsToShow = q ? catRows.filter(r => titleMatch(r.dataset.title, nq)) : catRows;
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     ccnSection.style.display = 'none';
@@ -1489,7 +1519,7 @@ const themeLabels = document.querySelectorAll('.doc-group-label');
 const themeChips = document.querySelectorAll('#theme-chips .chip');
 let activeTheme = 'all';
 
-function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+function norm(s) { return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
 function escapeHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
 function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
@@ -1505,6 +1535,26 @@ function highlightAll(text, terms) {
   merged.forEach(([a, b]) => { out += escapeHtml(text.slice(pos, a)) + '<mark>' + escapeHtml(text.slice(a, b)) + '</mark>'; pos = b; });
   return out + escapeHtml(text.slice(pos));
 }
+// Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
+// est toléré (formation / formations), les apostrophes typographiques sont normalisées.
+const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+function queryWords(q) {
+  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let k = ws.filter(w => !STOP.has(w));
+  if (!k.length) k = ws;
+  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
+}
+// Passages contenant au moins un des mots, classés par nombre de mots trouvés.
+function rankAny(pool, get, words, has) {
+  const h = has || hasTerm;
+  return pool.map(p => [p, words.filter(w => h(get(p), w)).length]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+}
+function titleMatch(title, nq) {
+  const nt = norm(title);
+  if (nt.includes(nq)) return true;
+  const w = queryWords(nq);
+  return w.length > 0 && w.every(x => hasTerm(nt, x));
+}
 resData.forEach(p => { p.n = norm(p.t); });
 
 function runResSearch(raw, theme) {
@@ -1512,11 +1562,12 @@ function runResSearch(raw, theme) {
   if (raw.trim().length < 3) { resSection.style.display = 'none'; resResults.innerHTML = ''; resCount.innerHTML = ''; return hits; }
   resSection.style.display = 'block';
   const q = norm(raw.trim());
-  const words = q.split(/\s+/).filter(w => w.length >= 2);
+  const words = queryWords(q);
   const pool = resData.filter(p => theme === 'all' || resDocs[p.a].categorie === theme);
   let matches = pool.filter(p => hasTerm(p.n, q));
   let mode = 'exact';
-  if (matches.length === 0 && words.length > 1) { matches = pool.filter(p => words.every(w => hasTerm(p.n, w))); mode = 'approx'; }
+  if (matches.length === 0 && words.length > 0) { matches = pool.filter(p => words.every(w => hasTerm(p.n, w))); mode = 'approx'; }
+  if (matches.length === 0 && words.length > 1) { matches = rankAny(pool, p => p.n, words); mode = 'any'; }
   if (matches.length === 0) {
     resCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\\'apparaît dans le texte d\\'aucun résumé' + (theme === 'all' ? '' : ' « ' + escapeHtml(theme) + ' »') + '.</div>';
     resResults.innerHTML = '';
@@ -1526,7 +1577,8 @@ function runResSearch(raw, theme) {
   matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
   const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
   let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
-  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots';
+  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
+  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
   const terms = mode === 'exact' ? [q] : words;
   const qs = encodeURIComponent(raw.trim());
@@ -1561,7 +1613,7 @@ function applyFilters() {
   const hits = runResSearch(raw, activeTheme);
   cards.forEach(c => {
     const themeOk = activeTheme === 'all' || c.dataset.theme === activeTheme;
-    const qOk = !q || norm(c.dataset.title).includes(nq);
+    const qOk = !q || titleMatch(c.dataset.title, nq);
     c.style.display = (themeOk && qOk) ? 'flex' : 'none';
   });
   themeLabels.forEach(label => {
@@ -1624,8 +1676,11 @@ def build_resume_pages(cat, out_dir):
 (function () {{
   const q = new URLSearchParams(location.search).get('q');
   if (!q || q.trim().length < 3) return;
-  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 2);
+  const norm = s => s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+  const ws = norm(q.trim()).split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let terms = ws.filter(w => !STOP.has(w)); if (!terms.length) terms = ws;
+  terms = [...new Set(terms.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
   let first = null;
   document.querySelectorAll('#resume-article p, #resume-article li, #resume-article td, #resume-article h2, #resume-article h3').forEach(el => {{
     const txt = el.textContent, nt = norm(txt);
@@ -1851,8 +1906,11 @@ def build_accord_textes(docs, passages, out_dir):
 (function () {
   const q = new URLSearchParams(location.search).get('q');
   if (!q || q.trim().length < 3) return;
-  const norm = s => s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
-  const terms = norm(q.trim()).split(/\\s+/).filter(w => w.length >= 3);
+  const norm = s => s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+  const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+  const ws = norm(q.trim()).split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let terms = ws.filter(w => !STOP.has(w)); if (!terms.length) terms = ws;
+  terms = [...new Set(terms.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
   document.querySelectorAll('.ccn-texte p, .ccn-texte h3').forEach(el => {
     const txt = el.textContent, nt = norm(txt);
     let marks = [];
@@ -1941,7 +1999,7 @@ const ccnResults = document.getElementById('ccn-results');
 const ccnCount = document.getElementById('ccn-count');
 
 function norm(s) {{
-  return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+  return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
 }}
 function escapeHtml(s) {{
   return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -1978,6 +2036,27 @@ function highlightAll(text, terms) {{
   return out;
 }}
 
+// Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
+// est toléré (formation / formations), les apostrophes typographiques sont normalisées.
+const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+function queryWords(q) {{
+  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let k = ws.filter(w => !STOP.has(w));
+  if (!k.length) k = ws;
+  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
+}}
+// Passages contenant au moins un des mots, classés par nombre de mots trouvés.
+function rankAny(pool, get, words, has) {{
+  const h = has || hasTerm;
+  return pool.map(p => [p, words.filter(w => h(get(p), w)).length]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+}}
+function titleMatch(title, nq) {{
+  const nt = norm(title);
+  if (nt.includes(nq)) return true;
+  const w = queryWords(nq);
+  return w.length > 0 && w.every(x => hasTerm(nt, x));
+}}
+
 function runCcnSearch() {{
   const raw = ccnSearch.value.trim();
   if (raw.length < 3) {{
@@ -1986,17 +2065,21 @@ function runCcnSearch() {{
     return;
   }}
   const q = norm(raw);
-  const words = q.split(/\\s+/).filter(w => w.length >= 2);
+  const words = queryWords(q);
 
   let matches = ccnData.filter(p => norm(p.text).includes(q));
   let mode = 'exact';
 
-  if (matches.length === 0 && words.length > 1) {{
+  if (matches.length === 0 && words.length > 0) {{
     matches = ccnData.filter(p => {{
       const t = norm(p.text);
       return words.every(w => t.includes(w));
     }});
     mode = 'approx';
+  }}
+  if (matches.length === 0 && words.length > 1) {{
+    matches = rankAny(ccnData, p => norm(p.text), words, (t, w) => t.includes(w));
+    mode = 'any';
   }}
 
   if (matches.length === 0) {{
@@ -2007,7 +2090,8 @@ function runCcnSearch() {{
 
   const shown = matches.slice(0, 80);
   let countMsg = shown.length + (shown.length > 1 ? ' passages trouvés' : ' passage trouvé');
-  if (mode === 'approx') countMsg += ' — aucune correspondance exacte pour la phrase complète, résultats contenant tous les mots recherchés';
+  if (mode === 'approx') countMsg += ' — aucune correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
+  if (mode === 'any') countMsg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
   if (matches.length > 80) countMsg += ' (affichage limité aux 80 premiers sur ' + matches.length + ')';
   ccnCount.innerHTML = '<span class="note">' + countMsg + '</span>';
 
@@ -2162,9 +2246,29 @@ const leafletEmpty = document.getElementById('leaflet-empty');
 const leafletHits = document.getElementById('leaflet-hits');
 let activeTheme = 'all';
 
-function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+function norm(s) { return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
 function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
 function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
+// Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
+// est toléré (formation / formations), les apostrophes typographiques sont normalisées.
+const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+function queryWords(q) {
+  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let k = ws.filter(w => !STOP.has(w));
+  if (!k.length) k = ws;
+  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
+}
+// Passages contenant au moins un des mots, classés par nombre de mots trouvés.
+function rankAny(pool, get, words, has) {
+  const h = has || hasTerm;
+  return pool.map(p => [p, words.filter(w => h(get(p), w)).length]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+}
+function titleMatch(title, nq) {
+  const nt = norm(title);
+  if (nt.includes(nq)) return true;
+  const w = queryWords(nq);
+  return w.length > 0 && w.every(x => hasTerm(nt, x));
+}
 depResData.forEach(p => { p.n = norm(p.t); });
 
 let lastAccMsg = '';
@@ -2173,9 +2277,10 @@ function textHits(raw) {
   lastAccMsg = '';
   if (raw.trim().length < 3) return hits;
   const q = norm(raw.trim());
-  const words = q.split(/\s+/).filter(w => w.length >= 2);
+  const words = queryWords(q);
   let matches = depResData.filter(p => hasTerm(p.n, q));
-  if (matches.length === 0 && words.length > 1) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
+  if (matches.length === 0 && words.length > 0) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
+  if (matches.length === 0 && words.length > 1) matches = rankAny(depResData, p => p.n, words);
   matches.forEach(p => hits.add(p.a));
   if (matches.length) lastAccMsg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + hits.size + (hits.size > 1 ? ' documents' : ' document');
   return hits;
@@ -2187,7 +2292,7 @@ function applyFilters() {
   const hits = textHits(raw);
   leafletCards.forEach(card => {
     const themeOk = activeTheme === 'all' || card.dataset.theme === activeTheme;
-    const qOk = !raw || norm(card.dataset.title).includes(nq) || hits.has(card.dataset.id);
+    const qOk = !raw || titleMatch(card.dataset.title, nq) || hits.has(card.dataset.id);
     card.style.display = (themeOk && qOk) ? 'inline-flex' : 'none';
   });
   leafletLabels.forEach(label => {

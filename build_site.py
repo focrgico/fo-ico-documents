@@ -179,6 +179,8 @@ CATEGORY_COLORS = {
     "NAO": ("#E3F1EF", "#0F6B62"),          # vert-bleu sobre
     "Élections": ("#F5EEE1", "#7A6540"),    # or
     "DUE": ("#EEF1F6", "#5B6578"),          # gris-bleu (texte secondaire du gabarit)
+    "Prévoyance, mutuelle, retraite": ("#EBE3F3", "#5B3A87"),  # violet
+    "Règlement intérieur": ("#FCE8D5", "#9A4A0B"),             # orange
 }
 
 PAGE_HEAD = """<!doctype html>
@@ -1001,7 +1003,7 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
     for lst in avenants_by_base.values():
         lst.sort(key=lambda a: (a.get("annee") or "", a["titre"]))
 
-    category_order = ["CCN", "Accord local", "NAO", "DUE", "Élections"]
+    category_order = ["CCN", "Accord local", "NAO", "DUE", "Élections", "Prévoyance, mutuelle, retraite", "Règlement intérieur"]
     base_accords = [a for a in cat["accords"] if not a.get("avenant_de")]
     sorted_accords = sorted(
         base_accords,

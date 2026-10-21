@@ -1352,7 +1352,7 @@ TITRES_EXACTS = {
     "travail-nuit-2026": "Accord d'entreprise relatif au travail de nuit",
     "vap-2025": "Accord d'entreprise relatif à la validation des acquis professionnels",
     "avenant-vap-2025": "Avenant à l'accord d'entreprise relatif à la validation des acquis professionnels",
-    "bic-2025": "Accord d'entreprise relatif à la répartition de la bonicication individuelle de carrière",
+    "bic-2025": "Accord d'entreprise relatif à la répartition de la bonification individuelle de carrière",
     "interessement-2026": "Accord d'entreprise relatif à l'intéressement",
     "forfait-mobilite-durable-2025": "Accord d'entreprise relatif au forfait de mobilité durable",
     "prime-chaussures-2023": "Accord d'entreprise relatif à la mise en place d'une prime « chaussures »",

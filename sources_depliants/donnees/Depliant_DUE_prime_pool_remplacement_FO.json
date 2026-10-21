@@ -1,22 +1,32 @@
 {
  "slug": "Depliant_DUE_prime_pool_remplacement_FO",
- "titre_pdf": "",
- "surtitre": "",
- "titre": [],
+ "titre_pdf": "DUE : Prime de pool de remplacement",
+ "surtitre": "DÉCISION UNILATÉRALE ICO",
+ "titre": [
+  "DUE :",
+  "Prime de pool",
+  "de remplacement"
+ ],
  "sous_titre": "Décision unilatérale de l'employeur.\nAssistantes médicales, aides-soignants, IDE.",
- "pastilles": [],
+ "chiffres": [
+  {
+   "valeur": "100",
+   "unite": "€",
+   "unite_rouge": true,
+   "libelle": "bruts par mois à temps plein, au prorata pour un temps partiel",
+   "ajust": -7.37
+  }
+ ],
+ "pastilles": [
+  "Versée chaque mois"
+ ],
  "recto": {
   "rabat": [
    {
     "t": "encadre",
     "style": "alerte",
-    "titre": "",
+    "titre": "Point de vigilance — quand elle s'arrête",
     "contenu": [
-     {
-      "t": "p",
-      "texte": "**Point de vigilance — quand elle s'arrête**",
-      "taille": 12.5
-     },
      {
       "t": "p",
       "texte": "La prime **cesse dès que vous êtes affecté durablement** sur un poste fixe pour les assistantes médicales, sur un poste sédentaire pour les aides-soignants et les IDE."
@@ -28,17 +38,17 @@
     "t": "picto",
     "svg": "Depliant_DUE_prime_pool_remplacement_FO_1.svg",
     "legende": "Dès l'affectation fixe, le temps de la prime s'arrête.",
-    "ecart": 13.45,
-    "avant": 17.95
+    "ecart": 13.21,
+    "avant": 11.45
    }
   ],
   "contact": {
    "accroche": "Vous êtes au pool et la prime n'apparaît pas sur votre bulletin ? Vos élus FO vous accompagnent.",
-   "courriel": "",
-   "poste": ""
+   "courriel": "fo.nantes@unicancer.fr",
+   "poste": "Poste 9188"
   },
   "source": {
-   "texte": "**Source** Deux décisions unilatérales du **22 avril 2024**, à effet rétroactif au 1^er^ janvier 2024 : l'une pour les assistantes médicales, l'autre pour les aides-soignants et les IDE. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
+   "texte": "Deux décisions unilatérales du **22 avril 2024**, à effet rétroactif au 1^er^ janvier 2024 : l'une pour les assistantes médicales, l'autre pour les aides-soignants et les IDE. **Résumé établi par vos élus FO à l'ICO** — octobre 2026. Document d'information, sans valeur contractuelle.",
    "renvoi": "Les références entre parenthèses renvoient aux points de chaque décision. Seul le texte intégral fait référence :",
    "liens_sep": [
     " /"
@@ -58,13 +68,8 @@
    {
     "t": "encadre",
     "style": "marine",
-    "titre": "",
+    "titre": "Ce n'est pas un accord négocié",
     "contenu": [
-     {
-      "t": "p",
-      "texte": "**Ce n'est pas un accord négocié**",
-      "taille": 12.5
-     },
      {
       "t": "p",
       "texte": "Il s'agit de **décisions unilatérales de l'employeur** : elles n'ont pas été négociées ni signées par les organisations syndicales."
@@ -77,25 +82,24 @@
     "t": "picto",
     "svg": "Depliant_DUE_prime_pool_remplacement_FO_2.svg",
     "legende": "Décidée seule par la direction, sans signature syndicale.",
-    "ecart": 11.69,
+    "ecart": 11.7,
     "decalage_x": 5.7,
-    "avant": 13.68
+    "avant": 14
    }
   ]
  },
  "verso": [
   [
    {
-    "t": "p",
-    "texte": "**Qui est concerné ?**",
-    "taille": 14.5,
-    "avant": 1.47,
+    "t": "section",
+    "titre": "Qui est concerné ?",
+    "avant": 3.83,
     "apres": 0
    },
    {
     "t": "p",
     "texte": "Les salariés affectés à un **pool de remplacement**, en CDD comme en CDI.",
-    "avant": 6.68
+    "avant": 5.6
    },
    {
     "t": "puces",
@@ -109,16 +113,15 @@
     "t": "picto",
     "svg": "Depliant_DUE_prime_pool_remplacement_FO_3.svg",
     "legende": "Trois métiers, un même pool tournant de remplacement.",
-    "ecart": 28.53,
-    "avant": 22.32
+    "ecart": 28.73,
+    "avant": 22.13
    }
   ],
   [
    {
-    "t": "p",
-    "texte": "**Le montant**",
-    "taille": 14.5,
-    "avant": 1.47,
+    "t": "section",
+    "titre": "Le montant",
+    "avant": 3.83,
     "apres": 0
    },
    {
@@ -127,24 +130,23 @@
      "**100 € bruts par mois** à temps plein",
      "Réduit **au prorata** pour un temps partiel"
     ],
-    "avant": 6.68,
+    "avant": 5.6,
     "apres": 0
    },
    {
     "t": "picto",
     "svg": "Depliant_DUE_prime_pool_remplacement_FO_4.svg",
     "legende": "Un montant fixe, net de toute condition d'ancienneté.",
-    "ecart": 25.58,
+    "ecart": 25.02,
     "decalage_x": -2.4,
-    "avant": 34.26
+    "avant": 34.07
    }
   ],
   [
    {
-    "t": "p",
-    "texte": "**Le versement**",
-    "taille": 14.5,
-    "avant": 1.47,
+    "t": "section",
+    "titre": "Le versement",
+    "avant": 3.83,
     "apres": 0
    },
    {
@@ -153,15 +155,15 @@
      "Versée **chaque mois**, avec votre salaire",
      "Effet rétroactif au **1**^er^ **janvier 2024**"
     ],
-    "avant": 6.68,
+    "avant": 5.6,
     "apres": 0
    },
    {
     "t": "picto",
     "svg": "Depliant_DUE_prime_pool_remplacement_FO_5.svg",
     "legende": "Un rendez-vous fixe sur votre bulletin, tous les mois.",
-    "ecart": 27.92,
-    "avant": 38.68
+    "ecart": 28.11,
+    "avant": 38.49
    }
   ]
  ]

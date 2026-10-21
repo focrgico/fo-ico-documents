@@ -32,7 +32,7 @@ def inline(s):
     s = re.sub(r"\{ref:([^}]+)\}", r'<i class="art">(\1)</i>', s)
     s = re.sub(r"\^([^^]+)\^", r"<sup>\1</sup>", s)
     s = re.sub(r" ([?!;])", " \\1", s)
-    return s
+    return s.replace("\n", "<br>")
 
 
 def picto(bloc, contexte, k=None):

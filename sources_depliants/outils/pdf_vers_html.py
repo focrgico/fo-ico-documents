@@ -190,6 +190,9 @@ def image_uri(doc, info, smasks=None):
     return "data:image/png;base64," + base64.b64encode(data).decode()
 
 
+VERSO_BLANC = False   # --verso-blanc : la colonne centrale du verso (gris clair #F4F6F9) devient blanche
+
+
 def page_html(doc, page):
     w, h = page.rect.width, page.rect.height
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{w:.3f}pt" height="{h:.3f}pt" viewBox="0 0 {w:.3f} {h:.3f}" '
@@ -212,6 +215,9 @@ def page_html(doc, page):
             parts.append(f'<g opacity="{op:.3f}">' if op not in (None, 1, 1.0) else "<g>")
             pile.append(niv)
         else:
+            if (VERSO_BLANC and page.number == 1 and dr.get("fill") and dr["rect"].width > 200 and dr["rect"].height > 500
+                    and hexc(dr["fill"]) == "#f4f6f9"):
+                dr = dict(dr, fill=(1.0, 1.0, 1.0))
             parts.append(dessin_svg(dr))
     parts.extend("</g>" for _ in pile)
     smasks = {i[0]: i[1] for i in page.get_images(full=True) if i[1]}
@@ -279,7 +285,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("pdf")
     ap.add_argument("--sortie", default=str(RACINE / "sortie" / "html_copie"))
+    ap.add_argument("--verso-blanc", action="store_true", help="colonne centrale du verso en blanc au lieu du gris clair")
     a = ap.parse_args()
+    global VERSO_BLANC
+    VERSO_BLANC = a.verso_blanc
     sortie = pathlib.Path(a.sortie)
     sortie.mkdir(parents=True, exist_ok=True)
     pol = sortie / "polices"

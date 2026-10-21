@@ -42,13 +42,25 @@ def norm(s):
 
 
 # ---------------------------------------------------------------- lecture des lignes
+CARLITO_SEUL = False   # PDF sans Poppins : les titres sont en Carlito Bold, on les ramène aux tailles Poppins du gabarit
+CORRESPONDANCE = {7.5: 7.0, 22.0: 23.0, 32.0: 32.0, 14.5: 14.5, 12.5: 12.5}
+
+
+def convertir_carlito(s):
+    if CARLITO_SEUL and s["font"].replace(" ", "-") == "Carlito-Bold" and round(s["size"], 1) in CORRESPONDANCE:
+        s = dict(s)
+        s["font"] = "Poppins-Bold"
+        s["size"] = CORRESPONDANCE[round(s["size"], 1)]
+    return s
+
+
 def lire_lignes(page):
     out = []
     for b in page.get_text("dict")["blocks"]:
         if b["type"] != 0:
             continue
         for l in b["lines"]:
-            sp = [s for s in l["spans"] if s["text"] != ""]
+            sp = [convertir_carlito(s) for s in l["spans"] if s["text"] != ""]
             if not sp:
                 continue
             out.append({"x0": min(s["bbox"][0] for s in sp), "y0": min(s["bbox"][1] for s in sp),
@@ -315,7 +327,7 @@ def colonne_generique(page, lignes, dr, cols, ci, pictos_dir, slug, compteur):
                     continue
                 if any(bo["rect"].contains(fitz.Rect(l["x0"], l["y0"], l["x0"] + 1, l["y1"])) for bo in boites):
                     continue
-                if bb.y0 - 14 <= l["y0"] and l["y1"] <= bb.y1 + 18 and bb.x0 - 30 <= l["x0"] <= bb.x1 + 30:
+                if bb.y0 - (24 if l["size"] <= 6.5 else 14) <= l["y0"] and l["y1"] <= bb.y1 + 18 and bb.x0 - 30 <= l["x0"] <= bb.x1 + 30:
                     g["bbox"] |= fitz.Rect(l["x0"], l["y0"], max(s["bbox"][2] for s in l["spans"]), l["y1"])
     # pictos et leurs textes internes
     for g in gr:
@@ -464,7 +476,7 @@ def rabat_navy(page, lignes, dr, pictos_dir, slug, compteur):
         top_src = min(hauts) if hauts else 400
     accroche = [l for l in lc if l["spans"][0]["font"].startswith("Carlito") and abs(l["spans"][0]["size"] - 11.5) < 0.2
                 and hexc_int(l["spans"][0]["color"]) == "e8edf5" and l["y0"] < top_src]
-    contacts = [l for l in lc if est_gras(l["spans"][0]) and hexc_int(l["spans"][0]["color"]) == "ffffff" and l["y0"] < top_src and abs(l["size"] - 11.5) < 0.3]
+    contacts = [l for l in lc if est_gras(l["spans"][0]) and hexc_int(l["spans"][0]["color"]) == "ffffff" and l["y0"] < top_src and abs(l["size"] - 11.5) < 0.6]
     c = {"accroche": balise(accroche, 11.5)}
     cour = [l for l in contacts if "@" in l["spans"][0]["text"]]
     poste = [l for l in contacts if "@" not in l["spans"][0]["text"]]
@@ -555,9 +567,11 @@ def rabat_navy(page, lignes, dr, pictos_dir, slug, compteur):
 def importer(pdf, slug=None):
     global rapport
     rapport = []
+    global CARLITO_SEUL
     pdf = pathlib.Path(pdf)
     slug = slug or pdf.stem
     doc = fitz.open(str(pdf))
+    CARLITO_SEUL = not any("Poppins" in f[3] for p in doc for f in p.get_fonts())
     if len(doc) != 2:
         raise SystemExit(f"{pdf.name} : {len(doc)} pages")
     pictos_dir = RACINE / "pictos"

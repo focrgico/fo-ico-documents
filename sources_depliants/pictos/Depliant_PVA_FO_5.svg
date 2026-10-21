@@ -1,6 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 135.50 53.00" width="135.50pt" height="53.00pt">
-<path d="M0.25 49.75H22.75V52.75H0.25Z" fill="#dde2ea" stroke="none"/>
-<path d="M37.75 39.25H60.25V52.75H37.75Z" fill="#8fa0ba" stroke="none"/>
-<path d="M75.25 18.25H97.75V52.75H75.25Z" fill="#b08d57" stroke="none"/>
-<path d="M112.75 0.25H135.25V52.75H112.75Z" fill="#14203a" stroke="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.33 69.21" width="139.33pt" height="69.21pt">
+<path d="M3.96 65.96H26.46V68.96H3.96Z" fill="#dde2ea" stroke="none"/>
+<path d="M41.46 55.46H63.96V68.96H41.46Z" fill="#8fa0ba" stroke="none"/>
+<path d="M78.96 34.46H101.46V68.96H78.96Z" fill="#b08d57" stroke="none"/>
+<path d="M116.46 16.46H138.96V68.96H116.46Z" fill="#14203a" stroke="none"/>
+<text x="0.25" y="5.96" font-family="Carlito" font-weight="400" font-style="normal" font-size="6.00" fill="#5b6578">Non atteints</text>
+<text x="43.71" y="5.96" font-family="Carlito" font-weight="400" font-style="normal" font-size="6.00" fill="#5b6578">Partiels</text>
+<text x="80.77" y="5.96" font-family="Carlito" font-weight="400" font-style="normal" font-size="6.00" fill="#5b6578">Atteints</text>
+<text x="116.35" y="5.96" font-family="Carlito" font-weight="400" font-style="normal" font-size="6.00" fill="#5b6578">Dépassés</text>
 </svg>

@@ -49,7 +49,7 @@ body { font-family: "Carlito", sans-serif; font-size: 11.5pt; line-height: 1.24;
 .r3 { left: 559.5pt;  width: 282.42pt; background: #fff;            padding-left: 34.1pt; padding-right: 33.8pt; }
 /* verso : Qui est concerné | colonne 1 | colonne 2 */
 .v1 { left: 0;        width: 280.5pt;  background: #fff;            padding-left: 33.96pt; padding-right: 33.75pt; }
-.v2 { left: 280.5pt;  width: 280.5pt;  background: var(--gris-fond); padding-left: 34.2pt; padding-right: 33.8pt; }
+.v2 { left: 280.5pt;  width: 280.5pt;  background: #fff; padding-left: 34.2pt; padding-right: 33.8pt; }
 .v3 { left: 561pt;    width: 280.92pt; background: #fff;            padding-left: 34.1pt; padding-right: 33.8pt; }
 
 /* ---------- Textes ---------- */

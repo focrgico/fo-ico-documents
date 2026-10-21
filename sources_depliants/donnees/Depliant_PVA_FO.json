@@ -157,7 +157,7 @@
      "**Objectifs non atteints** → PVA à 0",
      "**Objectifs partiellement atteints** → PVA minorée (−25 %)",
      "**Objectifs atteints** → PVA normale (¾ du taux DG)",
-     "**Contribution particulière** → PVA majorée (+1 part du reliquat) ^Non atteints Partiels Atteints Dépassés^"
+     "**Contribution particulière** → PVA majorée (+1 part du reliquat)"
     ],
     "apres": 0
    },
@@ -165,8 +165,9 @@
     "t": "picto",
     "svg": "Depliant_PVA_FO_5.svg",
     "legende": "Le niveau de PVA suit les résultats de votre entretien annuel.",
-    "ecart": 17.55,
-    "avant": 6.29
+    "ecart": 17.85,
+    "decalage_x": -2.2,
+    "avant": 8.99
    }
   ]
  ]

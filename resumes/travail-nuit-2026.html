@@ -72,8 +72,11 @@
 (function () {
   const q = new URLSearchParams(location.search).get('q');
   if (!q || q.trim().length < 3) return;
-  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  const terms = norm(q.trim()).split(/\s+/).filter(w => w.length >= 2);
+  const norm = s => s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+  const ws = norm(q.trim()).split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let terms = ws.filter(w => !STOP.has(w)); if (!terms.length) terms = ws;
+  terms = [...new Set(terms.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
   let first = null;
   document.querySelectorAll('#resume-article p, #resume-article li, #resume-article td, #resume-article h2, #resume-article h3').forEach(el => {
     const txt = el.textContent, nt = norm(txt);

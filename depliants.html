@@ -733,9 +733,29 @@ const leafletEmpty = document.getElementById('leaflet-empty');
 const leafletHits = document.getElementById('leaflet-hits');
 let activeTheme = 'all';
 
-function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+function norm(s) { return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[̀-ͯ]/g, ''); }
 function atWordStart(nt, i) { return i === 0 || !/[a-z0-9]/.test(nt[i - 1]); }
 function hasTerm(nt, t) { let i = 0; while ((i = nt.indexOf(t, i)) !== -1) { if (atWordStart(nt, i)) return true; i += 1; } return false; }
+// Recherche « à la Google » : les petits mots (de, la, du, et, à…) sont ignorés, le pluriel
+// est toléré (formation / formations), les apostrophes typographiques sont normalisées.
+const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+function queryWords(q) {
+  const ws = q.split(/[^a-z0-9]+/).filter(w => w.length >= 2);
+  let k = ws.filter(w => !STOP.has(w));
+  if (!k.length) k = ws;
+  return [...new Set(k.map(w => (w.length > 4 && /[sx]$/.test(w)) ? w.slice(0, -1) : w))];
+}
+// Passages contenant au moins un des mots, classés par nombre de mots trouvés.
+function rankAny(pool, get, words, has) {
+  const h = has || hasTerm;
+  return pool.map(p => [p, words.filter(w => h(get(p), w)).length]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).map(x => x[0]);
+}
+function titleMatch(title, nq) {
+  const nt = norm(title);
+  if (nt.includes(nq)) return true;
+  const w = queryWords(nq);
+  return w.length > 0 && w.every(x => hasTerm(nt, x));
+}
 depResData.forEach(p => { p.n = norm(p.t); });
 
 let lastAccMsg = '';
@@ -744,9 +764,10 @@ function textHits(raw) {
   lastAccMsg = '';
   if (raw.trim().length < 3) return hits;
   const q = norm(raw.trim());
-  const words = q.split(/\s+/).filter(w => w.length >= 2);
+  const words = queryWords(q);
   let matches = depResData.filter(p => hasTerm(p.n, q));
-  if (matches.length === 0 && words.length > 1) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
+  if (matches.length === 0 && words.length > 0) matches = depResData.filter(p => words.every(w => hasTerm(p.n, w)));
+  if (matches.length === 0 && words.length > 1) matches = rankAny(depResData, p => p.n, words);
   matches.forEach(p => hits.add(p.a));
   if (matches.length) lastAccMsg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + hits.size + (hits.size > 1 ? ' documents' : ' document');
   return hits;
@@ -758,7 +779,7 @@ function applyFilters() {
   const hits = textHits(raw);
   leafletCards.forEach(card => {
     const themeOk = activeTheme === 'all' || card.dataset.theme === activeTheme;
-    const qOk = !raw || norm(card.dataset.title).includes(nq) || hits.has(card.dataset.id);
+    const qOk = !raw || titleMatch(card.dataset.title, nq) || hits.has(card.dataset.id);
     card.style.display = (themeOk && qOk) ? 'inline-flex' : 'none';
   });
   leafletLabels.forEach(label => {

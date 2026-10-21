@@ -302,7 +302,7 @@ function highlightAll(text, terms) {
 // - correction des fautes de frappe (uniquement vers des mots présents dans les textes de la page)
 // - liste de mots clés cliquables + suggestions à la saisie
 // Un « mot » de requête est une chaîne « a|b|c » : le passage est retenu s'il contient l'une des variantes.
-const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t']);
+const STOP = new Set(['de','du','des','la','le','les','un','une','au','aux','a','et','ou','en','dans','par','pour','sur','sous','avec','sans','ce','ces','cet','cette','se','sa','son','ses','leur','leurs','que','qui','quoi','est','sont','il','elle','ils','elles','ne','pas','ni','mais','donc','car','y','l','d','s','n','c','j','qu','m','t','combien','comment','quel','quelle','quels','quelles','puis','peux','peut','dois','doit','faut','quand','je','tu','nous','vous','mon','ma','mes','ton','ta']);
 
 // Groupes de synonymes (dans les deux sens).
 const SYN_GROUPS = [
@@ -534,6 +534,73 @@ function initKeywords() {
   inp.addEventListener('input', () => { if (!inp.value.trim()) setSearchNote([], []); });
 }
 
+// ---- Classement par pertinence (pondération des mots rares, proximité, couverture) ----
+function ccnN(p) { return p._n || (p._n = norm(p.text)); }
+function firstPos(nt, t) {
+  const alts = t.indexOf('|') === -1 ? [t] : t.split('|');
+  let best = -1;
+  for (const a of alts) {
+    let i = 0;
+    while ((i = nt.indexOf(a, i)) !== -1) {
+      const endOk = a.length > 3 || !/[a-z0-9]/.test(nt[i + a.length] || ' ');
+      if (atWordStart(nt, i) && endOk) { if (best === -1 || i < best) best = i; break; }
+      i += 1;
+    }
+  }
+  return best;
+}
+// Renvoie {matches, mode, idf, words} : passages triés par score décroissant (p._s).
+// mode « exact » : au moins un passage contient tous les mots ; « any » : sinon.
+function rankSearch(pool, getN, words, q) {
+  const nts = pool.map(getN);
+  const N = nts.length || 1;
+  const pos = nts.map(t => words.map(w => firstPos(t, w)));
+  const df = words.map((w, j) => pos.reduce((c, r) => c + (r[j] >= 0 ? 1 : 0), 0));
+  const eff = words.map((w, j) => j).filter(j => df[j] > 0);   // mots absents du corpus ignorés
+  const idf = words.map((w, j) => Math.log(1 + (N - df[j] + 0.5) / (df[j] + 0.5)));
+  const out = { matches: [], mode: 'any', idf: idf, words: words };
+  if (!eff.length) return out;
+  const n = eff.length;
+  const minK = n >= 2 ? Math.ceil(n / 2) : 1;
+  const avg = nts.reduce((a, t) => a + t.length, 0) / N || 1;
+  const phrase = q && q.indexOf(' ') !== -1 ? q : null;
+  const scored = [];
+  let bestK = 0;
+  nts.forEach((t, i) => {
+    let s = 0, k = 0, lo = Infinity, hi = -1;
+    eff.forEach(j => { const at = pos[i][j]; if (at >= 0) { s += idf[j]; k++; if (at < lo) lo = at; if (at > hi) hi = at; } });
+    if (!k) return;
+    if (k > bestK) bestK = k;
+    const cov = Math.pow(k / n, 1.5);
+    const span = hi - lo;
+    const prox = k >= 2 ? (span <= 100 ? 1.6 : span <= 250 ? 1.3 : 1) : 1;
+    const len = Math.min(Math.max(t.length / avg, 0.3), 3);
+    const lnorm = 1 / (0.6 + 0.4 * len);
+    const ph = phrase && hasTerm(t, phrase) ? 2 : 1;
+    scored.push([i, k, s * cov * prox * lnorm * ph]);
+  });
+  let kept = scored.filter(x => x[1] >= minK);
+  if (kept.length < 3 && n >= 3) kept = scored.filter(x => x[1] >= Math.max(1, Math.ceil(n / 3)));
+  if (!kept.length) kept = scored;
+  kept.sort((a, b) => b[2] - a[2]);
+  out.matches = kept.map(x => { const p = pool[x[0]]; p._s = x[2]; return p; });
+  out.mode = bestK === n ? 'exact' : 'any';
+  return out;
+}
+// Classe les documents : meilleurs passages + mots de la requête présents dans le titre.
+function rankGroups(groups, R, titleOf) {
+  const score = id => {
+    const ss = groups[id].map(p => p._s).sort((a, b) => b - a);
+    let s = (ss[0] || 0) + 0.3 * (ss[1] || 0) + 0.15 * (ss[2] || 0);
+    const nt = norm(titleOf(id));
+    R.words.forEach((w, j) => { if (firstPos(nt, w) >= 0) s += 1.5 * R.idf[j]; });
+    return s;
+  };
+  const sc = {};
+  Object.keys(groups).forEach(id => { sc[id] = score(id); });
+  return Object.keys(groups).sort((a, b) => sc[b] - sc[a]);
+}
+
 // Passages contenant au moins un des mots, classés par nombre de mots trouvés.
 function rankAny(pool, get, words, has) {
   const h = has || hasTerm;
@@ -556,11 +623,8 @@ function runResSearch(raw, theme) {
   const q = norm(raw.trim());
   const words = queryWords(q);
   const pool = resData.filter(p => theme === 'all' || resDocs[p.a].categorie === theme);
-  let matches = pool.filter(p => hasTerm(p.n, q) || (words.length === 1 && hasTerm(p.n, words[0])));
-  if (words.length === 1) matches = litFirst(matches, p => p.n, q);
-  let mode = 'exact';
-  if (matches.length === 0 && words.length > 0) { matches = pool.filter(p => words.every(w => hasTerm(p.n, w))); mode = 'approx'; }
-  if (matches.length === 0 && words.length > 1) { matches = rankAny(pool, p => p.n, words); mode = 'any'; }
+  const R = rankSearch(pool, p => p.n, words, q);
+  const matches = R.matches, mode = R.mode;
   if (matches.length === 0) {
     resCount.innerHTML = '<div class="ccn-empty">Le mot « ' + escapeHtml(raw.trim()) + ' » n\'apparaît dans le texte d\'aucun résumé' + (theme === 'all' ? '' : ' « ' + escapeHtml(theme) + ' »') + '.</div>';
     resResults.innerHTML = '';
@@ -568,12 +632,11 @@ function runResSearch(raw, theme) {
   }
   const groups = {};
   matches.forEach(p => { (groups[p.a] = groups[p.a] || []).push(p); hits.add(p.a); });
-  const ids = Object.keys(groups).sort((x, y) => groups[y].length - groups[x].length);
+  const ids = rankGroups(groups, R, id => resDocs[id].titre);
   let msg = matches.length + (matches.length > 1 ? ' passages' : ' passage') + ' dans ' + ids.length + (ids.length > 1 ? ' résumés' : ' résumé');
-  if (mode === 'approx') msg += ' — pas de correspondance exacte pour la phrase complète, résultats contenant tous les mots importants';
-  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots, résultats classés par nombre de mots trouvés';
+  if (mode === 'any') msg += ' — aucun passage ne contient tous les mots : résultats classés par pertinence, les mots rares en premier';
   resCount.innerHTML = '<span class="note">' + msg + '</span>';
-  const terms = altTerms(mode === 'exact' && words.length !== 1 ? [q] : words);
+  const terms = altTerms(words);
   const qs = encodeURIComponent(raw.trim());
   const card = (p) => `
       <div class="ccn-result">

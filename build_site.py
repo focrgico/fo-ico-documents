@@ -211,6 +211,11 @@ PAGE_FOOT = """
     <img src="{base}assets/logo.png" alt="Logo FO ICO" class="footer-logo">
     <span>FO ICO — Base documentaire</span>
   </div>
+  <div class="footer-links">
+    <a href="{base}mentions-legales.html">Mentions légales</a>
+    <a href="{base}liens-foico.html">Liens du site</a>
+    <a href="{base}liens-github.html">Liens GitHub</a>
+  </div>
   <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
 </footer>
 </body>
@@ -1324,6 +1329,74 @@ def dedup_by_resume(accords):
     return result
 
 
+# Intitulé exact de chaque document source, relevé le 21/10/2026 sur la première page
+# du PDF signé (lu visuellement). Seules la casse et les accents sont rétablis (les
+# PDF signés sont en capitales sans accents) ; les mots sont ceux du document, y compris
+# une faute de frappe d'origine (« Bonicication »). Sert à afficher, sous le titre de
+# chaque résumé, d'où il vient. Clé = id du catalogue.
+TITRES_EXACTS = {
+    "teletravail-2021": "Accord d'entreprise relatif à l'organisation du télétravail",
+    "att-cadres-2021": "Accord d'entreprise relatif à la durée et à l'aménagement du temps de travail des personnels cadres",
+    "acquisition-cp-maladie-cadres-2025": "Avenant à l'accord ATT des cadres relatif aux incidences des absences sur les congés payés",
+    "att-non-cadres-2020": "Accord d'entreprise relatif à la durée et à l'aménagement du temps de travail des personnels non cadres",
+    "avenant-att-non-cadres-2022": "Avenant modificatif n°1 à l'accord d'entreprise relatif à la durée et à l'aménagement du temps de travail des personnels non cadres",
+    "acquisition-cp-maladie-non-cadres-2025": "Avenant à l'accord ATT relatif aux incidences des absences sur les congés payés",
+    "compteur-intermediaire": "Avenant à l'accord ATT relatif à la mise en place d'un compteur intermédiaire destiné aux salariés non-postés de l'ICO",
+    "compteur-intermediaire-postes": "Avenant à l'accord ATT relatif à la mise en place d'un compteur intermédiaire destiné aux salariés postés de l'ICO",
+    "cet-2021": "Accord d'entreprise relatif à la mise en place d'un compte épargne temps",
+    "avenant-cet-2022": "Avenant modificatif n°1 à l'accord d'entreprise relatif à la mise en place d'un compte épargne temps",
+    "cdd-objet-defini-2021": "Accord d'entreprise relatif au contrat à durée déterminée à objet défini au sein de l'ICO",
+    "percol-2021": "Plan d'épargne retraite collectif",
+    "conge-humanitaire-2026": "Accord sur le congé humanitaire",
+    "egalite-fh-2026": "Accord d'entreprise relatif à l'égalité entre les femmes et les hommes",
+    "travail-nuit-2026": "Accord d'entreprise relatif au travail de nuit",
+    "vap-2025": "Accord d'entreprise relatif à la validation des acquis professionnels",
+    "avenant-vap-2025": "Avenant à l'accord d'entreprise relatif à la validation des acquis professionnels",
+    "bic-2025": "Accord d'entreprise relatif à la répartition de la bonicication individuelle de carrière",
+    "interessement-2026": "Accord d'entreprise relatif à l'intéressement",
+    "forfait-mobilite-durable-2025": "Accord d'entreprise relatif au forfait de mobilité durable",
+    "prime-chaussures-2023": "Accord d'entreprise relatif à la mise en place d'une prime « chaussures »",
+    "prime-usc-2023": "Accord d'entreprise relatif à la prime USC",
+    "avenant-prime-usc-2023": "Avenant à l'accord d'entreprise relatif à la prime USC",
+    "pva-2022": "Accord d'entreprise relatif au versement de la part variable additionnelle (PVA) pour les praticiens",
+    "prime-retour-inopine": "Décision unilatérale employeur : prime de retour inopiné",
+    "parcours-am-2025": "Accord d'entreprise relatif au parcours des assistantes médicales",
+    "parcours-ide-mer-2025": "Accord d'entreprise relatif au parcours des infirmiers diplômés d'État et des manipulateurs en électroradiologie médicale",
+    "parcours-physiciens-2022": "Accord d'entreprise relatif au parcours des physiciens médicaux",
+    "reprise-anciennete-mer-as-ide-2022": "Accord d'entreprise relatif à la reprise d'expérience professionnelle des manipulateurs en électroradiologie, des infirmiers de et des aides-soignants",
+    "due-parcours-macroscopie": "Décision unilatérale de l'employeur : parcours des techniciens de laboratoire d'anatomie et cytologie pathologique affectés à la macroscopie",
+    "due-complementaire-frais-sante": "Décision unilatérale de l'employeur relative au régime de remboursement des frais de santé",
+    "due-prime-pool-remplacement-am": "Décision unilatérale de l'employeur : prime de pool de remplacement, secrétariats médicaux",
+    "due-prime-pool-remplacement-soignants": "Décision unilatérale de l'employeur : prime de pool de remplacement, aides-soignants / infirmiers(ères) diplômés(ées) d'État",
+    "pv-desaccord-nao-2023": "NAO au titre de 2023 : procès verbal de désaccord",
+    "pv-desaccord-nao-2024": "Procès verbal de désaccord : négociations annuelles obligatoires au titre de 2024",
+    "pv-desaccord-nao-2025": "Procès verbal de désaccord : négociations annuelles obligatoires au titre de 2025",
+    "pv-desaccord-nao-2026": "Procès verbal de désaccord : négociations annuelles obligatoires au titre de 2026",
+    "intergenerationnel": "Accord d'entreprise intergénérationnel",
+    "avenant-intergenerationnel-2021": "Avenant modificatif n°1 à l'accord d'entreprise intergénérationnel",
+    "avenant-intergenerationnel-2023": "Avenant à l'accord d'entreprise intergénérationnel",
+    "prevoyance-axa-non-cadre": "Notice d'information Prévoyance n° 2257604120000Q en date du 23 novembre 2015 (non cadres)",
+    "prevoyance-axa-cadre": "Notice d'information Prévoyance n° 2257604110000Q en date du 23 novembre 2015 (cadres)",
+    "clause-beneficiaire-prevoyance-axa": "Désignation des bénéficiaires en cas de décès : formulaire Prévoyance (AXA, référence 480299 04 2017)",
+    "ico-information-assistance-axa": "Prestations d'assistance AXA : comment contacter les services d'assistance, description des services",
+}
+
+
+def titres_du_resume(cat, resume_path):
+    """Intitulés exacts des documents sources d'un résumé (liste, dans l'ordre du catalogue)."""
+    return [TITRES_EXACTS[a["id"]] for a in cat["accords"]
+            if a.get("chemin_resume_md") == resume_path and a["id"] in TITRES_EXACTS]
+
+
+def source_html(cat, resume_path):
+    t = titres_du_resume(cat, resume_path)
+    if not t:
+        return ""
+    label = "Document source" if len(t) == 1 else "Documents sources"
+    items = "".join(f"<li>{esc(x)}</li>" for x in t)
+    return f'<div class="doc-source"><span class="doc-source-label">{label}</span><ul>{items}</ul></div>'
+
+
 THEME_COLORS = {
     "Temps de travail / organisation": ("#C7D5F0", "#156082"),
     "Rémunération / épargne": ("#F5EEE1", "#7A6540"),
@@ -1383,6 +1456,7 @@ def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
         html += f"""    <div class="doc-card" data-id="{esc(a['id'])}" data-title="{esc(a['titre'].lower())}" data-theme="{esc(a['theme'])}">
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['theme'])}</span>
       <h3>{esc(a['titre'])}</h3>
+      {source_html(cat, a['chemin_resume_md'])}
       <a href="resumes/{esc(a['id'])}.html" class="link">Lire le résumé →</a>
     </div>
 """
@@ -1537,6 +1611,7 @@ def build_resume_pages(cat, out_dir):
   <div>
     <div class="eyebrow-small">ACCUEIL / RÉSUMÉS / {esc(a['titre'].upper())}</div>
     <h1>{esc(a['titre'])}</h1>
+    {source_html(cat, a['chemin_resume_md'])}
   </div>
 </section>
 
@@ -2138,6 +2213,114 @@ themeChips.forEach(c => c.addEventListener('click', () => {
         f.write(html)
 
 
+SITE_BASE = "https://foico.fr/"  # adresse prévue du site ; à confirmer une fois le dépôt FTP fait (OVH)
+
+
+def _liens_documents(cat):
+    """Liste des documents publiés, sous la forme (groupe, libellé, [(type, chemin_dans_docs, page_site)]).
+    Un même fichier (même chemin) n'apparaît qu'une fois."""
+    vus = set()
+    lignes = []
+    def ajoute(groupe, libelle, typ, chemin, site_rel):
+        if not chemin or (typ, chemin) in vus:
+            return
+        vus.add((typ, chemin))
+        lignes.append((groupe, libelle, typ, chemin, site_rel))
+    for a in sorted(cat["accords"], key=lambda a: (a["categorie"], a.get("annee") or "", a["titre"])):
+        g = a["categorie"]
+        for pdf in pdf_list(a):
+            ajoute(g, a["titre"], "PDF signé", pdf, "pdf/" + quote(os.path.basename(pdf)))
+        dep = a.get("chemin_depliant")
+        for d in (dep if isinstance(dep, list) else [dep] if dep else []):
+            ajoute(g, a["titre"], "Dépliant", d, "depliants/" + quote(os.path.basename(d)))
+    for a in dedup_by_resume(cat["accords"]):
+        ajoute("Résumés", a["titre"], "Résumé", a["chemin_resume_md"], "resumes/" + a["id"] + ".html")
+    for pdf in PDF_HORS_CATALOGUE:
+        ajoute("Autres PDF", os.path.splitext(os.path.basename(pdf))[0], "PDF signé", pdf, "pdf/" + quote(os.path.basename(pdf)))
+    return lignes
+
+
+def build_liens(cat, out_dir):
+    """Deux pages listant toutes les adresses : liens-github.html (dépôt GitHub)
+    et liens-foico.html (adresses prévues sur foico.fr)."""
+    lignes = _liens_documents(cat)
+    for nom, titre, intro in [
+        ("liens-github.html", "Liens GitHub",
+         "Adresses des documents dans le dépôt public GitHub focrgico/fo-ico-documents (branche main)."),
+        ("liens-foico.html", "Liens foico.fr",
+         "Adresses des mêmes documents sur foico.fr. Ces adresses ne sont valables que si le contenu du dossier site/ est déposé à la racine de foico.fr."),
+    ]:
+        github = nom == "liens-github.html"
+        html = page_head(titre, "")
+        html += f"""
+<section class="page-header">
+  <img src="assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / {esc(titre.upper())}</div>
+    <h1>{esc(titre)}</h1>
+    <p>{esc(intro)}</p>
+  </div>
+</section>
+<section class="list-page liens-page">
+"""
+        groupe = None
+        for g, lib, typ, chemin, site_rel in lignes:
+            if g != groupe:
+                if groupe is not None:
+                    html += "  </table>\n"
+                groupe = g
+                html += f'  <h2 class="liens-groupe">{esc(g)}</h2>\n  <table class="liens-table">\n'
+            url = url_for(chemin, blob=True) if github else SITE_BASE + site_rel
+            html += f'    <tr><td class="liens-doc">{esc(lib)}</td><td class="liens-type">{esc(typ)}</td><td class="liens-url"><a href="{esc(url)}">{esc(url)}</a></td></tr>\n'
+        html += "  </table>\n</section>\n"
+        html += page_foot()
+        with open(os.path.join(out_dir, nom), "w", encoding="utf-8") as f:
+            f.write(html)
+
+
+def build_mentions(out_dir):
+    """Page de mentions légales (art. 6 III de la loi n° 2004-575 du 21 juin 2004, LCEN).
+    Les champs à compléter sont signalés par la classe 'a-completer' : aucune donnée
+    n'est inventée."""
+    def tbc(txt):
+        return f'<span class="a-completer">[{esc(txt)}]</span>'
+    html = page_head("Mentions légales", "")
+    html += f"""
+<section class="page-header">
+  <img src="assets/logo.png" alt="Logo FO ICO" class="page-logo">
+  <div>
+    <div class="eyebrow-small">ACCUEIL / MENTIONS LÉGALES</div>
+    <h1>Mentions légales</h1>
+  </div>
+</section>
+<article class="resume-content">
+<h2>Éditeur du site</h2>
+<p>Section syndicale CGT-FO de l'Institut de Cancérologie de l'Ouest (ICO), Saint-Herblain et Angers.</p>
+<p>Adresse : {tbc("adresse postale de l'éditeur à confirmer")}<br>
+Téléphone : {tbc("à compléter")}<br>
+Courriel : {tbc("à compléter")}</p>
+<p>Directeur de la publication : {tbc("nom à confirmer")}</p>
+
+<h2>Hébergeur</h2>
+<p>OVH SAS, 2 rue Kellermann, 59100 Roubaix.<br>
+Téléphone : {tbc("à compléter d'après les mentions légales d'OVH")}</p>
+
+<h2>Contenu du site</h2>
+<p>Les accords, avenants, décisions unilatérales et procès verbaux reproduits ici sont des documents de l'ICO ou de la branche. Le PDF signé est le seul document qui fait foi : les textes convertis, les résumés et les dépliants sont des aides à la lecture rédigées par les élus FO et n'ont pas de valeur juridique. En cas de doute, c'est le PDF signé qui s'applique.</p>
+<p>Ce site ne remplace pas un conseil individuel : pour votre situation personnelle, contactez un élu FO.</p>
+
+<h2>Données personnelles et cookies</h2>
+<p>Le site ne comporte ni compte, ni formulaire envoyé à un serveur, ni outil de mesure d'audience. Il ne dépose pas de cookie. Les noms de signataires qui figurent dans les accords sont ceux des documents signés.</p>
+
+<h2>Droit de réponse et signalement</h2>
+<p>Pour signaler une erreur ou exercer un droit de réponse, écrivez à l'éditeur à l'adresse indiquée ci-dessus {tbc("courriel à compléter")}.</p>
+</article>
+"""
+    html += page_foot()
+    with open(os.path.join(out_dir, "mentions-legales.html"), "w", encoding="utf-8") as f:
+        f.write(html)
+
+
 def main():
     if not os.path.exists(CATALOGUE_PATH):
         sys.exit(f"Catalogue introuvable : {CATALOGUE_PATH}")
@@ -2177,6 +2360,8 @@ def main():
     build_resumes(cat, OUT_DIR, res_docs, res_passages)
     build_resume_pages(cat, OUT_DIR)
     build_depliants(cat, OUT_DIR, res_docs, res_passages)
+    build_liens(cat, OUT_DIR)
+    build_mentions(OUT_DIR)
 
     print(f"Site généré dans {OUT_DIR} ({len(cat['accords'])} accords).")
 

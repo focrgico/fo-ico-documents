@@ -974,10 +974,7 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         html += f'    <span class="chip" data-cat="{esc(c)}" style="--chip-color:{fg}">{esc(c)}</span>\n'
     html += """  </div>
   <div id="ccn-section" style="display:none; margin-top: 0; margin-bottom: 32px;">
-    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-      <span class="bar"></span>
-      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte de la CCN</h2>
-    </div>
+    <div class="sec-head"><span class="bar"></span><h2>Dans la CCN</h2></div>
     <div id="ccn-count" class="ccn-count"></div>
     <div id="ccn-results" class="ccn-results"></div>
   </div>
@@ -1043,10 +1040,6 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
     html += "  </div>\n"
     html += """
   <div id="acc-section" style="display:none; margin-top: 32px;">
-    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-      <span class="bar"></span>
-      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte des accords</h2>
-    </div>
     <div id="acc-count" class="ccn-count"></div>
     <div id="acc-results" class="ccn-results"></div>
   </div>
@@ -1206,14 +1199,13 @@ function runAccSearch(raw, cat) {
         <a class="ccn-jump" href="textes/${p.a}.html?q=${qs}#p${p.i}">Voir dans le texte →</a>
       </div>`;
   const NORM_LEVELS = { 'CCN': 0, 'Accord local': 1, 'Élections': 1, 'Règlement intérieur': 2, 'DUE': 3, 'Prévoyance, mutuelle, retraite': 4, 'NAO': 5 };
-  const NORM_LABELS = ["Convention collective", "Accords d'entreprise", "Règlement intérieur", "Décisions unilatérales de l'employeur (DUE)", "Prévoyance, mutuelle, retraite", "NAO : procès-verbaux de désaccord (pas d'accord signé)"];
+  const NORM_LABELS = ["Dans la CCN (grilles)", "Dans les accords locaux", "Dans le règlement intérieur", "Dans les DUE (décisions unilatérales de l'employeur)", "Dans la prévoyance, mutuelle, retraite", "Dans les PV de désaccord NAO"];
   const lvl = id => (NORM_LEVELS[accDocs[id].categorie] !== undefined ? NORM_LEVELS[accDocs[id].categorie] : 6);
   ids.sort((x, y) => lvl(x) - lvl(y));
-  accCount.innerHTML += '<div class="note" style="margin-top:6px">Classement : hiérarchie des normes (convention collective, accords d’entreprise, règlement intérieur, décisions unilatérales), puis pertinence dans chaque niveau.</div>';
   let lastLvl = -1;
   accResults.innerHTML = ids.map(id => {
     const d = accDocs[id], list = groups[id];
-    const head = lvl(id) !== lastLvl ? '<h3 class="norm-h">' + (NORM_LABELS[lvl(id)] || 'Autres') + '</h3>' : '';
+    const head = lvl(id) !== lastLvl ? '<div class="sec-head"><span class="bar"></span><h2>' + (NORM_LABELS[lvl(id)] || 'Autres') + '</h2></div>' : '';
     lastLvl = lvl(id);
     const first = list.slice(0, 3).map(p => card(d, p)).join('');
     const rest = list.length > 3
@@ -1259,6 +1251,7 @@ function applyFilters() {
     rows.forEach(r => { r.style.display = 'none'; });
     rowsToShow.forEach(r => { r.style.display = 'flex'; });
     runCcnSearch(raw);
+    if (q && (hits.size > 0 || ccnResults.children.length > 0)) docList.style.display = 'none';
     if (q && rowsToShow.length === 0 && hits.size === 0) {
       accordsEmpty.style.display = 'block';
       accordsEmpty.textContent = 'Aucun accord ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.';
@@ -1277,6 +1270,7 @@ function applyFilters() {
     ccnSection.style.display = 'none';
     ccnResults.innerHTML = '';
     ccnCount.innerHTML = '';
+    if (q && hits.size > 0) docList.style.display = 'none';
     if (q && rowsToShow.length === 0 && hits.size === 0) {
       accordsEmpty.style.display = 'block';
       accordsEmpty.textContent = 'Aucun accord « ' + activeChip + ' » ne correspond à « ' + raw + ' », ni dans son titre ni dans son texte.';

@@ -973,6 +973,15 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
         _, fg = CATEGORY_COLORS.get(c, ("#F4F6F9", "#5B6578"))
         html += f'    <span class="chip" data-cat="{esc(c)}" style="--chip-color:{fg}">{esc(c)}</span>\n'
     html += """  </div>
+  <div id="ccn-section" style="display:none; margin-top: 0; margin-bottom: 32px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+      <span class="bar"></span>
+      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte de la CCN</h2>
+    </div>
+    <div id="ccn-count" class="ccn-count"></div>
+    <div id="ccn-results" class="ccn-results"></div>
+  </div>
+
   <div id="accords-empty" class="ccn-empty" style="display:none;"></div>
   <div class="doc-list" id="doc-list">
 """
@@ -1033,15 +1042,6 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
 """
     html += "  </div>\n"
     html += """
-  <div id="ccn-section" style="display:none; margin-top: 32px;">
-    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-      <span class="bar"></span>
-      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte de la CCN</h2>
-    </div>
-    <div id="ccn-count" class="ccn-count"></div>
-    <div id="ccn-results" class="ccn-results"></div>
-  </div>
-
   <div id="acc-section" style="display:none; margin-top: 32px;">
     <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
       <span class="bar"></span>

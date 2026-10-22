@@ -295,7 +295,11 @@ function rankGroups(groups, R, titleOf) {
     const ss = groups[id].map(p => p._s).sort((a, b) => b - a);
     let s = (ss[0] || 0) + 0.3 * (ss[1] || 0) + 0.15 * (ss[2] || 0);
     const nt = norm(titleOf(id));
-    R.words.forEach((w, j) => { if (firstPos(nt, w) >= 0) s += 1.5 * R.idf[j]; });
+    // un seul mot : tous les passages se valent, on classe sur l'étendue du sujet dans le document
+    // (nombre de passages, effet saturé) ; le titre ne sert qu'à départager.
+    const single = R.words.length === 1;
+    if (single) s += 0.5 * (ss[0] || 0) * Math.log(1 + ss.length);
+    R.words.forEach((w, j) => { if (firstPos(nt, w) >= 0) s += (single ? 0.8 : 1.5) * R.idf[j]; });
     return s;
   };
   const sc = {};

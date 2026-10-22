@@ -399,5 +399,7 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .kw:hover { border-color: var(--rouge); color: var(--rouge); }
 .kw-more { border-style: dashed; }
 .search-note { font-size: 13px; color: var(--marine-text); margin: -10px 0 14px; padding: 6px 10px; background: var(--gris); border-left: 3px solid var(--rouge); border-radius: 4px; display: none; }
-.norm-h { margin: 22px 0 4px; padding-bottom: 4px; font-size: 14px; font-weight: 700; color: var(--marine); text-transform: uppercase; letter-spacing: .04em; border-bottom: 2px solid var(--bordure); }
-.norm-h:first-child { margin-top: 0; }
+.sec-head { display: flex; align-items: center; gap: 14px; margin: 36px 0 16px; }
+.sec-head h2 { margin: 0; font-size: 26px; font-weight: 800; color: var(--marine); }
+.sec-head .bar { height: 30px; }
+#acc-results > .sec-head:first-child { margin-top: 0; }

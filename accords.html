@@ -47,6 +47,15 @@
     <span class="chip" data-cat="Prévoyance, mutuelle, retraite" style="--chip-color:#5B3A87">Prévoyance, mutuelle, retraite</span>
     <span class="chip" data-cat="Règlement intérieur" style="--chip-color:#9A4A0B">Règlement intérieur</span>
   </div>
+  <div id="ccn-section" style="display:none; margin-top: 0; margin-bottom: 32px;">
+    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
+      <span class="bar"></span>
+      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte de la CCN</h2>
+    </div>
+    <div id="ccn-count" class="ccn-count"></div>
+    <div id="ccn-results" class="ccn-results"></div>
+  </div>
+
   <div id="accords-empty" class="ccn-empty" style="display:none;"></div>
   <div class="doc-list" id="doc-list">
     <div class="doc-group-label" data-cat="CCN" style="color:#156082;background:#AFC4EA;">CCN</div>
@@ -325,15 +334,6 @@
       <span class="doc-title">Règlement intérieur de l'ICO</span>
       <span class="doc-action"><a class="doc-btn" href="pdf/Reglement%20interieur%20ICO%202024.pdf" target="_blank" rel="noopener">Voir →</a><a class="doc-btn primary" href="pdf/Reglement%20interieur%20ICO%202024.pdf" download="Reglement interieur ICO 2024.pdf" rel="noopener">Télécharger →</a></span>
     </div>
-  </div>
-
-  <div id="ccn-section" style="display:none; margin-top: 32px;">
-    <div style="display:flex; align-items:center; gap:14px; margin-bottom:14px;">
-      <span class="bar"></span>
-      <h2 style="margin:0; font-size:18px; font-weight:700; color:var(--marine);">Dans le texte de la CCN</h2>
-    </div>
-    <div id="ccn-count" class="ccn-count"></div>
-    <div id="ccn-results" class="ccn-results"></div>
   </div>
 
   <div id="acc-section" style="display:none; margin-top: 32px;">
@@ -677,7 +677,11 @@ function rankGroups(groups, R, titleOf) {
     const ss = groups[id].map(p => p._s).sort((a, b) => b - a);
     let s = (ss[0] || 0) + 0.3 * (ss[1] || 0) + 0.15 * (ss[2] || 0);
     const nt = norm(titleOf(id));
-    R.words.forEach((w, j) => { if (firstPos(nt, w) >= 0) s += 1.5 * R.idf[j]; });
+    // un seul mot : tous les passages se valent, on classe sur l'étendue du sujet dans le document
+    // (nombre de passages, effet saturé) ; le titre ne sert qu'à départager.
+    const single = R.words.length === 1;
+    if (single) s += 0.5 * (ss[0] || 0) * Math.log(1 + ss.length);
+    R.words.forEach((w, j) => { if (firstPos(nt, w) >= 0) s += (single ? 0.8 : 1.5) * R.idf[j]; });
     return s;
   };
   const sc = {};

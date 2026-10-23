@@ -2,7 +2,7 @@
 
 Cette section regroupe les documents encadrant le processus des NAO à l'ICO, distincts des accords collectifs permanents (classés dans `accords-locaux/`).
 
-*5 documents "plus en vigueur" ont été déplacés vers l'archive : voir [`../archive-accords-locaux/index.md`](../archive-accords-locaux/index.md) — exclus du travail de résumé aux salariés.*
+*2 documents "plus en vigueur" (accords de méthode 2024 et 2025) ont été déplacés vers l'archive : voir [`../archive-accords-locaux/index.md`](../archive-accords-locaux/index.md) — exclus du travail de résumé aux salariés.*
 
 ## Accords de méthode NAO
 

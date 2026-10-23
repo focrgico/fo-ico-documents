@@ -1,5 +1,7 @@
 # Plan d'Épargne d'Entreprise (PEE)
 
+> **Dépliant à imprimer** — [PEE (PDF, 2 pages)](../Depliants_FO/Depliant_PEE_FO.pdf)
+
 **Accord signé le 22 février 2019 par l'ICO (Pr Mario Campone), la CGT-FO et la CFE-CGC.**
 *Accord à durée indéterminée.*
 
@@ -35,7 +37,7 @@ Vous pouvez changer de placement à tout moment *(Art. 5)* : un changement par a
 
 Vos avoirs sont bloqués **5 ans**, à compter du 1er jour du 6ᵉ mois de l'année où les parts ont été acquises.
 
-**Déblocage anticipé possible**, dans les cas prévus par la loi : mariage ou Pacs, naissance ou adoption (à partir du 3ᵉ enfant à charge), divorce avec résidence d'un enfant chez vous, invalidité, décès, rupture de votre contrat de travail, création ou reprise d'entreprise, achat ou agrandissement de votre résidence principale, surendettement.
+**Déblocage anticipé possible**, dans les cas prévus par la loi : mariage ou Pacs, naissance ou adoption (à partir du 3ᵉ enfant à charge), divorce, séparation ou dissolution de Pacs (avec résidence d'un enfant chez vous), invalidité, décès, rupture de votre contrat de travail, création ou reprise d'entreprise, achat ou agrandissement de votre résidence principale, surendettement.
 
 La demande doit être faite dans les 6 mois suivant l'événement, sauf en cas de rupture de contrat, décès, invalidité ou surendettement, où elle est possible à tout moment.
 
@@ -51,4 +53,4 @@ La demande doit être faite dans les 6 mois suivant l'événement, sauf en cas d
 ---
 *Source : Plan d'Épargne d'Entreprise signé le 22 février 2019 par l'ICO, la CGT-FO et la CFE-CGC. Gestion : Natixis Interépargne (teneur de compte), CACEIS Bank France (dépositaire).*
 
-*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../accords-locaux/Accord%20PEE%20signe%20par%20FO%20et%20CGC.pdf).*
+*Les références entre parenthèses renvoient aux articles de l'accord. Seul le texte intégral fait référence : [accord complet (PDF)](../Accord%20PEE%20signe%20par%20FO%20et%20CGC.pdf).*

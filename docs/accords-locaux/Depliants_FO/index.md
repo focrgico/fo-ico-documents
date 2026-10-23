@@ -20,6 +20,7 @@ recto-verso (retournement sur le bord court) et à plier en trois.
 | DUE Prime de pool de remplacement (AS/IDE) | [Depliant_DUE_prime_pool_remplacement_FO.pdf](Depliant_DUE_prime_pool_remplacement_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-due-prime-pool-remplacement-soignants.md) |
 | Compte épargne temps (CET) | [Depliant_CET_FO.pdf](Depliant_CET_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-cet-avenant-2022.md) |
 | PERCOL (épargne retraite) | [Depliant_PERCOL_FO.pdf](Depliant_PERCOL_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-percol-2021.md) |
+| Plan d'Épargne d'Entreprise (PEE) | [Depliant_PEE_FO.pdf](Depliant_PEE_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume_PEE_2019.md) |
 | BIC (bonification individuelle de carrière) | [Depliant_BIC_FO.pdf](Depliant_BIC_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-bic-2025.md) |
 | PVA (part variable additionnelle, praticiens) | [Depliant_PVA_FO.pdf](Depliant_PVA_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-pva-2022.md) |
 | Intéressement 2026-2028 | [Depliant_interessement_FO.pdf](Depliant_interessement_FO.pdf) | [texte du résumé](../resumes-accords-locaux/resume-interessement-2026.md) |

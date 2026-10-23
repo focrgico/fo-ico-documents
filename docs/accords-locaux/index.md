@@ -8,7 +8,7 @@ Chaque accord existe en deux formats dans ce dossier :
 
 *Les accords de méthode NAO ont été déplacés vers une section dédiée : voir [`../nao/index.md`](../nao/index.md).*
 *Les documents liés aux élections professionnelles ont été déplacés vers une section dédiée : voir [`../elections/index.md`](../elections/index.md).*
-*9 accords "plus en vigueur" ont été déplacés vers l'archive : voir [`../archive-accords-locaux/index.md`](../archive-accords-locaux/index.md) — exclus du travail de résumé aux salariés.*
+*7 accords "plus en vigueur" ont été déplacés vers l'archive : voir [`../archive-accords-locaux/index.md`](../archive-accords-locaux/index.md) — exclus du travail de résumé aux salariés.*
 
 | Accord | Signature | Fichier |
 |---|---|---|

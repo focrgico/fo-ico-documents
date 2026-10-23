@@ -52,7 +52,7 @@ Les revendications de FO ont été les suivantes :
   - Le Rattrapage de l'inflation avec une AG de 3% pour tout le monde
 - Prise en charge à 100% de la mutuelle
 - BIC à 1% Baccable pour 2026
-- Famille : Chèque Emploi Service Universel (CESU) préfinancé avec une dotation annuelle de CESU (ex: 300€ ou 500€) pour la garde d'enfants, le soutien scolaire ou à domicile.
+- Famille : Chèque Emploi Service Universel (CESU) préfinancé avec une dotation annuelle de CESU (ex: 300€ ou 500€) pour la garde d'enfants, le soutien scolaire ou l'aide à domicile.
 - Alimentation (Lutte contre l'inflation) : Titres Restaurant (TR) au plafond maximal 11,97€
 - Mobilité : augmentation du Forfait Mobilité Durable (FMD) +: 700€
 - Ancienneté Technique

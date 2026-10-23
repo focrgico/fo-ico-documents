@@ -4,7 +4,7 @@ Résumés condensés à destination des salariés (droits et obligations), avec 
 
 **Règle appliquée** : un avenant n'a jamais de résumé séparé — ses nouveautés sont intégrées dans le résumé de l'accord de base. Si un accord passe "plus en vigueur" et est archivé, son résumé est retiré d'ici (ou remplacé par le résumé de la version en vigueur, le cas échéant).
 
-## Sommaire (29 résumés)
+## Sommaire (30 résumés)
 
 ### Temps de travail et organisation quotidienne
 | Résumé | Fichier |
@@ -22,6 +22,7 @@ Résumés condensés à destination des salariés (droits et obligations), avec 
 |---|---|
 | CET (+ avenant 2022 intégré) | `resume-cet-avenant-2022.md` |
 | PERCOL (épargne retraite) | `resume-percol-2021.md` |
+| PEE (Plan d'Épargne d'Entreprise, 2019) | `resume_PEE_2019.md` |
 | BIC — répartition | `resume-bic-2025.md` |
 | Intéressement (2026, version en vigueur) | `resume-interessement-2026.md` |
 | Forfait Mobilité Durable (2025, version en vigueur) | `resume-forfait-mobilite-durable-2025.md` |

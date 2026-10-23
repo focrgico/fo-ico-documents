@@ -243,43 +243,13 @@ const KEYWORDS = ['congés', 'maternité', 'heures supplémentaires', 'astreinte
 const KW_TOP = 14;
 function initKeywords() {
   const inp = document.querySelector('.search-bar input');
-  if (!inp || document.getElementById('kw-row')) return;
+  if (!inp || document.getElementById('kw-list')) return;
   const dl = document.createElement('datalist');
   dl.id = 'kw-list';
   KEYWORDS.slice().sort((a, b) => a.localeCompare(b, 'fr')).forEach(k => { const o = document.createElement('option'); o.value = k; dl.appendChild(o); });
   document.body.appendChild(dl);
   inp.setAttribute('list', 'kw-list');
   inp.setAttribute('autocomplete', 'off');
-  const bar = inp.closest('.search-bar');
-  const row = document.createElement('div');
-  row.id = 'kw-row';
-  row.className = 'kw-row';
-  const lab = document.createElement('span');
-  lab.className = 'kw-label';
-  lab.textContent = 'Mots clés :';
-  row.appendChild(lab);
-  const pick = k => { inp.value = k; inp.dispatchEvent(new Event('input', { bubbles: true })); inp.focus(); };
-  KEYWORDS.forEach((k, i) => {
-    const b = document.createElement('button');
-    b.type = 'button';
-    b.className = 'kw' + (i >= KW_TOP ? ' kw-extra' : '');
-    b.textContent = k;
-    if (i >= KW_TOP) b.style.display = 'none';
-    b.addEventListener('click', () => pick(k));
-    row.appendChild(b);
-  });
-  const more = document.createElement('button');
-  more.type = 'button';
-  more.className = 'kw kw-more';
-  more.textContent = 'Plus de mots clés';
-  more.addEventListener('click', () => {
-    const open = more.dataset.open !== '1';
-    more.dataset.open = open ? '1' : '0';
-    row.querySelectorAll('.kw-extra').forEach(b => { b.style.display = open ? '' : 'none'; });
-    more.textContent = open ? 'Moins de mots clés' : 'Plus de mots clés';
-  });
-  row.appendChild(more);
-  bar.parentNode.insertBefore(row, bar.nextSibling);
   inp.addEventListener('input', () => { if (!inp.value.trim()) setSearchNote([], []); });
 }
 

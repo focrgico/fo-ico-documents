@@ -804,6 +804,12 @@ def build_index(cat, out_dir):
         if (!v) return;
         location.href = 'accords.html?q=' + encodeURIComponent(v);
       }
+      function norm(s) {
+        return s.toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+      }
+    </script>
+    <script>/*@@SEARCH_JS@@*/
+      initKeywords();
     </script>
     <div class="hero-spacer" aria-hidden="true"></div>
   </div>

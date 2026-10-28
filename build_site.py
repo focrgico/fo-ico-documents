@@ -985,7 +985,7 @@ def build_index(cat, out_dir):
       <h1>Vos droits, à portée de main</h1>
       <p class="hero-sub">Accords collectifs, résumés en langage clair et dépliants FO.</p>
       <div class="search-bar">
-        <input type="text" id="site-search" placeholder="Rechercher un accord, un thème..." onkeydown="if(event.key==='Enter'){event.preventDefault();goSearch();}">
+        <input type="text" id="site-search" placeholder="Un mot, ou « je suis IDE »" onkeydown="if(event.key==='Enter'){event.preventDefault();goSearch();}">
         <button type="button" onclick="goSearch()">Rechercher</button>
       </div>
     </div>
@@ -1174,7 +1174,7 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
 <section class="list-page">
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
-    <input type="text" id="filter-search" placeholder="Rechercher un mot dans les accords et la CCN (ex. formation, astreinte)...">
+    <input type="text" id="filter-search" placeholder="Un mot, ou « je suis IDE »">
     <button type="button" onclick="applyFilters()">Rechercher</button>
   </div>
   <div class="chips" id="category-chips">

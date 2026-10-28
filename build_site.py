@@ -2109,6 +2109,21 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
     entries = dedup_by_resume(cat["accords"]) + [a for a in cat["accords"] if not a.get("chemin_resume_md")]
     entries = [a for a in entries if a.get("chemin_depliant")]
     entries_sorted = sorted(entries, key=lambda a: (a["theme"], a["titre"]))
+    # Un même dépliant peut couvrir deux accords (ex. pool de remplacement AS/IDE et
+    # Assistantes Médicales) : une seule carte par fichier. Les identifiants des autres
+    # accords restent dans data-alt-ids pour que la recherche dans leur résumé trouve la carte.
+    _vus = {}
+    _alt_ids = {}
+    _uniques = []
+    for a in entries_sorted:
+        _dep = a["chemin_depliant"]
+        _noms = tuple(os.path.basename(x) for x in (_dep if isinstance(_dep, list) else [_dep]))
+        if _noms in _vus:
+            _alt_ids.setdefault(_vus[_noms], []).append(a["id"])
+            continue
+        _vus[_noms] = a["id"]
+        _uniques.append(a)
+    entries_sorted = _uniques
     themes = sorted(set(a["theme"] for a in entries_sorted))
 
     html = page_head("Dépliants", "depliants.html")
@@ -2169,7 +2184,8 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
             # Copié dans site/depliants/ par copy_site_pdfs() (même origine que le
             # site, requis pour que "download" fonctionne — cf. local_pdf_url).
             dep_url = local_pdf_url(d, subdir="depliants")
-            html += f"""    <div class="leaflet-card" data-id="{esc(a['id'])}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}">
+            alt_ids = " ".join(_alt_ids.get(a["id"], []))
+            html += f"""    <div class="leaflet-card" data-id="{esc(a['id'])}" data-alt-ids="{esc(alt_ids)}" data-title="{esc(real_label.lower())}" data-theme="{esc(a['theme'])}">
       <a class="leaflet-cover-link" href="{esc(dep_url)}" target="_blank" rel="noopener" aria-label="Consulter {esc(real_label)}">
         <div class="leaflet-cover">
           <div class="leaflet-top">
@@ -2242,7 +2258,7 @@ function applyFilters() {
   const hits = textHits(raw);
   leafletCards.forEach(card => {
     const themeOk = activeTheme === 'all' || card.dataset.theme === activeTheme;
-    const qOk = !raw || titleMatch(card.dataset.title, nq) || hits.has(card.dataset.id);
+    const qOk = !raw || titleMatch(card.dataset.title, nq) || hits.has(card.dataset.id) || (card.dataset.altIds || '').split(' ').some(x => x && hits.has(x));
     card.style.display = (themeOk && qOk) ? 'inline-flex' : 'none';
   });
   leafletLabels.forEach(label => {

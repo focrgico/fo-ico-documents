@@ -2,7 +2,7 @@
 
 > **Note technique.** Ce fichier est une conversion automatique du PDF source (texte intégral, mise à jour au 1er juillet 2026) en texte brut. La structure narrative (articles, chapitres) est fiable. **Les tableaux (grilles de classification et de rémunération) perdent leur alignement colonnes/lignes lors de cette conversion** — ne vous fiez pas aux chiffres tels qu'ils apparaissent ici. Pour les grilles de rémunération, utilisez [grilles-remuneration.md](grilles-remuneration.md), transcrit et vérifié manuellement depuis les pages PDF en image.
 >
-> **Mise à jour du 1er octobre 2026 (passage de la version du 1er février 2026 à celle du 1er juillet 2026).** Patch ciblé, pas une reconversion intégrale : insertion des avenants 2026-01 et son avenant n°1 (nouvelle Annexe 9 — formation et développement des compétences), 2026-05 (Comité Paritaire de Prévoyance, articles 2.12.4.6.2 à 2.12.4.6.3.4) et 2026-06 (article 2.9.1.1 et tableau de l'Annexe 9), ainsi que l'avis d'interprétation A-9.1.6 du 25 juin 2024 (parcours IDE/MER). Les annexes suivant la nouvelle Annexe 9 ont été renumérotées en conséquence (ARTT : 8→10 ; avis d'interprétation : 9→11 ; tableau récapitulatif des accords : 10→12), conformément à l'article 6.1 de l'avenant 2026-01 qui le prescrit explicitement. **Incohérence du document source non résolue par nous** : le corps du texte continue de dire « mis à jour au 1er février 2026 » à plusieurs endroits (préambule notamment) alors que la couverture indique le 1er juillet 2026 ; nous avons conservé le texte source tel quel (voir règle du projet : ne pas trancher une incohérence du document à la place de l'auteur) et retenu le 1er juillet 2026 comme date de référence du site, sur consigne explicite. Le sommaire (TOC) en début de fichier n'a pas été mis à jour avec de nouvelles entrées de pagination pour l'Annexe 9 — il s'agit d'un texte décoratif hérité du PDF, sans fonction dans ce site.
+> **Mise à jour du 1er octobre 2026 (passage de la version du 1er février 2026 à celle du 1er juillet 2026).** Patch ciblé, pas une reconversion intégrale : insertion des avenants 2026-01 et son avenant n°1 (nouvelle Annexe 9 — formation et développement des compétences), 2026-05 (Comité Paritaire de Prévoyance, articles 2.12.4.6.2 à 2.12.4.6.3.4) et 2026-06 (article 2.9.1.1 et tableau de l'Annexe 9), ainsi que l'avis d'interprétation A-9.1.6 du 25 juin 2024 (parcours IDE/MER). Les annexes suivant la nouvelle Annexe 9 ont été renumérotées en conséquence (ARTT : 8→10 ; avis d'interprétation : 9→11 ; tableau récapitulatif des accords : 10→12), conformément à l'article 6.1 de l'avenant 2026-01 qui le prescrit explicitement. **Incohérence du document source non résolue par nous** : le corps du texte continue de dire « mis à jour au 1er février 2026 » à plusieurs endroits (préambule notamment) alors que la couverture indique le 1er juillet 2026 ; nous avons conservé le texte source tel quel (voir règle du projet : ne pas trancher une incohérence du document à la place de l'auteur) et retenu le 1er juillet 2026 comme date de référence du site, sur consigne explicite. **Reprise du 28/10/2026 : comparaison page par page du PDF du 1er juillet 2026 avec ce fichier.** Corrections faites : valeurs RMAG des groupes A à D du tableau A-1.3.2 (22 405 au lieu des anciennes valeurs 21 877, 21 972, 21 890, 21 910, 22 105, 22 370), mention « Article modifié par recommandation patronale du 04.06.2026 », retrait des astérisques et notes de bas de tableau absentes du PDF, ajout des trois exemples IDE de l'article 2.9.1.2 qui manquaient. Le texte narratif des autres pages correspond au PDF ; les écarts restants sont des tableaux dont l'alignement est perdu par la conversion. Je n'ai pas pu comparer avec le PDF du 1er février 2026, absent du dépôt. Le sommaire (TOC) en début de fichier n'a pas été mis à jour avec de nouvelles entrées de pagination pour l'Annexe 9 — il s'agit d'un texte décoratif hérité du PDF, sans fonction dans ce site.
 
 ---
 
@@ -5827,6 +5827,32 @@ d’éligibilité » de l’article 2.9.1.2. Toutefois, une durée minimale de 5
 est exigée pour prétendre à l’éligibilité au palier supérieur du parcours professionnel en cas
 de plan de progrès.
 
+Exemple 1 :
+
+Un(e) IDE valide le 1er palier du parcours professionnel suite à un plan de progrès après 4 ans dans l’emploi :
+
+➢ L’IDE sera éligible à la validation du 2ème palier du parcours professionnel au bout de 10 ans pleins dans l’emploi (soit le 1er jour de la 11ème année). (Cette durée est identique à celle prévue à l’article 2.9.1.2 pour un salarié n’ayant pas eu de plan de progrès, et les 5 ans minimum ont été respectés).
+
+➢ Il valide ensuite son second palier dans le parcours professionnel sans plan de progrès. Sa durée d’éligibilité au 3ème palier interviendra alors au bout de 17 ans pleins dans l’emploi (soit le 1er jour de la 18ème année).
+
+Exemple 2 :
+
+Un(e) IDE valide le 1er palier du parcours professionnel suite à un plan de progrès après 9 ans dans l’emploi :
+
+➢ L’IDE sera éligible à la validation du 2ème palier au bout de 14 ans pleins dans l’emploi (soit le 1er jour de la 15ème année). En effet, la durée minimale de 5 ans pleins dans l’emploi s’applique suite au plan de progrès.
+
+➢ L’IDE valide ensuite son 2ème palier après 14 ans, cette fois sans plan de progrès. L’éligibilité au 3ème palier interviendra donc au bout de 17 ans dans l’emploi (soit le 1er jour de la 18ème année). (En effet, la durée minimale de 5 ans pleins dans l’emploi s’applique uniquement après un plan de progrès, ce qui n’a pas été le cas pour le 2ème palier).
+
+Exemple 3 :
+
+Un(e) IDE valide le 1er palier du parcours professionnel suite à un plan de progrès après 7 ans dans l’emploi :
+
+➢ L’IDE sera éligible à la validation du 2ème palier au bout de 12 ans pleins dans l’emploi (soit le 1er jour de la 13ème année). En effet, la durée minimale de 5 ans pleins dans l’emploi s’applique suite au plan de progrès.
+
+Cet IDE valide le 2ème palier du parcours professionnel après 14 ans dans l’emploi, suite à un nouveau plan de progrès
+
+➢ L’IDE sera éligible à la validation du 3ème palier au bout de 19 ans pleins dans l’emploi (soit le 1er jour de la 20ème année). En effet, la durée minimale de 5 ans pleins dans l’emploi s’applique de nouveau suite à ce deuxième plan de progrès.
+
 ▪  Paliers d’éligibilité
 
 Il est rappelé que l’éligibilité traduit la durée requise dans l’emploi pour qu’un salarié bénéficie
@@ -9333,18 +9359,19 @@ A-1.3.2.  VALEUR DES RMAG 0, 1, 2 ET 3 AU 1ER JANVIER 2026
 
 Article modifié par avenants 2024-02, 2024-03 et 2024-04 du 09.07.2024
 Article modifié par avenant 2024-07 du 24.10.2024
+Article modifié par recommandation patronale du 04.06.2026
 
 Groupes
 
 Emplois
 
-RMAG*
+RMAG
 
-RMAG1*
+RMAG1
 
-RMAG 2*
+RMAG 2
 
-RMAG3**
+RMAG3
 
 A
 
@@ -9419,13 +9446,13 @@ Coordonnateur technique
 Chef d’équipe
 Cadre 1
 
-21 877
+22 405
 
-21 877
+22 405
 
-21 877
+22 405
 
-21 972
+22 405
 
 24 481
 
@@ -9443,15 +9470,15 @@ Cadre 1
 
 36 065
 
-21 877
-21 877
-21 877
-21 877
+22 405
+22 405
+22 405
+22 405
 
-21 890
-21 890
-21 890
-21 890
+22 405
+22 405
+22 405
+22 405
 22 411
 22 411
 23 071
@@ -9489,16 +9516,16 @@ Cadre 1
 34 181
 37 147
 
-21 877
+22 405
 
-21 877
-21 877
-21 877
+22 405
+22 405
+22 405
 
-22 105
-22 105
-22 105
-22 105
+22 405
+22 405
+22 405
+22 405
 23 084
 23 084
 24 508
@@ -9536,15 +9563,15 @@ Cadre 1
 35 206
 38 264
 
-21 910
-21 910
-21 910
-21 910
+22 405
+22 405
+22 405
+22 405
 
-22 370
-22 370
-22 370
-22 370
+22 405
+22 405
+22 405
+22 405
 23 360
 23 360
 25 045
@@ -9596,8 +9623,6 @@ Cadre supérieur 1
 Cadre supérieur 2
 Cadre supérieur 3
 
-*valeur au 1er novembre 2024 pour les RMAG 0, 1 et 2
-**valeur au 1er janvier 2025 pour le RMAG 3
 
 Annexe 1 – Chapitre 3
 

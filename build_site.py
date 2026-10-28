@@ -1963,7 +1963,7 @@ def build_ccn(cat, out_dir):
   <div>
     <div class="eyebrow-small">ACCUEIL / ACCORDS / CCN</div>
     <h1>Rechercher dans la CCN</h1>
-    <p>Convention collective nationale des CLCC — texte intégral (à jour au 1er février 2026).
+    <p>Convention collective nationale des CLCC — texte intégral (à jour au 1er juillet 2026).
     Recherche dans le texte narratif ; pour les grilles de rémunération, utilisez le PDF ou la page dédiée.</p>
   </div>
 </section>

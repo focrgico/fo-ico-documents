@@ -1,10 +1,10 @@
 # Grilles de rémunération et de classification — CCN CLCC
 
-> Transcrites manuellement depuis les pages du PDF rendues en image (pas depuis l'extraction texte automatique, qui casse l'alignement des tableaux). Source : *CCN des CLCC — mise à jour au 1er février 2026*.
+> Transcrites manuellement depuis les pages du PDF rendues en image (pas depuis l'extraction texte automatique, qui casse l'alignement des tableaux). Source : *CCN des CLCC — mise à jour au 1er juillet 2026* (PDF du dépôt). Reprise du 28/10/2026 : classification et grilles praticiens comparées à cette version, valeurs RMAG des groupes A à D corrigées (voir A-1.3.2).
 
 ## A-1.3.1. Classification des emplois — personnel non praticien
 
-### Personnels non cadres (p.147-148)
+### Personnels non cadres (p.145-146)
 
 | Emplois | Position | Groupe |
 |---|---|---|
@@ -54,7 +54,7 @@
 | Coordonnateur technique | 5 | H |
 | Chef d'équipe | 5 | H |
 
-### Personnels cadres (p.148)
+### Personnels cadres (p.146)
 
 | Emplois | Position | Groupe |
 |---|---|---|
@@ -65,26 +65,26 @@
 | Cadre supérieur 2 | 7 | M |
 | Cadre supérieur 3 | 7 | N |
 
-## A-1.3.2. Valeur des RMAG 0, 1, 2 et 3 au 1er janvier 2026 (p.149-150)
+## A-1.3.2. Valeur des RMAG 0, 1, 2 et 3 au 1er janvier 2026 (p.147-148)
 
-*RMAG = Rémunération Minimale Annuelle Garantie. RMAG* valeur au 1er novembre 2024 (RMAG 0/1/2) ; RMAG3 valeur au 1er janvier 2025.*
+*RMAG = Rémunération Minimale Annuelle Garantie. Article modifié par avenants 2024-02, 2024-03 et 2024-04 du 09.07.2024, par avenant 2024-07 du 24.10.2024 et par recommandation patronale du 04.06.2026. Le titre de l'article dans la CCN du 1er juillet 2026 est « Valeur des RMAG 0, 1, 2 et 3 au 1er janvier 2026 » ; la CCN de cette version ne donne plus de date de valeur par colonne.*
 
 | Groupe | Emplois | RMAG | RMAG1 | RMAG2 | RMAG3 |
 |---|---|---|---|---|---|
-| A | Agent de service | 21 877 | — | — | — |
-| A | Employé administratif | 21 877 | — | — | — |
-| B | Ouvrier spécialisé | 21 877 | 21 877 | 21 877 | 21 910 |
-| B | Agent d'accueil / Standardiste | 21 877 | 21 877 | 21 877 | 21 910 |
-| B | Agent de service qualifié | 21 877 | 21 877 | 21 877 | 21 910 |
-| B | Employé administratif qualifié | 21 877 | 21 877 | 21 877 | 21 910 |
-| C | Brancardier | 21 877 | 21 890 | 22 105 | 22 370 |
-| C | Technicien administratif | 21 877 | 21 890 | 22 105 | 22 370 |
-| C | Ouvrier qualifié | 21 877 | 21 890 | 22 105 | 22 370 |
-| C | Technicien | 21 877 | 21 890 | 22 105 | 22 370 |
-| D | Secrétaire | 21 972 | 22 411 | 23 084 | 23 360 |
-| D | Ouvrier hautement qualifié | 21 972 | 22 411 | 23 084 | 23 360 |
-| D | Aide-soignant | 21 972 | 23 071 | 24 508 | 25 045 |
-| D | Auxiliaire de puériculture | 21 972 | 23 071 | 24 508 | 25 045 |
+| A | Agent de service | 22 405 | — | — | — |
+| A | Employé administratif | 22 405 | — | — | — |
+| B | Ouvrier spécialisé | 22 405 | 22 405 | 22 405 | 22 405 |
+| B | Agent d'accueil / Standardiste | 22 405 | 22 405 | 22 405 | 22 405 |
+| B | Agent de service qualifié | 22 405 | 22 405 | 22 405 | 22 405 |
+| B | Employé administratif qualifié | 22 405 | 22 405 | 22 405 | 22 405 |
+| C | Brancardier | 22 405 | 22 405 | 22 405 | 22 405 |
+| C | Technicien administratif | 22 405 | 22 405 | 22 405 | 22 405 |
+| C | Ouvrier qualifié | 22 405 | 22 405 | 22 405 | 22 405 |
+| C | Technicien | 22 405 | 22 405 | 22 405 | 22 405 |
+| D | Secrétaire | 22 405 | 22 411 | 23 084 | 23 360 |
+| D | Ouvrier hautement qualifié | 22 405 | 22 411 | 23 084 | 23 360 |
+| D | Aide-soignant | 22 405 | 23 071 | 24 508 | 25 045 |
+| D | Auxiliaire de puériculture | 22 405 | 23 071 | 24 508 | 25 045 |
 | E | Assistant de gestion | 24 481 | 24 971 | 25 721 | 26 030 |
 | E | Assistant médical | 24 481 | 24 971 | 25 721 | 26 030 |
 | E | Auxiliaire de puériculture spécialisé | 24 481 | 24 971 | 25 721 | 26 030 |
@@ -123,7 +123,7 @@
 | M | Cadre supérieur 2 | 61 789 | — | — | — |
 | N | Cadre supérieur 3 | 70 608 | — | — | — |
 
-## A-1.6.1.1. Classification du personnel praticien (p.159)
+## A-1.6.1.1. Classification du personnel praticien (p.157)
 
 | Emplois | Cotation |
 |---|---|
@@ -132,7 +132,7 @@
 | Praticien des CLCC | 1000 |
 | Praticien spécialiste des CLCC | 1080 |
 
-## A-1.6.2. Grille médecins, pharmaciens et odontologistes SPÉCIALISTES (p.160)
+## A-1.6.2. Grille médecins, pharmaciens et odontologistes SPÉCIALISTES (p.158)
 
 *Valeur au 1er juillet 2023*
 
@@ -151,7 +151,7 @@
 | Après 24 ans | 11 | 112 936 € |
 | Après 27 ans | 12 | 114 697 € |
 
-## A-1.6.3. Grille médecins, pharmaciens et odontologistes (non-spécialistes) (p.161)
+## A-1.6.3. Grille médecins, pharmaciens et odontologistes (non-spécialistes) (p.159)
 
 *Valeur au 1er septembre 2024*
 
@@ -169,7 +169,7 @@
 | Après 24 ans | 10 | 94 974 € |
 | Après 28 ans | 11 | 99 177 € |
 
-## A-1.6.4. Grille praticiens assistants spécialistes (p.161-162)
+## A-1.6.4. Grille praticiens assistants spécialistes (p.160)
 
 *Valeur au 1er juillet 2023. Grille confirmée à seulement 2 niveaux dans le texte source (vérifié sur le texte brut de la page, pas seulement l'image) — ce n'est pas une troncature de notre part.*
 
@@ -178,7 +178,7 @@
 | Début | 1 | 42 678 € |
 | Après 2 ans | 2 | 48 669 € |
 
-## A-1.6.5. Grille de rémunération des consultants CLCC (p.162)
+## A-1.6.5. Grille de rémunération des consultants CLCC (p.160-161)
 
 *Valeur au 1er juillet 2023*
 

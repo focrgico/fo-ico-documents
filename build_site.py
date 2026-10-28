@@ -551,12 +551,84 @@ SITUATION_EXCLUDED_CATEGORIES = {"NAO"}
 BOOLEAN_FACETS = {"travail_nuit", "handicap"}
 
 
-def situation_fields_html():
+METIERS_PATH = os.path.join(ROOT, "catalogue", "metiers.json")
+
+
+def load_metiers():
+    with open(METIERS_PATH, encoding="utf-8") as f:
+        return json.load(f)["metiers"]
+
+
+def metiers_datalist_html():
+    """Suggestions du champ « Votre métier » : intitulés CCN et premiers synonymes
+    (sigles). Ce ne sont que des suggestions : la saisie reste libre."""
+    seen, opts = set(), []
+    for m in load_metiers():
+        for s in [m["libelle"]] + m["synonymes"][:1]:
+            k = s.lower()
+            if k not in seen:
+                seen.add(k)
+                opts.append(s)
+    return '<datalist id="metiers-list">' + "".join(f'<option value="{esc(o)}">' for o in sorted(opts, key=str.lower)) + "</datalist>"
+
+
+def metiers_light_json():
+    """Synonymes seuls (sans avenants), pour reconnaître « je suis IDE » dans les barres
+    de recherche de l'accueil et de la page Accords."""
+    return json.dumps([{"libelle": m["libelle"], "synonymes": m["synonymes"],
+                        "profession": m.get("profession", []), "statut": m.get("statut", "")}
+                       for m in load_metiers()], ensure_ascii=False)
+
+
+def build_metiers_data(search_data):
+    """Données du champ « Votre métier » : pour chaque métier, ses synonymes, son
+    étiquette de profession dans le catalogue, sa position CCN et les avenants ou
+    articles de la CCN qui le visent, avec l'ancre (#p<idx>) du passage dans
+    ccn-texte.html (trouvée par motif dans le texte de la CCN ; sans passage
+    trouvé, l'avenant n'est pas affiché plutôt que de renvoyer vers un faux endroit)."""
+    out = []
+    for m in load_metiers():
+        avs = []
+        for a in m.get("avenants", []):
+            hits = [r for r in search_data if re.search(a["motif"], r["text"], re.I)]
+            if not hits:
+                continue
+            h = hits[-1] if a.get("dernier") else hits[0]
+            avs.append({"t": a["t"], "p": h["idx"]})
+        out.append({
+            "libelle": m["libelle"], "position": m.get("position"), "groupe": m.get("groupe"),
+            "cotation": m.get("cotation"), "statut": m.get("statut", ""),
+            "profession": m.get("profession", []), "synonymes": m["synonymes"], "avenants": avs,
+        })
+    return out
+
+
+def build_metier_accords_data(cat):
+    """Accords du catalogue étiquetés avec au moins un métier (champ profession),
+    y compris ceux retirés de « Décrivez votre situation » parce que réservés à un
+    métier (SITUATION_EXCLUDED_IDS) : ce sont justement ceux que le salarié veut voir."""
+    data = []
+    for a in cat["accords"]:
+        if a.get("categorie") in ("CCN", "NAO") or not a.get("profession"):
+            continue
+        data.append({
+            "id": a["id"], "titre": a["titre"],
+            "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
+            "profession": a["profession"], "statut": a.get("statut", []),
+        })
+    return data
+
+
+def situation_fields_html(avec_metier=True):
     """Génère les <label class="select-field">...</select></label> du formulaire
     'Décrivez votre situation' — factorisé car réutilisé sur la page d'accueil
     (qui redirige vers situation.html) et sur situation.html elle-même (qui permet
     de relancer la recherche avec d'autres critères sans repasser par l'accueil)."""
-    html = ""
+    html = """        <label class="select-field" id="field-metier">
+          <span class="select-label">Votre métier</span>
+          <input type="text" name="metier" class="metier-input" list="metiers-list" placeholder="ex. : je suis IDE" autocomplete="off">
+        </label>
+""" if avec_metier else ""
     for key, label in FACET_LABELS.items():
         wrapper_id = ""
         if key == "modalite_horaire":
@@ -667,39 +739,152 @@ function renderCcnBlock(filters) {
 }
 """
 
-# Calcule et affiche les accords spécifiques puis généraux dans #situation-results.
-# Suppose que `situationData` et `situationResults` sont déjà définis.
+# Recherche par métier (« je suis IDE ») : reconnaît le métier dans le texte saisi à
+# partir des synonymes de catalogue/metiers.json, puis alimente trois blocs de résultats
+# (accords du métier, accords généraux, CCN et ses avenants). Suppose que `metiersData`
+# est défini. Un accord étiqueté pour d'autres métiers que le vôtre n'est pas affiché ;
+# un accord sans étiquette de métier est traité comme général.
+SITUATION_METIER_JS = """
+function mNorm(s) {
+  return String(s).toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
+}
+// Racine très simple : ignore pluriel et féminin (infirmières = infirmier, soignante = soignant).
+function mStem(w) {
+  if (w.length <= 3) return w;
+  w = w.replace(/trices?$/, 'teur').replace(/ieres?$/, 'ier').replace(/euses?$/, 'eur')
+       .replace(/ives?$/, 'if').replace(/iennes?$/, 'ien');
+  if (w.length > 4) w = w.replace(/[sx]$/, '');
+  if (w.length > 4) w = w.replace(/e$/, '');
+  return w;
+}
+function mTokens(s) {
+  return mNorm(s).split(/[^a-z0-9]+/).filter(Boolean).map(mStem);
+}
+function mCleanQuery(s) {
+  let n = mNorm(s).replace(/^\\s*(bonjour|salut)\\s+/, '');
+  n = n.replace(/^\\s*(moi\\s+)?(je suis|j'suis|je travaille (comme|en tant que|au poste de|en)|en tant que|mon metier( est)?|metier|poste de|profession)\\s+/, '');
+  let toks = n.split(/[^a-z0-9]+/).filter(Boolean);
+  while (toks.length > 1 && ['un', 'une', 'le', 'la', 'les', 'l', 'ma', 'mon'].includes(toks[0])) toks.shift();
+  return toks.map(mStem);
+}
+function containsSeq(hay, needle) {
+  if (!needle.length) return false;
+  for (let i = 0; i + needle.length <= hay.length; i++) {
+    let ok = true;
+    for (let j = 0; j < needle.length; j++) { if (hay[i + j] !== needle[j]) { ok = false; break; } }
+    if (ok) return true;
+  }
+  return false;
+}
+// Retourne {texte, rows, tags:Set, statut}. Garde les métiers dont le synonyme reconnu
+// est le plus long : « cadre supérieur 2 » ne renvoie pas aux cadres 1 à 3.
+function matchMetiers(text) {
+  const res = { texte: (text || '').trim(), rows: [], tags: new Set(), statut: '' };
+  if (!res.texte) return res;
+  const q = mCleanQuery(res.texte);
+  if (!q.length) return res;
+  let best = 0; const scored = [];
+  metiersData.forEach(m => {
+    let b = 0;
+    m.synonymes.forEach(s => {
+      const st = mTokens(s);
+      if (st.length && containsSeq(q, st)) b = Math.max(b, st.join('').length);
+    });
+    if (b > 0) { scored.push([m, b]); best = Math.max(best, b); }
+  });
+  res.rows = scored.filter(x => x[1] === best).map(x => x[0]);
+  res.rows.forEach(m => (m.profession || []).forEach(p => res.tags.add(p)));
+  const statuts = [...new Set(res.rows.map(m => m.statut))];
+  res.statut = statuts.length === 1 ? statuts[0] : '';
+  return res;
+}
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function renderMetierNote(m) {
+  if (!m.texte) return '';
+  if (m.rows.length === 0) {
+    return '<p class="note">Métier non reconnu : « ' + escHtml(m.texte) + ' ». Essayez l\\'intitulé ou le sigle (IDE, aide-soignant, brancardier, cadre, praticien…). Les résultats ci-dessous ne tiennent pas compte du métier.</p>';
+  }
+  const noms = m.rows.map(r => r.libelle);
+  let h = '<p class="note">Métier reconnu : ' + noms.map(escHtml).join(' · ') + '.';
+  if (noms.length > 1) h += ' Plusieurs intitulés correspondent à votre saisie : les résultats couvrent tous ces métiers.';
+  h += ' Si ce n\\'est pas le vôtre, précisez la saisie.</p>';
+  return h;
+}
+function renderCcnMetierBlock(m) {
+  if (!m.rows.length) return '';
+  let html = '<h3>Votre emploi dans la CCN</h3><div class="situation-list">';
+  m.rows.forEach(r => {
+    let c;
+    if (r.position) c = r.libelle + ' : position ' + r.position + ', groupe ' + r.groupe;
+    else if (r.cotation) c = r.libelle + ' : cotation ' + r.cotation;
+    else c = r.libelle + ' : emploi absent de la classification des emplois de la CCN';
+    html += '<span class="situation-item situation-item-static">' + escHtml(c) + '</span>';
+  });
+  html += '</div>';
+  const vus = new Set(); const avs = [];
+  m.rows.forEach(r => (r.avenants || []).forEach(a => { if (!vus.has(a.t)) { vus.add(a.t); avs.push(a); } }));
+  if (avs.length) {
+    html += '<h3>Avenants et articles de la CCN qui visent ce métier</h3><div class="situation-list">' +
+      avs.map(a => '<a class="situation-item" href="ccn-texte.html#p' + a.p + '">' + escHtml(a.t) + ' →</a>').join('') + '</div>' +
+      '<p class="note">Relevé à partir des titres des avenants et de l\\'article A-4.1.2.3 de la CCN : la liste peut être incomplète. Les avenants généraux sur la classification et la rémunération concernent tous les métiers non praticiens.</p>';
+  }
+  return html;
+}
+"""
+
+# Redirige vers situation.html quand la saisie commence par « je suis… » et nomme un
+# métier connu ; sinon la recherche par mots clés se déroule normalement.
+METIER_REDIRECT_JS = SITUATION_METIER_JS + """
+function metierRedirect(v) {
+  if (!/^\\s*(bonjour\\s+|salut\\s+)?(moi\\s+)?(je suis|j'suis|je travaille|en tant que|mon metier)/.test(mNorm(v))) return false;
+  if (!matchMetiers(v).rows.length) return false;
+  location.href = 'situation.html?metier=' + encodeURIComponent(v);
+  return true;
+}
+"""
+
+# Calcule et affiche les accords du métier, les accords spécifiques puis généraux dans
+# #situation-results. Suppose que `situationData`, `metierAccordsData` et
+# `situationResults` sont déjà définis.
 SITUATION_RENDER_JS = """
-function renderSituationResults(filters) {
-  const ccnBlock = renderCcnBlock(filters);
+function renderSituationResults(filters, metierText) {
+  const metier = matchMetiers(metierText);
+  const metierActif = metier.rows.length > 0;
+  // Sans statut choisi, le statut déduit de la position CCN du métier (positions 1 à 5
+  // non cadre, 6 et 7 cadre ; praticien) sert à écarter les accords d'un autre statut.
+  const statutEff = filters.statut || metier.statut || '';
+  const ccnFilters = Object.assign({}, filters);
+  if (!ccnFilters.statut && metier.statut) ccnFilters.statut = metier.statut;
+  const ccnBlock = renderCcnBlock(ccnFilters) + renderCcnMetierBlock(metier);
   const filterEntries = Object.entries(filters);
   const matchedIds = new Set();
-  // Un accord local n'affiche qu'un lien vers l'accord lui-même, jamais de
-  // citation d'article détaillée : seule la CCN cite des articles précis
-  // (cf. renderCcnBlock / ccnJustificatifs) — pour un accord, le texte intégral
-  // d'un clic suffit à vérifier la disposition exacte. Même style de puce
-  // compacte (pas de carte pleine largeur) que les blocs généraux/CCN plus bas,
-  // pour un rendu visuel homogène sur toute la page.
   const renderList = a => `<a class="situation-item" href="${a.href}">${a.titre} →</a>`;
 
-  // Seul le statut (cadre/non-cadre/praticien) partage réellement la population
-  // en groupes mutuellement exclusifs (cf. note sur `generaux` plus bas) : un
-  // accord tagué sur un autre statut que celui choisi ne s'applique pas à la
-  // personne, donc il ne doit apparaître dans AUCUN bloc de résultat, y compris
-  // les blocs par critère ci-dessous (pas seulement le bloc "Statut" lui-même) —
-  // sinon un accord non-cadre peut remonter dans le bloc "Temps de travail" ou
-  // "Travail de nuit" simplement parce qu'il correspond à ce critère-là, alors
-  // qu'il ne concerne pas la personne.
   const statutCompatible = a =>
-    !filters.statut || (a.statut || []).length === 0 || (a.statut || []).includes(filters.statut);
+    !statutEff || (a.statut || []).length === 0 || (a.statut || []).includes(statutEff);
+  // Un accord étiqueté pour des métiers précis ne s'affiche que si le vôtre en fait partie.
+  const metierCompatible = a =>
+    !metierActif || (a.profession || []).length === 0 || a.profession.some(p => metier.tags.has(p));
 
-  let html = '';
-  // Un bloc de résultats par critère coché, chacun traité indépendamment (OR) :
-  // un accord qui ne concerne qu'un seul des critères choisis doit quand même
-  // remonter, pas seulement les accords qui répondraient à tous les critères
-  // à la fois.
+  let html = renderMetierNote(metier);
+
+  // Bloc 1 : accords qui visent nommément votre métier.
+  if (metierActif) {
+    const duMetier = metierAccordsData.filter(a => a.profession.some(p => metier.tags.has(p)) && statutCompatible(a));
+    duMetier.forEach(a => matchedIds.add(a.id));
+    if (duMetier.length > 0) {
+      html += '<h3>' + duMetier.length + ' accord(s) qui visent votre métier</h3>' +
+        '<div class="situation-list">' + duMetier.map(renderList).join('') + '</div>';
+    } else {
+      html += '<h3>Accords qui visent votre métier</h3><p class="note">Aucun accord du catalogue n\\'est étiqueté pour ce métier. Ce n\\'est pas la preuve qu\\'aucun accord ne s\\'applique à vous : voir les accords généraux et la CCN ci-dessous.</p>';
+    }
+  }
+
+  // Un bloc de résultats par critère coché, chacun traité indépendamment (OR).
   filterEntries.forEach(([k, v]) => {
-    const matches = situationData.filter(a => (a[k] || []).includes(v) && statutCompatible(a));
+    const matches = situationData.filter(a => (a[k] || []).includes(v) && statutCompatible(a) && metierCompatible(a) && !matchedIds.has(a.id));
     matches.forEach(a => matchedIds.add(a.id));
     if (matches.length === 0) return;
     const label = (facetValueLabels[k] && facetValueLabels[k][v]) || v;
@@ -707,23 +892,13 @@ function renderSituationResults(filters) {
       '<div class="situation-list">' + matches.map(renderList).join('') + '</div>';
   });
 
-  // Généraux : l'accord ne remonte déjà dans aucun bloc ci-dessus (même filtre
-  // de compatibilité de statut, cf. plus haut). Les autres critères (situation
-  // familiale, temps de travail...) ne sont que des citations additionnelles --
-  // un accord qui n'a pas de citation pour la valeur choisie (ex. ATT non-cadres
-  // n'a pas de citation « parentalité » alors qu'il en a pour grossesse/enfant/
-  // proche aidant) reste malgré tout potentiellement applicable, simplement sans
-  // article spécifique dédié pour ce critère précis.
-  const generaux = situationData.filter(a => !matchedIds.has(a.id) && statutCompatible(a));
+  const generaux = situationData.filter(a => !matchedIds.has(a.id) && statutCompatible(a) && metierCompatible(a));
   if (matchedIds.size === 0 && generaux.length === 0) {
-    situationResults.innerHTML = '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
+    situationResults.innerHTML = html + '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
     return;
   }
   if (generaux.length > 0) {
-    // Aucun critère coché : la liste "générale" est simplement la liste complète,
-    // pas des accords confirmés applicables à tous — intitulé distinct pour ne pas
-    // l'affirmer à tort.
-    const generauxHeading = filterEntries.length === 0
+    const generauxHeading = (filterEntries.length === 0 && !metierActif)
       ? generaux.length + ' accord(s) — aucun critère sélectionné'
       : generaux.length + ' accord(s) général(aux), applicable(s) à tous les salariés';
     html += '<h3>' + generauxHeading + '</h3><div class="situation-list">' +
@@ -758,6 +933,7 @@ def build_situation_data(cat):
             entry["justificatifs"] = a["justificatifs"]
         for key in FACET_LABELS:
             entry[key] = a.get(key, [])
+        entry["profession"] = a.get("profession", [])
         data.append(entry)
     return data
 
@@ -812,9 +988,14 @@ def build_index(cat, out_dir):
       </div>
     </div>
     <script>
+      const metiersData = """ + metiers_light_json() + """;
+""" + METIER_REDIRECT_JS + """
+    </script>
+    <script>
       function goSearch() {
         const v = document.getElementById('site-search').value.trim();
         if (!v) return;
+        if (metierRedirect(v)) return;
         location.href = 'accords.html?q=' + encodeURIComponent(v);
       }
       function norm(s) {
@@ -851,12 +1032,12 @@ def build_index(cat, out_dir):
       <div class="situation-text">
         <h2>Décrivez votre situation</h2>
         <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce
-        qui vous concerne.</p>
+        qui vous concerne. Pour votre métier, tapez « je suis IDE » dans la barre de recherche.</p>
         <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
         Voir aussi les <a href="accords.html">accords</a>.</p>
       </div>
       <form class="situation-form" id="situation-form">
-""" + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+""" + situation_fields_html(False) + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
         <p class="note situation-empty-note" id="situation-empty-note" style="display:none;">Choisissez au moins un critère.</p>
       </form>
     </div>
@@ -900,14 +1081,14 @@ def build_situation_page(cat, out_dir):
   <div>
     <div class="eyebrow-small">ACCUEIL / MA SITUATION</div>
     <h1>Décrivez votre situation</h1>
-    <p>Cadre au forfait jours, non-cadre à temps partiel... choisissez ce qui vous concerne pour voir
-    les accords qui s'appliquent. Vous pouvez changer vos critères et relancer la recherche autant de
+    <p>Écrivez votre métier (« je suis IDE ») ou choisissez ce qui vous concerne (cadre au forfait jours,
+    non-cadre à temps partiel...) pour voir les accords qui s'appliquent. Vous pouvez changer vos critères et relancer la recherche autant de
     fois que nécessaire, directement depuis cette page.</p>
   </div>
 </section>
 <section class="list-page situation-page">
   <form class="situation-form situation-form-page" id="situation-form">
-""" + situation_fields_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
+""" + situation_fields_html() + metiers_datalist_html() + """        <button type="submit" class="situation-btn">Voir les accords qui s'appliquent</button>
   </form>
   <p class="note">Un critère sans résultat ne veut pas dire qu'aucun accord ne s'applique à vous.
   Voir aussi les <a href="accords.html">accords</a>.</p>
@@ -917,28 +1098,38 @@ def build_situation_page(cat, out_dir):
 <script id="situation-data" type="application/json">""" + json.dumps(build_situation_data(cat), ensure_ascii=False) + """</script>
 <script id="situation-ccn-data" type="application/json">""" + json.dumps(build_situation_ccn_data(cat), ensure_ascii=False) + """</script>
 <script id="situation-ccn-justificatifs-data" type="application/json">""" + json.dumps(build_situation_ccn_justificatifs(cat), ensure_ascii=False) + """</script>
+<script id="metiers-data" type="application/json">""" + json.dumps(build_metiers_data(build_ccn_search_data("ccn/ccn-clcc.md")), ensure_ascii=False) + """</script>
+<script id="metier-accords-data" type="application/json">""" + json.dumps(build_metier_accords_data(cat), ensure_ascii=False) + """</script>
 <script id="facet-labels-data" type="application/json">""" + json.dumps(FACET_LABELS, ensure_ascii=False) + """</script>
 <script id="facet-value-labels-data" type="application/json">""" + json.dumps(FACET_VALUE_LABELS, ensure_ascii=False) + """</script>
 <script>
 const situationData = JSON.parse(document.getElementById('situation-data').textContent);
 const ccnData = JSON.parse(document.getElementById('situation-ccn-data').textContent);
 const ccnJustificatifs = JSON.parse(document.getElementById('situation-ccn-justificatifs-data').textContent);
+const metiersData = JSON.parse(document.getElementById('metiers-data').textContent);
+const metierAccordsData = JSON.parse(document.getElementById('metier-accords-data').textContent);
 const facetLabels = JSON.parse(document.getElementById('facet-labels-data').textContent);
 const facetValueLabels = JSON.parse(document.getElementById('facet-value-labels-data').textContent);
 const situationForm = document.getElementById('situation-form');
 const situationResults = document.getElementById('situation-results');
-""" + SITUATION_TOGGLE_JS + SITUATION_CCN_JS + SITUATION_RENDER_JS + """
+""" + SITUATION_TOGGLE_JS + SITUATION_CCN_JS + SITUATION_METIER_JS + SITUATION_RENDER_JS + """
 function runSituationSearch() {
   const fd = new FormData(situationForm);
   const filters = {};
-  for (const [k, v] of fd.entries()) { if (v) filters[k] = v; }
+  let metierText = '';
+  for (const [k, v] of fd.entries()) {
+    if (!v) continue;
+    if (k === 'metier') { metierText = String(v).trim(); } else { filters[k] = v; }
+  }
   // Sans aucun critère coché, on affiche quand même la liste complète des accords
   // (plutôt que de bloquer sur "Choisissez au moins un critère") : renderSituationResults
   // gère déjà ce cas, un filtre vide ne restreignant aucun accord.
-  renderSituationResults(filters);
+  renderSituationResults(filters, metierText);
   // Met à jour l'URL (sans recharger la page) pour que le lien reste partageable
   // et que la recherche survive à un rafraîchissement de la page.
-  const qs = new URLSearchParams(filters).toString();
+  const urlParams = new URLSearchParams(filters);
+  if (metierText) urlParams.set('metier', metierText);
+  const qs = urlParams.toString();
   history.replaceState(null, '', 'situation.html' + (qs ? '?' + qs : ''));
 }
 situationForm.addEventListener('submit', (e) => { e.preventDefault(); runSituationSearch(); });
@@ -947,7 +1138,7 @@ situationForm.addEventListener('submit', (e) => { e.preventDefault(); runSituati
 // l'URL. La recherche se lance systématiquement, avec ou sans critère dans l'URL.
 const initialParams = new URLSearchParams(location.search);
 for (const [key, value] of initialParams.entries()) {
-  const field = situationForm.querySelector(`select[name="${key}"]`);
+  const field = situationForm.querySelector(`[name="${key}"]`);
   if (field) { field.value = value; }
 }
 toggleModaliteField();
@@ -1088,6 +1279,9 @@ const pageEyebrow = document.getElementById('page-eyebrow');
 const pageTitle = document.getElementById('page-title');
 const pageDesc = document.getElementById('page-desc');
 const params = new URLSearchParams(location.search);
+const metiersData = """ + metiers_light_json() + """;
+""" + METIER_REDIRECT_JS + """
+if (params.get('q') && metierRedirect(params.get('q'))) { /* redirigé vers situation.html */ }
 if (params.get('q')) search.value = params.get('q');
 
 function norm(s) {

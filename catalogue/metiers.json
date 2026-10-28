@@ -1,0 +1,1031 @@
+{
+ "genere_le": "2026-10-28",
+ "source": "Liste des metiers et synonymes V3.xlsx (confirmée par David Di Peri le 28/10/2026). profession = étiquette du champ profession du catalogue ; statut déduit de la position CCN (1 à 5 non cadre, 6 et 7 cadre) ou de la catégorie praticien.",
+ "metiers": [
+  {
+   "libelle": "Infirmier D.E.",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "F1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "ide"
+   ],
+   "synonymes": [
+    "IDE",
+    "infirmier",
+    "infirmière",
+    "infirmier diplômé d'État",
+    "Infirmier D.E."
+   ],
+   "avenants": [
+    {
+     "t": "Avis d'interprétation A-9.1.6 du 25/06/2024 (parcours professionnel IDE et MER)",
+     "motif": "A-9\\.1\\.6\\.\\s+AVIS D.INTERP"
+    }
+   ]
+  },
+  {
+   "libelle": "Infirmier D.E. spécialisé",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "G1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "ide"
+   ],
+   "synonymes": [
+    "IDE",
+    "infirmier",
+    "infirmière",
+    "infirmier diplômé d'État",
+    "IDE spécialisé",
+    "Infirmier D.E. spécialisé"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Infirmier de bloc opératoire D.E.",
+   "categorie": "Soignant",
+   "position": 5,
+   "groupe": "H",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "ibode"
+   ],
+   "synonymes": [
+    "IBODE",
+    "IBO",
+    "infirmier de bloc",
+    "infirmière de bloc",
+    "infirmier de bloc opératoire",
+    "infirmier de bloc opératoire diplômé d'État",
+    "Infirmier de bloc opératoire D.E."
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-06 relatif au parcours professionnel des IDE de bloc opératoire vers IBODE (23/09/2024)",
+     "motif": "avenant.*2024\\s*[-–]\\s*0?6\\b.*bloc opératoire"
+    },
+    {
+     "t": "Article A-4.1.2.3 : indemnités d'exercice des IADE, IBODE, IPUER, IPA et chefs d'équipe",
+     "motif": "A-4\\.1\\.2\\.3\\.\\s+Indemnités d.exercice",
+     "dernier": true
+    }
+   ]
+  },
+  {
+   "libelle": "Infirmier anesthésiste D.E.",
+   "categorie": "Soignant",
+   "position": 5,
+   "groupe": "H",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "iade"
+   ],
+   "synonymes": [
+    "IADE",
+    "infirmier anesthésiste",
+    "infirmier anesthésiste diplômé d'État",
+    "Infirmier anesthésiste D.E."
+   ],
+   "avenants": [
+    {
+     "t": "Article A-4.1.2.3 : indemnités d'exercice des IADE, IBODE, IPUER, IPA et chefs d'équipe",
+     "motif": "A-4\\.1\\.2\\.3\\.\\s+Indemnités d.exercice",
+     "dernier": true
+    }
+   ]
+  },
+  {
+   "libelle": "Infirmier en pratique avancée",
+   "categorie": "Soignant",
+   "position": 5,
+   "groupe": "H",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "IPA",
+    "infirmier en pratique avancée"
+   ],
+   "avenants": [
+    {
+     "t": "Article A-4.1.2.3 : indemnités d'exercice des IADE, IBODE, IPUER, IPA et chefs d'équipe",
+     "motif": "A-4\\.1\\.2\\.3\\.\\s+Indemnités d.exercice",
+     "dernier": true
+    }
+   ]
+  },
+  {
+   "libelle": "Aide-soignant",
+   "categorie": "Soignant",
+   "position": 3,
+   "groupe": "D",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "as"
+   ],
+   "synonymes": [
+    "AS",
+    "aide soignante",
+    "aide soignant",
+    "Aide-soignant"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Aide-soignant spécialisé",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "E",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "as"
+   ],
+   "synonymes": [
+    "AS",
+    "aide soignante",
+    "aide soignant",
+    "AS spécialisé",
+    "Aide-soignant spécialisé"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Manipulateur d'électroradiologie médicale",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "F1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "mer"
+   ],
+   "synonymes": [
+    "MER",
+    "MERM",
+    "manipulateur radio",
+    "manip radio",
+    "manipulateur",
+    "manipulatrice",
+    "Manipulateur d'électroradiologie médicale"
+   ],
+   "avenants": [
+    {
+     "t": "Avis d'interprétation A-9.1.6 du 25/06/2024 (parcours professionnel IDE et MER)",
+     "motif": "A-9\\.1\\.6\\.\\s+AVIS D.INTERP"
+    }
+   ]
+  },
+  {
+   "libelle": "Manipulateur d'électroradiologie médicale spécialisé",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "G1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "mer"
+   ],
+   "synonymes": [
+    "MER",
+    "MERM",
+    "manipulateur radio",
+    "manip radio",
+    "manipulateur",
+    "manipulatrice",
+    "MER spécialisé",
+    "Manipulateur d'électroradiologie médicale spécialisé"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Masseur-kinésithérapeute",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "G1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "kine"
+   ],
+   "synonymes": [
+    "kiné",
+    "kinésithérapeute",
+    "masseur kinésithérapeute",
+    "Masseur-kinésithérapeute"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Diététicien",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "F",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "dieteticien"
+   ],
+   "synonymes": [
+    "diététicienne",
+    "diét",
+    "Diététicien"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Préparateur qualifié en pharmacie",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "E1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "preparateur-pharmacie"
+   ],
+   "synonymes": [
+    "préparatrice en pharmacie",
+    "PPH",
+    "préparateur en pharmacie hospitalière",
+    "pharmacie",
+    "Préparateur qualifié en pharmacie"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-08 relatif au parcours professionnel de préparateur en pharmacie (13/11/2024)",
+     "motif": "avenant national n°2024-08\\s+relatif"
+    }
+   ]
+  },
+  {
+   "libelle": "Préparateur en pharmacie confirmé",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "F",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "preparateur-pharmacie"
+   ],
+   "synonymes": [
+    "préparatrice en pharmacie",
+    "PPH",
+    "pharmacie",
+    "Préparateur en pharmacie confirmé"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-08 relatif au parcours professionnel de préparateur en pharmacie (13/11/2024)",
+     "motif": "avenant national n°2024-08\\s+relatif"
+    }
+   ]
+  },
+  {
+   "libelle": "Préparateur en pharmacie spécialisé",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "G",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "preparateur-pharmacie"
+   ],
+   "synonymes": [
+    "préparatrice en pharmacie",
+    "PPH",
+    "pharmacie",
+    "Préparateur en pharmacie spécialisé"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-08 relatif au parcours professionnel de préparateur en pharmacie (13/11/2024)",
+     "motif": "avenant national n°2024-08\\s+relatif"
+    }
+   ]
+  },
+  {
+   "libelle": "Assistant social",
+   "categorie": "Soignant",
+   "position": 4,
+   "groupe": "F1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "assistant-social"
+   ],
+   "synonymes": [
+    "assistante sociale",
+    "service social",
+    "AS",
+    "Assistant social"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Enseignant en activité physique adaptée",
+   "categorie": "Soignant",
+   "position": null,
+   "groupe": null,
+   "cotation": null,
+   "statut": "",
+   "profession": [
+    "enseignant-apa"
+   ],
+   "synonymes": [
+    "APA",
+    "EAPA",
+    "enseignant APA",
+    "activité physique adaptée",
+    "Enseignant en activité physique adaptée"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Technicien de laboratoire",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "E1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "technicien-labo"
+   ],
+   "synonymes": [
+    "technicien labo",
+    "technicienne de laboratoire",
+    "laborantin",
+    "anapath",
+    "ACP",
+    "TL",
+    "Technicien de laboratoire"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-10 relatif au parcours professionnel de technicien de laboratoire (30/05/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*10\\b.*technicien de laboratoire"
+    }
+   ]
+  },
+  {
+   "libelle": "Technicien de laboratoire confirmé",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "F1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "technicien-labo"
+   ],
+   "synonymes": [
+    "technicien labo confirmé",
+    "Technicien de laboratoire confirmé"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-10 relatif au parcours professionnel de technicien de laboratoire (30/05/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*10\\b.*technicien de laboratoire"
+    }
+   ]
+  },
+  {
+   "libelle": "Technicien de laboratoire spécialisé",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "G",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "technicien-labo"
+   ],
+   "synonymes": [
+    "technicien labo spécialisé",
+    "Technicien de laboratoire spécialisé"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-10 relatif au parcours professionnel de technicien de laboratoire (30/05/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*10\\b.*technicien de laboratoire"
+    }
+   ]
+  },
+  {
+   "libelle": "Technicien de recherche clinique",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "E",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "TRC",
+    "technicien recherche clinique",
+    "Technicien de recherche clinique"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Attaché de recherche clinique",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "F1",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "ARC",
+    "attaché de recherche",
+    "Attaché de recherche clinique"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Attaché de recherche clinique spécialisé",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "G",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "ARC spécialisé",
+    "Attaché de recherche clinique spécialisé"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Technicien de maintenance",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "E",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "maintenance",
+    "technicien maintenance",
+    "technique",
+    "Technicien de maintenance"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Technicien",
+   "categorie": "Technicien et recherche",
+   "position": 3,
+   "groupe": "C",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "technicien",
+    "technicienne"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-02 relatif à l'emploi de technicien (24/11/2022)",
+     "motif": "avenant.*2023\\s*[-–]\\s*0?2\\b.*technicien"
+    }
+   ]
+  },
+  {
+   "libelle": "Technicien qualifié",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "F",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "technicien qualifié"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Technicien hautement qualifié",
+   "categorie": "Technicien et recherche",
+   "position": 4,
+   "groupe": "G",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "technicien hautement qualifié"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Coordonnateur technique",
+   "categorie": "Technicien et recherche",
+   "position": 5,
+   "groupe": "H",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "coordinateur technique",
+    "Coordonnateur technique"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Chef d'équipe",
+   "categorie": "Technicien et recherche",
+   "position": 5,
+   "groupe": "H",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "chef d'équipe"
+   ],
+   "avenants": [
+    {
+     "t": "Article A-4.1.2.3 : indemnités d'exercice des IADE, IBODE, IPUER, IPA et chefs d'équipe",
+     "motif": "A-4\\.1\\.2\\.3\\.\\s+Indemnités d.exercice",
+     "dernier": true
+    }
+   ]
+  },
+  {
+   "libelle": "Physicien médical",
+   "categorie": "Hors grille CCN",
+   "position": null,
+   "groupe": null,
+   "cotation": null,
+   "statut": "",
+   "profession": [
+    "physicien-medical"
+   ],
+   "synonymes": [
+    "physicien",
+    "physicienne médicale",
+    "physique médicale",
+    "radiophysicien",
+    "Physicien médical"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Employé administratif",
+   "categorie": "Administratif et logistique",
+   "position": 2,
+   "groupe": "A",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "administratif",
+    "employé administratif"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Employé administratif qualifié",
+   "categorie": "Administratif et logistique",
+   "position": 2,
+   "groupe": "B",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "administratif qualifié",
+    "Employé administratif qualifié"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Technicien administratif",
+   "categorie": "Administratif et logistique",
+   "position": 3,
+   "groupe": "C",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "technicien administratif"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Secrétaire",
+   "categorie": "Administratif et logistique",
+   "position": 3,
+   "groupe": "D",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "secretaire"
+   ],
+   "synonymes": [
+    "secrétaire",
+    "secrétaire administrative",
+    "secrétariat médical"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Assistant médical",
+   "categorie": "Administratif et logistique",
+   "position": 4,
+   "groupe": "E",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "assistant-medical"
+   ],
+   "synonymes": [
+    "AM",
+    "assistante médicale",
+    "assistant médical"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-06 relatif au parcours professionnel d'assistant médical (31/01/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*0?6\\b.*parcours professionnel d.assistant médical"
+    },
+    {
+     "t": "Avenant 2023-07 relatif à l'emploi d'assistant médical (31/01/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*0?7\\b.*emploi d.assistant médical"
+    },
+    {
+     "t": "Avenant n°1 à l'avenant 2023-06 (06/03/2025)",
+     "motif": "avenant n°1 à l.avenant n°2023-06.*assistant médical"
+    }
+   ]
+  },
+  {
+   "libelle": "Assistant médical spécialisé",
+   "categorie": "Administratif et logistique",
+   "position": 4,
+   "groupe": "F",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "assistant-medical"
+   ],
+   "synonymes": [
+    "AM spécialisé",
+    "Assistant médical spécialisé"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-06 relatif au parcours professionnel d'assistant médical (31/01/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*0?6\\b.*parcours professionnel d.assistant médical"
+    },
+    {
+     "t": "Avenant 2023-07 relatif à l'emploi d'assistant médical (31/01/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*0?7\\b.*emploi d.assistant médical"
+    },
+    {
+     "t": "Avenant n°1 à l'avenant 2023-06 (06/03/2025)",
+     "motif": "avenant n°1 à l.avenant n°2023-06.*assistant médical"
+    }
+   ]
+  },
+  {
+   "libelle": "Assistant de gestion",
+   "categorie": "Administratif et logistique",
+   "position": 4,
+   "groupe": "E",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "assistante de gestion",
+    "gestionnaire",
+    "Assistant de gestion"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Agent d'accueil / Standardiste",
+   "categorie": "Administratif et logistique",
+   "position": 2,
+   "groupe": "B",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "accueil",
+    "hôtesse d'accueil",
+    "standard",
+    "Agent d'accueil / Standardiste"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Agent de service",
+   "categorie": "Administratif et logistique",
+   "position": 1,
+   "groupe": "A",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "ash"
+   ],
+   "synonymes": [
+    "ASH",
+    "agent de service hospitalier",
+    "aide service hospitalier",
+    "agent hospitalier",
+    "agent d'entretien",
+    "Agent de service"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Agent de service qualifié",
+   "categorie": "Administratif et logistique",
+   "position": 2,
+   "groupe": "B",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "ash"
+   ],
+   "synonymes": [
+    "ASHQ",
+    "agent de service hospitalier qualifié",
+    "Agent de service qualifié"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Brancardier",
+   "categorie": "Administratif et logistique",
+   "position": 2,
+   "groupe": "C",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [
+    "brancardier"
+   ],
+   "synonymes": [
+    "brancardière",
+    "brancardage",
+    "Brancardier"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Ouvrier spécialisé",
+   "categorie": "Administratif et logistique",
+   "position": 2,
+   "groupe": "B",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "ouvrier",
+    "agent technique",
+    "Ouvrier spécialisé"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Ouvrier qualifié",
+   "categorie": "Administratif et logistique",
+   "position": 3,
+   "groupe": "C",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "ouvrier qualifié",
+    "agent technique"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Ouvrier hautement qualifié",
+   "categorie": "Administratif et logistique",
+   "position": 3,
+   "groupe": "D",
+   "cotation": null,
+   "statut": "non-cadre",
+   "profession": [],
+   "synonymes": [
+    "ouvrier hautement qualifié"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Personnel du service informatique",
+   "categorie": "Administratif et logistique",
+   "position": null,
+   "groupe": null,
+   "cotation": null,
+   "statut": "",
+   "profession": [],
+   "synonymes": [
+    "informatique",
+    "informaticien",
+    "DSI",
+    "Personnel du service informatique"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Personnel du service technique",
+   "categorie": "Administratif et logistique",
+   "position": null,
+   "groupe": null,
+   "cotation": null,
+   "statut": "",
+   "profession": [],
+   "synonymes": [
+    "service technique",
+    "Personnel du service technique"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Cadre 1",
+   "categorie": "Cadre",
+   "position": 6,
+   "groupe": "I",
+   "cotation": null,
+   "statut": "cadre",
+   "profession": [],
+   "synonymes": [
+    "cadre 1",
+    "cadre",
+    "cadre de santé",
+    "cadre soignant",
+    "cadre administratif"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Cadre 2",
+   "categorie": "Cadre",
+   "position": 6,
+   "groupe": "J",
+   "cotation": null,
+   "statut": "cadre",
+   "profession": [],
+   "synonymes": [
+    "cadre 2",
+    "cadre",
+    "cadre de santé",
+    "cadre soignant",
+    "cadre administratif"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Cadre 3",
+   "categorie": "Cadre",
+   "position": 6,
+   "groupe": "K",
+   "cotation": null,
+   "statut": "cadre",
+   "profession": [],
+   "synonymes": [
+    "cadre 3",
+    "cadre",
+    "cadre de santé",
+    "cadre soignant",
+    "cadre administratif"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Cadre supérieur 1",
+   "categorie": "Cadre",
+   "position": 7,
+   "groupe": "L",
+   "cotation": null,
+   "statut": "cadre",
+   "profession": [],
+   "synonymes": [
+    "cadre supérieur 1",
+    "cadre supérieur"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Cadre supérieur 2",
+   "categorie": "Cadre",
+   "position": 7,
+   "groupe": "M",
+   "cotation": null,
+   "statut": "cadre",
+   "profession": [],
+   "synonymes": [
+    "cadre supérieur 2",
+    "cadre supérieur"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Cadre supérieur 3",
+   "categorie": "Cadre",
+   "position": 7,
+   "groupe": "N",
+   "cotation": null,
+   "statut": "cadre",
+   "profession": [],
+   "synonymes": [
+    "cadre supérieur 3",
+    "cadre supérieur"
+   ],
+   "avenants": []
+  },
+  {
+   "libelle": "Consultant des CLCC",
+   "categorie": "Praticien",
+   "position": null,
+   "groupe": null,
+   "cotation": 795,
+   "statut": "praticien",
+   "profession": [],
+   "synonymes": [
+    "consultant",
+    "Consultant des CLCC"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-05 relatif à la rémunération du personnel praticien (09/07/2024)",
+     "motif": "avenant.*2024\\s*[-–]\\s*0?5\\b.*personnel praticien"
+    }
+   ]
+  },
+  {
+   "libelle": "Assistant spécialiste des CLCC",
+   "categorie": "Praticien",
+   "position": null,
+   "groupe": null,
+   "cotation": 890,
+   "statut": "praticien",
+   "profession": [],
+   "synonymes": [
+    "assistant spécialiste",
+    "Assistant spécialiste des CLCC"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-05 relatif à la rémunération du personnel praticien (09/07/2024)",
+     "motif": "avenant.*2024\\s*[-–]\\s*0?5\\b.*personnel praticien"
+    }
+   ]
+  },
+  {
+   "libelle": "Praticien des CLCC",
+   "categorie": "Praticien",
+   "position": null,
+   "groupe": null,
+   "cotation": 1000,
+   "statut": "praticien",
+   "profession": [],
+   "synonymes": [
+    "praticien",
+    "médecin",
+    "pharmacien",
+    "odontologiste",
+    "Praticien des CLCC"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2024-05 relatif à la rémunération du personnel praticien (09/07/2024)",
+     "motif": "avenant.*2024\\s*[-–]\\s*0?5\\b.*personnel praticien"
+    }
+   ]
+  },
+  {
+   "libelle": "Praticien spécialiste des CLCC",
+   "categorie": "Praticien",
+   "position": null,
+   "groupe": null,
+   "cotation": 1080,
+   "statut": "praticien",
+   "profession": [],
+   "synonymes": [
+    "praticien spécialiste",
+    "médecin spécialiste",
+    "oncologue",
+    "radiothérapeute",
+    "chirurgien",
+    "Praticien spécialiste des CLCC"
+   ],
+   "avenants": [
+    {
+     "t": "Avenant 2023-05 relatif au concours des praticiens spécialistes (31/01/2023)",
+     "motif": "avenant.*2023\\s*[-–]\\s*0?5\\b.*praticiens spécialistes"
+    },
+    {
+     "t": "Avenant 2024-05 relatif à la rémunération du personnel praticien (09/07/2024)",
+     "motif": "avenant.*2024\\s*[-–]\\s*0?5\\b.*personnel praticien"
+    }
+   ]
+  }
+ ]
+}

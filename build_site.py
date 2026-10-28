@@ -726,9 +726,11 @@ function renderCcnBlock(filters) {
       '</ul>';
   }
 
-  if (grilles.length > 0) {
+  // Statut connu : une seule grille (praticien, ou non-praticien pour cadre et non-cadre).
+  const grillesAffichees = statut ? grilles.filter(g => g.kind === defaultKind) : grilles;
+  if (grillesAffichees.length > 0) {
     html += '<div class="chips ccn-grille-chips">';
-    grilles.forEach(g => {
+    grillesAffichees.forEach(g => {
       const label = g.kind === 'praticien' ? 'Grille de rémunération — praticiens' : 'Grille de rémunération — non-praticiens';
       const active = g.kind === defaultKind ? ' active' : '';
       html += `<a class="chip${active}" href="${g.href}" target="_blank" rel="noopener">${label}</a>`;

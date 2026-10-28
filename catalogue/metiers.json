@@ -335,7 +335,7 @@
    "position": null,
    "groupe": null,
    "cotation": null,
-   "statut": "",
+   "statut": "non-cadre",
    "profession": [
     "enseignant-apa"
    ],
@@ -560,7 +560,7 @@
    "position": null,
    "groupe": null,
    "cotation": null,
-   "statut": "",
+   "statut": "cadre",
    "profession": [
     "physicien-medical"
    ],
@@ -839,7 +839,7 @@
    "position": null,
    "groupe": null,
    "cotation": null,
-   "statut": "",
+   "statut": "non-cadre",
    "profession": [],
    "synonymes": [
     "service technique",

@@ -143,6 +143,13 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   cursor: pointer; width: 100%;
 }
 .real-select:focus { outline: 2px solid var(--marine); outline-offset: 1px; }
+.metier-input {
+  background: #FFFFFF; border: 1px solid var(--bordure); border-radius: 8px;
+  padding: 4px 12px; font-size: 12px; font-family: inherit; color: var(--marine-text); width: 100%;
+}
+.metier-input:focus { outline: 2px solid var(--marine); outline-offset: 1px; }
+.situation-item-static { display: inline-block; cursor: default; }
+.situation-item-static:hover { border-color: var(--bordure); color: var(--marine-text); }
 .situation-btn {
   margin-top: 1px; background: var(--rouge); color: #FFFFFF; border: none; border-radius: 8px;
   padding: 6px; font-size: 12.5px; font-weight: 700; font-family: inherit; cursor: pointer;
@@ -175,6 +182,8 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .situation-form-page .select-field { min-width: 0; }
 .situation-form-page .select-label { font-size: 10.5px; }
 .situation-form-page .real-select { padding: 8px 30px 8px 12px; font-size: 13px; }
+.situation-form-page .metier-input { padding: 8px 12px; font-size: 13px; }
+.situation-form-page #field-metier { grid-column: 1 / -1; }
 .situation-form-page .situation-btn {
   grid-column: 1 / -1; padding: 10px 22px; font-size: 13.5px; margin-top: 2px;
 }

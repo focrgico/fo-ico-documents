@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Accords — FO ICO</title>
 <link rel="icon" href="assets/favicon.png" type="image/png">
-<link rel="stylesheet" href="assets/style.css?v=63557d8087">
+<link rel="stylesheet" href="assets/style.css?v=a2f549e9e0">
 </head>
 <body class="">
 <header class="nav">
@@ -363,6 +363,104 @@ const pageEyebrow = document.getElementById('page-eyebrow');
 const pageTitle = document.getElementById('page-title');
 const pageDesc = document.getElementById('page-desc');
 const params = new URLSearchParams(location.search);
+const metiersData = [{"libelle": "Infirmier D.E.", "synonymes": ["IDE", "infirmier", "infirmière", "infirmier diplômé d'État", "Infirmier D.E."], "profession": ["ide"], "statut": "non-cadre"}, {"libelle": "Infirmier D.E. spécialisé", "synonymes": ["IDE", "infirmier", "infirmière", "infirmier diplômé d'État", "IDE spécialisé", "Infirmier D.E. spécialisé"], "profession": ["ide"], "statut": "non-cadre"}, {"libelle": "Infirmier de bloc opératoire D.E.", "synonymes": ["IBODE", "IBO", "infirmier de bloc", "infirmière de bloc", "infirmier de bloc opératoire", "infirmier de bloc opératoire diplômé d'État", "Infirmier de bloc opératoire D.E."], "profession": ["ibode"], "statut": "non-cadre"}, {"libelle": "Infirmier anesthésiste D.E.", "synonymes": ["IADE", "infirmier anesthésiste", "infirmier anesthésiste diplômé d'État", "Infirmier anesthésiste D.E."], "profession": ["iade"], "statut": "non-cadre"}, {"libelle": "Infirmier en pratique avancée", "synonymes": ["IPA", "infirmier en pratique avancée"], "profession": [], "statut": "non-cadre"}, {"libelle": "Aide-soignant", "synonymes": ["AS", "aide soignante", "aide soignant", "Aide-soignant"], "profession": ["as"], "statut": "non-cadre"}, {"libelle": "Aide-soignant spécialisé", "synonymes": ["AS", "aide soignante", "aide soignant", "AS spécialisé", "Aide-soignant spécialisé"], "profession": ["as"], "statut": "non-cadre"}, {"libelle": "Manipulateur d'électroradiologie médicale", "synonymes": ["MER", "MERM", "manipulateur radio", "manip radio", "manipulateur", "manipulatrice", "Manipulateur d'électroradiologie médicale"], "profession": ["mer"], "statut": "non-cadre"}, {"libelle": "Manipulateur d'électroradiologie médicale spécialisé", "synonymes": ["MER", "MERM", "manipulateur radio", "manip radio", "manipulateur", "manipulatrice", "MER spécialisé", "Manipulateur d'électroradiologie médicale spécialisé"], "profession": ["mer"], "statut": "non-cadre"}, {"libelle": "Masseur-kinésithérapeute", "synonymes": ["kiné", "kinésithérapeute", "masseur kinésithérapeute", "Masseur-kinésithérapeute"], "profession": ["kine"], "statut": "non-cadre"}, {"libelle": "Diététicien", "synonymes": ["diététicienne", "diét", "Diététicien"], "profession": ["dieteticien"], "statut": "non-cadre"}, {"libelle": "Préparateur qualifié en pharmacie", "synonymes": ["préparatrice en pharmacie", "PPH", "préparateur en pharmacie hospitalière", "pharmacie", "Préparateur qualifié en pharmacie"], "profession": ["preparateur-pharmacie"], "statut": "non-cadre"}, {"libelle": "Préparateur en pharmacie confirmé", "synonymes": ["préparatrice en pharmacie", "PPH", "pharmacie", "Préparateur en pharmacie confirmé"], "profession": ["preparateur-pharmacie"], "statut": "non-cadre"}, {"libelle": "Préparateur en pharmacie spécialisé", "synonymes": ["préparatrice en pharmacie", "PPH", "pharmacie", "Préparateur en pharmacie spécialisé"], "profession": ["preparateur-pharmacie"], "statut": "non-cadre"}, {"libelle": "Assistant social", "synonymes": ["assistante sociale", "service social", "AS", "Assistant social"], "profession": ["assistant-social"], "statut": "non-cadre"}, {"libelle": "Enseignant en activité physique adaptée", "synonymes": ["APA", "EAPA", "enseignant APA", "activité physique adaptée", "Enseignant en activité physique adaptée"], "profession": ["enseignant-apa"], "statut": ""}, {"libelle": "Technicien de laboratoire", "synonymes": ["technicien labo", "technicienne de laboratoire", "laborantin", "anapath", "ACP", "TL", "Technicien de laboratoire"], "profession": ["technicien-labo"], "statut": "non-cadre"}, {"libelle": "Technicien de laboratoire confirmé", "synonymes": ["technicien labo confirmé", "Technicien de laboratoire confirmé"], "profession": ["technicien-labo"], "statut": "non-cadre"}, {"libelle": "Technicien de laboratoire spécialisé", "synonymes": ["technicien labo spécialisé", "Technicien de laboratoire spécialisé"], "profession": ["technicien-labo"], "statut": "non-cadre"}, {"libelle": "Technicien de recherche clinique", "synonymes": ["TRC", "technicien recherche clinique", "Technicien de recherche clinique"], "profession": [], "statut": "non-cadre"}, {"libelle": "Attaché de recherche clinique", "synonymes": ["ARC", "attaché de recherche", "Attaché de recherche clinique"], "profession": [], "statut": "non-cadre"}, {"libelle": "Attaché de recherche clinique spécialisé", "synonymes": ["ARC spécialisé", "Attaché de recherche clinique spécialisé"], "profession": [], "statut": "non-cadre"}, {"libelle": "Technicien de maintenance", "synonymes": ["maintenance", "technicien maintenance", "technique", "Technicien de maintenance"], "profession": [], "statut": "non-cadre"}, {"libelle": "Technicien", "synonymes": ["technicien", "technicienne"], "profession": [], "statut": "non-cadre"}, {"libelle": "Technicien qualifié", "synonymes": ["technicien qualifié"], "profession": [], "statut": "non-cadre"}, {"libelle": "Technicien hautement qualifié", "synonymes": ["technicien hautement qualifié"], "profession": [], "statut": "non-cadre"}, {"libelle": "Coordonnateur technique", "synonymes": ["coordinateur technique", "Coordonnateur technique"], "profession": [], "statut": "non-cadre"}, {"libelle": "Chef d'équipe", "synonymes": ["chef d'équipe"], "profession": [], "statut": "non-cadre"}, {"libelle": "Physicien médical", "synonymes": ["physicien", "physicienne médicale", "physique médicale", "radiophysicien", "Physicien médical"], "profession": ["physicien-medical"], "statut": ""}, {"libelle": "Employé administratif", "synonymes": ["administratif", "employé administratif"], "profession": [], "statut": "non-cadre"}, {"libelle": "Employé administratif qualifié", "synonymes": ["administratif qualifié", "Employé administratif qualifié"], "profession": [], "statut": "non-cadre"}, {"libelle": "Technicien administratif", "synonymes": ["technicien administratif"], "profession": [], "statut": "non-cadre"}, {"libelle": "Secrétaire", "synonymes": ["secrétaire", "secrétaire administrative", "secrétariat médical"], "profession": ["secretaire"], "statut": "non-cadre"}, {"libelle": "Assistant médical", "synonymes": ["AM", "assistante médicale", "assistant médical"], "profession": ["assistant-medical"], "statut": "non-cadre"}, {"libelle": "Assistant médical spécialisé", "synonymes": ["AM spécialisé", "Assistant médical spécialisé"], "profession": ["assistant-medical"], "statut": "non-cadre"}, {"libelle": "Assistant de gestion", "synonymes": ["assistante de gestion", "gestionnaire", "Assistant de gestion"], "profession": [], "statut": "non-cadre"}, {"libelle": "Agent d'accueil / Standardiste", "synonymes": ["accueil", "hôtesse d'accueil", "standard", "Agent d'accueil / Standardiste"], "profession": [], "statut": "non-cadre"}, {"libelle": "Agent de service", "synonymes": ["ASH", "agent de service hospitalier", "aide service hospitalier", "agent hospitalier", "agent d'entretien", "Agent de service"], "profession": ["ash"], "statut": "non-cadre"}, {"libelle": "Agent de service qualifié", "synonymes": ["ASHQ", "agent de service hospitalier qualifié", "Agent de service qualifié"], "profession": ["ash"], "statut": "non-cadre"}, {"libelle": "Brancardier", "synonymes": ["brancardière", "brancardage", "Brancardier"], "profession": ["brancardier"], "statut": "non-cadre"}, {"libelle": "Ouvrier spécialisé", "synonymes": ["ouvrier", "agent technique", "Ouvrier spécialisé"], "profession": [], "statut": "non-cadre"}, {"libelle": "Ouvrier qualifié", "synonymes": ["ouvrier qualifié", "agent technique"], "profession": [], "statut": "non-cadre"}, {"libelle": "Ouvrier hautement qualifié", "synonymes": ["ouvrier hautement qualifié"], "profession": [], "statut": "non-cadre"}, {"libelle": "Personnel du service informatique", "synonymes": ["informatique", "informaticien", "DSI", "Personnel du service informatique"], "profession": [], "statut": ""}, {"libelle": "Personnel du service technique", "synonymes": ["service technique", "Personnel du service technique"], "profession": [], "statut": ""}, {"libelle": "Cadre 1", "synonymes": ["cadre 1", "cadre", "cadre de santé", "cadre soignant", "cadre administratif"], "profession": [], "statut": "cadre"}, {"libelle": "Cadre 2", "synonymes": ["cadre 2", "cadre", "cadre de santé", "cadre soignant", "cadre administratif"], "profession": [], "statut": "cadre"}, {"libelle": "Cadre 3", "synonymes": ["cadre 3", "cadre", "cadre de santé", "cadre soignant", "cadre administratif"], "profession": [], "statut": "cadre"}, {"libelle": "Cadre supérieur 1", "synonymes": ["cadre supérieur 1", "cadre supérieur"], "profession": [], "statut": "cadre"}, {"libelle": "Cadre supérieur 2", "synonymes": ["cadre supérieur 2", "cadre supérieur"], "profession": [], "statut": "cadre"}, {"libelle": "Cadre supérieur 3", "synonymes": ["cadre supérieur 3", "cadre supérieur"], "profession": [], "statut": "cadre"}, {"libelle": "Consultant des CLCC", "synonymes": ["consultant", "Consultant des CLCC"], "profession": [], "statut": "praticien"}, {"libelle": "Assistant spécialiste des CLCC", "synonymes": ["assistant spécialiste", "Assistant spécialiste des CLCC"], "profession": [], "statut": "praticien"}, {"libelle": "Praticien des CLCC", "synonymes": ["praticien", "médecin", "pharmacien", "odontologiste", "Praticien des CLCC"], "profession": [], "statut": "praticien"}, {"libelle": "Praticien spécialiste des CLCC", "synonymes": ["praticien spécialiste", "médecin spécialiste", "oncologue", "radiothérapeute", "chirurgien", "Praticien spécialiste des CLCC"], "profession": [], "statut": "praticien"}];
+
+function mNorm(s) {
+  return String(s).toLowerCase().replace(/[’‘`]/g, "'").normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+// Racine très simple : ignore pluriel et féminin (infirmières = infirmier, soignante = soignant).
+function mStem(w) {
+  if (w.length <= 3) return w;
+  w = w.replace(/trices?$/, 'teur').replace(/ieres?$/, 'ier').replace(/euses?$/, 'eur')
+       .replace(/ives?$/, 'if').replace(/iennes?$/, 'ien');
+  if (w.length > 4) w = w.replace(/[sx]$/, '');
+  if (w.length > 4) w = w.replace(/e$/, '');
+  return w;
+}
+function mTokens(s) {
+  return mNorm(s).split(/[^a-z0-9]+/).filter(Boolean).map(mStem);
+}
+function mCleanQuery(s) {
+  let n = mNorm(s).replace(/^\s*(bonjour|salut)\s+/, '');
+  n = n.replace(/^\s*(moi\s+)?(je suis|j'suis|je travaille (comme|en tant que|au poste de|en)|en tant que|mon metier( est)?|metier|poste de|profession)\s+/, '');
+  let toks = n.split(/[^a-z0-9]+/).filter(Boolean);
+  while (toks.length > 1 && ['un', 'une', 'le', 'la', 'les', 'l', 'ma', 'mon'].includes(toks[0])) toks.shift();
+  return toks.map(mStem);
+}
+function containsSeq(hay, needle) {
+  if (!needle.length) return false;
+  for (let i = 0; i + needle.length <= hay.length; i++) {
+    let ok = true;
+    for (let j = 0; j < needle.length; j++) { if (hay[i + j] !== needle[j]) { ok = false; break; } }
+    if (ok) return true;
+  }
+  return false;
+}
+// Retourne {texte, rows, tags:Set, statut}. Garde les métiers dont le synonyme reconnu
+// est le plus long : « cadre supérieur 2 » ne renvoie pas aux cadres 1 à 3.
+function matchMetiers(text) {
+  const res = { texte: (text || '').trim(), rows: [], tags: new Set(), statut: '' };
+  if (!res.texte) return res;
+  const q = mCleanQuery(res.texte);
+  if (!q.length) return res;
+  let best = 0; const scored = [];
+  metiersData.forEach(m => {
+    let b = 0;
+    m.synonymes.forEach(s => {
+      const st = mTokens(s);
+      if (st.length && containsSeq(q, st)) b = Math.max(b, st.join('').length);
+    });
+    if (b > 0) { scored.push([m, b]); best = Math.max(best, b); }
+  });
+  res.rows = scored.filter(x => x[1] === best).map(x => x[0]);
+  res.rows.forEach(m => (m.profession || []).forEach(p => res.tags.add(p)));
+  const statuts = [...new Set(res.rows.map(m => m.statut))];
+  res.statut = statuts.length === 1 ? statuts[0] : '';
+  return res;
+}
+function escHtml(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function renderMetierNote(m) {
+  if (!m.texte) return '';
+  if (m.rows.length === 0) {
+    return '<p class="note">Métier non reconnu : « ' + escHtml(m.texte) + ' ». Essayez l\'intitulé ou le sigle (IDE, aide-soignant, brancardier, cadre, praticien…). Les résultats ci-dessous ne tiennent pas compte du métier.</p>';
+  }
+  const noms = m.rows.map(r => r.libelle);
+  let h = '<p class="note">Métier reconnu : ' + noms.map(escHtml).join(' · ') + '.';
+  if (noms.length > 1) h += ' Plusieurs intitulés correspondent à votre saisie : les résultats couvrent tous ces métiers.';
+  h += ' Si ce n\'est pas le vôtre, précisez la saisie.</p>';
+  return h;
+}
+function renderCcnMetierBlock(m) {
+  if (!m.rows.length) return '';
+  let html = '<h3>Votre emploi dans la CCN</h3><div class="situation-list">';
+  m.rows.forEach(r => {
+    let c;
+    if (r.position) c = r.libelle + ' : position ' + r.position + ', groupe ' + r.groupe;
+    else if (r.cotation) c = r.libelle + ' : cotation ' + r.cotation;
+    else c = r.libelle + ' : emploi absent de la classification des emplois de la CCN';
+    html += '<span class="situation-item situation-item-static">' + escHtml(c) + '</span>';
+  });
+  html += '</div>';
+  const vus = new Set(); const avs = [];
+  m.rows.forEach(r => (r.avenants || []).forEach(a => { if (!vus.has(a.t)) { vus.add(a.t); avs.push(a); } }));
+  if (avs.length) {
+    html += '<h3>Avenants et articles de la CCN qui visent ce métier</h3><div class="situation-list">' +
+      avs.map(a => '<a class="situation-item" href="ccn-texte.html#p' + a.p + '">' + escHtml(a.t) + ' →</a>').join('') + '</div>' +
+      '<p class="note">Relevé à partir des titres des avenants et de l\'article A-4.1.2.3 de la CCN : la liste peut être incomplète. Les avenants généraux sur la classification et la rémunération concernent tous les métiers non praticiens.</p>';
+  }
+  return html;
+}
+
+function metierRedirect(v) {
+  if (!/^\s*(bonjour\s+|salut\s+)?(moi\s+)?(je suis|j'suis|je travaille|en tant que|mon metier)/.test(mNorm(v))) return false;
+  if (!matchMetiers(v).rows.length) return false;
+  location.href = 'situation.html?metier=' + encodeURIComponent(v);
+  return true;
+}
+
+if (params.get('q') && metierRedirect(params.get('q'))) { /* redirigé vers situation.html */ }
 if (params.get('q')) search.value = params.get('q');
 
 function norm(s) {

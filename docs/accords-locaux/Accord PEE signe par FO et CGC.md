@@ -1,5 +1,3 @@
-⚠️ Texte issu d'une reconnaissance de caractères (OCR) sur un PDF scanné (lecture visuelle page par page) : des mots peuvent être mal transcrits. Vérifiez toujours sur le PDF signé pour une citation officielle.
-
 Note : le PDF signé compte 56 pages. Les pages 1 à 9 ci-dessous sont le règlement du Plan et les signatures ; les pages suivantes sont des annexes financières (fiches DICI des fonds FCPE proposés — Natixis Interépargne, arrêtées au 31 décembre 2018), non retranscrites ici car ce sont des documents d'information produit et non des clauses du règlement.
 
 Seuls la CGT-FO et la CFE-CGC ont signé ce plan (la CGT et Sud Santé-Sociaux n'ont pas signé).

@@ -240,8 +240,21 @@ def page_head(title, active, base="", body_class=""):
     )
 
 
-def page_foot(base=""):
-    return PAGE_FOOT.format(base=base)
+def _maj_site():
+    """Date et heure (Paris) de la construction du site, affichées sur l'accueil
+    et la page Liens pour vérifier que foico.fr sert bien la dernière version."""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    d = datetime.now(ZoneInfo("Europe/Paris"))
+    return d.strftime("%d/%m/%Y à %H:%M")
+
+
+def page_foot(base="", stamp=False):
+    html = PAGE_FOOT.format(base=base)
+    if stamp:
+        ligne = f'<p class="maj-site">Site mis à jour le {_maj_site()}</p>\n'
+        html = html.replace("</body>", ligne + "</body>", 1)
+    return html
 
 
 def load_catalogue():
@@ -870,7 +883,7 @@ situationForm.addEventListener('submit', (e) => {
 });
 </script>
 """
-    html += page_foot()
+    html += page_foot(stamp=True)
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
@@ -2346,7 +2359,7 @@ def build_liens(cat, out_dir):
             url = url_for(chemin, blob=True) if github else SITE_BASE + site_rel
             html += f'    <tr><td class="liens-doc">{esc(lib)}</td><td class="liens-type">{esc(typ)}</td><td class="liens-url"><a href="{esc(url)}">{esc(url)}</a></td></tr>\n'
         html += "  </table>\n</section>\n"
-        html += page_foot()
+        html += page_foot(stamp=True)
         with open(os.path.join(out_dir, nom), "w", encoding="utf-8") as f:
             f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 

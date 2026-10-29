@@ -618,6 +618,16 @@ def build_metiers_data(search_data):
     return out
 
 
+def situation_href(a):
+    """Lien d'un accord dans les résultats de recherche : son résumé (celui de l'accord
+    de base quand le résumé est partagé), sinon le PDF signé, sinon le texte converti."""
+    r = a.get("chemin_resume_md")
+    if r:
+        return "resumes/" + RESUME_ID_BY_PATH.get(r, a["id"]) + ".html"
+    return (local_pdf_url(a.get("chemin_pdf"))
+            or (f"textes/{a['id']}.html" if a.get("chemin_source_md") else "accords.html"))
+
+
 def build_metier_accords_data(cat):
     """Accords du catalogue étiquetés avec au moins un métier (champ profession),
     y compris ceux retirés de « Décrivez votre situation » parce que réservés à un
@@ -628,7 +638,7 @@ def build_metier_accords_data(cat):
             continue
         data.append({
             "id": a["id"], "titre": a["titre"],
-            "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
+            "href": situation_href(a),
             "profession": a["profession"], "statut": a.get("statut", []),
         })
     return data
@@ -948,7 +958,7 @@ def build_situation_data(cat):
         entry = {
             "id": a["id"],
             "titre": a["titre"],
-            "href": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else "accords.html",
+            "href": situation_href(a),
             "resumeHref": f"resumes/{a['id']}.html" if a.get("chemin_resume_md") else None,
             "texteHref": f"textes/{a['id']}.html" if a.get("chemin_source_md") else None,
         }

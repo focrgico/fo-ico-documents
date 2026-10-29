@@ -59,7 +59,7 @@
   ],
   "contact": {
    "accroche": "Une question sur votre dispense, vos cotisations ou votre portabilité en cas de départ ? Vos élus FO vous accompagnent.",
-   "courriel": "fo.nantes@unicancer.fr",
+   "courriel": "fo.nantes@ico.unicancer.fr",
    "poste": "Poste 9188"
   },
   "source": {
@@ -147,7 +147,7 @@
    {
     "t": "puces",
     "items": [
-     "Cotisation de base {ref:(Art. 5, au 1}{ref:^er^}{ref:janvier 2024)} : **58,43 €** (isolé), **94,81 €** (duo), **112,44 €** (famille)",
+     "Cotisation de base {ref:Art. 5, au 1^er^ janvier 2024} : **58,43 €** (isolé), **94,81 €** (duo), **112,44 €** (famille)",
      "**L'ICO prend en charge 45,20 €/mois**, quelle que soit votre formule {ref:Art. 5}",
      "Renforts 1 et 2 (optionnels) : de **+16,54 € à +54,02 €** selon la formule, **intégralement à votre charge** {ref:Art. 5}"
     ],

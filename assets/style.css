@@ -78,7 +78,7 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--or); }
 .hero h1 { margin: 0; font-size: 28px; font-weight: 700; color: #FFFFFF; max-width: 780px; line-height: 1.15; }
-.hero-sub { margin: 0; font-size: 13.5px; color: #C7D0E0; max-width: 600px; line-height: 1.4; }
+.hero-sub { margin: 0; font-size: 16.5px; color: #DCE3EF; max-width: 780px; line-height: 1.35; }
 .hero-cards { margin: 2px auto 0; text-align: left; width: 100%; max-width: 760px; display: flex; gap: 8px; }
 /* .card.hero-card (double classe) plutôt que .hero-card seul : la règle .card
    générique (plus bas dans la feuille, même spécificité) écrasait sinon
@@ -126,9 +126,9 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   background: var(--gris); border: 1px solid var(--bordure); border-left: 6px solid var(--marine);
   border-radius: 12px; padding: 10px 24px;
 }
-.situation h2 { margin: 0 0 3px; font-size: 14px; font-weight: 700; color: var(--marine); }
-.situation p { margin: 0 0 3px; font-size: 11px; color: var(--secondary); line-height: 1.25; max-width: 440px; }
-.situation .note { font-size: 10.5px; font-style: italic; color: var(--muted); }
+.situation h2 { margin: 0 0 6px; font-size: 19px; font-weight: 700; color: var(--marine); }
+.situation p { margin: 0 0 6px; font-size: 15px; color: var(--secondary); line-height: 1.4; max-width: 560px; }
+.situation .note { font-size: 13.5px; font-style: italic; color: var(--muted); }
 .situation-grid { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
 .situation-text { flex: 1 1 300px; }
 .situation-form { flex: 1 1 260px; max-width: 380px; display: flex; flex-direction: column; gap: 5px; }
@@ -380,7 +380,7 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
   .hero-logo { height: 70px; }
   .hero-spacer { display: none; }
   .hero h1 { font-size: 20px; max-width: 100%; }
-  .hero-sub { font-size: 12.5px; max-width: 100%; }
+  .hero-sub { font-size: 14px; max-width: 100%; }
   .search-bar, .search-bar.small { max-width: 100%; }
   .hero-cards { flex-direction: column; max-width: 100%; }
   .card.hero-card { flex: none; }
@@ -413,3 +413,17 @@ body.home .site-footer { flex: none; padding-top: 8px; padding-bottom: 8px; }
 .sec-head h2 { margin: 0; font-size: 26px; font-weight: 800; color: var(--marine); }
 .sec-head .bar { height: 30px; }
 #acc-results > .sec-head:first-child { margin-top: 0; }
+
+/* Page Accords : phrase de présentation en plus gros caractères */
+#page-desc { font-size: 18px; max-width: 760px; line-height: 1.4; }
+@media (max-width: 700px) { #page-desc { font-size: 15.5px; } }
+
+/* Bandeau « Attention, important » (résumés, dépliants) */
+.avis-important {
+  display: flex; align-items: center; gap: 12px; box-sizing: border-box;
+  margin: 18px 64px 0; padding: 12px 16px; border: 1px solid #E0A84A; border-left: 5px solid #C77700;
+  background: #FFF6E5; color: #5A3B00; border-radius: 8px;
+}
+.avis-important svg { flex: none; color: #C77700; }
+.avis-important p { margin: 0; font-size: 14.5px; line-height: 1.4; }
+@media (max-width: 700px) { .avis-important { margin: 14px 20px 0; } }

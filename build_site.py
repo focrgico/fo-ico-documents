@@ -885,11 +885,13 @@ function renderSituationResults(filters, metierText) {
   const metierCompatible = a =>
     !metierActif || (a.profession || []).length === 0 || a.profession.some(p => metier.tags.has(p));
 
+  // Prévoyance et mutuelle : bloc « Protection sociale » à part, hors des autres blocs.
+  const estPs = a => !!a.protection;
   let html = renderMetierNote(metier);
 
   // Bloc 1 : accords qui visent nommément votre métier.
   if (metierActif) {
-    const duMetier = metierAccordsData.filter(a => a.profession.some(p => metier.tags.has(p)) && statutCompatible(a));
+    const duMetier = metierAccordsData.filter(a => a.profession.some(p => metier.tags.has(p)) && statutCompatible(a) && !estPs(a));
     duMetier.forEach(a => matchedIds.add(a.id));
     if (duMetier.length > 0) {
       html += '<h3>' + duMetier.length + ' accord(s) qui visent votre métier</h3>' +
@@ -901,7 +903,7 @@ function renderSituationResults(filters, metierText) {
 
   // Un bloc de résultats par critère coché, chacun traité indépendamment (OR).
   filterEntries.forEach(([k, v]) => {
-    const matches = situationData.filter(a => (a[k] || []).includes(v) && statutCompatible(a) && metierCompatible(a) && !matchedIds.has(a.id));
+    const matches = situationData.filter(a => (a[k] || []).includes(v) && statutCompatible(a) && metierCompatible(a) && !matchedIds.has(a.id) && !estPs(a));
     matches.forEach(a => matchedIds.add(a.id));
     if (matches.length === 0) return;
     const label = (facetValueLabels[k] && facetValueLabels[k][v]) || v;
@@ -909,8 +911,12 @@ function renderSituationResults(filters, metierText) {
       '<div class="situation-list">' + matches.map(renderList).join('') + '</div>';
   });
 
-  const generaux = situationData.filter(a => !matchedIds.has(a.id) && statutCompatible(a) && metierCompatible(a));
-  if (matchedIds.size === 0 && generaux.length === 0) {
+  const generaux = situationData.filter(a => !matchedIds.has(a.id) && statutCompatible(a) && metierCompatible(a) && !estPs(a));
+  const protection = situationData.filter(a => estPs(a) && statutCompatible(a) && metierCompatible(a));
+  const blocPs = protection.length === 0 ? '' :
+    '<h3>' + protection.length + ' document(s) — Protection sociale (prévoyance, mutuelle)</h3><div class="situation-list">' +
+    protection.map(renderList).join('') + '</div>';
+  if (matchedIds.size === 0 && generaux.length === 0 && protection.length === 0) {
     situationResults.innerHTML = html + '<p class="note">Aucun accord tagué avec ces critères pour le moment — le classement est en cours. Essayez la <a href="accords.html">liste complète des accords</a>.</p>' + ccnBlock;
     return;
   }
@@ -921,7 +927,7 @@ function renderSituationResults(filters, metierText) {
     html += '<h3>' + generauxHeading + '</h3><div class="situation-list">' +
       generaux.map(renderList).join('') + '</div>';
   }
-  situationResults.innerHTML = html + ccnBlock;
+  situationResults.innerHTML = html + blocPs + ccnBlock;
 }
 """
 
@@ -951,6 +957,8 @@ def build_situation_data(cat):
         for key in FACET_LABELS:
             entry[key] = a.get(key, [])
         entry["profession"] = a.get("profession", [])
+        if a.get("categorie") == "Prévoyance, mutuelle, retraite":
+            entry["protection"] = True
         data.append(entry)
     return data
 

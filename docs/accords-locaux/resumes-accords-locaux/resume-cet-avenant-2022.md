@@ -24,7 +24,7 @@ Tout salarié, dès **6 mois d'ancienneté continue**, sur la base du volontaria
   - des primes (BIC, PPI, primes exceptionnelles) ou tout ou partie de votre intéressement *(Art. 3.2)*
 - **Conditions à respecter pour déposer des jours** : vous devez continuer à respecter la durée hebdomadaire maximale de 48h et prendre effectivement vos 4 semaines de congés payés annuels ; les repos légaux de protection de la santé et de la sécurité (repos quotidien, hebdomadaire, contreparties du travail de nuit) ne peuvent jamais être versés au CET *(Art. 3.1)*
 - **Pour une prime** : vous avez **15 jours après son versement** pour signaler à la DRH votre intention de l'affecter au CET (formulaire dédié) — passé ce délai, elle ne peut plus y être versée *(Art. 3.2)*
-- **Demande de versement en jours : à déposer avant le 15 janvier de l'année suivante** *(Art. 3.3, tel que modifié par l'avenant du 31/01/2022 — la date a été repoussée du 30 novembre au 15 janvier, pour tenir compte de l'annualisation du temps de travail, qui ne permet pas de connaître son solde avant fin novembre)*
+- **Demande de versement en jours : à déposer avant le 15 janvier de l'année suivante** *(Art. 3.3, tel que modifié par l'avenant du 31/01/2022)*
 - **Plafond global d'épargne : 1 820 heures maximum** (soit l'équivalent d'un an) *(Art. 4.4)*
 
 **Conditions pour utiliser votre CET**

@@ -3,7 +3,7 @@
 > **Dépliants à imprimer** (PDF, 3 volets) — [Cadres au forfait jours](../Depliants_FO/Depliant_ATT_cadres_forfait_jours_FO.pdf) · [Cadres en heures](../Depliants_FO/Depliant_ATT_cadres_en_heures_FO.pdf)
 
 *Résumé condensé à destination des salariés — droits et obligations uniquement.*
-**Source : accord du 12 mai 2021, tel que modifié par l'avenant du 31 décembre 2025 (article 3.1.4 sur les congés payés pendant un arrêt maladie, seul point modifié — le reste de l'accord de 2021 est inchangé).**
+**Source : accord du 12 mai 2021, tel que modifié par l'avenant du 31 décembre 2025 (article 3.1.4 sur les congés payés pendant un arrêt maladie).**
 
 ## Qui est concerné
 
@@ -44,7 +44,7 @@ Restent en dehors de cet accord : contrats de professionnalisation/apprentissage
 - **Comment ils se planifient** : validation par la Direction au plus tard le 15 janvier (période mai-octobre) ou le 15 juin (période novembre-avril) ; 3 semaines consécutives minimum l'été, 4 si le service le permet ; pas de changement à moins d'1 mois du départ (Article 3.1.3).
 - **Si vous tombez malade avant des congés déjà programmés** : vos congés non pris sont reportés (Article 3.1.4, tel que modifié par l'avenant du 31/12/2025).
 - **Si vous reprenez le travail après la fin de la période de prise des congés** (suite à maternité, maladie, accident du travail ou maladie professionnelle) : vos congés non pris peuvent être reportés jusqu'à **fin janvier de l'année suivante** ; si ce report n'est pas possible, ils sont placés sur votre CET (Article 3.1.5).
-- **Et si vous tombez malade pendant vos congés (règle en vigueur depuis le 31/12/2025)** : votre congé est **reporté à une date ultérieure**, à redéfinir avec votre responsable hiérarchique dans un délai de **15 jours**. *(C'est un changement par rapport à la règle de 2021, qui prévoyait un maintien du congé sans interruption — la mise à jour aligne l'accord sur le droit applicable.)* À votre retour d'arrêt maladie, vous êtes informé du report de vos droits (bulletin de salaire ou mail), et vous avez **15 mois** pour poser ces congés non pris, en lien avec votre responsable (Article 3.1.4, avenant du 31/12/2025).
+- **Et si vous tombez malade pendant vos congés** : votre congé est **reporté à une date ultérieure**, à redéfinir avec votre responsable hiérarchique dans un délai de **15 jours**. À votre retour d'arrêt maladie, vous êtes informé du report de vos droits (bulletin de salaire ou mail), et vous avez **15 mois** pour poser ces congés non pris, en lien avec votre responsable (Article 3.1.4, avenant du 31/12/2025).
 - **En cas de décès d'un proche pendant vos congés** : votre congé est interrompu — la notion de "proche" étant celle définie *à l'article 2.4.3.3 de la CCN* (Article 3.1.6).
 - **Congé pour maladie grave d'un proche** : accordé, sous réserve d'un délai de 3 jours pour le demander (Article 3.1.7).
 - **Astreintes** : concrètement, c'est le temps où vous devez rester joignable et prêt à intervenir sur appel, sans être sur site (Article 3.2.1). Ça concerne le personnel médical (chirurgie, anesthésie, oncologie médicale, radiothérapie, pharmacie), le service technique, l'informatique et les cadres administratifs (Article 3.2.2). Le planning d'astreinte vous est communiqué au moins 7 jours avant. Si vous intervenez, le trajet compris, ce temps compte comme du travail effectif, et vos frais de déplacement sont remboursés. *Les contreparties sont définies par les accords de branche et la CCN des CLCC* (Article 3.2.4).
@@ -57,8 +57,8 @@ Pour les astreintes et le décès d'un proche pendant les congés, consultez aus
 ## Suivi de l'accord
 
 - **Commission de suivi** : composée des délégués syndicaux, elle se réunit l'année suivant l'entrée en vigueur de l'accord (Article 4.1).
-- **Bilan** : un bilan quantitatif et qualitatif de l'application de l'accord est établi à cette occasion (Article 4.1) — l'accord ne précise pas devant quelle instance (CSE, CSEC...) ce bilan est présenté.
-- **Suivi individuel du forfait jours** : document de contrôle mensuel des jours travaillés/de repos et des alertes sur le respect des repos, transmis au service RH (Article 1.3, numéroté « 1.1.3 » dans le texte) ; dispositif d'alerte automatique vers le N+1 en cas de non-remise du document ou de non-respect des repos plus de 5 fois dans le mois, avec entretien sous 30 jours (Article 1.3, numéroté « 1.1.4 ») ; entretien annuel dédié (Article 1.3, numéroté « 1.1.5 »).
+- **Bilan** : un bilan quantitatif et qualitatif de l'application de l'accord est établi à cette occasion (Article 4.1).
+- **Suivi individuel du forfait jours** : document de contrôle mensuel des jours travaillés/de repos et des alertes sur le respect des repos, transmis au service RH (Article 1.3) ; dispositif d'alerte automatique vers le N+1 en cas de non-remise du document ou de non-respect des repos plus de 5 fois dans le mois, avec entretien sous 30 jours (Article 1.3) ; entretien annuel dédié (Article 1.3).
 - **Durée de l'accord** : durée indéterminée ; entrée en vigueur le premier jour du mois suivant son dépôt (Article 4.2).
 - **Révision** : procédure renvoyant à l'article L. 2261-7-1 du Code du travail (Article 4.3).
 - **Dénonciation** : possible à tout moment par lettre recommandée avec accusé de réception ; l'accord cesse en principe de s'appliquer au dernier jour des mandats des membres du CSE ; déclaration à déposer auprès de l'Unité Territoriale de Maine-et-Loire de la DIRECCTE d'Angers (Article 4.4).

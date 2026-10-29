@@ -8,7 +8,7 @@
 
 ## Qui est concerné *(notice d'information)*
 
-**Les bénéficiaires de la garantie** à laquelle ces services sont attachés. Le document dit seulement « bénéficiaires de la garantie » sans préciser laquelle.
+**Les bénéficiaires de la garantie** à laquelle ces services sont attachés.
 
 Les services s'exercent **en France**, sauf le rapatriement sanitaire, valable dans le monde entier. Le domicile est votre résidence principale et habituelle, située en France.
 

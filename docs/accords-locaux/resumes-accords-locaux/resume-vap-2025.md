@@ -15,12 +15,10 @@ Tout le **personnel non-praticien** de l'ICO, pour les passages de palier prévu
 
 ## Ce que prévoit l'accord *(Art. 2)*
 
-Depuis plusieurs années, le taux de validation des passages de palier est supérieur à **98%** à l'ICO. Pour simplifier le processus, les parties ont convenu d'automatiser la mise en œuvre des trois paliers de VAP :
+La mise en œuvre des trois paliers de VAP est automatisée :
 
-- **Palier 1 et 2** : automatisés depuis l'accord du 22 mars 2024 — le passage est effectué d'office dès que les conditions d'ancienneté définies par la CCN pour votre emploi sont réunies, sans que vous ayez de démarche à faire
-- **Palier 3** : automatisé par l'avenant du 4 février 2025, à effet du 1er janvier 2025 — instauré au niveau de la branche Unicancer par l'avenant CCN 2024-04
-
-Les critères d'évaluation (EAA et GPEC) restent inchangés. Seul le processus administratif est simplifié.
+- **Palier 1 et 2** : automatisés (accord du 22 mars 2024) — le passage est effectué d'office dès que les conditions d'ancienneté définies par la CCN pour votre emploi sont réunies, sans que vous ayez de démarche à faire
+- **Palier 3** : automatisé (avenant du 4 février 2025, à effet du 1er janvier 2025 ; avenant CCN 2024-04)
 
 ---
 *Source : Accord VAP (22/03/2024) et son avenant (04/02/2025).*

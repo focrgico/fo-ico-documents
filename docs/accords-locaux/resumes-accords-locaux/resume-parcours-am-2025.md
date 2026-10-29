@@ -18,7 +18,7 @@ Vous, si vous êtes assistant médical classé en **Groupe E**, sur l'un des 2 s
 - **En VAP2 depuis moins de 15 ans** → vous passez d'abord en E1 selon les règles normales, puis vous basculez en F RMAG 0 dès que **15 années civiles se sont écoulées depuis votre VAP2 du Groupe E** (et non 5 ans après votre VAP2 du Groupe E1 comme dans le parcours normal — ce chemin transitoire est donc plus rapide)
 - **Si vous étiez en Groupe E, RMAG 0 ou RMAG 1** (VAP2 pas encore obtenue) : cette règle transitoire ne s'applique pas à vous — vous suivez le parcours normal ci-dessus
 
-**Signataires** : ICO (Mario Campone, DG), CGT-FO (signature par délégation de Miguel Boisseau), Sud Santé-Sociaux, CFE-CGC. *(Pas de signataire CFDT.)*
+**Signataires** : ICO (Mario Campone, DG), CGT-FO (signature par délégation de Miguel Boisseau), Sud Santé-Sociaux, CFE-CGC.
 
 **Suivi de l'accord** *(Art. 4)*
 

@@ -15,6 +15,7 @@ Balisage dans les textes du JSON :
     {ref:Art. 7.2}     -> (Art. 7.2) en italique gris 8,5 pt
     ^er^               -> exposant (1^er^ -> 1er)
 """
+import os
 import argparse, html, json, pathlib, re, subprocess, sys, urllib.parse
 
 RACINE = pathlib.Path(__file__).resolve().parent
@@ -122,7 +123,8 @@ def blocs(liste, contexte, pre=None):
     return "".join(out)
 
 
-BASE_PDF = "https://github.com/focrgico/fo-ico-documents/raw/main/docs/"
+BASE_PDF = "https://github.com/focrgico/fo-ico-documents/raw/main/docs/"  # anciens dépliants (importer_depliant.py)
+SITE_PDF = "https://foico.fr/pdf/"  # adresse des PDF signés sur le site
 
 
 def url_pdf(lien):
@@ -130,7 +132,7 @@ def url_pdf(lien):
     tel qu'il figure dans catalogue/catalogue.json (champ chemin_pdf)."""
     if "url" in lien:
         return lien["url"]
-    return BASE_PDF + urllib.parse.quote(lien["pdf"])
+    return SITE_PDF + urllib.parse.quote(os.path.basename(lien["pdf"]))
 
 
 def construire_html(d):

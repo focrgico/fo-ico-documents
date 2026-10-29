@@ -16,7 +16,7 @@
 | N° de contrat | 2257604120000Q | 2257604110000Q |
 | Groupe assuré | Ensemble des non cadres, selon la définition du dispositif d'entreprise | Ensemble des cadres, selon la définition du dispositif d'entreprise |
 
-**Les garanties (montants, conditions, exclusions) sont identiques pour les deux groupes** (comparaison page par page des deux notices). Seuls le numéro de contrat et le groupe assuré diffèrent. Les notices ne précisent pas quelles catégories de personnel entrent dans chaque groupe : cette définition relève du dispositif d'entreprise.
+**Les garanties (montants, conditions, exclusions) sont identiques pour les deux groupes**. Seuls le numéro de contrat et le groupe assuré diffèrent.
 
 Pour en bénéficier, vous devez : appartenir au groupe assuré, être affilié à un régime obligatoire de Sécurité sociale, et avoir un contrat de travail en vigueur. Si votre contrat est suspendu pour maladie, maternité, paternité ou accident (indemnisé ou non par l'employeur), vous restez couvert ; pour les autres cas de suspension non indemnisée, la garantie Arrêt de travail est suspendue.
 

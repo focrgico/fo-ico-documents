@@ -74,7 +74,7 @@ Pour les astreintes et le décès d'un proche pendant vos congés, consultez aus
 ## Suivi de l'accord
 
 - **Commission de suivi** : composée des délégués syndicaux, elle se réunit l'année suivant l'entrée en vigueur de l'accord (Article 5.1).
-- **Bilan** : un bilan quantitatif et qualitatif de l'application de l'accord est établi à cette occasion (Article 5.1) — l'accord ne précise pas devant quelle instance (CSE, CSEC...) ce bilan est présenté.
+- **Bilan** : un bilan quantitatif et qualitatif de l'application de l'accord est établi à cette occasion (Article 5.1).
 - **Durée de l'accord** : durée indéterminée ; entrée en vigueur au 1er janvier 2021, les dispositions antérieures continuant à produire leurs effets jusqu'au 31 décembre 2020 (Article 5.2).
 - **Révision** : procédure renvoyant à l'article L. 2261-7-1 du Code du travail (Article 5.3).
 - **Dénonciation** : possible à tout moment par lettre recommandée avec accusé de réception ; l'accord cesse en principe de s'appliquer au dernier jour des mandats des membres du CSE ; déclaration à déposer auprès de l'Unité Territoriale de Maine-et-Loire de la DIRECCTE d'Angers (Article 5.4).

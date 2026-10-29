@@ -219,7 +219,6 @@ PAGE_FOOT = """
   <div class="footer-links">
     <a href="{base}mentions-legales.html">Mentions légales</a>
     <a href="{base}liens-foico.html">Liens du site</a>
-    <a href="{base}liens-github.html">Liens GitHub</a>
   </div>
   <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
 </footer>
@@ -276,6 +275,22 @@ def esc(s):
 LINK_ATTR_RE = re.compile(r'(href|src)="([^"]+)"')
 
 
+RESUME_ID_BY_PATH = {}  # chemin du résumé .md (relatif à docs/) -> id de l'accord ; rempli par main()
+
+
+def site_url_for(resolved):
+    """Adresse foico.fr d'un fichier cité par un résumé (chemin relatif à docs/) :
+    dépliant -> /depliants/, PDF -> /pdf/, autre résumé -> /resumes/<id>.html."""
+    base = os.path.basename(resolved)
+    if resolved.lower().endswith(".pdf"):
+        sub = "depliants" if "/Depliants_FO/" in "/" + resolved else "pdf"
+        return SITE_BASE + sub + "/" + quote(base)
+    if resolved in RESUME_ID_BY_PATH:
+        return SITE_BASE + "resumes/" + RESUME_ID_BY_PATH[resolved] + ".html"
+    print(f"ATTENTION : lien de résumé sans équivalent sur le site : {resolved}")
+    return SITE_BASE
+
+
 def fix_relative_links(html_fragment, resume_rel_path):
     """Réécrit les liens relatifs d'un résumé (relatifs à son propre dossier
     dans docs/) en URL absolues vers GitHub, pour qu'ils fonctionnent une
@@ -289,13 +304,13 @@ def fix_relative_links(html_fragment, resume_rel_path):
         # target vient d'un lien Markdown déjà encodé (%20, %C3%A9) : on le décode
         # avant de résoudre, car url_for() ré-encode (sinon double encodage %2520).
         resolved = os.path.normpath(os.path.join(resume_dir, unquote(target))).replace("\\", "/")
-        return f'{attr}="{url_for(resolved)}"'
+        return f'{attr}="{site_url_for(resolved)}"'
 
     return LINK_ATTR_RE.sub(repl, html_fragment)
 
 
 DEPLIANT_LINK_RE = re.compile(
-    re.escape(RAW_BASE) + r"accords-locaux/Depliants_FO/([^\"'\s)]+)"
+    re.escape("https://foico.fr/depliants/") + r"([^\"'\s)]+)"
 )
 
 
@@ -316,7 +331,7 @@ def localize_depliant_links(html_fragment):
 
 
 PDF_ACCORD_LINK_RE = re.compile(
-    re.escape(RAW_BASE) + r"(?!accords-locaux/Depliants_FO/)([^\"'\s)]+\.pdf)"
+    re.escape("https://foico.fr/pdf/") + r"([^\"'\s)]+\.pdf)"
 )
 
 
@@ -983,7 +998,7 @@ def build_index(cat, out_dir):
     <div class="hero-text">
       <div class="eyebrow">Base documentaire FO ICO</div>
       <h1>Vos droits, à portée de main</h1>
-      <p class="hero-sub">Accords collectifs, résumés en langage clair et dépliants FO.</p>
+      <p class="hero-sub">Vous y trouverez :<br>Accords ICO, DUE et NAO, résumés en langage clair et dépliants imprimables.<br>La CCN à jour, le règlement intérieur de l'ICO, prévoyance et mutuelle.</p>
       <div class="search-bar">
         <input type="text" id="site-search" placeholder="Un mot, ou « je suis IDE »" onkeydown="if(event.key==='Enter'){event.preventDefault();goSearch();}">
         <button type="button" onclick="goSearch()">Rechercher</button>
@@ -1165,9 +1180,7 @@ def build_accords(cat, out_dir, acc_docs=None, acc_passages=None):
   <div>
     <div class="eyebrow-small" id="page-eyebrow">ACCUEIL / ACCORDS</div>
     <h1 id="page-title">Accords</h1>
-    <p id="page-desc">Les textes signés : convention collective nationale, accords locaux, NAO, élections, DUE —
-    au format PDF, tels que déposés sur le dépôt GitHub FO ICO. La recherche porte sur le texte
-    intégral de tous les accords et de la CCN.</p>
+    <p id="page-desc">Documents officiels au format PDF : CCN, accords locaux, NAO, DUE, prévoyance et mutuelle</p>
   </div>
 </section>
 
@@ -1507,7 +1520,7 @@ function applyFilters() {
   } else {
     pageEyebrow.textContent = 'ACCUEIL / ACCORDS';
     pageTitle.textContent = 'Accords';
-    pageDesc.textContent = "Les textes signés : convention collective nationale, accords locaux, NAO, élections, DUE — au format PDF, tels que déposés sur le dépôt GitHub FO ICO. La recherche porte sur le texte intégral de tous les accords et de la CCN.";
+    pageDesc.textContent = "Documents officiels au format PDF : CCN, accords locaux, NAO, DUE, prévoyance et mutuelle";
   }
 }
 chips.forEach(c => c.addEventListener('click', () => {
@@ -1657,6 +1670,7 @@ def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
     <p>L'essentiel de chaque accord, rédigé en langage clair par vos élus FO.</p>
   </div>
 </section>
+""" + avis_html(AVIS_RESUMES) + """
 <section class="list-page">
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
@@ -1683,7 +1697,7 @@ def build_resumes(cat, out_dir, res_docs=None, res_passages=None):
       <span class="tag" style="background:{bg};color:{fg}">{esc(a['theme'])}</span>
       <h3>{esc(a['titre'])}</h3>
       {source_html(cat, a['chemin_resume_md'])}
-      <a href="resumes/{esc(a['id'])}.html" class="link">Lire le résumé →</a>
+      <a href="resumes/{esc(a['id'])}.html" class="link" target="_blank" rel="noopener">Lire le résumé →</a>
     </div>
 """
     html += "  </div>\n</section>\n"
@@ -1783,7 +1797,7 @@ function runResSearch(raw, theme) {
         <span class="tag" style="background:${tc[0]};color:${tc[1]}">${escapeHtml(d.categorie)}</span>
         <strong style="color:var(--marine)">${escapeHtml(d.titre)}</strong>
         <span class="note">${list.length} ${list.length > 1 ? 'passages' : 'passage'}</span>
-        <a class="ccn-jump" style="margin-top:0" href="resumes/${id}.html?q=${qs}">Lire le résumé →</a>
+        <a class="ccn-jump" style="margin-top:0" href="resumes/${id}.html?q=${qs}" target="_blank" rel="noopener">Lire le résumé →</a>
       </div>
       ${first}${rest}
     </div>`;
@@ -1825,6 +1839,21 @@ themeChips.forEach(c => c.addEventListener('click', () => {
         f.write(html.replace(SEARCH_MARK, SEARCH_JS))
 
 
+def avis_html(texte):
+    """Bandeau « Attention, important » : un résumé ou un dépliant n'a pas de valeur
+    contractuelle, seul l'accord original fait foi."""
+    return ('<div class="avis-important" role="note"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" '
+            'stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+            '<path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/>'
+            '<path d="M12 9v4"/><path d="M12 17h.01"/></svg>'
+            '<p><strong>Attention, important.</strong> ' + texte + '</p></div>')
+
+
+AVIS_RESUME = "Ce résumé n'a pas de valeur contractuelle : seul l'accord original fait foi."
+AVIS_RESUMES = "Les résumés n'ont pas de valeur contractuelle : seul l'accord original fait foi."
+AVIS_DEPLIANTS = "Les dépliants n'ont pas de valeur contractuelle : seul l'accord original fait foi."
+
+
 def build_resume_pages(cat, out_dir):
     """Une page HTML par résumé : texte intégral + téléchargements en bas
     (résumé Markdown source + dépliant(s) correspondant(s))."""
@@ -1853,7 +1882,7 @@ def build_resume_pages(cat, out_dir):
     {source_html(cat, a['chemin_resume_md'])}
   </div>
 </section>
-
+""" + avis_html(AVIS_RESUME) + f"""
 <article class="resume-content" id="resume-article">
 {fragment_html}
 </article>
@@ -1889,13 +1918,11 @@ def build_resume_pages(cat, out_dir):
   <h2>Téléchargements</h2>
   <div class="download-links">
 """
-        resume_raw_url = url_for(a["chemin_resume_md"])
         try:
             html_fragment_to_docx(fragment, a["titre"], os.path.join(resumes_dir, f"{a['id']}.docx"))
             html += f'    <a class="download-btn primary" href="{esc(a["id"])}.docx">Télécharger le résumé (.docx) →</a>\n'
         except Exception as e:
-            print(f"ATTENTION : conversion .docx échouée pour {a['id']} ({e}) — repli sur le .md brut.")
-            html += f'    <a class="download-btn primary" href="{esc(resume_raw_url)}" target="_blank" rel="noopener">Télécharger le résumé (.md) →</a>\n'
+            print(f"ATTENTION : conversion .docx échouée pour {a['id']} ({e}).")
 
         dep = a.get("chemin_depliant")
         dep_list = dep if isinstance(dep, list) else ([dep] if dep else [])
@@ -2345,6 +2372,7 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
     <p>Le format tryptique, prêt à imprimer ou à consulter en ligne — un dépliant par accord.</p>
   </div>
 </section>
+""" + avis_html(AVIS_DEPLIANTS) + """
 <section class="list-page">
   <div class="search-bar small">
     <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#5B6578" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg>
@@ -2523,16 +2551,12 @@ def _liens_documents(cat):
 
 
 def build_liens(cat, out_dir):
-    """Deux pages listant toutes les adresses : liens-github.html (dépôt GitHub)
-    et liens-foico.html (adresses prévues sur foico.fr)."""
+    """Page liens-foico.html : adresses de tous les documents sur foico.fr."""
     lignes = _liens_documents(cat)
     for nom, titre, intro in [
-        ("liens-github.html", "Liens GitHub",
-         "Adresses des documents dans le dépôt public GitHub focrgico/fo-ico-documents (branche main)."),
         ("liens-foico.html", "Liens foico.fr",
          "Adresses des mêmes documents sur foico.fr. Ces adresses ne sont valables que si le contenu du dossier site/ est déposé à la racine de foico.fr."),
     ]:
-        github = nom == "liens-github.html"
         html = page_head(titre, "")
         html += f"""
 <section class="page-header">
@@ -2552,7 +2576,7 @@ def build_liens(cat, out_dir):
                     html += "  </table>\n"
                 groupe = g
                 html += f'  <h2 class="liens-groupe">{esc(g)}</h2>\n  <table class="liens-table">\n'
-            url = url_for(chemin, blob=True) if github else SITE_BASE + site_rel
+            url = SITE_BASE + site_rel
             html += f'    <tr><td class="liens-doc">{esc(lib)}</td><td class="liens-type">{esc(typ)}</td><td class="liens-url"><a href="{esc(url)}">{esc(url)}</a></td></tr>\n'
         html += "  </table>\n</section>\n"
         html += page_foot(stamp=True)
@@ -2578,14 +2602,14 @@ def build_mentions(out_dir):
 <article class="resume-content">
 <h2>Éditeur du site</h2>
 <p>Section syndicale CGT-FO de l'Institut de Cancérologie de l'Ouest (ICO), Saint-Herblain et Angers.</p>
-<p>Adresse : {tbc("adresse postale de l'éditeur à confirmer")}<br>
-Téléphone : {tbc("à compléter")}<br>
-Courriel : {tbc("à compléter")}</p>
-<p>Directeur de la publication : {tbc("nom à confirmer")}</p>
+<p>Adresse : Bd Jacques Monod, 44800 Saint-Herblain<br>
+Téléphone : 02 40 67 99 00, poste 9188<br>
+Courriel : <a href="mailto:fo.nantes@ico.unicancer.fr">fo.nantes@ico.unicancer.fr</a></p>
+<p>Directeur de la publication : M. David Di Peri</p>
 
 <h2>Hébergeur</h2>
 <p>OVH SAS, 2 rue Kellermann, 59100 Roubaix.<br>
-Téléphone : {tbc("à compléter d'après les mentions légales d'OVH")}</p>
+Téléphone : +33 9 72 10 10 07</p>
 
 <h2>Contenu du site</h2>
 <p>Les accords, avenants, décisions unilatérales et procès verbaux reproduits ici sont des documents de l'ICO ou de la branche. Le PDF signé est le seul document qui fait foi : les textes convertis, les résumés et les dépliants sont des aides à la lecture rédigées par les élus FO et n'ont pas de valeur juridique. En cas de doute, c'est le PDF signé qui s'applique.</p>
@@ -2595,7 +2619,7 @@ Téléphone : {tbc("à compléter d'après les mentions légales d'OVH")}</p>
 <p>Le site ne comporte ni compte, ni formulaire envoyé à un serveur, ni outil de mesure d'audience. Il ne dépose pas de cookie. Les noms de signataires qui figurent dans les accords sont ceux des documents signés.</p>
 
 <h2>Droit de réponse et signalement</h2>
-<p>Pour signaler une erreur ou exercer un droit de réponse, écrivez à l'éditeur à l'adresse indiquée ci-dessus {tbc("courriel à compléter")}.</p>
+<p>Pour signaler une erreur ou exercer un droit de réponse, écrivez à l'éditeur à l'adresse indiquée ci-dessus : <a href="mailto:fo.nantes@ico.unicancer.fr">fo.nantes@ico.unicancer.fr</a>.</p>
 </article>
 """
     html += page_foot()
@@ -2610,6 +2634,9 @@ def main():
         sys.exit(f"Dossier docs/ introuvable à {DOCS_DIR} — lancez ce script depuis la racine du dépôt.")
 
     cat = load_catalogue()
+    for _a in cat["accords"]:
+        if _a.get("chemin_resume_md"):
+            RESUME_ID_BY_PATH.setdefault(_a["chemin_resume_md"], _a["id"])
 
     if os.path.exists(OUT_DIR):
         shutil.rmtree(OUT_DIR)

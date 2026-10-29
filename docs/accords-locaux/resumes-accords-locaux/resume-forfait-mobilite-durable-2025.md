@@ -22,7 +22,7 @@ Tout salarié de l'ICO qui réalise ses trajets domicile-travail en vélo, en co
 |---|---|
 | **Vélo** | 300 € bruts/an |
 | **Covoiturage** (conducteur ou passager) | 300 € bruts/an |
-| **Trottinette électrique** (nouveauté 2025) | 300 € bruts/an |
+| **Trottinette électrique** | 300 € bruts/an |
 
 Ces trois primes ne sont **pas cumulables entre elles** — une seule peut être versée.
 

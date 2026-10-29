@@ -34,7 +34,7 @@ Le contrôle (`--verifier`) vérifie : 2 pages exactement, mention « Résumé �
 1. Copier `donnees/teletravail.json` sous un autre nom et remplacer les textes.
 2. Le contenu du verso est une liste de 3 colonnes. Blocs possibles : `section`, `p`, `puces` (option `taille`), `encadre` (style `neutre`, `alerte` ou `marine`), `picto`, `note`, `tableau`. Couverture : `chiffre` ou liste `chiffres`. Volet bleu : liste `recto.marine` (encadrés et pictos sous les contacts). Source : `liens_sep` pour les séparateurs entre plusieurs liens.
 3. Balisage dans les textes : `**gras**`, `{ref:Art. 7.2}` pour une référence d'article, `^er^` pour un exposant. Une espace insécable est ajoutée avant `?`, `!` et `;`.
-4. Le lien « accord complet (PDF) » se renseigne par `"pdf": "accords-locaux/<nom du PDF signé>.pdf"`, tel que dans `chemin_pdf` du catalogue. Le gabarit en fait une adresse GitHub.
+4. Le lien « accord complet (PDF) » se renseigne par `"pdf": "accords-locaux/<nom du PDF signé>.pdf"`, tel que dans `chemin_pdf` du catalogue. Le gabarit en fait l'adresse `https://foico.fr/pdf/<nom du PDF>`.
 5. Pictogramme : prendre un SVG de `pictos/` ou en extraire un d'un PDF avec l'outil. Les espaces autour se règlent bloc par bloc : `avant` (au-dessus), `ecart` (entre le picto et sa légende), `apres` (en dessous), `decalage_x`.
 6. Un paragraphe en corps réduit : `"taille": 10.5`. Un titre d'encadré en 12,5 pt : `"titre_grand": true`.
 

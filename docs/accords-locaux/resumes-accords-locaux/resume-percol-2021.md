@@ -33,7 +33,7 @@ Par défaut, vous êtes en **gestion pilotée** (profil "équilibré horizon ret
 **Dates et signataires**
 
 - Signé le **19 mars 2021**, durée indéterminée, prend effet à compter du dépôt.
-- Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Isabelle Fouillet), **CFDT** (Corinne Lanio), **CFE-CGC** (Geneviève Perrocheau) — les 4 organisations ont signé.
+- Signé par : ICO (Mario Campone, DG), **CGT-FO** (David Di Peri), **Sud Santé-Sociaux** (Isabelle Fouillet), **CFDT** (Corinne Lanio), **CFE-CGC** (Geneviève Perrocheau).
 
 **Suivi de l'accord**
 

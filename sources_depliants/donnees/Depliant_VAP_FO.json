@@ -24,35 +24,22 @@
    {
     "t": "encadre",
     "style": "alerte",
-    "titre": "Bon à savoir — un taux de réussite déjà très élevé",
+    "titre": "À retenir — aucune démarche",
     "contenu": [
      {
       "t": "p",
-      "texte": "Depuis plusieurs années, **plus de 98%** des passages de palier sont validés à l'ICO {ref:Art. 2}. C'est ce constat qui a permis d'automatiser le processus."
+      "texte": "Votre passage de palier se fait **d'office**, dès que les conditions d'ancienneté définies par la CCN pour votre emploi sont réunies {ref:Art. 2}."
      }
     ],
     "apres": 0
    },
    {
     "t": "picto",
-    "svg": "Depliant_VAP_FO_1.svg",
-    "legende": "Un taux de validation déjà très élevé, qui justifie l'automatisation.",
-    "ecart": 26.71,
-    "decalage_x": 5.2,
-    "avant": 17.45,
+    "svg": "Depliant_VAP_FO_4.svg",
+    "legende": "Rien à demander : votre passage de palier se fait sans démarche.",
+    "ecart": 13.12,
+    "avant": 21.22,
     "apres": 0
-   },
-   {
-    "t": "encadre",
-    "style": "alerte",
-    "titre": "Bon à savoir — les critères ne changent pas",
-    "contenu": [
-     {
-      "t": "p",
-      "texte": "Les critères d'évaluation (**EAA et GPEC**) restent inchangés. Seul le **processus administratif** est simplifié {ref:Art. 2}."
-     }
-    ],
-    "avant": 14.71
    }
   ],
   "contact": {
@@ -105,19 +92,6 @@
     "titre_grand": true,
     "avant": 7.97,
     "apres": 0
-   },
-   {
-    "t": "encadre",
-    "style": "neutre",
-    "titre": "L'avenant VAP 2025",
-    "contenu": [
-     {
-      "t": "p",
-      "texte": "L'avenant du **4 février 2025** est déjà intégré à cet accord : il n'existe pas de document séparé pour le palier 3."
-     }
-    ],
-    "titre_grand": true,
-    "avant": 10.93
    }
   ],
   [
@@ -128,8 +102,8 @@
    {
     "t": "puces",
     "items": [
-     "**Palier 1 et 2** : automatisés depuis l'accord du **22 mars 2024** — le passage s'effectue d'office dès que les conditions d'ancienneté de la CCN pour votre emploi sont réunies {ref:Art. 2}",
-     "**Palier 3** : automatisé par l'avenant du **4 février 2025**, à effet du **1**^er^ **janvier 2025** — instauré au niveau de la branche Unicancer par l'avenant CCN 2024-04 {ref:Art. 2}"
+     "**Palier 1 et 2** : automatisés (accord du **22 mars 2024**) — le passage s'effectue d'office dès que les conditions d'ancienneté de la CCN pour votre emploi sont réunies {ref:Art. 2}",
+     "**Palier 3** : automatisé (avenant du **4 février 2025**, à effet du **1**^er^ **janvier 2025** ; avenant CCN 2024-04) {ref:Art. 2}"
     ]
    },
    {
@@ -149,26 +123,6 @@
     "t": "p",
     "texte": "Aucune démarche à faire : le passage de palier intervient **de lui-même**, dès que les conditions d'ancienneté définies par la CCN pour votre emploi sont réunies {ref:Art. 2}.",
     "apres": 0
-   },
-   {
-    "t": "picto",
-    "svg": "Depliant_VAP_FO_4.svg",
-    "legende": "Rien à demander : votre passage de palier se fait sans démarche.",
-    "ecart": 13.12,
-    "avant": 21.22,
-    "apres": 0
-   },
-   {
-    "t": "encadre",
-    "style": "neutre",
-    "titre": "Ce qui ne change pas",
-    "contenu": [
-     {
-      "t": "p",
-      "texte": "Les critères d'évaluation (**EAA et GPEC**) restent les mêmes. Seul le processus administratif de validation est simplifié {ref:Art. 2}."
-     }
-    ],
-    "avant": 14.8
    }
   ]
  ]

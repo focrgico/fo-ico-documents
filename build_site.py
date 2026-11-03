@@ -2672,6 +2672,10 @@ def main():
     else:
         print(f"ATTENTION : favicon introuvable à {favicon_src} — copiez-le manuellement dans site/assets/favicon.png")
 
+    logomail_src = os.path.join(ASSETS_SRC, "logomail.png")
+    if os.path.exists(logomail_src):
+        shutil.copy(logomail_src, os.path.join(OUT_DIR, "assets", "logomail.png"))
+
     style_src = os.path.join(ASSETS_SRC, "style.css")
     shutil.copy(style_src, os.path.join(OUT_DIR, "assets", "style.css"))
 

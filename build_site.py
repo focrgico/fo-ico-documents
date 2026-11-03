@@ -2672,7 +2672,7 @@ def main():
     else:
         print(f"ATTENTION : favicon introuvable à {favicon_src} — copiez-le manuellement dans site/assets/favicon.png")
 
-    for _nom in ("logomail.png", "logomailblanc.png"):
+    for _nom in ("logomail.png", "logomailblanc.png", "accueilsite.jpg", "depliantexemple.jpg"):
         _src = os.path.join(ASSETS_SRC, _nom)
         if os.path.exists(_src):
             shutil.copy(_src, os.path.join(OUT_DIR, "assets", _nom))

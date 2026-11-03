@@ -23,6 +23,7 @@ find . -mindepth 1 -maxdepth 1 ! -name .git ! -name .nojekyll -exec rm -rf {} +
 cp -a "$REPO/site/." .
 # les Word des resumes ne sont pas regeneres a l'identique : on garde ceux deja publies
 for f in $(git ls-tree -r --name-only origin/gh-pages | grep -E '^resumes/[^/]+\.docx$'); do git checkout -q origin/gh-pages -- "$f"; done
+git read-tree --empty   # on repart d un index vide : tout est compare par contenu (evite un faux "aucun changement")
 git add -A
 
 AVANT=$(git ls-tree -r --name-only origin/gh-pages | wc -l)

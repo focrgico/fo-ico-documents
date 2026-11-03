@@ -1055,7 +1055,7 @@ def build_index(cat, out_dir):
     </a>
     <a class="card hero-card" href="depliants.html">
       <h3>Dépliants</h3>
-      <p>Le format tryptique, prêt à imprimer ou à consulter en ligne.</p>
+      <p>Le format triptyque, prêt à imprimer ou à consulter en ligne.</p>
       <span class="link">Consulter →</span>
     </a>
   </div>
@@ -2387,7 +2387,7 @@ def build_depliants(cat, out_dir, res_docs=None, res_passages=None):
   <div>
     <div class="eyebrow-small">ACCUEIL / DÉPLIANTS</div>
     <h1>Dépliants</h1>
-    <p>Le format tryptique, prêt à imprimer ou à consulter en ligne — un dépliant par accord.</p>
+    <p>Le format triptyque, prêt à imprimer ou à consulter en ligne — un dépliant par accord.</p>
   </div>
 </section>
 """ + avis_html(AVIS_DEPLIANTS) + """
@@ -2619,7 +2619,7 @@ def build_mentions(out_dir):
 </section>
 <article class="resume-content">
 <h2>Éditeur du site</h2>
-<p>Section syndicale CGT-FO de l'Institut de Cancérologie de l'Ouest (ICO), Saint-Herblain et Angers.</p>
+<p>Organisation syndicale FO de l'Institut de Cancérologie de l'Ouest (ICO), Saint-Herblain et Angers.</p>
 <p>Adresse : Bd Jacques Monod, 44800 Saint-Herblain<br>
 Téléphone : 02 40 67 99 00, poste 9188<br>
 Courriel : <a href="mailto:fo.nantes@ico.unicancer.fr">fo.nantes@ico.unicancer.fr</a></p>

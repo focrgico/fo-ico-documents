@@ -222,6 +222,7 @@ PAGE_FOOT = """
   </div>
   <div class="footer-slogan"><span class="red">FO</span>, vos droits notre priorité</div>
 </footer>
+<script data-goatcounter="https://foico.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
 """
@@ -2634,7 +2635,8 @@ Téléphone : +33 9 72 10 10 07</p>
 <p>Ce site ne remplace pas un conseil individuel : pour votre situation personnelle, contactez un élu FO.</p>
 
 <h2>Données personnelles et cookies</h2>
-<p>Le site ne comporte ni compte, ni formulaire envoyé à un serveur, ni outil de mesure d'audience. Il ne dépose pas de cookie. Les noms de signataires qui figurent dans les accords sont ceux des documents signés.</p>
+<p>Le site ne comporte ni compte, ni formulaire envoyé à un serveur. Il ne dépose pas de cookie.</p>
+<p>Le nombre de visites est mesuré avec l'outil GoatCounter (goatcounter.com), qui compte les pages consultées et les visiteurs sans cookie. La mesure sert uniquement à connaître la fréquentation du site par l'éditeur : aucune donnée n'est croisée avec d'autres traitements. Les noms de signataires qui figurent dans les accords sont ceux des documents signés.</p>
 
 <h2>Droit de réponse et signalement</h2>
 <p>Pour signaler une erreur ou exercer un droit de réponse, écrivez à l'éditeur à l'adresse indiquée ci-dessus : <a href="mailto:fo.nantes@ico.unicancer.fr">fo.nantes@ico.unicancer.fr</a>.</p>

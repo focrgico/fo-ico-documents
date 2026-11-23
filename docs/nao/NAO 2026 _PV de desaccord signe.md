@@ -2,7 +2,7 @@
 
 - **Date :** 25 août 2026 (« Fait à Angers, le 25/08/2026 », en 5 exemplaires originaux), lue visuellement sur la page 5 du PDF
 - **Signature visible :** « Pr Mario CAMPONE, Directeur Général ». Aucune autre signature n'apparaît sur le PDF
-- **Source :** `NAO 2026 _PV de désaccord signé.pdf`, conservé dans le même dossier. Ce PDF est un scan imprimé en PDF (« Microsoft: Print To PDF »), sans texte sélectionnable, et il n'existe pas de Word
+- **Source :** `NAO 2026 _PV de désaccord signé.pdf`, conservé dans le même dossier. Ce PDF est un scan imprimé en PDF (« Microsoft: Print To PDF »), sans texte sélectionnable. Le Word d'origine est conservé dans `NAO Format Word/PV NAO 2026 V2.docx` : son texte est identique au PDF signé (comparé le 23/11/2026, mêmes dates et mêmes paragraphes)
 - **Relecture :** transcription refaite le 21/10/2026 en lisant les 6 pages une par une (l'OCR d'origine avait des erreurs, par exemple « 49,31 ETP » au lieu de 449,31, et un tableau illisible)
 - **Ordre des pages :** dans le PDF, la page 5 (fin du 3-18, article 4 et signature) vient avant la page 6 (3-12 à 3-18). Le texte ci-dessous suit l'ordre logique : pages 1 à 4, puis 6, puis 5
 
